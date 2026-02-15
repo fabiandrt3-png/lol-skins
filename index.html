@@ -127,6 +127,7 @@ function showSkins(champ) {
             .replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
             .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
             .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
+            .replace(/\(([^)]+Chroma[^)]*)\)/gi, "<span style='color:red;'>($1)</span>");
 
         const label = skin.type==="Wild Rift" ? ` <span style="color:#00bfff;">(Wild Rift)</span>` : "";
 
@@ -147,24 +148,19 @@ function openLightbox(index){
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
 
-// swap par clic sur côté gauche/droite
 lightboxImg.addEventListener('click', e => {
     const rect = lightboxImg.getBoundingClientRect();
-    if(originalScale !== 1) return; // bloquer swap si zoom
+    if(originalScale !== 1) return;
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
-        // gauche → skin précédent
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
     } else {
-        // droite → skin suivant
         currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
     }
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
     lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
 });
 
-
-// GESTURES ZOOM 2 doigts
 let initialDistance = 0;
 let isPinching = false;
 
@@ -212,5 +208,3 @@ showChampions();
 
 </body>
 </html>
-
-
