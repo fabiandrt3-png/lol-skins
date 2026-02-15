@@ -40,14 +40,16 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     justify-content:center; align-items:center; 
     z-index:9999; 
     overflow:hidden; 
-    touch-action: none;
+    cursor:grab;
 }
+#lightbox.grabbing { cursor:grabbing; }
+
 #lightbox img {
     max-width:100%; max-height:100%; 
-    transform-origin: center center; 
+    transform-origin:50% 50%; 
     position:absolute; top:50%; left:50%; 
-    transform:translate(-50%, -50%) scale(1);
-    transition: transform 0.2s ease-out;
+    transform:translate(-50%,-50%) scale(1);
+    transition: transform 0.1s ease;
 }
 
 @media (max-width:768px){
@@ -118,11 +120,10 @@ const championsSkins = [
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
 let scale = 1;
-let startX = 0;
-let startY = 0;
 let translateX = 0;
 let translateY = 0;
 let isDragging = false;
+let dragStart = {x:0,y:0};
 let lastTouches = [];
 
 function showChampions() {
@@ -174,19 +175,68 @@ function resetZoom(){
     scale = 1;
     translateX = 0;
     translateY = 0;
-    updateTransform();
+    lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
 }
 
 function updateTransform(){
+    if(scale>1){
+        const rect = lightboxImg.getBoundingClientRect();
+        const maxX = Math.max(0,(rect.width*scale - window.innerWidth)/2);
+        const maxY = Math.max(0,(rect.height*scale - window.innerHeight)/2);
+        translateX = Math.max(-maxX, Math.min(maxX, translateX));
+        translateY = Math.max(-maxY, Math.min(maxY, translateY));
+    } else {
+        translateX = 0;
+        translateY = 0;
+    }
     lightboxImg.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`;
 }
 
-// Desktop click to change skin
+// Zoom souris
+lightbox.addEventListener('wheel', e=>{
+    e.preventDefault();
+    const delta = -e.deltaY*0.001;
+    const oldScale = scale;
+    scale = Math.max(1, Math.min(5, scale + delta));
+    // zoom vers le curseur
+    const rect = lightboxImg.getBoundingClientRect();
+    const cx = e.clientX - rect.left - rect.width/2;
+    const cy = e.clientY - rect.top - rect.height/2;
+    translateX -= cx*(scale/oldScale -1);
+    translateY -= cy*(scale/oldScale -1);
+    updateTransform();
+});
+
+// Drag souris
+lightbox.addEventListener('mousedown', e=>{
+    if(scale>1){
+        isDragging=true;
+        dragStart={x:e.clientX - translateX, y:e.clientY - translateY};
+        lightbox.classList.add('grabbing');
+    }
+});
+lightbox.addEventListener('mousemove', e=>{
+    if(isDragging){
+        translateX = e.clientX - dragStart.x;
+        translateY = e.clientY - dragStart.y;
+        updateTransform();
+    }
+});
+lightbox.addEventListener('mouseup', e=>{
+    isDragging=false;
+    lightbox.classList.remove('grabbing');
+});
+lightbox.addEventListener('mouseleave', e=>{
+    isDragging=false;
+    lightbox.classList.remove('grabbing');
+});
+
+// Clic navigation skins
 lightboxImg.addEventListener('click', e=>{
-    if(scale !== 1) return;
+    if(scale!==1) return; // ne change pas de skin quand zoom
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
-    if(x < rect.width/2){
+    if(x<rect.width/2){
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
     } else {
         currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
@@ -195,49 +245,40 @@ lightboxImg.addEventListener('click', e=>{
     resetZoom();
 });
 
-// Zoom & drag
-lightbox.addEventListener('wheel', e=>{
-    e.preventDefault();
-    const delta = -e.deltaY * 0.002;
-    const newScale = Math.min(Math.max(1, scale + delta),5);
-    scale = newScale;
-    updateTransform();
-});
-
-lightbox.addEventListener('mousedown', e=>{
-    if(scale===1) return;
-    isDragging = true;
-    startX = e.clientX - translateX;
-    startY = e.clientY - translateY;
-});
-lightbox.addEventListener('mousemove', e=>{
-    if(isDragging){
-        translateX = e.clientX - startX;
-        translateY = e.clientY - startY;
-        updateTransform();
-    }
-});
-lightbox.addEventListener('mouseup', e=>{ isDragging=false; });
-lightbox.addEventListener('mouseleave', e=>{ isDragging=false; });
-
-// Mobile pinch
+// Touch: pinch & drag
 lightbox.addEventListener('touchstart', e=>{
-    if(e.touches.length === 2){
+    if(e.touches.length===2){
+        // pinch start
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
-        lastTouches = [e.touches[0], e.touches[1]];
         startDistance = Math.hypot(dx, dy);
+        startScale = scale;
+    } else if(e.touches.length===1 && scale>1){
+        isDragging=true;
+        lastTouches=[...e.touches];
     }
 });
+
 lightbox.addEventListener('touchmove', e=>{
-    if(e.touches.length === 2){
+    e.preventDefault();
+    if(e.touches.length===2){
+        // pinch zoom
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
-        const dist = Math.hypot(dx, dy);
-        scale = Math.min(Math.max(1, scale * dist / startDistance),5);
-        startDistance = dist;
+        const newDist = Math.hypot(dx, dy);
+        const delta = (newDist - startDistance)*0.005;
+        scale = Math.max(1, Math.min(5, startScale + delta));
+        updateTransform();
+    } else if(e.touches.length===1 && scale>1 && isDragging){
+        translateX += e.touches[0].clientX - lastTouches[0].clientX;
+        translateY += e.touches[0].clientY - lastTouches[0].clientY;
+        lastTouches=[...e.touches];
         updateTransform();
     }
+});
+
+lightbox.addEventListener('touchend', e=>{
+    if(e.touches.length<2) isDragging=false;
 });
 
 // Back button
@@ -255,3 +296,4 @@ showChampions();
 
 </body>
 </html>
+
