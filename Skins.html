@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>League Skin Collection</title>
+<style>
+body { margin:0; font-family:Arial,sans-serif; background:#fff; }
+header { padding:20px; text-align:center; font-size:28px; font-weight:bold; border-bottom:1px solid #ddd; }
+.sort-container { display:flex; justify-content:center; margin:10px 0; gap:10px; }
+.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:20px; padding:20px; }
+.card { border:1px solid #ddd; border-radius:12px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
+.card:hover { transform:scale(1.03); }
+.card img { width:100%; height:150px; object-fit:cover; }
+.name { font-weight:bold; padding:5px 0; }
+.back-btn { position:sticky; top:10px; margin:10px auto; padding:10px 20px; cursor:pointer; border:none; background:#ddd; border-radius:6px; z-index:10; display:block; }
+.back-btn:hover { background:#ccc; }
+#lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
+#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
+#closeBtn { position:absolute; top:10px; left:10px; padding:10px 15px; background:#ddd; border:none; border-radius:6px; cursor:pointer; z-index:10000; }
+#closeBtn:hover { background:#ccc; }
+</style>
+</head>
+<body>
+
+<header id="header">League Champions</header>
+
+<div class="sort-container">
+    <label>Trier par : </label>
+    <select id="sortSelect">
+        <option value="nameAsc">Nom A → Z</option>
+        <option value="nameDesc">Nom Z → A</option>
+    </select>
+</div>
+
+<button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
+<div class="container" id="container"></div>
+
+<div id="lightbox">
+    <button id="closeBtn">⬅ Retour</button>
+    <img id="lightbox-img" src="">
+</div>
+
+<script>
+async function main() {
+    const container = document.getElementById("container");
+    const header = document.getElementById("header");
+    const backBtn = document.getElementById("back");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("closeBtn");
+    const sortSelect = document.getElementById("sortSelect");
+    let champions = [];
+    let zoomed = false;
+
+    const versions = await fetch("https://ddragon.leagueoflegends.com/api/versions.json").then(r=>r.json());
+    const latest = versions[0];
+
+    const champData = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion.json`).then(r=>r.json());
+    champions = Object.values(champData.data);
+
+    const wildRiftSkins = [
+        { id: "Aatrox", skin:"Mecha Exquisite Edition", image:"https://i.imgur.com/uN8AEuk.jpg" },
+        { id: "Aatrox", skin:"Prestige Select Dragon Lantern", image:"https://i.imgur.com/YudWnE0.jpg" },
+        { id: "Aatrox", skin:"Shan Hai Scrolls", image:"https://i.imgur.com/31z9BFi.jpg" },
+        { id: "Aatrox", skin:"Weather Entity", image:"https://i.imgur.com/gajMc6y.jpg" }
+    ];
+
+    function sortChampions() {
+        const val = sortSelect.value;
+        if(val==="nameAsc") champions.sort((a,b)=>a.name.localeCompare(b.name));
+        else champions.sort((a,b)=>b.name.localeCompare(a.name));
+        showChampions();
+    }
+
+    function showChampions() {
+        header.textContent="League Champions";
+        backBtn.style.display="none";
+        container.innerHTML="";
+        champions.forEach(champ=>{
+            const card = document.createElement("div");
+            card.className="card";
+            card.innerHTML = `<img src="https://ddragon.leagueoflegends.com/cdn/${latest}/img/champion/${champ.id}.png"><div class="name">${champ.name}</div>`;
+            card.onclick = ()=>showSkins(champ);
+            container.appendChild(card);
+        });
+    }
+
+    async function showSkins(champ) {
+        header.textContent=`${champ.name} Skins`;
+        backBtn.style.display="block";
+        container.innerHTML="";
+
+        const champJSON = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion/${champ.id}.json`).then(r=>r.json());
+        champJSON.data[champ.id].skins.forEach(skin=>{
+            const splash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_${skin.num}.jpg`;
+            const card=document.createElement("div");
+            card.className="card";
+            card.innerHTML = `<img src="${splash}"><div class="name">${skin.name==="default"?"Base":skin.name}</div>`;
+            card.querySelector('img').addEventListener('click', e=>{
+                e.stopPropagation();
+                openLightbox(splash);
+            });
+            container.appendChild(card);
+        });
+
+        wildRiftSkins.filter(s=>s.id===champ.id).forEach(skin=>{
+            const card=document.createElement("div");
+            card.className="card";
+            card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin} <span style="color:red;">(Wild Rift)</span></div>`;
+            card.querySelector('img').addEventListener('click', e=>{
+                e.stopPropagation();
+                openLightbox(skin.image);
+            });
+            container.appendChild(card);
+        });
+    }
+
+    backBtn.onclick = showChampions;
+    closeBtn.onclick = ()=>{ 
+        lightbox.style.display='none'; 
+        zoomed=false;
+        lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
+    };
+
+    function openLightbox(src) {
+        lightbox.style.display="flex";
+        lightboxImg.src = src;
+        zoomed=false;
+        lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
+    }
+
+    // Clic droit pour zoom unique
+    lightboxImg.addEventListener('mousedown', e=>{
+        if(e.button===2){
+            e.preventDefault();
+            zoomed = !zoomed;
+            lightboxImg.style.transform=`translate(-50%,-50%) scale(${zoomed?2:1})`;
+        }
+    });
+
+    lightbox.addEventListener('contextmenu', e=>e.preventDefault());
+    sortSelect.addEventListener('change', sortChampions);
+    sortChampions();
+}
+main();
+</script>
+
+</body>
+</html>
