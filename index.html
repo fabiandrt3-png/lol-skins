@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Akshan Skins Collection</title>
+<title>League Champions Skins</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #ddd; }
@@ -35,7 +35,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 </head>
 <body>
 
-<header id="header">Akshan Skins</header>
+<header id="header">League Champions Skins</header>
 
 <button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
 <div class="container" id="container"></div>
@@ -53,21 +53,37 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.getElementById("closeBtn");
 
-// Skins Akshan personnalisés
-const akshanSkins = [
-    { skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
-    { skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
-    { skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
-    { skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
-    { skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
-    { skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" }
+// Skins personnalisés
+const championsSkins = [
+    { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
+    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
+    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
+    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
+    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
+    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" },
+    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC" }
 ];
 
-function showSkins() {
-    header.textContent="Akshan Skins";
+function showChampions() {
+    header.textContent="League Champions Skins";
     backBtn.style.display="none";
     container.innerHTML="";
-    akshanSkins.forEach(skin=>{
+    // Liste unique des champions
+    const champNames = [...new Set(championsSkins.map(s=>s.champ))];
+    champNames.forEach(champ=>{
+        const card = document.createElement("div");
+        card.className="card";
+        card.innerHTML = `<div class="name">${champ}</div>`;
+        card.onclick = ()=>showSkins(champ);
+        container.appendChild(card);
+    });
+}
+
+function showSkins(champ) {
+    header.textContent=`${champ} Skins`;
+    backBtn.style.display="block";
+    container.innerHTML="";
+    championsSkins.filter(s=>s.champ===champ).forEach(skin=>{
         const card = document.createElement("div");
         card.className="card";
         const label = skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
@@ -80,7 +96,7 @@ function showSkins() {
     });
 }
 
-backBtn.onclick = showSkins;
+backBtn.onclick = showChampions;
 closeBtn.onclick = ()=>{ 
     lightbox.style.display='none'; 
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
@@ -92,7 +108,7 @@ function openLightbox(src) {
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
 }
 
-showSkins();
+showChampions();
 </script>
 
 </body>
