@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>League Champions Skins</title>
+<title>Skins League of Legends</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #ddd; }
@@ -35,7 +35,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 </head>
 <body>
 
-<header id="header">League Champions Skins</header>
+<header id="header">Skins League of Legends</header>
 
 <button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
 <div class="container" id="container"></div>
@@ -65,12 +65,12 @@ const championsSkins = [
 ];
 
 function showChampions() {
-    header.textContent="League Champions Skins";
+    header.textContent="Skins League of Legends";
     backBtn.style.display="none";
     container.innerHTML="";
 
-    // Liste unique des champions
-    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort(); // tri alphabétique
+    // Liste unique des champions triée par ordre alphabétique
+    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
     champNames.forEach(champ=>{
         const card = document.createElement("div");
         card.className="card";
