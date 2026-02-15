@@ -5,26 +5,38 @@
 <title>League Skin Collection</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
-header { padding:30px; text-align:center; font-size:3rem; font-weight:bold; border-bottom:2px solid #ddd; }
+header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #ddd; }
 
-.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:15px 0; gap:15px; font-size:1.2rem; }
-.sort-container select { font-size:1.2rem; padding:0.5rem; }
+.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:20px 0; gap:20px; font-size:1.5rem; }
+.sort-container label { font-weight:bold; }
+.sort-container select { font-size:1.5rem; padding:0.7rem 1rem; }
 
-.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:20px; padding:20px; }
+.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
 
-.card { border:2px solid #ddd; border-radius:16px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
+.card { border:2px solid #ddd; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
 .card:hover { transform:scale(1.05); }
-.card img { width:100%; height:auto; max-height:200px; object-fit:cover; }
+.card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
 
-.name { font-weight:bold; font-size:1.2rem; padding:8px 0; }
+.name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
 
-.back-btn { position:sticky; top:10px; left:10px; margin:10px auto; padding:1rem 2rem; cursor:pointer; border:none; background:#ddd; border-radius:8px; z-index:10; display:block; font-size:1.2rem; }
+.back-btn { position:sticky; top:10px; left:10px; margin:15px auto; padding:1.2rem 2.5rem; cursor:pointer; border:none; background:#ddd; border-radius:10px; z-index:10; display:block; font-size:1.5rem; }
 .back-btn:hover { background:#ccc; }
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
 #lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
-#closeBtn { position:absolute; top:20px; left:20px; padding:1rem 1.5rem; background:#ddd; border:none; border-radius:8px; cursor:pointer; z-index:10000; font-size:1.2rem; }
+#closeBtn { position:absolute; top:20px; left:20px; padding:1.2rem 2rem; background:#ddd; border:none; border-radius:10px; cursor:pointer; z-index:10000; font-size:1.5rem; }
 #closeBtn:hover { background:#ccc; }
+
+/* Responsive pour mobile */
+@media (max-width:768px){
+    header { font-size:3rem; padding:30px; }
+    .sort-container { font-size:1.3rem; gap:15px; }
+    .sort-container select { font-size:1.3rem; padding:0.5rem 0.8rem; }
+    .card img { max-height:180px; }
+    .name { font-size:1.2rem; }
+    .back-btn { padding:1rem 2rem; font-size:1.3rem; }
+    #closeBtn { padding:1rem 1.5rem; font-size:1.3rem; }
+}
 </style>
 </head>
 <body>
