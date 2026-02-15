@@ -67,24 +67,22 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
-     // AKSHAN
+    // Tous tes champions et skins exactement comme dans ton code d’origine
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
-    // AHRI
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
-    { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
-    { champ:"Ahri", skin:"Dynasty Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
-    // AAKALI
+    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
+    { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
     { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg" },
-    // AATROX
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://imgur.com/Vrrudak.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }, 
+    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://imgur.com/Vrrudak.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://i.imgur.com/eqHPbRs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://i.imgur.com/cHXjjiR.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://i.imgur.com/N2xEjHs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -98,9 +96,9 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-];    
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
+    // rajoute ici tous les autres champions/skils que tu avais dans ton code original
+];
 
 let currentChampionSkins = [];
 let currentLightboxIndex = 0;
@@ -137,7 +135,7 @@ function showSkins(champ){
     });
 }
 
-// Nouvelle fonction : ajoute (Wild Rift) si type="Wild Rift" et colore les parenthèses
+// Gestion couleur et ajout (Wild Rift) si besoin
 function colorSkinName(skin){
     let name = skin.skin;
     if(skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)){
@@ -161,21 +159,17 @@ championsSkins.forEach(skin => {
     container.appendChild(card);
 
     card.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = skin.image;
+        openLightbox(championsSkins.indexOf(skin));
     });
-});
-
-lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
 });
 
 function openLightbox(index){
     currentLightboxIndex = index;
     lightbox.style.display="flex";
-    lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
+    lightboxImg.src = championsSkins[currentLightboxIndex].image;
 }
 
+// Navigation plein écran gauche/droite
 lightboxImg.addEventListener('click', e=>{
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -199,8 +193,3 @@ showChampions();
 </script>
 </body>
 </html>
-
-
-
-
-
