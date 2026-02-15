@@ -44,6 +44,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     width:100%;
     height:100%;
     object-fit:contain;
+    cursor:pointer;
 }
 
 @media (max-width:768px){
@@ -72,16 +73,47 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
+    // AKSHAN
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg" },
+    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg" },
+    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg" },
+    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg" },
+    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg" },
+
+    // AHRI
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg" },
     { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg" },
+    { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://imgur.com/FQRbJIy.jpg" },
+
+    // AAKALI
+    { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg" },
+
+    // AATROX
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg" },
-    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg" }
-    // ajoute tous tes autres skins ici
+    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg" },
+    { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://imgur.com/Vrrudak.jpg" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg" },
+    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://i.imgur.com/eqHPbRs.jpg" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://i.imgur.com/cHXjjiR.jpg" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://i.imgur.com/N2xEjHs.jpg" },
+    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://i.imgur.com/d3Ab6Cy.jpg" },
+    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://i.imgur.com/6UT3Xpd.jpg" },
+    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://i.imgur.com/lkUNZWI.jpg" },
+    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://i.imgur.com/L0cQ9Pv.jpg" },
+    { champ:"Aatrox", skin:"DRX Aatrox (Prestige)", image:"https://i.imgur.com/7MwDNZF.jpg" },
+    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://i.imgur.com/x7zkngK.jpg" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://i.imgur.com/YlV7tLp.jpg" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg" },
+    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg" },
+    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg" },
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg" }
+    // rajoute ici tous les autres skins champions
 ];
 
 let currentChampionSkins = [];
+let currentLightboxIndex = 0;
 
 function showChampions() {
     header.textContent="Skins League of Legends";
@@ -116,9 +148,21 @@ function showSkins(champ){
 }
 
 function openLightbox(index){
+    currentLightboxIndex = index;
     lightbox.style.display="flex";
-    lightboxImg.src = currentChampionSkins[index].image;
+    lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
+
+lightboxImg.addEventListener('click', e=>{
+    const rect = lightboxImg.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if(x < rect.width/2){
+        currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
+    } else {
+        currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
+    }
+    lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
+});
 
 backBtn.onclick = ()=>{
     if(lightbox.style.display==='flex'){
@@ -133,5 +177,3 @@ showChampions();
 
 </body>
 </html>
-
-
