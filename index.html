@@ -97,9 +97,6 @@ const championsSkins = [
 
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
-let startX = 0;
-let initialDistance = 0;
-let isPinching = false;
 let originalScale = 1;
 
 function showChampions() {
@@ -150,26 +147,29 @@ function openLightbox(index){
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
 
-function prevSkin(){
-    currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
+// swap par clic sur côté gauche/droite
+lightboxImg.addEventListener('click', e => {
+    const rect = lightboxImg.getBoundingClientRect();
+    if(originalScale !== 1) return; // bloquer swap si zoom
+    const x = e.clientX - rect.left;
+    if(x < rect.width/2){
+        // gauche → skin précédent
+        currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
+    } else {
+        // droite → skin suivant
+        currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
+    }
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
     lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
-    originalScale = 1;
-}
+});
 
-function nextSkin(){
-    currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
-    lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
-    lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
-    originalScale = 1;
-}
 
-// GESTURES
+// GESTURES ZOOM 2 doigts
+let initialDistance = 0;
+let isPinching = false;
+
 lightbox.addEventListener('touchstart', e => {
-    if(e.touches.length === 1 && originalScale === 1){
-        startX = e.touches[0].clientX;
-        isPinching = false;
-    } else if(e.touches.length === 2){
+    if(e.touches.length === 2){
         isPinching = true;
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
@@ -178,7 +178,7 @@ lightbox.addEventListener('touchstart', e => {
 });
 
 lightbox.addEventListener('touchmove', e => {
-    if(e.touches.length === 2){
+    if(isPinching && e.touches.length === 2){
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
         let newDistance = Math.sqrt(dx*dx + dy*dy);
@@ -194,20 +194,6 @@ lightbox.addEventListener('touchend', e => {
         const match = style.match(/scale\(([^)]+)\)/);
         originalScale = match ? parseFloat(match[1]) : 1;
         isPinching = false;
-        return;
-    }
-    const style = lightboxImg.style.transform;
-    const match = style.match(/scale\(([^)]+)\)/);
-    const scale = match ? parseFloat(match[1]) : 1;
-    if(scale !== 1) return;
-
-    if(e.changedTouches.length === 1){
-        const endX = e.changedTouches[0].clientX;
-        const diffX = endX - startX;
-        if(Math.abs(diffX) > 50){
-            if(diffX > 0) prevSkin();
-            else nextSkin();
-        }
     }
 });
 
