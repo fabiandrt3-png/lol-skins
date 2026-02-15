@@ -31,8 +31,23 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 }
 #back:hover { background:rgba(255,255,255,0.1); }
 
-#lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
-#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; transition: transform 0.2s ease; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
+#lightbox {
+    display:none; 
+    position:fixed; 
+    top:0; left:0; 
+    width:100vw; height:100vh; 
+    background:rgba(0,0,0,0.95); 
+    justify-content:center; align-items:center; 
+    z-index:9999; 
+    overflow:hidden; 
+}
+#lightbox img {
+    max-width:100%; max-height:100%; 
+    transform-origin:50% 50%; 
+    transition: transform 0.15s ease;
+    position:absolute; top:50%; left:50%; 
+    transform:translate(-50%,-50%) scale(1);
+}
 
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
@@ -61,6 +76,7 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
+    // === AKSHAN ===
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -68,10 +84,15 @@ const championsSkins = [
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
 
+    // === AHRI ===
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
+    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
+    { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
 
+    // === AKALI ===
     { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akali.png" },
 
+    // === AATROX ===
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -96,8 +117,9 @@ const championsSkins = [
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
 let originalScale = 1;
-let currentScale = 1;
 let targetScale = 1;
+let isPinching = false;
+let initialDistance = 0;
 
 function showChampions() {
     header.textContent="Skins League of Legends";
@@ -149,24 +171,23 @@ function openLightbox(index){
 
 function resetZoom(){
     originalScale = 1;
-    currentScale = 1;
     targetScale = 1;
     lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
 }
 
 function updateZoom(){
-    currentScale += (targetScale - currentScale) * 0.3;
-    lightboxImg.style.transform = `translate(-50%,-50%) scale(${currentScale})`;
-    if(Math.abs(currentScale - targetScale) > 0.001){
+    let current = parseFloat(lightboxImg.style.transform.match(/scale\(([^)]+)\)/)[1]);
+    current += (targetScale - current) * 0.3;
+    lightboxImg.style.transform = `translate(-50%,-50%) scale(${current})`;
+    if(Math.abs(current - targetScale) > 0.001){
         requestAnimationFrame(updateZoom);
-    } else {
-        currentScale = targetScale;
     }
 }
 
-lightboxImg.addEventListener('click', e => {
+lightboxImg.addEventListener('click', e=>{
     const rect = lightboxImg.getBoundingClientRect();
-    if(currentScale !== 1) return; // swap uniquement si pas de zoom
+    const current = parseFloat(lightboxImg.style.transform.match(/scale\(([^)]+)\)/)[1]);
+    if(current !== 1) return;
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
@@ -177,7 +198,7 @@ lightboxImg.addEventListener('click', e => {
     resetZoom();
 });
 
-lightbox.addEventListener('touchstart', e => {
+lightbox.addEventListener('touchstart', e=>{
     if(e.touches.length === 2){
         isPinching = true;
         const dx = e.touches[0].clientX - e.touches[1].clientX;
@@ -186,27 +207,27 @@ lightbox.addEventListener('touchstart', e => {
     }
 });
 
-lightbox.addEventListener('touchmove', e => {
-    if(isPinching && e.touches.length === 2){
+lightbox.addEventListener('touchmove', e=>{
+    if(isPinching && e.touches.length ===2){
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
-        let newDistance = Math.sqrt(dx*dx + dy*dy);
-        targetScale = (newDistance / initialDistance) * originalScale;
-        if(targetScale < 1) targetScale = 1;
-        if(targetScale > 5) targetScale = 5;
+        let newDist = Math.sqrt(dx*dx + dy*dy);
+        targetScale = (newDist/initialDistance)*originalScale;
+        if(targetScale < 1) targetScale=1;
+        if(targetScale > 5) targetScale=5;
         requestAnimationFrame(updateZoom);
     }
 });
 
-lightbox.addEventListener('touchend', e => {
+lightbox.addEventListener('touchend', e=>{
     if(isPinching){
         originalScale = targetScale;
         isPinching = false;
     }
 });
 
-backBtn.onclick = () => {
-    if(lightbox.style.display === 'flex'){
+backBtn.onclick = ()=>{
+    if(lightbox.style.display==='flex'){
         lightbox.style.display='none';
         resetZoom();
     } else {
@@ -219,5 +240,3 @@ showChampions();
 
 </body>
 </html>
-
-
