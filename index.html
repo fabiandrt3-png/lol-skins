@@ -138,8 +138,11 @@ function showSkins(champ){
 }
 
 function colorSkinName(name){
-    name = name.replace(/\(Wild Rift\)/g, '<span style="color:#1E90FF;">(Wild Rift)</span>');
-    name = name.replace(/\((Prestige|Prestige Select|Exquisite Edition)\)/g, '<span style="color:#FFD700;">($1)</span>');
+    // On colorie d'abord Wild Rift
+    name = name.replace(/\(([^)]*Wild Rift[^)]*)\)/gi, '<span style="color:#1E90FF;">($1)</span>');
+    // Ensuite Prestige / Exquisite
+    name = name.replace(/\((Prestige|Prestige Select|Exquisite Edition)\)/gi, '<span style="color:#FFD700;">($1)</span>');
+    // Ensuite Chroma
     name = name.replace(/\(([^)]*Chroma[^)]*)\)/gi, '<span style="color:#FF0000;">($1)</span>');
     return name;
 }
