@@ -67,17 +67,20 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
-    // Tous tes champions et skins exactement comme dans ton code d’origine
+    // AKSHAN
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    // AHRI
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
-    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
+    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
     { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
+    // AKALI
     { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg" },
+    // AATROX
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -97,11 +100,12 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
-    // rajoute ici tous les autres champions/skils que tu avais dans ton code original
-];
+];    
 
 let currentChampionSkins = [];
 let currentLightboxIndex = 0;
+let lightboxArray = [];
+let lightboxIndexGlobal = 0;
 
 function showChampions() {
     header.textContent = "Skins League of Legends";
@@ -129,13 +133,12 @@ function showSkins(champ){
         card.innerHTML = `<img src="${skin.image}"><div class="name">${colorSkinName(skin)}</div>`;
         card.querySelector('img').addEventListener('click', e=>{
             e.stopPropagation();
-            openLightbox(index);
+            openLightboxChampion(index);
         });
         container.appendChild(card);
     });
 }
 
-// Gestion couleur et ajout (Wild Rift) si besoin
 function colorSkinName(skin){
     let name = skin.skin;
     if(skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)){
@@ -149,36 +152,41 @@ function colorSkinName(skin){
     });
 }
 
-championsSkins.forEach(skin => {
+// Création des cartes dans la vue globale
+championsSkins.forEach((skin,index)=>{
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `
-        <img src="${skin.image}" alt="${skin.skin}">
-        <div class="name">${colorSkinName(skin)}</div>
-    `;
+    card.innerHTML = `<img src="${skin.image}" alt="${skin.skin}"><div class="name">${colorSkinName(skin)}</div>`;
     container.appendChild(card);
 
-    card.addEventListener("click", () => {
-        openLightbox(championsSkins.indexOf(skin));
+    card.addEventListener("click", ()=>{
+        lightboxArray = championsSkins;
+        lightboxIndexGlobal = index;
+        openLightboxGlobal();
     });
 });
 
-function openLightbox(index){
-    currentLightboxIndex = index;
+function openLightboxGlobal(){
     lightbox.style.display="flex";
-    lightboxImg.src = championsSkins[currentLightboxIndex].image;
+    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
 }
 
-// Navigation plein écran gauche/droite
+function openLightboxChampion(index){
+    lightbox.style.display="flex";
+    lightboxArray = currentChampionSkins;
+    lightboxIndexGlobal = index;
+    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
+}
+
 lightboxImg.addEventListener('click', e=>{
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
-        currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
+        lightboxIndexGlobal = (lightboxIndexGlobal -1 + lightboxArray.length) % lightboxArray.length;
     } else {
-        currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
+        lightboxIndexGlobal = (lightboxIndexGlobal +1) % lightboxArray.length;
     }
-    lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
+    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
 });
 
 backBtn.onclick = ()=>{
@@ -193,3 +201,4 @@ showChampions();
 </script>
 </body>
 </html>
+
