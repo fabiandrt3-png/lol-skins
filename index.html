@@ -78,7 +78,6 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://imgur.com/Vrrudak.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
     { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://i.imgur.com/eqHPbRs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://i.imgur.com/cHXjjiR.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://i.imgur.com/N2xEjHs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -93,6 +92,7 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
 let currentLightboxIndex = 0;
@@ -127,7 +127,6 @@ function showSkins(champ) {
             .replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
             .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
             .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
-            .replace(/\(([^)]+Chroma[^)]*)\)/gi, "<span style='color:red;'>($1)</span>");
 
         const label = skin.type==="Wild Rift" ? ` <span style="color:#00bfff;">(Wild Rift)</span>` : "";
 
