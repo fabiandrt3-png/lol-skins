@@ -63,6 +63,7 @@ const header = document.getElementById("header");
 const backBtn = document.getElementById("back");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+
 const championsSkins = [
     // AKSHAN
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg" },
@@ -288,16 +289,34 @@ function showSkins(champ){
         container.appendChild(card);
     });
 }
-function formatSkinName(skin) {
-    if (/Wild Rift/i.test(skin)) return `<span style="color:#00f;">${skin}</span>`;
-    if (/(Prestige|Prestige Select|Exquisite Edition)/i.test(skin)) return `<span style="color:#FFD700;">${skin}</span>`;
-    return skin.replace(/\(([^)]+)\)/g, (match, p1) => {
-        if (/Chroma/i.test(p1)) {
-            return `<span style="color:#ff0000;">(${p1})</span>`;
-        }
-        return match;
-    });
+function colorSkinName(skinName) {
+    skinName = skinName.replace(/\bWild Rift\b/g, '<span style="color:#1E90FF;">Wild Rift</span>');
+
+    skinName = skinName.replace(/\b(Prestige|Prestige Select|Exquisite Edition)\b/g, '<span style="color:#FFD700;">$1</span>');
+
+    skinName = skinName.replace(/\(([^)]*Chroma[^)]*)\)/gi, '<span style="color:#FF0000;">($1)</span>');
+
+    return skinName;
 }
+
+championsSkins.forEach(skin => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <img src="${skin.image}" alt="${skin.skin}">
+        <div class="name">${colorSkinName(skin.skin)}</div>
+    `;
+    container.appendChild(card);
+
+    card.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = skin.image;
+    });
+});
+
+lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
 function openLightbox(index){
     currentLightboxIndex = index;
     lightbox.style.display="flex";
@@ -325,6 +344,7 @@ showChampions();
 </script>
 </body>
 </html>
+
 
 
 
