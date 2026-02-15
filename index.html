@@ -55,25 +55,25 @@ const closeBtn = document.getElementById("closeBtn");
 
 // Skins personnalisés
 const championsSkins = [
-    { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
-    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
-    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
-    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
-    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
-    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC" }
+    { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
+    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
 function showChampions() {
     header.textContent="League Champions Skins";
     backBtn.style.display="none";
     container.innerHTML="";
-    // Liste unique des champions
     const champNames = [...new Set(championsSkins.map(s=>s.champ))];
     champNames.forEach(champ=>{
         const card = document.createElement("div");
         card.className="card";
-        card.innerHTML = `<div class="name">${champ}</div>`;
+        const champIcon = championsSkins.find(s=>s.champ===champ).icon;
+        card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
         card.onclick = ()=>showSkins(champ);
         container.appendChild(card);
     });
