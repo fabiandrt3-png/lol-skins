@@ -32,7 +32,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 #back:hover { background:rgba(255,255,255,0.1); }
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
-#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
+#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); transition: transform 0.2s ease; }
 
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
@@ -97,7 +97,7 @@ const championsSkins = [
 
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
-let currentScale = 1;
+let originalScale = 1;
 
 function showChampions() {
     header.textContent="Skins League of Legends";
@@ -142,15 +142,14 @@ function showSkins(champ) {
 
 function openLightbox(index){
     currentLightboxIndex = index;
-    currentScale = 1;
+    originalScale = 1;
     lightbox.style.display = "flex";
     lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
 
-// Swap au clic (gauche/droite)
 lightboxImg.addEventListener('click', e => {
-    if(currentScale !== 1) return; // pas de swap si zoomé
+    if(originalScale !== 1) return; // swipe désactivé si zoom
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
@@ -159,12 +158,10 @@ lightboxImg.addEventListener('click', e => {
         currentLightboxIndex = (currentLightboxIndex +1) % currentChampionSkins.length;
     }
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
-    lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
+    lightboxImg.style.transform = `translate(-50%,-50%) scale(1)`;
 });
 
-// Pinch / zoom
 let initialDistance = 0;
-let startScale = 1;
 let isPinching = false;
 
 lightbox.addEventListener('touchstart', e => {
@@ -173,7 +170,6 @@ lightbox.addEventListener('touchstart', e => {
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
         initialDistance = Math.sqrt(dx*dx + dy*dy);
-        startScale = currentScale;
     }
 });
 
@@ -182,15 +178,20 @@ lightbox.addEventListener('touchmove', e => {
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
         let newDistance = Math.sqrt(dx*dx + dy*dy);
-        currentScale = (newDistance / initialDistance) * startScale;
-        if(currentScale < 1) currentScale = 1;
-        lightboxImg.style.transform = `translate(-50%,-50%) scale(${currentScale})`;
+        let scale = (newDistance / initialDistance) * originalScale;
+        if(scale < 1) scale = 1;
+        if(scale > 5) scale = 5; // limite max zoom
+        lightboxImg.style.transform = `translate(-50%,-50%) scale(${scale})`;
     }
 });
 
 lightbox.addEventListener('touchend', e => {
     if(isPinching){
-        if(currentScale < 1) currentScale = 1;
+        const style = lightboxImg.style.transform;
+        const match = style.match(/scale\(([^)]+)\)/);
+        originalScale = match ? parseFloat(match[1]) : 1;
+        if(originalScale < 1) originalScale = 1;
+        lightboxImg.style.transform = `translate(-50%,-50%) scale(${originalScale})`;
         isPinching = false;
     }
 });
@@ -198,7 +199,7 @@ lightbox.addEventListener('touchend', e => {
 backBtn.onclick = () => {
     if(lightbox.style.display === 'flex'){
         lightbox.style.display='none';
-        currentScale = 1;
+        originalScale = 1;
         lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
     } else {
         showChampions();
