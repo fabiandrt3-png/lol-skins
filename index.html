@@ -129,7 +129,7 @@ function showSkins(champ){
     currentChampionSkins.forEach((skin,index)=>{
         const card = document.createElement("div");
         card.className="card";
-        card.innerHTML = `<img src="${skin.image}"><div class="name">${colorSkinName(skin)}</div>`;
+        card.innerHTML = `<img src="${skin.image}"><div class="name">${colorSkinName(skin.skin)}</div>`;
         card.querySelector('img').addEventListener('click', e=>{
             e.stopPropagation();
             openLightbox(index);
@@ -153,7 +153,7 @@ championsSkins.forEach(skin => {
     card.className = "card";
     card.innerHTML = `
         <img src="${skin.image}" alt="${skin.skin}">
-        <div class="name">${colorSkinName(skin)}</div>
+       <div class="name">${colorSkinName(skin.skin)}</div>
     `;
     container.appendChild(card);
 
@@ -196,4 +196,5 @@ showChampions();
 </script>
 </body>
 </html>
+
 
