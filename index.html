@@ -2,14 +2,10 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>League Skin Collection</title>
+<title>Akshan Skins Collection</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #ddd; }
-
-.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:20px 0; gap:20px; font-size:1.5rem; }
-.sort-container label { font-weight:bold; }
-.sort-container select { font-size:1.5rem; padding:0.7rem 1rem; }
 
 .container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
 
@@ -30,8 +26,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 /* Responsive pour mobile */
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
-    .sort-container { font-size:1.3rem; gap:15px; }
-    .sort-container select { font-size:1.3rem; padding:0.5rem 0.8rem; }
     .card img { max-height:180px; }
     .name { font-size:1.2rem; }
     .back-btn { padding:1rem 2rem; font-size:1.3rem; }
@@ -41,15 +35,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 </head>
 <body>
 
-<header id="header">League Champions</header>
-
-<div class="sort-container">
-    <label>Trier par : </label>
-    <select id="sortSelect">
-        <option value="nameAsc">Nom A → Z</option>
-        <option value="nameDesc">Nom Z → A</option>
-    </select>
-</div>
+<header id="header">Akshan Skins</header>
 
 <button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
 <div class="container" id="container"></div>
@@ -60,107 +46,53 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 </div>
 
 <script>
-async function main() {
-    const container = document.getElementById("container");
-    const header = document.getElementById("header");
-    const backBtn = document.getElementById("back");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const closeBtn = document.getElementById("closeBtn");
-    const sortSelect = document.getElementById("sortSelect");
+const container = document.getElementById("container");
+const header = document.getElementById("header");
+const backBtn = document.getElementById("back");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("closeBtn");
 
-    const versions = await fetch("https://ddragon.leagueoflegends.com/api/versions.json").then(r=>r.json());
-    const latest = versions[0];
+// Skins Akshan personnalisés
+const akshanSkins = [
+    { skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
+    { skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
+    { skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
+    { skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
+    { skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
+    { skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" }
+];
 
-    const champData = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion.json`).then(r=>r.json());
-    let champions = Object.values(champData.data);
-
-    // Skins Wild Rift et PC spécifiques pour Akshan
-    const akshanSkins = [
-        { id:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
-        { id:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
-        { id:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
-        { id:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
-        { id:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
-        { id:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" }
-    ];
-
-    function sortChampions() {
-        const val = sortSelect.value;
-        if(val==="nameAsc") champions.sort((a,b)=>a.name.localeCompare(b.name));
-        else champions.sort((a,b)=>b.name.localeCompare(a.name));
-        showChampions();
-    }
-
-    function showChampions() {
-        header.textContent="League Champions";
-        backBtn.style.display="none";
-        container.innerHTML="";
-        champions.forEach(champ=>{
-            const card = document.createElement("div");
-            card.className="card";
-            card.innerHTML = `<img src="https://ddragon.leagueoflegends.com/cdn/${latest}/img/champion/${champ.id}.png"><div class="name">${champ.name}</div>`;
-            card.onclick = ()=>showSkins(champ);
-            container.appendChild(card);
+function showSkins() {
+    header.textContent="Akshan Skins";
+    backBtn.style.display="none";
+    container.innerHTML="";
+    akshanSkins.forEach(skin=>{
+        const card = document.createElement("div");
+        card.className="card";
+        const label = skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
+        card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin}${label}</div>`;
+        card.querySelector('img').addEventListener('click', e=>{
+            e.stopPropagation();
+            openLightbox(skin.image);
         });
-    }
-
-    async function showSkins(champ) {
-        header.textContent=`${champ.name} Skins`;
-        backBtn.style.display="block";
-        container.innerHTML="";
-
-        // Skins League PC
-        const champJSON = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion/${champ.id}.json`).then(r=>r.json());
-        champJSON.data[champ.id].skins.forEach(skin=>{
-            const splash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_${skin.num}.jpg`;
-            const card=document.createElement("div");
-            card.className="card";
-            card.innerHTML = `<img src="${splash}"><div class="name">${skin.name==="default"?"Base":skin.name}</div>`;
-            card.querySelector('img').addEventListener('click', e=>{
-                e.stopPropagation();
-                openLightbox(splash);
-            });
-            container.appendChild(card);
-        });
-
-        // Skins Akshan Wild Rift ou custom
-        akshanSkins.filter(s=>s.id===champ.id).forEach(skin=>{
-            const card=document.createElement("div");
-            card.className="card";
-            const label = skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
-            card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin}${label}</div>`;
-            card.querySelector('img').addEventListener('click', e=>{
-                e.stopPropagation();
-                openLightbox(skin.image);
-            });
-            container.appendChild(card);
-        });
-    }
-
-    backBtn.onclick = showChampions;
-    closeBtn.onclick = ()=>{ 
-        lightbox.style.display='none'; 
-        lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
-    };
-
-    function openLightbox(src) {
-        lightbox.style.display="flex";
-        lightboxImg.src = src;
-        lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
-    }
-
-    lightboxImg.addEventListener('mousedown', e=>{
-        if(e.button===2){
-            e.preventDefault();
-            lightboxImg.style.transform=`translate(-50%,-50%) scale(2)`;
-        }
+        container.appendChild(card);
     });
-    lightbox.addEventListener('contextmenu', e=>e.preventDefault());
-    sortSelect.addEventListener('change', sortChampions);
-    sortChampions();
 }
-main();
+
+backBtn.onclick = showSkins;
+closeBtn.onclick = ()=>{ 
+    lightbox.style.display='none'; 
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
+};
+
+function openLightbox(src) {
+    lightbox.style.display="flex";
+    lightboxImg.src = src;
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
+}
+
+showSkins();
 </script>
 
 </body>
