@@ -53,15 +53,36 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.getElementById("closeBtn");
 
-// Skins personnalisés
+// Skins personnalisés : Akshan + Aatrox
 const championsSkins = [
+    // Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
-    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
+
+    // Aatrox PC
+    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://i.imgur.com/eqHPbRs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://i.imgur.com/cHXjjiR.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://i.imgur.com/N2xEjHs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://i.imgur.com/d3Ab6Cy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://i.imgur.com/6UT3Xpd.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://i.imgur.com/lkUNZWI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://i.imgur.com/L0cQ9Pv.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Prestige DRX Aatrox", image:"https://i.imgur.com/7MwDNZF.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+
+    // Aatrox Wild Rift
+    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://i.imgur.com/x7zkngK.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://i.imgur.com/YlV7tLp.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Prestige Select Dragon Lantern Aatrox", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Mecha Exquisite Edition Aatrox", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
 function showChampions() {
@@ -69,7 +90,6 @@ function showChampions() {
     backBtn.style.display="none";
     container.innerHTML="";
 
-    // Liste unique des champions triée par ordre alphabétique
     const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
     champNames.forEach(champ=>{
         const card = document.createElement("div");
