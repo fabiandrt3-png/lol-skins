@@ -75,21 +75,14 @@ async function main() {
     const champData = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion.json`).then(r=>r.json());
     let champions = Object.values(champData.data);
 
-    // Skins Wild Rift
-    const wildRiftSkins = [
-        // Aatrox
-        { id: "Aatrox", skin:"Mecha Exquisite Edition", image:"https://i.imgur.com/uN8AEuk.jpg" },
-        { id: "Aatrox", skin:"Prestige Select Dragon Lantern", image:"https://i.imgur.com/YudWnE0.jpg" },
-        { id: "Aatrox", skin:"Shan Hai Scrolls", image:"https://i.imgur.com/31z9BFi.jpg" },
-        { id: "Aatrox", skin:"Weather Entity", image:"https://i.imgur.com/gajMc6y.jpg" },
-        // Ahri
-        { id: "Ahri", skin: "Crystal Rose", image: "https://i.imgur.com/ZT8qFvs.jpg" },
-        { id: "Ahri", skin: "Foxfire", image: "https://i.imgur.com/ma9GxqO.jpg" },
-        { id: "Ahri", skin: "Original Skin", image: "https://i.imgur.com/e9GAI9Y.jpg" },
-        { id: "Ahri", skin: "Popstar Skin", image: "https://i.imgur.com/TDnxx99.jpg" },
-        { id: "Ahri", skin: "Soda Pop Skin", image: "https://i.imgur.com/UbeY6pr.jpg" },
-        { id: "Ahri", skin: "Shan Hai Scrolls", image: "https://i.imgur.com/nEbCL5a.jpg" },
-        { id: "Ahri", skin: "Star Guardian Mythic Chroma", image: "https://i.imgur.com/fYrCvby.jpg" }
+    // Skins Wild Rift et PC spécifiques pour Akshan
+    const akshanSkins = [
+        { id:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC" },
+        { id:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC" },
+        { id:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift" },
+        { id:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg", type:"PC" },
+        { id:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC" },
+        { id:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift" }
     ];
 
     function sortChampions() {
@@ -117,6 +110,7 @@ async function main() {
         backBtn.style.display="block";
         container.innerHTML="";
 
+        // Skins League PC
         const champJSON = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion/${champ.id}.json`).then(r=>r.json());
         champJSON.data[champ.id].skins.forEach(skin=>{
             const splash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_${skin.num}.jpg`;
@@ -130,10 +124,12 @@ async function main() {
             container.appendChild(card);
         });
 
-        wildRiftSkins.filter(s=>s.id===champ.id).forEach(skin=>{
+        // Skins Akshan Wild Rift ou custom
+        akshanSkins.filter(s=>s.id===champ.id).forEach(skin=>{
             const card=document.createElement("div");
             card.className="card";
-            card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin} <span style="color:red;">(Wild Rift)</span></div>`;
+            const label = skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
+            card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin}${label}</div>`;
             card.querySelector('img').addEventListener('click', e=>{
                 e.stopPropagation();
                 openLightbox(skin.image);
