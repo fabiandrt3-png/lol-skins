@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Skins League of Legends</title>
 <style>
-
 body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #333; }
 
@@ -138,13 +137,10 @@ function showSkins(champ){
     });
 }
 
-function colorSkinName(skin){
-    let name = skin.skin;
-
+function colorSkinName(name){
     name = name.replace(/\(Wild Rift\)/g, '<span style="color:#1E90FF;">(Wild Rift)</span>');
     name = name.replace(/\((Prestige|Prestige Select|Exquisite Edition)\)/g, '<span style="color:#FFD700;">($1)</span>');
     name = name.replace(/\(([^)]*Chroma[^)]*)\)/gi, '<span style="color:#FF0000;">($1)</span>');
-
     return name;
 }
 
@@ -153,7 +149,7 @@ championsSkins.forEach(skin => {
     card.className = "card";
     card.innerHTML = `
         <img src="${skin.image}" alt="${skin.skin}">
-       <div class="name">${colorSkinName(skin.skin)}</div>
+        <div class="name">${colorSkinName(skin.skin)}</div>
     `;
     container.appendChild(card);
 
@@ -196,5 +192,7 @@ showChampions();
 </script>
 </body>
 </html>
+
+
 
 
