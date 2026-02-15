@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <title>Skins League of Legends</title>
 <style>
+
 body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #333; }
+
 .container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
 .card { border:2px solid #333; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; background:#111; }
 .card:hover { transform:scale(1.05); }
 .card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
 .name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
+
 #back {
     position:fixed;
     top:10px;
@@ -138,21 +141,13 @@ function showSkins(champ){
 function colorSkinName(skin){
     let name = skin.skin;
 
-    // Mettre Wild Rift en bleu si type Wild Rift
-    if(skin.type === "Wild Rift"){
-        name += ' <span style="color:#1E90FF;">Wild Rift</span>';
-    }
-
-    // Prestige / Exquisite Edition en doré
-    name = name.replace(/\b(Prestige|Prestige Select|Exquisite Edition)\b/g, '<span style="color:#FFD700;">$1</span>');
-
-    // Chroma en rouge
+    name = name.replace(/\(Wild Rift\)/g, '<span style="color:#1E90FF;">(Wild Rift)</span>');
+    name = name.replace(/\((Prestige|Prestige Select|Exquisite Edition)\)/g, '<span style="color:#FFD700;">($1)</span>');
     name = name.replace(/\(([^)]*Chroma[^)]*)\)/gi, '<span style="color:#FF0000;">($1)</span>');
 
     return name;
 }
 
-// Initialisation Lightbox pour tous les skins
 championsSkins.forEach(skin => {
     const card = document.createElement("div");
     card.className = "card";
@@ -201,3 +196,4 @@ showChampions();
 </script>
 </body>
 </html>
+
