@@ -137,19 +137,21 @@ function showSkins(champ) {
     });
 }
 
-// SWIPE / ZOOM
 let startX = 0;
 let startY = 0;
+let touchCount = 0;
 
 lightbox.addEventListener('touchstart', e => { 
-    if(e.touches.length === 1){ // un doigt → swipe
+    touchCount = e.touches.length;
+    if(touchCount === 1){
         startX = e.touches[0].clientX; 
         startY = e.touches[0].clientY; 
     }
 });
 
 lightbox.addEventListener('touchend', e => {
-    if(e.changedTouches.length === 1){ // un doigt → swipe
+    if(touchCount !== 1) return;
+    if(e.changedTouches.length === 1){
         let endX = e.changedTouches[0].clientX;
         let endY = e.changedTouches[0].clientY;
         let diffX = endX - startX;
@@ -161,6 +163,7 @@ lightbox.addEventListener('touchend', e => {
         }
     }
 });
+
 
 function openLightbox(index){
     currentLightboxIndex = index;
@@ -191,4 +194,5 @@ showChampions();
 
 </body>
 </html>
+
 
