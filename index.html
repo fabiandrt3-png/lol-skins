@@ -40,13 +40,14 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     justify-content:center; align-items:center; 
     z-index:9999; 
     overflow:hidden; 
+    touch-action: none;
 }
 #lightbox img {
     max-width:100%; max-height:100%; 
-    transform-origin:50% 50%; 
+    transform-origin: center center; 
     position:absolute; top:50%; left:50%; 
-    transform:translate(-50%,-50%) scale(1);
-    transition: transform 0.1s ease;
+    transform:translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease-out;
 }
 
 @media (max-width:768px){
@@ -117,9 +118,12 @@ const championsSkins = [
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
 let scale = 1;
-let isPinching = false;
-let startDistance = 0;
-let startScale = 1;
+let startX = 0;
+let startY = 0;
+let translateX = 0;
+let translateY = 0;
+let isDragging = false;
+let lastTouches = [];
 
 function showChampions() {
     header.textContent="Skins League of Legends";
@@ -168,12 +172,19 @@ function openLightbox(index){
 
 function resetZoom(){
     scale = 1;
-    lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
+    translateX = 0;
+    translateY = 0;
+    updateTransform();
 }
 
+function updateTransform(){
+    lightboxImg.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`;
+}
+
+// Desktop click to change skin
 lightboxImg.addEventListener('click', e=>{
+    if(scale !== 1) return;
     const rect = lightboxImg.getBoundingClientRect();
-    if(scale !== 1) return; // ne change pas de skin quand on est zoom
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
@@ -184,32 +195,52 @@ lightboxImg.addEventListener('click', e=>{
     resetZoom();
 });
 
-// Pinch zoom mobile
+// Zoom & drag
+lightbox.addEventListener('wheel', e=>{
+    e.preventDefault();
+    const delta = -e.deltaY * 0.002;
+    const newScale = Math.min(Math.max(1, scale + delta),5);
+    scale = newScale;
+    updateTransform();
+});
+
+lightbox.addEventListener('mousedown', e=>{
+    if(scale===1) return;
+    isDragging = true;
+    startX = e.clientX - translateX;
+    startY = e.clientY - translateY;
+});
+lightbox.addEventListener('mousemove', e=>{
+    if(isDragging){
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        updateTransform();
+    }
+});
+lightbox.addEventListener('mouseup', e=>{ isDragging=false; });
+lightbox.addEventListener('mouseleave', e=>{ isDragging=false; });
+
+// Mobile pinch
 lightbox.addEventListener('touchstart', e=>{
     if(e.touches.length === 2){
-        isPinching = true;
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
+        lastTouches = [e.touches[0], e.touches[1]];
         startDistance = Math.hypot(dx, dy);
-        startScale = scale;
     }
 });
-
 lightbox.addEventListener('touchmove', e=>{
-    if(isPinching && e.touches.length === 2){
+    if(e.touches.length === 2){
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
-        const newDist = Math.hypot(dx, dy);
-        const delta = (newDist - startDistance) * 0.005; // sensibilité lissée
-        scale = Math.max(1, Math.min(5, startScale + delta));
-        lightboxImg.style.transform = `translate(-50%,-50%) scale(${scale})`;
+        const dist = Math.hypot(dx, dy);
+        scale = Math.min(Math.max(1, scale * dist / startDistance),5);
+        startDistance = dist;
+        updateTransform();
     }
 });
 
-lightbox.addEventListener('touchend', e=>{
-    if(isPinching) isPinching=false;
-});
-
+// Back button
 backBtn.onclick = ()=>{
     if(lightbox.style.display==='flex'){
         lightbox.style.display='none';
@@ -224,5 +255,3 @@ showChampions();
 
 </body>
 </html>
-
-
