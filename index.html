@@ -67,20 +67,7 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
-    // AKSHAN
-    { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg" },
-    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg" },
-    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg" },
-    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://i.imgur.com/OYB83Nw.jpg" },
-    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg" },
-    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg" },
-    // AHRI
-    { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://i.imgur.com/CYKMV1m.jpg" },
-    { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://imgur.com/FQRbJIy.jpg" },
-    // AKALI
-    { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg" },
-    // AATROX
+    // AATROX - tous les skins PC + Wild Rift
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -99,7 +86,7 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Weather Entity Aatrox (Wild Rift)", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
 ];    
 
 let currentChampionSkins = [];
@@ -138,10 +125,12 @@ function showSkins(champ){
 }
 
 function colorSkinName(name){
-    name = name.replace(/\(([^)]*Wild Rift[^)]*)\)/gi, '<span style="color:#1E90FF;">($1)</span>');
-    name = name.replace(/\((Prestige|Prestige Select|Exquisite Edition)\)/gi, '<span style="color:#FFD700;">($1)</span>');
-    name = name.replace(/\(([^)]*Chroma[^)]*)\)/gi, '<span style="color:#FF0000;">($1)</span>');
-    return name;
+    return name.replace(/\(([^)]+)\)/g, (match, content)=>{
+        if(content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
+        if(/Prestige|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
+        if(/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
+        return `(${content})`;
+    });
 }
 
 championsSkins.forEach(skin => {
@@ -192,8 +181,3 @@ showChampions();
 </script>
 </body>
 </html>
-
-
-
-
-
