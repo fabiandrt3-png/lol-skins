@@ -23,28 +23,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 #closeBtn { position:absolute; top:20px; left:20px; padding:1.2rem 2rem; background:#222; color:#fff; border:none; border-radius:10px; cursor:pointer; z-index:10000; font-size:1.5rem; }
 #closeBtn:hover { background:#333; }
 
-.navBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.3);
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    z-index: 10001;
-    padding: 0.3rem 0.5rem;
-}
-
-#prevBtn { left: 20px; }
-#nextBtn { right: 20px; }
-
-.navBtn img {
-    width: 30px;
-    height: 30px;
-}
-
-.navBtn:hover { background: rgba(0,0,0,0.5); }
-
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
     .card img { max-height:180px; }
@@ -64,12 +42,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 <div id="lightbox">
     <button id="closeBtn">⬅ Retour</button>
     <img id="lightbox-img" src="">
-    <button id="prevBtn" class="navBtn">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/chevron-left.png"/>
-    </button>
-    <button id="nextBtn" class="navBtn">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/chevron-right.png"/>
-    </button>
 </div>
 
 <script>
@@ -79,13 +51,8 @@ const backBtn = document.getElementById("back");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.getElementById("closeBtn");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
 
-let currentIndex = 0;
-let currentSkins = [];
-
-// Skins personnalisés : Akshan + Aatrox + Ahri Classic + Akali
+// Skins personnalisés : Akshan + Aatrox + Ahri + Akali
 const championsSkins = [
     // Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -134,7 +101,11 @@ function showChampions() {
         card.className="card";
         const champIcon = championsSkins.find(s=>s.champ===champ).icon;
         card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
-        card.onclick = ()=>showSkins(champ);
+        // clic ouvre la première skin du champion dans une nouvelle page
+        card.onclick = ()=> {
+            const skinImage = championsSkins.find(s => s.champ === champ).image;
+            window.open(skinImage, "_blank");
+        };
         container.appendChild(card);
     });
 }
@@ -143,9 +114,7 @@ function showSkins(champ) {
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
     container.innerHTML="";
-    currentSkins = championsSkins.filter(s=>s.champ===champ); // important pour navigation
-
-    currentSkins.forEach(skin=>{
+    championsSkins.filter(s=>s.champ===champ).forEach(skin=>{
         const card = document.createElement("div");
         card.className="card";
 
@@ -159,36 +128,19 @@ function showSkins(champ) {
             : "";
 
         card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
+        // clic sur le skin ouvre l'image dans une nouvelle page
         card.querySelector('img').addEventListener('click', e=>{
             e.stopPropagation();
-            openLightbox(skin.image);
+            window.open(skin.image, "_blank");
         });
         container.appendChild(card);
     });
 }
 
 backBtn.onclick = showChampions;
-
 closeBtn.onclick = ()=>{ 
     lightbox.style.display='none'; 
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
-};
-
-function openLightbox(src) {
-    lightbox.style.display="flex";
-    currentIndex = currentSkins.findIndex(skin => skin.image === src);
-    lightboxImg.src = src;
-    lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
-}
-
-prevBtn.onclick = () => {
-    currentIndex = (currentIndex - 1 + currentSkins.length) % currentSkins.length;
-    lightboxImg.src = currentSkins[currentIndex].image;
-};
-
-nextBtn.onclick = () => {
-    currentIndex = (currentIndex + 1) % currentSkins.length;
-    lightboxImg.src = currentSkins[currentIndex].image;
 };
 
 showChampions();
