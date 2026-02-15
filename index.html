@@ -4,21 +4,25 @@
 <meta charset="UTF-8">
 <title>Skins League of Legends</title>
 <style>
-/* --- CSS --- */
 body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #333; }
+
 .container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
-.card { border:2px solid #333; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; background:#111; }
-.card:hover { transform:scale(1.05); box-shadow:0 0 15px rgba(255,255,255,0.2); }
+
+.card { border:2px solid #333; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; background:#111; }
+.card:hover { transform:scale(1.05); }
 .card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
+
 .name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
+
 .back-btn { position:sticky; top:10px; left:10px; margin:15px auto; padding:1.2rem 2.5rem; cursor:pointer; border:none; background:#222; color:#fff; border-radius:10px; z-index:10; display:block; font-size:1.5rem; }
 .back-btn:hover { background:#333; }
-#lightbox { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); display:flex; justify-content:center; align-items:center; opacity:0; visibility:hidden; transition:opacity 0.3s; z-index:9999; overflow:hidden; }
-#lightbox.show { opacity:1; visibility:visible; }
+
+#lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
 #lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
 #closeBtn { position:absolute; top:20px; left:20px; padding:1.2rem 2rem; background:#222; color:#fff; border:none; border-radius:10px; cursor:pointer; z-index:10000; font-size:1.5rem; }
 #closeBtn:hover { background:#333; }
+
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
     .card img { max-height:180px; }
@@ -32,22 +36,23 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 
 <header id="header">Skins League of Legends</header>
 
-<button id="back" class="back-btn" style="display:none;" aria-label="Retour aux champions">⬅ Retour</button>
+<button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
 <div class="container" id="container"></div>
 
-<div id="lightbox" aria-hidden="true">
-    <button id="closeBtn" aria-label="Fermer le lightbox">⬅ Retour</button>
-    <img id="lightbox-img" src="" alt="Skin agrandi">
+<div id="lightbox">
+    <button id="closeBtn">⬅ Retour</button>
+    <img id="lightbox-img" src="">
 </div>
 
 <script>
-// --- JS ---
 const container = document.getElementById("container");
 const header = document.getElementById("header");
 const backBtn = document.getElementById("back");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.getElementById("closeBtn");
+
+// Skins personnalisés : Akshan + Aatrox + Ahri Classic + Akali
 const championsSkins = [
     // Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -83,65 +88,63 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
-// --- Fonctions ---
-function createCard(imgSrc, name, clickHandler){
-    const card = document.createElement('div');
-    card.className='card';
-    card.innerHTML=`<img src="${imgSrc}" alt="${name}"><div class="name">${name}</div>`;
-    card.addEventListener('click', clickHandler);
-    return card;
-}
-
-function showChampions(){
+function showChampions() {
     header.textContent="Skins League of Legends";
     backBtn.style.display="none";
     container.innerHTML="";
-    const frag = document.createDocumentFragment();
-    const champNames=[...new Set(championsSkins.map(s=>s.champ))].sort();
+
+    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
     champNames.forEach(champ=>{
+        const card = document.createElement("div");
+        card.className="card";
         const champIcon = championsSkins.find(s=>s.champ===champ).icon;
-        frag.appendChild(createCard(champIcon, champ, ()=>showSkins(champ)));
+        card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
+        card.onclick = ()=>showSkins(champ);
+        container.appendChild(card);
     });
-    container.appendChild(frag);
 }
 
-function showSkins(champ){
+function showSkins(champ) {
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
     container.innerHTML="";
-    const frag = document.createDocumentFragment();
     championsSkins.filter(s=>s.champ===champ).forEach(skin=>{
-        let skinName=skin.skin.replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
-                              .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
-                              .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
-        let label=skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
-        const card=createCard(skin.image, skin.skin+label, ()=>openLightbox(skin.image));
-        card.querySelector('img').addEventListener('click', e=>e.stopPropagation());
-        card.querySelector('.name').innerHTML=skinName+label;
-        frag.appendChild(card);
+        const card = document.createElement("div");
+        card.className="card";
+
+        let skinName = skin.skin
+            .replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
+            .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
+            .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
+
+        const label = skin.type==="Wild Rift"
+            ? ` <span style="color:red;">(Wild Rift)</span>`
+            : "";
+
+        card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
+        card.querySelector('img').addEventListener('click', e=>{
+            e.stopPropagation();
+            openLightbox(skin.image);
+        });
+        container.appendChild(card);
     });
-    container.appendChild(frag);
 }
 
-function openLightbox(src){
-    lightboxImg.src=src;
-    lightbox.classList.add('show');
-    lightbox.setAttribute('aria-hidden','false');
-}
-function closeLightbox(){
-    lightbox.classList.remove('show');
-    lightbox.setAttribute('aria-hidden','true');
+backBtn.onclick = showChampions;
+closeBtn.onclick = ()=>{ 
+    lightbox.style.display='none'; 
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
+};
+
+function openLightbox(src) {
+    lightbox.style.display="flex";
+    lightboxImg.src = src;
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
 }
 
-backBtn.addEventListener('click', showChampions);
-closeBtn.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', e=>{if(e.target===lightbox) closeLightbox();});
-document.addEventListener('keydown', e=>{if(e.key==='Escape') closeLightbox();});
-
-// Affichage initial
 showChampions();
 </script>
+
 </body>
 </html>
-
 
