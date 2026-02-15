@@ -137,25 +137,29 @@ function showSkins(champ) {
     });
 }
 
+// SWIPE / ZOOM
 let startX = 0;
 let startY = 0;
 
 lightbox.addEventListener('touchstart', e => { 
-    startX = e.touches[0].clientX; 
-    startY = e.touches[0].clientY; 
+    if(e.touches.length === 1){ // un doigt → swipe
+        startX = e.touches[0].clientX; 
+        startY = e.touches[0].clientY; 
+    }
 });
 
 lightbox.addEventListener('touchend', e => {
-    let endX = e.changedTouches[0].clientX;
-    let endY = e.changedTouches[0].clientY;
-    let diffX = endX - startX;
-    let diffY = endY - startY;
+    if(e.changedTouches.length === 1){ // un doigt → swipe
+        let endX = e.changedTouches[0].clientX;
+        let endY = e.changedTouches[0].clientY;
+        let diffX = endX - startX;
+        let diffY = endY - startY;
 
-    // Si le mouvement vertical est plus grand que horizontal -> ignore (pinch/scroll)
-    if(Math.abs(diffY) > Math.abs(diffX)) return;
-
-    if(diffX > 50){ prevSkin(); }   // swipe droite
-    else if(diffX < -50){ nextSkin(); } // swipe gauche
+        if(Math.abs(diffX) > Math.abs(diffY)){ // horizontal only
+            if(diffX > 50) prevSkin();
+            else if(diffX < -50) nextSkin();
+        }
+    }
 });
 
 function openLightbox(index){
