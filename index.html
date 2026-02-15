@@ -10,16 +10,38 @@ body {
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
+    margin:0;
+    padding:0;
 }
 
 h1 {
-    margin-top:20px;
+    margin:30px 0;
 }
 
-select {
-    padding:10px;
-    font-size:16px;
-    margin:20px;
+.champions-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.champion-card {
+    background:#1c1c1c;
+    padding:15px;
+    border-radius:15px;
+    width:150px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.champion-card:hover {
+    transform:scale(1.1);
+}
+
+.champion-card img {
+    width:100px;
+    border-radius:50%;
 }
 
 .skin-container {
@@ -27,7 +49,7 @@ select {
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-    margin-top:20px;
+    padding-bottom:50px;
 }
 
 .skin-card {
@@ -58,16 +80,13 @@ select {
 
 <h1>League of Legends Skins</h1>
 
-<select id="championSelect" onchange="showSkins()">
-    <option value="">Choisir un champion</option>
-</select>
-
+<div class="champions-container" id="championsContainer"></div>
 <div class="skin-container" id="skinsContainer"></div>
 
 <script>
 const championsSkins = [
 
-    // Akshan
+    // AKSHAN
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -75,7 +94,7 @@ const championsSkins = [
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
 
-    // Aatrox
+    // AATROX
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -95,23 +114,32 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Mecha Exquisite Edition Aatrox", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
-const select = document.getElementById("championSelect");
-const container = document.getElementById("skinsContainer");
+const championsContainer = document.getElementById("championsContainer");
+const skinsContainer = document.getElementById("skinsContainer");
 
-const champions = [...new Set(championsSkins.map(s => s.champ))];
+// récupérer un champion unique + son icône
+const champions = [...new Map(championsSkins.map(item => 
+    [item.champ, item]
+)).values()];
 
 champions.forEach(champ => {
-    const option = document.createElement("option");
-    option.value = champ;
-    option.textContent = champ;
-    select.appendChild(option);
+    const card = document.createElement("div");
+    card.className = "champion-card";
+
+    card.innerHTML = `
+        <img src="${champ.icon}" alt="${champ.champ}">
+        <h3>${champ.champ}</h3>
+    `;
+
+    card.onclick = () => showSkins(champ.champ);
+
+    championsContainer.appendChild(card);
 });
 
-function showSkins() {
-    const selected = select.value;
-    container.innerHTML = "";
+function showSkins(championName) {
+    skinsContainer.innerHTML = "";
 
-    const skins = championsSkins.filter(s => s.champ === selected);
+    const skins = championsSkins.filter(s => s.champ === championName);
 
     skins.forEach(skin => {
         const card = document.createElement("div");
@@ -126,7 +154,7 @@ function showSkins() {
             <h3>${skin.skin} ${wildLabel}</h3>
         `;
 
-        container.appendChild(card);
+        skinsContainer.appendChild(card);
     });
 }
 </script>
