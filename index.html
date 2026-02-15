@@ -15,20 +15,35 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 
 .name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
 
-.back-btn { position:sticky; top:10px; left:10px; margin:15px auto; padding:1.2rem 2.5rem; cursor:pointer; border:none; background:#222; color:#fff; border-radius:10px; z-index:10; display:block; font-size:1.5rem; }
-.back-btn:hover { background:#333; }
+/* Bouton Retour transparent */
+.back-btn, #closeBtn {
+    position:sticky;
+    top:10px;
+    left:10px;
+    margin:15px auto;
+    padding:1.2rem 2.5rem;
+    cursor:pointer;
+    border:none;
+    background:rgba(0,0,0,0); /* fond transparent */
+    color:#fff;
+    border-radius:10px;
+    z-index:10;
+    display:block;
+    font-size:1.5rem;
+    transition:0.2s ease;
+}
+.back-btn:hover, #closeBtn:hover {
+    background:rgba(255,255,255,0.1); /* léger effet au survol */
+}
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
-#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
-#closeBtn { position:absolute; top:20px; left:20px; padding:1.2rem 2rem; background:#222; color:#fff; border:none; border-radius:10px; cursor:pointer; z-index:10000; font-size:1.5rem; }
-#closeBtn:hover { background:#333; }
+#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); transition: transform 0.3s ease; }
 
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
     .card img { max-height:180px; }
     .name { font-size:1.2rem; }
-    .back-btn { padding:1rem 2rem; font-size:1.3rem; }
-    #closeBtn { padding:1rem 1.5rem; font-size:1.3rem; }
+    .back-btn, #closeBtn { padding:1rem 2rem; font-size:1.3rem; }
 }
 </style>
 </head>
@@ -60,7 +75,6 @@ let endX = 0;
 
 // Skins personnalisés : Akshan + Aatrox + Ahri Classic + Akali
 const championsSkins = [
-    // Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -68,15 +82,12 @@ const championsSkins = [
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
 
-    // Ahri
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
     { champ:"Ahri", skin:"Classic Ahri", image:"https://imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
     { champ:"Ahri", skin:"Classic Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
 
-    // Akali
     { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akali.png" },
     
-    // Aatrox
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -100,7 +111,6 @@ function showChampions() {
     header.textContent="Skins League of Legends";
     backBtn.style.display="none";
     container.innerHTML="";
-
     const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
     champNames.forEach(champ=>{
         const card = document.createElement("div");
@@ -116,9 +126,7 @@ function showSkins(champ) {
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
     container.innerHTML="";
-
     currentSkins = championsSkins.filter(s=>s.champ===champ);
-
     currentSkins.forEach(skin=>{
         const card = document.createElement("div");
         card.className="card";
@@ -128,9 +136,7 @@ function showSkins(champ) {
             .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
             .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
 
-        const label = skin.type==="Wild Rift"
-            ? ` <span style="color:#00bfff;">(Wild Rift)</span>` 
-            : "";
+        const label = skin.type==="Wild Rift" ? ` <span style="color:#00bfff;">(Wild Rift)</span>` : "";
 
         card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
         card.querySelector('img').addEventListener('click', e=>{
@@ -154,15 +160,34 @@ function openLightbox(src) {
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
 }
 
+// Fonction d'animation du swap
+function showNextSkin(direction) {
+    const oldImg = lightboxImg.cloneNode();
+    oldImg.src = lightboxImg.src;
+    oldImg.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+    oldImg.style.position = 'absolute';
+    oldImg.style.top = '50%';
+    oldImg.style.left = '50%';
+    oldImg.style.transform = `translate(-50%,-50%) scale(1)`;
+    lightbox.appendChild(oldImg);
+
+    currentIndex = (currentIndex + direction + currentSkins.length) % currentSkins.length;
+    lightboxImg.src = currentSkins[currentIndex].image;
+
+    oldImg.style.transform = `translate(${direction * -100}%, -50%) scale(1)`;
+    oldImg.style.opacity = '0';
+
+    setTimeout(() => { lightbox.removeChild(oldImg); }, 300);
+}
+
 // Swipe tactile
 lightbox.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
 lightbox.addEventListener('touchmove', e => { endX = e.touches[0].clientX; });
 lightbox.addEventListener('touchend', e => {
     let diff = startX - endX;
     if(Math.abs(diff) > 50){
-        if(diff > 0){ currentIndex = (currentIndex + 1) % currentSkins.length; }
-        else { currentIndex = (currentIndex - 1 + currentSkins.length) % currentSkins.length; }
-        lightboxImg.src = currentSkins[currentIndex].image;
+        if(diff > 0) showNextSkin(1);
+        else showNextSkin(-1);
     }
 });
 
@@ -171,3 +196,4 @@ showChampions();
 
 </body>
 </html>
+
