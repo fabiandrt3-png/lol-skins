@@ -126,7 +126,8 @@ function showSkins(champ) {
         let skinName = skin.skin
             .replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
             .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
-            .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
+            .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>")
+            .replace(/\(([^)]+Chroma[^)]*)\)/gi, "<span style='color:red;'>($1)</span>");
 
         const label = skin.type==="Wild Rift" ? ` <span style="color:#00bfff;">(Wild Rift)</span>` : "";
 
@@ -207,4 +208,5 @@ showChampions();
 
 </body>
 </html>
+
 
