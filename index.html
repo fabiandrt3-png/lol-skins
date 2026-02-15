@@ -5,19 +5,35 @@
 <title>League Skin Collection</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
-header { padding:20px; text-align:center; font-size:28px; font-weight:bold; border-bottom:1px solid #ddd; }
-.sort-container { display:flex; justify-content:center; margin:10px 0; gap:10px; }
-.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:20px; padding:20px; }
+header { padding:20px; text-align:center; font-size:2rem; font-weight:bold; border-bottom:1px solid #ddd; }
+
+.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:10px 0; gap:10px; }
+.sort-container label { font-size:1rem; }
+.sort-container select { font-size:1rem; padding:0.3rem; }
+
+.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:15px; padding:15px; }
+
 .card { border:1px solid #ddd; border-radius:12px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
 .card:hover { transform:scale(1.03); }
-.card img { width:100%; height:150px; object-fit:cover; }
-.name { font-weight:bold; padding:5px 0; }
-.back-btn { position:sticky; top:10px; margin:10px auto; padding:10px 20px; cursor:pointer; border:none; background:#ddd; border-radius:6px; z-index:10; display:block; }
+.card img { width:100%; height:auto; max-height:150px; object-fit:cover; }
+
+.name { font-weight:bold; font-size:1rem; padding:5px 0; }
+
+.back-btn { position:sticky; top:10px; left:10px; margin:10px auto; padding:0.8rem 1.5rem; cursor:pointer; border:none; background:#ddd; border-radius:6px; z-index:10; display:block; font-size:1rem; }
 .back-btn:hover { background:#ccc; }
+
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
 #lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
-#closeBtn { position:absolute; top:10px; left:10px; padding:10px 15px; background:#ddd; border:none; border-radius:6px; cursor:pointer; z-index:10000; }
+#closeBtn { position:absolute; top:10px; left:10px; padding:0.8rem 1.2rem; background:#ddd; border:none; border-radius:6px; cursor:pointer; z-index:10000; font-size:1rem; }
 #closeBtn:hover { background:#ccc; }
+
+@media (max-width: 600px) {
+    header { font-size:1.5rem; }
+    .card img { max-height:120px; }
+    .back-btn, #closeBtn { padding:0.6rem 1rem; font-size:0.9rem; }
+    .name { font-size:0.9rem; }
+    .sort-container label, .sort-container select { font-size:0.9rem; }
+}
 </style>
 </head>
 <body>
