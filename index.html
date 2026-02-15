@@ -52,6 +52,12 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.getElementById("closeBtn");
 
+// Variables pour le swipe et carrousel
+let currentSkins = [];
+let currentIndex = 0;
+let startX = 0;
+let endX = 0;
+
 // Skins personnalisés : Akshan + Aatrox + Ahri Classic + Akali
 const championsSkins = [
     // Akshan
@@ -110,7 +116,10 @@ function showSkins(champ) {
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
     container.innerHTML="";
-    championsSkins.filter(s=>s.champ===champ).forEach(skin=>{
+
+    currentSkins = championsSkins.filter(s=>s.champ===champ);
+
+    currentSkins.forEach(skin=>{
         const card = document.createElement("div");
         card.className="card";
 
@@ -120,7 +129,7 @@ function showSkins(champ) {
             .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
 
         const label = skin.type==="Wild Rift"
-            ? ` <span style="color:#00bfff;">(Wild Rift)</span>` // bleu clair
+            ? ` <span style="color:#00bfff;">(Wild Rift)</span>` 
             : "";
 
         card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
@@ -140,9 +149,22 @@ closeBtn.onclick = ()=>{
 
 function openLightbox(src) {
     lightbox.style.display="flex";
-    lightboxImg.src = src;
+    currentIndex = currentSkins.findIndex(skin => skin.image === src);
+    lightboxImg.src = currentSkins[currentIndex].image;
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
 }
+
+// Swipe tactile
+lightbox.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+lightbox.addEventListener('touchmove', e => { endX = e.touches[0].clientX; });
+lightbox.addEventListener('touchend', e => {
+    let diff = startX - endX;
+    if(Math.abs(diff) > 50){
+        if(diff > 0){ currentIndex = (currentIndex + 1) % currentSkins.length; }
+        else { currentIndex = (currentIndex - 1 + currentSkins.length) % currentSkins.length; }
+        lightboxImg.src = currentSkins[currentIndex].image;
+    }
+});
 
 showChampions();
 </script>
