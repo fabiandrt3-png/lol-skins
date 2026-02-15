@@ -5,26 +5,25 @@
 <title>League Skin Collection</title>
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#fff; }
-header { padding:20px; text-align:center; font-size:2rem; font-weight:bold; border-bottom:1px solid #ddd; }
+header { padding:30px; text-align:center; font-size:3rem; font-weight:bold; border-bottom:2px solid #ddd; }
 
-.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:10px 0; gap:10px; }
-.sort-container label { font-size:1rem; }
-.sort-container select { font-size:1rem; padding:0.3rem; }
+.sort-container { display:flex; justify-content:center; flex-wrap:wrap; margin:15px 0; gap:15px; font-size:1.2rem; }
+.sort-container select { font-size:1.2rem; padding:0.5rem; }
 
-.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:15px; padding:15px; }
+.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:20px; padding:20px; }
 
-.card { border:1px solid #ddd; border-radius:12px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
-.card:hover { transform:scale(1.03); }
-.card img { width:100%; height:auto; max-height:150px; object-fit:cover; }
+.card { border:2px solid #ddd; border-radius:16px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
+.card:hover { transform:scale(1.05); }
+.card img { width:100%; height:auto; max-height:200px; object-fit:cover; }
 
-.name { font-weight:bold; font-size:1rem; padding:5px 0; }
+.name { font-weight:bold; font-size:1.2rem; padding:8px 0; }
 
-.back-btn { position:sticky; top:10px; left:10px; margin:10px auto; padding:0.8rem 1.5rem; cursor:pointer; border:none; background:#ddd; border-radius:6px; z-index:10; display:block; font-size:1rem; }
+.back-btn { position:sticky; top:10px; left:10px; margin:10px auto; padding:1rem 2rem; cursor:pointer; border:none; background:#ddd; border-radius:8px; z-index:10; display:block; font-size:1.2rem; }
 .back-btn:hover { background:#ccc; }
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
 #lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
-#closeBtn { position:absolute; top:10px; left:10px; padding:0.8rem 1.2rem; background:#ddd; border:none; border-radius:6px; cursor:pointer; z-index:10000; font-size:1rem; }
+#closeBtn { position:absolute; top:20px; left:20px; padding:1rem 1.5rem; background:#ddd; border:none; border-radius:8px; cursor:pointer; z-index:10000; font-size:1.2rem; }
 #closeBtn:hover { background:#ccc; }
 </style>
 </head>
@@ -64,7 +63,7 @@ async function main() {
     const champData = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latest}/data/fr_FR/champion.json`).then(r=>r.json());
     let champions = Object.values(champData.data);
 
-    // Liste de tous les skins Wild Rift ajoutés
+    // Skins Wild Rift
     const wildRiftSkins = [
         // Aatrox
         { id: "Aatrox", skin:"Mecha Exquisite Edition", image:"https://i.imgur.com/uN8AEuk.jpg" },
@@ -143,14 +142,12 @@ async function main() {
         lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
     }
 
-    // Clic droit pour zoom unique
     lightboxImg.addEventListener('mousedown', e=>{
         if(e.button===2){
             e.preventDefault();
             lightboxImg.style.transform=`translate(-50%,-50%) scale(2)`;
         }
     });
-
     lightbox.addEventListener('contextmenu', e=>e.preventDefault());
     sortSelect.addEventListener('change', sortChampions);
     sortChampions();
