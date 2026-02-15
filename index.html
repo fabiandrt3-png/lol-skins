@@ -32,7 +32,7 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 #back:hover { background:rgba(255,255,255,0.1); }
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
-#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
+#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; transition: transform 0.2s ease; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
 
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
@@ -76,8 +76,21 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://imgur.com/Vrrudak.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
-    // ajoute ici le reste de tes skins...
+    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://i.imgur.com/eqHPbRs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://i.imgur.com/cHXjjiR.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://i.imgur.com/N2xEjHs.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://i.imgur.com/d3Ab6Cy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://i.imgur.com/6UT3Xpd.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://i.imgur.com/lkUNZWI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://i.imgur.com/L0cQ9Pv.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"DRX Aatrox (Prestige)", image:"https://i.imgur.com/7MwDNZF.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://i.imgur.com/x7zkngK.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://i.imgur.com/YlV7tLp.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
 let currentLightboxIndex = 0;
@@ -85,8 +98,6 @@ let currentChampionSkins = [];
 let originalScale = 1;
 let currentScale = 1;
 let targetScale = 1;
-let isPinching = false;
-let initialDistance = 0;
 
 function showChampions() {
     header.textContent="Skins League of Legends";
@@ -155,7 +166,7 @@ function updateZoom(){
 
 lightboxImg.addEventListener('click', e => {
     const rect = lightboxImg.getBoundingClientRect();
-    if(currentScale !== 1) return; // ne swap que si pas zoom
+    if(currentScale !== 1) return; // swap uniquement si pas de zoom
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
@@ -179,7 +190,7 @@ lightbox.addEventListener('touchmove', e => {
     if(isPinching && e.touches.length === 2){
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
-        const newDistance = Math.sqrt(dx*dx + dy*dy);
+        let newDistance = Math.sqrt(dx*dx + dy*dy);
         targetScale = (newDistance / initialDistance) * originalScale;
         if(targetScale < 1) targetScale = 1;
         if(targetScale > 5) targetScale = 5;
@@ -208,4 +219,5 @@ showChampions();
 
 </body>
 </html>
+
 
