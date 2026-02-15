@@ -2,91 +2,60 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>LoL Skins Viewer</title>
-
+<title>Skins League of Legends</title>
 <style>
-body {
-    background:#111;
-    color:white;
-    font-family:Arial, sans-serif;
-    text-align:center;
-    margin:0;
-    padding:0;
-}
+body { margin:0; font-family:Arial,sans-serif; background:#fff; }
+header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #ddd; }
 
-h1 {
-    margin:30px 0;
-}
+.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
 
-.champions-container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:40px;
-}
+.card { border:2px solid #ddd; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; }
+.card:hover { transform:scale(1.05); }
+.card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
 
-.champion-card {
-    background:#1c1c1c;
-    padding:15px;
-    border-radius:15px;
-    width:150px;
-    cursor:pointer;
-    transition:0.3s;
-}
+.name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
 
-.champion-card:hover {
-    transform:scale(1.1);
-}
+.back-btn { position:sticky; top:10px; left:10px; margin:15px auto; padding:1.2rem 2.5rem; cursor:pointer; border:none; background:#ddd; border-radius:10px; z-index:10; display:block; font-size:1.5rem; }
+.back-btn:hover { background:#ccc; }
 
-.champion-card img {
-    width:100px;
-    border-radius:50%;
-}
+#lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
+#lightbox img { max-width:100%; max-height:100%; transform-origin:50% 50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(1); }
+#closeBtn { position:absolute; top:20px; left:20px; padding:1.2rem 2rem; background:#ddd; border:none; border-radius:10px; cursor:pointer; z-index:10000; font-size:1.5rem; }
+#closeBtn:hover { background:#ccc; }
 
-.skin-container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding-bottom:50px;
-}
-
-.skin-card {
-    background:#1c1c1c;
-    padding:10px;
-    border-radius:10px;
-    width:250px;
-    transition:0.3s;
-}
-
-.skin-card:hover {
-    transform:scale(1.05);
-}
-
-.skin-card img {
-    width:100%;
-    border-radius:8px;
-}
-
-.wild {
-    color:red;
-    font-weight:bold;
+/* Responsive pour mobile */
+@media (max-width:768px){
+    header { font-size:3rem; padding:30px; }
+    .card img { max-height:180px; }
+    .name { font-size:1.2rem; }
+    .back-btn { padding:1rem 2rem; font-size:1.3rem; }
+    #closeBtn { padding:1rem 1.5rem; font-size:1.3rem; }
 }
 </style>
 </head>
-
 <body>
 
-<h1>League of Legends Skins</h1>
+<header id="header">Skins League of Legends</header>
 
-<div class="champions-container" id="championsContainer"></div>
-<div class="skin-container" id="skinsContainer"></div>
+<button id="back" class="back-btn" style="display:none;">⬅ Retour</button>
+<div class="container" id="container"></div>
+
+<div id="lightbox">
+    <button id="closeBtn">⬅ Retour</button>
+    <img id="lightbox-img" src="">
+</div>
 
 <script>
-const championsSkins = [
+const container = document.getElementById("container");
+const header = document.getElementById("header");
+const backBtn = document.getElementById("back");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("closeBtn");
 
-    // AKSHAN
+// Skins personnalisés : Akshan + Aatrox
+const championsSkins = [
+    // Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://i.imgur.com/cPBY1NY.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -94,7 +63,7 @@ const championsSkins = [
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://i.imgur.com/UCrAOYC.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://i.imgur.com/LSGPOth.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
 
-    // AATROX
+    // Aatrox PC
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://i.imgur.com/rzpbify.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://i.imgur.com/e7zA3Vz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://i.imgur.com/WP7JxsI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
@@ -106,57 +75,60 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://i.imgur.com/lkUNZWI.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"DRX Aatrox", image:"https://i.imgur.com/L0cQ9Pv.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Prestige DRX Aatrox", image:"https://i.imgur.com/7MwDNZF.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://i.imgur.com/x7zkngK.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://i.imgur.com/x7zkngK.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://i.imgur.com/YlV7tLp.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Prestige Select Dragon Lantern Aatrox", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
+    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Exquisite Edition Aatrox", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
 
-const championsContainer = document.getElementById("championsContainer");
-const skinsContainer = document.getElementById("skinsContainer");
+function showChampions() {
+    header.textContent="Skins League of Legends";
+    backBtn.style.display="none";
+    container.innerHTML="";
 
-// récupérer un champion unique + son icône
-const champions = [...new Map(championsSkins.map(item => 
-    [item.champ, item]
-)).values()];
-
-champions.forEach(champ => {
-    const card = document.createElement("div");
-    card.className = "champion-card";
-
-    card.innerHTML = `
-        <img src="${champ.icon}" alt="${champ.champ}">
-        <h3>${champ.champ}</h3>
-    `;
-
-    card.onclick = () => showSkins(champ.champ);
-
-    championsContainer.appendChild(card);
-});
-
-function showSkins(championName) {
-    skinsContainer.innerHTML = "";
-
-    const skins = championsSkins.filter(s => s.champ === championName);
-
-    skins.forEach(skin => {
+    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
+    champNames.forEach(champ=>{
         const card = document.createElement("div");
-        card.className = "skin-card";
-
-        const wildLabel = skin.type === "Wild Rift"
-            ? `<span class="wild">(Wild Rift)</span>`
-            : "";
-
-        card.innerHTML = `
-            <img src="${skin.image}" alt="${skin.skin}">
-            <h3>${skin.skin} ${wildLabel}</h3>
-        `;
-
-        skinsContainer.appendChild(card);
+        card.className="card";
+        const champIcon = championsSkins.find(s=>s.champ===champ).icon;
+        card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
+        card.onclick = ()=>showSkins(champ);
+        container.appendChild(card);
     });
 }
+
+function showSkins(champ) {
+    header.textContent=`${champ} Skins`;
+    backBtn.style.display="block";
+    container.innerHTML="";
+    championsSkins.filter(s=>s.champ===champ).forEach(skin=>{
+        const card = document.createElement("div");
+        card.className="card";
+        const label = skin.type==="Wild Rift"?` <span style="color:red;">(Wild Rift)</span>`:"";
+        card.innerHTML = `<img src="${skin.image}"><div class="name">${skin.skin}${label}</div>`;
+        card.querySelector('img').addEventListener('click', e=>{
+            e.stopPropagation();
+            openLightbox(skin.image);
+        });
+        container.appendChild(card);
+    });
+}
+
+backBtn.onclick = showChampions;
+closeBtn.onclick = ()=>{ 
+    lightbox.style.display='none'; 
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)'; 
+};
+
+function openLightbox(src) {
+    lightbox.style.display="flex";
+    lightboxImg.src = src;
+    lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
+}
+
+showChampions();
 </script>
 
 </body>
