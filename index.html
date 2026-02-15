@@ -15,25 +15,24 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 
 .name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
 
-/* Bouton Retour transparent */
+/* Bouton Retour transparent, toujours en haut à gauche */
 .back-btn, #closeBtn {
     position:sticky;
     top:10px;
     left:10px;
-    margin:15px auto;
+    margin:0;
     padding:1.2rem 2.5rem;
     cursor:pointer;
     border:none;
     background:rgba(0,0,0,0); /* fond transparent */
     color:#fff;
     border-radius:10px;
-    z-index:10;
-    display:block;
+    z-index:10000; /* au-dessus de l'image */
     font-size:1.5rem;
     transition:0.2s ease;
 }
 .back-btn:hover, #closeBtn:hover {
-    background:rgba(255,255,255,0.1); /* léger effet au survol */
+    background:rgba(255,255,255,0.1);
 }
 
 #lightbox { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:9999; overflow:hidden; }
@@ -73,7 +72,7 @@ let currentIndex = 0;
 let startX = 0;
 let endX = 0;
 
-// Skins personnalisés : Akshan + Aatrox + Ahri Classic + Akali
+// Skins personnalisés
 const championsSkins = [
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -160,7 +159,6 @@ function openLightbox(src) {
     lightboxImg.style.transform='translate(-50%,-50%) scale(1)';
 }
 
-// Fonction d'animation du swap
 function showNextSkin(direction) {
     const oldImg = lightboxImg.cloneNode();
     oldImg.src = lightboxImg.src;
@@ -169,6 +167,7 @@ function showNextSkin(direction) {
     oldImg.style.top = '50%';
     oldImg.style.left = '50%';
     oldImg.style.transform = `translate(-50%,-50%) scale(1)`;
+    oldImg.style.zIndex = '9998'; // sous le bouton
     lightbox.appendChild(oldImg);
 
     currentIndex = (currentIndex + direction + currentSkins.length) % currentSkins.length;
@@ -196,4 +195,3 @@ showChampions();
 
 </body>
 </html>
-
