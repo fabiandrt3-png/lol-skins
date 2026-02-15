@@ -70,7 +70,6 @@ const championsSkins = [
 
     { champ:"Ahri", skin:"Classic Ahri", image:"https://i.imgur.com/NRtYkHz.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
     { champ:"Ahri", skin:"Classic Ahri", image:"https://imgur.com/CYKMV1m.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
-    { champ:"Ahri", skin:"Classic Ahri", image:"https://imgur.com/FQRbJIy.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Ahri.png" },
 
     { champ:"Akali", skin:"Classic Akali", image:"https://imgur.com/iMyJUAl.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akali.png" },
 
@@ -92,13 +91,14 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-  ];
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
+];
 
 let currentLightboxIndex = 0;
 let currentChampionSkins = [];
 let originalScale = 1;
 
+// --- AFFICHAGE CHAMPIONS ---
 function showChampions() {
     header.textContent="Skins League of Legends";
     backBtn.style.display="none";
@@ -114,6 +114,7 @@ function showChampions() {
     });
 }
 
+// --- AFFICHAGE SKINS ---
 function showSkins(champ) {
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
@@ -123,6 +124,7 @@ function showSkins(champ) {
         const card = document.createElement("div");
         card.className="card";
 
+        // Chroma en rouge, Prestige en or, Wild Rift bleu
         let skinName = skin.skin
             .replace("(Prestige Select)", "<span style='color:#FFD700;'>(Prestige Select)</span>")
             .replace("(Prestige)", "<span style='color:#FFD700;'>(Prestige)</span>")
@@ -132,6 +134,8 @@ function showSkins(champ) {
         const label = skin.type==="Wild Rift" ? ` <span style="color:#00bfff;">(Wild Rift)</span>` : "";
 
         card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
+
+        // clic sur l'image pour ouvrir lightbox
         card.querySelector('img').addEventListener('click', e=>{
             e.stopPropagation();
             openLightbox(index);
@@ -140,6 +144,7 @@ function showSkins(champ) {
     });
 }
 
+// --- LIGHTBOX ---
 function openLightbox(index){
     currentLightboxIndex = index;
     originalScale = 1;
@@ -148,9 +153,10 @@ function openLightbox(index){
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
 
+// clic pour swap
 lightboxImg.addEventListener('click', e => {
     const rect = lightboxImg.getBoundingClientRect();
-    if(originalScale !== 1) return;
+    if(originalScale !== 1) return; // pas de swap pendant zoom
     const x = e.clientX - rect.left;
     if(x < rect.width/2){
         currentLightboxIndex = (currentLightboxIndex -1 + currentChampionSkins.length) % currentChampionSkins.length;
@@ -161,6 +167,7 @@ lightboxImg.addEventListener('click', e => {
     lightboxImg.style.transform = 'translate(-50%,-50%) scale(1)';
 });
 
+// --- PINCH ZOOM ---
 let initialDistance = 0;
 let isPinching = false;
 
@@ -189,10 +196,12 @@ lightbox.addEventListener('touchend', e => {
         const style = lightboxImg.style.transform;
         const match = style.match(/scale\(([^)]+)\)/);
         originalScale = match ? parseFloat(match[1]) : 1;
+        if(originalScale < 1) originalScale = 1;
         isPinching = false;
     }
 });
 
+// --- BOUTON RETOUR ---
 backBtn.onclick = () => {
     if(lightbox.style.display === 'flex'){
         lightbox.style.display='none';
@@ -208,6 +217,7 @@ showChampions();
 
 </body>
 </html>
+
 
 
 
