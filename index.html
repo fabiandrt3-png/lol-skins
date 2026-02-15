@@ -6,15 +6,11 @@
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; }
 header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #333; }
-
 .container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
-
 .card { border:2px solid #333; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; background:#111; }
 .card:hover { transform:scale(1.05); }
 .card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
-
 .name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
-
 #back {
     position:fixed;
     top:10px;
@@ -30,7 +26,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     font-size:1.5rem;
 }
 #back:hover { background:rgba(255,255,255,0.1); }
-
 #lightbox {
     display:none; 
     position:fixed; 
@@ -46,7 +41,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     object-fit:contain;
     cursor:pointer;
 }
-
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
     .card img { max-height:180px; }
@@ -56,7 +50,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 </style>
 </head>
 <body>
-
 <header id="header">Skins League of Legends</header>
 <button id="back" style="display:none;">⬅ Retour</button>
 <div class="container" id="container"></div>
@@ -64,7 +57,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 <div id="lightbox">
     <img id="lightbox-img" src="">
 </div>
-
 <script>
 const container = document.getElementById("container");
 const header = document.getElementById("header");
@@ -263,26 +255,23 @@ const championsSkins = [
     { champ:"Zilean", skin:"Classic Zilean", image:"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_0.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Zilean.png" },
     { champ:"Zoe", skin:"Classic Zoe", image:"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_0.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Zoe.png" },
     { champ:"Zyra", skin:"Classic Zyra", image:"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zyra_0.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Zyra.png" }
-];
-    
+];    
 let currentChampionSkins = [];
 let currentLightboxIndex = 0;
-
 function showChampions() {
-    header.textContent="Skins League of Legends";
-    backBtn.style.display="none";
-    container.innerHTML="";
-    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort();
-    champNames.forEach(champ=>{
+    header.textContent = "Skins League of Legends";
+    backBtn.style.display = "none";
+    container.innerHTML = "";
+    const champNames = [...new Set(championsSkins.map(s => s.champ))].sort();
+    champNames.forEach(champ => {
         const card = document.createElement("div");
-        card.className="card";
-        const champIcon = championsSkins.find(s=>s.champ===champ).image;
+        card.className = "card";
+        const champIcon = championsSkins.find(s => s.champ === champ).icon;
         card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
-        card.onclick = ()=>showSkins(champ);
+        card.onclick = () => showSkins(champ);
         container.appendChild(card);
     });
 }
-
 function showSkins(champ){
     header.textContent=`${champ} Skins`;
     backBtn.style.display="block";
@@ -299,13 +288,11 @@ function showSkins(champ){
         container.appendChild(card);
     });
 }
-
 function openLightbox(index){
     currentLightboxIndex = index;
     lightbox.style.display="flex";
     lightboxImg.src = currentChampionSkins[currentLightboxIndex].image;
 }
-
 lightboxImg.addEventListener('click', e=>{
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -324,9 +311,8 @@ backBtn.onclick = ()=>{
         showChampions();
     }
 };
-
 showChampions();
 </script>
-
 </body>
 </html>
+
