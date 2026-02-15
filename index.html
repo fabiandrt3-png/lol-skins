@@ -118,7 +118,7 @@ function showSkins(champ) {
             .replace("(Exquisite Edition)", "<span style='color:#FFD700;'>(Exquisite Edition)</span>");
 
         const label = skin.type==="Wild Rift"
-            ? ` <span style="color:red;">(Wild Rift)</span>`
+            ? ` <span style="color:#00bfff;">(Wild Rift)</span>` // bleu clair
             : "";
 
         card.innerHTML = `<img src="${skin.image}"><div class="name">${skinName}${label}</div>`;
