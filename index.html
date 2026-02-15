@@ -288,6 +288,16 @@ function showSkins(champ){
         container.appendChild(card);
     });
 }
+function formatSkinName(skin) {
+    if (/Wild Rift/i.test(skin)) return `<span style="color:#00f;">${skin}</span>`;
+    if (/(Prestige|Prestige Select|Exquisite Edition)/i.test(skin)) return `<span style="color:#FFD700;">${skin}</span>`;
+    return skin.replace(/\(([^)]+)\)/g, (match, p1) => {
+        if (/Chroma/i.test(p1)) {
+            return `<span style="color:#ff0000;">(${p1})</span>`;
+        }
+        return match;
+    });
+}
 function openLightbox(index){
     currentLightboxIndex = index;
     lightbox.style.display="flex";
@@ -315,6 +325,7 @@ showChampions();
 </script>
 </body>
 </html>
+
 
 
 
