@@ -68,7 +68,9 @@ function showChampions() {
     header.textContent="League Champions Skins";
     backBtn.style.display="none";
     container.innerHTML="";
-    const champNames = [...new Set(championsSkins.map(s=>s.champ))];
+
+    // Liste unique des champions
+    const champNames = [...new Set(championsSkins.map(s=>s.champ))].sort(); // tri alphabétique
     champNames.forEach(champ=>{
         const card = document.createElement("div");
         card.className="card";
