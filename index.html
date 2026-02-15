@@ -59,6 +59,7 @@ const header = document.getElementById("header");
 const backBtn = document.getElementById("back");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+
 const championsSkins = [
     { champ:"Akshan", skin:"Classic Akshan", image:"https://i.imgur.com/J3EcwAM.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://i.imgur.com/Pf228Tk.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Akshan.png" },
@@ -89,7 +90,6 @@ const championsSkins = [
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://i.imgur.com/YlV7tLp.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://i.imgur.com/GwHd8sn.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://i.imgur.com/KbZrW5e.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
-    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://imgur.com/Evw855F.jpg", type:"PC", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://i.imgur.com/yNjkV0J.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://i.imgur.com/TcR4L1B.jpg", type:"Wild Rift", icon:"https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/Aatrox.png" }
 ];
@@ -137,33 +137,29 @@ function showSkins(champ) {
     });
 }
 
+// --- SWIPE / ZOOM CORRECT ---
 let startX = 0;
-let startY = 0;
 let touchCount = 0;
 
-lightbox.addEventListener('touchstart', e => { 
+lightbox.addEventListener('touchstart', e => {
     touchCount = e.touches.length;
     if(touchCount === 1){
-        startX = e.touches[0].clientX; 
-        startY = e.touches[0].clientY; 
+        startX = e.touches[0].clientX;
     }
 });
 
 lightbox.addEventListener('touchend', e => {
-    if(touchCount !== 1) return;
+    if(touchCount !== 1) return; // un seul doigt pour swipe
+
     if(e.changedTouches.length === 1){
         let endX = e.changedTouches[0].clientX;
-        let endY = e.changedTouches[0].clientY;
         let diffX = endX - startX;
-        let diffY = endY - startY;
-
-        if(Math.abs(diffX) > Math.abs(diffY)){ // horizontal only
-            if(diffX > 50) prevSkin();
-            else if(diffX < -50) nextSkin();
+        if(Math.abs(diffX) > 50){ 
+            if(diffX > 0) prevSkin();
+            else nextSkin();
         }
     }
 });
-
 
 function openLightbox(index){
     currentLightboxIndex = index;
@@ -194,5 +190,4 @@ showChampions();
 
 </body>
 </html>
-
 
