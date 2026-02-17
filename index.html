@@ -67,14 +67,14 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 const championsSkins = [
-    // AKSHAN
+    //Akshan
     { champ:"Akshan", skin:"Classic Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_HD.jpg", type:"PC", icon:"https://imgur.com/GdB7IDP.png" },
     { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CyberPopSkin_HD.jpg", type:"PC", icon:"https://imgur.com/GdB7IDP.png" },
     { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_BattleAcademiaSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://imgur.com/GdB7IDP.png" },
     { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CrystalRoseSkin_HD.jpg", type:"PC", icon:"https://imgur.com/GdB7IDP.png" },
     { champ:"Akshan", skin:"Three Honors Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_ThreeHonorsSkin_HD.jpg", type:"PC", icon:"https://imgur.com/GdB7IDP.png" },
     { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_DawnbringerSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://imgur.com/GdB7IDP.png" },
-    // AHRI
+    //Ahri
     { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_HD.jpg", type:"PC", icon:"https://imgur.com/z3vB4ED.png" },
     { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://imgur.com/z3vB4ED.png" },
     { champ:"Ahri", skin:"Dynasty Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_DynastySkin_HD.jpg", type:"PC", icon:"https://imgur.com/z3vB4ED.png" },
@@ -117,7 +117,7 @@ const championsSkins = [
     { champ:"Ahri", skin:"Spirit Blossom Springs Ahri (Tanzanite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a88de00a-9098-447a-92a4-2e4fa68d45b1.jpg", type:"PC", icon:"https://imgur.com/z3vB4ED.png" },
     { champ:"Ahri", skin:"After Hours Spirit Blossom Springs Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg", type:"PC", icon:"https://imgur.com/z3vB4ED.png" },
     { champ:"Ahri", skin:"Crystal Rose Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://imgur.com/z3vB4ED.png" },
-    // AKALI
+    //Akali
     { champ:"Akali", skin:"Classic Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_OriginalSkin_HD.jpg", type:"PC", icon:"https://imgur.com/KTluPBI.png" },
     { champ:"Akali", skin:"Stinger Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_StingerSkin_HD.jpg", type:"PC", icon:"https://imgur.com/KTluPBI.png" },
     { champ:"Akali", skin:"Infernal Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_InfernalSkin_HD.jpg", type:"PC", icon:"https://imgur.com/KTluPBI.png" },
@@ -149,7 +149,7 @@ const championsSkins = [
     { champ:"Akali", skin:"Spirit Blossom Akali (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-93781ae8-55cd-4ba4-82eb-d21ee984f063.jpg", type:"PC", icon:"https://imgur.com/KTluPBI.png" },
     { champ:"Akali", skin:"Spirit Blossom Akali (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9cddf4c0-53cd-4d49-88e3-ffb609d9de4d.jpg", type:"PC", icon:"https://imgur.com/KTluPBI.png" },
     { champ:"Akali", skin:"Calligraphia Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CalligraphiaSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://imgur.com/KTluPBI.png" },
-    // AATROX
+    //Aatrox
     { champ:"Aatrox", skin:"Classic Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_HD.jpg", type:"PC", icon:"https://imgur.com/o7IphRR.png" },
     { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_JusticarSkin_HD.jpg", type:"PC", icon:"https://imgur.com/o7IphRR.png" },
     { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaSkin_HD.jpg", type:"PC", icon:"https://imgur.com/o7IphRR.png" },
@@ -297,8 +297,25 @@ const championsSkins = [
     { champ:"Ashe", skin:"Spirit Blossom Ashe (Turquoise Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-5c3286fc-35ac-4ab4-bbe3-652e7c340161.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Ashe_OriginalSquare.png" },
     { champ:"Ashe", skin:"Firecracker Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_FirecrackerSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Ashe_OriginalSquare.png" },
     { champ:"Ashe", skin:"Firecracker Ashe (Amethyst Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-05a3a3af-0710-4be3-bf60-ca8ef4d85908.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Ashe_OriginalSquare.png" },
-];    
-
+    //Aurelion Sol
+    { champ:"Aurelion Sol", skin:"Classic Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Ashen Lord Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_AshenLordSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Mecha Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Storm Dragon Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Inkshadow Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_InkshadowSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Lunar Guardian Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_LunarGuardianSkin_WR_HD.jpg", type:"Wild Rift", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Porcelain Protector Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_PorcelainProtectorSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    { champ:"Aurelion Sol", skin:"Divine Architect Porcelain Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_DivineArchitectPorcelainSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
+    //Aurora
+    { champ:"Aurora", skin:"Classic Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Battle Bunny Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_BattleBunnySkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Battle Bunny Aurora (Amethyst Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-571d8611-543c-4d09-989d-4c832551205c.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Battle Bunny Aurora (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-dbdcf522-1e07-4e38-8bd9-686d2f46272c.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Arcana Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_ArcanaSkin_HD.jpg", type:"PC", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Summer Party Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummerPartySkin_WR_HD.jpg", type:"Wild Rift", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+    { champ:"Aurora", skin:"Summer Party Aurora (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_Summer9yMnTm4NSzvG9rrwjM2ec8xZgh1cafXH8_WR_HD.jpg", type:"Wild Rift", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
+];
+    
 let currentChampionSkins = [];
 let currentLightboxIndex = 0;
 let lightboxArray = [];
@@ -398,6 +415,7 @@ showChampions();
 </script>
 </body>
 </html>
+
 
 
 
