@@ -43,6 +43,16 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     object-fit:contain;
     cursor:pointer;
 }
+
+/* Transition de page */
+#page-wrapper {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+#page-wrapper.fade-out {
+    opacity: 0;
+}
+
 @media (max-width:768px){
     header { font-size:3rem; padding:30px; }
     .card img { max-height:180px; }
@@ -54,7 +64,9 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
 <body>
 <header id="header">Skins League of Legends</header>
 <button id="back" style="display:none;">⬅ Retour</button>
-<div class="container" id="container"></div>
+<div id="page-wrapper">
+    <div class="container" id="container"></div>
+</div>
 
 <div id="lightbox">
     <img id="lightbox-img" src="">
@@ -65,6 +77,7 @@ const header = document.getElementById("header");
 const backBtn = document.getElementById("back");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+const pageWrapper = document.getElementById("page-wrapper");
 
 const championsSkins = [
     //Akshan
@@ -95,7 +108,7 @@ const championsSkins = [
     { champ:"Ahri", skin:"Star Guardian Ahri Mythic Chroma", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_StarGuardianMythicChromaSkin_WR_HD.jpg", type:"Wild Rift" },
     { champ:"Ahri", skin:"K/DA Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_KDASkin_HD.jpg" },
     { champ:"Ahri", skin:"K/DA Ahri (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_HD.jpg" },
-    { champ:"Ahri", skin:"K/DA Ahri	(Ahri-versary Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9b1f0c38-4b39-44fd-99c6-dfbc73770fed.jpg" },
+    { champ:"Ahri", skin:"K/DA Ahri (Ahri-versary Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9b1f0c38-4b39-44fd-99c6-dfbc73770fed.jpg" },
     { champ:"Ahri", skin:"Elderwood Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ElderwoodSkin_HD.jpg" },
     { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSkin_HD.jpg" },
     { champ:"Ahri", skin:"Spirit Blossom Ahri (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6d8fa734-6a10-488f-a7cc-c290dd6bae38.jpg" },
@@ -313,7 +326,7 @@ const championsSkins = [
     { champ:"Aurora", skin:"Battle Bunny Aurora (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-dbdcf522-1e07-4e38-8bd9-686d2f46272c.jpg" },
     { champ:"Aurora", skin:"Arcana Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_ArcanaSkin_HD.jpg" },
     { champ:"Aurora", skin:"Summer Party Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummerPartySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aurora", skin:"Summer Party Aurora (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummeRRkUSs6V3Eu6gxjGDbGzcS99F5WyKtggsw_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Aurora", skin:"Summer Party Aurora (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummeRHZ2ZtaZNJfBcpJDeVUcJKfP6Aj9X9rgsw_WR_HD.jpg", type:"Wild Rift" },
     //Azir
     { champ:"Azir", skin:"Classic Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Azir_OriginalSquare.png" },
     { champ:"Azir", skin:"Galactic Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_GalacticSkin_HD.jpg" },
@@ -361,85 +374,50 @@ const championsSkins = [
     { champ:"Blitzcrank", skin:"Zenith Games Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_ZenithGamesSkin_HD.jpg" },
     { champ:"Blitzcrank", skin:"Beezcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg" },
     { champ:"Blitzcrank", skin:"Beezcrank (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b6d35545-c90c-4560-82cd-d912a9f2c1fa.jpg" },
-];    
+];
+
 let currentChampionSkins = [];
-let currentLightboxIndex = 0;
 let lightboxArray = [];
 let lightboxIndexGlobal = 0;
 
-function getChampFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("champ");
+// ─── Navigation par hash ─────────────────────────────────────────────────────
+
+function navigateTo(champ) {
+    // Fade out, puis change le hash
+    pageWrapper.classList.add('fade-out');
+    setTimeout(() => {
+        if (champ) {
+            location.hash = "champion=" + encodeURIComponent(champ);
+        } else {
+            location.hash = "";
+        }
+        window.scrollTo(0, 0);
+        pageWrapper.classList.remove('fade-out');
+    }, 250);
 }
 
-function showChampionsList() {
-    container.innerHTML = "";
-    header.textContent = "Skins League of Legends";
-    backBtn.style.display = "none";
-
-    const champions = [...new Set(championsSkins.map(s => s.champ))];
-
-    champions.forEach(champ => {
-        const firstSkin = championsSkins.find(s => s.champ === champ);
-
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-            <img src="${firstSkin.icon || firstSkin.image}">
-            <div class="name">${champ}</div>
-        `;
-
-        card.onclick = () => {
-            window.location.search = "?champ=" + encodeURIComponent(champ);
-        };
-
-        container.appendChild(card);
-    });
+function handleRoute() {
+    const hash = decodeURIComponent(location.hash);
+    if (hash.startsWith("#champion=")) {
+        const champ = hash.replace("#champion=", "");
+        renderSkins(champ);
+    } else {
+        renderChampions();
+    }
 }
 
-function showChampionSkins(champ) {
-    container.innerHTML = "";
-    header.textContent = champ;
-    backBtn.style.display = "block";
+window.addEventListener("hashchange", () => {
+    pageWrapper.classList.add('fade-out');
+    setTimeout(() => {
+        handleRoute();
+        window.scrollTo(0, 0);
+        pageWrapper.classList.remove('fade-out');
+    }, 200);
+});
 
-    const skins = championsSkins.filter(s => s.champ === champ);
+// ─── Rendu : liste des champions ─────────────────────────────────────────────
 
-    skins.forEach(skin => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-            <img src="${skin.image}">
-            <div class="name">${skin.skin}</div>
-        `;
-
-        card.onclick = () => {
-            lightbox.style.display = "flex";
-            lightboxImg.src = skin.image;
-        };
-
-        container.appendChild(card);
-    });
-
-    backBtn.onclick = () => {
-        window.location.search = "";
-    };
-}
-
-/* 🔥 Lightbox */
-lightbox.onclick = () => {
-    lightbox.style.display = "none";
-};
-
-/* 🔥 Lancement automatique */
-const selectedChamp = getChampFromURL();
-
-if (selectedChamp) {
-    showChampionSkins(selectedChamp);
-} else {
-    showChampionsList();
-}
-
-function showChampions() {
+function renderChampions() {
     header.textContent = "Skins League of Legends";
     backBtn.style.display = "none";
     container.innerHTML = "";
@@ -447,89 +425,92 @@ function showChampions() {
     champNames.forEach(champ => {
         const card = document.createElement("div");
         card.className = "card";
-        const champIcon = championsSkins.find(s => s.champ === champ).icon;
-        card.innerHTML = `<img src="${champIcon}"><div class="name">${champ}</div>`;
-        card.onclick = () => showSkins(champ);
+        const champIcon = championsSkins.find(s => s.champ === champ && s.icon)?.icon || "";
+        card.innerHTML = `<img src="${champIcon}" alt="${champ}"><div class="name">${champ}</div>`;
+        card.onclick = () => navigateTo(champ);
         container.appendChild(card);
     });
 }
 
-function showSkins(champ){
-    header.textContent=`${champ} Skins`;
-    backBtn.style.display="block";
-    container.innerHTML="";
-    currentChampionSkins = championsSkins.filter(s=>s.champ===champ);
-    currentChampionSkins.forEach((skin,index)=>{
+// ─── Rendu : skins d'un champion ─────────────────────────────────────────────
+
+function renderSkins(champ) {
+    header.textContent = `${champ} — Skins`;
+    backBtn.style.display = "block";
+    container.innerHTML = "";
+    currentChampionSkins = championsSkins.filter(s => s.champ === champ);
+
+    currentChampionSkins.forEach((skin, index) => {
         const card = document.createElement("div");
-        card.className="card";
-        card.innerHTML = `<img src="${skin.image}"><div class="name">${colorSkinName(skin)}</div>`;
-        card.querySelector('img').addEventListener('click', e=>{
+        card.className = "card";
+        card.innerHTML = `<img src="${skin.image}" alt="${skin.skin}"><div class="name">${colorSkinName(skin)}</div>`;
+        card.querySelector('img').addEventListener('click', e => {
             e.stopPropagation();
-            openLightboxChampion(index);
+            openLightbox(currentChampionSkins, index);
         });
         container.appendChild(card);
     });
 }
 
-function colorSkinName(skin){
+// ─── Couleur des noms de skins ────────────────────────────────────────────────
+
+function colorSkinName(skin) {
     let name = skin.skin;
-    if(skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)){
+    if (skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)) {
         name += " (Wild Rift)";
     }
-    return name.replace(/\(([^)]+)\)/g, (match, content)=>{
-        if(content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
-        if(/Prestige|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
-        if(/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
+    return name.replace(/\(([^)]+)\)/g, (match, content) => {
+        if (content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
+        if (/Prestige|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
+        if (/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
         return `(${content})`;
     });
 }
 
-// Création des cartes dans la vue globale
-championsSkins.forEach((skin,index)=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<img src="${skin.image}" alt="${skin.skin}"><div class="name">${colorSkinName(skin)}</div>`;
-    container.appendChild(card);
+// ─── Lightbox ────────────────────────────────────────────────────────────────
 
-    card.addEventListener("click", ()=>{
-        lightboxArray = championsSkins;
-        lightboxIndexGlobal = index;
-        openLightboxGlobal();
-    });
-});
-
-function openLightboxGlobal(){
-    lightbox.style.display="flex";
-    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
-}
-
-function openLightboxChampion(index){
-    lightbox.style.display="flex";
-    lightboxArray = currentChampionSkins;
+function openLightbox(array, index) {
+    lightboxArray = array;
     lightboxIndexGlobal = index;
+    lightbox.style.display = "flex";
     lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
 }
 
-lightboxImg.addEventListener('click', e=>{
+lightboxImg.addEventListener('click', e => {
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
-    if(x < rect.width/2){
-        lightboxIndexGlobal = (lightboxIndexGlobal -1 + lightboxArray.length) % lightboxArray.length;
+    if (x < rect.width / 2) {
+        lightboxIndexGlobal = (lightboxIndexGlobal - 1 + lightboxArray.length) % lightboxArray.length;
     } else {
-        lightboxIndexGlobal = (lightboxIndexGlobal +1) % lightboxArray.length;
+        lightboxIndexGlobal = (lightboxIndexGlobal + 1) % lightboxArray.length;
     }
     lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
 });
 
-backBtn.onclick = ()=>{
-    if(lightbox.style.display==='flex'){
-        lightbox.style.display='none';
+// Fermer le lightbox avec Echap ou clic en dehors de l'image
+lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+});
+document.addEventListener('keydown', e => {
+    if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') lightbox.style.display = 'none';
+        if (e.key === 'ArrowLeft') { lightboxIndexGlobal = (lightboxIndexGlobal - 1 + lightboxArray.length) % lightboxArray.length; lightboxImg.src = lightboxArray[lightboxIndexGlobal].image; }
+        if (e.key === 'ArrowRight') { lightboxIndexGlobal = (lightboxIndexGlobal + 1) % lightboxArray.length; lightboxImg.src = lightboxArray[lightboxIndexGlobal].image; }
+    }
+});
+
+// ─── Bouton retour ────────────────────────────────────────────────────────────
+
+backBtn.onclick = () => {
+    if (lightbox.style.display === 'flex') {
+        lightbox.style.display = 'none';
     } else {
-        showChampions();
+        navigateTo(null);
     }
 };
 
-showChampions();
+// ─── Démarrage ────────────────────────────────────────────────────────────────
+handleRoute();
 </script>
 </body>
 </html>
