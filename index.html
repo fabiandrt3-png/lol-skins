@@ -391,6 +391,18 @@ const championsSkins = [
     { champ:"Brand", skin:"Empyrean Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg" },
     { champ:"Brand", skin:"Chromacrash Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg", type:"Wild Rift" },
     { champ:"Brand", skin:"Chromacrash Brand (Special Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg", type:"Wild Rift" },
+    //Braum
+    { champ:"Braum", skin:"Classic Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSquare.png" },
+    { champ:"Braum", skin:"Dragonslayer Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_HD.jpg" },
+    { champ:"Braum", skin:"El Tigre Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_ElTigreSkin_HD.jpg" },
+    { champ:"Braum", skin:"Braum Lionheart", image:"https://wiki.leagueoflegends.com/en-us/images/RPG2015Skin_HD.jpg" },
+    { champ:"Braum", skin:"Santa Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_HD.jpg" },
+    { champ:"Braum", skin:"Crime City Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_HD.jpg" },
+    { champ:"Braum", skin:"Sugar Rush Braum", image:"https://wiki.leagueoflegends.com/en-us/images/SugarRushSkin_HD.jpg" },
+    { champ:"Braum", skin:"Pool Party Braum", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2021Skin_HD.jpg" },
+    { champ:"Braum", skin:"Glorious Crown Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GloriousCrownSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Braum", skin:"Grill Master Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GrillMasterSkin_HD.jpg" },
+    { champ:"Braum", skin:"Garden Party Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GardenPartySkin_WR.jpg", type:"Wild Rift" },
 ];
 
 let currentChampionSkins = [];
@@ -469,7 +481,7 @@ function colorSkinName(skin) {
     }
     return name.replace(/\(([^)]+)\)/g, (match, content) => {
         if (content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
-        if (/Prestige|Special Edition|Immortalized|Mythic Chroma|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
+        if (/Prestige|Special Edition|Mythic Chroma|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
         if (/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
         return `(${content})`;
     });
@@ -516,6 +528,7 @@ handleRoute();
 </script>
 </body>
 </html>
+
 
 
 
