@@ -375,6 +375,22 @@ const championsSkins = [
     { champ:"Blitzcrank", skin:"Beezcrank (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b6d35545-c90c-4560-82cd-d912a9f2c1fa.jpg" },
     //Brand
     { champ:"Brand", skin:"Classic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSquare.png" },
+    { champ:"Brand", skin:"Classic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Brand", skin:"Apocalyptic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ApocalypticSkin_HD.jpg" },
+    { champ:"Brand", skin:"Vandal Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_VandalSkin_HD.jpg" },
+    { champ:"Brand", skin:"Cryocore Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_CryocoreSkin_HD.jpg" },
+    { champ:"Brand", skin:"Zombie Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ZombieSkin_HD.jpg" },
+    { champ:"Brand", skin:"Spirit Fire Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_HD.jpg" },
+    { champ:"Brand", skin:"Battle Boss Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_BattleBossSkin_HD.jpg" },
+    { champ:"Brand", skin:"Arclight Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ArclightSkin_HD.jpg" },
+    { champ:"Brand", skin:"Eternal Dragon Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_EternalDragonSkin_HD.jpg" },
+    { champ:"Brand", skin:"Debonair Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_DebonairSkin_HD.jpg" },
+    { champ:"Brand", skin:"Debonair Brand (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_PrestigeDebonairSkin_HD.jpg" },
+    { champ:"Brand", skin:"Marauder Brand", image:"https://wiki.leagueoflegends.com/en-us/images/MarauderSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Brand", skin:"Street Demons Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_StreetDemonsSkin_HD.jpg" },
+    { champ:"Brand", skin:"Empyrean Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg" },
+    { champ:"Brand", skin:"Chromacrash Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Brand", skin:"Chromacrash Brand (Special Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg", type:"Wild Rift" },
 ];
 
 let currentChampionSkins = [];
@@ -453,7 +469,7 @@ function colorSkinName(skin) {
     }
     return name.replace(/\(([^)]+)\)/g, (match, content) => {
         if (content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
-        if (/Prestige|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
+        if (/Prestige|Special Edition|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
         if (/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
         return `(${content})`;
     });
@@ -500,3 +516,4 @@ handleRoute();
 </script>
 </body>
 </html>
+
