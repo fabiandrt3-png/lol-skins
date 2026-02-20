@@ -44,7 +44,6 @@ header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; bord
     cursor:pointer;
 }
 
-/* Transition de page */
 #page-wrapper {
     opacity: 1;
     transition: opacity 0.25s ease;
@@ -374,16 +373,15 @@ const championsSkins = [
     { champ:"Blitzcrank", skin:"Zenith Games Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_ZenithGamesSkin_HD.jpg" },
     { champ:"Blitzcrank", skin:"Beezcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg" },
     { champ:"Blitzcrank", skin:"Beezcrank (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b6d35545-c90c-4560-82cd-d912a9f2c1fa.jpg" },
+    //Brand
+    { champ:"Brand", skin:"Classic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSquare.png" },
 ];
 
 let currentChampionSkins = [];
 let lightboxArray = [];
 let lightboxIndexGlobal = 0;
 
-// ─── Navigation par hash ─────────────────────────────────────────────────────
-
 function navigateTo(champ) {
-    // Fade out, puis change le hash
     pageWrapper.classList.add('fade-out');
     setTimeout(() => {
         if (champ) {
@@ -415,8 +413,6 @@ window.addEventListener("hashchange", () => {
     }, 200);
 });
 
-// ─── Rendu : liste des champions ─────────────────────────────────────────────
-
 function renderChampions() {
     header.textContent = "Skins League of Legends";
     backBtn.style.display = "none";
@@ -431,8 +427,6 @@ function renderChampions() {
         container.appendChild(card);
     });
 }
-
-// ─── Rendu : skins d'un champion ─────────────────────────────────────────────
 
 function renderSkins(champ) {
     header.textContent = `${champ} — Skins`;
@@ -452,8 +446,6 @@ function renderSkins(champ) {
     });
 }
 
-// ─── Couleur des noms de skins ────────────────────────────────────────────────
-
 function colorSkinName(skin) {
     let name = skin.skin;
     if (skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)) {
@@ -466,8 +458,6 @@ function colorSkinName(skin) {
         return `(${content})`;
     });
 }
-
-// ─── Lightbox ────────────────────────────────────────────────────────────────
 
 function openLightbox(array, index) {
     lightboxArray = array;
@@ -487,7 +477,6 @@ lightboxImg.addEventListener('click', e => {
     lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
 });
 
-// Fermer le lightbox avec Echap ou clic en dehors de l'image
 lightbox.addEventListener('click', e => {
     if (e.target === lightbox) lightbox.style.display = 'none';
 });
@@ -499,8 +488,6 @@ document.addEventListener('keydown', e => {
     }
 });
 
-// ─── Bouton retour ────────────────────────────────────────────────────────────
-
 backBtn.onclick = () => {
     if (lightbox.style.display === 'flex') {
         lightbox.style.display = 'none';
@@ -509,7 +496,6 @@ backBtn.onclick = () => {
     }
 };
 
-// ─── Démarrage ────────────────────────────────────────────────────────────────
 handleRoute();
 </script>
 </body>
