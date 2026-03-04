@@ -79,13 +79,26 @@ const lightboxImg = document.getElementById("lightbox-img");
 const pageWrapper = document.getElementById("page-wrapper");
 
 const championsSkins = [
-    //Akshan
-    { champ:"Akshan", skin:"Classic Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_HD.jpg", icon:"https://imgur.com/GdB7IDP.png" },
-    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CyberPopSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_BattleAcademiaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CrystalRoseSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_ThreeHonorsSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_DawnbringerSkin_WR_HD.jpg", type:"Wild Rift" },
+    //Aatrox
+    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_HD.jpg", icon:"https://imgur.com/o7IphRR.png" },
+    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_JusticarSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9963a0a5-f46e-4175-ba31-d7427a3aa1af.jpg" },
+    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/BountyHunterSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_BloodMoonSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_VictoriousSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OdysseySkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/EclipseSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"DRX Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeDRXSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_ShanHaiScrollsSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_DragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeSelectDragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrimordianSkin_HD.jpg" },
+    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9924107d-9219-4fd8-8b47-fee501cdf993.jpg" },
+    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_WeatherEntitySkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaExquisiteEditionSkin_WR_HD.jpg", type:"Wild Rift" },
     //Ahri
     { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_HD.jpg", icon:"https://imgur.com/z3vB4ED.png" },
     { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_WR_HD.jpg", type:"Wild Rift" },
@@ -161,26 +174,13 @@ const championsSkins = [
     { champ:"Akali", skin:"Spirit Blossom Akali (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-93781ae8-55cd-4ba4-82eb-d21ee984f063.jpg" },
     { champ:"Akali", skin:"Spirit Blossom Akali (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9cddf4c0-53cd-4d49-88e3-ffb609d9de4d.jpg" },
     { champ:"Akali", skin:"Calligraphia Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CalligraphiaSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Aatrox
-    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_HD.jpg", icon:"https://imgur.com/o7IphRR.png" },
-    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_JusticarSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9963a0a5-f46e-4175-ba31-d7427a3aa1af.jpg" },
-    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/BountyHunterSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_BloodMoonSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_VictoriousSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OdysseySkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/EclipseSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"DRX Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeDRXSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_ShanHaiScrollsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_DragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeSelectDragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrimordianSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9924107d-9219-4fd8-8b47-fee501cdf993.jpg" },
-    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_WeatherEntitySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaExquisiteEditionSkin_WR_HD.jpg", type:"Wild Rift" },
+    //Akshan
+    { champ:"Akshan", skin:"Classic Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_HD.jpg", icon:"https://imgur.com/GdB7IDP.png" },
+    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CyberPopSkin_HD.jpg" },
+    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_BattleAcademiaSkin_WR_HD.jpg", type:"Wild Rift" },
+    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CrystalRoseSkin_HD.jpg" },
+    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_ThreeHonorsSkin_HD.jpg" },
+    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_DawnbringerSkin_WR_HD.jpg", type:"Wild Rift" },
     //Alistar
     { champ:"Alistar", skin:"Classic Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_HD.jpg", icon:"https://imgur.com/hPoLl1M.png" },
     { champ:"Alistar", skin:"Black Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_BlackSkin_HD.jpg" },
@@ -569,7 +569,9 @@ const championsSkins = [
     { champ:"Dr. Mundo", skin:"Street Demons Dr. Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_StreetDemonsSkin_HD.jpg" },
     { champ:"Dr. Mundo", skin:"Splendor Opus Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_SplendorOpusSkin_WR_HD.jpg", type:"Wild Rift" },
     //Draven
-    
+    { champ:"Draven", skin:"Classic Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Draven_OriginalSquare.png" },
+    { champ:"Draven", skin:"Soul Reaver Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulReaverSkin_HD.jpg" },
+    { champ:"Draven", skin:"Soul Reaver Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulReaverSkin_WR_HD.jpg", type:"Wild Rift" },
 ];
 
 let currentChampionSkins = [];
@@ -695,6 +697,7 @@ handleRoute();
 </script>
 </body>
 </html>
+
 
 
 
