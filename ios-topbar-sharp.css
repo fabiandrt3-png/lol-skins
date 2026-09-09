@@ -1,0 +1,31 @@
+/* Sharper iPhone navigation material: translucent, but never foggy. */
+@media (max-width: 720px) {
+  .topbar {
+    background: rgba(28, 28, 30, 0.90) !important;
+    border-color: rgba(255, 255, 255, 0.10) !important;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 8px 24px rgba(0, 0, 0, 0.18) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(140%) !important;
+    backdrop-filter: blur(10px) saturate(140%) !important;
+  }
+
+  .topbar .brand,
+  .topbar .brand-copy,
+  .topbar .brand-copy strong,
+  .topbar .brand-mark,
+  .topbar .icon-button {
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+}
+
+@media (max-width: 720px) and (prefers-color-scheme: light) {
+  .topbar {
+    background: rgba(248, 248, 250, 0.92) !important;
+    border-color: rgba(255, 255, 255, 0.72) !important;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.88) inset,
+      0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  }
+}
