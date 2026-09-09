@@ -1,4 +1,8 @@
-import { loadSkinData } from "./data-loader.js";
+const appAssetVersion = new URL(import.meta.url).searchParams.get("v");
+const dataLoaderUrl = appAssetVersion
+  ? `./data-loader.js?v=${encodeURIComponent(appAssetVersion)}`
+  : "./data-loader.js";
+const { loadSkinData } = await import(dataLoaderUrl);
 
 const FAVORITES_KEY = "lol-skins:favorites:v2";
 const IMAGE_FALLBACK = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
