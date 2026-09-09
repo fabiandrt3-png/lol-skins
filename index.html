@@ -8,17 +8,19 @@
   <meta name="description" content="Explore les champions et skins de League of Legends et Wild Rift.">
   <title>LoL Skins</title>
   <link rel="preconnect" href="https://wiki.leagueoflegends.com">
-  <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
-  <link rel="preconnect" href="https://raw.communitydragon.org">
-  <link rel="stylesheet" href="styles.css?v=20260909-10">
+  <link rel="preconnect" href="https://game.gtimg.cn">
+  <link rel="stylesheet" href="styles.css?v=20260909-11">
 </head>
 <body>
   <div class="app-shell">
+    <button class="back-button" id="backButton" type="button" aria-label="Retour aux champions" hidden>
+      <span aria-hidden="true">←</span>
+    </button>
+
     <main>
       <section class="hero" id="hero">
         <div class="hero-backdrop" id="heroBackdrop" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
-        <button class="back-button" id="backButton" type="button" aria-label="Retour aux champions" hidden>←</button>
         <div class="hero-content">
           <h1 id="pageTitle">Tous les champions</h1>
         </div>
@@ -26,7 +28,9 @@
 
       <section class="controls" aria-label="Recherche et filtres">
         <label class="search-box" for="searchInput">
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+            <path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
           <input id="searchInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Rechercher un champion…">
           <kbd aria-hidden="true">/</kbd>
         </label>
@@ -52,7 +56,7 @@
 
         <div class="loading-state" id="loadingState">
           <span class="spinner" aria-hidden="true"></span>
-          <p>Chargement de ta collection…</p>
+          <p>Chargement de la collection…</p>
         </div>
 
         <div class="empty-state" id="emptyState" hidden>
@@ -67,14 +71,16 @@
   </div>
 
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu du skin" hidden>
-    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <button class="lightbox-backdrop" type="button" data-close-lightbox aria-label="Fermer l’aperçu"></button>
     <div class="lightbox-toolbar">
       <div class="lightbox-caption">
         <span id="lightboxPosition"></span>
         <strong id="lightboxTitle"></strong>
       </div>
-      <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Ajouter aux favoris">♡</button>
-      <button class="icon-button" type="button" data-close-lightbox aria-label="Fermer">×</button>
+      <div class="lightbox-actions">
+        <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Ajouter aux favoris">♡</button>
+        <button class="icon-button" id="lightboxClose" type="button" data-close-lightbox aria-label="Fermer">×</button>
+      </div>
     </div>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Skin précédent">‹</button>
     <figure class="lightbox-figure" id="lightboxFigure">
@@ -84,6 +90,6 @@
   </div>
 
   <noscript>Cette application nécessite JavaScript pour afficher les skins.</noscript>
-  <script type="module" src="app.js?v=20260909-10"></script>
+  <script type="module" src="app.js?v=20260909-11"></script>
 </body>
 </html>

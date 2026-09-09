@@ -1,57 +1,61 @@
 # LoL Skins
 
-Galerie visuelle de champions, skins, chromas et variantes League of Legends / Wild Rift.
+Galerie responsive de champions, skins, chromas et variantes League of Legends / Wild Rift.
 
-## Structure
+## Architecture
 
-- `index.html` : structure minimale de l'interface
-- `styles.css` : unique feuille de style, responsive PC / mobile, avec adaptation clair / sombre
-- `app.js` : navigation, recherche, filtres, favoris, lightbox et fallbacks d'images
-- `data-loader.js` : charge les données historiques et les meilleures sources d'assets disponibles
-- `data/image-overrides.json` : carte des splash arts vérifiés par l'audit automatique
-- `legacy/index-original.html` : copie intacte de l'ancien prototype et source de métadonnées pendant la migration
+Le front est volontairement compact :
+
+- `index.html` : structure sémantique de l’interface
+- `styles.css` : **unique feuille de styles** pour desktop et mobile
+- `app.js` : navigation, recherche, filtres, favoris, lightbox et gestion des images
+- `data-loader.js` : charge le catalogue historique et la carte d’images vérifiées
+- `data/image-overrides.json` : meilleures sources de splash arts validées par l’audit automatique
+- `legacy/index-original.html` : copie intacte du prototype initial, conservée comme source de données
+- `scripts/` : audit, réparation Wild Rift et recherche d’originaux haute résolution
+
+Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. Cela évite les conflits de spécificité et garantit que desktop et téléphone utilisent la même base visuelle avec des media queries adaptées.
 
 ## Fonctionnalités
 
-- interface commune PC / téléphone avec adaptations responsive
+- interface Apple-inspired sobre, responsive PC / téléphone
 - recherche de champions et de skins
 - filtres PC, Wild Rift, Prestige / Mythic, Chromas et Favoris
-- favoris persistants dans le navigateur (`localStorage`)
-- lightbox avec navigation clavier, boutons et swipe mobile
-- splash arts affichés entièrement avec `object-fit: contain`
-- chargement paresseux des images (`loading="lazy"`) et décodage asynchrone
+- favoris persistants dans `localStorage`
 - navigation par URL avec `#champion=...`
-- fallbacks automatiques lorsqu'une source d'image ne répond plus
-- respect de `prefers-reduced-motion`
-- thème clair / sombre basé sur le réglage système
+- lightbox clavier + swipe mobile
+- splash arts toujours affichés en entier (`object-fit: contain`)
+- chargement paresseux des images
+- fallbacks automatiques avec mémorisation des URLs en échec pendant la session
+- respect de `prefers-reduced-motion` et des safe areas iPhone
 
-## Optimisations
+## Chargement et performances
 
-L'interface utilise une seule feuille CSS afin d'éviter les cascades de correctifs contradictoires entre Safari mobile et les navigateurs desktop.
+Au runtime, l’application ne télécharge plus les métadonnées Data Dragon / CommunityDragon à chaque ouverture de champion. Le workflow hebdomadaire fait ce travail en amont et enregistre les URLs vérifiées dans `data/image-overrides.json`.
 
-Le JavaScript construit un index en mémoire des skins par champion au chargement. Les recherches et changements de filtres ne rescannent donc plus inutilement toute la collection pour chaque carte. Les clics sur les cartes sont gérés par délégation d'événements, ce qui évite de créer des centaines d'écouteurs individuels.
+Le navigateur charge donc seulement :
 
-Les cartes utilisent `content-visibility: auto` quand le navigateur le prend en charge, et les images de galerie sont chargées avec `loading="lazy"`, `decoding="async"` et une priorité faible. La lightbox augmente la priorité de l'image ouverte.
+1. le catalogue historique ;
+2. la carte des splash arts vérifiés ;
+3. les images réellement visibles, en lazy loading.
 
-Les données locales, la carte d'images vérifiées et le catalogue Riot sont chargés en parallèle. Le cache HTTP normal du navigateur est utilisé au lieu de forcer une revalidation à chaque visite.
+Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
-## Sources des splash arts
+## Audit des splash arts
 
-L'application utilise d'abord la carte générée par l'audit automatique. Les fallbacks restent disponibles via Riot Data Dragon, CommunityDragon, League Wiki et les anciennes URLs conservées dans la source historique.
+Le workflow `.github/workflows/audit-splashes.yml` s’exécute une fois par semaine (et manuellement à la demande). Il :
 
-Les données CommunityDragon d'un champion ne sont chargées à la demande que si les sources vérifiées ne suffisent pas.
-
-Si toutes les sources échouent, l'application affiche `Image indisponible`.
-
-## Pourquoi garder le fichier legacy ?
-
-Le prototype initial contient beaucoup de données saisies manuellement. Pour éviter de perdre une entrée pendant la migration, il reste conservé intact dans `legacy/index-original.html`.
-
-À terme, ces métadonnées pourront être déplacées vers un vrai fichier `data/skins.json`, ce qui permettra de supprimer le parsing du HTML historique.
+- vérifie les splash arts ;
+- tente de réparer les sources Wild Rift manquantes ;
+- recherche les originaux exacts en meilleure résolution ;
+- met à jour `data/image-overrides.json` et `audit-report.json` si nécessaire ;
+- reste silencieux en cas d’éléments non résolus afin d’éviter le spam d’e-mails GitHub.
 
 ## Lancer le projet
 
-Le chargement utilise `fetch()`. Il faut donc servir le dossier avec un serveur HTTP ; GitHub Pages fonctionne directement.
+Le projet utilise `fetch()`, il doit donc être servi via HTTP. GitHub Pages fonctionne directement.
+
+Exemple local :
 
 ```bash
 python -m http.server 8000

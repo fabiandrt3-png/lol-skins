@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data-loader.js data/image-overrides.json audit-report.json
+          git add data/image-overrides.json audit-report.json
 
           if git diff --cached --quiet; then
             echo "No audit changes"
@@ -65,7 +65,7 @@ jobs:
 
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo "::warning::Could not rebase audit updates. Verification completed, but this run will not publish its generated files."
+              echo "::warning::Could not rebase audit updates. Verification completed, but generated files were not published."
               exit 0
             fi
           done
@@ -88,9 +88,7 @@ jobs:
           console.log(`- Unresolved: ${s.unresolved ?? '?'}`);
           console.log(`- Below 1600x900: ${s.below1600x900 ?? '?'}`);
           console.log('');
-          if ((s.unresolved ?? 0) > 0) {
-            console.log('⚠️ Some splash arts are unresolved. The workflow stays successful so GitHub does not send failure-email spam; inspect the audit report for details.');
-          } else {
-            console.log('✅ No unresolved splash arts detected.');
-          }
+          console.log((s.unresolved ?? 0) > 0
+            ? '⚠️ Some splash arts are unresolved. Inspect the audit report for details.'
+            : '✅ No unresolved splash arts detected.');
           NODE

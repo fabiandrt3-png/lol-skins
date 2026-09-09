@@ -1,12 +1,11 @@
-import { loadSkinData, resolveChampionAssets } from "./data-loader.js";
+import { loadSkinData } from "./data-loader.js";
 
 const FAVORITES_KEY = "lol-skins:favorites:v2";
-const COLLATOR = new Intl.Collator("fr", { sensitivity: "base" });
 const IMAGE_FALLBACK = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#161a22"/><stop offset="1" stop-color="#080a0f"/></linearGradient></defs>
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#16171a"/><stop offset="1" stop-color="#050506"/></linearGradient></defs>
   <rect width="1600" height="900" fill="url(#g)"/>
-  <text x="800" y="450" fill="#737b8c" font-family="Arial,sans-serif" font-size="52" text-anchor="middle">Image indisponible</text>
+  <text x="800" y="450" fill="#73737a" font-family="Arial,sans-serif" font-size="52" text-anchor="middle">Image indisponible</text>
 </svg>`);
 
 const els = {
@@ -15,6 +14,7 @@ const els = {
   pageTitle: document.querySelector("#pageTitle"),
   searchInput: document.querySelector("#searchInput"),
   filterRow: document.querySelector("#filterRow"),
+  filterButtons: [...document.querySelectorAll(".filter-chip")],
   sectionKicker: document.querySelector("#sectionKicker"),
   sectionTitle: document.querySelector("#sectionTitle"),
   resultCount: document.querySelector("#resultCount"),
@@ -26,6 +26,7 @@ const els = {
   lightboxTitle: document.querySelector("#lightboxTitle"),
   lightboxPosition: document.querySelector("#lightboxPosition"),
   lightboxFavorite: document.querySelector("#lightboxFavorite"),
+  lightboxClose: document.querySelector("#lightboxClose"),
   lightboxPrev: document.querySelector("#lightboxPrev"),
   lightboxNext: document.querySelector("#lightboxNext"),
   lightboxFigure: document.querySelector("#lightboxFigure"),
@@ -33,8 +34,8 @@ const els = {
 
 const state = {
   skins: [],
-  champions: [],
-  byChampion: new Map(),
+  skinsByChampion: new Map(),
+  championSummaries: [],
   currentChampion: null,
   search: "",
   filter: "all",
@@ -42,14 +43,17 @@ const state = {
   visibleSkins: [],
   lightboxIndex: -1,
   touchStartX: null,
-  assetRequest: 0,
   renderFrame: 0,
+  lastFocus: null,
 };
+
+const failedImageSources = new Set();
 
 init();
 
 async function init() {
   bindEvents();
+
   try {
     state.skins = await loadSkinData();
     buildIndexes();
@@ -61,18 +65,39 @@ async function init() {
     els.cardGrid.hidden = true;
     els.emptyState.hidden = false;
     els.emptyState.querySelector("h3").textContent = "Impossible de charger la collection";
-    els.emptyState.querySelector("p").textContent = "La source de données n'a pas pu être lue. Recharge la page ou vérifie le dépôt.";
+    els.emptyState.querySelector("p").textContent = "Recharge la page ou vérifie les fichiers du dépôt.";
   }
 }
 
 function buildIndexes() {
   const grouped = new Map();
+
   for (const skin of state.skins) {
     if (!grouped.has(skin.champ)) grouped.set(skin.champ, []);
     grouped.get(skin.champ).push(skin);
   }
-  state.byChampion = grouped;
-  state.champions = [...grouped.keys()].sort(COLLATOR.compare);
+
+  state.skinsByChampion = grouped;
+  state.championSummaries = [...grouped.entries()]
+    .map(([champion, skins]) => {
+      const first = skins[0];
+      const iconCandidates = unique([
+        ...skins.flatMap((skin) => skin.iconCandidates || []),
+        ...skins.map((skin) => skin.icon),
+        ...(first?.imageCandidates || []),
+        first?.image,
+      ]);
+
+      return {
+        champion,
+        skins,
+        iconCandidates,
+        total: skins.length,
+        pcCount: skins.filter((skin) => skin.type !== "Wild Rift").length,
+        wrCount: skins.filter((skin) => skin.type === "Wild Rift").length,
+      };
+    })
+    .sort((a, b) => a.champion.localeCompare(b.champion, "fr"));
 }
 
 function bindEvents() {
@@ -81,39 +106,44 @@ function bindEvents() {
 
   els.searchInput.addEventListener("input", (event) => {
     state.search = event.target.value.trim().toLocaleLowerCase("fr");
-    queueRender();
+    scheduleRender();
   });
 
   els.filterRow.addEventListener("click", (event) => {
     const button = event.target.closest(".filter-chip");
     if (!button) return;
+
     state.filter = button.dataset.filter || "all";
-    updateActiveFilter();
+    els.filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
     renderCurrentView();
   });
 
   els.cardGrid.addEventListener("click", (event) => {
-    const championButton = event.target.closest("[data-champion]");
-    if (championButton) {
-      navigateToChampion(championButton.dataset.champion);
+    const favoriteButton = event.target.closest("[data-favorite-id]");
+    if (favoriteButton) {
+      toggleFavorite(favoriteButton.dataset.favoriteId);
       return;
     }
 
-    const action = event.target.closest("[data-action]");
-    if (!action) return;
-    if (action.dataset.action === "open-skin") {
-      openLightbox(Number(action.dataset.index));
-    } else if (action.dataset.action === "favorite") {
-      toggleFavorite(action.dataset.id);
+    const skinPreview = event.target.closest("[data-skin-index]");
+    if (skinPreview) {
+      openLightbox(Number(skinPreview.dataset.skinIndex));
+      return;
     }
+
+    const championCard = event.target.closest("[data-champion]");
+    if (championCard) navigateToChampion(championCard.dataset.champion);
   });
 
   document.addEventListener("keydown", (event) => {
     const isTyping = /INPUT|TEXTAREA/.test(document.activeElement?.tagName || "");
+
     if (event.key === "/" && !isTyping && els.lightbox.hidden) {
       event.preventDefault();
       els.searchInput.focus();
+      return;
     }
+
     if (els.lightbox.hidden) return;
     if (event.key === "Escape") closeLightbox();
     if (event.key === "ArrowLeft") moveLightbox(-1);
@@ -123,6 +153,7 @@ function bindEvents() {
   document.querySelectorAll("[data-close-lightbox]").forEach((element) => {
     element.addEventListener("click", closeLightbox);
   });
+
   els.lightboxPrev.addEventListener("click", () => moveLightbox(-1));
   els.lightboxNext.addEventListener("click", () => moveLightbox(1));
   els.lightboxFavorite.addEventListener("click", () => {
@@ -133,6 +164,7 @@ function bindEvents() {
   els.lightboxFigure.addEventListener("touchstart", (event) => {
     state.touchStartX = event.changedTouches[0]?.clientX ?? null;
   }, { passive: true });
+
   els.lightboxFigure.addEventListener("touchend", (event) => {
     if (state.touchStartX === null) return;
     const endX = event.changedTouches[0]?.clientX ?? state.touchStartX;
@@ -142,7 +174,7 @@ function bindEvents() {
   }, { passive: true });
 }
 
-function queueRender() {
+function scheduleRender() {
   cancelAnimationFrame(state.renderFrame);
   state.renderFrame = requestAnimationFrame(renderCurrentView);
 }
@@ -150,33 +182,17 @@ function queueRender() {
 function handleRoute() {
   const params = new URLSearchParams(location.hash.replace(/^#/, ""));
   const requestedChampion = params.get("champion");
-  state.currentChampion = requestedChampion && state.byChampion.has(requestedChampion) ? requestedChampion : null;
+  state.currentChampion = requestedChampion && state.skinsByChampion.has(requestedChampion) ? requestedChampion : null;
   state.search = "";
   state.filter = "all";
   els.searchInput.value = "";
-  updateActiveFilter();
-  closeLightbox();
+  els.filterButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.filter === "all"));
+  closeLightbox({ restoreFocus: false });
+
+  document.body.classList.toggle("is-champion-view", Boolean(state.currentChampion));
+  document.title = state.currentChampion ? `${state.currentChampion} · LoL Skins` : "LoL Skins";
   renderCurrentView();
-  window.scrollTo({ top: 0, behavior: "auto" });
-
-  if (state.currentChampion) hydrateChampionAssets(state.currentChampion);
-}
-
-function updateActiveFilter() {
-  els.filterRow.querySelectorAll(".filter-chip").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.filter === state.filter);
-  });
-}
-
-async function hydrateChampionAssets(champion) {
-  const request = ++state.assetRequest;
-  try {
-    await resolveChampionAssets(state.skins, champion);
-    if (request !== state.assetRequest || state.currentChampion !== champion) return;
-    renderCurrentView();
-  } catch (error) {
-    console.warn(`Assets haute qualité indisponibles pour ${champion}.`, error);
-  }
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 }
 
 function renderCurrentView() {
@@ -193,66 +209,61 @@ function renderChampionsView() {
   els.sectionTitle.textContent = "Champions";
   els.heroBackdrop.style.backgroundImage = "";
 
-  const query = state.search;
-  const champions = query
-    ? state.champions.filter((champion) => champion.toLocaleLowerCase("fr").includes(query))
-    : state.champions;
+  const champions = state.championSummaries.filter(({ champion }) =>
+    champion.toLocaleLowerCase("fr").includes(state.search)
+  );
 
-  const fragment = document.createDocumentFragment();
-  for (const champion of champions) {
-    fragment.appendChild(createChampionCard(champion, state.byChampion.get(champion) || []));
-  }
-  replaceGrid(fragment, "card-grid champion-grid");
   els.resultCount.textContent = pluralize(champions.length, "champion", "champions");
-  setEmpty(champions.length === 0);
+  renderCards(champions, createChampionCard, "card-grid champion-grid");
 }
 
 function renderSkinsView(champion) {
   els.backButton.hidden = false;
   els.filterRow.hidden = false;
   els.searchInput.placeholder = `Rechercher un skin de ${champion}…`;
-
-  const allChampionSkins = state.byChampion.get(champion) || [];
-  const heroImage = primaryImage(allChampionSkins[0]);
-  els.heroBackdrop.style.backgroundImage = heroImage ? `url("${cssUrl(heroImage)}")` : "";
   els.pageTitle.textContent = champion;
   els.sectionKicker.textContent = "Collection";
   els.sectionTitle.textContent = `Skins de ${champion}`;
 
+  const allChampionSkins = state.skinsByChampion.get(champion) || [];
+  const heroSkin = allChampionSkins.find((skin) => !/chroma/i.test(skin.skin)) || allChampionSkins[0];
+  const heroImage = primaryImage(heroSkin);
+  els.heroBackdrop.style.backgroundImage = heroImage ? `url("${cssUrl(heroImage)}")` : "";
+
   state.visibleSkins = allChampionSkins.filter(matchesCurrentFilters);
-  const fragment = document.createDocumentFragment();
-  state.visibleSkins.forEach((skin, index) => fragment.appendChild(createSkinCard(skin, index)));
-  replaceGrid(fragment, "card-grid skin-grid");
   els.resultCount.textContent = pluralize(state.visibleSkins.length, "résultat", "résultats");
-  setEmpty(state.visibleSkins.length === 0);
+  renderCards(state.visibleSkins, createSkinCard, "card-grid skin-grid");
 }
 
-function replaceGrid(fragment, className) {
+function renderCards(items, factory, className) {
+  els.cardGrid.replaceChildren();
   els.cardGrid.className = className;
-  els.cardGrid.replaceChildren(fragment);
+
+  const fragment = document.createDocumentFragment();
+  items.forEach((item, index) => fragment.appendChild(factory(item, index)));
+  els.cardGrid.appendChild(fragment);
+  setEmpty(items.length === 0);
 }
 
-function createChampionCard(champion, championSkins) {
-  const first = championSkins[0];
-  const iconCandidates = unique([
-    ...(championSkins.find((skin) => skin.iconCandidates?.length)?.iconCandidates || []),
-    championSkins.find((skin) => skin.icon)?.icon,
-    ...(first?.imageCandidates || []),
-    first?.image,
-  ]);
-  const pcCount = championSkins.reduce((count, skin) => count + (skin.type === "Wild Rift" ? 0 : 1), 0);
-  const wrCount = championSkins.length - pcCount;
-
+function createChampionCard(item) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "champion-card";
-  button.dataset.champion = champion;
-  button.setAttribute("aria-label", `Voir les skins de ${champion}`);
+  button.dataset.champion = item.champion;
+  button.setAttribute("aria-label", `Voir les skins de ${item.champion}`);
   button.innerHTML = `
-    <span class="champion-image-wrap"><img class="champion-image" alt="" loading="lazy" decoding="async" fetchpriority="low"><span class="champion-glow" aria-hidden="true"></span></span>
-    <span class="champion-info"><strong>${escapeHtml(champion)}</strong><span>${championSkins.length} entrées</span><small>${pcCount} PC${wrCount ? ` · ${wrCount} WR` : ""}</small></span>
+    <span class="champion-image-wrap">
+      <img class="champion-image" alt="" loading="lazy" decoding="async">
+      <span class="champion-glow" aria-hidden="true"></span>
+    </span>
+    <span class="champion-info">
+      <strong>${escapeHtml(item.champion)}</strong>
+      <span>${item.total} entrées</span>
+      <small>${item.pcCount} PC${item.wrCount ? ` · ${item.wrCount} WR` : ""}</small>
+    </span>
     <span class="card-arrow" aria-hidden="true">›</span>`;
-  setImageSources(button.querySelector("img"), iconCandidates);
+
+  setImageSources(button.querySelector("img"), item.iconCandidates);
   return button;
 }
 
@@ -260,21 +271,27 @@ function createSkinCard(skin, index) {
   const article = document.createElement("article");
   article.className = "skin-card";
   const isFavorite = state.favorites.has(skin._id);
+  const badges = badgesFor(skin);
+
   article.innerHTML = `
-    <button class="skin-preview" type="button" data-action="open-skin" data-index="${index}" aria-label="Ouvrir ${escapeAttr(displaySkinName(skin))} en plein écran">
-      <img alt="${escapeAttr(displaySkinName(skin))}" loading="lazy" decoding="async" fetchpriority="low">
-      <span class="skin-gradient" aria-hidden="true"></span><span class="skin-badges">${badgesFor(skin)}</span>
+    <button class="skin-preview" type="button" data-skin-index="${index}" aria-label="Ouvrir ${escapeAttr(displaySkinName(skin))} en plein écran">
+      <img alt="${escapeAttr(displaySkinName(skin))}" loading="lazy" decoding="async">
     </button>
     <div class="skin-meta">
-      <div class="skin-title-wrap"><h3>${formatSkinName(skin)}</h3><p>${skin.type === "Wild Rift" ? "Wild Rift" : "League of Legends PC"}</p></div>
-      <button class="favorite-button ${isFavorite ? "is-favorite" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(skin._id)}" aria-label="${isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}" aria-pressed="${isFavorite}">${isFavorite ? "♥" : "♡"}</button>
+      <div class="skin-title-wrap">
+        <h3>${formatSkinName(skin)}</h3>
+        ${badges ? `<div class="skin-badges">${badges}</div>` : `<p>${skin.type === "Wild Rift" ? "Wild Rift" : "League of Legends PC"}</p>`}
+      </div>
+      <button class="favorite-button ${isFavorite ? "is-favorite" : ""}" type="button" data-favorite-id="${escapeAttr(skin._id)}" aria-label="${isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}" aria-pressed="${isFavorite}">${isFavorite ? "♥" : "♡"}</button>
     </div>`;
+
   setImageSources(article.querySelector("img"), imageSources(skin));
   return article;
 }
 
 function matchesCurrentFilters(skin) {
-  if (state.search && !displaySkinName(skin).toLocaleLowerCase("fr").includes(state.search)) return false;
+  if (!displaySkinName(skin).toLocaleLowerCase("fr").includes(state.search)) return false;
+
   switch (state.filter) {
     case "pc": return skin.type !== "Wild Rift";
     case "wild-rift": return skin.type === "Wild Rift";
@@ -288,17 +305,21 @@ function matchesCurrentFilters(skin) {
 function openLightbox(index) {
   if (!state.visibleSkins[index]) return;
   state.lightboxIndex = index;
+  state.lastFocus = document.activeElement;
   els.lightbox.hidden = false;
   document.body.classList.add("is-lightbox-open");
-  els.lightboxImage.fetchPriority = "high";
   renderLightbox();
+  requestAnimationFrame(() => els.lightboxClose.focus());
 }
 
-function closeLightbox() {
+function closeLightbox({ restoreFocus = true } = {}) {
   if (els.lightbox.hidden) return;
   els.lightbox.hidden = true;
   document.body.classList.remove("is-lightbox-open");
   state.lightboxIndex = -1;
+
+  if (restoreFocus && state.lastFocus instanceof HTMLElement) state.lastFocus.focus({ preventScroll: true });
+  state.lastFocus = null;
 }
 
 function moveLightbox(direction) {
@@ -310,24 +331,32 @@ function moveLightbox(direction) {
 function renderLightbox() {
   const skin = state.visibleSkins[state.lightboxIndex];
   if (!skin) return;
-  setImageSources(els.lightboxImage, imageSources(skin));
+
+  setImageSources(els.lightboxImage, imageSources(skin), { eager: true });
   els.lightboxImage.alt = displaySkinName(skin);
   els.lightboxTitle.textContent = displaySkinName(skin);
   els.lightboxPosition.textContent = `${state.lightboxIndex + 1} / ${state.visibleSkins.length}`;
+
   const isFavorite = state.favorites.has(skin._id);
   els.lightboxFavorite.textContent = isFavorite ? "♥" : "♡";
   els.lightboxFavorite.classList.toggle("is-favorite", isFavorite);
   els.lightboxFavorite.setAttribute("aria-label", isFavorite ? "Retirer des favoris" : "Ajouter aux favoris");
+  els.lightboxFavorite.setAttribute("aria-pressed", String(isFavorite));
+
+  const disableNav = state.visibleSkins.length <= 1;
+  els.lightboxPrev.disabled = disableNav;
+  els.lightboxNext.disabled = disableNav;
 }
 
 function toggleFavorite(id) {
   if (!id) return;
+  const previousLightboxId = state.lightboxIndex >= 0 ? state.visibleSkins[state.lightboxIndex]?._id : null;
+
   if (state.favorites.has(id)) state.favorites.delete(id);
   else state.favorites.add(id);
   saveFavorites();
-
-  const previousLightboxId = state.lightboxIndex >= 0 ? state.visibleSkins[state.lightboxIndex]?._id : null;
   renderCurrentView();
+
   if (!els.lightbox.hidden && previousLightboxId) {
     const nextIndex = state.visibleSkins.findIndex((skin) => skin._id === previousLightboxId);
     if (nextIndex === -1) closeLightbox();
@@ -346,10 +375,10 @@ function navigateToChampion(champion) {
 }
 
 function navigateHome() {
-  state.assetRequest += 1;
   if (location.hash) location.hash = "";
   else {
     state.currentChampion = null;
+    document.body.classList.remove("is-champion-view");
     renderCurrentView();
   }
 }
@@ -364,26 +393,30 @@ function badgesFor(skin) {
 }
 
 function displaySkinName(skin) {
-  return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin) ? `${skin.skin} (Wild Rift)` : skin.skin;
+  return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin)
+    ? `${skin.skin} (Wild Rift)`
+    : skin.skin;
 }
 
 function formatSkinName(skin) {
-  const raw = displaySkinName(skin);
-  let output = "";
-  let cursor = 0;
+  const value = displaySkinName(skin);
   const pattern = /\(([^)]+)\)/g;
+  let result = "";
+  let lastIndex = 0;
   let match;
-  while ((match = pattern.exec(raw))) {
-    output += escapeHtml(raw.slice(cursor, match.index));
+
+  while ((match = pattern.exec(value))) {
+    result += escapeHtml(value.slice(lastIndex, match.index));
     const content = match[1];
     let className = "skin-tag";
     if (/wild rift/i.test(content)) className += " skin-tag-wr";
     else if (/prestige|special edition|mythic chroma|exquisite edition/i.test(content)) className += " skin-tag-prestige";
     else if (/chroma/i.test(content)) className += " skin-tag-chroma";
-    output += `<span class="${className}">(${escapeHtml(content)})</span>`;
-    cursor = pattern.lastIndex;
+    result += `<span class="${className}">(${escapeHtml(content)})</span>`;
+    lastIndex = pattern.lastIndex;
   }
-  return output + escapeHtml(raw.slice(cursor));
+
+  return result + escapeHtml(value.slice(lastIndex));
 }
 
 function imageSources(skin) {
@@ -394,22 +427,34 @@ function primaryImage(skin) {
   return imageSources(skin)[0] || "";
 }
 
-function setImageSources(image, candidates) {
+function setImageSources(image, candidates, { eager = false } = {}) {
   if (!image) return;
-  const sources = unique(candidates);
+
+  const sources = unique(candidates).filter((source) => !failedImageSources.has(source));
   let index = 0;
+
   image.classList.remove("is-fallback");
-  image.onerror = () => {
-    index += 1;
-    if (index < sources.length) {
-      image.src = sources[index];
+  image.loading = eager ? "eager" : "lazy";
+  image.fetchPriority = eager ? "high" : "auto";
+
+  const loadCurrent = () => {
+    if (index >= sources.length) {
+      image.onerror = null;
+      image.src = IMAGE_FALLBACK;
+      image.classList.add("is-fallback");
       return;
     }
-    image.onerror = null;
-    image.src = IMAGE_FALLBACK;
-    image.classList.add("is-fallback");
+    image.src = sources[index];
   };
-  image.src = sources[0] || IMAGE_FALLBACK;
+
+  image.onerror = () => {
+    if (sources[index]) failedImageSources.add(sources[index]);
+    index += 1;
+    loadCurrent();
+  };
+
+  image.onload = () => image.classList.remove("is-fallback");
+  loadCurrent();
 }
 
 function setLoaded(loaded) {
@@ -439,8 +484,27 @@ function saveFavorites() {
   }
 }
 
-function pluralize(count, singular, plural) { return `${count} ${count > 1 ? plural : singular}`; }
-function cssUrl(value) { return String(value).replace(/["\\\n\r]/g, (char) => `\\${char}`); }
-function unique(values) { return [...new Set((values || []).filter(Boolean))]; }
-function escapeHtml(value) { return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;"); }
-function escapeAttr(value) { return escapeHtml(value); }
+function pluralize(count, singular, plural) {
+  return `${count} ${count === 1 ? singular : plural}`;
+}
+
+function cssUrl(value) {
+  return String(value).replace(/["\\\n\r]/g, (char) => `\\${char}`);
+}
+
+function unique(values) {
+  return [...new Set((values || []).filter(Boolean))];
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value);
+}
