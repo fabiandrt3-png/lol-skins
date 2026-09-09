@@ -1,20 +1,20 @@
-/* Crisp iPhone navigation: solid, non-sticky and clearly below the iOS status area. */
+/* Minimal iPhone presentation: no visible top bar, compact hero, standalone back button only. */
 @media (max-width: 720px) {
   .topbar {
-    position: relative !important;
-    inset: auto !important;
-    top: auto !important;
-    left: auto !important;
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top) + 10px) !important;
+    left: 14px !important;
     right: auto !important;
-    z-index: 70 !important;
-    width: calc(100% - 28px) !important;
-    height: 50px !important;
-    margin: calc(env(safe-area-inset-top) + 32px) auto 0 !important;
-    padding: 0 7px !important;
-    background: #1c1c1e !important;
+    bottom: auto !important;
+    z-index: 80 !important;
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
     background-image: none !important;
-    border: 1px solid #38383a !important;
-    border-radius: 18px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
@@ -22,76 +22,73 @@
     filter: none !important;
     opacity: 1 !important;
     transform: none !important;
-    isolation: isolate !important;
-  }
-
-  .hero {
-    margin-top: 14px !important;
+    pointer-events: none !important;
   }
 
   .topbar::before,
-  .topbar::after {
+  .topbar::after,
+  .topbar .brand,
+  .topbar .topbar-actions {
     display: none !important;
     content: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-    -webkit-filter: none !important;
-    filter: none !important;
   }
 
-  .topbar .brand,
-  .topbar .brand-copy,
-  .topbar .brand-copy strong,
-  .topbar .brand-mark,
-  .topbar .icon-button,
-  .topbar .topbar-actions {
+  .topbar .back-button[hidden] {
+    display: none !important;
+  }
+
+  .topbar .back-button:not([hidden]) {
+    display: grid !important;
+    place-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: rgba(28, 28, 30, .92) !important;
+    color: #fff !important;
+    box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     -webkit-filter: none !important;
     filter: none !important;
     opacity: 1 !important;
-    text-shadow: none !important;
     transform: none !important;
+    pointer-events: auto !important;
   }
 
-  .topbar .brand-copy strong {
-    font-weight: 700 !important;
-    color: #fff !important;
+  .hero {
+    min-height: 0 !important;
+    margin-top: 0 !important;
   }
 
-  .topbar .brand-mark {
-    width: 31px !important;
-    height: 31px !important;
-    border-radius: 9px !important;
-    background: #0a84ff !important;
-    background-image: none !important;
-    box-shadow: none !important;
+  .hero-content {
+    width: calc(100% - 28px) !important;
+    padding: calc(env(safe-area-inset-top) + 48px) 0 20px !important;
   }
 
-  .topbar .icon-button {
-    width: 36px !important;
-    height: 36px !important;
-    background: #2c2c2e !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+  .eyebrow,
+  .hero-description {
+    display: none !important;
+  }
+
+  .hero h1 {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .controls {
+    margin-top: 0 !important;
+  }
+
+  .content-section {
+    padding-top: 28px !important;
   }
 }
 
 @media (max-width: 720px) and (prefers-color-scheme: light) {
-  .topbar {
-    background: #f2f2f7 !important;
-    border-color: #d1d1d6 !important;
-  }
-
-  .topbar .brand-copy strong {
+  .topbar .back-button:not([hidden]) {
+    background: rgba(242, 242, 247, .96) !important;
     color: #000 !important;
-  }
-
-  .topbar .icon-button {
-    background: #e5e5ea !important;
   }
 }
