@@ -217,7 +217,8 @@ function bindEvents() {
   });
 
   els.lightboxFigure.addEventListener("touchstart", (event) => {
-    if (state.lightboxAnimating || state.visibleSkins.length <= 1 || event.touches.length !== 1 || isViewportZoomed()) {
+    if (state.lightboxAnimating) return;
+    if (state.visibleSkins.length <= 1 || event.touches.length !== 1 || isViewportZoomed()) {
       blockTouchSwipe();
       return;
     }
@@ -234,6 +235,7 @@ function bindEvents() {
   }, { passive: true });
 
   els.lightboxFigure.addEventListener("touchmove", (event) => {
+    if (state.lightboxAnimating) return;
     if (event.touches.length > 1 || isViewportZoomed()) {
       blockTouchSwipe();
       return;
@@ -262,6 +264,10 @@ function bindEvents() {
 
   els.lightboxFigure.addEventListener("touchend", (event) => {
     if (event.touches.length > 0) return;
+    if (state.lightboxAnimating) {
+      clearTouchSwipeState();
+      return;
+    }
 
     const startX = state.touchStartX;
     const startY = state.touchStartY;
@@ -297,7 +303,7 @@ function bindEvents() {
 
   els.lightboxFigure.addEventListener("touchcancel", () => {
     clearTouchSwipeState();
-    setLightboxTrackOffset(0, true);
+    if (!state.lightboxAnimating) setLightboxTrackOffset(0, true);
   }, { passive: true });
 }
 
@@ -342,7 +348,7 @@ function finishLightboxSwipe(direction) {
 
   let completed = false;
   const finish = () => {
-    if (completed) return;
+    if (completed || !state.lightboxAnimating || els.lightbox.hidden) return;
     completed = true;
     state.lightboxIndex = wrapIndex(state.lightboxIndex + direction, state.visibleSkins.length);
     state.lightboxAnimating = false;
