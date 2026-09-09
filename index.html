@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
   <meta name="description" content="Explore les champions et skins de League of Legends et Wild Rift.">
   <title>LoL Skins</title>
   <link rel="preconnect" href="https://wiki.leagueoflegends.com">
   <link rel="preconnect" href="https://game.gtimg.cn">
-  <link rel="stylesheet" href="styles.css?v=20260909-11">
+  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260909-13">
+  <style>
+    body:not(.is-champion-view) #sectionKicker,
+    body:not(.is-champion-view) #resultCount,
+    body:not(.is-champion-view) .champion-info > span,
+    body:not(.is-champion-view) .champion-info > small {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
   <div class="app-shell">
@@ -90,6 +101,23 @@
   </div>
 
   <noscript>Cette application nécessite JavaScript pour afficher les skins.</noscript>
-  <script type="module" src="app.js?v=20260909-12"></script>
+  <script type="module">
+    const fallbackVersion = "20260909-13";
+    let version = fallbackVersion;
+
+    try {
+      const response = await fetch(`version.json?t=${Date.now()}`, { cache: "no-store" });
+      if (response.ok) {
+        const payload = await response.json();
+        if (typeof payload?.version === "string" && payload.version) version = payload.version;
+      }
+    } catch (error) {
+      console.warn("Version distante indisponible, utilisation de la version intégrée.", error);
+    }
+
+    const stylesheet = document.querySelector("#appStyles");
+    if (stylesheet) stylesheet.href = `styles.css?v=${encodeURIComponent(version)}`;
+    await import(`./app.js?v=${encodeURIComponent(version)}`);
+  </script>
 </body>
 </html>
