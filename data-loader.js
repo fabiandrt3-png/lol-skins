@@ -2,8 +2,10 @@ const LEGACY_SOURCE = "legacy/index-original.html";
 const DDRAGON_VERSIONS = "https://ddragon.leagueoflegends.com/api/versions.json";
 const CDRAGON_CHAMPION = (id) => `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/${id}.json`;
 const CDRAGON_ASSET_ROOT = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/";
+const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 
 let catalogPromise;
+let verifiedImageMapPromise;
 const championDataCache = new Map();
 const resolvedChampions = new Set();
 
@@ -36,9 +38,15 @@ export async function loadSkinData() {
     console.warn("Data Dragon indisponible, les icônes legacy seront utilisées.", error);
   }
 
+  const verifiedImages = await loadVerifiedImageMap();
+
   return data.map((item, index) => {
+    const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
     const meta = catalog?.byName.get(normalize(item.champ));
+    const verified = verifiedImages[id] || null;
+    const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
     const legacyCandidates = legacyImageCandidates(item.image);
+    const allImageCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
     const iconCandidates = unique([
       meta ? `https://ddragon.leagueoflegends.com/cdn/${catalog.version}/img/champion/${meta.alias}.png` : null,
       item.icon,
@@ -46,13 +54,15 @@ export async function loadSkinData() {
 
     return {
       ...item,
-      _id: `${slugify(item.champ)}::${slugify(item.skin)}::${index}`,
+      _id: id,
       _legacyImage: item.image,
+      _verifiedImageCandidates: verifiedCandidates,
+      _verifiedImageMeta: verified,
       _championKey: meta?.key || null,
       _championAlias: meta?.alias || null,
-      imageCandidates: legacyCandidates,
+      imageCandidates: allImageCandidates,
       iconCandidates,
-      image: legacyCandidates[0] || item.image,
+      image: allImageCandidates[0] || item.image,
     };
   });
 }
@@ -66,6 +76,10 @@ export async function resolveChampionAssets(allSkins, champion) {
 
   const entries = allSkins.filter((skin) => skin.champ === champion);
   if (!entries.length) return;
+  if (entries.every((entry) => entry._verifiedImageCandidates?.length)) {
+    resolvedChampions.add(champion);
+    return;
+  }
 
   const key = entries.find((skin) => skin._championKey)?._championKey;
   const alias = entries.find((skin) => skin._championAlias)?._championAlias;
@@ -79,6 +93,13 @@ export async function resolveChampionAssets(allSkins, champion) {
     const index = buildAssetIndex(championData, champion);
 
     entries.forEach((entry) => {
+      if (entry._verifiedImageCandidates?.length) {
+        entry.imageCandidates = unique([...entry._verifiedImageCandidates, ...(entry.imageCandidates || [])]);
+        entry.image = entry.imageCandidates[0] || entry._legacyImage;
+        entry._assetSource = "verified-audit";
+        return;
+      }
+
       if (entry.type === "Wild Rift") {
         entry.imageCandidates = unique([
           ...wikiOriginalCandidates(entry._legacyImage),
@@ -133,6 +154,23 @@ export async function resolveChampionAssets(allSkins, champion) {
   } finally {
     resolvedChampions.add(champion);
   }
+}
+
+async function loadVerifiedImageMap() {
+  if (!verifiedImageMapPromise) {
+    verifiedImageMapPromise = fetch(VERIFIED_IMAGE_MAP, { cache: "no-cache" })
+      .then(async (response) => {
+        if (response.status === 404) return {};
+        if (!response.ok) throw new Error(`Verified image map: ${response.status}`);
+        const payload = await response.json();
+        return payload?.entries || {};
+      })
+      .catch((error) => {
+        console.warn("Carte d’images vérifiées indisponible, utilisation des fallbacks dynamiques.", error);
+        return {};
+      });
+  }
+  return verifiedImageMapPromise;
 }
 
 async function loadChampionCatalog() {
