@@ -88,14 +88,7 @@ function buildIndexes() {
         first?.image,
       ]);
 
-      return {
-        champion,
-        skins,
-        iconCandidates,
-        total: skins.length,
-        pcCount: skins.filter((skin) => skin.type !== "Wild Rift").length,
-        wrCount: skins.filter((skin) => skin.type === "Wild Rift").length,
-      };
+      return { champion, iconCandidates };
     })
     .sort((a, b) => a.champion.localeCompare(b.champion, "fr"));
 }
@@ -205,15 +198,16 @@ function renderChampionsView() {
   els.filterRow.hidden = true;
   els.searchInput.placeholder = "Rechercher un champion…";
   els.pageTitle.textContent = "Tous les champions";
-  els.sectionKicker.textContent = "Collection";
+  els.sectionKicker.hidden = true;
+  els.sectionTitle.hidden = false;
   els.sectionTitle.textContent = "Champions";
+  els.resultCount.hidden = true;
   els.heroBackdrop.style.backgroundImage = "";
 
   const champions = state.championSummaries.filter(({ champion }) =>
     champion.toLocaleLowerCase("fr").includes(state.search)
   );
 
-  els.resultCount.textContent = pluralize(champions.length, "champion", "champions");
   renderCards(champions, createChampionCard, "card-grid champion-grid");
 }
 
@@ -222,8 +216,11 @@ function renderSkinsView(champion) {
   els.filterRow.hidden = false;
   els.searchInput.placeholder = `Rechercher un skin de ${champion}…`;
   els.pageTitle.textContent = champion;
+  els.sectionKicker.hidden = false;
   els.sectionKicker.textContent = "Collection";
+  els.sectionTitle.hidden = false;
   els.sectionTitle.textContent = `Skins de ${champion}`;
+  els.resultCount.hidden = false;
 
   const allChampionSkins = state.skinsByChampion.get(champion) || [];
   const heroSkin = allChampionSkins.find((skin) => !/chroma/i.test(skin.skin)) || allChampionSkins[0];
@@ -258,8 +255,6 @@ function createChampionCard(item) {
     </span>
     <span class="champion-info">
       <strong>${escapeHtml(item.champion)}</strong>
-      <span>${item.total} entrées</span>
-      <small>${item.pcCount} PC${item.wrCount ? ` · ${item.wrCount} WR` : ""}</small>
     </span>
     <span class="card-arrow" aria-hidden="true">›</span>`;
 
