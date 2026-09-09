@@ -1,13 +1,14 @@
 const LEGACY_SOURCE = "legacy/index-original.html";
 const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
+const NEW_SKINS_SOURCE = "data/new-skins.json";
 const ENTRY_FIELDS = ["champ", "skin", "image", "icon", "type"];
 
 let skinDataPromise;
 
 /**
  * Runtime loader kept intentionally small: the weekly audit already resolves
- * and verifies splash sources, so the browser only needs the historical
- * catalog plus the verified URL map. No Riot/CommunityDragon metadata request
+ * and verifies historical splash sources, so the browser only needs the historical
+ * catalog, the verified URL map, and the small additions file. No live metadata request
  * is necessary while the user is browsing the app.
  */
 export function loadSkinData() {
@@ -15,36 +16,74 @@ export function loadSkinData() {
     skinDataPromise = Promise.all([
       fetchText(LEGACY_SOURCE),
       loadVerifiedImageMap(),
-    ]).then(([source, verifiedImages]) => {
-      const data = parseLegacyCatalog(source);
-      const mapped = data.map((item, index) => {
-        const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
-        const verified = verifiedImages[id] || null;
-        const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
-        const legacyCandidates = legacyImageCandidates(item.image);
-        const imageCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
+      loadNewSkins(),
+    ]).then(([source, verifiedImages, newSkins]) => {
+      const historicalData = parseLegacyCatalog(source);
+      const historicalSkins = historicalData.map((item, index) => mapHistoricalSkin(item, index, verifiedImages));
+      const additions = newSkins.map(mapNewSkin);
 
-        return {
-          ...item,
-          _id: id,
-          _legacyImage: item.image,
-          _verifiedImageMeta: verified,
-          imageCandidates,
-          iconCandidates: unique([item.icon]),
-          image: imageCandidates[0] || item.image,
-        };
-      });
-
-      // Filter only after IDs are assigned so every following verified asset keeps its historical index.
-      return mapped.filter((item) => !isHiddenSkin(item));
+      // Historical IDs stay untouched; additions are appended afterwards so
+      // each champion keeps its existing chronological order.
+      return [...historicalSkins, ...additions].filter((item) => !isHiddenSkin(item));
     });
   }
 
   return skinDataPromise;
 }
 
+function mapHistoricalSkin(item, index, verifiedImages) {
+  const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
+  const verified = verifiedImages[id] || null;
+  const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
+  const legacyCandidates = legacyImageCandidates(item.image);
+  const imageCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
+
+  return {
+    ...item,
+    _id: id,
+    _legacyImage: item.image,
+    _verifiedImageMeta: verified,
+    imageCandidates,
+    iconCandidates: unique([item.icon]),
+    image: imageCandidates[0] || item.image,
+  };
+}
+
+function mapNewSkin(item) {
+  const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
+  const imageCandidates = unique([item.image, ...(item.fallbacks || [])]);
+
+  return {
+    champ: item.champ,
+    skin: item.skin,
+    ...(item.type ? { type: item.type } : {}),
+    _id: id,
+    _legacyImage: item.image,
+    _verifiedImageMeta: null,
+    imageCandidates,
+    iconCandidates: unique([item.icon]),
+    image: imageCandidates[0] || item.image,
+  };
+}
+
 function isHiddenSkin(item) {
   return item.champ === "Ahri" && item.skin === "Foxfire Ahri" && item.type === "Wild Rift";
+}
+
+async function loadNewSkins() {
+  try {
+    const response = await fetch(NEW_SKINS_SOURCE, { cache: "default" });
+    if (response.status === 404) return [];
+    if (!response.ok) throw new Error(`Nouveaux skins (${response.status})`);
+    const payload = await response.json();
+    const entries = Array.isArray(payload) ? payload : payload?.entries;
+    return Array.isArray(entries)
+      ? entries.filter((item) => item?.champ && item?.skin && item?.image)
+      : [];
+  } catch (error) {
+    console.warn("Catalogue des nouveaux skins indisponible.", error);
+    return [];
+  }
 }
 
 async function fetchText(url) {
