@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bel-veth::faerie-court-bel-veth::pc",
+    "champ": "Bel'Veth",
+    "skin": "Faerie Court Bel'Veth",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_uncentered_29.skins_belveth_skin29.jpg",
+    "fallbacks": [
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_centered_29.skins_belveth_skin29.jpg"
+    ]
+  }
+]
