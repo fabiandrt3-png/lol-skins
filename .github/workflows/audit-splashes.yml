@@ -30,9 +30,12 @@ jobs:
         run: npm install --no-save sharp@0.34.3
 
       - name: Audit every splash art
-        id: audit
         continue-on-error: true
         run: node scripts/audit-splashes.mjs
+
+      - name: Search and repair missing Wild Rift splash arts
+        continue-on-error: true
+        run: node scripts/resolve-missing-wr.mjs
 
       - name: Save verified image map and audit report
         run: |
@@ -47,5 +50,4 @@ jobs:
           fi
 
       - name: Fail if unresolved images remain
-        if: steps.audit.outcome == 'failure'
-        run: exit 1
+        run: node -e "const r=require('./audit-report.json'); if(r.summary.unresolved>0){console.error(r.summary.unresolved+' unresolved splash arts'); process.exit(1)}"
