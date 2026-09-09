@@ -1,0 +1,48 @@
+/* Final iPhone navigation override: the top bar must remain perfectly crisp. */
+@media (max-width: 720px) {
+  .topbar {
+    background: #1c1c1e !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    border-color: rgba(255,255,255,.14) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 8px 24px rgba(0,0,0,.28) !important;
+  }
+
+  .topbar::before,
+  .topbar::after {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+
+  .topbar .brand,
+  .topbar .brand-copy,
+  .topbar .brand-copy strong,
+  .topbar .brand-mark,
+  .topbar .icon-button {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  .topbar .icon-button {
+    background: #2c2c2e !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
+@media (max-width: 720px) and (prefers-color-scheme: light) {
+  .topbar {
+    background: #f2f2f7 !important;
+    border-color: rgba(60,60,67,.18) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 8px 24px rgba(0,0,0,.10) !important;
+  }
+
+  .topbar .icon-button {
+    background: #e5e5ea !important;
+  }
+}
