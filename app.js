@@ -43,6 +43,8 @@ const state = {
   visibleSkins: [],
   lightboxIndex: -1,
   touchStartX: null,
+  touchStartY: null,
+  touchSwipeBlocked: false,
   renderFrame: 0,
   lastFocus: null,
 };
@@ -155,16 +157,54 @@ function bindEvents() {
   });
 
   els.lightboxFigure.addEventListener("touchstart", (event) => {
-    state.touchStartX = event.changedTouches[0]?.clientX ?? null;
+    if (event.touches.length !== 1 || isViewportZoomed()) {
+      blockTouchSwipe();
+      return;
+    }
+
+    state.touchSwipeBlocked = false;
+    state.touchStartX = event.touches[0]?.clientX ?? null;
+    state.touchStartY = event.touches[0]?.clientY ?? null;
+  }, { passive: true });
+
+  els.lightboxFigure.addEventListener("touchmove", (event) => {
+    if (event.touches.length > 1 || isViewportZoomed()) blockTouchSwipe();
   }, { passive: true });
 
   els.lightboxFigure.addEventListener("touchend", (event) => {
-    if (state.touchStartX === null) return;
-    const endX = event.changedTouches[0]?.clientX ?? state.touchStartX;
-    const delta = endX - state.touchStartX;
-    state.touchStartX = null;
-    if (Math.abs(delta) >= 45) moveLightbox(delta > 0 ? -1 : 1);
+    if (event.touches.length > 0) return;
+
+    const startX = state.touchStartX;
+    const startY = state.touchStartY;
+    const blocked = state.touchSwipeBlocked || isViewportZoomed();
+    const endTouch = event.changedTouches[0];
+    resetTouchSwipe();
+
+    if (blocked || startX === null || startY === null || !endTouch) return;
+
+    const deltaX = endTouch.clientX - startX;
+    const deltaY = endTouch.clientY - startY;
+    const isHorizontalSwipe = Math.abs(deltaX) >= 45 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
+    if (isHorizontalSwipe) moveLightbox(deltaX > 0 ? -1 : 1);
   }, { passive: true });
+
+  els.lightboxFigure.addEventListener("touchcancel", resetTouchSwipe, { passive: true });
+}
+
+function isViewportZoomed() {
+  return (window.visualViewport?.scale ?? 1) > 1.01;
+}
+
+function blockTouchSwipe() {
+  state.touchSwipeBlocked = true;
+  state.touchStartX = null;
+  state.touchStartY = null;
+}
+
+function resetTouchSwipe() {
+  state.touchStartX = null;
+  state.touchStartY = null;
+  state.touchSwipeBlocked = false;
 }
 
 function scheduleRender() {
@@ -312,6 +352,7 @@ function closeLightbox({ restoreFocus = true } = {}) {
   els.lightbox.hidden = true;
   document.body.classList.remove("is-lightbox-open");
   state.lightboxIndex = -1;
+  resetTouchSwipe();
 
   if (restoreFocus && state.lastFocus instanceof HTMLElement) state.lastFocus.focus({ preventScroll: true });
   state.lastFocus = null;
