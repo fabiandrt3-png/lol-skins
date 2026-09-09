@@ -30,6 +30,9 @@ const els = {
   lightboxPrev: document.querySelector("#lightboxPrev"),
   lightboxNext: document.querySelector("#lightboxNext"),
   lightboxFigure: document.querySelector("#lightboxFigure"),
+  lightboxTrack: null,
+  lightboxPrevImage: null,
+  lightboxNextImage: null,
 };
 
 const state = {
@@ -44,16 +47,23 @@ const state = {
   lightboxIndex: -1,
   touchStartX: null,
   touchStartY: null,
+  touchLastX: null,
+  touchLastY: null,
+  touchStartTime: 0,
+  touchDragging: false,
   touchSwipeBlocked: false,
+  lightboxAnimating: false,
   renderFrame: 0,
   lastFocus: null,
 };
 
 const failedImageSources = new Set();
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 init();
 
 async function init() {
+  setupLightboxCarousel();
   bindEvents();
 
   try {
@@ -69,6 +79,56 @@ async function init() {
     els.emptyState.querySelector("h3").textContent = "Impossible de charger la collection";
     els.emptyState.querySelector("p").textContent = "Recharge la page ou vérifie les fichiers du dépôt.";
   }
+}
+
+function setupLightboxCarousel() {
+  if (!els.lightboxFigure || !els.lightboxImage || els.lightboxTrack) return;
+
+  const track = document.createElement("div");
+  const previousImage = document.createElement("img");
+  const nextImage = document.createElement("img");
+
+  previousImage.alt = "";
+  nextImage.alt = "";
+  previousImage.decoding = "async";
+  nextImage.decoding = "async";
+  previousImage.draggable = false;
+  nextImage.draggable = false;
+  previousImage.setAttribute("aria-hidden", "true");
+  nextImage.setAttribute("aria-hidden", "true");
+  els.lightboxImage.draggable = false;
+
+  Object.assign(els.lightboxFigure.style, {
+    overflow: "hidden",
+    pointerEvents: "auto",
+    touchAction: "pan-y pinch-zoom",
+  });
+
+  Object.assign(track.style, {
+    display: "flex",
+    width: "300%",
+    height: "100%",
+    transform: "translate3d(-33.333333%, 0, 0)",
+    willChange: "transform",
+  });
+
+  const makeSlide = (image) => {
+    const slide = document.createElement("div");
+    Object.assign(slide.style, {
+      display: "grid",
+      flex: "0 0 33.333333%",
+      height: "100%",
+      placeItems: "center",
+    });
+    slide.appendChild(image);
+    return slide;
+  };
+
+  track.append(makeSlide(previousImage), makeSlide(els.lightboxImage), makeSlide(nextImage));
+  els.lightboxFigure.replaceChildren(track);
+  els.lightboxTrack = track;
+  els.lightboxPrevImage = previousImage;
+  els.lightboxNextImage = nextImage;
 }
 
 function buildIndexes() {
@@ -141,34 +201,63 @@ function bindEvents() {
 
     if (els.lightbox.hidden) return;
     if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowLeft") moveLightbox(-1);
-    if (event.key === "ArrowRight") moveLightbox(1);
+    if (event.key === "ArrowLeft") moveLightbox(-1, { animate: true });
+    if (event.key === "ArrowRight") moveLightbox(1, { animate: true });
   });
 
   document.querySelectorAll("[data-close-lightbox]").forEach((element) => {
     element.addEventListener("click", closeLightbox);
   });
 
-  els.lightboxPrev.addEventListener("click", () => moveLightbox(-1));
-  els.lightboxNext.addEventListener("click", () => moveLightbox(1));
+  els.lightboxPrev.addEventListener("click", () => moveLightbox(-1, { animate: true }));
+  els.lightboxNext.addEventListener("click", () => moveLightbox(1, { animate: true }));
   els.lightboxFavorite.addEventListener("click", () => {
     const skin = state.visibleSkins[state.lightboxIndex];
     if (skin) toggleFavorite(skin._id);
   });
 
   els.lightboxFigure.addEventListener("touchstart", (event) => {
-    if (event.touches.length !== 1 || isViewportZoomed()) {
+    if (state.lightboxAnimating || state.visibleSkins.length <= 1 || event.touches.length !== 1 || isViewportZoomed()) {
       blockTouchSwipe();
       return;
     }
 
+    const touch = event.touches[0];
     state.touchSwipeBlocked = false;
-    state.touchStartX = event.touches[0]?.clientX ?? null;
-    state.touchStartY = event.touches[0]?.clientY ?? null;
+    state.touchDragging = false;
+    state.touchStartX = touch.clientX;
+    state.touchStartY = touch.clientY;
+    state.touchLastX = touch.clientX;
+    state.touchLastY = touch.clientY;
+    state.touchStartTime = performance.now();
+    setLightboxTrackOffset(0, false);
   }, { passive: true });
 
   els.lightboxFigure.addEventListener("touchmove", (event) => {
-    if (event.touches.length > 1 || isViewportZoomed()) blockTouchSwipe();
+    if (event.touches.length > 1 || isViewportZoomed()) {
+      blockTouchSwipe();
+      return;
+    }
+
+    if (state.touchSwipeBlocked || state.touchStartX === null || state.touchStartY === null) return;
+    const touch = event.touches[0];
+    if (!touch) return;
+
+    const deltaX = touch.clientX - state.touchStartX;
+    const deltaY = touch.clientY - state.touchStartY;
+    state.touchLastX = touch.clientX;
+    state.touchLastY = touch.clientY;
+
+    if (!state.touchDragging) {
+      if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) return;
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        blockTouchSwipe();
+        return;
+      }
+      state.touchDragging = true;
+    }
+
+    setLightboxTrackOffset(deltaX, false);
   }, { passive: true });
 
   els.lightboxFigure.addEventListener("touchend", (event) => {
@@ -176,19 +265,40 @@ function bindEvents() {
 
     const startX = state.touchStartX;
     const startY = state.touchStartY;
+    const wasDragging = state.touchDragging;
     const blocked = state.touchSwipeBlocked || isViewportZoomed();
     const endTouch = event.changedTouches[0];
-    resetTouchSwipe();
+    const endX = endTouch?.clientX ?? state.touchLastX;
+    const endY = endTouch?.clientY ?? state.touchLastY;
+    const duration = Math.max(performance.now() - state.touchStartTime, 1);
 
-    if (blocked || startX === null || startY === null || !endTouch) return;
+    clearTouchSwipeState();
 
-    const deltaX = endTouch.clientX - startX;
-    const deltaY = endTouch.clientY - startY;
-    const isHorizontalSwipe = Math.abs(deltaX) >= 45 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
-    if (isHorizontalSwipe) moveLightbox(deltaX > 0 ? -1 : 1);
+    if (blocked || !wasDragging || startX === null || startY === null || endX === null || endY === null) {
+      setLightboxTrackOffset(0, true);
+      return;
+    }
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+    const width = els.lightboxFigure.clientWidth || window.innerWidth;
+    const threshold = Math.min(90, Math.max(48, width * 0.16));
+    const velocity = Math.abs(deltaX) / duration;
+    const horizontal = Math.abs(deltaX) > Math.abs(deltaY) * 1.15;
+    const shouldChange = horizontal && (Math.abs(deltaX) >= threshold || (Math.abs(deltaX) >= 28 && velocity >= 0.45));
+
+    if (!shouldChange) {
+      setLightboxTrackOffset(0, true);
+      return;
+    }
+
+    finishLightboxSwipe(deltaX < 0 ? 1 : -1);
   }, { passive: true });
 
-  els.lightboxFigure.addEventListener("touchcancel", resetTouchSwipe, { passive: true });
+  els.lightboxFigure.addEventListener("touchcancel", () => {
+    clearTouchSwipeState();
+    setLightboxTrackOffset(0, true);
+  }, { passive: true });
 }
 
 function isViewportZoomed() {
@@ -197,14 +307,59 @@ function isViewportZoomed() {
 
 function blockTouchSwipe() {
   state.touchSwipeBlocked = true;
+  state.touchDragging = false;
   state.touchStartX = null;
   state.touchStartY = null;
+  state.touchLastX = null;
+  state.touchLastY = null;
+  setLightboxTrackOffset(0, false);
 }
 
-function resetTouchSwipe() {
+function clearTouchSwipeState() {
   state.touchStartX = null;
   state.touchStartY = null;
+  state.touchLastX = null;
+  state.touchLastY = null;
+  state.touchStartTime = 0;
+  state.touchDragging = false;
   state.touchSwipeBlocked = false;
+}
+
+function setLightboxTrackOffset(offset, animate) {
+  if (!els.lightboxTrack) return;
+  els.lightboxTrack.style.transition = animate && !reducedMotionQuery.matches
+    ? "transform 260ms cubic-bezier(.22, .61, .36, 1)"
+    : "none";
+  els.lightboxTrack.style.transform = `translate3d(calc(-33.333333% + ${offset}px), 0, 0)`;
+}
+
+function finishLightboxSwipe(direction) {
+  if (!els.lightboxTrack || state.lightboxAnimating || state.visibleSkins.length <= 1) return;
+
+  state.lightboxAnimating = true;
+  const width = els.lightboxFigure.clientWidth || window.innerWidth;
+  setLightboxTrackOffset(direction > 0 ? -width : width, true);
+
+  let completed = false;
+  const finish = () => {
+    if (completed) return;
+    completed = true;
+    state.lightboxIndex = wrapIndex(state.lightboxIndex + direction, state.visibleSkins.length);
+    state.lightboxAnimating = false;
+    renderLightbox();
+  };
+
+  if (reducedMotionQuery.matches) {
+    finish();
+    return;
+  }
+
+  els.lightboxTrack.addEventListener("transitionend", finish, { once: true });
+  window.setTimeout(finish, 340);
+}
+
+function wrapIndex(index, length) {
+  return ((index % length) + length) % length;
 }
 
 function scheduleRender() {
@@ -352,15 +507,21 @@ function closeLightbox({ restoreFocus = true } = {}) {
   els.lightbox.hidden = true;
   document.body.classList.remove("is-lightbox-open");
   state.lightboxIndex = -1;
-  resetTouchSwipe();
+  state.lightboxAnimating = false;
+  clearTouchSwipeState();
+  setLightboxTrackOffset(0, false);
 
   if (restoreFocus && state.lastFocus instanceof HTMLElement) state.lastFocus.focus({ preventScroll: true });
   state.lastFocus = null;
 }
 
-function moveLightbox(direction) {
-  if (!state.visibleSkins.length) return;
-  state.lightboxIndex = (state.lightboxIndex + direction + state.visibleSkins.length) % state.visibleSkins.length;
+function moveLightbox(direction, { animate = false } = {}) {
+  if (!state.visibleSkins.length || state.lightboxAnimating) return;
+  if (animate && state.visibleSkins.length > 1) {
+    finishLightboxSwipe(direction);
+    return;
+  }
+  state.lightboxIndex = wrapIndex(state.lightboxIndex + direction, state.visibleSkins.length);
   renderLightbox();
 }
 
@@ -368,10 +529,17 @@ function renderLightbox() {
   const skin = state.visibleSkins[state.lightboxIndex];
   if (!skin) return;
 
-  setImageSources(els.lightboxImage, imageSources(skin), { eager: true });
+  const length = state.visibleSkins.length;
+  const previousSkin = state.visibleSkins[wrapIndex(state.lightboxIndex - 1, length)];
+  const nextSkin = state.visibleSkins[wrapIndex(state.lightboxIndex + 1, length)];
+
+  setLightboxTrackOffset(0, false);
+  setImageSources(els.lightboxImage, imageSources(skin), { eager: true, highPriority: true });
+  setImageSources(els.lightboxPrevImage, imageSources(previousSkin), { eager: true, highPriority: false });
+  setImageSources(els.lightboxNextImage, imageSources(nextSkin), { eager: true, highPriority: false });
   els.lightboxImage.alt = displaySkinName(skin);
   els.lightboxTitle.textContent = displaySkinName(skin);
-  els.lightboxPosition.textContent = `${state.lightboxIndex + 1} / ${state.visibleSkins.length}`;
+  els.lightboxPosition.textContent = `${state.lightboxIndex + 1} / ${length}`;
 
   const isFavorite = state.favorites.has(skin._id);
   els.lightboxFavorite.textContent = isFavorite ? "♥" : "♡";
@@ -379,7 +547,7 @@ function renderLightbox() {
   els.lightboxFavorite.setAttribute("aria-label", isFavorite ? "Retirer des favoris" : "Ajouter aux favoris");
   els.lightboxFavorite.setAttribute("aria-pressed", String(isFavorite));
 
-  const disableNav = state.visibleSkins.length <= 1;
+  const disableNav = length <= 1;
   els.lightboxPrev.disabled = disableNav;
   els.lightboxNext.disabled = disableNav;
 }
@@ -463,7 +631,7 @@ function primaryImage(skin) {
   return imageSources(skin)[0] || "";
 }
 
-function setImageSources(image, candidates, { eager = false } = {}) {
+function setImageSources(image, candidates, { eager = false, highPriority = eager } = {}) {
   if (!image) return;
 
   const sources = unique(candidates).filter((source) => !failedImageSources.has(source));
@@ -471,7 +639,7 @@ function setImageSources(image, candidates, { eager = false } = {}) {
 
   image.classList.remove("is-fallback");
   image.loading = eager ? "eager" : "lazy";
-  image.fetchPriority = eager ? "high" : "auto";
+  image.fetchPriority = highPriority ? "high" : "auto";
 
   const loadCurrent = () => {
     if (index >= sources.length) {
