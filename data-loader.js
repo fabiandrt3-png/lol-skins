@@ -2,6 +2,7 @@ const LEGACY_SOURCE = "legacy/index-original.html";
 const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 const NEW_SKINS_SOURCE = "data/new-skins.json";
 const ENTRY_FIELDS = ["champ", "skin", "image", "icon", "type"];
+const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 
 let skinDataPromise;
 
@@ -72,7 +73,7 @@ function isHiddenSkin(item) {
 
 async function loadNewSkins() {
   try {
-    const response = await fetch(NEW_SKINS_SOURCE, { cache: "default" });
+    const response = await fetch(versionedAppAsset(NEW_SKINS_SOURCE), { cache: "default" });
     if (response.status === 404) return [];
     if (!response.ok) throw new Error(`Nouveaux skins (${response.status})`);
     const payload = await response.json();
@@ -84,6 +85,12 @@ async function loadNewSkins() {
     console.warn("Catalogue des nouveaux skins indisponible.", error);
     return [];
   }
+}
+
+function versionedAppAsset(url) {
+  if (!APP_ASSET_VERSION) return url;
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${encodeURIComponent(APP_ASSET_VERSION)}`;
 }
 
 async function fetchText(url) {
