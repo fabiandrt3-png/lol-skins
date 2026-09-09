@@ -9,13 +9,17 @@ let verifiedImageMapPromise;
 const championDataCache = new Map();
 const resolvedChampions = new Set();
 
-/**
- * Charge la collection historique, puis ajoute des métadonnées de sources
- * fiables sans supprimer les liens saisis à la main. Les URLs legacy restent
- * toujours le dernier filet de sécurité.
- */
+/** Charge la collection et les métadonnées utiles en parallèle. */
 export async function loadSkinData() {
-  const response = await fetch(LEGACY_SOURCE, { cache: "no-cache" });
+  const [response, catalog, verifiedImages] = await Promise.all([
+    fetch(LEGACY_SOURCE, { cache: "default" }),
+    loadChampionCatalog().catch((error) => {
+      console.warn("Data Dragon indisponible, les icônes legacy seront utilisées.", error);
+      return null;
+    }),
+    loadVerifiedImageMap(),
+  ]);
+
   if (!response.ok) throw new Error(`Impossible de charger ${LEGACY_SOURCE} (${response.status})`);
 
   const source = await response.text();
@@ -30,15 +34,6 @@ export async function loadSkinData() {
   const arrayLiteral = source.slice(arrayStart, arrayEnd + 1);
   const data = Function(`"use strict"; return (${arrayLiteral});`)();
   if (!Array.isArray(data)) throw new Error("Les données chargées ne sont pas un tableau valide.");
-
-  let catalog = null;
-  try {
-    catalog = await loadChampionCatalog();
-  } catch (error) {
-    console.warn("Data Dragon indisponible, les icônes legacy seront utilisées.", error);
-  }
-
-  const verifiedImages = await loadVerifiedImageMap();
 
   return data.map((item, index) => {
     const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
@@ -67,10 +62,7 @@ export async function loadSkinData() {
   });
 }
 
-/**
- * Résout les images d'un champion uniquement quand sa page est ouverte.
- * Cela évite de télécharger les gros JSON de tous les champions au démarrage.
- */
+/** Résout les assets dynamiques uniquement si l'audit n'a pas déjà fourni des sources vérifiées. */
 export async function resolveChampionAssets(allSkins, champion) {
   if (resolvedChampions.has(champion)) return;
 
@@ -101,10 +93,7 @@ export async function resolveChampionAssets(allSkins, champion) {
       }
 
       if (entry.type === "Wild Rift") {
-        entry.imageCandidates = unique([
-          ...wikiOriginalCandidates(entry._legacyImage),
-          entry._legacyImage,
-        ]);
+        entry.imageCandidates = unique([...wikiOriginalCandidates(entry._legacyImage), entry._legacyImage]);
         entry.image = entry.imageCandidates[0] || entry._legacyImage;
         entry._assetSource = "wild-rift-legacy";
         return;
@@ -112,10 +101,7 @@ export async function resolveChampionAssets(allSkins, champion) {
 
       const resolved = findPcAsset(entry, index, champion);
       if (!resolved) {
-        entry.imageCandidates = unique([
-          ...wikiOriginalCandidates(entry._legacyImage),
-          entry._legacyImage,
-        ]);
+        entry.imageCandidates = unique([...wikiOriginalCandidates(entry._legacyImage), entry._legacyImage]);
         entry.image = entry.imageCandidates[0] || entry._legacyImage;
         entry._assetSource = "legacy";
         return;
@@ -158,7 +144,7 @@ export async function resolveChampionAssets(allSkins, champion) {
 
 async function loadVerifiedImageMap() {
   if (!verifiedImageMapPromise) {
-    verifiedImageMapPromise = fetch(VERIFIED_IMAGE_MAP, { cache: "no-cache" })
+    verifiedImageMapPromise = fetch(VERIFIED_IMAGE_MAP, { cache: "default" })
       .then(async (response) => {
         if (response.status === 404) return {};
         if (!response.ok) throw new Error(`Verified image map: ${response.status}`);
@@ -176,13 +162,13 @@ async function loadVerifiedImageMap() {
 async function loadChampionCatalog() {
   if (!catalogPromise) {
     catalogPromise = (async () => {
-      const versionsResponse = await fetch(DDRAGON_VERSIONS, { cache: "no-cache" });
+      const versionsResponse = await fetch(DDRAGON_VERSIONS, { cache: "default" });
       if (!versionsResponse.ok) throw new Error(`Versions Data Dragon: ${versionsResponse.status}`);
       const versions = await versionsResponse.json();
       const version = versions?.[0];
       if (!version) throw new Error("Aucune version Data Dragon disponible.");
 
-      const catalogResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`, { cache: "no-cache" });
+      const catalogResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`, { cache: "default" });
       if (!catalogResponse.ok) throw new Error(`Catalogue Data Dragon: ${catalogResponse.status}`);
       const payload = await catalogResponse.json();
       const byName = new Map();
@@ -199,7 +185,7 @@ async function loadChampionCatalog() {
 
 async function loadCommunityDragonChampion(id) {
   if (!championDataCache.has(id)) {
-    championDataCache.set(id, fetch(CDRAGON_CHAMPION(id), { cache: "no-cache" }).then(async (response) => {
+    championDataCache.set(id, fetch(CDRAGON_CHAMPION(id), { cache: "default" }).then(async (response) => {
       if (!response.ok) throw new Error(`CommunityDragon ${id}: ${response.status}`);
       return response.json();
     }));
@@ -224,14 +210,12 @@ function buildAssetIndex(championData, champion) {
     });
   });
 
-  return { skins, skinByName, chromaByName, chromaByContentId, coreSkinNames };
+  return { skinByName, chromaByName, chromaByContentId, coreSkinNames };
 }
 
 function findPcAsset(entry, index, champion) {
   const uuid = extractUuid(entry._legacyImage);
-  if (uuid && index.chromaByContentId.has(uuid)) {
-    return { kind: "chroma", ...index.chromaByContentId.get(uuid) };
-  }
+  if (uuid && index.chromaByContentId.has(uuid)) return { kind: "chroma", ...index.chromaByContentId.get(uuid) };
 
   const normalized = normalizeSkinName(entry.skin, champion);
   const chroma = index.chromaByName.get(normalized);
@@ -240,10 +224,8 @@ function findPcAsset(entry, index, champion) {
   const exactSkin = index.skinByName.get(normalized);
   if (exactSkin) return { kind: "skin", skin: exactSkin };
 
-  const core = coreName(entry.skin, champion);
-  const coreMatches = index.coreSkinNames.get(core) || [];
+  const coreMatches = index.coreSkinNames.get(coreName(entry.skin, champion)) || [];
   if (coreMatches.length === 1) return { kind: "skin", skin: coreMatches[0] };
-
   return null;
 }
 
@@ -253,7 +235,6 @@ function skinAliases(skin, champion) {
     aliases.add(normalizeSkinName(champion, champion));
     aliases.add(normalizeSkinName(`Classic ${champion}`, champion));
   }
-
   if (/^prestige\s+/i.test(skin.name)) {
     const withoutPrefix = skin.name.replace(/^prestige\s+/i, "");
     aliases.add(normalizeSkinName(`${withoutPrefix} (Prestige)`, champion));
@@ -263,10 +244,7 @@ function skinAliases(skin, champion) {
 
 function chromaAliases(chroma, champion) {
   const clean = chroma.name.replace(/\s+Chroma(?=\))/gi, "");
-  return new Set([
-    normalizeSkinName(chroma.name, champion),
-    normalizeSkinName(clean, champion),
-  ]);
+  return new Set([normalizeSkinName(chroma.name, champion), normalizeSkinName(clean, champion)]);
 }
 
 function normalizeSkinName(value, champion) {
@@ -278,7 +256,6 @@ function normalizeSkinName(value, champion) {
 
   const champNorm = normalize(champion);
   if (text === champNorm || text === `classic ${champNorm}`) return champNorm;
-
   if (/\bprestige\b/.test(text) && !text.startsWith("prestige ")) {
     text = `prestige ${text.replace(/\bprestige\b/g, "").trim()}`;
   }
@@ -301,10 +278,7 @@ function addCore(map, key, value) {
 }
 
 function legacyImageCandidates(url) {
-  return unique([
-    ...wikiOriginalCandidates(url),
-    url,
-  ]);
+  return unique([...wikiOriginalCandidates(url), url]);
 }
 
 function wikiOriginalCandidates(url) {
@@ -326,37 +300,12 @@ function ddragonSplash(alias, num) {
   return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${alias}_${num}.jpg`;
 }
 
-function skinNumber(id) {
-  return Number(id) % 1000;
-}
-
-function extractUuid(value = "") {
-  return String(value).match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i)?.[0]?.toLowerCase() || null;
-}
-
-function normalize(value = "") {
-  return String(value)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function unique(values) {
-  return [...new Set(values.filter(Boolean))];
-}
-
-function escapeRegExp(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
+function skinNumber(id) { return Number(id) % 1000; }
+function extractUuid(value = "") { return String(value).match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i)?.[0]?.toLowerCase() || null; }
+function normalize(value = "") { return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim(); }
+function unique(values) { return [...new Set(values.filter(Boolean))]; }
+function escapeRegExp(value) { return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 
 export function slugify(value = "") {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
