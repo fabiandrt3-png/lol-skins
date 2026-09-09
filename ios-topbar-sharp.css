@@ -1,14 +1,20 @@
-/* iPhone navigation must be fully crisp and kept away from the iOS top edge. */
+/* Crisp iPhone navigation: solid, non-sticky and clearly below the iOS status area. */
 @media (max-width: 720px) {
   .topbar {
     position: relative !important;
+    inset: auto !important;
     top: auto !important;
-    width: calc(100% - 24px) !important;
-    height: 52px !important;
-    margin: calc(env(safe-area-inset-top) + 20px) auto 0 !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 70 !important;
+    width: calc(100% - 28px) !important;
+    height: 50px !important;
+    margin: calc(env(safe-area-inset-top) + 32px) auto 0 !important;
+    padding: 0 7px !important;
     background: #1c1c1e !important;
-    border: 1px solid rgba(255,255,255,.12) !important;
-    border-radius: 999px !important;
+    background-image: none !important;
+    border: 1px solid #38383a !important;
+    border-radius: 18px !important;
     box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
@@ -16,15 +22,19 @@
     filter: none !important;
     opacity: 1 !important;
     transform: none !important;
+    isolation: isolate !important;
   }
 
   .hero {
-    margin-top: 10px !important;
+    margin-top: 14px !important;
   }
 
   .topbar::before,
   .topbar::after {
+    display: none !important;
     content: none !important;
+    background: none !important;
+    box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     -webkit-filter: none !important;
@@ -35,7 +45,10 @@
   .topbar .brand-copy,
   .topbar .brand-copy strong,
   .topbar .brand-mark,
-  .topbar .icon-button {
+  .topbar .icon-button,
+  .topbar .topbar-actions {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
     -webkit-filter: none !important;
     filter: none !important;
     opacity: 1 !important;
@@ -45,14 +58,23 @@
 
   .topbar .brand-copy strong {
     font-weight: 700 !important;
+    color: #fff !important;
   }
 
   .topbar .brand-mark {
+    width: 31px !important;
+    height: 31px !important;
+    border-radius: 9px !important;
+    background: #0a84ff !important;
+    background-image: none !important;
     box-shadow: none !important;
   }
 
   .topbar .icon-button {
+    width: 36px !important;
+    height: 36px !important;
     background: #2c2c2e !important;
+    border: 0 !important;
     box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
@@ -62,7 +84,11 @@
 @media (max-width: 720px) and (prefers-color-scheme: light) {
   .topbar {
     background: #f2f2f7 !important;
-    border-color: rgba(60,60,67,.18) !important;
+    border-color: #d1d1d6 !important;
+  }
+
+  .topbar .brand-copy strong {
+    color: #000 !important;
   }
 
   .topbar .icon-button {
