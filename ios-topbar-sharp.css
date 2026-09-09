@@ -1,18 +1,30 @@
-/* iPhone navigation must be fully crisp: no backdrop blur at all. */
+/* iPhone navigation must be fully crisp and kept away from the iOS top edge. */
 @media (max-width: 720px) {
   .topbar {
+    position: relative !important;
+    top: auto !important;
+    width: calc(100% - 24px) !important;
+    height: 52px !important;
+    margin: calc(env(safe-area-inset-top) + 20px) auto 0 !important;
     background: #1c1c1e !important;
-    border-color: rgba(255,255,255,.12) !important;
-    box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 8px 24px rgba(0,0,0,.28) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     -webkit-filter: none !important;
     filter: none !important;
     opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero {
+    margin-top: 10px !important;
   }
 
   .topbar::before,
   .topbar::after {
+    content: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     -webkit-filter: none !important;
@@ -28,10 +40,20 @@
     filter: none !important;
     opacity: 1 !important;
     text-shadow: none !important;
+    transform: none !important;
+  }
+
+  .topbar .brand-copy strong {
+    font-weight: 700 !important;
+  }
+
+  .topbar .brand-mark {
+    box-shadow: none !important;
   }
 
   .topbar .icon-button {
     background: #2c2c2e !important;
+    box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
   }
@@ -41,7 +63,6 @@
   .topbar {
     background: #f2f2f7 !important;
     border-color: rgba(60,60,67,.18) !important;
-    box-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 8px 24px rgba(0,0,0,.10) !important;
   }
 
   .topbar .icon-button {
