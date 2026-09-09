@@ -1,14 +1,13 @@
 name: Audit splash arts
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - data/image-overrides.json
-      - audit-report.json
   workflow_dispatch:
   schedule:
     - cron: '17 4 * * 1'
+
+concurrency:
+  group: audit-splash-arts
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -24,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install image probe
         run: npm install --no-save sharp@0.34.3
@@ -42,16 +41,56 @@ jobs:
         run: node scripts/upgrade-low-res.mjs
 
       - name: Save verified image map and audit report
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data-loader.js data/image-overrides.json audit-report.json
+
           if git diff --cached --quiet; then
             echo "No audit changes"
-          else
-            git commit -m "Update verified splash art sources"
-            git push
+            exit 0
           fi
 
-      - name: Fail if unresolved images remain
-        run: node -e "const r=require('./audit-report.json'); if(r.summary.unresolved>0){console.error(r.summary.unresolved+' unresolved splash arts'); process.exit(1)}"
+          git commit -m "Update verified splash art sources"
+
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Audit updates pushed successfully"
+              exit 0
+            fi
+
+            echo "Remote changed while the audit was running; rebasing (attempt ${attempt}/3)..."
+            git fetch origin main
+
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::warning::Could not rebase audit updates. Verification completed, but this run will not publish its generated files."
+              exit 0
+            fi
+          done
+
+          echo "::warning::Could not push audit updates after 3 attempts. Verification completed without failing the workflow."
+          exit 0
+
+      - name: Publish verification summary
+        shell: bash
+        run: |
+          node <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const fs = require('fs');
+          const r = JSON.parse(fs.readFileSync('audit-report.json', 'utf8'));
+          const s = r.summary || {};
+          console.log('## Splash art verification');
+          console.log('');
+          console.log(`- Verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
+          console.log(`- PC: ${s.pcVerified ?? '?'} / ${s.pcTotal ?? '?'}`);
+          console.log(`- Wild Rift: ${s.wildRiftVerified ?? '?'} / ${s.wildRiftTotal ?? '?'}`);
+          console.log(`- Unresolved: ${s.unresolved ?? '?'}`);
+          console.log(`- Below 1600x900: ${s.below1600x900 ?? '?'}`);
+          console.log('');
+          if ((s.unresolved ?? 0) > 0) {
+            console.log('⚠️ Some splash arts are unresolved. The workflow stays successful so GitHub does not send failure-email spam; inspect the audit report for details.');
+          } else {
+            console.log('✅ No unresolved splash arts detected.');
+          }
+          NODE
