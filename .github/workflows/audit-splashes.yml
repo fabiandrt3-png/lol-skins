@@ -37,6 +37,10 @@ jobs:
         continue-on-error: true
         run: node scripts/resolve-missing-wr.mjs
 
+      - name: Search higher resolution exact originals
+        continue-on-error: true
+        run: node scripts/upgrade-low-res.mjs
+
       - name: Save verified image map and audit report
         run: |
           git config user.name "github-actions[bot]"
