@@ -53,6 +53,7 @@ const state = {
   touchDragging: false,
   touchSwipeBlocked: false,
   lightboxAnimating: false,
+  lightboxZoomed: null,
   renderFrame: 0,
   lastFocus: null,
 };
@@ -101,7 +102,7 @@ function setupLightboxCarousel() {
   Object.assign(els.lightboxFigure.style, {
     overflow: "hidden",
     pointerEvents: "auto",
-    touchAction: "pan-y pinch-zoom",
+    touchAction: "pinch-zoom",
   });
 
   Object.assign(track.style, {
@@ -129,6 +130,7 @@ function setupLightboxCarousel() {
   els.lightboxTrack = track;
   els.lightboxPrevImage = previousImage;
   els.lightboxNextImage = nextImage;
+  syncLightboxZoomState();
 }
 
 function buildIndexes() {
@@ -157,6 +159,7 @@ function buildIndexes() {
 
 function bindEvents() {
   window.addEventListener("hashchange", handleRoute);
+  window.visualViewport?.addEventListener("resize", syncLightboxZoomState, { passive: true });
   els.backButton.addEventListener("click", navigateHome);
 
   els.searchInput.addEventListener("input", (event) => {
@@ -218,6 +221,7 @@ function bindEvents() {
 
   els.lightboxFigure.addEventListener("touchstart", (event) => {
     if (state.lightboxAnimating) return;
+    syncLightboxZoomState();
     if (state.visibleSkins.length <= 1 || event.touches.length !== 1 || isViewportZoomed()) {
       blockTouchSwipe();
       return;
@@ -237,7 +241,7 @@ function bindEvents() {
   els.lightboxFigure.addEventListener("touchmove", (event) => {
     if (state.lightboxAnimating) return;
     if (event.touches.length > 1 || isViewportZoomed()) {
-      blockTouchSwipe();
+      if (!state.touchSwipeBlocked) blockTouchSwipe();
       return;
     }
 
@@ -311,6 +315,26 @@ function isViewportZoomed() {
   return (window.visualViewport?.scale ?? 1) > 1.01;
 }
 
+function syncLightboxZoomState() {
+  if (!els.lightboxFigure) return;
+  const zoomed = isViewportZoomed();
+  if (state.lightboxZoomed === zoomed) return;
+
+  state.lightboxZoomed = zoomed;
+  els.lightboxFigure.style.touchAction = zoomed ? "pan-x pan-y pinch-zoom" : "pinch-zoom";
+
+  const disableNav = zoomed || state.visibleSkins.length <= 1;
+  if (els.lightboxPrev) els.lightboxPrev.disabled = disableNav;
+  if (els.lightboxNext) els.lightboxNext.disabled = disableNav;
+
+  if (zoomed) {
+    blockTouchSwipe();
+  } else if (!state.lightboxAnimating) {
+    clearTouchSwipeState();
+    setLightboxTrackOffset(0, false);
+  }
+}
+
 function blockTouchSwipe() {
   state.touchSwipeBlocked = true;
   state.touchDragging = false;
@@ -340,7 +364,7 @@ function setLightboxTrackOffset(offset, animate) {
 }
 
 function finishLightboxSwipe(direction) {
-  if (!els.lightboxTrack || state.lightboxAnimating || state.visibleSkins.length <= 1) return;
+  if (!els.lightboxTrack || state.lightboxAnimating || state.visibleSkins.length <= 1 || isViewportZoomed()) return;
 
   state.lightboxAnimating = true;
   const width = els.lightboxFigure.clientWidth || window.innerWidth;
@@ -502,6 +526,7 @@ function openLightbox(index) {
   if (!state.visibleSkins[index]) return;
   state.lightboxIndex = index;
   state.lastFocus = document.activeElement;
+  state.lightboxZoomed = null;
   els.lightbox.hidden = false;
   document.body.classList.add("is-lightbox-open");
   renderLightbox();
@@ -514,6 +539,7 @@ function closeLightbox({ restoreFocus = true } = {}) {
   document.body.classList.remove("is-lightbox-open");
   state.lightboxIndex = -1;
   state.lightboxAnimating = false;
+  state.lightboxZoomed = null;
   clearTouchSwipeState();
   setLightboxTrackOffset(0, false);
 
@@ -522,7 +548,7 @@ function closeLightbox({ restoreFocus = true } = {}) {
 }
 
 function moveLightbox(direction, { animate = false } = {}) {
-  if (!state.visibleSkins.length || state.lightboxAnimating) return;
+  if (!state.visibleSkins.length || state.lightboxAnimating || isViewportZoomed()) return;
   if (animate && state.visibleSkins.length > 1) {
     finishLightboxSwipe(direction);
     return;
@@ -553,9 +579,8 @@ function renderLightbox() {
   els.lightboxFavorite.setAttribute("aria-label", isFavorite ? "Retirer des favoris" : "Ajouter aux favoris");
   els.lightboxFavorite.setAttribute("aria-pressed", String(isFavorite));
 
-  const disableNav = length <= 1;
-  els.lightboxPrev.disabled = disableNav;
-  els.lightboxNext.disabled = disableNav;
+  state.lightboxZoomed = null;
+  syncLightboxZoomState();
 }
 
 function toggleFavorite(id) {
