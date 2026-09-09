@@ -1,905 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Skins League of Legends</title>
-<style>
-body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; }
-header { padding:40px; text-align:center; font-size:4rem; font-weight:bold; border-bottom:2px solid #333; }
-
-.container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:25px; padding:25px; }
-.card { border:2px solid #333; border-radius:18px; overflow:hidden; text-align:center; cursor:pointer; transition:0.2s ease; background:#111; }
-.card:hover { transform:scale(1.05); }
-.card img { width:100%; height:auto; max-height:220px; object-fit:cover; }
-.name { font-weight:bold; font-size:1.5rem; padding:10px 0; }
-
-#back {
-    position:fixed;
-    top:10px;
-    left:10px;
-    margin:0;
-    padding:1.2rem 2.5rem;
-    cursor:pointer;
-    border:none;
-    background:rgba(0,0,0,0);
-    color:#fff;
-    border-radius:10px;
-    z-index:10000;
-    font-size:1.5rem;
-}
-#back:hover { background:rgba(255,255,255,0.1); }
-#lightbox {
-    display:none; 
-    position:fixed; 
-    top:0; left:0; 
-    width:100vw; height:100vh; 
-    background:rgba(0,0,0,0.95); 
-    justify-content:center; align-items:center; 
-    z-index:9999; 
-}
-#lightbox img {
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    cursor:pointer;
-}
-
-#page-wrapper {
-    opacity: 1;
-    transition: opacity 0.25s ease;
-}
-#page-wrapper.fade-out {
-    opacity: 0;
-}
-
-@media (max-width:768px){
-    header { font-size:3rem; padding:30px; }
-    .card img { max-height:180px; }
-    .name { font-size:1.2rem; }
-    #back { padding:1rem 2rem; font-size:1.3rem; }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="Explore les champions et skins de League of Legends et Wild Rift.">
+  <title>LoL Skins</title>
+  <link rel="preconnect" href="https://wiki.leagueoflegends.com">
+  <link rel="preconnect" href="https://game.gtimg.cn">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header id="header">Skins League of Legends</header>
-<button id="back" style="display:none;">⬅ Retour</button>
-<div id="page-wrapper">
-    <div class="container" id="container"></div>
-</div>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button back-button" id="backButton" type="button" aria-label="Retour" hidden>
+        <span aria-hidden="true">←</span>
+      </button>
 
-<div id="lightbox">
-    <img id="lightbox-img" src="">
-</div>
-<script>
-const container = document.getElementById("container");
-const header = document.getElementById("header");
-const backBtn = document.getElementById("back");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const pageWrapper = document.getElementById("page-wrapper");
+      <a class="brand" href="#" aria-label="Retour à tous les champions">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span class="brand-copy">
+          <strong>LoL Skins</strong>
+          <small>Collection visuelle</small>
+        </span>
+      </a>
 
-const championsSkins = [
-    //Aatrox
-    { champ:"Aatrox", skin:"Classic Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_HD.jpg", icon:"https://imgur.com/o7IphRR.png" },
-    { champ:"Aatrox", skin:"Justicar Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_JusticarSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Mecha Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9963a0a5-f46e-4175-ba31-d7427a3aa1af.jpg" },
-    { champ:"Aatrox", skin:"Sea Hunter Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/BountyHunterSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Blood Moon Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_BloodMoonSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Blood Moon Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Victorious Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_VictoriousSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Odyssey Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_OdysseySkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Lunar Eclipse Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/EclipseSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"DRX Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"DRX Aatrox (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeDRXSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Shan Hai Scrolls Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_ShanHaiScrollsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Dragon Lantern Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_DragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Dragon Lantern Aatrox (Prestige Select)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeSelectDragonLanternSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Primordian Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrimordianSkin_HD.jpg" },
-    { champ:"Aatrox", skin:"Primordian Aatrox (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9924107d-9219-4fd8-8b47-fee501cdf993.jpg" },
-    { champ:"Aatrox", skin:"Weather Entity Aatrox", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_WeatherEntitySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aatrox", skin:"Mecha Aatrox (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aatrox_MechaExquisiteEditionSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Ahri
-    { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_HD.jpg", icon:"https://imgur.com/z3vB4ED.png" },
-    { champ:"Ahri", skin:"Classic Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_OriginalSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"Dynasty Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_DynastySkin_HD.jpg" },
-    { champ:"Ahri", skin:"Midnight Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_MidnightSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Midnight Ahri (Ahri-versary Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9fff377c-6bc3-45c4-830d-bcf1b245727d.jpg" },
-    { champ:"Ahri", skin:"Foxfire Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_FoxfireSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Foxfire Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_FoxfireSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"Foxfire Ahri (Emerald Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-e975eb55-5bda-4ea0-bf1e-2717dc295710.jpg" },
-    { champ:"Ahri", skin:"Popstar Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_PopstarSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Popstar Ahri (Amethyst Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a6eee2a6-2d88-4e7e-a8d7-9b7a955716c6.jpg" },
-    { champ:"Ahri", skin:"Popstar Ahri (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f2294165-cb81-4d0d-94bd-a703c8eded59.jpg" },
-    { champ:"Ahri", skin:"Popstar Ahri (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-14733fe6-901c-4c1e-b78a-d8bfc06b6804.jpg" },
-    { champ:"Ahri", skin:"Popstar Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_PopstarSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"Challenger Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ChallengerSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Academy Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/AcademySkin_HD.jpg" },
-    { champ:"Ahri", skin:"Arcade Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ArcadeSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Star Guardian Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_StarGuardianSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Star Guardian Ahri (Mythic Chroma)", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_StarGuardianMythicChromaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"K/DA Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_KDASkin_HD.jpg" },
-    { champ:"Ahri", skin:"K/DA Ahri (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_HD.jpg" },
-    { champ:"Ahri", skin:"K/DA Ahri (Ahri-versary Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9b1f0c38-4b39-44fd-99c6-dfbc73770fed.jpg" },
-    { champ:"Ahri", skin:"Elderwood Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ElderwoodSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Ahri (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6d8fa734-6a10-488f-a7cc-c290dd6bae38.jpg" },
-    { champ:"Ahri", skin:"K/DA ALL OUT Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_KDAALLOUTSkin_HD.jpg" },
-    { champ:"Ahri", skin:"K/DA ALL OUT Ahri (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-57172572-4f59-4f88-9219-09bb07b78490.jpg" },
-    { champ:"Ahri", skin:"Coven Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Coven Ahri (Ahri-versary Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-ba8ffb1f-f696-4deb-992e-7acd3e4a1b40.jpg" },
-    { champ:"Ahri", skin:"Coven Ahri (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-97c0f317-2aad-43bf-9c29-0369ff77bc93.jpg" },
-    { champ:"Ahri", skin:"Soda Pop Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_SodaPopSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"Snow Moon Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_SnowMoonSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Snow Moon Ahri (Turquoise Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-e6bf7802-b75b-4d48-9200-3d85fd0bc392.jpg" },
-    { champ:"Ahri", skin:"Risen Legend Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_RisenLegendSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Immortalized Legend Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ImmortalizedLegendSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Shan Hai Scrolls Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_ShanHaiScrollsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ahri", skin:"Spirit Blossom Springs Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Springs Ahri (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-269d8aed-ab41-48bc-b7f2-42ac9a880e91.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Springs Ahri (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b9c58311-c073-4b55-be1f-6357c5e0481f.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Springs Ahri (Sapphire Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-5cc601bc-0d71-4976-a8c6-60015bb3033f.jpg" },
-    { champ:"Ahri", skin:"Spirit Blossom Springs Ahri (Tanzanite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a88de00a-9098-447a-92a4-2e4fa68d45b1.jpg" },
-    { champ:"Ahri", skin:"After Hours Spirit Blossom Springs Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg" },
-    { champ:"Ahri", skin:"Crystal Rose Ahri", image:"https://wiki.leagueoflegends.com/en-us/images/Ahri_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Akali
-    { champ:"Akali", skin:"Classic Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_OriginalSkin_HD.jpg", icon:"https://imgur.com/KTluPBI.png" },
-    { champ:"Akali", skin:"Stinger Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_StingerSkin_HD.jpg" },
-    { champ:"Akali", skin:"Infernal Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_InfernalSkin_HD.jpg" },
-    { champ:"Akali", skin:"All-star Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_All-starSkin_HD.jpg" },
-    { champ:"Akali", skin:"Nurse Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_NurseSkin_HD.jpg" },
-    { champ:"Akali", skin:"Blood Moon Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_BloodMoonSkin_HD.jpg"},
-    { champ:"Akali", skin:"Silverfang Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_SilverfangSkin_HD.jpg" },
-    { champ:"Akali", skin:"Headhunter Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_HeadhunterSkin_HD.jpg" },
-    { champ:"Akali", skin:"Headhunter Akali (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-20ae2d84-67d5-485f-a8a7-3bfb8310a2bf.jpg" },
-    { champ:"Akali", skin:"Sashimi Akali", image:"https://wiki.leagueoflegends.com/en-us/images/CookingSkin_HD.jpg" },
-    { champ:"Akali", skin:"K/DA Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_KDASkin_HD.jpg" },
-    { champ:"Akali", skin:"K/DA Akali (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_PrestigeKDASkin_HD.jpg"},
-    { champ:"Akali", skin:"PROJECT: Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_PROJECTSkin_HD.jpg" },
-    { champ:"Akali", skin:"True Damage Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_TrueDamageSkin_HD.jpg" },
-    { champ:"Akali", skin:"K/DA ALL OUT Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_KDAALLOUTSkin_HD.jpg" },
-    { champ:"Akali", skin:"K/DA ALL OUT Akali (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-91943b4a-7991-4611-b039-c029e4f2a518.jpg" },
-    { champ:"Akali", skin:"Crime City Nightmare Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CrimeCityNightmareSkin_HD.jpg" },
-    { champ:"Akali", skin:"Star Guardian Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_StarGuardianSkin_HD.jpg" },
-    { champ:"Akali", skin:"Star Guardian Akali (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-74179dd0-8c9b-4b03-ab79-da473cf59694.jpg" },
-    { champ:"Akali", skin:"Star Guardian Akali (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-3f6943c3-8bb3-4553-9f0a-537044f7f21b.jpg" },
-    { champ:"Akali", skin:"Crystal Rose Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Akali", skin:"DRX Akali", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
-    { champ:"Akali", skin:"Coven Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CovenSkin_HD.jpg" },
-    { champ:"Akali", skin:"Coven Akali (Sapphire Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-d861a029-da3a-46e2-96c3-a24e6a0e1139.jpg" },
-    { champ:"Akali", skin:"Coven Akali (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_PrestigeCovenSkin_HD.jpg" },
-    { champ:"Akali", skin:"Supreme Cells Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_SupremeCellsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Akali", skin:"Empyrean Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_EmpyreanSkin_HD.jpg" },
-    { champ:"Akali", skin:"Spirit Blossom Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Akali", skin:"Spirit Blossom Akali (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-93781ae8-55cd-4ba4-82eb-d21ee984f063.jpg" },
-    { champ:"Akali", skin:"Spirit Blossom Akali (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9cddf4c0-53cd-4d49-88e3-ffb609d9de4d.jpg" },
-    { champ:"Akali", skin:"Calligraphia Akali", image:"https://wiki.leagueoflegends.com/en-us/images/Akali_CalligraphiaSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Akshan
-    { champ:"Akshan", skin:"Classic Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_HD.jpg", icon:"https://imgur.com/GdB7IDP.png" },
-    { champ:"Akshan", skin:"Cyber Pop Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CyberPopSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Battle Academia Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_BattleAcademiaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Akshan", skin:"Crystal Rose Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_CrystalRoseSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Three Honors Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_ThreeHonorsSkin_HD.jpg" },
-    { champ:"Akshan", skin:"Dawnbringer Akshan", image:"https://wiki.leagueoflegends.com/en-us/images/Akshan_DawnbringerSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Alistar
-    { champ:"Alistar", skin:"Classic Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_HD.jpg", icon:"https://imgur.com/hPoLl1M.png" },
-    { champ:"Alistar", skin:"Black Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_BlackSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Golden Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_GoldenSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Matador Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_MatadorSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Longhorn Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_LonghornSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Unchained Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_UnchainedSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Infernal Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_InfernalSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Sweeper Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/FIFAWorldCup2014Skin_HD.jpg" },
-    { champ:"Alistar", skin:"Marauder Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/MarauderAlistarOlafSkin_HD.jpg" },
-    { champ:"Alistar", skin:"SKT T1 Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/SKTT12015Skin_HD.jpg" },
-    { champ:"Alistar", skin:"Moo Cow Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/AprilFools2017Skin_HD.jpg" },
-    { champ:"Alistar", skin:"Hextech Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_HextechSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Conqueror Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_ConquerorSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Conqueror Alistar (Golden Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-bde4314e-c654-4fe6-b89c-7ddab4339717.jpg" },
-    { champ:"Alistar", skin:"Blackfrost Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/BlackfrostSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Lunar Beast Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_LunarBeastSkin_HD.jpg" },
-    { champ:"Alistar", skin:"Elderwood Alistar", image:"https://wiki.leagueoflegends.com/en-us/images/Alistar_ElderwoodSkin_HD.jpg" },
-    //Ambessa
-    { champ:"Ambessa", skin:"Classic Ambessa", image:"https://wiki.leagueoflegends.com/en-us/images/Ambessa_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Ambessa_OriginalSquare.png" },
-    { champ:"Ambessa", skin:"Chosen of the Wolf Ambessa", image:"https://wiki.leagueoflegends.com/en-us/images/Ambessa_ChosenoftheWolfSkin_HD.jpg" },
-    { champ:"Ambessa", skin:"Arcane Iron Will Ambessa", image:"https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Amumu
-    { champ:"Amumu", skin:"Classic Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_OriginalSkin.jpg", icon:"https://imgur.com/GcM0KJ0.png" },
-    { champ:"Amumu", skin:"Pharaoh Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_PharaohSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Vancouver Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_VancouverSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Emumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_EmumuSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Re-Gifted Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_Re-GiftedSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Almost-Prom King Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_Almost-PromKingSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Little Knight Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_LittleKnightSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Little Knight Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_LittleKnightSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Amumu", skin:"Sad Robot Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_SadRobotSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Sad Robot Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_SadRobotSkin_WR.jpg", type:"Wild Rift" },
-    { champ:"Amumu", skin:"Surprise Party Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/AprilFools2015Skin_HD.jpg" },
-    { champ:"Amumu", skin:"Infernal Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_InfernalSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Hextech Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_HextechSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Pumpkin Prince Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_PumpkinPrinceSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Porcelain Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_PorcelainSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Heartache Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_HeartacheSkin_HD.jpg" },
-    { champ:"Amumu", skin:"Food Spirits Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_FoodSpiritsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Amumu", skin:"Dumpling Darlings Amumu", image:"https://wiki.leagueoflegends.com/en-us/images/Amumu_DumplingDarlingsSkin_HD.jpg" },
-    //Anivia
-    { champ:"Anivia", skin:"Classic Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Anivia_OriginalSquare.png" },
-    { champ:"Anivia", skin:"Team Spirit Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_TeamSpiritSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Bird of Prey Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_BirdofPreySkin_HD.jpg" },
-    { champ:"Anivia", skin:"Noxus Hunter Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_NoxusHunterSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Hextech Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_HextechSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Blackfrost Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_BlackfrostSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Prehistoric Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/PrehistoricSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Festival Queen Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_FestivalQueenSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Papercraft Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_PapercraftSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Cosmic Flight Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_CosmicFlightSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Divine Phoenix Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_DivinePhoenixSkin_HD.jpg" },
-    { champ:"Anivia", skin:"Bewitching Batnivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_BewitchingBatniviaSkin.jpg" },
-    { champ:"Anivia", skin:"Victorious Anivia", image:"https://wiki.leagueoflegends.com/en-us/images/Anivia_VictoriousSkin_HD.jpg" },
-    //Annie
-    { champ:"Annie", skin:"Classic Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSquare.png" },
-    { champ:"Annie", skin:"Goth Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_GothSkin_HD.jpg" },
-    { champ:"Annie", skin:"Red Riding Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_RedRidingSkin_HD.jpg" },
-    { champ:"Annie", skin:"Red Riding Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_RedRidingSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Annie", skin:"Annie in Wonderland", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_AnnieinWonderlandSkin_HD.jpg" },
-    { champ:"Annie", skin:"Prom Queen Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_PromQueenSkin_HD.jpg" },
-    { champ:"Annie", skin:"Frostfire Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_FrostfireSkin_HD.jpg" },
-    { champ:"Annie", skin:"Frostfire Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_FrostfireSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Annie", skin:"Reverse Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_ReverseSkin_HD.jpg" },
-    { champ:"Annie", skin:"FrankenTibbers Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_FrankenTibbersSkin_HD.jpg" },
-    { champ:"Annie", skin:"Panda Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_PandaSkin_HD.jpg" },
-    { champ:"Annie", skin:"Sweetheart Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_SweetheartSkin_HD.jpg" },
-    { champ:"Annie", skin:"Hextech Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_HextechSkin_HD.jpg" },
-    { champ:"Annie", skin:"Hextech Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_HextechSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Annie", skin:"Super Galaxy Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_SuperGalaxySkin_HD.jpg" },
-    { champ:"Annie", skin:"Annie-Versary", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_Annie-VersarySkin_HD.jpg" },
-    { champ:"Annie", skin:"Lunar Beast Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_LunarBeastSkin_HD.jpg" },
-    { champ:"Annie", skin:"Cafe Cuties Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_CafeCutiesSkin_HD.jpg" },
-    { champ:"Annie", skin:"Cafe Cuties Annie (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-43028676-f1ae-4d76-98f7-20a7b5653598.jpg" },
-    { champ:"Annie", skin:"Fright Night Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_FrightNightSkin_HD.jpg" },
-    { champ:"Annie", skin:"Winterblessed Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_WinterblessedSkin_HD.jpg" },
-    { champ:"Annie", skin:"Winterblessed Annie (Rainbow Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f91060ab-cf3e-4e53-bf32-ab6d52507a09.jpg" },
-    { champ:"Annie", skin:"Battle Princess Annie", image:"https://wiki.leagueoflegends.com/en-us/images/Annie_BattlePrincessSkin_HD.jpg" },
-    { champ:"Annie", skin:"Battle Princess Annie (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b4cdff8d-7801-4e18-8c79-56d3fded3635.jpg" },
-    { champ:"Annie", skin:"Battle Princess Annie (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-c7e03a7b-0ee0-4743-891e-cecf150b9882.jpg" },
-    //Aphelios
-    { champ:"Aphelios", skin:"Classic Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_OriginalSquare.png" },
-    { champ:"Aphelios", skin:"Nightbringer Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_NightbringerSkin_HD.jpg" },
-    { champ:"Aphelios", skin:"Lunar Beast Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_LunarBeastSkin_HD.jpg" },
-    { champ:"Aphelios", skin:"EDG Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/EDGSkin_HD.jpg" },
-    { champ:"Aphelios", skin:"EDG Aphelios (Elite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-7a81758d-cd47-40cc-be13-c36180f20bf9.jpg" },
-    { champ:"Aphelios", skin:"Spirit Blossom Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Aphelios", skin:"HEARTSTEEL Aphelios", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_HEARTSTEELSkin_HD.jpg" },
-    { champ:"Aphelios", skin:"HEARTSTEEL Aphelios (Citrine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-0035f61f-c52f-4c29-877a-8f44e2969f9e.jpg" },
-    { champ:"Aphelios", skin:"Spirit Blossom Springs Aphelios (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Aphelios_PrestigeSpiritBlossomSpringsSkin_HD.jpg" },
-    //Ashe
-    { champ:"Ashe", skin:"Classic Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Ashe_OriginalSquare.png" },
-    { champ:"Ashe", skin:"Freljord Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_FreljordSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Freljord Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_FreljordSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ashe", skin:"Sherwood Forest Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_SherwoodForestSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Woad Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_WoadSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Queen Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_QueenSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Queen Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/AsheTryndamereSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ashe", skin:"Amethyst Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_AmethystSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Heartseeker Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_HeartseekerSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Marauder Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/MarauderAsheWarwickSkin_HD.jpg" },
-    { champ:"Ashe", skin:"PROJECT: Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_PROJECTSkin_HD.jpg" },
-    { champ:"Ashe", skin:"PROJECT: Ashe (Mythic Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-4cd5b030-e891-4c7f-af73-8c04252e0d4f.jpg" },
-    { champ:"Ashe", skin:"Worlds 2017 Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_Worlds2017Skin_HD.jpg" },
-    { champ:"Ashe", skin:"Worlds 2017 Ashe (Golden Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-3936d944-ab90-4301-9c4a-87d1d8f970f0.jpg" },
-    { champ:"Ashe", skin:"Cosmic Queen Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_CosmicQueenSkin_HD.jpg" },
-    { champ:"Ashe", skin:"High Noon Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg" },
-    { champ:"Ashe", skin:"High Noon Ashe (Mythic Chroma)", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ashe", skin:"Fae Dragon Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Fae Dragon Ashe", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-1221f068-b6ec-49e7-b591-e8b8e81c1e24.jpg" },
-    { champ:"Ashe", skin:"Coven Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Ocean Song Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/AsheZeri_OceanSongSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Ocean Song Ashe (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-0428c8e1-59fc-4c22-b0f4-4655922403b5.jpg" },
-    { champ:"Ashe", skin:"Lunar Empress Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Lunar Empress Ashe (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-ebc7f392-6b2b-4176-982b-e4f928996c36.jpg" },
-    { champ:"Ashe", skin:"Lunar Empress Ashe (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f88272b6-12fa-4ce8-91d2-86c514726e3c.jpg" },
-    { champ:"Ashe", skin:"DRX Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Glorious Admiral Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_GloriousArmadaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ashe", skin:"Crystalis Motus Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Infernal Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Crystal Rose Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ashe", skin:"Spirit Blossom Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Spirit Blossom Ashe (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6decf91c-edac-4bb3-a01a-56548db8acaa.jpg" },
-    { champ:"Ashe", skin:"Spirit Blossom Ashe (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-8e170eb3-7071-4065-91ea-9830eeb12d30.jpg" },
-    { champ:"Ashe", skin:"Spirit Blossom Ashe (Turquoise Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-5c3286fc-35ac-4ab4-bbe3-652e7c340161.jpg" },
-    { champ:"Ashe", skin:"Firecracker Ashe", image:"https://wiki.leagueoflegends.com/en-us/images/Ashe_FirecrackerSkin_HD.jpg" },
-    { champ:"Ashe", skin:"Firecracker Ashe (Amethyst Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-05a3a3af-0710-4be3-bf60-ca8ef4d85908.jpg" },
-    //Aurelion Sol
-    { champ:"Aurelion Sol", skin:"Classic Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_OriginalSquare.png" },
-    { champ:"Aurelion Sol", skin:"Ashen Lord Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_AshenLordSkin_HD.jpg" },
-    { champ:"Aurelion Sol", skin:"Mecha Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin.jpg" },
-    { champ:"Aurelion Sol", skin:"Storm Dragon Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_HD.jpg" },
-    { champ:"Aurelion Sol", skin:"Inkshadow Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_InkshadowSkin_HD.jpg" },
-    { champ:"Aurelion Sol", skin:"Lunar Guardian Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_LunarGuardianSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aurelion Sol", skin:"Porcelain Protector Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_PorcelainProtectorSkin_HD.jpg" },
-    { champ:"Aurelion Sol", skin:"Divine Architect Porcelain Aurelion Sol", image:"https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_DivineArchitectPorcelainSkin_HD.jpg" },
-    //Aurora
-    { champ:"Aurora", skin:"Classic Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSquare.png" },
-    { champ:"Aurora", skin:"Battle Bunny Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_BattleBunnySkin_HD.jpg" },
-    { champ:"Aurora", skin:"Battle Bunny Aurora (Amethyst Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-571d8611-543c-4d09-989d-4c832551205c.jpg" },
-    { champ:"Aurora", skin:"Battle Bunny Aurora (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-dbdcf522-1e07-4e38-8bd9-686d2f46272c.jpg" },
-    { champ:"Aurora", skin:"Arcana Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_ArcanaSkin_HD.jpg" },
-    { champ:"Aurora", skin:"Summer Party Aurora", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummerPartySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Aurora", skin:"Summer Party Aurora (Exquisite Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Aurora_SummerPartyExquisiteEditionSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Azir
-    { champ:"Azir", skin:"Classic Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Azir_OriginalSquare.png" },
-    { champ:"Azir", skin:"Galactic Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_GalacticSkin_HD.jpg" },
-    { champ:"Azir", skin:"Gravelord Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_GravelordSkin_HD.jpg" },
-    { champ:"Azir", skin:"SKT T1 Azir", image:"https://wiki.leagueoflegends.com/en-us/images/SKTT12015Skin_HD.jpg" },
-    { champ:"Azir", skin:"Warring Kingdoms Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_WarringKingdomsSkin_HD.jpg" },
-    { champ:"Azir", skin:"Elderwood Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_ElderwoodSkin_HD.jpg" },
-    { champ:"Azir", skin:"Worlds 2022 Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_Worlds2022Skin_HD.jpg" },
-    { champ:"Azir", skin:"Attorney Azir", image:"https://wiki.leagueoflegends.com/en-us/images/Azir_AttorneySkin_HD.jpg" },
-    //Bard
-    { champ:"Bard", skin:"Classic Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Bard_OriginalSquare.png" },
-    { champ:"Bard", skin:"Elderwood Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_ElderwoodSkin_HD.jpg" },
-    { champ:"Bard", skin:"Snow Day Bard", image:"https://wiki.leagueoflegends.com/en-us/images/SnowDaySkin_HD.jpg" },
-    { champ:"Bard", skin:"Snow Day Bard (Golden Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6cf0e647-3789-405a-b29b-e7916090a739.jpg" },
-    { champ:"Bard", skin:"Bard Bard", image:"https://wiki.leagueoflegends.com/en-us/images/RPG2016Skin_HD.jpg" },
-    { champ:"Bard", skin:"Astronaut Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_AstronautSkin_HD.jpg" },
-    { champ:"Bard", skin:"Cafe Cuties Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg" },
-    { champ:"Bard", skin:"Shan Hai Scrolls Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg" },
-    { champ:"Bard", skin:"T1 Bard", image:"https://wiki.leagueoflegends.com/en-us/images/T1Skin_HD.jpg" },
-    { champ:"Bard", skin:"T1 Bard (Elite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-efab26c3-0415-4242-bb03-4f44d6d23960.jpg" },
-    { champ:"Bard", skin:"Spirit Blossom Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Bard", skin:"Mystical Herald Bard", image:"https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Bel'Veth
-    { champ:"Bel'Veth", skin:"Classic Bel'Veth", image:"https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_OriginalSquare.png" },
-    { champ:"Bel'Veth", skin:"Battle Boss Bel'Veth", image:"https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_BattleBossSkin_HD.jpg" },
-    { champ:"Bel'Veth", skin:"Cosmic Matriarch Bel'Veth", image:"https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_CosmicMatriarchSkin_HD.jpg" },
-    { champ:"Bel'Veth", skin:"Primordian Bel'Veth", image:"https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_PrimordianSkin_HD.jpg" },
-    //Blitzcrank
-    { champ:"Blitzcrank", skin:"Classic Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSquare.png" },
-    { champ:"Blitzcrank", skin:"Rusty Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_RustySkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Goalkeeper Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_GoalkeeperSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Boom Boom Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BoomBoomSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Boom Boom Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BoomBoomSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Blitzcrank", skin:"Piltover Customs Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_PiltoverCustomsSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Definitely Not Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_DefinitelyNotSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"iBlitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_iBlitzcrankSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Riot Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_RiotSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Battle Boss Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Arcade2015Skin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Lancer Rogue Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_LancerRogueSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Lancer Paragon Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_LancerParagonSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Witch's Brew Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_Witch%27sBrewSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Space Groove Blitz & Crank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Victorious Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Cottontail Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/CottontailSkin_WR_HD.jpg?6d078", type:"Wild Rift" },
-    { champ:"Blitzcrank", skin:"Zenith Games Blitzcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_ZenithGamesSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Beezcrank", image:"https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg" },
-    { champ:"Blitzcrank", skin:"Beezcrank (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-b6d35545-c90c-4560-82cd-d912a9f2c1fa.jpg" },
-    //Brand
-    { champ:"Brand", skin:"Classic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSquare.png" },
-    { champ:"Brand", skin:"Classic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_OriginalSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Brand", skin:"Apocalyptic Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ApocalypticSkin_HD.jpg" },
-    { champ:"Brand", skin:"Vandal Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_VandalSkin_HD.jpg" },
-    { champ:"Brand", skin:"Cryocore Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_CryocoreSkin_HD.jpg" },
-    { champ:"Brand", skin:"Zombie Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ZombieSkin_HD.jpg" },
-    { champ:"Brand", skin:"Spirit Fire Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_HD.jpg" },
-    { champ:"Brand", skin:"Battle Boss Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_BattleBossSkin_HD.jpg" },
-    { champ:"Brand", skin:"Arclight Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ArclightSkin_HD.jpg" },
-    { champ:"Brand", skin:"Eternal Dragon Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_EternalDragonSkin_HD.jpg" },
-    { champ:"Brand", skin:"Debonair Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_DebonairSkin_HD.jpg" },
-    { champ:"Brand", skin:"Debonair Brand (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_PrestigeDebonairSkin_HD.jpg" },
-    { champ:"Brand", skin:"Marauder Brand", image:"https://wiki.leagueoflegends.com/en-us/images/MarauderSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Brand", skin:"Street Demons Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_StreetDemonsSkin_HD.jpg" },
-    { champ:"Brand", skin:"Empyrean Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg" },
-    { champ:"Brand", skin:"Chromacrash Brand", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Brand", skin:"Chromacrash Brand (Special Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Braum
-    { champ:"Braum", skin:"Classic Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSquare.png" },
-    { champ:"Braum", skin:"Dragonslayer Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_HD.jpg" },
-    { champ:"Braum", skin:"Dragonslayer Braum (LEC Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-254bbe8e-7e4f-48fa-9d2e-403329385615.jpg" },
-    { champ:"Braum", skin:"El Tigre Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_ElTigreSkin_HD.jpg" },
-    { champ:"Braum", skin:"Braum Lionheart", image:"https://wiki.leagueoflegends.com/en-us/images/RPG2015Skin_HD.jpg" },
-    { champ:"Braum", skin:"Santa Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_HD.jpg" },
-    { champ:"Braum", skin:"Crime City Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_HD.jpg" },
-    { champ:"Braum", skin:"Sugar Rush Braum", image:"https://wiki.leagueoflegends.com/en-us/images/SugarRushSkin_HD.jpg" },
-    { champ:"Braum", skin:"Pool Party Braum", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2021Skin_HD.jpg" },
-    { champ:"Braum", skin:"Glorious Crown Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GloriousCrownSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Braum", skin:"Grill Master Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GrillMasterSkin_HD.jpg" },
-    { champ:"Braum", skin:"Garden Party Braum", image:"https://wiki.leagueoflegends.com/en-us/images/Braum_GardenPartySkin_WR.jpg", type:"Wild Rift" },
-    //Briar
-    { champ:"Briar", skin:"Classic Briar", image:"https://wiki.leagueoflegends.com/en-us/images/Briar_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Briar_OriginalSquare.png" },
-    { champ:"Briar", skin:"Street Demons Briar", image:"https://wiki.leagueoflegends.com/en-us/images/Briar_StreetDemonsSkin_HD.jpg" },
-    { champ:"Briar", skin:"Primordian Briar", image:"https://wiki.leagueoflegends.com/en-us/images/Briar_PrimordianSkin_HD.jpg" },
-    { champ:"Briar", skin:"Battle Academia Briar", image:"https://wiki.leagueoflegends.com/en-us/images/Briar_BattleAcademiaSkin_HD.jpg" },
-    //Caitlyn
-    { champ:"Caitlyn", skin:"Classic Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSquare.png" },
-    { champ:"Caitlyn", skin:"Resistance Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ResistanceSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Sheriff Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_SheriffSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Safari Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_SafariSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Arctic Warfare Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcticWarfareSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Officer Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OfficerSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Lunar Wraith Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/LunarWraithSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Lunar Wraith Caitlyn (Golden Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-33cc8b5b-741c-40eb-b190-a2ff78407bd9.jpg" },
-    { champ:"Caitlyn", skin:"Pulsefire Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Pool Party Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2018Skin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Pool Party Caitlyn (Aquamarine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-984d9fbc-0608-4733-b631-0e77864cde67.jpg" },
-    { champ:"Caitlyn", skin:"Pool Party Caitlyn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-c3901cbd-fff8-4b9e-8165-c85cd0687797.jpg" },
-    { champ:"Caitlyn", skin:"Arcade Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Arcade Caitlyn (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Battle Academia Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_BattleAcademiaSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Battle Academia Caitlyn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9c8baf32-9c30-4881-8c13-5680bf89e250.jpg" },
-    { champ:"Caitlyn", skin:"Arcane Enforcer Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcaneEnforcerSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Snow Moon Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_SnowMoonSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Mythmaker Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Caitlyn", skin:"Mythmaker Caitlyn (Special Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Caitlyn", skin:"Heartthrob Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/HeartthrobCaitlynHeartacheViSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Heartthrob Caitlyn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-5a23bedd-5bed-4f23-bcc1-6d8a34044b76.jpg" },
-    { champ:"Caitlyn", skin:"Heartthrob Caitlyn (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-1bb5c51d-e221-48af-bdfc-db1f59dcf8fc.jpg" },
-    { champ:"Caitlyn", skin:"DRX Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/DRXSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Arcane Commander Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg?0a093", type:"Wild Rift" },
-    { champ:"Caitlyn", skin:"Arcane Commander Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcaneCommanderSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Arcane Commander Caitlyn (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcaneCommanderSkin_HD.jpg" },
-    { champ:"Caitlyn", skin:"Arcane Commander Caitlyn (Prestige) (Stellar Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-ff18242d-3299-42b6-878d-d8bd63ad7203.jpg" },
-    { champ:"Caitlyn", skin:"Crystal Rose Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Caitlyn", skin:"Crystal Rose Caitlyn (Prestige Select)", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeSelectCrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Caitlyn", skin:"Firecracker Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_FirecrackerSkin.jpg" },
-    { champ:"Caitlyn", skin:"Firecracker Caitlyn (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-19d8495b-f9e9-4f07-997e-db3567bd0e0d.jpg" },
-    { champ:"Caitlyn", skin:"Love Confession Caitlyn", image:"https://wiki.leagueoflegends.com/en-us/images/Caitlyn_LoveConfessionSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Camille
-    { champ:"Camille", skin:"Classic Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Camille_OriginalSquare.png" },
-    { champ:"Camille", skin:"Program Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_ProgramSkin_HD.jpg" },
-    { champ:"Camille", skin:"Coven Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_CovenSkin_HD.jpg" },
-    { champ:"Camille", skin:"iG Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_iGSkin_HD.jpg" },
-    { champ:"Camille", skin:"iG Camille (Elite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-8ce5d1c5-a757-4e29-a334-8a115e8f563e.jpg" },
-    { champ:"Camille", skin:"Stargazer Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_StargazerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Camille", skin:"Arcana Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_ArcanaSkin.jpg" },
-    { champ:"Camille", skin:"Strike Commander Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_StrikeCommanderSkin_HD.jpg" },
-    { champ:"Camille", skin:"Mythmaker Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_MythmakerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Camille", skin:"Winterblessed Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_WinterblessedSkin_HD.jpg" },
-    { champ:"Camille", skin:"Winterblessed Camille (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6bd41cb0-5286-47c7-9ba7-53822933c413.jpg" },
-    { champ:"Camille", skin:"Winterblessed Camille (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg" },
-    { champ:"Camille", skin:"Fiend Queller Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Camille", skin:"Petals of Spring Camille", image:"https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg" },
-    { champ:"Camille", skin:"Petals of Spring Camille (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-2796dd1c-bd82-418c-9e70-a10d32738e95.jpg" },
-    //Cassiopeia
-    { champ:"Cassiopeia", skin:"Classic Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_OriginalSquare.png" },
-    { champ:"Cassiopeia", skin:"Desperada Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_DesperadaSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Siren Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_SirenSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Mythic Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_MythicSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Jade Fang Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_JadeFangSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Eternum Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_EternumSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Spirit Blossom Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Spirit Blossom Cassiopeia (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-2b4a3050-d743-40b2-9b8d-cb90c50bb7f4.jpg" },
-    { champ:"Cassiopeia", skin:"Spirit Blossom Cassiopeia (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-60f54a3b-9f7c-4c26-bfab-54b2cb88963b.jpg" },
-    { champ:"Cassiopeia", skin:"Coven Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Bewitching Cassiopeia", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg" },
-    { champ:"Cassiopeia", skin:"Mythmaker Cassiopeia (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg" },
-    //Cho'Gath
-    { champ:"Cho'Gath", skin:"Classic Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_OriginalSquare.png" },
-    { champ:"Cho'Gath", skin:"Nightmare Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_NightmareSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Gentleman Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_GentlemanSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Loch Ness Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_LochNessSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Jurassic Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_JurassicSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Battlecast Prime Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Prehistoric Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/PrehistoricSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Dark Star Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Shan Hai Scrolls Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Shan Hai Scrolls Cho'Gath (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-1c6aef33-2272-40da-9c8b-31f9318dd857.jpg" },
-    { champ:"Cho'Gath", skin:"Broken Covenant Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Toy Terror Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg" },
-    { champ:"Cho'Gath", skin:"Toy Terror Cho'Gath (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9e06cb85-41ae-455c-ab42-75c71bee45e9.jpg" },
-    { champ:"Cho'Gath", skin:"Petricite Cho'Gath", image:"https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_PetriciteSkin_HD.jpg" },
-    //Corki
-    { champ:"Corki", skin:"Classic Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_OriginalSkin.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Corki_OriginalSquare.png" },
-    { champ:"Corki", skin:"UFO Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_UFOSkin_HD.jpg" },
-    { champ:"Corki", skin:"Ice Toboggan Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_IceTobogganSkin.jpg" },
-    { champ:"Corki", skin:"Red Baron Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_RedBaronSkin.jpg" },
-    { champ:"Corki", skin:"Hot Rod Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_HotRodSkin.jpg" },
-    { champ:"Corki", skin:"Urfrider Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_UrfriderSkin.jpg" },
-    { champ:"Corki", skin:"Dragonwing Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_DragonwingSkin.jpg" },
-    { champ:"Corki", skin:"Dragonwing Corki (Meteorite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-e73080ea-e265-4ecf-8f51-e133e4c260b7.jpg" },
-    { champ:"Corki", skin:"Fnatic Corki", image:"https://wiki.leagueoflegends.com/en-us/images/FnaticSkin_HD.jpg" },
-    { champ:"Corki", skin:"Arcade Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_ArcadeSkin_HD.jpg" },
-    { champ:"Corki", skin:"Corgi Corki", image:"https://wiki.leagueoflegends.com/en-us/images/DogsSkin_HD.jpg" },
-    { champ:"Corki", skin:"Corgi Corki (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a32c90db-9691-44ad-92ac-ff4401090bea.jpg" },
-    { champ:"Corki", skin:"Astronaut Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_AstronautSkin_HD.jpg" },
-    { champ:"Corki", skin:"Chromacrash Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_ChromacrashSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Corki", skin:"Glorious Aigrette Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_GloriousAigretteSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Corki", skin:"Brick Toy Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg" },
-    { champ:"Corki", skin:"Ocean Corki", image:"https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg", type:"Wild Rift" },
-    //Darius
-    { champ:"Darius", skin:"Classic Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSquare.png" },
-    { champ:"Darius", skin:"Lord Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg" },
-    { champ:"Darius", skin:"Bioforge Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg" },
-    { champ:"Darius", skin:"Bioforge Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Darius", skin:"Woad King Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg" },
-    { champ:"Darius", skin:"Dunkmaster Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg" },
-    { champ:"Darius", skin:"Dunkmaster Darius (Mythic Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f5aaa6b4-70a3-4639-9d92-df7604cec493.jpg" },
-    { champ:"Darius", skin:"Academy Darius", image:"https://wiki.leagueoflegends.com/en-us/images/AcademySkin_HD.jpg" },
-    { champ:"Darius", skin:"Dreadnova Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_DreadnovaSkin_HD.jpg" },
-    { champ:"Darius", skin:"God-King Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_HD.jpg" },
-    { champ:"Darius", skin:"High Noon Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_HighNoonSkin_HD.jpg" },
-    { champ:"Darius", skin:"Lunar Beast Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg" },
-    { champ:"Darius", skin:"Crime City Nightmare Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg" },
-    { champ:"Darius", skin:"Spirit Blossom Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Darius", skin:"Supreme Cells Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Darius", skin:"Porcelain Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg" },
-    { champ:"Darius", skin:"Porcelain Darius (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-86a11a99-513b-4924-b989-62680c2bd4e1.jpg" },
-    { champ:"Darius", skin:"Divine God-King Darius", image:"https://wiki.leagueoflegends.com/en-us/images/DivineDariusFallenGarenSkin_HD.jpg" },
-    { champ:"Darius", skin:"PROJECT: Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_PROJECTSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Darius", skin:"Triumphant General Darius (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_PrestigeTriumphantGeneralSkin_HD.jpg" },
-    { champ:"Darius", skin:"Mecha Kingdoms Darius", image:"https://wiki.leagueoflegends.com/en-us/images/Darius_MechaKingdomsSkin_HD.jpg" },
-    //Diana
-    { champ:"Diana", skin:"Classic Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSquare.png" },
-    { champ:"Diana", skin:"Dark Valkyrie Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg" },
-    { champ:"Diana", skin:"Dark Valkyrie Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Diana", skin:"Lunar Goddess Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg" },
-    { champ:"Diana", skin:"Lunar Goddess Diana (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-5a6fefe6-92bc-4f65-8e3f-dd6e0bfdcb2b.jpg" },
-    { champ:"Diana", skin:"Lunar Goddess Diana (Turquoise Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a184d3bc-f67b-4382-8862-3010f5cb8d21.jpg" },
-    { champ:"Diana", skin:"Infernal Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg" },
-    { champ:"Diana", skin:"Blood Moon Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg" },
-    { champ:"Diana", skin:"Dark Waters Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg" },
-    { champ:"Diana", skin:"Dragonslayer Diana", image:"https://wiki.leagueoflegends.com/en-us/images/DragonslayerSkin_HD.jpg" },
-    { champ:"Diana", skin:"Battle Queen Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg" },
-    { champ:"Diana", skin:"Battle Queen Diana (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg" },
-    { champ:"Diana", skin:"Sentinel Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg" },
-    { champ:"Diana", skin:"Sentinel Diana (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-4e268469-4eef-4078-83cd-02199c1a8be4.jpg" },
-    { champ:"Diana", skin:"Sentinel Diana (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f56f19a7-9b13-4036-a54f-e5dec561eb86.jpg" },
-    { champ:"Diana", skin:"Firecracker Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_FirecrackerSkin_HD.jpg" },
-    { champ:"Diana", skin:"Winterblessed Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_WinterblessedSkin_HD.jpg" },
-    { champ:"Diana", skin:"Immortal Journey Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_SereneSwordSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Diana", skin:"Heavenscale Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_HeavenscaleSkin_HD.jpg" },
-    { champ:"Diana", skin:"Heavenscale Diana (Aquamarine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-3f09b013-b7ff-44a6-8eb5-8caa1b53baf1.jpg" },
-    { champ:"Diana", skin:"Heavenscale Diana (Citrine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-0ff8567f-eb05-44bd-875a-c10791649cad.jpg" },
-    { champ:"Diana", skin:"Heavenscale Diana (Obsidian Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-372ed297-335e-4848-aaa0-af0a655cd625.jpg" },
-    { champ:"Diana", skin:"Heavenscale Diana (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-d45998e0-2a41-4719-8bf2-c005bc928937.jpg" },
-    { champ:"Diana", skin:"Dark Cosmic Diana", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_DarkCosmicSkin_HD.jpg" },
-    { champ:"Diana", skin:"Dark Cosmic Diana (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-c2bfdd5d-5894-40ed-b68a-d17cd396370f.jpg" },
-    { champ:"Diana", skin:"Dark Cosmic Diana (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeDarkCosmicSkin_HD.jpg" },
-    //Dr. Mundo
-    { champ:"Dr. Mundo", skin:"Classic Dr. Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSquare.png" },
-    { champ:"Dr. Mundo", skin:"Toxic Dr. Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ToxicSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Mr. Mundoverse", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_Mr.MundoverseSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Corporate Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Mundo Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Executioner Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Rageborn Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"TPA Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/TPASkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Pool Party Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2015Skin_Unused_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"El Macho Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/LuchaLibreSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Frozen Prince Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_FrozenPrinceMundoSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Street Demons Dr. Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_StreetDemonsSkin_HD.jpg" },
-    { champ:"Dr. Mundo", skin:"Splendor Opus Mundo", image:"https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_SplendorOpusSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Draven
-    { champ:"Draven", skin:"Classic Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Draven_OriginalSquare.png" },
-    { champ:"Draven", skin:"Soul Reaver Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulReaverSkin_HD.jpg" },
-    { champ:"Draven", skin:"Soul Reaver Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulReaverSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"Gladiator Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_GladiatorSkin_HD.jpg" },
-    { champ:"Draven", skin:"Primetime Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_PrimetimeSkin_HD.jpg" },
-    { champ:"Draven", skin:"Pool Party Draven", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2015Skin_Unused_HD.jpg" },
-    { champ:"Draven", skin:"Beast Hunter Draven", image:"https://wiki.leagueoflegends.com/en-us/images/BeastHunterSkin_HD.jpg" },
-    { champ:"Draven", skin:"Draven Draven", image:"https://wiki.leagueoflegends.com/en-us/images/AprilFools2016Skin_HD.jpg" },
-    { champ:"Draven", skin:"Santa Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SantaSkin_HD.jpg" },
-    { champ:"Draven", skin:"Mecha Kingdoms Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_MechaKingdomsSkin_HD.jpg" },
-    { champ:"Draven", skin:"Ruined Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_RuinedSkin_HD.jpg" },
-    { champ:"Draven", skin:"Debonair Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_DebonairSkin_HD.jpg" },
-    { champ:"Draven", skin:"Glorious Crimson Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_GloriousCrimsonSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"Fright Night Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_FrightNightSkin_HD.jpg" },
-    { champ:"Draven", skin:"Soul Fighter Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulFighterSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"Soul Fighter Draven (Special Edition)", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_SoulFighterSpecialEditionSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"La Ilusión Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_LaIlusi%C3%B3nSkin_HD.jpg" },
-    { champ:"Draven", skin:"Dawnbringer Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_DawnbringerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"Grand Reckoning Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_GrandReckoningSkin_HD.jpg" },
-    { champ:"Draven", skin:"Mystical Herald Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_MysticalHeraldSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Draven", skin:"Victorious Draven", image:"https://wiki.leagueoflegends.com/en-us/images/Draven_VictoriousSkin_HD.jpg" },
-    //Ekko
-    { champ:"Ekko", skin:"Classic Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Ekko_OriginalSquare.png" },
-    { champ:"Ekko", skin:"Sandstorm Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_SandstormSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Academy Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/AcademySkin_HD.jpg" },
-    { champ:"Ekko", skin:"PROJECT: Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_PROJECTSkin_HD.jpg" },
-    { champ:"Ekko", skin:"SKT T1 Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/SKTT12016Skin_HD.jpg" },
-    { champ:"Ekko", skin:"Trick or Treat Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg" },
-    { champ:"Ekko", skin:"True Damage Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg" },
-    { champ:"Ekko", skin:"True Damage Ekko (Obsidian Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-d1b4ae9e-f6e1-4d08-b065-57ffed4a32f2.jpg" },
-    { champ:"Ekko", skin:"Pulsefire Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_PulsefireSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Arcane Firelight Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_ArcaneFirelightSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Star Guardian Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_StarGuardianSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Star Guardian Ekko (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_PrestigeStarGuardianSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Chromacrash Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_ChromacrashSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ekko", skin:"Breakout True Damage Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_BreakoutTrueDamageSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Psychic Detective Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_PsychicDetectiveSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ekko", skin:"Arcane Last Stand Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_ArcaneLastStandSkin_HD.jpg" },
-    { champ:"Ekko", skin:"Firelight Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ekko", skin:"Lovestruck Ekko", image:"https://wiki.leagueoflegends.com/en-us/images/Ekko_LovestruckSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Elise
-    { champ:"Elise", skin:"Classic Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Elise_OriginalSquare.png" },
-    { champ:"Elise", skin:"Death Blossom Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg" },
-    { champ:"Elise", skin:"Victorious Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg" },
-    { champ:"Elise", skin:"Blood Moon Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg" },
-    { champ:"Elise", skin:"SKT T1 Elise", image:"https://wiki.leagueoflegends.com/en-us/images/SKTT12015Skin_HD.jpg" },
-    { champ:"Elise", skin:"Super Galaxy Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg" },
-    { champ:"Elise", skin:"Bewitching Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg" },
-    { champ:"Elise", skin:"Withered Rose Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg" },
-    { champ:"Elise", skin:"Withered Rose Elise (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-6af445f1-0fea-4eec-9f60-d1caddcd30d7.jpg" },
-    { champ:"Elise", skin:"Withered Rose Elise (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-17d1cc3b-105a-4955-abee-e6bd9874ee0b.jpg" },
-    { champ:"Elise", skin:"Coven Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_CovenSkin_HD.jpg" },
-    { champ:"Elise", skin:"Coven Elise (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-80db4d56-dd5a-4337-ada5-effc15007beb.jpg" },
-    { champ:"Elise", skin:"Masque of the Black Rose Elise", image:"https://wiki.leagueoflegends.com/en-us/images/Elise_MasqueoftheBlackRoseSkin_HD.jpg" },
-    //Evelynn
-    { champ:"Evelynn", skin:"Classic Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSquare.png" },
-    { champ:"Evelynn", skin:"Shadow Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Masquerade Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Tango Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/TangoSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Safecracker Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/BurglarSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Blood Moon Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_BloodMoonSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"K/DA Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_KDASkin_HD.jpg" },
-    { champ:"Evelynn", skin:"K/DA Evelynn (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeKDASkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Sugar Rush Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/SugarRushSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"K/DA ALL OUT Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_KDAALLOUTSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"K/DA ALL OUT Evelynn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-7cc5cbe7-12d8-4f56-9a9d-54d1b9c18b5d.jpg" },
-    { champ:"Evelynn", skin:"Coven Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_CovenSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Glorious Crimson Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_GloriousCrimsonSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Evelynn", skin:"Spirit Blossom Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_SpiritBlossomSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Spirit Blossom Evelynn (Night Blossom Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f710357f-e5d1-4371-bf32-8f97143d838d.jpg" },
-    { champ:"Evelynn", skin:"Spirit Blossom Evelynn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-0d6a5657-c699-40e3-9fad-795cb75c74d7.jpg" },
-    { champ:"Evelynn", skin:"Soul Fighter Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_SoulFighterSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Soul Fighter Evelynn (Citrine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-32e46cbd-914a-4033-ab3b-41d3330b9450.jpg" },
-    { champ:"Evelynn", skin:"Soul Fighter Evelynn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-a15e780b-0751-4e92-9011-aaec55e0251a.jpg" },
-    { champ:"Evelynn", skin:"High Noon Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_HighNoonSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"High Noon Evelynn (Obsidian Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-1dee4fcd-f112-44dd-a1fd-56edde6f6c40.jpg" },
-    { champ:"Evelynn", skin:"High Noon Evelynn (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-9b46bbf2-4d4b-4303-a7a7-1697f06f001f.jpg" },
-    { champ:"Evelynn", skin:"High Noon Evelynn (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeHighNoonSkin_HD.jpg" },
-    { champ:"Evelynn", skin:"Celestial Embroidery Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_CelestialEmbroiderySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Evelynn", skin:"Nightbringer Evelynn", image:"https://wiki.leagueoflegends.com/en-us/images/Evelynn_NightbringerSkin_HD.jpg" },
-    //Ezreal
-    { champ:"Ezreal", skin:"Classic Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSquare.png" },
-    { champ:"Ezreal", skin:"Nottingham Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Striker Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Frosted Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_FrostedSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Explorer Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_ExplorerSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Pulsefire Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PulsefireSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"TPA Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/TPASkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Debonair Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_DebonairSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Ace of Spades Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/HighStakesSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Arcade Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_ArcadeSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Star Guardian Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_StarGuardianSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"SSG Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/SSGSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Pajama Guardian Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/PajamaGuardianSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Battle Academia Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_BattleAcademiaSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Battle Academia Ezreal (Mythic  Chroma)", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_BattleAcademiaMythicChromaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"PsyOps Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PsyOpsSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"PsyOps Ezreal (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PrestigePsyOpsSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Crystal Rose Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_CrystalRoseSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"Porcelain Protector Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PorcelainProtectorSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Faerie Court Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_FaerieCourtSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Faerie Court Ezreal (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-83d2937e-c78d-4c48-841e-3f6ebfae097d.jpg" },
-    { champ:"Ezreal", skin:"HEARTSTEEL Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_HEARTSTEELSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"HEARTSTEEL Ezreal (Citrine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-df882f03-6130-4046-bac0-8f6a07dc3e02.jpg" },
-    { champ:"Ezreal", skin:"HEARTSTEEL Ezreal (Rose Quartz Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-7ac4a4a3-959a-4fbc-ac84-f305cb92b232.jpg" },
-    { champ:"Ezreal", skin:"HEARTSTEEL Ezreal (Ruby Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-7ef9397b-b855-447a-bd5e-b35019dd199f.jpg" },
-    { champ:"Ezreal", skin:"Lovestruck Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_LovestruckSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"Heavenscale Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_HeavenscaleSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Heavenscale Ezreal (Auspacious Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-0d069efa-2154-4c17-9d4b-c94a41b017dd.jpg" },
-    { champ:"Ezreal", skin:"Heavenscale Ezreal (Obsidian Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-f00e4bcb-5231-45cc-8640-b940078cd489.jpg" },
-    { champ:"Ezreal", skin:"Heavenscale Ezreal (Sapphire Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-381229cb-b087-4aed-abb2-285b3f98c58d.jpg" },
-    { champ:"Ezreal", skin:"Heavenscale Ezreal (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PrestigeHeavenscaleSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Masque of the Black Rose Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_MasqueoftheBlackRoseSkin_HD.jpg" },
-    { champ:"Ezreal", skin:"Weather Entity Ezreal", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_WeatherEntitySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"Weather Entity Ezreal (Prestige Select)", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PrestigeSelectWeatherEntitySkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"Love Confession", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_LoveConfessionSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Ezreal", skin:"Love Confession (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Ezreal_PrestigeLoveConfessionSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Fiddlesticks
-    { champ:"Fiddlesticks", skin:"Classic Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_OriginalSquare.png" },
-    { champ:"Fiddlesticks", skin:"Spectral Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_SpectralSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Union Jack Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_UnionJackSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Bandito Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_BanditoSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Pumpkinhead Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_PumpkinheadSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Fiddle Me Timbers", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_FiddleMeTimbersSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Surprise Party Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_SurprisePartySkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Dark Candy Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_DarkCandySkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Risen Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_RisenSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Praetorian Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_PraetorianSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Star Nemesis Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_StarNemesisSkin_HD.png" },
-    { champ:"Fiddlesticks", skin:"Blood Moon Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_BloodMoonSkin_HD.jpg" },
-    { champ:"Fiddlesticks", skin:"Flora Fatalis Fiddlesticks", image:"https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_FloraFatalisSkin_HD.jpg" },
-    //Fiora
-    { champ:"Fiora", skin:"Classic Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Fiora_OriginalSquare.png" },
-    { champ:"Fiora", skin:"Royal Guard Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_RoyalGuardSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Nightraven Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_NightravenSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Headmistress Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_HeadmistressSkin_HD.jpg" },
-    { champ:"Fiora", skin:"PROJECT: Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_PROJECTSkin_HD.jpg" },
-    { champ:"Fiora", skin:"PROJECT: Fiora (Reckoning Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-ba277f9b-0780-4b10-93e1-b5076a5a5665.jpg" },
-    { champ:"Fiora", skin:"Pool Party Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_PoolPartySkin_HD.jpg" },
-    { champ:"Fiora", skin:"Pool Party Fiora (Citrine Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-bb6f1146-274c-469e-8767-c05ecd217cb9.jpg" },
-    { champ:"Fiora", skin:"Soaring Sword Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_SoaringSwordSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Heartpiercer Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_HeartpiercerSkin_HD.jpg" },
-    { champ:"Fiora", skin:"iG Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_iGSkin_HD.jpg" },
-    { champ:"Fiora", skin:"iG Fiora (Elite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-d0900979-9d2c-4a97-9749-fb1a7d95cdbb.jpg" },
-    { champ:"Fiora", skin:"iG Fiora (Tenfold Triumph Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-22e39968-fab0-451d-a95b-57d7e02b2ca1.jpg" },
-    { champ:"Fiora", skin:"Pulsefire Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_PulsefireSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Lunar Beast Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_LunarBeastSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Lunar Beast Fiora (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_PrestigeLunarBeastSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Bewitching Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Bewitching2021Skin_HD.jpg" },
-    { champ:"Fiora", skin:"Glorious Crimson Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_GloriousCrimsonSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Fiora", skin:"Faerie Court Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_FaerieCourtSkin_old_HD.jpg" },
-    { champ:"Fiora", skin:"Dragonmancer Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_DragonmancerSkin_HD.jpg" },
-    { champ:"Fiora", skin:"KBG Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_KBGSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Fiora", skin:"KBG Fiora (Mythic Chroma)", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_KBGMythicChromaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Fiora", skin:"Battle Queen Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_BattleQueenSkin_HD.jpg" },
-    { champ:"Fiora", skin:"Battle Queen Fiora (Catseye Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-66ad478f-00e0-4a5e-aa77-d293b6d0aab8.jpg" },
-    { champ:"Fiora", skin:"Battle Queen Fiora (Pearl Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-635d6f39-3e56-4a2a-80bb-d476dd03f000.jpg" },
-    { champ:"Fiora", skin:"Victorious Fiora", image:"https://wiki.leagueoflegends.com/en-us/images/Fiora_VictoriousSkin_HD.jpg" },
-    //Fizz
-    { champ:"Fizz", skin:"Classic Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Fizz_OriginalSquare.png" },
-    { champ:"Fizz", skin:"Atlantean Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_AtlanteanSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Tundra Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_TundraSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Fisherman Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_FishermanSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Void Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_VoidSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Cottontail Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_CottontailSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Super Galaxy Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_SuperGalaxySkin_HD.jpg" },
-    { champ:"Fizz", skin:"Omega Squad Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_OmegaSquadSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Fuzz Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/DogsSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Fuzz Fizz (Prestige)", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_PrestigeFuzzSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Little Devil Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_LittleDevilSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Astronaut Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Astronaut2023Skin_HD.jpg" },
-    { champ:"Fizz", skin:"Food Spirits Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_FoodSpiritsSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Fizz", skin:"Rain Shepherd Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_RainShepherdSkin_HD.jpg" },
-    { champ:"Fizz", skin:"Shan Hai Scrolls Fizz", image:"https://wiki.leagueoflegends.com/en-us/images/Fizz_ShanHaiScrollsSkin_WR_HD.jpg", type:"Wild Rift" },
-    //Galio
-    { champ:"Galio", skin:"Classic Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Galio_OriginalSquare.png" },
-    { champ:"Galio", skin:"Enchanted Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_EnchantedSkin_HD.jpg" },
-    { champ:"Galio", skin:"Hextech Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_HextechSkin_HD.jpg" },
-    { champ:"Galio", skin:"Commando Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_CommandoSkin_HD.jpg" },
-    { champ:"Galio", skin:"Gatekeeper Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_GatekeeperSkin_HD.jpg" },
-    { champ:"Galio", skin:"Debonair Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_DebonairSkin_HD.jpg" },
-    { champ:"Galio", skin:"Birdio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_BirdioSkin_HD.jpg" },
-    { champ:"Galio", skin:"Infernal Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Infernal2019Skin_HD.jpg" },
-    { champ:"Galio", skin:"Dragon Guardian Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Dragonslayer2021Skin_HD.jpg" },
-    { champ:"Galio", skin:"Hexplorer Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_HexplorerSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Galio", skin:"Mythmaker Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_MythmakerSkin_HD.jpg" },
-    { champ:"Galio", skin:"Mecha Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_MechaSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Galio", skin:"Glorious Aigrette Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_GloriousAigretteSkin_WR_HD.jpg", type:"Wild Rift" },
-    { champ:"Galio", skin:"Aegis Frame Galio", image:"https://wiki.leagueoflegends.com/en-us/images/Galio_AegisFrameSkin_HD.jpg" },
-    //Gangplank
-    { champ:"Gangplank", skin:"Classic Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_OriginalSquare.png" },
-    { champ:"Gangplank", skin:"Spooky Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_SpookySkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Minuteman Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_MinutemanSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Sailor Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_SailorSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Toy Soldier Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_ToySoldierSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Special Forces Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_SpecialForcesSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Sultan Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_SultanSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Captain Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_CaptainSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Dreadnova Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_DreadnovaSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"Pool Party Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/PoolParty2018Skin_HD.jpg" },
-    { champ:"Gangplank", skin:"FPX Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/FPXSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"FPX Gangplank (Elite Chroma)", image:"https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-2fbbcc45-5504-44c4-8429-2d6c81d5ac38.jpg" },
-    { champ:"Gangplank", skin:"Gangplank the Betrayer", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_GangplanktheBetrayerSkin_HD.jpg" },
-    { champ:"Gangplank", skin:"PROJECT: Gangplank", image:"https://wiki.leagueoflegends.com/en-us/images/Gangplank_PROJECTSkin_HD.jpg" },
-    //Garen
-    { champ:"Garen", skin:"Classic Garen", image:"https://wiki.leagueoflegends.com/en-us/images/Garen_OriginalSkin_HD.jpg", icon:"https://wiki.leagueoflegends.com/en-us/images/Garen_OriginalSquare.png" },
-];
+      <div class="topbar-actions">
+        <span class="counter-pill" id="globalCounter">Chargement…</span>
+      </div>
+    </header>
 
-let currentChampionSkins = [];
-let lightboxArray = [];
-let lightboxIndexGlobal = 0;
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-backdrop" id="heroBackdrop" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" id="eyebrow">League of Legends · Wild Rift</p>
+          <h1 id="pageTitle">Tous les champions</h1>
+          <p class="hero-description" id="pageDescription">Parcours ta collection de splash arts, skins, chromas et éditions spéciales.</p>
+        </div>
+      </section>
 
-function navigateTo(champ) {
-    pageWrapper.classList.add('fade-out');
-    setTimeout(() => {
-        if (champ) {
-            location.hash = "champion=" + encodeURIComponent(champ);
-        } else {
-            location.hash = "";
-        }
-        window.scrollTo(0, 0);
-        pageWrapper.classList.remove('fade-out');
-    }, 250);
-}
+      <section class="controls" aria-label="Recherche et filtres">
+        <label class="search-box" for="searchInput">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Rechercher un champion…">
+          <kbd id="searchShortcut" aria-hidden="true">/</kbd>
+        </label>
 
-function handleRoute() {
-    const hash = decodeURIComponent(location.hash);
-    if (hash.startsWith("#champion=")) {
-        const champ = hash.replace("#champion=", "");
-        renderSkins(champ);
-    } else {
-        renderChampions();
-    }
-}
+        <div class="filter-row" id="filterRow" aria-label="Filtres" hidden>
+          <button class="filter-chip is-active" type="button" data-filter="all">Tout</button>
+          <button class="filter-chip" type="button" data-filter="pc">PC</button>
+          <button class="filter-chip" type="button" data-filter="wild-rift">Wild Rift</button>
+          <button class="filter-chip" type="button" data-filter="prestige">Prestige / Mythic</button>
+          <button class="filter-chip" type="button" data-filter="chroma">Chromas</button>
+          <button class="filter-chip" type="button" data-filter="favorites">♥ Favoris</button>
+        </div>
+      </section>
 
-window.addEventListener("hashchange", () => {
-    pageWrapper.classList.add('fade-out');
-    setTimeout(() => {
-        handleRoute();
-        window.scrollTo(0, 0);
-        pageWrapper.classList.remove('fade-out');
-    }, 200);
-});
+      <section class="content-section" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" id="sectionKicker">Collection</p>
+            <h2 id="sectionTitle">Champions</h2>
+          </div>
+          <p class="result-count" id="resultCount"></p>
+        </div>
 
-function renderChampions() {
-    header.textContent = "Skins League of Legends";
-    backBtn.style.display = "none";
-    container.innerHTML = "";
-    const champNames = [...new Set(championsSkins.map(s => s.champ))].sort();
-    champNames.forEach(champ => {
-        const card = document.createElement("div");
-        card.className = "card";
-        const champIcon = championsSkins.find(s => s.champ === champ && s.icon)?.icon || "";
-        card.innerHTML = `<img src="${champIcon}" alt="${champ}"><div class="name">${champ}</div>`;
-        card.onclick = () => navigateTo(champ);
-        container.appendChild(card);
-    });
-}
+        <div class="loading-state" id="loadingState">
+          <span class="spinner" aria-hidden="true"></span>
+          <p>Chargement de ta collection…</p>
+        </div>
 
-function renderSkins(champ) {
-    header.textContent = `${champ} — Skins`;
-    backBtn.style.display = "block";
-    container.innerHTML = "";
-    currentChampionSkins = championsSkins.filter(s => s.champ === champ);
+        <div class="empty-state" id="emptyState" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>Aucun résultat</h3>
+          <p>Essaie une autre recherche ou enlève un filtre.</p>
+        </div>
 
-    currentChampionSkins.forEach((skin, index) => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `<img src="${skin.image}" alt="${skin.skin}"><div class="name">${colorSkinName(skin)}</div>`;
-        card.querySelector('img').addEventListener('click', e => {
-            e.stopPropagation();
-            openLightbox(currentChampionSkins, index);
-        });
-        container.appendChild(card);
-    });
-}
+        <div class="card-grid" id="cardGrid" hidden></div>
+      </section>
+    </main>
+  </div>
 
-function colorSkinName(skin) {
-    let name = skin.skin;
-    if (skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(name)) {
-        name += " (Wild Rift)";
-    }
-    return name.replace(/\(([^)]+)\)/g, (match, content) => {
-        if (content.toLowerCase().includes("wild rift")) return `<span style="color:#1E90FF;">(${content})</span>`;
-        if (/Prestige|Special Edition|Mythic Chroma|Exquisite Edition/i.test(content)) return `<span style="color:#FFD700;">(${content})</span>`;
-        if (/Chroma/i.test(content)) return `<span style="color:#FF0000;">(${content})</span>`;
-        return `(${content})`;
-    });
-}
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu du skin" hidden>
+    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <div class="lightbox-toolbar">
+      <div class="lightbox-caption">
+        <span id="lightboxPosition"></span>
+        <strong id="lightboxTitle"></strong>
+      </div>
+      <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Ajouter aux favoris">♡</button>
+      <button class="icon-button" type="button" data-close-lightbox aria-label="Fermer">×</button>
+    </div>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Skin précédent">‹</button>
+    <figure class="lightbox-figure" id="lightboxFigure">
+      <img id="lightboxImage" alt="" decoding="async">
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Skin suivant">›</button>
+  </div>
 
-function openLightbox(array, index) {
-    lightboxArray = array;
-    lightboxIndexGlobal = index;
-    lightbox.style.display = "flex";
-    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
-}
-
-lightboxImg.addEventListener('click', e => {
-    const rect = lightboxImg.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    if (x < rect.width / 2) {
-        lightboxIndexGlobal = (lightboxIndexGlobal - 1 + lightboxArray.length) % lightboxArray.length;
-    } else {
-        lightboxIndexGlobal = (lightboxIndexGlobal + 1) % lightboxArray.length;
-    }
-    lightboxImg.src = lightboxArray[lightboxIndexGlobal].image;
-});
-
-lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) lightbox.style.display = 'none';
-});
-document.addEventListener('keydown', e => {
-    if (lightbox.style.display === 'flex') {
-        if (e.key === 'Escape') lightbox.style.display = 'none';
-        if (e.key === 'ArrowLeft') { lightboxIndexGlobal = (lightboxIndexGlobal - 1 + lightboxArray.length) % lightboxArray.length; lightboxImg.src = lightboxArray[lightboxIndexGlobal].image; }
-        if (e.key === 'ArrowRight') { lightboxIndexGlobal = (lightboxIndexGlobal + 1) % lightboxArray.length; lightboxImg.src = lightboxArray[lightboxIndexGlobal].image; }
-    }
-});
-
-backBtn.onclick = () => {
-    if (lightbox.style.display === 'flex') {
-        lightbox.style.display = 'none';
-    } else {
-        navigateTo(null);
-    }
-};
-
-handleRoute();
-</script>
+  <noscript>Cette application nécessite JavaScript pour afficher les skins.</noscript>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
-
-
-
