@@ -1,0 +1,32 @@
+/*
+ * Splash-art integrity rules
+ *
+ * Skin artwork must always be shown in full. The source files have many
+ * different aspect ratios (PC, Wild Rift, older artwork, special editions),
+ * so `cover` would crop them. These rules intentionally use `contain` and
+ * disable the image zoom-on-hover effect.
+ */
+
+.skin-preview {
+  background: #05070a;
+}
+
+.skin-preview img,
+.skin-preview img.is-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center center;
+  transform: none !important;
+}
+
+.skin-card:hover .skin-preview img {
+  transform: none !important;
+}
+
+/* The full-screen viewer already uses contain; keep it explicit so a future
+   style change cannot accidentally crop the artwork. */
+.lightbox-figure img {
+  object-fit: contain !important;
+  object-position: center center;
+}
