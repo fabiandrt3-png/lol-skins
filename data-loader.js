@@ -17,8 +17,7 @@ export function loadSkinData() {
       loadVerifiedImageMap(),
     ]).then(([source, verifiedImages]) => {
       const data = parseLegacyCatalog(source);
-
-      return data.map((item, index) => {
+      const mapped = data.map((item, index) => {
         const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
         const verified = verifiedImages[id] || null;
         const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
@@ -35,10 +34,17 @@ export function loadSkinData() {
           image: imageCandidates[0] || item.image,
         };
       });
+
+      // Filter only after IDs are assigned so every following verified asset keeps its historical index.
+      return mapped.filter((item) => !isHiddenSkin(item));
     });
   }
 
   return skinDataPromise;
+}
+
+function isHiddenSkin(item) {
+  return item.champ === "Ahri" && item.skin === "Foxfire Ahri" && item.type === "Wild Rift";
 }
 
 async function fetchText(url) {
