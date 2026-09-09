@@ -1,6 +1,7 @@
 import { loadSkinData, resolveChampionAssets } from "./data-loader.js";
 
 const FAVORITES_KEY = "lol-skins:favorites:v2";
+const COLLATOR = new Intl.Collator("fr", { sensitivity: "base" });
 const IMAGE_FALLBACK = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
   <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#161a22"/><stop offset="1" stop-color="#080a0f"/></linearGradient></defs>
@@ -10,15 +11,10 @@ const IMAGE_FALLBACK = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
 
 const els = {
   backButton: document.querySelector("#backButton"),
-  brand: document.querySelector(".brand"),
-  globalCounter: document.querySelector("#globalCounter"),
   heroBackdrop: document.querySelector("#heroBackdrop"),
-  eyebrow: document.querySelector("#eyebrow"),
   pageTitle: document.querySelector("#pageTitle"),
-  pageDescription: document.querySelector("#pageDescription"),
   searchInput: document.querySelector("#searchInput"),
   filterRow: document.querySelector("#filterRow"),
-  filterButtons: [...document.querySelectorAll(".filter-chip")],
   sectionKicker: document.querySelector("#sectionKicker"),
   sectionTitle: document.querySelector("#sectionTitle"),
   resultCount: document.querySelector("#resultCount"),
@@ -37,6 +33,8 @@ const els = {
 
 const state = {
   skins: [],
+  champions: [],
+  byChampion: new Map(),
   currentChampion: null,
   search: "",
   filter: "all",
@@ -45,6 +43,7 @@ const state = {
   lightboxIndex: -1,
   touchStartX: null,
   assetRequest: 0,
+  renderFrame: 0,
 };
 
 init();
@@ -53,7 +52,7 @@ async function init() {
   bindEvents();
   try {
     state.skins = await loadSkinData();
-    els.globalCounter.textContent = `${getChampionNames().length} champions · ${state.skins.length} entrées`;
+    buildIndexes();
     setLoaded(true);
     handleRoute();
   } catch (error) {
@@ -66,25 +65,47 @@ async function init() {
   }
 }
 
+function buildIndexes() {
+  const grouped = new Map();
+  for (const skin of state.skins) {
+    if (!grouped.has(skin.champ)) grouped.set(skin.champ, []);
+    grouped.get(skin.champ).push(skin);
+  }
+  state.byChampion = grouped;
+  state.champions = [...grouped.keys()].sort(COLLATOR.compare);
+}
+
 function bindEvents() {
   window.addEventListener("hashchange", handleRoute);
   els.backButton.addEventListener("click", navigateHome);
-  els.brand.addEventListener("click", (event) => {
-    event.preventDefault();
-    navigateHome();
-  });
 
   els.searchInput.addEventListener("input", (event) => {
-    state.search = event.target.value.trim().toLowerCase();
+    state.search = event.target.value.trim().toLocaleLowerCase("fr");
+    queueRender();
+  });
+
+  els.filterRow.addEventListener("click", (event) => {
+    const button = event.target.closest(".filter-chip");
+    if (!button) return;
+    state.filter = button.dataset.filter || "all";
+    updateActiveFilter();
     renderCurrentView();
   });
 
-  els.filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      state.filter = button.dataset.filter;
-      els.filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-      renderCurrentView();
-    });
+  els.cardGrid.addEventListener("click", (event) => {
+    const championButton = event.target.closest("[data-champion]");
+    if (championButton) {
+      navigateToChampion(championButton.dataset.champion);
+      return;
+    }
+
+    const action = event.target.closest("[data-action]");
+    if (!action) return;
+    if (action.dataset.action === "open-skin") {
+      openLightbox(Number(action.dataset.index));
+    } else if (action.dataset.action === "favorite") {
+      toggleFavorite(action.dataset.id);
+    }
   });
 
   document.addEventListener("keydown", (event) => {
@@ -99,7 +120,9 @@ function bindEvents() {
     if (event.key === "ArrowRight") moveLightbox(1);
   });
 
-  document.querySelectorAll("[data-close-lightbox]").forEach((element) => element.addEventListener("click", closeLightbox));
+  document.querySelectorAll("[data-close-lightbox]").forEach((element) => {
+    element.addEventListener("click", closeLightbox);
+  });
   els.lightboxPrev.addEventListener("click", () => moveLightbox(-1));
   els.lightboxNext.addEventListener("click", () => moveLightbox(1));
   els.lightboxFavorite.addEventListener("click", () => {
@@ -119,21 +142,30 @@ function bindEvents() {
   }, { passive: true });
 }
 
+function queueRender() {
+  cancelAnimationFrame(state.renderFrame);
+  state.renderFrame = requestAnimationFrame(renderCurrentView);
+}
+
 function handleRoute() {
   const params = new URLSearchParams(location.hash.replace(/^#/, ""));
   const requestedChampion = params.get("champion");
-  const exists = requestedChampion && state.skins.some((skin) => skin.champ === requestedChampion);
-
-  state.currentChampion = exists ? requestedChampion : null;
+  state.currentChampion = requestedChampion && state.byChampion.has(requestedChampion) ? requestedChampion : null;
   state.search = "";
   state.filter = "all";
   els.searchInput.value = "";
-  els.filterButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.filter === "all"));
+  updateActiveFilter();
   closeLightbox();
   renderCurrentView();
-  window.scrollTo({ top: 0, behavior: "instant" });
+  window.scrollTo({ top: 0, behavior: "auto" });
 
   if (state.currentChampion) hydrateChampionAssets(state.currentChampion);
+}
+
+function updateActiveFilter() {
+  els.filterRow.querySelectorAll(".filter-chip").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.filter === state.filter);
+  });
 }
 
 async function hydrateChampionAssets(champion) {
@@ -156,39 +188,22 @@ function renderChampionsView() {
   els.backButton.hidden = true;
   els.filterRow.hidden = true;
   els.searchInput.placeholder = "Rechercher un champion…";
-  els.eyebrow.textContent = "League of Legends · Wild Rift";
   els.pageTitle.textContent = "Tous les champions";
-  els.pageDescription.textContent = "Parcours ta collection de splash arts, skins, chromas et éditions spéciales.";
   els.sectionKicker.textContent = "Collection";
   els.sectionTitle.textContent = "Champions";
   els.heroBackdrop.style.backgroundImage = "";
 
-  const champions = getChampionNames()
-    .filter((champion) => champion.toLowerCase().includes(state.search))
-    .map((champion) => {
-      const championSkins = state.skins.filter((skin) => skin.champ === champion);
-      const first = championSkins[0];
-      const iconCandidates = unique([
-        ...(championSkins.find((skin) => skin.iconCandidates?.length)?.iconCandidates || []),
-        championSkins.find((skin) => skin.icon)?.icon,
-        ...(first?.imageCandidates || []),
-        first?.image,
-      ]);
-      return {
-        champion,
-        iconCandidates,
-        total: championSkins.length,
-        pcCount: championSkins.filter((skin) => skin.type !== "Wild Rift").length,
-        wrCount: championSkins.filter((skin) => skin.type === "Wild Rift").length,
-      };
-    });
+  const query = state.search;
+  const champions = query
+    ? state.champions.filter((champion) => champion.toLocaleLowerCase("fr").includes(query))
+    : state.champions;
 
-  els.resultCount.textContent = pluralize(champions.length, "champion", "champions");
-  els.cardGrid.innerHTML = "";
-  els.cardGrid.className = "card-grid champion-grid";
   const fragment = document.createDocumentFragment();
-  champions.forEach((item) => fragment.appendChild(createChampionCard(item)));
-  els.cardGrid.appendChild(fragment);
+  for (const champion of champions) {
+    fragment.appendChild(createChampionCard(champion, state.byChampion.get(champion) || []));
+  }
+  replaceGrid(fragment, "card-grid champion-grid");
+  els.resultCount.textContent = pluralize(champions.length, "champion", "champions");
   setEmpty(champions.length === 0);
 }
 
@@ -197,36 +212,47 @@ function renderSkinsView(champion) {
   els.filterRow.hidden = false;
   els.searchInput.placeholder = `Rechercher un skin de ${champion}…`;
 
-  const allChampionSkins = state.skins.filter((skin) => skin.champ === champion);
+  const allChampionSkins = state.byChampion.get(champion) || [];
   const heroImage = primaryImage(allChampionSkins[0]);
   els.heroBackdrop.style.backgroundImage = heroImage ? `url("${cssUrl(heroImage)}")` : "";
-  els.eyebrow.textContent = "Champion";
   els.pageTitle.textContent = champion;
-  els.pageDescription.textContent = `${pluralize(allChampionSkins.length, "skin / variante", "skins / variantes")} dans ta collection.`;
   els.sectionKicker.textContent = "Collection";
   els.sectionTitle.textContent = `Skins de ${champion}`;
 
   state.visibleSkins = allChampionSkins.filter(matchesCurrentFilters);
-  els.resultCount.textContent = pluralize(state.visibleSkins.length, "résultat", "résultats");
-  els.cardGrid.innerHTML = "";
-  els.cardGrid.className = "card-grid skin-grid";
   const fragment = document.createDocumentFragment();
   state.visibleSkins.forEach((skin, index) => fragment.appendChild(createSkinCard(skin, index)));
-  els.cardGrid.appendChild(fragment);
+  replaceGrid(fragment, "card-grid skin-grid");
+  els.resultCount.textContent = pluralize(state.visibleSkins.length, "résultat", "résultats");
   setEmpty(state.visibleSkins.length === 0);
 }
 
-function createChampionCard(item) {
+function replaceGrid(fragment, className) {
+  els.cardGrid.className = className;
+  els.cardGrid.replaceChildren(fragment);
+}
+
+function createChampionCard(champion, championSkins) {
+  const first = championSkins[0];
+  const iconCandidates = unique([
+    ...(championSkins.find((skin) => skin.iconCandidates?.length)?.iconCandidates || []),
+    championSkins.find((skin) => skin.icon)?.icon,
+    ...(first?.imageCandidates || []),
+    first?.image,
+  ]);
+  const pcCount = championSkins.reduce((count, skin) => count + (skin.type === "Wild Rift" ? 0 : 1), 0);
+  const wrCount = championSkins.length - pcCount;
+
   const button = document.createElement("button");
   button.type = "button";
   button.className = "champion-card";
-  button.setAttribute("aria-label", `Voir les skins de ${item.champion}`);
+  button.dataset.champion = champion;
+  button.setAttribute("aria-label", `Voir les skins de ${champion}`);
   button.innerHTML = `
-    <span class="champion-image-wrap"><img class="champion-image" alt="" loading="lazy" decoding="async"><span class="champion-glow" aria-hidden="true"></span></span>
-    <span class="champion-info"><strong>${escapeHtml(item.champion)}</strong><span>${item.total} entrées</span><small>${item.pcCount} PC${item.wrCount ? ` · ${item.wrCount} WR` : ""}</small></span>
-    <span class="card-arrow" aria-hidden="true">→</span>`;
-  setImageSources(button.querySelector("img"), item.iconCandidates);
-  button.addEventListener("click", () => navigateToChampion(item.champion));
+    <span class="champion-image-wrap"><img class="champion-image" alt="" loading="lazy" decoding="async" fetchpriority="low"><span class="champion-glow" aria-hidden="true"></span></span>
+    <span class="champion-info"><strong>${escapeHtml(champion)}</strong><span>${championSkins.length} entrées</span><small>${pcCount} PC${wrCount ? ` · ${wrCount} WR` : ""}</small></span>
+    <span class="card-arrow" aria-hidden="true">›</span>`;
+  setImageSources(button.querySelector("img"), iconCandidates);
   return button;
 }
 
@@ -235,20 +261,20 @@ function createSkinCard(skin, index) {
   article.className = "skin-card";
   const isFavorite = state.favorites.has(skin._id);
   article.innerHTML = `
-    <button class="skin-preview" type="button" aria-label="Ouvrir ${escapeAttr(skin.skin)} en plein écran">
-      <img alt="${escapeAttr(displaySkinName(skin))}" loading="lazy" decoding="async">
+    <button class="skin-preview" type="button" data-action="open-skin" data-index="${index}" aria-label="Ouvrir ${escapeAttr(displaySkinName(skin))} en plein écran">
+      <img alt="${escapeAttr(displaySkinName(skin))}" loading="lazy" decoding="async" fetchpriority="low">
       <span class="skin-gradient" aria-hidden="true"></span><span class="skin-badges">${badgesFor(skin)}</span>
     </button>
-    <div class="skin-meta"><div class="skin-title-wrap"><h3>${formatSkinName(skin)}</h3><p>${skin.type === "Wild Rift" ? "Wild Rift" : "League of Legends PC"}</p></div>
-    <button class="favorite-button ${isFavorite ? "is-favorite" : ""}" type="button" aria-label="${isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}" aria-pressed="${isFavorite}">${isFavorite ? "♥" : "♡"}</button></div>`;
+    <div class="skin-meta">
+      <div class="skin-title-wrap"><h3>${formatSkinName(skin)}</h3><p>${skin.type === "Wild Rift" ? "Wild Rift" : "League of Legends PC"}</p></div>
+      <button class="favorite-button ${isFavorite ? "is-favorite" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(skin._id)}" aria-label="${isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}" aria-pressed="${isFavorite}">${isFavorite ? "♥" : "♡"}</button>
+    </div>`;
   setImageSources(article.querySelector("img"), imageSources(skin));
-  article.querySelector(".skin-preview").addEventListener("click", () => openLightbox(index));
-  article.querySelector(".favorite-button").addEventListener("click", () => toggleFavorite(skin._id));
   return article;
 }
 
 function matchesCurrentFilters(skin) {
-  if (!displaySkinName(skin).toLowerCase().includes(state.search)) return false;
+  if (state.search && !displaySkinName(skin).toLocaleLowerCase("fr").includes(state.search)) return false;
   switch (state.filter) {
     case "pc": return skin.type !== "Wild Rift";
     case "wild-rift": return skin.type === "Wild Rift";
@@ -264,6 +290,7 @@ function openLightbox(index) {
   state.lightboxIndex = index;
   els.lightbox.hidden = false;
   document.body.classList.add("is-lightbox-open");
+  els.lightboxImage.fetchPriority = "high";
   renderLightbox();
 }
 
@@ -294,32 +321,37 @@ function renderLightbox() {
 }
 
 function toggleFavorite(id) {
+  if (!id) return;
   if (state.favorites.has(id)) state.favorites.delete(id);
   else state.favorites.add(id);
   saveFavorites();
+
   const previousLightboxId = state.lightboxIndex >= 0 ? state.visibleSkins[state.lightboxIndex]?._id : null;
   renderCurrentView();
   if (!els.lightbox.hidden && previousLightboxId) {
     const nextIndex = state.visibleSkins.findIndex((skin) => skin._id === previousLightboxId);
     if (nextIndex === -1) closeLightbox();
-    else { state.lightboxIndex = nextIndex; renderLightbox(); }
+    else {
+      state.lightboxIndex = nextIndex;
+      renderLightbox();
+    }
   }
 }
 
 function navigateToChampion(champion) {
+  if (!champion) return;
   const params = new URLSearchParams();
   params.set("champion", champion);
   location.hash = params.toString();
 }
 
 function navigateHome() {
-  state.assetRequest++;
+  state.assetRequest += 1;
   if (location.hash) location.hash = "";
-  else { state.currentChampion = null; renderCurrentView(); }
-}
-
-function getChampionNames() {
-  return [...new Set(state.skins.map((skin) => skin.champ))].sort((a, b) => a.localeCompare(b, "fr"));
+  else {
+    state.currentChampion = null;
+    renderCurrentView();
+  }
 }
 
 function badgesFor(skin) {
@@ -336,13 +368,22 @@ function displaySkinName(skin) {
 }
 
 function formatSkinName(skin) {
-  return escapeHtml(displaySkinName(skin)).replace(/\(([^)]+)\)/g, (_, content) => {
+  const raw = displaySkinName(skin);
+  let output = "";
+  let cursor = 0;
+  const pattern = /\(([^)]+)\)/g;
+  let match;
+  while ((match = pattern.exec(raw))) {
+    output += escapeHtml(raw.slice(cursor, match.index));
+    const content = match[1];
     let className = "skin-tag";
     if (/wild rift/i.test(content)) className += " skin-tag-wr";
     else if (/prestige|special edition|mythic chroma|exquisite edition/i.test(content)) className += " skin-tag-prestige";
     else if (/chroma/i.test(content)) className += " skin-tag-chroma";
-    return `<span class="${className}">(${escapeHtml(content)})</span>`;
-  });
+    output += `<span class="${className}">(${escapeHtml(content)})</span>`;
+    cursor = pattern.lastIndex;
+  }
+  return output + escapeHtml(raw.slice(cursor));
 }
 
 function imageSources(skin) {
@@ -385,10 +426,19 @@ function readFavorites() {
   try {
     const saved = JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]");
     return new Set(Array.isArray(saved) ? saved : []);
-  } catch { return new Set(); }
+  } catch {
+    return new Set();
+  }
 }
 
-function saveFavorites() { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); }
+function saveFavorites() {
+  try {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites]));
+  } catch (error) {
+    console.warn("Impossible d’enregistrer les favoris.", error);
+  }
+}
+
 function pluralize(count, singular, plural) { return `${count} ${count > 1 ? plural : singular}`; }
 function cssUrl(value) { return String(value).replace(/["\\\n\r]/g, (char) => `\\${char}`); }
 function unique(values) { return [...new Set((values || []).filter(Boolean))]; }
