@@ -1,28 +1,126 @@
 const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 const CATALOG_SOURCE = VERIFIED_IMAGE_MAP;
+const MANUAL_SKINS_SOURCE = "data/manual-skins.txt";
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 
 let skinDataPromise;
 
 export function loadSkinData() {
   if (!skinDataPromise) {
-    skinDataPromise = fetch(versionedAppAsset(CATALOG_SOURCE), { cache: "default" })
-      .then(async (response) => {
+    skinDataPromise = Promise.all([
+      fetch(versionedAppAsset(CATALOG_SOURCE), { cache: "default" }).then(async (response) => {
         if (!response.ok) throw new Error(`Catalogue centralisé (${response.status})`);
-        const payload = await response.json();
-        const catalog = payload?.catalog;
-        const verifiedImages = payload?.entries;
+        return response.json();
+      }),
+      loadManualSkins(),
+    ]).then(([payload, manualSkins]) => {
+      const catalog = payload?.catalog;
+      const verifiedImages = payload?.entries;
 
-        if (!Array.isArray(catalog) || !catalog.length) {
-          throw new Error("Le catalogue centralisé est vide ou invalide.");
-        }
+      if (!Array.isArray(catalog) || !catalog.length) {
+        throw new Error("Le catalogue centralisé est vide ou invalide.");
+      }
 
-        const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
-        return catalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
-      });
+      const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
+      const mergedCatalog = mergeManualSkins(catalog, manualSkins);
+      return mergedCatalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
+    });
   }
 
   return skinDataPromise;
+}
+
+async function loadManualSkins() {
+  try {
+    const response = await fetch(`${MANUAL_SKINS_SOURCE}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) return [];
+    return parseManualSkins(await response.text());
+  } catch (error) {
+    console.warn("Fichier des skins manuels indisponible, catalogue principal utilisé.", error);
+    return [];
+  }
+}
+
+function parseManualSkins(text) {
+  const rows = String(text || "").split(/\r?\n/);
+  const result = [];
+
+  rows.forEach((rawLine, index) => {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#")) return;
+
+    const parts = line.split("|").map((part) => part.trim());
+    if (parts.length < 4) {
+      console.warn(`Skin manuel ignoré ligne ${index + 1}: format incomplet.`);
+      return;
+    }
+
+    const [champ, skin, rawType, image, fullImage = "", afterSkin = ""] = parts;
+    if (!champ || !skin || !image) {
+      console.warn(`Skin manuel ignoré ligne ${index + 1}: champion, skin ou image manquant.`);
+      return;
+    }
+
+    const type = normalizeManualType(rawType);
+    const id = `${slugify(champ)}::${slugify(skin)}::${type === "Wild Rift" ? "wild-rift" : "pc"}`;
+
+    result.push({
+      id,
+      champ,
+      skin,
+      image,
+      ...(fullImage ? { fullImage } : {}),
+      ...(type ? { type } : {}),
+      ...(afterSkin ? { _manualAfterSkin: afterSkin } : {}),
+      sourceKind: "manual",
+    });
+  });
+
+  return result;
+}
+
+function normalizeManualType(value) {
+  const type = String(value || "PC").trim().toLocaleLowerCase("fr");
+  if (["wr", "wild rift", "wild-rift", "wildrift"].includes(type)) return "Wild Rift";
+  return "PC";
+}
+
+function mergeManualSkins(catalog, manualSkins) {
+  const merged = catalog.map((item) => ({ ...item }));
+
+  for (const manual of manualSkins) {
+    const existingIndex = merged.findIndex((item) => stableSkinId(item) === manual.id);
+    if (existingIndex >= 0) {
+      merged[existingIndex] = { ...merged[existingIndex], ...manual };
+      continue;
+    }
+
+    let insertAt = -1;
+    if (manual._manualAfterSkin) {
+      insertAt = merged.findIndex((item) => item.champ === manual.champ && item.skin === manual._manualAfterSkin);
+    }
+
+    if (insertAt < 0) {
+      for (let index = merged.length - 1; index >= 0; index -= 1) {
+        if (merged[index].champ === manual.champ) {
+          insertAt = index;
+          break;
+        }
+      }
+    }
+
+    const cleanManual = { ...manual };
+    delete cleanManual._manualAfterSkin;
+    merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanManual);
+  }
+
+  return merged;
+}
+
+function stableSkinId(item) {
+  if (item?.id) return String(item.id);
+  const platform = item?.type === "Wild Rift" ? "wild-rift" : "pc";
+  return `${slugify(item?.champ)}::${slugify(item?.skin)}::${platform}`;
 }
 
 function mapCatalogSkin(item, verifiedImages) {
