@@ -50,6 +50,12 @@ function chinaChroma(champ, skin, releaseDate, assetId) {
 }
 
 export const postCutoffAdditions = [
+  // Ahri backfill: unique PC splash arts missing from the legacy catalogue.
+  pc("Ahri", "Prestige K/DA Ahri (2022)", "2022-04-01", "ahri", 65, "PrestigeKDA(2022)"),
+  pc("Ahri", "Arcana Ahri", "2022-04-14", "ahri", 66, "Arcana"),
+  chinaChroma("Ahri", "Popstar Ahri (Ahri-versary Chroma)", "2021-12-09", "ec609b0e-f28a-4d61-bfbd-02b358960fc2"),
+  chinaChroma("Ahri", "Spirit Blossom Springs Ahri (Catseye Chroma)", "2026-07-15", "fcdef6b5-25f7-4784-8712-a5d61dedbf55"),
+
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
   pc("Lillia", "Petals of Spring Lillia", "2026-02-19", "lillia", 46, "PetalsofSpring"),
