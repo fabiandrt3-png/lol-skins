@@ -1,31 +1,27 @@
 const LEGACY_SOURCE = "legacy/index-original.html";
 const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 const NEW_SKINS_SOURCE = "data/new-skins.json";
+const POST_CUTOFF_SOURCE = "data/post-cutoff-additions.js";
 const ENTRY_FIELDS = ["champ", "skin", "image", "icon", "type"];
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 
 let skinDataPromise;
 
-/**
- * Runtime loader kept intentionally small: the weekly audit already resolves
- * and verifies historical splash sources, so the browser only needs the historical
- * catalog, the verified URL map, and the small additions file. No live metadata request
- * is necessary while the user is browsing the app.
- */
 export function loadSkinData() {
   if (!skinDataPromise) {
     skinDataPromise = Promise.all([
       fetchText(LEGACY_SOURCE),
       loadVerifiedImageMap(),
       loadNewSkins(),
-    ]).then(([source, verifiedImages, newSkins]) => {
+      loadPostCutoffSkins(),
+    ]).then(([source, verifiedImages, newSkins, postCutoffSkins]) => {
       const historicalData = parseLegacyCatalog(source);
       const historicalSkins = historicalData.map((item, index) => mapHistoricalSkin(item, index, verifiedImages));
-      const additions = newSkins.map(mapNewSkin);
+      const additions = [...newSkins, ...postCutoffSkins].map(mapNewSkin);
 
-      // Historical IDs stay untouched; additions are appended afterwards so
-      // each champion keeps its existing chronological order.
-      return [...historicalSkins, ...additions].filter((item) => !isHiddenSkin(item));
+      // Some historical entries were manually added after the repository was created.
+      // Keep the oldest occurrence and prevent the post-cutoff feed from duplicating it.
+      return dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenSkin(item));
     });
   }
 
@@ -62,6 +58,7 @@ function mapNewSkin(item) {
     champ: item.champ,
     skin: item.skin,
     ...(item.type ? { type: item.type } : {}),
+    ...(item.releaseDate ? { releaseDate: item.releaseDate } : {}),
     _id: id,
     _legacyImage: item.image,
     _verifiedImageMeta: null,
@@ -70,6 +67,17 @@ function mapNewSkin(item) {
     iconCandidates: unique([item.icon]),
     image: imageCandidates[0] || item.image,
   };
+}
+
+function dedupeSkins(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
+    const key = `${slugify(item.champ)}::${slugify(item.skin)}::${platform}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function isHiddenSkin(item) {
@@ -83,13 +91,27 @@ async function loadNewSkins() {
     if (!response.ok) throw new Error(`Nouveaux skins (${response.status})`);
     const payload = await response.json();
     const entries = Array.isArray(payload) ? payload : payload?.entries;
-    return Array.isArray(entries)
-      ? entries.filter((item) => item?.champ && item?.skin && item?.image)
-      : [];
+    return validSkinEntries(entries);
   } catch (error) {
     console.warn("Catalogue des nouveaux skins indisponible.", error);
     return [];
   }
+}
+
+async function loadPostCutoffSkins() {
+  try {
+    const module = await import(versionedAppAsset(`./${POST_CUTOFF_SOURCE}`));
+    return validSkinEntries(module?.postCutoffAdditions);
+  } catch (error) {
+    console.warn("Catalogue postérieur à la création du projet indisponible.", error);
+    return [];
+  }
+}
+
+function validSkinEntries(entries) {
+  return Array.isArray(entries)
+    ? entries.filter((item) => item?.champ && item?.skin && item?.image)
+    : [];
 }
 
 function versionedAppAsset(url) {
@@ -159,9 +181,6 @@ function decodeString(value) {
 function cardImageCandidates(candidates) {
   const standardWikiCandidates = candidates.flatMap(wikiStandardCandidates);
   const nonHdCandidates = candidates.filter((source) => !isWikiHighDefinitionSource(source));
-
-  // Cards prefer normal-size splash files. HD remains a last-resort fallback so
-  // a missing standard file never turns a valid skin into a broken card.
   return unique([...standardWikiCandidates, ...nonHdCandidates, ...candidates]);
 }
 
