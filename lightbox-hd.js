@@ -7,6 +7,7 @@ const { loadSkinData } = await import(dataLoaderUrl);
 const lightbox = document.querySelector("#lightbox");
 const image = document.querySelector("#lightboxImage");
 const title = document.querySelector("#lightboxTitle");
+const DESKTOP_MAX_ZOOM_SCALE = 4;
 
 if (lightbox && image && title) {
   const fullscreenSources = await loadFullscreenSources();
@@ -278,7 +279,7 @@ function setupDesktopViewer(lightbox, image, title) {
       state.maxScale = Math.max(
         1,
         Math.min(
-          8,
+          DESKTOP_MAX_ZOOM_SCALE,
           image.naturalWidth / state.baseWidth,
           image.naturalHeight / state.baseHeight,
         ),
