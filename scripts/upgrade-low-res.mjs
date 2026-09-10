@@ -4,21 +4,25 @@ import sharp from 'sharp';
 const REPORT_FILE = 'audit-report.json';
 const OVERRIDES_FILE = 'data/image-overrides.json';
 const WIKI_API = 'https://wiki.leagueoflegends.com/en-us/api.php';
-const USER_AGENT = 'lol-skins-quality-upgrader/1.0 (+https://github.com/fabiandrt3-png/lol-skins)';
+const USER_AGENT = 'lol-skins-quality-upgrader/1.1 (+https://github.com/fabiandrt3-png/lol-skins)';
 const TIMEOUT_MS = 20000;
-const TARGET_WIDTH = 1600;
-const TARGET_HEIGHT = 900;
+const MIN_FULLSCREEN_WIDTH = 1600;
+const MIN_FULLSCREEN_HEIGHT = 900;
+const QUALITY_TARGET_WIDTH = 2560;
+const QUALITY_TARGET_HEIGHT = 1440;
 const MIN_GAIN = 1.05;
 const infoCache = new Map();
 
 const report = JSON.parse(fs.readFileSync(REPORT_FILE, 'utf8'));
 const overrides = JSON.parse(fs.readFileSync(OVERRIDES_FILE, 'utf8'));
-const lowRes = report.entries.filter((entry) => entry.best && (entry.best.width < TARGET_WIDTH || entry.best.height < TARGET_HEIGHT));
+const qualityCandidates = report.entries.filter((entry) => entry.best && (
+  entry.best.width < QUALITY_TARGET_WIDTH || entry.best.height < QUALITY_TARGET_HEIGHT
+));
 
 let upgraded = 0;
 let unchanged = 0;
 
-for (const entry of lowRes) {
+for (const entry of qualityCandidates) {
   const better = await findHigherResolutionExact(entry);
   if (!better) {
     unchanged += 1;
@@ -57,13 +61,14 @@ for (const entry of lowRes) {
 report.summary = summarize(report.entries);
 report.qualityPass = {
   runAt: new Date().toISOString(),
-  candidatesBelow1600x900Before: lowRes.length,
+  target: `${QUALITY_TARGET_WIDTH}x${QUALITY_TARGET_HEIGHT}`,
+  candidatesBelowTargetBefore: qualityCandidates.length,
   upgraded,
   unchanged,
-  remainingBelow1600x900: report.summary.below1600x900,
+  remainingBelowTarget: countBelow(report.entries, QUALITY_TARGET_WIDTH, QUALITY_TARGET_HEIGHT),
 };
 overrides.generatedAt = new Date().toISOString();
-overrides.qualityPolicy = 'Exact skin identity first; highest verified pixel area second. Never substitute a different skin/chroma/edition merely for more pixels.';
+overrides.qualityPolicy = 'Exact skin identity first; highest verified pixel area second. Search for a higher-resolution exact original below the 2560x1440 fullscreen target. Never substitute a different skin/chroma/edition merely for more pixels.';
 
 fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2) + '\n');
 fs.writeFileSync(OVERRIDES_FILE, JSON.stringify(overrides, null, 2) + '\n');
@@ -244,7 +249,12 @@ function summarize(entries) {
   const unresolved = entries.filter((entry) => !entry.verified);
   const wr = entries.filter((entry) => entry.type === 'Wild Rift');
   const pc = entries.filter((entry) => entry.type !== 'Wild Rift');
-  const lowRes = entries.filter((entry) => entry.best && (entry.best.width < TARGET_WIDTH || entry.best.height < TARGET_HEIGHT));
+  const lowRes = entries.filter((entry) => entry.best && (
+    entry.best.width < MIN_FULLSCREEN_WIDTH || entry.best.height < MIN_FULLSCREEN_HEIGHT
+  ));
+  const belowQualityTarget = entries.filter((entry) => entry.best && (
+    entry.best.width < QUALITY_TARGET_WIDTH || entry.best.height < QUALITY_TARGET_HEIGHT
+  ));
   const degraded = entries.filter((entry) => entry.degraded);
   return {
     total: entries.length,
@@ -257,10 +267,15 @@ function summarize(entries) {
     wildRiftUnresolved: wr.filter((entry) => !entry.verified).length,
     degradedFallbacks: degraded.length,
     below1600x900: lowRes.length,
+    below2560x1440: belowQualityTarget.length,
     unresolvedEntries: unresolved.map((entry) => ({ champion: entry.champion, skin: entry.skin, type: entry.type })),
     degradedEntries: degraded.map((entry) => ({ champion: entry.champion, skin: entry.skin, type: entry.type, best: entry.best })),
     lowResolutionEntries: lowRes.map((entry) => ({ champion: entry.champion, skin: entry.skin, type: entry.type, best: entry.best })),
   };
+}
+
+function countBelow(entries, width, height) {
+  return entries.filter((entry) => entry.best && (entry.best.width < width || entry.best.height < height)).length;
 }
 
 function unique(values) { return [...new Set(values.filter(Boolean))]; }
