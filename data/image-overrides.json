@@ -9064,6 +9064,23 @@
       "sourceKind": "post-cutoff"
     },
     {
+      "id": "alistar::clock-puncher-alistar::wild-rift",
+      "champ": "Alistar",
+      "skin": "Clock Puncher Alistar",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-27",
+      "image": "https://images3.alphacoders.com/140/thumb-1920-1408000.jpg",
+      "fallbacks": [
+        "https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg"
+      ],
+      "fullImage": "https://images3.alphacoders.com/140/1408000.jpg",
+      "fullHdFallbacks": [
+        "https://images3.alphacoders.com/140/thumb-1920-1408000.jpg",
+        "https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg"
+      ],
+      "sourceKind": "post-cutoff"
+    },
+    {
       "id": "ambessa::classic-ambessa::115",
       "champ": "Ambessa",
       "skin": "Classic Ambessa",
@@ -15017,6 +15034,6 @@
       "sourceKind": "post-cutoff"
     }
   ],
-  "catalogGeneratedAt": "2026-09-10T18:16:34.739Z",
+  "catalogGeneratedAt": "2026-09-10T18:25:44.275Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded"
 }
