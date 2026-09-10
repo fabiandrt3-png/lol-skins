@@ -10,230 +10,382 @@ const lightboxTitle = document.querySelector("#lightboxTitle");
 
 if (lightbox && lightboxImage && lightboxTitle) {
   const fullscreenSources = await loadFullscreenSources();
-  const failedSources = new Set();
-  let requestedHdSource = "";
+  const hdController = setupHdSourceController(lightbox, lightboxImage, lightboxTitle, fullscreenSources);
+  const desktopViewer = setupDesktopNativeViewer(lightbox, lightboxImage, lightboxTitle);
 
-  const setHdState = (state) => {
-    lightboxImage.dataset.hdState = state;
+  const syncCurrentSkin = () => {
+    desktopViewer.reset();
+    hdController.sync();
+  };
+
+  const observer = new MutationObserver(() => queueMicrotask(syncCurrentSkin));
+  observer.observe(lightboxTitle, { childList: true, subtree: true, characterData: true });
+  observer.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
+
+  syncCurrentSkin();
+}
+
+function setupHdSourceController(lightbox, image, title, fullscreenSources) {
+  const loadedSources = new Set();
+  const failedSources = new Set();
+  let requestToken = 0;
+
+  const setState = (state) => {
+    image.dataset.hdState = state;
     lightbox.dataset.hdState = state;
   };
 
-  const syncFullscreenSource = () => {
+  const preloadSource = (source) => new Promise((resolve) => {
+    if (loadedSources.has(source)) {
+      resolve(true);
+      return;
+    }
+
+    const preload = new Image();
+    preload.decoding = "async";
+    preload.loading = "eager";
+    preload.fetchPriority = "high";
+
+    preload.onload = async () => {
+      try {
+        await preload.decode();
+      } catch {
+        // onload already proves the image is usable; decode() is only an extra
+        // attempt to have the full-resolution bitmap ready before the swap.
+      }
+      loadedSources.add(source);
+      resolve(true);
+    };
+
+    preload.onerror = () => {
+      failedSources.add(source);
+      resolve(false);
+    };
+
+    preload.src = source;
+  });
+
+  const sync = async () => {
+    const token = ++requestToken;
     if (lightbox.hidden) return;
 
-    const displayName = lightboxTitle.textContent.trim();
-    const candidates = fullscreenSources.get(displayName) || [];
-    const currentSource = lightboxImage.getAttribute("src") || "";
+    const displayName = title.textContent.trim();
+    const candidates = unique(fullscreenSources.get(displayName) || []);
 
     if (!candidates.length) {
-      requestedHdSource = "";
-      setHdState("unavailable");
+      setState("unavailable");
       return;
     }
 
-    if (candidates.includes(currentSource)) {
-      requestedHdSource = currentSource;
-      setHdState(lightboxImage.complete && lightboxImage.naturalWidth > 0 ? "ready" : "loading");
+    const currentSource = image.getAttribute("src") || "";
+    if (candidates.includes(currentSource) && image.complete && image.naturalWidth > 0) {
+      setState("ready");
       return;
     }
 
-    const source = candidates.find((candidate) => !failedSources.has(candidate));
-    if (!source) {
-      requestedHdSource = "";
-      setHdState("unavailable");
+    setState("loading");
+
+    for (const source of candidates) {
+      if (failedSources.has(source)) continue;
+
+      const loaded = await preloadSource(source);
+      if (!loaded) continue;
+      if (token !== requestToken || lightbox.hidden || title.textContent.trim() !== displayName) return;
+
+      // Swap only after the HD file is loaded/decoded. This leaves app.js in
+      // charge of the lightweight card fallback and avoids competing onerror
+      // handlers or a race between the card URL and the HD URL.
+      image.loading = "eager";
+      image.fetchPriority = "high";
+      image.dataset.hdSource = source;
+
+      const onHdDisplayed = () => {
+        if (image.getAttribute("src") !== source) return;
+        image.removeEventListener("load", onHdDisplayed);
+        setState("ready");
+      };
+
+      image.addEventListener("load", onHdDisplayed);
+      image.src = source;
+
+      if (image.complete && image.naturalWidth > 0) queueMicrotask(onHdDisplayed);
       return;
     }
 
-    requestedHdSource = source;
-    setHdState("loading");
-
-    // The central fullscreen image itself requests the HD artwork immediately.
-    // The standard card source remains managed by app.js and is only a fallback
-    // if every HD candidate fails. Adjacent carousel slides stay lightweight.
-    lightboxImage.loading = "eager";
-    lightboxImage.fetchPriority = "high";
-    lightboxImage.src = source;
+    if (token === requestToken) setState("unavailable");
   };
 
-  lightboxImage.addEventListener("load", () => {
-    const currentSource = lightboxImage.getAttribute("src") || "";
-    const displayName = lightboxTitle.textContent.trim();
-    if ((fullscreenSources.get(displayName) || []).includes(currentSource)) {
-      requestedHdSource = currentSource;
-      setHdState("ready");
-    }
-  });
-
-  lightboxImage.addEventListener("error", () => {
-    if (!requestedHdSource) return;
-    failedSources.add(requestedHdSource);
-    requestedHdSource = "";
-    queueMicrotask(syncFullscreenSource);
-  });
-
-  setupDesktopZoom(lightbox, lightboxImage, lightboxTitle);
-
-  // app.js updates the image and title synchronously. Deferring one microtask
-  // lets us always read the final skin title before selecting the HD source.
-  const observer = new MutationObserver(() => queueMicrotask(syncFullscreenSource));
-  observer.observe(lightboxTitle, { childList: true, subtree: true, characterData: true });
-  observer.observe(lightboxImage, { attributes: true, attributeFilter: ["src"] });
-  syncFullscreenSource();
+  return { sync };
 }
 
-function setupDesktopZoom(lightbox, image, title) {
+function setupDesktopNativeViewer(lightbox, image, title) {
   const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const figure = image.closest(".lightbox-figure");
-  const zoom = {
-    scale: 1,
-    x: 0,
-    y: 0,
+  const state = {
+    level: 1,
+    baseWidth: 0,
+    baseHeight: 0,
+    maxLevel: 1,
+    panX: 0,
+    panY: 0,
     dragging: false,
     pointerId: null,
     startPointerX: 0,
     startPointerY: 0,
-    startX: 0,
-    startY: 0,
+    startPanX: 0,
+    startPanY: 0,
     title: title.textContent.trim(),
+    frame: 0,
   };
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const isDesktopOpen = () => desktopPointer.matches && !lightbox.hidden;
   const hdIsLoading = () => image.dataset.hdState === "loading";
-  const isActive = () => desktopPointer.matches && !lightbox.hidden && !hdIsLoading();
+  const slide = () => image.parentElement;
+
+  const clearImageLayout = () => {
+    image.style.width = "";
+    image.style.height = "";
+    image.style.maxWidth = "";
+    image.style.maxHeight = "";
+    image.style.position = "";
+    image.style.left = "";
+    image.style.top = "";
+    image.style.transform = "";
+    image.style.transformOrigin = "";
+    image.style.transition = "";
+    image.style.willChange = "";
+    image.style.cursor = "";
+    image.style.imageRendering = "";
+    image.title = "";
+    lightbox.dataset.desktopZoomed = "false";
+  };
+
+  const restoreFigureSize = () => {
+    if (!figure) return;
+    figure.style.width = "";
+    figure.style.height = "";
+    figure.style.maxWidth = "";
+    figure.style.maxHeight = "";
+  };
+
+  const useFullDesktopViewport = () => {
+    if (!figure) return;
+    // The stylesheet intentionally keeps the mobile viewer compact. On a
+    // desktop pointer, the splash art should instead use the actual viewport;
+    // the old 1500x900 cap threw away a large part of the available display.
+    figure.style.width = "calc(100vw - 24px)";
+    figure.style.height = "calc(100dvh - 24px)";
+    figure.style.maxWidth = "none";
+    figure.style.maxHeight = "none";
+  };
+
+  const currentSize = () => ({
+    width: state.baseWidth * state.level,
+    height: state.baseHeight * state.level,
+  });
 
   const clampPan = () => {
-    if (!figure || zoom.scale <= 1) {
-      zoom.x = 0;
-      zoom.y = 0;
+    const container = slide();
+    if (!container || !state.baseWidth || !state.baseHeight) {
+      state.panX = 0;
+      state.panY = 0;
       return;
     }
 
-    const imageWidth = image.clientWidth || 0;
-    const imageHeight = image.clientHeight || 0;
-    const figureWidth = figure.clientWidth || window.innerWidth;
-    const figureHeight = figure.clientHeight || window.innerHeight;
-    const maxX = Math.max(0, ((imageWidth * zoom.scale) - figureWidth) / 2);
-    const maxY = Math.max(0, ((imageHeight * zoom.scale) - figureHeight) / 2);
-
-    zoom.x = clamp(zoom.x, -maxX, maxX);
-    zoom.y = clamp(zoom.y, -maxY, maxY);
+    const { width, height } = currentSize();
+    const maxX = Math.max(0, (width - container.clientWidth) / 2);
+    const maxY = Math.max(0, (height - container.clientHeight) / 2);
+    state.panX = clamp(state.panX, -maxX, maxX);
+    state.panY = clamp(state.panY, -maxY, maxY);
   };
 
-  const applyZoom = ({ animate = true } = {}) => {
+  const render = () => {
+    if (!isDesktopOpen() || !state.baseWidth || !state.baseHeight) return;
+
     clampPan();
+    const { width, height } = currentSize();
+
+    // Important: zoom by changing the image's real layout size, NOT with
+    // transform: scale(). Chrome therefore resamples from the original image
+    // pixels at the requested size instead of enlarging a smaller compositor
+    // layer. left/top are used only for panning and never for scaling.
+    image.style.maxWidth = "none";
+    image.style.maxHeight = "none";
+    image.style.width = `${width}px`;
+    image.style.height = `${height}px`;
+    image.style.position = "relative";
+    image.style.left = `${state.panX}px`;
+    image.style.top = `${state.panY}px`;
+    image.style.transform = "none";
     image.style.transformOrigin = "center center";
-    image.style.transform = `translate3d(${zoom.x}px, ${zoom.y}px, 0) scale(${zoom.scale})`;
-    image.style.transition = animate && !zoom.dragging && !reducedMotion.matches
-      ? "transform 140ms cubic-bezier(.2,.8,.2,1)"
-      : "none";
-    image.style.willChange = zoom.scale > 1 ? "transform" : "auto";
+    image.style.transition = "none";
+    image.style.willChange = "auto";
+    image.style.imageRendering = "auto";
 
     if (hdIsLoading()) image.style.cursor = "progress";
-    else {
-      image.style.cursor = zoom.scale > 1
-        ? (zoom.dragging ? "grabbing" : "grab")
-        : "zoom-in";
-    }
+    else if (state.level > 1.001) image.style.cursor = state.dragging ? "grabbing" : "grab";
+    else image.style.cursor = state.maxLevel > 1.001 ? "zoom-in" : "default";
 
-    image.title = desktopPointer.matches
-      ? (hdIsLoading()
-        ? "Chargement de l’image HD…"
-        : zoom.scale > 1
-          ? "Glisser pour déplacer · molette pour zoomer · double-clic pour réinitialiser"
-          : "Molette ou double-clic pour zoomer")
-      : "";
-    lightbox.dataset.desktopZoomed = zoom.scale > 1 ? "true" : "false";
+    image.title = hdIsLoading()
+      ? "Chargement du splash art HD…"
+      : state.level > 1.001
+        ? "Molette : zoom sous la souris · glisser : déplacer · double-clic : réinitialiser"
+        : "Molette ou double-clic pour zoomer";
+
+    lightbox.dataset.desktopZoomed = state.level > 1.001 ? "true" : "false";
   };
 
-  const resetZoom = ({ animate = false } = {}) => {
-    zoom.scale = 1;
-    zoom.x = 0;
-    zoom.y = 0;
-    zoom.dragging = false;
-    zoom.pointerId = null;
-    applyZoom({ animate });
-  };
+  const measureBase = () => {
+    cancelAnimationFrame(state.frame);
 
-  const setScaleAroundPointer = (nextScale, clientX, clientY, { animate = true } = {}) => {
-    const previousScale = zoom.scale;
-    const clampedScale = clamp(nextScale, 1, 5);
-
-    if (clampedScale <= 1.001) {
-      resetZoom({ animate });
+    if (!isDesktopOpen()) {
+      state.baseWidth = 0;
+      state.baseHeight = 0;
+      state.maxLevel = 1;
+      clearImageLayout();
+      restoreFigureSize();
       return;
     }
 
-    const rect = figure?.getBoundingClientRect();
-    if (rect && previousScale > 0) {
-      const pointerX = clientX - (rect.left + rect.width / 2);
-      const pointerY = clientY - (rect.top + rect.height / 2);
-      const ratio = clampedScale / previousScale;
+    useFullDesktopViewport();
 
-      // Keep the exact artwork point under the mouse fixed while scaling.
-      zoom.x = pointerX - ((pointerX - zoom.x) * ratio);
-      zoom.y = pointerY - ((pointerY - zoom.y) * ratio);
+    state.frame = requestAnimationFrame(() => {
+      const container = slide();
+      if (!container || !image.complete || image.naturalWidth <= 0 || image.naturalHeight <= 0) return;
+
+      const availableWidth = container.clientWidth || figure?.clientWidth || window.innerWidth;
+      const availableHeight = container.clientHeight || figure?.clientHeight || window.innerHeight;
+      const fit = Math.min(
+        1,
+        availableWidth / image.naturalWidth,
+        availableHeight / image.naturalHeight,
+      );
+
+      state.baseWidth = Math.max(1, image.naturalWidth * fit);
+      state.baseHeight = Math.max(1, image.naturalHeight * fit);
+
+      // Stop at the source's native CSS-pixel size. Past this point there is no
+      // additional detail to reveal, only interpolation, so the viewer does not
+      // manufacture blur by over-zooming a low-resolution splash art.
+      state.maxLevel = Math.max(1, Math.min(8, 1 / fit));
+      state.level = clamp(state.level, 1, state.maxLevel);
+      clampPan();
+      render();
+    });
+  };
+
+  const reset = () => {
+    state.level = 1;
+    state.panX = 0;
+    state.panY = 0;
+    state.dragging = false;
+    state.pointerId = null;
+
+    if (isDesktopOpen()) measureBase();
+    else {
+      clearImageLayout();
+      restoreFigureSize();
+    }
+  };
+
+  const zoomAt = (nextLevel, clientX, clientY) => {
+    if (!isDesktopOpen() || hdIsLoading() || !state.baseWidth || !state.baseHeight) return;
+
+    const container = slide();
+    if (!container) return;
+
+    const targetLevel = clamp(nextLevel, 1, state.maxLevel);
+    if (Math.abs(targetLevel - state.level) < 0.0001) return;
+
+    if (targetLevel <= 1.001) {
+      state.level = 1;
+      state.panX = 0;
+      state.panY = 0;
+      render();
+      return;
     }
 
-    zoom.scale = clampedScale;
-    applyZoom({ animate });
+    const imageRect = image.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    if (!imageRect.width || !imageRect.height) return;
+
+    // Anchor the zoom to the artwork point currently below the cursor. If the
+    // cursor is in the black letterbox area, use the nearest image edge.
+    const anchorX = clamp(clientX, imageRect.left, imageRect.right);
+    const anchorY = clamp(clientY, imageRect.top, imageRect.bottom);
+    const localX = (anchorX - imageRect.left) / imageRect.width;
+    const localY = (anchorY - imageRect.top) / imageRect.height;
+
+    const newWidth = state.baseWidth * targetLevel;
+    const newHeight = state.baseHeight * targetLevel;
+    const centeredLeft = containerRect.left + (containerRect.width - newWidth) / 2;
+    const centeredTop = containerRect.top + (containerRect.height - newHeight) / 2;
+
+    state.level = targetLevel;
+    state.panX = anchorX - centeredLeft - (localX * newWidth);
+    state.panY = anchorY - centeredTop - (localY * newHeight);
+    render();
   };
 
   figure?.addEventListener("wheel", (event) => {
-    if (!desktopPointer.matches || lightbox.hidden) return;
+    if (!isDesktopOpen()) return;
     event.preventDefault();
-
     if (hdIsLoading()) {
-      applyZoom({ animate: false });
+      image.style.cursor = "progress";
       return;
     }
 
-    const factor = event.deltaY < 0 ? 1.16 : 1 / 1.16;
-    setScaleAroundPointer(zoom.scale * factor, event.clientX, event.clientY, { animate: false });
+    const factor = event.deltaY < 0 ? 1.14 : 1 / 1.14;
+    zoomAt(state.level * factor, event.clientX, event.clientY);
   }, { passive: false });
 
   image.addEventListener("dblclick", (event) => {
-    if (!desktopPointer.matches || lightbox.hidden) return;
+    if (!isDesktopOpen()) return;
     event.preventDefault();
+    if (hdIsLoading()) return;
 
-    if (hdIsLoading()) {
-      applyZoom({ animate: false });
+    if (state.level > 1.001) {
+      state.level = 1;
+      state.panX = 0;
+      state.panY = 0;
+      render();
       return;
     }
 
-    if (zoom.scale > 1) resetZoom({ animate: true });
-    else setScaleAroundPointer(2.25, event.clientX, event.clientY);
+    zoomAt(Math.min(2, state.maxLevel), event.clientX, event.clientY);
   });
 
   image.addEventListener("pointerdown", (event) => {
-    if (!isActive() || event.pointerType !== "mouse" || zoom.scale <= 1) return;
+    if (!isDesktopOpen() || event.pointerType !== "mouse" || state.level <= 1.001) return;
     event.preventDefault();
-    zoom.dragging = true;
-    zoom.pointerId = event.pointerId;
-    zoom.startPointerX = event.clientX;
-    zoom.startPointerY = event.clientY;
-    zoom.startX = zoom.x;
-    zoom.startY = zoom.y;
+    state.dragging = true;
+    state.pointerId = event.pointerId;
+    state.startPointerX = event.clientX;
+    state.startPointerY = event.clientY;
+    state.startPanX = state.panX;
+    state.startPanY = state.panY;
     image.setPointerCapture?.(event.pointerId);
-    applyZoom({ animate: false });
+    render();
   });
 
   image.addEventListener("pointermove", (event) => {
-    if (!zoom.dragging || event.pointerId !== zoom.pointerId) return;
-    zoom.x = zoom.startX + (event.clientX - zoom.startPointerX);
-    zoom.y = zoom.startY + (event.clientY - zoom.startPointerY);
-    applyZoom({ animate: false });
+    if (!state.dragging || event.pointerId !== state.pointerId) return;
+    state.panX = state.startPanX + (event.clientX - state.startPointerX);
+    state.panY = state.startPanY + (event.clientY - state.startPointerY);
+    render();
   });
 
   const stopDragging = (event) => {
-    if (!zoom.dragging || (event?.pointerId != null && event.pointerId !== zoom.pointerId)) return;
-    const pointerId = zoom.pointerId;
-    zoom.dragging = false;
-    zoom.pointerId = null;
+    if (!state.dragging || (event?.pointerId != null && event.pointerId !== state.pointerId)) return;
+    const pointerId = state.pointerId;
+    state.dragging = false;
+    state.pointerId = null;
+
     if (event?.type !== "lostpointercapture" && pointerId != null && image.hasPointerCapture?.(pointerId)) {
       image.releasePointerCapture(pointerId);
     }
-    applyZoom({ animate: false });
+    render();
   };
 
   image.addEventListener("pointerup", stopDragging);
@@ -241,40 +393,44 @@ function setupDesktopZoom(lightbox, image, title) {
   image.addEventListener("lostpointercapture", stopDragging);
 
   document.addEventListener("keydown", (event) => {
-    if (!isActive() || zoom.scale <= 1) return;
+    if (!isDesktopOpen() || state.level <= 1.001) return;
 
     const step = event.shiftKey ? 160 : 72;
-    if (event.key === "ArrowLeft") zoom.x += step;
-    else if (event.key === "ArrowRight") zoom.x -= step;
-    else if (event.key === "ArrowUp") zoom.y += step;
-    else if (event.key === "ArrowDown") zoom.y -= step;
+    if (event.key === "ArrowLeft") state.panX += step;
+    else if (event.key === "ArrowRight") state.panX -= step;
+    else if (event.key === "ArrowUp") state.panY += step;
+    else if (event.key === "ArrowDown") state.panY -= step;
     else return;
 
     event.preventDefault();
-    event.stopPropagation();
-    applyZoom({ animate: false });
+    event.stopImmediatePropagation();
+    render();
   }, { capture: true });
+
+  image.addEventListener("load", () => {
+    // A newly displayed HD source has different intrinsic dimensions from the
+    // card preview, so remeasure from naturalWidth/naturalHeight every time.
+    state.level = 1;
+    state.panX = 0;
+    state.panY = 0;
+    measureBase();
+  });
 
   const stateObserver = new MutationObserver(() => {
     const currentTitle = title.textContent.trim();
-    if (lightbox.hidden || currentTitle !== zoom.title) {
-      zoom.title = currentTitle;
-      resetZoom();
-      return;
+    if (lightbox.hidden || currentTitle !== state.title) {
+      state.title = currentTitle;
+      reset();
     }
-    applyZoom({ animate: false });
   });
-  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden", "data-hd-state"] });
+  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
   stateObserver.observe(title, { childList: true, subtree: true, characterData: true });
 
-  image.addEventListener("load", () => applyZoom({ animate: false }));
+  window.addEventListener("resize", reset, { passive: true });
+  desktopPointer.addEventListener?.("change", reset);
 
-  window.addEventListener("resize", () => {
-    if (zoom.scale > 1) applyZoom({ animate: false });
-  }, { passive: true });
-
-  desktopPointer.addEventListener?.("change", () => resetZoom());
-  applyZoom({ animate: false });
+  reset();
+  return { reset };
 }
 
 async function loadFullscreenSources() {
