@@ -77,6 +77,42 @@ const AHRI_CHRONOLOGY = new Map([
   "Crystal Rose Ahri",
 ].map((skin, index) => [skin, index]));
 
+const AKALI_CHRONOLOGY = new Map([
+  "Classic Akali",
+  "Stinger Akali",
+  "Infernal Akali",
+  "All-star Akali",
+  "Nurse Akali",
+  "Blood Moon Akali",
+  "Silverfang Akali",
+  "Headhunter Akali",
+  "Headhunter Akali (Pearl Chroma)",
+  "Sashimi Akali",
+  "K/DA Akali",
+  "K/DA Akali (Prestige)",
+  "PROJECT: Akali",
+  "True Damage Akali",
+  "K/DA ALL OUT Akali",
+  "K/DA ALL OUT Akali (Rose Quartz Chroma)",
+  "Crime City Nightmare Akali",
+  "Star Guardian Akali",
+  "Star Guardian Akali (Rose Quartz Chroma)",
+  "Star Guardian Akali (Ruby Chroma)",
+  "Crystal Rose Akali",
+  "DRX Akali",
+  "Coven Akali",
+  "Coven Akali (Sapphire Chroma)",
+  "Coven Akali (Prestige)",
+  "Supreme Cells Akali",
+  "Empyrean Akali",
+  "Spirit Blossom Akali",
+  "Spirit Blossom Akali (Citrine Chroma)",
+  "Spirit Blossom Akali (Rose Quartz Chroma)",
+  "Spirit Blossom Akali (Pearl Chroma)",
+  "Calligraphia Akali",
+  "Prestige Select Crystal Rose Akali",
+].map((skin, index) => [skin, index]));
+
 // These Wild Rift files exist, but use the same underlying illustration as the PC entry.
 // Keep one copy in the catalogue; same-name WR art that is genuinely different (Foxfire) remains visible.
 const HIDDEN_DUPLICATE_SPLASHES = new Set([
@@ -102,6 +138,7 @@ export function loadSkinData() {
       let catalog = dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenDuplicateSplash(item));
       catalog = sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
       catalog = sortChampionByKnownChronology(catalog, "Ahri", AHRI_CHRONOLOGY);
+      catalog = sortChampionByKnownChronology(catalog, "Akali", AKALI_CHRONOLOGY);
       return catalog;
     });
   }
