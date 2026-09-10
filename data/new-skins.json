@@ -1,5 +1,485 @@
 [
   {
+    "id": "sona::prestige-requiem-sona::pc",
+    "champ": "Sona",
+    "skin": "Prestige Requiem Sona",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_uncentered_75.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_uncentered_75.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg"]
+  },
+  {
+    "id": "maokai::corrupted-petricite-maokai::pc",
+    "champ": "Maokai",
+    "skin": "Corrupted Petricite Maokai",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_centered_35.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_uncentered_35.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_uncentered_35.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_centered_35.jpg"]
+  },
+  {
+    "id": "xerath::corrupted-petricite-xerath::pc",
+    "champ": "Xerath",
+    "skin": "Corrupted Petricite Xerath",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_uncentered_32.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_uncentered_32.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg"]
+  },
+  {
+    "id": "naafiri::warhound-naafiri::pc",
+    "champ": "Naafiri",
+    "skin": "Warhound Naafiri",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_uncentered_29.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_uncentered_29.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg"]
+  },
+  {
+    "id": "senna::warhound-senna::pc",
+    "champ": "Senna",
+    "skin": "Warhound Senna",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_uncentered_72.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_uncentered_72.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg"]
+  },
+  {
+    "id": "warwick::warhound-warwick::pc",
+    "champ": "Warwick",
+    "skin": "Warhound Warwick",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_uncentered_58.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_uncentered_58.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg"]
+  },
+  {
+    "id": "swain::fried-chicken-king-swain::pc",
+    "champ": "Swain",
+    "skin": "Fried Chicken King Swain",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_uncentered_42.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_uncentered_42.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg"]
+  },
+  {
+    "id": "blitzcrank::bubble-bash-blitzcrank::pc",
+    "champ": "Blitzcrank",
+    "skin": "Bubble Bash Blitzcrank",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_centered_66.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_uncentered_66.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_uncentered_66.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_centered_66.jpg"]
+  },
+  {
+    "id": "mordekaiser::prestige-money-miser-mordekaiser::pc",
+    "champ": "Mordekaiser",
+    "skin": "Prestige Money Miser Mordekaiser",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_uncentered_55.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_uncentered_55.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg"]
+  },
+  {
+    "id": "sejuani::pug-trainer-sejuani::pc",
+    "champ": "Sejuani",
+    "skin": "Pug Trainer Sejuani",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg"]
+  },
+  {
+    "id": "tahm-kench::choncc-kench::pc",
+    "champ": "Tahm Kench",
+    "skin": "Choncc Kench",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_uncentered_39.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_uncentered_39.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg"]
+  },
+  {
+    "id": "vex::surprise-party-vex::pc",
+    "champ": "Vex",
+    "skin": "Surprise Party Vex",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_uncentered_29.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_uncentered_29.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg"]
+  },
+  {
+    "id": "vladimir::psyops-vladimir::pc",
+    "champ": "Vladimir",
+    "skin": "PsyOps Vladimir",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg"]
+  },
+  {
+    "id": "sivir::project-sivir::pc",
+    "champ": "Sivir",
+    "skin": "PROJECT: Sivir",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg"]
+  },
+  {
+    "id": "zac::space-groove-zac::pc",
+    "champ": "Zac",
+    "skin": "Space Groove Zac",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg"]
+  },
+  {
+    "id": "master-yi::project-command-line-yi::pc",
+    "champ": "Master Yi",
+    "skin": "PROJECT: Command Line Yi",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg"]
+  },
+  {
+    "id": "annie::pandemonium-annie::pc",
+    "champ": "Annie",
+    "skin": "Pandemonium Annie",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg"]
+  },
+  {
+    "id": "kindred::pandemonium-kindred::pc",
+    "champ": "Kindred",
+    "skin": "Pandemonium Kindred",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg"]
+  },
+  {
+    "id": "vayne::demoncursed-vayne::pc",
+    "champ": "Vayne",
+    "skin": "Demoncursed Vayne",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg"]
+  },
+  {
+    "id": "shaco::prestige-pandemonium-shaco::pc",
+    "champ": "Shaco",
+    "skin": "Prestige Pandemonium Shaco",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg"]
+  },
+  {
+    "id": "ivern::rain-shepherd-ivern::pc",
+    "champ": "Ivern",
+    "skin": "Rain Shepherd Ivern",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg"]
+  },
+  {
+    "id": "quinn::project-quinn::pc",
+    "champ": "Quinn",
+    "skin": "PROJECT: Quinn",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg"]
+  },
+  {
+    "id": "sion::pizza-chef-sion::pc",
+    "champ": "Sion",
+    "skin": "Pizza Chef Sion",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_uncentered_50.skins_sion_skin50.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_uncentered_50.skins_sion_skin50.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg"]
+  },
+  {
+    "id": "illaoi::pasta-maker-illaoi::pc",
+    "champ": "Illaoi",
+    "skin": "Pasta Maker Illaoi",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_uncentered_37.skins_illaoi_skin37.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_uncentered_37.skins_illaoi_skin37.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg"]
+  },
+  {
+    "id": "irelia::breadsticks-irelia::pc",
+    "champ": "Irelia",
+    "skin": "Breadsticks Irelia",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_uncentered_63.skins_irelia_skin63.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_uncentered_63.skins_irelia_skin63.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg"]
+  },
+  {
+    "id": "vel-koz::spaghetti-alla-vel-koz::pc",
+    "champ": "Vel'Koz",
+    "skin": "Spaghetti alla Vel'Koz",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_uncentered_29.skins_velkoz_skin29.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_uncentered_29.skins_velkoz_skin29.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg"]
+  },
+  {
+    "id": "leona::eternal-aspect-leona::pc",
+    "champ": "Leona",
+    "skin": "Eternal Aspect Leona",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_uncentered_64.skins_leona_skin64.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_uncentered_64.skins_leona_skin64.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg"]
+  },
+  {
+    "id": "diana::eternal-aspect-diana::pc",
+    "champ": "Diana",
+    "skin": "Eternal Aspect Diana",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_uncentered_76.skins_diana_skin76.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_uncentered_76.skins_diana_skin76.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg"]
+  },
+  {
+    "id": "diana::eclipse-eternal-aspect-diana::pc",
+    "champ": "Diana",
+    "skin": "Eclipse Eternal Aspect Diana",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_uncentered_77.skins_diana_skin77.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_uncentered_77.skins_diana_skin77.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg"]
+  },
+  {
+    "id": "leblanc::prestige-sinful-shores-leblanc::pc",
+    "champ": "LeBlanc",
+    "skin": "Prestige Sinful Shores LeBlanc",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_uncentered_59.skins_leblanc_skin59.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_uncentered_59.skins_leblanc_skin59.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg"]
+  },
+  {
+    "id": "brand::sinful-shores-brand::pc",
+    "champ": "Brand",
+    "skin": "Sinful Shores Brand",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_uncentered_53.skins_brand_skin53.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_uncentered_53.skins_brand_skin53.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg"]
+  },
+  {
+    "id": "hwei::sinful-shores-hwei::pc",
+    "champ": "Hwei",
+    "skin": "Sinful Shores Hwei",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_uncentered_21.skins_hwei_skin21.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_uncentered_21.skins_hwei_skin21.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg"]
+  },
+  {
+    "id": "jhin::broken-covenant-jhin::pc",
+    "champ": "Jhin",
+    "skin": "Broken Covenant Jhin",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_centered_64.skins_jhin_skin64.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_uncentered_64.skins_jhin_skin64.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_uncentered_64.skins_jhin_skin64.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_centered_64.skins_jhin_skin64.jpg"]
+  },
+  {
+    "id": "aurora::broken-covenant-aurora::pc",
+    "champ": "Aurora",
+    "skin": "Broken Covenant Aurora",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_centered_20.skins_aurora_skin20.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_uncentered_20.skins_aurora_skin20.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_uncentered_20.skins_aurora_skin20.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_centered_20.skins_aurora_skin20.jpg"]
+  },
+  {
+    "id": "shen::broken-covenant-shen::pc",
+    "champ": "Shen",
+    "skin": "Broken Covenant Shen",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_centered_54.skins_shen_skin54.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_uncentered_54.skins_shen_skin54.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_uncentered_54.skins_shen_skin54.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_centered_54.skins_shen_skin54.jpg"]
+  },
+  {
+    "id": "akshan::high-noon-akshan::pc",
+    "champ": "Akshan",
+    "skin": "High Noon Akshan",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_centered_21.skins_akshan_skin21.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_uncentered_21.skins_akshan_skin21.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_uncentered_21.skins_akshan_skin21.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_centered_21.skins_akshan_skin21.jpg"]
+  },
+  {
+    "id": "locke::high-noon-locke::pc",
+    "champ": "Locke",
+    "skin": "High Noon Locke",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_uncentered_1.locke.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_uncentered_1.locke.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg"]
+  },
+  {
+    "id": "galio::t1-galio::pc",
+    "champ": "Galio",
+    "skin": "T1 Galio",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_uncentered_47.skins_galio_skin47.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_uncentered_47.skins_galio_skin47.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg"]
+  },
+  {
+    "id": "xin-zhao::t1-xin-zhao::pc",
+    "champ": "Xin Zhao",
+    "skin": "T1 Xin Zhao",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_uncentered_53.skins_xinzhao_skin53.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_uncentered_53.skins_xinzhao_skin53.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg"]
+  },
+  {
+    "id": "seraphine::t1-seraphine::pc",
+    "champ": "Seraphine",
+    "skin": "T1 Seraphine",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_uncentered_68.skins_seraphine_skin68.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_uncentered_68.skins_seraphine_skin68.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg"]
+  },
+  {
+    "id": "ambessa::t1-ambessa::pc",
+    "champ": "Ambessa",
+    "skin": "T1 Ambessa",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg"]
+  },
+  {
+    "id": "yunara::t1-yunara::pc",
+    "champ": "Yunara",
+    "skin": "T1 Yunara",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_centered_10.skins_yunara_skin10.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_uncentered_10.skins_yunara_skin10.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_uncentered_10.skins_yunara_skin10.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_centered_10.skins_yunara_skin10.jpg"]
+  },
+  {
+    "id": "miss-fortune::mvp-t1-miss-fortune::pc",
+    "champ": "Miss Fortune",
+    "skin": "MVP T1 Miss Fortune",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_uncentered_69.skins_missfortune_skin69.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_uncentered_69.skins_missfortune_skin69.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg"]
+  },
+  {
+    "id": "rengar::victorious-rengar::pc",
+    "champ": "Rengar",
+    "skin": "Victorious Rengar",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_uncentered_49.skins_rengar_skin49.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_uncentered_49.skins_rengar_skin49.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg"]
+  },
+  {
+    "id": "jax::prestige-magma-chamber-jax::pc",
+    "champ": "Jax",
+    "skin": "Prestige Magma Chamber Jax",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_uncentered_42.skins_jax_skin42.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_uncentered_42.skins_jax_skin42.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg"]
+  },
+  {
+    "id": "veigar::prestige-magma-chamber-veigar::pc",
+    "champ": "Veigar",
+    "skin": "Prestige Magma Chamber Veigar",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_centered_67.skins_veigar_skin67.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_uncentered_67.skins_veigar_skin67.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_uncentered_67.skins_veigar_skin67.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_centered_67.skins_veigar_skin67.jpg"]
+  },
+  {
+    "id": "gwen::faerie-court-gwen::pc",
+    "champ": "Gwen",
+    "skin": "Faerie Court Gwen",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_uncentered_48.skins_gwen_skin48.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_uncentered_48.skins_gwen_skin48.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg"]
+  },
+  {
+    "id": "lulu::faerie-court-lulu::pc",
+    "champ": "Lulu",
+    "skin": "Faerie Court Lulu",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_uncentered_56.skins_lulu_skin56.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_uncentered_56.skins_lulu_skin56.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg"]
+  },
+  {
     "id": "bel-veth::faerie-court-bel-veth::pc",
     "champ": "Bel'Veth",
     "skin": "Faerie Court Bel'Veth",
@@ -10,10 +490,82 @@
       "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_centered_29.skins_belveth_skin29.jpg"
     ],
     "fullImage": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bel%27Veth_FaerieCourtSkin_HD.jpg",
-    "fullFallbacks": [
+    "fullHdFallbacks": [
       "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e68f31a74579ce085c3de6798f56a26cc04f9767-1920x1080.jpg",
       "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_uncentered_29.skins_belveth_skin29.jpg",
       "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_centered_29.skins_belveth_skin29.jpg"
     ]
+  },
+  {
+    "id": "seraphine::heartsong-seraphine::pc",
+    "champ": "Seraphine",
+    "skin": "Heartsong Seraphine",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_centered_69.skins_seraphine_skin69.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_uncentered_69.skins_seraphine_skin69.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_uncentered_69.skins_seraphine_skin69.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_centered_69.skins_seraphine_skin69.jpg"]
+  },
+  {
+    "id": "soraka::ocean-song-soraka::pc",
+    "champ": "Soraka",
+    "skin": "Ocean Song Soraka",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_uncentered_63.skins_soraka_skin63.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_uncentered_63.skins_soraka_skin63.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg"]
+  },
+  {
+    "id": "jinx::ocean-song-jinx::pc",
+    "champ": "Jinx",
+    "skin": "Ocean Song Jinx",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_centered_65.skins_jinx_skin65.jpg",
+    "fallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_uncentered_65.skins_jinx_skin65.jpg"],
+    "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_uncentered_65.skins_jinx_skin65.jpg",
+    "fullHdFallbacks": ["https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_centered_65.skins_jinx_skin65.jpg"]
+  },
+  {
+    "id": "tristana::risen-legend-tristana::pc",
+    "champ": "Tristana",
+    "skin": "Risen Legend Tristana",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg",
+    "fallbacks": [
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg",
+      "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_uncentered_79.hol_tristana.jpg"
+    ],
+    "fullImage": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_uncentered_79.hol_tristana.jpg",
+    "fullHdFallbacks": [
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_uncentered_79.hol_tristana.jpg",
+      "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg"
+    ]
+  },
+  {
+    "id": "tristana::immortalized-legend-tristana::pc",
+    "champ": "Tristana",
+    "skin": "Immortalized Legend Tristana",
+    "type": "PC",
+    "image": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg",
+    "fallbacks": [
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg",
+      "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_uncentered_80.hol_tristana.jpg"
+    ],
+    "fullImage": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_uncentered_80.hol_tristana.jpg",
+    "fullHdFallbacks": [
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_uncentered_80.hol_tristana.jpg",
+      "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg"
+    ]
+  },
+  {
+    "id": "orianna::risen-legend-orianna::pc",
+    "champ": "Orianna",
+    "skin": "Risen Legend Orianna",
+    "type": "PC",
+    "image": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Orianna_RisenLegendSkin.jpg",
+    "fallbacks": ["https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Orianna_RisenLegendSkin_HD.jpg"],
+    "fullImage": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Orianna_RisenLegendSkin_HD.jpg",
+    "fullHdFallbacks": ["https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Orianna_RisenLegendSkin.jpg"]
   }
 ]
