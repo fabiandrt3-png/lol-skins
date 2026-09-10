@@ -1,21 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 
 const ROOT = process.cwd();
-const NEW_SKINS_FILE = path.join(ROOT, 'data', 'new-skins.json');
-const POST_CUTOFF_FILE = path.join(ROOT, 'data', 'post-cutoff-additions.js');
+const CATALOG_FILE = path.join(ROOT, 'data', 'image-overrides.json');
 const REPORT_FILE = path.join(ROOT, 'addition-audit-report.json');
 const USER_AGENT = 'lol-skins-additions-audit/1.0 (+https://github.com/fabiandrt3-png/lol-skins)';
 const TIMEOUT_MS = 20000;
 const CONCURRENCY = 8;
 const cache = new Map();
 
-const existing = JSON.parse(fs.readFileSync(NEW_SKINS_FILE, 'utf8'));
-const module = await import(`${pathToFileURL(POST_CUTOFF_FILE).href}?audit=${Date.now()}`);
-const postCutoff = Array.isArray(module.postCutoffAdditions) ? module.postCutoffAdditions : [];
-const entries = [...existing, ...postCutoff];
+const payload = JSON.parse(fs.readFileSync(CATALOG_FILE, 'utf8'));
+const catalog = Array.isArray(payload?.catalog) ? payload.catalog : [];
+const entries = catalog.filter((entry) => entry?.sourceKind && entry.sourceKind !== 'legacy');
+
+if (!entries.length) {
+  throw new Error('No non-legacy additions found in data/image-overrides.json');
+}
 
 const tasks = entries.map((entry) => async () => auditEntry(entry));
 const results = await runPool(tasks, Math.min(CONCURRENCY, Math.max(tasks.length, 1)));
@@ -35,6 +36,7 @@ const summary = {
 
 fs.writeFileSync(REPORT_FILE, JSON.stringify({
   generatedAt: new Date().toISOString(),
+  source: 'data/image-overrides.json#catalog',
   summary,
   unresolved: unresolved.map(({ champion, skin, type, card, fullscreen }) => ({ champion, skin, type, card, fullscreen })),
   lowCard: lowCard.map(({ champion, skin, card }) => ({ champion, skin, card })),
@@ -59,6 +61,7 @@ async function auditEntry(entry) {
     skin: entry.skin,
     type: entry.type || 'PC',
     releaseDate: entry.releaseDate || null,
+    sourceKind: entry.sourceKind || null,
     card,
     fullscreen,
   };
