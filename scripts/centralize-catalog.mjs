@@ -8,16 +8,28 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
 }
 
 let catalogChanged = false;
-const modernId = 'alistar::black-alistar-modern::pc';
-const blackId = 'alistar::black-alistar::99';
-const modernIndex = payload.catalog.findIndex((item) => item?.id === modernId);
-const blackIndex = payload.catalog.findIndex((item) => item?.id === blackId);
+const t1Ambessa = payload.catalog.find((item) => item?.id === 'ambessa::t1-ambessa::pc');
 
-if (modernIndex >= 0 && blackIndex >= 0 && modernIndex !== blackIndex + 1) {
-  const [modern] = payload.catalog.splice(modernIndex, 1);
-  const updatedBlackIndex = payload.catalog.findIndex((item) => item?.id === blackId);
-  payload.catalog.splice(updatedBlackIndex + 1, 0, modern);
-  catalogChanged = true;
+if (t1Ambessa) {
+  const next = {
+    image: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_8.skins_ambessa_skin08.jpg',
+    fallbacks: [
+      'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ambessa_8.jpg',
+      'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_8.skins_ambessa_skin08.jpg',
+    ],
+    fullImage: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_8.skins_ambessa_skin08.jpg',
+    fullHdFallbacks: [
+      'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_8.skins_ambessa_skin08.jpg',
+      'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ambessa_8.jpg',
+    ],
+  };
+
+  for (const [key, value] of Object.entries(next)) {
+    if (JSON.stringify(t1Ambessa[key]) !== JSON.stringify(value)) {
+      t1Ambessa[key] = value;
+      catalogChanged = true;
+    }
+  }
 }
 
 const before = payload.catalog;
@@ -81,7 +93,7 @@ function printSummary(catalog, changed) {
   console.log(`${changed ? 'Sorted' : 'Verified'} ${catalog.length} skin records across ${champions.length} champions.`);
   console.log(`Champion range: ${champions.slice(0, 5).join(', ')} ... ${champions.slice(-5).join(', ')}`);
 
-  for (const champion of ['Aatrox', 'Ahri', 'Akali', 'Alistar']) {
+  for (const champion of ['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Ambessa']) {
     const skins = catalog.filter((item) => item.champ === champion).map((item) => item.skin);
     if (skins.length) console.log(`${champion}: ${skins.join(' > ')}`);
   }
