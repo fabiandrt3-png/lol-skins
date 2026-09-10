@@ -2,7 +2,7 @@
   "generatedAt": "2026-09-09T20:32:41.338Z",
   "strategy": "best verified resolution within semantically-correct candidates; stable fallbacks retained",
   "qualityPolicy": "Exact skin identity first; highest verified pixel area second. Never substitute a different skin/chroma/edition merely for more pixels.",
-  "catalogGeneratedAt": "2026-09-10T17:09:38.228Z",
+  "catalogGeneratedAt": "2026-09-10T17:13:11.895Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; chronological skin order preserved; distinct chroma splash arts grouped immediately after their parent skin; duplicate artwork removed",
   "catalog": [
     {
