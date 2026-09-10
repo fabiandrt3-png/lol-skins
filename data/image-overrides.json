@@ -1772,6 +1772,14 @@
         "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/anivia/skins/skin46/images/anivia_splash_centered_46.jpg"
       ]
     },
+  "anivia::old-god-anivia::148": {
+    "id": "https://x.com/NewAzkaryan/status/2097717833593454802/photo/1",
+    "champ": "Anivia",
+    "skin": "Old God Anivia",
+    "image": "https://x.com/NewAzkaryan/status/2097717833593454802/photo/1",
+    "fullImage": "Lhttps://x.com/NewAzkaryan/status/2097717833593454802/photo/1"
+      ]
+    },
     "annie::classic-annie::149": {
       "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_HD.jpg",
       "width": 6000,
