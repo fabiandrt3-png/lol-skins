@@ -68,8 +68,8 @@ async function auditEntry(entry) {
 
 async function firstWorking(candidates) {
   for (const url of candidates) {
-    const probe = await probe(url);
-    if (probe) return { ok: true, ...probe };
+    const result = await probe(url);
+    if (result) return { ok: true, ...result };
   }
   return { ok: false, attempted: candidates };
 }
@@ -94,7 +94,7 @@ async function fetchImage(url) {
     const response = await fetch(url, {
       redirect: 'follow',
       signal: controller.signal,
-      headers: { 'user-agent': USER_AGENT, accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8' },
+      headers: { 'user-agent': USER_AGENT, accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' },
     });
     if (!response.ok) return null;
     const type = (response.headers.get('content-type') || '').toLowerCase();
