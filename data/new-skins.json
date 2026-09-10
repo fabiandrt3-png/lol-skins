@@ -8,6 +8,12 @@
     "fallbacks": [
       "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_uncentered_29.skins_belveth_skin29.jpg",
       "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_centered_29.skins_belveth_skin29.jpg"
+    ],
+    "fullImage": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bel%27Veth_FaerieCourtSkin_HD.jpg",
+    "fullFallbacks": [
+      "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e68f31a74579ce085c3de6798f56a26cc04f9767-1920x1080.jpg",
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_uncentered_29.skins_belveth_skin29.jpg",
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/skin29/images/belveth_splash_centered_29.skins_belveth_skin29.jpg"
     ]
   }
 ]
