@@ -4,6 +4,14 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 4 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - 'data/new-skins.json'
+      - 'data/post-cutoff-additions.js'
+      - 'data-loader.js'
+      - 'scripts/audit-additions.mjs'
+      - '.github/workflows/audit-splashes.yml'
 
 concurrency:
   group: audit-splash-arts
