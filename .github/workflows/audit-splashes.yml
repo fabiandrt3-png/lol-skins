@@ -11,6 +11,7 @@ on:
       - 'data/post-cutoff-additions.js'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
+      - 'scripts/consolidate-catalog.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -50,6 +51,10 @@ jobs:
       - name: Search higher resolution exact originals
         continue-on-error: true
         run: node scripts/upgrade-low-res.mjs
+
+      - name: Rebuild centralized skin catalogue
+        if: always()
+        run: node scripts/consolidate-catalog.mjs
 
       - name: Save verified image map and audit reports
         shell: bash
