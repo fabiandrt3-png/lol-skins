@@ -14,29 +14,51 @@ if (lightbox && lightboxImage && lightboxTitle) {
   const failedSources = new Set();
   const pendingSources = new Map();
 
+  const setHdState = (state) => {
+    lightboxImage.dataset.hdState = state;
+    lightbox.dataset.hdState = state;
+  };
+
   const syncFullscreenSource = () => {
     if (lightbox.hidden) return;
 
     const displayName = lightboxTitle.textContent.trim();
     const candidates = fullscreenSources.get(displayName) || [];
     const currentSource = lightboxImage.getAttribute("src") || "";
-    if (!candidates.length || candidates.includes(currentSource)) return;
+
+    if (!candidates.length) {
+      setHdState("unavailable");
+      return;
+    }
+
+    if (candidates.includes(currentSource)) {
+      setHdState("ready");
+      return;
+    }
 
     const source = candidates.find((candidate) => !failedSources.has(candidate));
-    if (!source) return;
+    if (!source) {
+      setHdState("unavailable");
+      return;
+    }
+
+    setHdState("loading");
 
     if (loadedSources.has(source)) {
       lightboxImage.src = source;
+      setHdState("ready");
       return;
     }
 
     if (pendingSources.has(source)) return;
 
-    // Keep the normal-size card splash visible until the HD file is ready.
-    // Only the currently opened image is upgraded, so adjacent carousel slides
-    // stay lightweight on mobile and desktop.
+    // Keep the lightweight card splash visible as a temporary preview, but
+    // request the HD artwork immediately at high priority. Desktop zoom waits
+    // for this HD request so a 1024 px preview is never enlarged by mistake.
     const preload = new Image();
     preload.decoding = "async";
+    preload.loading = "eager";
+    preload.fetchPriority = "high";
     pendingSources.set(source, preload);
 
     preload.onload = () => {
@@ -48,6 +70,7 @@ if (lightbox && lightboxImage && lightboxTitle) {
         (fullscreenSources.get(displayName) || []).includes(source)
       ) {
         lightboxImage.src = source;
+        setHdState("ready");
       }
     };
 
@@ -88,7 +111,8 @@ function setupDesktopZoom(lightbox, image, title) {
   };
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
-  const isActive = () => desktopPointer.matches && !lightbox.hidden;
+  const hdIsLoading = () => image.dataset.hdState === "loading";
+  const isActive = () => desktopPointer.matches && !lightbox.hidden && !hdIsLoading();
 
   const clampPan = () => {
     if (!figure || zoom.scale <= 1) {
@@ -116,13 +140,20 @@ function setupDesktopZoom(lightbox, image, title) {
       ? "transform 140ms cubic-bezier(.2,.8,.2,1)"
       : "none";
     image.style.willChange = zoom.scale > 1 ? "transform" : "auto";
-    image.style.cursor = zoom.scale > 1
-      ? (zoom.dragging ? "grabbing" : "grab")
-      : "zoom-in";
+
+    if (hdIsLoading()) image.style.cursor = "progress";
+    else {
+      image.style.cursor = zoom.scale > 1
+        ? (zoom.dragging ? "grabbing" : "grab")
+        : "zoom-in";
+    }
+
     image.title = desktopPointer.matches
-      ? (zoom.scale > 1
-        ? "Glisser pour déplacer · molette pour zoomer · double-clic pour réinitialiser"
-        : "Molette ou double-clic pour zoomer")
+      ? (hdIsLoading()
+        ? "Chargement de l’image HD…"
+        : zoom.scale > 1
+          ? "Glisser pour déplacer · molette pour zoomer · double-clic pour réinitialiser"
+          : "Molette ou double-clic pour zoomer")
       : "";
     lightbox.dataset.desktopZoomed = zoom.scale > 1 ? "true" : "false";
   };
@@ -146,15 +177,24 @@ function setupDesktopZoom(lightbox, image, title) {
   };
 
   figure?.addEventListener("wheel", (event) => {
-    if (!isActive()) return;
+    if (!desktopPointer.matches || lightbox.hidden) return;
+    if (hdIsLoading()) {
+      event.preventDefault();
+      applyZoom({ animate: false });
+      return;
+    }
     event.preventDefault();
     const factor = event.deltaY < 0 ? 1.16 : 1 / 1.16;
     setScale(zoom.scale * factor, { animate: false });
   }, { passive: false });
 
   image.addEventListener("dblclick", (event) => {
-    if (!isActive()) return;
+    if (!desktopPointer.matches || lightbox.hidden) return;
     event.preventDefault();
+    if (hdIsLoading()) {
+      applyZoom({ animate: false });
+      return;
+    }
     setScale(zoom.scale > 1 ? 1 : 2.25);
   });
 
@@ -213,10 +253,14 @@ function setupDesktopZoom(lightbox, image, title) {
     if (lightbox.hidden || currentTitle !== zoom.title) {
       zoom.title = currentTitle;
       resetZoom();
+      return;
     }
+    applyZoom({ animate: false });
   });
-  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
+  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden", "data-hd-state"] });
   stateObserver.observe(title, { childList: true, subtree: true, characterData: true });
+
+  image.addEventListener("load", () => applyZoom({ animate: false }));
 
   window.addEventListener("resize", () => {
     if (zoom.scale > 1) applyZoom({ animate: false });
