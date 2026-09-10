@@ -1,4 +1,5 @@
 const WIKI = "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/";
+const TENCENT_CHROMA = "https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/";
 
 function slugify(value = "") {
   return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -9,7 +10,7 @@ function wikiFile(champion, descriptor, suffix = "") {
   return `${WIKI}${encodeURIComponent(`${prefix}_${descriptor}Skin${suffix}.jpg`)}`;
 }
 
-function wr(champ, skin, releaseDate, descriptor, extraFallbacks = [], hasWrHd = true) {
+function wr(champ, skin, releaseDate, descriptor, extraFallbacks = []) {
   const standard = wikiFile(champ, descriptor, "_WR");
   const hd = wikiFile(champ, descriptor, "_WR_HD");
   const pcStandard = wikiFile(champ, descriptor, "");
@@ -17,9 +18,9 @@ function wr(champ, skin, releaseDate, descriptor, extraFallbacks = [], hasWrHd =
   return {
     id: `${slugify(champ)}::${slugify(skin)}::wild-rift`, champ, skin, type: "Wild Rift", releaseDate,
     image: standard,
-    fallbacks: hasWrHd ? [...extraFallbacks, pcStandard, hd] : [...extraFallbacks, pcStandard],
-    fullImage: hasWrHd ? hd : pcHd,
-    fullHdFallbacks: hasWrHd ? [pcHd, standard, pcStandard, ...extraFallbacks] : [standard, pcStandard, ...extraFallbacks],
+    fallbacks: [...extraFallbacks, pcStandard, hd],
+    fullImage: hd,
+    fullHdFallbacks: [pcHd, standard, pcStandard, ...extraFallbacks],
   };
 }
 
@@ -37,14 +38,19 @@ function pc(champ, skin, releaseDate, alias, number, descriptor) {
   };
 }
 
-export const postCutoffAdditions = [
-  // Aatrox Wild Rift backfill: official catalog entries missing from the legacy file.
-  // These four WR splashes have no dedicated WR_HD file on the Wiki, so fullscreen skips a known 404 and uses the PC HD artwork first.
-  wr("Aatrox", "Classic Aatrox", "2022-11-17", "Original", [], false),
-  wr("Aatrox", "Blood Moon Aatrox", "2022-11-17", "BloodMoon", [], false),
-  wr("Aatrox", "Mecha Aatrox", "2023-08-25", "Mecha", [], false),
-  wr("Aatrox", "Primordian Aatrox", "2024-11-08", "Primordian", [], false),
+function chinaChroma(champ, skin, releaseDate, assetId) {
+  const card = `${TENCENT_CHROMA}site3-${assetId}.jpg`;
+  const fullscreen = `${TENCENT_CHROMA}site5-${assetId}.jpg`;
+  return {
+    id: `${slugify(champ)}::${slugify(skin)}::pc`, champ, skin, type: "PC", releaseDate,
+    image: card,
+    fallbacks: [fullscreen],
+    fullImage: fullscreen,
+    fullHdFallbacks: [card],
+  };
+}
 
+export const postCutoffAdditions = [
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
   pc("Lillia", "Petals of Spring Lillia", "2026-02-19", "lillia", 46, "PetalsofSpring"),
@@ -120,4 +126,8 @@ export const postCutoffAdditions = [
   wr("Lucian", "PROJECT: Lucian (Exquisite Edition)", "2026-09-04", "PROJECTExquisiteEdition"),
   wr("Pyke", "PROJECT: Pyke (Exquisite Edition)", "2026-09-04", "PROJECTExquisiteEdition"),
   wr("Varus", "Elf Forest Varus", "2026-09-10", "ElfForest"),
+
+  // Patch 26.14: Tencent released two genuinely distinct Primordian Aatrox chroma splash arts.
+  chinaChroma("Aatrox", "Primordian Aatrox (Ruby Chroma)", "2026-07-24", "04d46cbd-375b-406b-9038-c5c3455f2a9e"),
+  chinaChroma("Aatrox", "Primordian Aatrox (Sapphire Chroma)", "2026-07-24", "0745a936-f477-408b-a743-870f9d6e96d8"),
 ];
