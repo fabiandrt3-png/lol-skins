@@ -10,6 +10,18 @@ function wikiFile(champion, descriptor, suffix = "") {
   return `${WIKI}${encodeURIComponent(`${prefix}_${descriptor}Skin${suffix}.jpg`)}`;
 }
 
+function wikiSkin(champ, skin, releaseDate, descriptor) {
+  const standard = wikiFile(champ, descriptor);
+  const hd = wikiFile(champ, descriptor, "_HD");
+  return {
+    id: `${slugify(champ)}::${slugify(skin)}::pc`, champ, skin, type: "PC", releaseDate,
+    image: standard,
+    fallbacks: [hd],
+    fullImage: hd,
+    fullHdFallbacks: [standard],
+  };
+}
+
 function wr(champ, skin, releaseDate, descriptor, extraFallbacks = []) {
   const standard = wikiFile(champ, descriptor, "_WR");
   const hd = wikiFile(champ, descriptor, "_WR_HD");
@@ -50,11 +62,9 @@ function chinaChroma(champ, skin, releaseDate, assetId) {
 }
 
 export const postCutoffAdditions = [
-  // Ahri backfill: unique PC splash arts missing from the legacy catalogue.
-  pc("Ahri", "Prestige K/DA Ahri (2022)", "2022-04-01", "ahri", 65, "PrestigeKDA(2022)"),
-  pc("Ahri", "Arcana Ahri", "2022-04-14", "ahri", 66, "Arcana"),
-  chinaChroma("Ahri", "Popstar Ahri (Ahri-versary Chroma)", "2021-12-09", "ec609b0e-f28a-4d61-bfbd-02b358960fc2"),
-  chinaChroma("Ahri", "Spirit Blossom Springs Ahri (Catseye Chroma)", "2026-07-15", "fcdef6b5-25f7-4784-8712-a5d61dedbf55"),
+  // Ahri historical backfill confirmed by the League Wiki HD skin category.
+  // Prestige K/DA Ahri (2022) is intentionally not duplicated: its HD file redirects to the existing Prestige K/DA splash.
+  wikiSkin("Ahri", "Arcana Ahri", "2022-04-14", "Arcana"),
 
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
