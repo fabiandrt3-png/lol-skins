@@ -96,7 +96,7 @@ export const postCutoffAdditions = [
   wr("Ashe", "Weather Entity Ashe", "2026-07-09", "WeatherEntity"),
   wr("Vladimir", "Prestige Weather Entity Vladimir", "2026-07-09", "PrestigeWeatherEntity"),
   wr("Ryze", "Movie Director Ryze", "2026-07-09", "MovieDirector"),
-  wr("Ryze", "Ascended Movie Director Ryze", "2026-07-09", "AscendedSoulFighter"),
+  wr("Ryze", "Ascended Movie Director Ryze", "2026-07-09", "AscendedMovieDirector"),
   wr("Skarner", "Cosmic Sting Skarner", "2026-07-09", "CosmicSting"),
   wr("Renekton", "Glorious Eminence Renekton", "2026-07-10", "GloriousEminence"),
   wr("Lulu", "Purple Garlic Lulu", "2026-07-10", "PurpleGarlic"),
