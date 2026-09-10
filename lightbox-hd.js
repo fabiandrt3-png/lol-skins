@@ -10,11 +10,18 @@ const lightboxTitle = document.querySelector("#lightboxTitle");
 
 if (lightbox && lightboxImage && lightboxTitle) {
   const fullscreenSources = await loadFullscreenSources();
+  const desktopCarousel = setupDesktopCrispCarousel(lightbox, lightboxImage);
   const hdController = setupHdSourceController(lightbox, lightboxImage, lightboxTitle, fullscreenSources);
-  const desktopViewer = setupDesktopNativeViewer(lightbox, lightboxImage, lightboxTitle);
+  const desktopViewer = setupDesktopNativeViewer(
+    lightbox,
+    lightboxImage,
+    lightboxTitle,
+    desktopCarousel.sync,
+  );
 
   const syncCurrentSkin = () => {
     desktopViewer.reset();
+    desktopCarousel.sync();
     hdController.sync();
   };
 
@@ -50,8 +57,8 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
       try {
         await preload.decode();
       } catch {
-        // onload already proves the image is usable; decode() is only an extra
-        // attempt to have the full-resolution bitmap ready before the swap.
+        // onload already proves the source is usable. decode() only asks the
+        // browser to finish preparing the full bitmap before it becomes visible.
       }
       loadedSources.add(source);
       resolve(true);
@@ -92,9 +99,9 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
       if (!loaded) continue;
       if (token !== requestToken || lightbox.hidden || title.textContent.trim() !== displayName) return;
 
-      // Swap only after the HD file is loaded/decoded. This leaves app.js in
-      // charge of the lightweight card fallback and avoids competing onerror
-      // handlers or a race between the card URL and the HD URL.
+      // app.js remains responsible for the card-sized fallback. The HD source
+      // is swapped in only after it has loaded successfully, so the two source
+      // systems never race against each other's error handlers.
       image.loading = "eager";
       image.fetchPriority = "high";
       image.dataset.hdSource = source;
@@ -107,7 +114,6 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
 
       image.addEventListener("load", onHdDisplayed);
       image.src = source;
-
       if (image.complete && image.naturalWidth > 0) queueMicrotask(onHdDisplayed);
       return;
     }
@@ -118,7 +124,87 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
   return { sync };
 }
 
-function setupDesktopNativeViewer(lightbox, image, title) {
+function setupDesktopCrispCarousel(lightbox, image) {
+  const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const figure = image.closest(".lightbox-figure");
+  const track = figure?.firstElementChild;
+  const slides = track ? [...track.children] : [];
+  let currentOffset = 0;
+
+  if (!figure || !track || slides.length !== 3) return { sync() {} };
+
+  const parseAppOffset = (transform) => {
+    if (!transform) return null;
+    const calcMatch = transform.match(/calc\(\s*-33\.333333%\s*\+\s*(-?\d+(?:\.\d+)?)px\s*\)/i);
+    if (calcMatch) return Number(calcMatch[1]);
+    if (/-33\.333333%/i.test(transform)) return 0;
+    return null;
+  };
+
+  const applyOffset = (offset) => {
+    currentOffset = Number.isFinite(offset) ? offset : 0;
+    const atRest = Math.abs(currentOffset) < 0.01;
+    track.style.transform = atRest ? "none" : `translate3d(${currentOffset}px, 0, 0)`;
+    track.style.willChange = atRest ? "auto" : "transform";
+  };
+
+  const restoreAppGeometry = () => {
+    currentOffset = 0;
+    track.style.position = "";
+    track.style.left = "";
+    track.style.width = "300%";
+    track.style.transform = "translate3d(-33.333333%, 0, 0)";
+    track.style.willChange = "transform";
+    slides.forEach((slide) => {
+      slide.style.width = "";
+      slide.style.flex = "0 0 33.333333%";
+    });
+  };
+
+  const sync = () => {
+    if (!desktopPointer.matches) {
+      restoreAppGeometry();
+      return;
+    }
+
+    const width = figure.clientWidth || window.innerWidth;
+    if (!width) return;
+
+    // The base app uses a 300%-wide track translated by -33.333333%. On a
+    // desktop this can leave the displayed slide on a fractional/composited
+    // position. Give every slide an exact pixel width and place the middle
+    // slide with layout (left) instead. At rest there is no transform at all.
+    track.style.position = "relative";
+    track.style.left = `${-width}px`;
+    track.style.width = `${width * 3}px`;
+    slides.forEach((slide) => {
+      slide.style.width = `${width}px`;
+      slide.style.flex = `0 0 ${width}px`;
+    });
+    applyOffset(currentOffset);
+  };
+
+  const styleObserver = new MutationObserver(() => {
+    if (!desktopPointer.matches) return;
+    const appOffset = parseAppOffset(track.style.transform);
+    if (appOffset === null) return;
+    applyOffset(appOffset);
+  });
+  styleObserver.observe(track, { attributes: true, attributeFilter: ["style"] });
+
+  window.addEventListener("resize", () => requestAnimationFrame(sync), { passive: true });
+  desktopPointer.addEventListener?.("change", () => requestAnimationFrame(sync));
+
+  // Closing or changing a skin always returns app.js to offset 0. Reassert the
+  // exact desktop geometry after that synchronous render.
+  const stateObserver = new MutationObserver(() => requestAnimationFrame(sync));
+  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
+
+  requestAnimationFrame(sync);
+  return { sync: () => requestAnimationFrame(sync) };
+}
+
+function setupDesktopNativeViewer(lightbox, image, title, syncCarousel) {
   const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const figure = image.closest(".lightbox-figure");
   const state = {
@@ -171,9 +257,8 @@ function setupDesktopNativeViewer(lightbox, image, title) {
 
   const useFullDesktopViewport = () => {
     if (!figure) return;
-    // The stylesheet intentionally keeps the mobile viewer compact. On a
-    // desktop pointer, the splash art should instead use the actual viewport;
-    // the old 1500x900 cap threw away a large part of the available display.
+    // The stylesheet caps desktop at 1500x900. Fullscreen artwork should use
+    // the real desktop viewport; the mobile dimensions remain untouched.
     figure.style.width = "calc(100vw - 24px)";
     figure.style.height = "calc(100dvh - 24px)";
     figure.style.maxWidth = "none";
@@ -206,10 +291,8 @@ function setupDesktopNativeViewer(lightbox, image, title) {
     clampPan();
     const { width, height } = currentSize();
 
-    // Important: zoom by changing the image's real layout size, NOT with
-    // transform: scale(). Chrome therefore resamples from the original image
-    // pixels at the requested size instead of enlarging a smaller compositor
-    // layer. left/top are used only for panning and never for scaling.
+    // Zoom by changing the image's real layout dimensions. No scale() is used,
+    // so the browser can sample the original source for every requested size.
     image.style.maxWidth = "none";
     image.style.maxHeight = "none";
     image.style.width = `${width}px`;
@@ -245,12 +328,15 @@ function setupDesktopNativeViewer(lightbox, image, title) {
       state.maxLevel = 1;
       clearImageLayout();
       restoreFigureSize();
+      syncCarousel?.();
       return;
     }
 
     useFullDesktopViewport();
+    syncCarousel?.();
 
     state.frame = requestAnimationFrame(() => {
+      syncCarousel?.();
       const container = slide();
       if (!container || !image.complete || image.naturalWidth <= 0 || image.naturalHeight <= 0) return;
 
@@ -265,9 +351,9 @@ function setupDesktopNativeViewer(lightbox, image, title) {
       state.baseWidth = Math.max(1, image.naturalWidth * fit);
       state.baseHeight = Math.max(1, image.naturalHeight * fit);
 
-      // Stop at the source's native CSS-pixel size. Past this point there is no
-      // additional detail to reveal, only interpolation, so the viewer does not
-      // manufacture blur by over-zooming a low-resolution splash art.
+      // Native-size ceiling: beyond 1 source pixel per CSS pixel there is no
+      // new image detail, only interpolation. Very large sources can still go
+      // up to 8x if their native dimensions genuinely allow it.
       state.maxLevel = Math.max(1, Math.min(8, 1 / fit));
       state.level = clamp(state.level, 1, state.maxLevel);
       clampPan();
@@ -286,6 +372,7 @@ function setupDesktopNativeViewer(lightbox, image, title) {
     else {
       clearImageLayout();
       restoreFigureSize();
+      syncCarousel?.();
     }
   };
 
@@ -310,8 +397,8 @@ function setupDesktopNativeViewer(lightbox, image, title) {
     const containerRect = container.getBoundingClientRect();
     if (!imageRect.width || !imageRect.height) return;
 
-    // Anchor the zoom to the artwork point currently below the cursor. If the
-    // cursor is in the black letterbox area, use the nearest image edge.
+    // Preserve the exact artwork point under the cursor. In a letterbox area,
+    // the nearest edge becomes the anchor instead of snapping to the center.
     const anchorX = clamp(clientX, imageRect.left, imageRect.right);
     const anchorY = clamp(clientY, imageRect.top, imageRect.bottom);
     const localX = (anchorX - imageRect.left) / imageRect.width;
@@ -331,6 +418,7 @@ function setupDesktopNativeViewer(lightbox, image, title) {
   figure?.addEventListener("wheel", (event) => {
     if (!isDesktopOpen()) return;
     event.preventDefault();
+
     if (hdIsLoading()) {
       image.style.cursor = "progress";
       return;
@@ -408,8 +496,8 @@ function setupDesktopNativeViewer(lightbox, image, title) {
   }, { capture: true });
 
   image.addEventListener("load", () => {
-    // A newly displayed HD source has different intrinsic dimensions from the
-    // card preview, so remeasure from naturalWidth/naturalHeight every time.
+    // Card preview and HD source have different intrinsic sizes. Every source
+    // change is remeasured from naturalWidth/naturalHeight before zoom resumes.
     state.level = 1;
     state.panX = 0;
     state.panY = 0;
