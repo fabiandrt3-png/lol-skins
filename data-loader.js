@@ -4,6 +4,29 @@ const NEW_SKINS_SOURCE = "data/new-skins.json";
 const POST_CUTOFF_SOURCE = "data/post-cutoff-additions.js";
 const ENTRY_FIELDS = ["champ", "skin", "image", "icon", "type"];
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
+const AATROX_CHRONOLOGY = new Map([
+  "Classic Aatrox",
+  "Justicar Aatrox",
+  "Mecha Aatrox",
+  "Sea Hunter Aatrox",
+  "Blood Moon Aatrox",
+  "Blood Moon Aatrox (Prestige)",
+  "Victorious Aatrox",
+  "Odyssey Aatrox",
+  "Lunar Eclipse Aatrox",
+  "DRX Aatrox",
+  "DRX Aatrox (Prestige)",
+  "Shan Hai Scrolls Aatrox",
+  "Mecha Aatrox (Pearl Chroma)",
+  "Dragon Lantern Aatrox",
+  "Dragon Lantern Aatrox (Prestige Select)",
+  "Primordian Aatrox",
+  "Primordian Aatrox (Catseye Chroma)",
+  "Weather Entity Aatrox",
+  "Mecha Aatrox (Exquisite Edition)",
+  "Primordian Aatrox (Ruby Chroma)",
+  "Primordian Aatrox (Sapphire Chroma)",
+].map((skin, index) => [skin, index]));
 
 let skinDataPromise;
 
@@ -21,7 +44,8 @@ export function loadSkinData() {
 
       // Some historical entries were manually added after the repository was created.
       // Keep the oldest occurrence and prevent the post-cutoff feed from duplicating it.
-      return dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenSkin(item));
+      const catalog = dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenSkin(item));
+      return sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
     });
   }
 
@@ -78,6 +102,30 @@ function dedupeSkins(items) {
     seen.add(key);
     return true;
   });
+}
+
+function sortChampionByKnownChronology(items, champion, chronology) {
+  const championItems = [];
+  const remainder = [];
+  let insertAt = -1;
+
+  for (const item of items) {
+    if (item.champ === champion) {
+      if (insertAt === -1) insertAt = remainder.length;
+      championItems.push(item);
+    } else {
+      remainder.push(item);
+    }
+  }
+
+  if (championItems.length < 2) return items;
+  championItems.sort((a, b) => {
+    const aOrder = chronology.get(a.skin) ?? Number.MAX_SAFE_INTEGER;
+    const bOrder = chronology.get(b.skin) ?? Number.MAX_SAFE_INTEGER;
+    return aOrder - bOrder;
+  });
+  remainder.splice(insertAt, 0, ...championItems);
+  return remainder;
 }
 
 function isHiddenSkin(item) {
