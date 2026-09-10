@@ -145,13 +145,18 @@ catalog = sortChampion(catalog, 'Aatrox', AATROX_ORDER);
 catalog = sortChampion(catalog, 'Ahri', AHRI_ORDER);
 catalog = sortChampion(catalog, 'Akali', AKALI_ORDER);
 
+// Node's Array#sort is stable: this enforces champion A-Z without disturbing
+// the already-correct skin order inside each champion group.
+catalog.sort((a, b) => a.champ.localeCompare(b.champ, 'en', { sensitivity: 'base' }));
+
 const output = {
-  ...existing,
   generatedAt: existing.generatedAt || new Date().toISOString(),
   strategy: existing.strategy || 'best verified resolution within semantically-correct candidates; stable fallbacks retained',
+  ...(existing.qualityPolicy ? { qualityPolicy: existing.qualityPolicy } : {}),
   catalogGeneratedAt: new Date().toISOString(),
-  catalogStrategy: 'single runtime catalogue; unique artwork only; distinct chroma splash arts grouped after their parent skin',
+  catalogStrategy: 'single runtime catalogue; champions A-Z; chronological skin order preserved; distinct chroma splash arts grouped immediately after their parent skin; duplicate artwork removed',
   catalog,
+  // Technical verification map kept in the same single data file for the audit/repair tools.
   entries: existing.entries && !Array.isArray(existing.entries) ? existing.entries : {},
 };
 
