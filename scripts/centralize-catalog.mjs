@@ -7,6 +7,37 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
+const grandReckoningAlistar = {
+  id: 'alistar::grand-reckoning-alistar::pc',
+  champ: 'Alistar',
+  skin: 'Grand Reckoning Alistar',
+  type: 'PC',
+  status: 'Cancelled',
+  image: 'https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg',
+  fullImage: 'https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin_HD.jpg',
+  fallbacks: [
+    'https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Alistar_GrandReckoningSkin.jpg',
+  ],
+  fullHdFallbacks: [
+    'https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Alistar_GrandReckoningSkin_HD.jpg',
+    'https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg',
+  ],
+  sourceKind: 'post-cutoff',
+};
+
+if (!payload.catalog.some((item) => item?.id === grandReckoningAlistar.id)) {
+  const nextModernIndex = payload.catalog.findIndex((item) => item?.id === 'alistar::black-alistar-modern::pc');
+  if (nextModernIndex >= 0) {
+    payload.catalog.splice(nextModernIndex, 0, grandReckoningAlistar);
+  } else {
+    const lastAlistarIndex = payload.catalog.reduce(
+      (lastIndex, item, index) => item?.champ === 'Alistar' ? index : lastIndex,
+      -1,
+    );
+    payload.catalog.splice(lastAlistarIndex + 1, 0, grandReckoningAlistar);
+  }
+}
+
 const before = payload.catalog;
 const beforeIds = before.map(stableId);
 const sorted = before
@@ -68,7 +99,7 @@ function printSummary(catalog, changed) {
   console.log(`${changed ? 'Sorted' : 'Verified'} ${catalog.length} skin records across ${champions.length} champions.`);
   console.log(`Champion range: ${champions.slice(0, 5).join(', ')} ... ${champions.slice(-5).join(', ')}`);
 
-  for (const champion of ['Aatrox', 'Ahri', 'Akali']) {
+  for (const champion of ['Aatrox', 'Ahri', 'Akali', 'Alistar']) {
     const skins = catalog.filter((item) => item.champ === champion).map((item) => item.skin);
     if (skins.length) console.log(`${champion}: ${skins.join(' > ')}`);
   }
