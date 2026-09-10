@@ -1,0 +1,4397 @@
+{
+  "generatedAt": "2026-09-10T10:53:06.758Z",
+  "summary": {
+    "total": 122,
+    "fullyVerified": 73,
+    "unresolved": 49,
+    "pc": 59,
+    "wildRift": 63,
+    "belowCardTarget": 1,
+    "belowFullscreenTarget": 42
+  },
+  "unresolved": [
+    {
+      "champion": "Sejuani",
+      "skin": "Pug Trainer Sejuani",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Vladimir",
+      "skin": "PsyOps Vladimir",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Sivir",
+      "skin": "PROJECT: Sivir",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Zac",
+      "skin": "Space Groove Zac",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Master Yi",
+      "skin": "PROJECT: Command Line Yi",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Annie",
+      "skin": "Pandemonium Annie",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Kindred",
+      "skin": "Pandemonium Kindred",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Vayne",
+      "skin": "Demoncursed Vayne",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Shaco",
+      "skin": "Prestige Pandemonium Shaco",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ivern",
+      "skin": "Rain Shepherd Ivern",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Quinn",
+      "skin": "PROJECT: Quinn",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ambessa",
+      "skin": "T1 Ambessa",
+      "type": "PC",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Mel",
+      "skin": "Love Confession Mel",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Jayce",
+      "skin": "Love Confession Jayce",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Varus",
+      "skin": "Ascended Soul Fighter Varus",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ornn",
+      "skin": "Choo-Choo Ornn",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Samira",
+      "skin": "Ashen Avenger Samira",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Yunara",
+      "skin": "Weather Entity Yunara",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Poppy",
+      "skin": "Weather Entity Poppy",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nocturne",
+      "skin": "Weather Entity Nocturne",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ashe",
+      "skin": "Weather Entity Ashe",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Vladimir",
+      "skin": "Prestige Weather Entity Vladimir",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ryze",
+      "skin": "Movie Director Ryze",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Ryze",
+      "skin": "Ascended Movie Director Ryze",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Skarner",
+      "skin": "Cosmic Sting Skarner",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Renekton",
+      "skin": "Glorious Eminence Renekton",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Lulu",
+      "skin": "Purple Garlic Lulu",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Galio",
+      "skin": "Garden Party Galio",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Syndra",
+      "skin": "Island Vacation Syndra",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Gwen",
+      "skin": "Island Vacation Gwen",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Karma",
+      "skin": "Island Vacation Karma",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Morgana",
+      "skin": "Island Vacation Morgana",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Katarina",
+      "skin": "Summer Party Katarina (Exquisite Edition)",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Annie",
+      "skin": "Annie-Versary",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Leona",
+      "skin": "Crystal Rose Leona",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Diana",
+      "skin": "Crystal Rose Diana",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nami",
+      "skin": "Crystal Rose Nami",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Miss Fortune",
+      "skin": "Crystal Rose Miss Fortune",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Yasuo",
+      "skin": "Crystal Rose Yasuo",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Akali",
+      "skin": "Prestige Crystal Rose Akali",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Sona",
+      "skin": "Prestige Crystal Rose Sona",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Skarner",
+      "skin": "Scorpio Deity Skarner",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Skarner",
+      "skin": "Scorpio Deity Ancient Wisdom Skarner",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Amumu",
+      "skin": "Bookworm Amumu",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nautilus",
+      "skin": "Trash Diver Nautilus",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Kayn",
+      "skin": "Odyssey Kayn",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Lucian",
+      "skin": "PROJECT: Lucian (Exquisite Edition)",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Pyke",
+      "skin": "PROJECT: Pyke (Exquisite Edition)",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Varus",
+      "skin": "Elf Forest Varus",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin.jpg"
+        ]
+      }
+    }
+  ],
+  "lowCard": [
+    {
+      "champion": "Master Yi",
+      "skin": "PsyOps Master Yi (Special Edition)",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PsyOpsSpecialEditionSkin_WR.jpg?e653b",
+        "width": 1024,
+        "height": 568,
+        "bytes": 130229,
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "lowFullscreen": [
+    {
+      "champion": "Sona",
+      "skin": "Prestige Requiem Sona",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139912,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Maokai",
+      "skin": "Corrupted Petricite Maokai",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_centered_35.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139864,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Xerath",
+      "skin": "Corrupted Petricite Xerath",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140538,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Naafiri",
+      "skin": "Warhound Naafiri",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137147,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Senna",
+      "skin": "Warhound Senna",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127178,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Warwick",
+      "skin": "Warhound Warwick",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138201,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Swain",
+      "skin": "Fried Chicken King Swain",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125142,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Blitzcrank",
+      "skin": "Bubble Bash Blitzcrank",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_centered_66.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131063,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Mordekaiser",
+      "skin": "Prestige Money Miser Mordekaiser",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127157,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Tahm Kench",
+      "skin": "Choncc Kench",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145309,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Vex",
+      "skin": "Surprise Party Vex",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143885,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Sion",
+      "skin": "Pizza Chef Sion",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140268,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Illaoi",
+      "skin": "Pasta Maker Illaoi",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131542,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Irelia",
+      "skin": "Breadsticks Irelia",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129098,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Vel'Koz",
+      "skin": "Spaghetti alla Vel'Koz",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143537,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Leona",
+      "skin": "Eternal Aspect Leona",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133826,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Diana",
+      "skin": "Eternal Aspect Diana",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145057,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Diana",
+      "skin": "Eclipse Eternal Aspect Diana",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138564,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "LeBlanc",
+      "skin": "Prestige Sinful Shores LeBlanc",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127468,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Brand",
+      "skin": "Sinful Shores Brand",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128210,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Hwei",
+      "skin": "Sinful Shores Hwei",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140457,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Jhin",
+      "skin": "Broken Covenant Jhin",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_centered_64.skins_jhin_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 119725,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Aurora",
+      "skin": "Broken Covenant Aurora",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_centered_20.skins_aurora_skin20.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139420,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Shen",
+      "skin": "Broken Covenant Shen",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_centered_54.skins_shen_skin54.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123042,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Akshan",
+      "skin": "High Noon Akshan",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_centered_21.skins_akshan_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128729,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Locke",
+      "skin": "High Noon Locke",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123911,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Galio",
+      "skin": "T1 Galio",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 130859,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Xin Zhao",
+      "skin": "T1 Xin Zhao",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127024,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Seraphine",
+      "skin": "T1 Seraphine",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123399,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Yunara",
+      "skin": "T1 Yunara",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_centered_10.skins_yunara_skin10.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137238,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Miss Fortune",
+      "skin": "MVP T1 Miss Fortune",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129872,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Rengar",
+      "skin": "Victorious Rengar",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143291,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Jax",
+      "skin": "Prestige Magma Chamber Jax",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 136076,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Veigar",
+      "skin": "Prestige Magma Chamber Veigar",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_centered_67.skins_veigar_skin67.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129809,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Gwen",
+      "skin": "Faerie Court Gwen",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133960,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Lulu",
+      "skin": "Faerie Court Lulu",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127082,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Seraphine",
+      "skin": "Heartsong Seraphine",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_centered_69.skins_seraphine_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 142249,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Soraka",
+      "skin": "Ocean Song Soraka",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125746,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Jinx",
+      "skin": "Ocean Song Jinx",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_centered_65.skins_jinx_skin65.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 121556,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Tristana",
+      "skin": "Risen Legend Tristana",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 126743,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Tristana",
+      "skin": "Immortalized Legend Tristana",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 135177,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "champion": "Lillia",
+      "skin": "Petals of Spring Lillia",
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138454,
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "sona::prestige-requiem-sona::pc",
+      "champion": "Sona",
+      "skin": "Prestige Requiem Sona",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139912,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139912,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "maokai::corrupted-petricite-maokai::pc",
+      "champion": "Maokai",
+      "skin": "Corrupted Petricite Maokai",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_centered_35.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139864,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/skin35/images/maokai_splash_centered_35.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139864,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "xerath::corrupted-petricite-xerath::pc",
+      "champion": "Xerath",
+      "skin": "Corrupted Petricite Xerath",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140538,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140538,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "naafiri::warhound-naafiri::pc",
+      "champion": "Naafiri",
+      "skin": "Warhound Naafiri",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137147,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137147,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "senna::warhound-senna::pc",
+      "champion": "Senna",
+      "skin": "Warhound Senna",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127178,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127178,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "warwick::warhound-warwick::pc",
+      "champion": "Warwick",
+      "skin": "Warhound Warwick",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138201,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138201,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "swain::fried-chicken-king-swain::pc",
+      "champion": "Swain",
+      "skin": "Fried Chicken King Swain",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125142,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125142,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "blitzcrank::bubble-bash-blitzcrank::pc",
+      "champion": "Blitzcrank",
+      "skin": "Bubble Bash Blitzcrank",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_centered_66.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131063,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin66/images/blitzcrank_splash_centered_66.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131063,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "mordekaiser::prestige-money-miser-mordekaiser::pc",
+      "champion": "Mordekaiser",
+      "skin": "Prestige Money Miser Mordekaiser",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127157,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127157,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "sejuani::pug-trainer-sejuani::pc",
+      "champion": "Sejuani",
+      "skin": "Pug Trainer Sejuani",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_uncentered_48.skins_sejuani_skin48.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/skin48/images/sejuani_splash_centered_48.skins_sejuani_skin48.jpg"
+        ]
+      }
+    },
+    {
+      "id": "tahm-kench::choncc-kench::pc",
+      "champion": "Tahm Kench",
+      "skin": "Choncc Kench",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145309,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145309,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "vex::surprise-party-vex::pc",
+      "champion": "Vex",
+      "skin": "Surprise Party Vex",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143885,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143885,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "vladimir::psyops-vladimir::pc",
+      "champion": "Vladimir",
+      "skin": "PsyOps Vladimir",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_uncentered_49.skins_vladimir_skin49.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/skin49/images/vladimir_splash_centered_49.skins_vladimir_skin49.jpg"
+        ]
+      }
+    },
+    {
+      "id": "sivir::project-sivir::pc",
+      "champion": "Sivir",
+      "skin": "PROJECT: Sivir",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_uncentered_72.skins_sivir_skin72.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/skin72/images/sivir_splash_centered_72.skins_sivir_skin72.jpg"
+        ]
+      }
+    },
+    {
+      "id": "zac::space-groove-zac::pc",
+      "champion": "Zac",
+      "skin": "Space Groove Zac",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_uncentered_33.skins_zac_skin33.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/skin33/images/zac_splash_centered_33.skins_zac_skin33.jpg"
+        ]
+      }
+    },
+    {
+      "id": "master-yi::project-command-line-yi::pc",
+      "champion": "Master Yi",
+      "skin": "PROJECT: Command Line Yi",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_uncentered_116.skins_masteryi_skin116.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/skin116/images/masteryi_splash_centered_116.skins_masteryi_skin116.jpg"
+        ]
+      }
+    },
+    {
+      "id": "annie::pandemonium-annie::pc",
+      "champion": "Annie",
+      "skin": "Pandemonium Annie",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_uncentered_59.skins_annie_skin59.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/skin59/images/annie_splash_centered_59.skins_annie_skin59.jpg"
+        ]
+      }
+    },
+    {
+      "id": "kindred::pandemonium-kindred::pc",
+      "champion": "Kindred",
+      "skin": "Pandemonium Kindred",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_uncentered_45.skins_kindred_skin45.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/skin45/images/kindred_splash_centered_45.skins_kindred_skin45.jpg"
+        ]
+      }
+    },
+    {
+      "id": "vayne::demoncursed-vayne::pc",
+      "champion": "Vayne",
+      "skin": "Demoncursed Vayne",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_uncentered_67.skins_vayne_skin67.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/skin67/images/vayne_splash_centered_67.skins_vayne_skin67.jpg"
+        ]
+      }
+    },
+    {
+      "id": "shaco::prestige-pandemonium-shaco::pc",
+      "champion": "Shaco",
+      "skin": "Prestige Pandemonium Shaco",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_uncentered_71.skins_shaco_skin71.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/skin71/images/shaco_splash_centered_71.skins_shaco_skin71.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ivern::rain-shepherd-ivern::pc",
+      "champion": "Ivern",
+      "skin": "Rain Shepherd Ivern",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_uncentered_31.skins_ivern_skin31.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/skin31/images/ivern_splash_centered_31.skins_ivern_skin31.jpg"
+        ]
+      }
+    },
+    {
+      "id": "quinn::project-quinn::pc",
+      "champion": "Quinn",
+      "skin": "PROJECT: Quinn",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_uncentered_24.skins_quinn_skin24.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/skin24/images/quinn_splash_centered_24.skins_quinn_skin24.jpg"
+        ]
+      }
+    },
+    {
+      "id": "sion::pizza-chef-sion::pc",
+      "champion": "Sion",
+      "skin": "Pizza Chef Sion",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140268,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140268,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "illaoi::pasta-maker-illaoi::pc",
+      "champion": "Illaoi",
+      "skin": "Pasta Maker Illaoi",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131542,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 131542,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "irelia::breadsticks-irelia::pc",
+      "champion": "Irelia",
+      "skin": "Breadsticks Irelia",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129098,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129098,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "vel-koz::spaghetti-alla-vel-koz::pc",
+      "champion": "Vel'Koz",
+      "skin": "Spaghetti alla Vel'Koz",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143537,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143537,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "leona::eternal-aspect-leona::pc",
+      "champion": "Leona",
+      "skin": "Eternal Aspect Leona",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133826,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133826,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "diana::eternal-aspect-diana::pc",
+      "champion": "Diana",
+      "skin": "Eternal Aspect Diana",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145057,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 145057,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "diana::eclipse-eternal-aspect-diana::pc",
+      "champion": "Diana",
+      "skin": "Eclipse Eternal Aspect Diana",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138564,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138564,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "leblanc::prestige-sinful-shores-leblanc::pc",
+      "champion": "LeBlanc",
+      "skin": "Prestige Sinful Shores LeBlanc",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127468,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127468,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "brand::sinful-shores-brand::pc",
+      "champion": "Brand",
+      "skin": "Sinful Shores Brand",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128210,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128210,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "hwei::sinful-shores-hwei::pc",
+      "champion": "Hwei",
+      "skin": "Sinful Shores Hwei",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140457,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 140457,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "jhin::broken-covenant-jhin::pc",
+      "champion": "Jhin",
+      "skin": "Broken Covenant Jhin",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_centered_64.skins_jhin_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 119725,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/skin64/images/jhin_splash_centered_64.skins_jhin_skin64.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 119725,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "aurora::broken-covenant-aurora::pc",
+      "champion": "Aurora",
+      "skin": "Broken Covenant Aurora",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_centered_20.skins_aurora_skin20.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139420,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/skin20/images/aurora_splash_centered_20.skins_aurora_skin20.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139420,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "shen::broken-covenant-shen::pc",
+      "champion": "Shen",
+      "skin": "Broken Covenant Shen",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_centered_54.skins_shen_skin54.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123042,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/skin54/images/shen_splash_centered_54.skins_shen_skin54.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123042,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "akshan::high-noon-akshan::pc",
+      "champion": "Akshan",
+      "skin": "High Noon Akshan",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_centered_21.skins_akshan_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128729,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/skin21/images/akshan_splash_centered_21.skins_akshan_skin21.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 128729,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "locke::high-noon-locke::pc",
+      "champion": "Locke",
+      "skin": "High Noon Locke",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123911,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123911,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "galio::t1-galio::pc",
+      "champion": "Galio",
+      "skin": "T1 Galio",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 130859,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 130859,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "xin-zhao::t1-xin-zhao::pc",
+      "champion": "Xin Zhao",
+      "skin": "T1 Xin Zhao",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127024,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127024,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "seraphine::t1-seraphine::pc",
+      "champion": "Seraphine",
+      "skin": "T1 Seraphine",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123399,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123399,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "ambessa::t1-ambessa::pc",
+      "champion": "Ambessa",
+      "skin": "T1 Ambessa",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg",
+          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg"
+        ]
+      }
+    },
+    {
+      "id": "yunara::t1-yunara::pc",
+      "champion": "Yunara",
+      "skin": "T1 Yunara",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_centered_10.skins_yunara_skin10.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137238,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yunara/skins/skin10/images/yunara_splash_centered_10.skins_yunara_skin10.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 137238,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "miss-fortune::mvp-t1-miss-fortune::pc",
+      "champion": "Miss Fortune",
+      "skin": "MVP T1 Miss Fortune",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129872,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129872,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "rengar::victorious-rengar::pc",
+      "champion": "Rengar",
+      "skin": "Victorious Rengar",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143291,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 143291,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "jax::prestige-magma-chamber-jax::pc",
+      "champion": "Jax",
+      "skin": "Prestige Magma Chamber Jax",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 136076,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 136076,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "veigar::prestige-magma-chamber-veigar::pc",
+      "champion": "Veigar",
+      "skin": "Prestige Magma Chamber Veigar",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_centered_67.skins_veigar_skin67.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129809,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/skin67/images/veigar_splash_centered_67.skins_veigar_skin67.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 129809,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "gwen::faerie-court-gwen::pc",
+      "champion": "Gwen",
+      "skin": "Faerie Court Gwen",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133960,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 133960,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "lulu::faerie-court-lulu::pc",
+      "champion": "Lulu",
+      "skin": "Faerie Court Lulu",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127082,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127082,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "bel-veth::faerie-court-bel-veth::pc",
+      "champion": "Bel'Veth",
+      "skin": "Faerie Court Bel'Veth",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e68f31a74579ce085c3de6798f56a26cc04f9767-1920x1080.jpg",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 209104,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Bel%27Veth_FaerieCourtSkin_HD.jpg?d3760",
+        "width": 7000,
+        "height": 4130,
+        "bytes": 12387307,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "seraphine::heartsong-seraphine::pc",
+      "champion": "Seraphine",
+      "skin": "Heartsong Seraphine",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_centered_69.skins_seraphine_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 142249,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin69/images/seraphine_splash_centered_69.skins_seraphine_skin69.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 142249,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "soraka::ocean-song-soraka::pc",
+      "champion": "Soraka",
+      "skin": "Ocean Song Soraka",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125746,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 125746,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "jinx::ocean-song-jinx::pc",
+      "champion": "Jinx",
+      "skin": "Ocean Song Jinx",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_centered_65.skins_jinx_skin65.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 121556,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/skin65/images/jinx_splash_centered_65.skins_jinx_skin65.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 121556,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "tristana::risen-legend-tristana::pc",
+      "champion": "Tristana",
+      "skin": "Risen Legend Tristana",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 126743,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin79/images/tristana_splash_centered_79.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 126743,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "tristana::immortalized-legend-tristana::pc",
+      "champion": "Tristana",
+      "skin": "Immortalized Legend Tristana",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 135177,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/skin80/images/tristana_splash_centered_80.hol_tristana.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 135177,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "orianna::risen-legend-orianna::pc",
+      "champion": "Orianna",
+      "skin": "Risen Legend Orianna",
+      "type": "PC",
+      "releaseDate": null,
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Orianna_RisenLegendSkin.jpg?10b7d",
+        "width": 1215,
+        "height": 717,
+        "bytes": 255871,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Orianna_RisenLegendSkin_HD.jpg?db9db",
+        "width": 7000,
+        "height": 4130,
+        "bytes": 3226675,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "jayce::petals-of-spring-jayce::pc",
+      "champion": "Jayce",
+      "skin": "Petals of Spring Jayce",
+      "type": "PC",
+      "releaseDate": "2026-02-19",
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/skin38/images/jayce_splash_centered_38.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139180,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_PetalsofSpringSkin_HD.jpg?917e0",
+        "width": 7000,
+        "height": 4131,
+        "bytes": 9239708,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "katarina::petals-of-spring-katarina::pc",
+      "champion": "Katarina",
+      "skin": "Petals of Spring Katarina",
+      "type": "PC",
+      "releaseDate": "2026-02-19",
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/katarina/skins/skin70/images/katarina_splash_centered_70.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 127592,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Katarina_PetalsofSpringSkin_HD.jpg?91090",
+        "width": 7000,
+        "height": 4151,
+        "bytes": 12638547,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "lillia::petals-of-spring-lillia::pc",
+      "champion": "Lillia",
+      "skin": "Petals of Spring Lillia",
+      "type": "PC",
+      "releaseDate": "2026-02-19",
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138454,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 138454,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "yasuo::petals-of-spring-yasuo::pc",
+      "champion": "Yasuo",
+      "skin": "Petals of Spring Yasuo",
+      "type": "PC",
+      "releaseDate": "2026-02-19",
+      "card": {
+        "ok": true,
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/yasuo/skins/skin88/images/yasuo_splash_centered_88.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 124582,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_PetalsofSpringSkin_HD.jpg?07d8f",
+        "width": 8000,
+        "height": 4720,
+        "bytes": 19799029,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "vayne::dragonmancer-vayne::wild-rift",
+      "champion": "Vayne",
+      "skin": "Dragonmancer Vayne",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-06",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_DragonmancerSkin_WR.jpg?3e020",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 303807,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_DragonmancerSkin_HD.jpg?3dd55",
+        "width": 11084,
+        "height": 6425,
+        "bytes": 7055124,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "fiora::dragonmancer-fiora::wild-rift",
+      "champion": "Fiora",
+      "skin": "Dragonmancer Fiora",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-06",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_DragonmancerSkin_WR.jpg?add47",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 323146,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_DragonmancerSkin_HD.jpg?f8622",
+        "width": 8755,
+        "height": 4766,
+        "bytes": 20167186,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "nilah::dragonmancer-nilah::wild-rift",
+      "champion": "Nilah",
+      "skin": "Dragonmancer Nilah",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-06",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR.jpg?c78de",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 372817,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR_HD.jpg?19991",
+        "width": 10000,
+        "height": 4619,
+        "bytes": 8884601,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "thresh::janitor-thresh::wild-rift",
+      "champion": "Thresh",
+      "skin": "Janitor Thresh",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-08",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_JanitorSkin_WR.jpg?093a9",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 350555,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_JanitorSkin_HD.jpg?2349a",
+        "width": 7000,
+        "height": 4179,
+        "bytes": 4513383,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "mel::love-confession-mel::wild-rift",
+      "champion": "Mel",
+      "skin": "Love Confession Mel",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-13",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "jayce::love-confession-jayce::wild-rift",
+      "champion": "Jayce",
+      "skin": "Love Confession Jayce",
+      "type": "Wild Rift",
+      "releaseDate": "2026-03-13",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Jayce_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "master-yi::psyops-master-yi-special-edition::wild-rift",
+      "champion": "Master Yi",
+      "skin": "PsyOps Master Yi (Special Edition)",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PsyOpsSpecialEditionSkin_WR.jpg?e653b",
+        "width": 1024,
+        "height": 568,
+        "bytes": 130229,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PsyOpsSpecialEditionSkin_WR_HD.jpg?18492",
+        "width": 6585,
+        "height": 3705,
+        "bytes": 5341097,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "viego::soul-fighter-viego::wild-rift",
+      "champion": "Viego",
+      "skin": "Soul Fighter Viego",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Viego_SoulFighterSkin_WR.jpg?b65f3",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 425662,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Viego_SoulFighterSkin_HD.jpg?3ffa0",
+        "width": 7468,
+        "height": 4180,
+        "bytes": 9851368,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "senna::soul-fighter-senna::wild-rift",
+      "champion": "Senna",
+      "skin": "Soul Fighter Senna",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Senna_SoulFighterSkin_WR.jpg?6bf43",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 490182,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Senna_SoulFighterSkin_WR_HD.jpg?b2a81",
+        "width": 7201,
+        "height": 3326,
+        "bytes": 11675576,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "ambessa::soul-fighter-ambessa::wild-rift",
+      "champion": "Ambessa",
+      "skin": "Soul Fighter Ambessa",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_SoulFighterSkin_WR.jpg?e906a",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 446204,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_SoulFighterSkin_WR_HD.jpg?3c972",
+        "width": 9000,
+        "height": 4157,
+        "bytes": 2383785,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "viktor::soul-fighter-viktor::wild-rift",
+      "champion": "Viktor",
+      "skin": "Soul Fighter Viktor",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Viktor_SoulFighterSkin_WR.jpg?63d71",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 541935,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Viktor_SoulFighterSkin_WR_HD.jpg?5f0fb",
+        "width": 7680,
+        "height": 3547,
+        "bytes": 15096957,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "varus::soul-fighter-varus::wild-rift",
+      "champion": "Varus",
+      "skin": "Soul Fighter Varus",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_SoulFighterSkin_WR.jpg?b2fbe",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 460371,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_SoulFighterSkin_WR_HD.jpg?ccae0",
+        "width": 10000,
+        "height": 4619,
+        "bytes": 2651046,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "varus::ascended-soul-fighter-varus::wild-rift",
+      "champion": "Varus",
+      "skin": "Ascended Soul Fighter Varus",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_AscendedSoulFighterSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "jax::glorious-eminence-jax::wild-rift",
+      "champion": "Jax",
+      "skin": "Glorious Eminence Jax",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-10",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GloriousEminenceSkin_WR.jpg?6b0d9",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 365865,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GloriousEminenceSkin_WR_HD.jpg?37414",
+        "width": 3000,
+        "height": 1386,
+        "bytes": 3444393,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "kai-sa::neon-daredevil-kai-sa::wild-rift",
+      "champion": "Kai'Sa",
+      "skin": "Neon Daredevil Kai'Sa",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_NeonDaredevilSkin_WR.jpg?436d0",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 394707,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_NeonDaredevilSkin_WR_HD.jpg?34352",
+        "width": 8500,
+        "height": 3926,
+        "bytes": 1411931,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "hecarim::neon-daredevil-hecarim::wild-rift",
+      "champion": "Hecarim",
+      "skin": "Neon Daredevil Hecarim",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_NeonDaredevilSkin_WR.jpg?73570",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 372727,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_NeonDaredevilSkin_WR_HD.jpg?6bc25",
+        "width": 10000,
+        "height": 4619,
+        "bytes": 1746174,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "irelia::neon-daredevil-irelia::wild-rift",
+      "champion": "Irelia",
+      "skin": "Neon Daredevil Irelia",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_NeonDaredevilSkin_WR.jpg?f84c9",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 367552,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_NeonDaredevilSkin_WR_HD.jpg?31103",
+        "width": 7680,
+        "height": 3578,
+        "bytes": 13994887,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "aurora::neon-daredevil-aurora::wild-rift",
+      "champion": "Aurora",
+      "skin": "Neon Daredevil Aurora",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_NeonDaredevilSkin_WR.jpg?a900a",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 464669,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_NeonDaredevilSkin_WR_HD.jpg?3173d",
+        "width": 7680,
+        "height": 3547,
+        "bytes": 14027508,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "zed::neon-daredevil-zed::wild-rift",
+      "champion": "Zed",
+      "skin": "Neon Daredevil Zed",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_NeonDaredevilSkin_WR.jpg?81bc3",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 363896,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_NeonDaredevilSkin_WR_HD.jpg?2ce20",
+        "width": 7201,
+        "height": 3326,
+        "bytes": 1037218,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "gragas::neon-daredevil-gragas::wild-rift",
+      "champion": "Gragas",
+      "skin": "Neon Daredevil Gragas",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_NeonDaredevilSkin_WR.jpg?ef7ef",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 285510,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_NeonDaredevilSkin_WR_HD.jpg?2b827",
+        "width": 10000,
+        "height": 4500,
+        "bytes": 9493378,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "kai-sa::prestige-select-neon-daredevil-kai-sa::wild-rift",
+      "champion": "Kai'Sa",
+      "skin": "Prestige Select Neon Daredevil Kai'Sa",
+      "type": "Wild Rift",
+      "releaseDate": "2026-04-30",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_PrestigeSelectNeonDaredevilSkin_WR.jpg?83f4b",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 369100,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_PrestigeSelectNeonDaredevilSkin_WR_HD.jpg?6af0a",
+        "width": 7000,
+        "height": 3234,
+        "bytes": 4636859,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "taliyah::pool-party-taliyah::wild-rift",
+      "champion": "Taliyah",
+      "skin": "Pool Party Taliyah",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-15",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Taliyah_PoolPartySkin_WR.jpg?ab7bb",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 490159,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Taliyah_PoolPartySkin_WR.jpg?ab7bb",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 490159,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "norra::cafe-cuties-norra::wild-rift",
+      "champion": "Norra",
+      "skin": "Cafe Cuties Norra",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-20",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Norra_CafeCutiesSkin_WR.jpg?9d436",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 387188,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Norra_CafeCutiesSkin_WR_HD.jpg?4ec43",
+        "width": 10000,
+        "height": 4500,
+        "bytes": 8817835,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "master-yi::neon-daredevil-master-yi-origin::wild-rift",
+      "champion": "Master Yi",
+      "skin": "Neon Daredevil Master Yi: Origin",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-22",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilOriginSkin_WR.jpg?f3693",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 375830,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilOriginSkin_WR_HD.jpg?66f8d",
+        "width": 7000,
+        "height": 3234,
+        "bytes": 19103275,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "master-yi::neon-daredevil-master-yi-velocity::wild-rift",
+      "champion": "Master Yi",
+      "skin": "Neon Daredevil Master Yi: Velocity",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-22",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilVelocitySkin_WR.jpg?3c1a9",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 368818,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilVelocitySkin_WR_HD.jpg?5efd1",
+        "width": 7000,
+        "height": 3234,
+        "bytes": 19264077,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "master-yi::neon-daredevil-master-yi-megacorps::wild-rift",
+      "champion": "Master Yi",
+      "skin": "Neon Daredevil Master Yi: Megacorps",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-22",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilMegacorpsSkin_WR.jpg?67c59",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 378528,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilMegacorpsSkin_WR_HD.jpg?59225",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 11346321,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "master-yi::neon-daredevil-master-yi-neon-speed::wild-rift",
+      "champion": "Master Yi",
+      "skin": "Neon Daredevil Master Yi: Neon Speed",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-22",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilNeonSpeedSkin_WR.jpg?dfaa5",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 355964,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilNeonSpeedSkin_WR_HD.jpg?a009a",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 8758980,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "master-yi::neon-daredevil-master-yi-swiftbladez::wild-rift",
+      "champion": "Master Yi",
+      "skin": "Neon Daredevil Master Yi: Swiftbladez",
+      "type": "Wild Rift",
+      "releaseDate": "2026-05-22",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR.jpg?b8f54",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 396261,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR_HD.jpg?00cca",
+        "width": 7686,
+        "height": 3553,
+        "bytes": 19149220,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "ornn::choo-choo-ornn::wild-rift",
+      "champion": "Ornn",
+      "skin": "Choo-Choo Ornn",
+      "type": "Wild Rift",
+      "releaseDate": "2026-06-06",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "sion::plant-protector-sion::wild-rift",
+      "champion": "Sion",
+      "skin": "Plant Protector Sion",
+      "type": "Wild Rift",
+      "releaseDate": "2026-06-12",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_PlantProtectorSkin_WR.jpg?ca26c",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 350648,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_PlantProtectorSkin_WR.jpg?ca26c",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 350648,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "samira::ashen-avenger-samira::wild-rift",
+      "champion": "Samira",
+      "skin": "Ashen Avenger Samira",
+      "type": "Wild Rift",
+      "releaseDate": "2026-06-12",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Samira_AshenAvengerSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "yunara::weather-entity-yunara::wild-rift",
+      "champion": "Yunara",
+      "skin": "Weather Entity Yunara",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yunara_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "poppy::weather-entity-poppy::wild-rift",
+      "champion": "Poppy",
+      "skin": "Weather Entity Poppy",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Poppy_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "nocturne::weather-entity-nocturne::wild-rift",
+      "champion": "Nocturne",
+      "skin": "Weather Entity Nocturne",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ashe::weather-entity-ashe::wild-rift",
+      "champion": "Ashe",
+      "skin": "Weather Entity Ashe",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_WeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "vladimir::prestige-weather-entity-vladimir::wild-rift",
+      "champion": "Vladimir",
+      "skin": "Prestige Weather Entity Vladimir",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Vladimir_PrestigeWeatherEntitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ryze::movie-director-ryze::wild-rift",
+      "champion": "Ryze",
+      "skin": "Movie Director Ryze",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_MovieDirectorSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ryze::ascended-movie-director-ryze::wild-rift",
+      "champion": "Ryze",
+      "skin": "Ascended Movie Director Ryze",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ryze_AscendedMovieDirectorSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "skarner::cosmic-sting-skarner::wild-rift",
+      "champion": "Skarner",
+      "skin": "Cosmic Sting Skarner",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-09",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_CosmicStingSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "renekton::glorious-eminence-renekton::wild-rift",
+      "champion": "Renekton",
+      "skin": "Glorious Eminence Renekton",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-10",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Renekton_GloriousEminenceSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "lulu::purple-garlic-lulu::wild-rift",
+      "champion": "Lulu",
+      "skin": "Purple Garlic Lulu",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-10",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lulu_PurpleGarlicSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "galio::garden-party-galio::wild-rift",
+      "champion": "Galio",
+      "skin": "Garden Party Galio",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-17",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Galio_GardenPartySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "syndra::island-vacation-syndra::wild-rift",
+      "champion": "Syndra",
+      "skin": "Island Vacation Syndra",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-24",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Syndra_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "gwen::island-vacation-gwen::wild-rift",
+      "champion": "Gwen",
+      "skin": "Island Vacation Gwen",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-24",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Gwen_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "karma::island-vacation-karma::wild-rift",
+      "champion": "Karma",
+      "skin": "Island Vacation Karma",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-24",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Karma_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "morgana::island-vacation-morgana::wild-rift",
+      "champion": "Morgana",
+      "skin": "Island Vacation Morgana",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-24",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "katarina::summer-party-katarina-exquisite-edition::wild-rift",
+      "champion": "Katarina",
+      "skin": "Summer Party Katarina (Exquisite Edition)",
+      "type": "Wild Rift",
+      "releaseDate": "2026-07-24",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Katarina_SummerPartyExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "annie::annie-versary::wild-rift",
+      "champion": "Annie",
+      "skin": "Annie-Versary",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-07",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Annie_Annie-VersarySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "leona::crystal-rose-leona::wild-rift",
+      "champion": "Leona",
+      "skin": "Crystal Rose Leona",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Leona_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "diana::crystal-rose-diana::wild-rift",
+      "champion": "Diana",
+      "skin": "Crystal Rose Diana",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "nami::crystal-rose-nami::wild-rift",
+      "champion": "Nami",
+      "skin": "Crystal Rose Nami",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "miss-fortune::crystal-rose-miss-fortune::wild-rift",
+      "champion": "Miss Fortune",
+      "skin": "Crystal Rose Miss Fortune",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Miss_Fortune_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "yasuo::crystal-rose-yasuo::wild-rift",
+      "champion": "Yasuo",
+      "skin": "Crystal Rose Yasuo",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "akali::prestige-crystal-rose-akali::wild-rift",
+      "champion": "Akali",
+      "skin": "Prestige Crystal Rose Akali",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "sona::prestige-crystal-rose-sona::wild-rift",
+      "champion": "Sona",
+      "skin": "Prestige Crystal Rose Sona",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-14",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Sona_PrestigeCrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "skarner::scorpio-deity-skarner::wild-rift",
+      "champion": "Skarner",
+      "skin": "Scorpio Deity Skarner",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-27",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeitySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "skarner::scorpio-deity-ancient-wisdom-skarner::wild-rift",
+      "champion": "Skarner",
+      "skin": "Scorpio Deity Ancient Wisdom Skarner",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-27",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Skarner_ScorpioDeityAncientWisdomSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "amumu::bookworm-amumu::wild-rift",
+      "champion": "Amumu",
+      "skin": "Bookworm Amumu",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-28",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Amumu_BookwormSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "nautilus::trash-diver-nautilus::wild-rift",
+      "champion": "Nautilus",
+      "skin": "Trash Diver Nautilus",
+      "type": "Wild Rift",
+      "releaseDate": "2026-08-28",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "kayn::odyssey-kayn::wild-rift",
+      "champion": "Kayn",
+      "skin": "Odyssey Kayn",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-04",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Kayn_OdysseySkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "lucian::project-lucian-exquisite-edition::wild-rift",
+      "champion": "Lucian",
+      "skin": "PROJECT: Lucian (Exquisite Edition)",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-04",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Lucian_PROJECTExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "pyke::project-pyke-exquisite-edition::wild-rift",
+      "champion": "Pyke",
+      "skin": "PROJECT: Pyke (Exquisite Edition)",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-04",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Pyke_PROJECTExquisiteEditionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "id": "varus::elf-forest-varus::wild-rift",
+      "champion": "Varus",
+      "skin": "Elf Forest Varus",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-10",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Varus_ElfForestSkin.jpg"
+        ]
+      }
+    }
+  ]
+}
