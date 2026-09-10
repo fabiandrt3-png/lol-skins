@@ -8884,9 +8884,13 @@
       "id": "ambessa::arcane-iron-will-ambessa::117",
       "champ": "Ambessa",
       "skin": "Arcane Iron Will Ambessa",
-      "image": "https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_ArcaneIronWillSkin_WR.jpg",
       "type": "Wild Rift",
-      "sourceKind": "legacy"
+      "sourceKind": "legacy",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_ArcaneIronWillSkin_WR_HD.jpg",
+      "fullHdFallbacks": [
+        "https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg"
+      ]
     },
     {
       "id": "ambessa::t1-ambessa::pc",
@@ -14821,6 +14825,6 @@
       "sourceKind": "post-cutoff"
     }
   ],
-  "catalogGeneratedAt": "2026-09-10T19:15:47.710Z",
+  "catalogGeneratedAt": "2026-09-10T19:36:21.488Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded"
 }
