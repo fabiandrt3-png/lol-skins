@@ -1,0 +1,48 @@
+name: Consolidate skin catalog
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/consolidate-catalog.mjs'
+      - '.github/workflows/consolidate-catalog.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: consolidate-skin-catalog
+  cancel-in-progress: true
+
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build centralized catalogue
+        run: node scripts/consolidate-catalog.mjs
+
+      - name: Validate generated JSON
+        run: node -e "const p=require('./data/image-overrides.json'); if(!Array.isArray(p.catalog)||!p.catalog.length||!p.entries||Array.isArray(p.entries)) process.exit(1); console.log('catalog:',p.catalog.length,'verified overrides:',Object.keys(p.entries).length)"
+
+      - name: Commit centralized catalogue
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/image-overrides.json
+          if git diff --cached --quiet; then
+            echo "Catalogue already centralized"
+            exit 0
+          fi
+          git commit -m "Centralize skin catalog"
+          git pull --rebase origin main
+          git push
