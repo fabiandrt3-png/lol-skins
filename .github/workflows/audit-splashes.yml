@@ -11,7 +11,6 @@ on:
       - 'data/post-cutoff-additions.js'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
-      - 'scripts/consolidate-catalog.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -40,6 +39,10 @@ jobs:
       - name: Audit recent PC and Wild Rift additions
         run: node scripts/audit-additions.mjs
 
+      - name: Preserve centralized catalogue
+        shell: bash
+        run: cp data/image-overrides.json "$RUNNER_TEMP/image-overrides-before-audit.json"
+
       - name: Audit historical splash arts
         continue-on-error: true
         run: node scripts/audit-splashes.mjs
@@ -52,9 +55,28 @@ jobs:
         continue-on-error: true
         run: node scripts/upgrade-low-res.mjs
 
-      - name: Rebuild centralized skin catalogue
+      - name: Restore centralized catalogue
         if: always()
-        run: node scripts/consolidate-catalog.mjs
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const beforePath = `${process.env.RUNNER_TEMP}/image-overrides-before-audit.json`;
+          const targetPath = 'data/image-overrides.json';
+          if (!fs.existsSync(beforePath) || !fs.existsSync(targetPath)) process.exit(0);
+
+          const before = JSON.parse(fs.readFileSync(beforePath, 'utf8'));
+          const current = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+          if (!Array.isArray(before.catalog) || !before.catalog.length) {
+            throw new Error('Centralized catalogue snapshot is missing');
+          }
+
+          current.catalog = before.catalog;
+          current.catalogGeneratedAt = before.catalogGeneratedAt;
+          current.catalogStrategy = before.catalogStrategy;
+          fs.writeFileSync(targetPath, JSON.stringify(current, null, 2) + '\n');
+          console.log(`Preserved ${before.catalog.length} centralized skin records`);
+          NODE
 
       - name: Save verified image map and audit reports
         shell: bash
