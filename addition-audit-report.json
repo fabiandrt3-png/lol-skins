@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10T18:25:59.215Z",
+  "generatedAt": "2026-09-10T18:59:46.395Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 130,
-    "fullyVerified": 86,
-    "unresolved": 44,
+    "fullyVerified": 85,
+    "unresolved": 45,
     "pc": 66,
     "wildRift": 64,
     "belowCardTarget": 1,
@@ -147,6 +147,28 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nautilus",
+      "skin": "Trash Diver Nautilus",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
         ]
       }
     },
@@ -976,7 +998,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 144043,
+        "bytes": 135559,
         "contentType": "image/jpeg"
       }
     },
@@ -1698,7 +1720,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 144043,
+        "bytes": 135559,
         "contentType": "image/jpeg"
       }
     },
@@ -1910,7 +1932,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_NeonDaredevilSkin_WR_HD.jpg?3173d",
         "width": 7680,
         "height": 3547,
-        "bytes": 12602760,
+        "bytes": 14027508,
         "contentType": "image/jpeg"
       }
     },
@@ -3151,10 +3173,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 8601125,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 346164,
         "contentType": "image/jpeg"
       }
     },
@@ -3214,20 +3236,21 @@
       "releaseDate": "2026-08-28",
       "sourceKind": "post-cutoff",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 379295,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 379295,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
+        ]
       }
     },
     {
