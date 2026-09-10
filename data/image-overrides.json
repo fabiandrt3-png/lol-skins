@@ -8860,6 +8860,23 @@
       "sourceKind": "legacy"
     },
     {
+      "id": "alistar::grand-reckoning-alistar::pc",
+      "champ": "Alistar",
+      "skin": "Grand Reckoning Alistar",
+      "type": "PC",
+      "status": "Cancelled",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin_HD.jpg",
+      "fallbacks": [
+        "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Alistar_GrandReckoningSkin.jpg"
+      ],
+      "fullHdFallbacks": [
+        "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Alistar_GrandReckoningSkin_HD.jpg",
+        "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg"
+      ],
+      "sourceKind": "post-cutoff"
+    },
+    {
       "id": "alistar::black-alistar-modern::pc",
       "champ": "Alistar",
       "skin": "Black Alistar Modern",
@@ -14842,6 +14859,6 @@
       "sourceKind": "post-cutoff"
     }
   ],
-  "catalogGeneratedAt": "2026-09-10T18:25:44.275Z",
+  "catalogGeneratedAt": "2026-09-10T19:03:13.270Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded"
 }
