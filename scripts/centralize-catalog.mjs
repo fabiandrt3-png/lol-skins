@@ -7,6 +7,23 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
+const blackAlistarModern = {
+  id: 'alistar::black-alistar-modern::pc',
+  champ: 'Alistar',
+  skin: 'Black Alistar Modern',
+  type: 'PC',
+  image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_49.jpg',
+  fullImage: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_uncentered_49.project_jade.jpg',
+  fallbacks: [
+    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg',
+  ],
+  sourceKind: 'post-cutoff',
+};
+
+if (!payload.catalog.some((item) => item?.id === blackAlistarModern.id)) {
+  payload.catalog.push(blackAlistarModern);
+}
+
 const before = payload.catalog;
 const beforeIds = before.map(stableId);
 const sorted = before
