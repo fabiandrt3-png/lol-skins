@@ -7,6 +7,19 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
+let catalogChanged = false;
+const modernId = 'alistar::black-alistar-modern::pc';
+const blackId = 'alistar::black-alistar::99';
+const modernIndex = payload.catalog.findIndex((item) => item?.id === modernId);
+const blackIndex = payload.catalog.findIndex((item) => item?.id === blackId);
+
+if (modernIndex >= 0 && blackIndex >= 0 && modernIndex !== blackIndex + 1) {
+  const [modern] = payload.catalog.splice(modernIndex, 1);
+  const updatedBlackIndex = payload.catalog.findIndex((item) => item?.id === blackId);
+  payload.catalog.splice(updatedBlackIndex + 1, 0, modern);
+  catalogChanged = true;
+}
+
 const before = payload.catalog;
 const beforeIds = before.map(stableId);
 const sorted = before
@@ -20,7 +33,7 @@ const afterIds = sorted.map(stableId);
 
 assertCatalogIntegrity(before, sorted);
 
-const changed = beforeIds.some((id, index) => id !== afterIds[index]);
+const changed = catalogChanged || beforeIds.some((id, index) => id !== afterIds[index]);
 const strategy = 'single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded';
 
 if (!changed && payload.catalogStrategy === strategy) {
@@ -68,7 +81,7 @@ function printSummary(catalog, changed) {
   console.log(`${changed ? 'Sorted' : 'Verified'} ${catalog.length} skin records across ${champions.length} champions.`);
   console.log(`Champion range: ${champions.slice(0, 5).join(', ')} ... ${champions.slice(-5).join(', ')}`);
 
-  for (const champion of ['Aatrox', 'Ahri', 'Akali']) {
+  for (const champion of ['Aatrox', 'Ahri', 'Akali', 'Alistar']) {
     const skins = catalog.filter((item) => item.champ === champion).map((item) => item.skin);
     if (skins.length) console.log(`${champion}: ${skins.join(' > ')}`);
   }
