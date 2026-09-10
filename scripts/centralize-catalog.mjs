@@ -7,21 +7,26 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
-const blackAlistarModern = {
-  id: 'alistar::black-alistar-modern::pc',
+const clockPuncherAlistar = {
+  id: 'alistar::clock-puncher-alistar::wild-rift',
   champ: 'Alistar',
-  skin: 'Black Alistar Modern',
-  type: 'PC',
-  image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_49.jpg',
-  fullImage: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_uncentered_49.project_jade.jpg',
+  skin: 'Clock Puncher Alistar',
+  type: 'Wild Rift',
+  releaseDate: '2026-03-27',
+  image: 'https://images3.alphacoders.com/140/thumb-1920-1408000.jpg',
   fallbacks: [
-    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg',
+    'https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg',
+  ],
+  fullImage: 'https://images3.alphacoders.com/140/1408000.jpg',
+  fullHdFallbacks: [
+    'https://images3.alphacoders.com/140/thumb-1920-1408000.jpg',
+    'https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg',
   ],
   sourceKind: 'post-cutoff',
 };
 
-if (!payload.catalog.some((item) => item?.id === blackAlistarModern.id)) {
-  payload.catalog.push(blackAlistarModern);
+if (!payload.catalog.some((item) => item?.id === clockPuncherAlistar.id)) {
+  payload.catalog.push(clockPuncherAlistar);
 }
 
 const before = payload.catalog;
