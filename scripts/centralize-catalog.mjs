@@ -7,6 +7,26 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
+let catalogChanged = false;
+const arcaneIronWillAmbessa = payload.catalog.find((item) => item?.id === 'ambessa::arcane-iron-will-ambessa::117');
+
+if (arcaneIronWillAmbessa) {
+  const next = {
+    image: 'https://wiki.leagueoflegends.com/en-us/images/Ambessa_ArcaneIronWillSkin_WR.jpg',
+    fullImage: 'https://wiki.leagueoflegends.com/en-us/images/Ambessa_ArcaneIronWillSkin_WR_HD.jpg',
+    fullHdFallbacks: [
+      'https://wiki.leagueoflegends.com/en-us/images/ArcaneSkin_WR_HD.jpg',
+    ],
+  };
+
+  for (const [key, value] of Object.entries(next)) {
+    if (JSON.stringify(arcaneIronWillAmbessa[key]) !== JSON.stringify(value)) {
+      arcaneIronWillAmbessa[key] = value;
+      catalogChanged = true;
+    }
+  }
+}
+
 const before = payload.catalog;
 const beforeIds = before.map(stableId);
 const sorted = before
@@ -20,7 +40,7 @@ const afterIds = sorted.map(stableId);
 
 assertCatalogIntegrity(before, sorted);
 
-const changed = beforeIds.some((id, index) => id !== afterIds[index]);
+const changed = catalogChanged || beforeIds.some((id, index) => id !== afterIds[index]);
 const strategy = 'single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded';
 
 if (!changed && payload.catalogStrategy === strategy) {
@@ -68,7 +88,7 @@ function printSummary(catalog, changed) {
   console.log(`${changed ? 'Sorted' : 'Verified'} ${catalog.length} skin records across ${champions.length} champions.`);
   console.log(`Champion range: ${champions.slice(0, 5).join(', ')} ... ${champions.slice(-5).join(', ')}`);
 
-  for (const champion of ['Aatrox', 'Ahri', 'Akali']) {
+  for (const champion of ['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Ambessa']) {
     const skins = catalog.filter((item) => item.champ === champion).map((item) => item.skin);
     if (skins.length) console.log(`${champion}: ${skins.join(' > ')}`);
   }
