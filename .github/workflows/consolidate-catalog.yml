@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data-loader.js'
       - 'scripts/consolidate-catalog.mjs'
       - '.github/workflows/consolidate-catalog.yml'
 
@@ -30,8 +31,34 @@ jobs:
       - name: Build centralized catalogue
         run: node scripts/consolidate-catalog.mjs
 
-      - name: Validate generated JSON
-        run: node -e "const p=require('./data/image-overrides.json'); if(!Array.isArray(p.catalog)||!p.catalog.length||!p.entries||Array.isArray(p.entries)) process.exit(1); console.log('catalog:',p.catalog.length,'verified overrides:',Object.keys(p.entries).length)"
+      - name: Validate loader syntax
+        run: node --check data-loader.js
+
+      - name: Validate generated catalogue
+        shell: bash
+        run: |
+          node <<'NODE'
+          const payload = require('./data/image-overrides.json');
+          if (!Array.isArray(payload.catalog) || !payload.catalog.length) throw new Error('catalog missing');
+          if (!payload.entries || Array.isArray(payload.entries)) throw new Error('verified override map missing');
+
+          const ids = new Set();
+          const artworkKeys = new Set();
+          for (const skin of payload.catalog) {
+            if (!skin.id || !skin.champ || !skin.skin || !skin.image) throw new Error(`invalid skin record: ${JSON.stringify(skin)}`);
+            if (ids.has(skin.id)) throw new Error(`duplicate catalog id: ${skin.id}`);
+            ids.add(skin.id);
+
+            const platform = skin.type === 'Wild Rift' ? 'wild-rift' : 'pc';
+            const key = `${skin.champ}::${skin.skin}::${platform}`;
+            if (artworkKeys.has(key)) throw new Error(`duplicate catalog record: ${key}`);
+            artworkKeys.add(key);
+          }
+
+          console.log('catalog:', payload.catalog.length);
+          console.log('verified overrides:', Object.keys(payload.entries).length);
+          console.log('unique ids:', ids.size);
+          NODE
 
       - name: Commit centralized catalogue
         shell: bash
