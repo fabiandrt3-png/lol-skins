@@ -11,6 +11,7 @@ on:
       - 'data/post-cutoff-additions.js'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
+      - 'scripts/centralize-catalog.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -33,15 +34,19 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install image probe
-        run: npm install --no-save sharp@0.34.3
-
-      - name: Audit recent PC and Wild Rift additions
-        run: node scripts/audit-additions.mjs
+      - name: Sort centralized catalogue
+        run: node scripts/centralize-catalog.mjs
 
       - name: Preserve centralized catalogue
         shell: bash
         run: cp data/image-overrides.json "$RUNNER_TEMP/image-overrides-before-audit.json"
+
+      - name: Install image probe
+        run: npm install --no-save sharp@0.34.3
+
+      - name: Audit recent PC and Wild Rift additions
+        continue-on-error: true
+        run: node scripts/audit-additions.mjs
 
       - name: Audit historical splash arts
         continue-on-error: true
