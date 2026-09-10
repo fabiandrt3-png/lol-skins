@@ -7,6 +7,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/image-overrides.json'
       - 'data/new-skins.json'
       - 'data/post-cutoff-additions.js'
       - 'data-loader.js'
@@ -36,6 +37,19 @@ jobs:
 
       - name: Sort centralized catalogue
         run: node scripts/centralize-catalog.mjs
+
+      - name: Persist centralized catalogue ordering
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/image-overrides.json
+          if git diff --cached --quiet; then
+            echo "Centralized catalogue already sorted"
+          else
+            git commit -m "Sort centralized skin catalogue"
+            git push
+          fi
 
       - name: Preserve centralized catalogue
         shell: bash
