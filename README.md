@@ -9,9 +9,9 @@ Le front est volontairement compact :
 - `index.html` : structure sémantique de l’interface
 - `styles.css` : **unique feuille de styles** pour desktop et mobile
 - `app.js` : navigation, recherche, filtres, favoris, lightbox et gestion des images
-- `data-loader.js` : charge le catalogue historique et la carte d’images vérifiées
-- `data/image-overrides.json` : meilleures sources de splash arts validées par l’audit automatique
-- `legacy/index-original.html` : copie intacte du prototype initial, conservée comme source de données
+- `data-loader.js` : charge la source de données centralisée
+- `data/image-overrides.json` : **fichier de données unique** contenant le catalogue complet des skins et la carte des meilleures sources de splash arts vérifiées
+- `legacy/index-original.html` : copie intacte du prototype initial, conservée uniquement comme référence historique
 - `scripts/` : audit, réparation Wild Rift et recherche d’originaux haute résolution
 
 Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. Cela évite les conflits de spécificité et garantit que desktop et téléphone utilisent la même base visuelle avec des media queries adaptées.
@@ -31,13 +31,12 @@ Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. 
 
 ## Chargement et performances
 
-Au runtime, l’application ne télécharge plus les métadonnées Data Dragon / CommunityDragon à chaque ouverture de champion. Le workflow hebdomadaire fait ce travail en amont et enregistre les URLs vérifiées dans `data/image-overrides.json`.
+Au runtime, l’application ne télécharge plus les métadonnées Data Dragon / CommunityDragon à chaque ouverture de champion. Le catalogue complet et les URLs vérifiées sont regroupés dans `data/image-overrides.json`.
 
 Le navigateur charge donc seulement :
 
-1. le catalogue historique ;
-2. la carte des splash arts vérifiés ;
-3. les images réellement visibles, en lazy loading.
+1. le fichier de données centralisé ;
+2. les images réellement visibles, en lazy loading.
 
 Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
@@ -48,6 +47,7 @@ Le workflow `.github/workflows/audit-splashes.yml` s’exécute une fois par sem
 - vérifie les splash arts ;
 - tente de réparer les sources Wild Rift manquantes ;
 - recherche les originaux exacts en meilleure résolution ;
+- conserve le catalogue centralisé intact ;
 - met à jour `data/image-overrides.json` et `audit-report.json` si nécessaire ;
 - reste silencieux en cas d’éléments non résolus afin d’éviter le spam d’e-mails GitHub.
 
