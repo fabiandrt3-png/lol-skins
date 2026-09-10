@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10T22:15:43.578Z",
+  "generatedAt": "2026-09-10T23:30:10.608Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
-    "fullyVerified": 89,
-    "unresolved": 42,
+    "fullyVerified": 86,
+    "unresolved": 45,
     "pc": 67,
     "wildRift": 64,
     "belowCardTarget": 1,
@@ -128,6 +128,72 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nami",
+      "skin": "Crystal Rose Nami",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nautilus",
+      "skin": "Trash Diver Nautilus",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nilah",
+      "skin": "Dragonmancer Nilah",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin.jpg"
         ]
       }
     },
@@ -935,7 +1001,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 135559,
+        "bytes": 144043,
         "contentType": "image/jpeg"
       }
     },
@@ -1043,7 +1109,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 140457,
+        "bytes": 145089,
         "contentType": "image/jpeg"
       }
     },
@@ -1211,7 +1277,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129529,
+        "bytes": 137147,
         "contentType": "image/jpeg"
       }
     },
@@ -1669,7 +1735,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 135559,
+        "bytes": 144043,
         "contentType": "image/jpeg"
       }
     },
@@ -1907,7 +1973,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_NeonDaredevilSkin_WR_HD.jpg?3173d",
         "width": 7680,
         "height": 3547,
-        "bytes": 14027508,
+        "bytes": 12602760,
         "contentType": "image/jpeg"
       }
     },
@@ -2235,7 +2301,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 140457,
+        "bytes": 145089,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2243,7 +2309,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 140457,
+        "bytes": 145089,
         "contentType": "image/jpeg"
       }
     },
@@ -3100,10 +3166,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg?9639d",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 7262868,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR.jpg?9519d",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 340785,
         "contentType": "image/jpeg"
       }
     },
@@ -3148,10 +3214,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 8601125,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 346164,
         "contentType": "image/jpeg"
       }
     },
@@ -3167,7 +3233,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129529,
+        "bytes": 137147,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3175,7 +3241,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129529,
+        "bytes": 137147,
         "contentType": "image/jpeg"
       }
     },
@@ -3187,20 +3253,21 @@
       "releaseDate": "2026-08-14",
       "sourceKind": "post-cutoff",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR.jpg?02415",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 308284,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR.jpg?02415",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 308284,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nami_CrystalRoseSkin.jpg"
+        ]
       }
     },
     {
@@ -3211,20 +3278,21 @@
       "releaseDate": "2026-08-28",
       "sourceKind": "post-cutoff",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 379295,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 379295,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nautilus_TrashDiverSkin.jpg"
+        ]
       }
     },
     {
@@ -3235,20 +3303,21 @@
       "releaseDate": "2026-03-06",
       "sourceKind": "post-cutoff",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR.jpg?c78de",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 372817,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR.jpg?c78de",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 372817,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nilah_DragonmancerSkin.jpg"
+        ]
       }
     },
     {
