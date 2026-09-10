@@ -26,6 +26,12 @@
       padding-top: max(clamp(18px, 2.5vw, 28px), env(safe-area-inset-top));
     }
 
+    /* Arcane Iron Will uses Riot's shared Arcane group splash. Keep the full
+       artwork in fullscreen while centering Ambessa in her card on all screens. */
+    .skin-preview img[alt="Arcane Iron Will Ambessa"] {
+      object-position: 82% center;
+    }
+
     /* The carousel track is 300% wide. Override the figure grid centering so
        the middle slide is truly aligned with the viewport instead of the next one. */
     .lightbox-figure > div {
