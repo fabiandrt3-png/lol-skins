@@ -65,6 +65,9 @@ export const postCutoffAdditions = [
   // Ahri historical backfill confirmed by the League Wiki HD skin category.
   // Prestige K/DA Ahri (2022) is intentionally not duplicated: its HD file redirects to the existing Prestige K/DA splash.
   wikiSkin("Ahri", "Arcana Ahri", "2022-04-14", "Arcana"),
+  // Tencent chroma-hub artwork supplied directly; both are genuinely distinct splash illustrations.
+  chinaChroma("Ahri", "Popstar Ahri (Ahri-versary Chroma)", "2021-12-09", "ec609b0e-f28a-4d61-bfbd-02b358960fc2"),
+  chinaChroma("Ahri", "Spirit Blossom Springs Ahri (Catseye Chroma)", "2025-07-30", "a7699a24-8688-4a93-b0fd-65aff78a8a4c"),
 
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
