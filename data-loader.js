@@ -30,7 +30,7 @@ const AATROX_CHRONOLOGY = new Map([
 
 // Base splash arts remain chronological. A chroma with its own distinct splash art
 // is deliberately grouped immediately after its parent skin, regardless of release date.
-// Platform suffixes are only needed when LoL PC and Wild Rift use different art under the same skin name.
+// Platform suffixes distinguish same-name PC/WR skins only when their artwork is genuinely different.
 const AHRI_CHRONOLOGY = new Map([
   "Classic Ahri::pc",
   "Dynasty Ahri",
@@ -42,7 +42,6 @@ const AHRI_CHRONOLOGY = new Map([
   "Popstar Ahri (Amethyst Chroma)",
   "Popstar Ahri (Catseye Chroma)",
   "Popstar Ahri (Pearl Chroma)",
-  "Popstar Ahri (Ahri-versary Chroma)",
   "Challenger Ahri",
   "Academy Ahri",
   "Arcade Ahri",
@@ -52,7 +51,6 @@ const AHRI_CHRONOLOGY = new Map([
   "K/DA Ahri (Ahri-versary Chroma)",
   "K/DA Ahri (Prestige)",
   "Elderwood Ahri",
-  "Classic Ahri::wild-rift",
   "Foxfire Ahri::wild-rift",
   "Spirit Blossom Ahri",
   "Spirit Blossom Ahri (Rose Quartz Chroma)",
@@ -61,29 +59,27 @@ const AHRI_CHRONOLOGY = new Map([
   "Coven Ahri",
   "Coven Ahri (Ahri-versary Chroma)",
   "Coven Ahri (Pearl Chroma)",
-  "Popstar Ahri::wild-rift",
-  "Prestige K/DA Ahri (2022)",
   "Arcana Ahri",
   "Snow Moon Ahri",
   "Snow Moon Ahri (Turquoise Chroma)",
   "Soda Pop Ahri",
+  "Shan Hai Scrolls Ahri",
   "Risen Legend Ahri",
   "Immortalized Legend Ahri",
-  "Shan Hai Scrolls Ahri",
   "Spirit Blossom Springs Ahri",
   "Spirit Blossom Springs Ahri (Pearl Chroma)",
   "Spirit Blossom Springs Ahri (Ruby Chroma)",
   "Spirit Blossom Springs Ahri (Sapphire Chroma)",
   "Spirit Blossom Springs Ahri (Tanzanite Chroma)",
-  "Spirit Blossom Springs Ahri (Catseye Chroma)",
   "After Hours Spirit Blossom Springs Ahri",
   "Crystal Rose Ahri",
 ].map((skin, index) => [skin, index]));
 
-// Riot replaced the live Prestige K/DA splash with the 2022 variant. Keep the
-// original 2019 artwork for the original catalogue entry and add 2022 separately.
-const HISTORICAL_IMAGE_FIXES = new Map([
-  ["Ahri::K/DA Ahri (Prestige)::pc", "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ahri_PrestigeKDASkin_old_HD.jpg"],
+// These Wild Rift files exist, but use the same underlying illustration as the PC entry.
+// Keep one copy in the catalogue; same-name WR art that is genuinely different (Foxfire) remains visible.
+const HIDDEN_DUPLICATE_SPLASHES = new Set([
+  "ahri::classic-ahri::wild-rift",
+  "ahri::popstar-ahri::wild-rift",
 ]);
 
 let skinDataPromise;
@@ -100,9 +96,8 @@ export function loadSkinData() {
       const historicalSkins = historicalData.map((item, index) => mapHistoricalSkin(item, index, verifiedImages));
       const additions = [...newSkins, ...postCutoffSkins].map(mapNewSkin);
 
-      // Some historical entries were manually added after the repository was created.
-      // Keep the oldest occurrence and prevent the post-cutoff feed from duplicating it.
-      let catalog = dedupeSkins([...historicalSkins, ...additions]);
+      // Keep one entry per actual catalogue record, then remove only artwork duplicates that were visually audited.
+      let catalog = dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenDuplicateSplash(item));
       catalog = sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
       catalog = sortChampionByKnownChronology(catalog, "Ahri", AHRI_CHRONOLOGY);
       return catalog;
@@ -115,9 +110,7 @@ export function loadSkinData() {
 function mapHistoricalSkin(item, index, verifiedImages) {
   const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
   const verified = verifiedImages[id] || null;
-  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
-  const historicalFix = HISTORICAL_IMAGE_FIXES.get(`${item.champ}::${item.skin}::${platform}`);
-  const verifiedCandidates = unique([historicalFix, verified?.url, ...(verified?.fallbacks || [])]);
+  const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
   const legacyCandidates = legacyImageCandidates(item.image);
   const allCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
   const imageCandidates = cardImageCandidates(allCandidates);
@@ -164,6 +157,12 @@ function dedupeSkins(items) {
     seen.add(key);
     return true;
   });
+}
+
+function isHiddenDuplicateSplash(item) {
+  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
+  const key = `${slugify(item.champ)}::${slugify(item.skin)}::${platform}`;
+  return HIDDEN_DUPLICATE_SPLASHES.has(key);
 }
 
 function sortChampionByKnownChronology(items, champion, chronology) {
