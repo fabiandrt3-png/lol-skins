@@ -28,7 +28,7 @@ jobs:
       - name: Install image probe
         run: npm install --no-save sharp@0.34.3
 
-      - name: Audit every splash art
+      - name: Audit historical splash arts
         continue-on-error: true
         run: node scripts/audit-splashes.mjs
 
@@ -40,12 +40,16 @@ jobs:
         continue-on-error: true
         run: node scripts/upgrade-low-res.mjs
 
-      - name: Save verified image map and audit report
+      - name: Audit recent PC and Wild Rift additions
+        run: node scripts/audit-additions.mjs
+
+      - name: Save verified image map and audit reports
         shell: bash
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json audit-report.json
+          git add data/image-overrides.json audit-report.json addition-audit-report.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No audit changes"
@@ -74,21 +78,25 @@ jobs:
           exit 0
 
       - name: Publish verification summary
+        if: always()
         shell: bash
         run: |
           node <<'NODE' >> "$GITHUB_STEP_SUMMARY"
           const fs = require('fs');
-          const r = JSON.parse(fs.readFileSync('audit-report.json', 'utf8'));
-          const s = r.summary || {};
+          const historical = fs.existsSync('audit-report.json') ? JSON.parse(fs.readFileSync('audit-report.json', 'utf8')) : {};
+          const additions = fs.existsSync('addition-audit-report.json') ? JSON.parse(fs.readFileSync('addition-audit-report.json', 'utf8')) : {};
+          const s = historical.summary || {};
+          const a = additions.summary || {};
           console.log('## Splash art verification');
           console.log('');
-          console.log(`- Verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
-          console.log(`- PC: ${s.pcVerified ?? '?'} / ${s.pcTotal ?? '?'}`);
-          console.log(`- Wild Rift: ${s.wildRiftVerified ?? '?'} / ${s.wildRiftTotal ?? '?'}`);
-          console.log(`- Unresolved: ${s.unresolved ?? '?'}`);
-          console.log(`- Below 1600x900: ${s.below1600x900 ?? '?'}`);
+          console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
+          console.log(`- Historical PC: ${s.pcVerified ?? '?'} / ${s.pcTotal ?? '?'}`);
+          console.log(`- Historical Wild Rift: ${s.wildRiftVerified ?? '?'} / ${s.wildRiftTotal ?? '?'}`);
+          console.log(`- Recent additions fully verified: ${a.fullyVerified ?? '?'} / ${a.total ?? '?'}`);
+          console.log(`- Recent additions unresolved: ${a.unresolved ?? '?'}`);
+          console.log(`- Recent fullscreen below 1600x900: ${a.belowFullscreenTarget ?? '?'}`);
           console.log('');
-          console.log((s.unresolved ?? 0) > 0
-            ? '⚠️ Some splash arts are unresolved. Inspect the audit report for details.'
+          console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
+            ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
             : '✅ No unresolved splash arts detected.');
           NODE
