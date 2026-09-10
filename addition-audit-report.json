@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T19:03:22.945Z",
+  "generatedAt": "2026-09-10T19:08:40.666Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
@@ -1657,30 +1657,6 @@
       }
     },
     {
-      "id": "alistar::grand-reckoning-alistar::pc",
-      "champion": "Alistar",
-      "skin": "Grand Reckoning Alistar",
-      "type": "PC",
-      "releaseDate": null,
-      "sourceKind": "post-cutoff",
-      "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg",
-        "width": 1215,
-        "height": 717,
-        "bytes": 236214,
-        "contentType": "image/jpeg"
-      },
-      "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin_HD.jpg",
-        "width": 7000,
-        "height": 3938,
-        "bytes": 20835965,
-        "contentType": "image/jpeg"
-      }
-    },
-    {
       "id": "alistar::black-alistar-modern::pc",
       "champion": "Alistar",
       "skin": "Black Alistar Modern",
@@ -1701,6 +1677,30 @@
         "width": 1280,
         "height": 720,
         "bytes": 135559,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "alistar::grand-reckoning-alistar::pc",
+      "champion": "Alistar",
+      "skin": "Grand Reckoning Alistar",
+      "type": "PC",
+      "releaseDate": null,
+      "sourceKind": "post-cutoff",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg",
+        "width": 1215,
+        "height": 717,
+        "bytes": 221066,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin_HD.jpg",
+        "width": 7000,
+        "height": 3938,
+        "bytes": 20835965,
         "contentType": "image/jpeg"
       }
     },
@@ -3153,10 +3153,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 8601125,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 346164,
         "contentType": "image/jpeg"
       }
     },
