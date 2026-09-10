@@ -69,6 +69,10 @@ export const postCutoffAdditions = [
   chinaChroma("Ahri", "Popstar Ahri (Ahri-versary Chroma)", "2021-12-09", "ec609b0e-f28a-4d61-bfbd-02b358960fc2"),
   chinaChroma("Ahri", "Spirit Blossom Springs Ahri (Catseye Chroma)", "2025-07-30", "a7699a24-8688-4a93-b0fd-65aff78a8a4c"),
 
+  // Akali: this China-only Citrine variant has its own dedicated splash illustration.
+  // Prestige K/DA Akali (2022) is not added because it reuses the original Prestige K/DA splash artwork.
+  chinaChroma("Akali", "Spirit Blossom Akali (Citrine Chroma)", "2026-04-29", "139accb4-5d87-48c8-9885-d2c329114ad7"),
+
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
   pc("Lillia", "Petals of Spring Lillia", "2026-02-19", "lillia", 46, "PetalsofSpring"),
@@ -133,7 +137,7 @@ export const postCutoffAdditions = [
   wr("Nami", "Crystal Rose Nami", "2026-08-14", "CrystalRose"),
   wr("Miss Fortune", "Crystal Rose Miss Fortune", "2026-08-14", "CrystalRose"),
   wr("Yasuo", "Crystal Rose Yasuo", "2026-08-14", "CrystalRose"),
-  wr("Akali", "Prestige Crystal Rose Akali", "2026-08-14", "PrestigeCrystalRose"),
+  wr("Akali", "Prestige Select Crystal Rose Akali", "2026-08-14", "PrestigeSelectCrystalRose"),
   wr("Sona", "Prestige Crystal Rose Sona", "2026-08-14", "PrestigeCrystalRose"),
   wr("Skarner", "Scorpio Deity Skarner", "2026-08-27", "ScorpioDeity"),
   wr("Skarner", "Scorpio Deity Ancient Wisdom Skarner", "2026-08-27", "ScorpioDeityAncientWisdom"),
