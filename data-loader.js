@@ -28,6 +28,64 @@ const AATROX_CHRONOLOGY = new Map([
   "Mecha Aatrox (Exquisite Edition)",
 ].map((skin, index) => [skin, index]));
 
+// Base splash arts remain chronological. A chroma with its own distinct splash art
+// is deliberately grouped immediately after its parent skin, regardless of release date.
+// Platform suffixes are only needed when LoL PC and Wild Rift use different art under the same skin name.
+const AHRI_CHRONOLOGY = new Map([
+  "Classic Ahri::pc",
+  "Dynasty Ahri",
+  "Midnight Ahri",
+  "Midnight Ahri (Ahri-versary Chroma)",
+  "Foxfire Ahri::pc",
+  "Foxfire Ahri (Emerald Chroma)",
+  "Popstar Ahri::pc",
+  "Popstar Ahri (Amethyst Chroma)",
+  "Popstar Ahri (Catseye Chroma)",
+  "Popstar Ahri (Pearl Chroma)",
+  "Popstar Ahri (Ahri-versary Chroma)",
+  "Challenger Ahri",
+  "Academy Ahri",
+  "Arcade Ahri",
+  "Star Guardian Ahri",
+  "Star Guardian Ahri (Mythic Chroma)",
+  "K/DA Ahri",
+  "K/DA Ahri (Ahri-versary Chroma)",
+  "K/DA Ahri (Prestige)",
+  "Elderwood Ahri",
+  "Classic Ahri::wild-rift",
+  "Foxfire Ahri::wild-rift",
+  "Spirit Blossom Ahri",
+  "Spirit Blossom Ahri (Rose Quartz Chroma)",
+  "K/DA ALL OUT Ahri",
+  "K/DA ALL OUT Ahri (Rose Quartz Chroma)",
+  "Popstar Ahri::wild-rift",
+  "Coven Ahri",
+  "Coven Ahri (Ahri-versary Chroma)",
+  "Coven Ahri (Pearl Chroma)",
+  "Prestige K/DA Ahri (2022)",
+  "Arcana Ahri",
+  "Snow Moon Ahri",
+  "Snow Moon Ahri (Turquoise Chroma)",
+  "Soda Pop Ahri",
+  "Risen Legend Ahri",
+  "Immortalized Legend Ahri",
+  "Shan Hai Scrolls Ahri",
+  "Spirit Blossom Springs Ahri",
+  "Spirit Blossom Springs Ahri (Pearl Chroma)",
+  "Spirit Blossom Springs Ahri (Ruby Chroma)",
+  "Spirit Blossom Springs Ahri (Sapphire Chroma)",
+  "Spirit Blossom Springs Ahri (Tanzanite Chroma)",
+  "Spirit Blossom Springs Ahri (Catseye Chroma)",
+  "After Hours Spirit Blossom Springs Ahri",
+  "Crystal Rose Ahri",
+].map((skin, index) => [skin, index]));
+
+// Riot replaced the live Prestige K/DA splash with the 2022 variant. Keep the
+// original 2019 artwork for the original catalogue entry and add 2022 separately.
+const HISTORICAL_IMAGE_FIXES = new Map([
+  ["Ahri::K/DA Ahri (Prestige)::pc", "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ahri_PrestigeKDASkin_old_HD.jpg"],
+]);
+
 let skinDataPromise;
 
 export function loadSkinData() {
@@ -44,8 +102,10 @@ export function loadSkinData() {
 
       // Some historical entries were manually added after the repository was created.
       // Keep the oldest occurrence and prevent the post-cutoff feed from duplicating it.
-      const catalog = dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenSkin(item));
-      return sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
+      let catalog = dedupeSkins([...historicalSkins, ...additions]);
+      catalog = sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
+      catalog = sortChampionByKnownChronology(catalog, "Ahri", AHRI_CHRONOLOGY);
+      return catalog;
     });
   }
 
@@ -55,7 +115,9 @@ export function loadSkinData() {
 function mapHistoricalSkin(item, index, verifiedImages) {
   const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
   const verified = verifiedImages[id] || null;
-  const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
+  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
+  const historicalFix = HISTORICAL_IMAGE_FIXES.get(`${item.champ}::${item.skin}::${platform}`);
+  const verifiedCandidates = unique([historicalFix, verified?.url, ...(verified?.fallbacks || [])]);
   const legacyCandidates = legacyImageCandidates(item.image);
   const allCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
   const imageCandidates = cardImageCandidates(allCandidates);
@@ -119,17 +181,16 @@ function sortChampionByKnownChronology(items, champion, chronology) {
   }
 
   if (championItems.length < 2) return items;
-  championItems.sort((a, b) => {
-    const aOrder = chronology.get(a.skin) ?? Number.MAX_SAFE_INTEGER;
-    const bOrder = chronology.get(b.skin) ?? Number.MAX_SAFE_INTEGER;
-    return aOrder - bOrder;
-  });
+  championItems.sort((a, b) => knownChronologyOrder(a, chronology) - knownChronologyOrder(b, chronology));
   remainder.splice(insertAt, 0, ...championItems);
   return remainder;
 }
 
-function isHiddenSkin(item) {
-  return item.champ === "Ahri" && item.skin === "Foxfire Ahri" && item.type === "Wild Rift";
+function knownChronologyOrder(item, chronology) {
+  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
+  return chronology.get(`${item.skin}::${platform}`)
+    ?? chronology.get(item.skin)
+    ?? Number.MAX_SAFE_INTEGER;
 }
 
 async function loadNewSkins() {
