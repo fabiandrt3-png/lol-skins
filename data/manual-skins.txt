@@ -1,0 +1,18 @@
+# AJOUTS MANUELS DE SKINS
+#
+# Une ligne = un skin.
+# Format :
+# Champion | Nom du skin | PC ou WR | image carte | image plein écran HD | après ce skin (optionnel)
+#
+# Exemple PC :
+# Anivia | Old God Anivia | PC | https://exemple.com/anivia.jpg | https://exemple.com/anivia-hd.jpg
+#
+# Exemple Wild Rift :
+# Lux | Nouveau skin Lux | WR | https://exemple.com/lux.jpg | https://exemple.com/lux-hd.jpg
+#
+# Exemple chroma/variante à placer juste après son parent :
+# Aatrox | Variante spéciale | PC | https://exemple.com/carte.jpg | https://exemple.com/hd.jpg | Mecha Aatrox
+#
+# IMPORTANT : laisse le # au début des exemples. Ils sont ignorés par l'application.
+# Ajoute tes vraies lignes en dessous sans #.
+
