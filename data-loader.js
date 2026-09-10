@@ -53,6 +53,7 @@ function mapHistoricalSkin(item, index, verifiedImages) {
 function mapNewSkin(item) {
   const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
   const imageCandidates = unique([item.image, ...(item.fallbacks || [])]);
+  const fullImageCandidates = unique([item.fullImage, ...(item.fullFallbacks || []), ...imageCandidates]);
 
   return {
     champ: item.champ,
@@ -62,8 +63,10 @@ function mapNewSkin(item) {
     _legacyImage: item.image,
     _verifiedImageMeta: null,
     imageCandidates,
+    fullImageCandidates,
     iconCandidates: unique([item.icon]),
     image: imageCandidates[0] || item.image,
+    fullImage: fullImageCandidates[0] || imageCandidates[0] || item.image,
   };
 }
 
