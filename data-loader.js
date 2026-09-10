@@ -42,6 +42,7 @@ const AHRI_CHRONOLOGY = new Map([
   "Popstar Ahri (Amethyst Chroma)",
   "Popstar Ahri (Catseye Chroma)",
   "Popstar Ahri (Pearl Chroma)",
+  "Popstar Ahri (Ahri-versary Chroma)",
   "Challenger Ahri",
   "Academy Ahri",
   "Arcade Ahri",
@@ -71,6 +72,7 @@ const AHRI_CHRONOLOGY = new Map([
   "Spirit Blossom Springs Ahri (Ruby Chroma)",
   "Spirit Blossom Springs Ahri (Sapphire Chroma)",
   "Spirit Blossom Springs Ahri (Tanzanite Chroma)",
+  "Spirit Blossom Springs Ahri (Catseye Chroma)",
   "After Hours Spirit Blossom Springs Ahri",
   "Crystal Rose Ahri",
 ].map((skin, index) => [skin, index]));
