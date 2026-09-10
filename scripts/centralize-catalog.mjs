@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 
+// One-shot retry: persist Grand Reckoning Alistar after the previous concurrent push conflict.
 const FILE = 'data/image-overrides.json';
 const payload = JSON.parse(fs.readFileSync(FILE, 'utf8'));
 
