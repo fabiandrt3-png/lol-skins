@@ -10,9 +10,8 @@ const lightboxTitle = document.querySelector("#lightboxTitle");
 
 if (lightbox && lightboxImage && lightboxTitle) {
   const fullscreenSources = await loadFullscreenSources();
-  const loadedSources = new Set();
   const failedSources = new Set();
-  const pendingSources = new Map();
+  let requestedHdSource = "";
 
   const setHdState = (state) => {
     lightboxImage.dataset.hdState = state;
@@ -27,66 +26,55 @@ if (lightbox && lightboxImage && lightboxTitle) {
     const currentSource = lightboxImage.getAttribute("src") || "";
 
     if (!candidates.length) {
+      requestedHdSource = "";
       setHdState("unavailable");
       return;
     }
 
     if (candidates.includes(currentSource)) {
-      setHdState("ready");
+      requestedHdSource = currentSource;
+      setHdState(lightboxImage.complete && lightboxImage.naturalWidth > 0 ? "ready" : "loading");
       return;
     }
 
     const source = candidates.find((candidate) => !failedSources.has(candidate));
     if (!source) {
+      requestedHdSource = "";
       setHdState("unavailable");
       return;
     }
 
+    requestedHdSource = source;
     setHdState("loading");
 
-    if (loadedSources.has(source)) {
-      lightboxImage.src = source;
-      setHdState("ready");
-      return;
-    }
-
-    if (pendingSources.has(source)) return;
-
-    // Keep the lightweight card splash visible as a temporary preview, but
-    // request the HD artwork immediately at high priority. Desktop zoom waits
-    // for this HD request so a 1024 px preview is never enlarged by mistake.
-    const preload = new Image();
-    preload.decoding = "async";
-    preload.loading = "eager";
-    preload.fetchPriority = "high";
-    pendingSources.set(source, preload);
-
-    preload.onload = () => {
-      pendingSources.delete(source);
-      loadedSources.add(source);
-      if (
-        !lightbox.hidden &&
-        lightboxTitle.textContent.trim() === displayName &&
-        (fullscreenSources.get(displayName) || []).includes(source)
-      ) {
-        lightboxImage.src = source;
-        setHdState("ready");
-      }
-    };
-
-    preload.onerror = () => {
-      pendingSources.delete(source);
-      failedSources.add(source);
-      queueMicrotask(syncFullscreenSource);
-    };
-
-    preload.src = source;
+    // The central fullscreen image itself requests the HD artwork immediately.
+    // The standard card source remains managed by app.js and is only a fallback
+    // if every HD candidate fails. Adjacent carousel slides stay lightweight.
+    lightboxImage.loading = "eager";
+    lightboxImage.fetchPriority = "high";
+    lightboxImage.src = source;
   };
+
+  lightboxImage.addEventListener("load", () => {
+    const currentSource = lightboxImage.getAttribute("src") || "";
+    const displayName = lightboxTitle.textContent.trim();
+    if ((fullscreenSources.get(displayName) || []).includes(currentSource)) {
+      requestedHdSource = currentSource;
+      setHdState("ready");
+    }
+  });
+
+  lightboxImage.addEventListener("error", () => {
+    if (!requestedHdSource) return;
+    failedSources.add(requestedHdSource);
+    requestedHdSource = "";
+    queueMicrotask(syncFullscreenSource);
+  });
 
   setupDesktopZoom(lightbox, lightboxImage, lightboxTitle);
 
   // app.js updates the image and title synchronously. Deferring one microtask
-  // lets us always read the final skin title before choosing its HD source.
+  // lets us always read the final skin title before selecting the HD source.
   const observer = new MutationObserver(() => queueMicrotask(syncFullscreenSource));
   observer.observe(lightboxTitle, { childList: true, subtree: true, characterData: true });
   observer.observe(lightboxImage, { attributes: true, attributeFilter: ["src"] });
@@ -167,35 +155,54 @@ function setupDesktopZoom(lightbox, image, title) {
     applyZoom({ animate });
   };
 
-  const setScale = (nextScale, { animate = true } = {}) => {
-    zoom.scale = clamp(nextScale, 1, 5);
-    if (zoom.scale <= 1.001) {
+  const setScaleAroundPointer = (nextScale, clientX, clientY, { animate = true } = {}) => {
+    const previousScale = zoom.scale;
+    const clampedScale = clamp(nextScale, 1, 5);
+
+    if (clampedScale <= 1.001) {
       resetZoom({ animate });
       return;
     }
+
+    const rect = figure?.getBoundingClientRect();
+    if (rect && previousScale > 0) {
+      const pointerX = clientX - (rect.left + rect.width / 2);
+      const pointerY = clientY - (rect.top + rect.height / 2);
+      const ratio = clampedScale / previousScale;
+
+      // Keep the exact artwork point under the mouse fixed while scaling.
+      zoom.x = pointerX - ((pointerX - zoom.x) * ratio);
+      zoom.y = pointerY - ((pointerY - zoom.y) * ratio);
+    }
+
+    zoom.scale = clampedScale;
     applyZoom({ animate });
   };
 
   figure?.addEventListener("wheel", (event) => {
     if (!desktopPointer.matches || lightbox.hidden) return;
+    event.preventDefault();
+
     if (hdIsLoading()) {
-      event.preventDefault();
       applyZoom({ animate: false });
       return;
     }
-    event.preventDefault();
+
     const factor = event.deltaY < 0 ? 1.16 : 1 / 1.16;
-    setScale(zoom.scale * factor, { animate: false });
+    setScaleAroundPointer(zoom.scale * factor, event.clientX, event.clientY, { animate: false });
   }, { passive: false });
 
   image.addEventListener("dblclick", (event) => {
     if (!desktopPointer.matches || lightbox.hidden) return;
     event.preventDefault();
+
     if (hdIsLoading()) {
       applyZoom({ animate: false });
       return;
     }
-    setScale(zoom.scale > 1 ? 1 : 2.25);
+
+    if (zoom.scale > 1) resetZoom({ animate: true });
+    else setScaleAroundPointer(2.25, event.clientX, event.clientY);
   });
 
   image.addEventListener("pointerdown", (event) => {
