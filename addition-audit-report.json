@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T16:13:16.786Z",
+  "generatedAt": "2026-09-10T16:55:25.902Z",
   "summary": {
     "total": 128,
     "fullyVerified": 83,
@@ -323,6 +323,28 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Nocturne",
+      "skin": "Weather Entity Nocturne",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
         ]
       }
     },
@@ -741,28 +763,6 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Yasuo_CrystalRoseSkin.jpg"
-        ]
-      }
-    },
-    {
-      "champion": "Akali",
-      "skin": "Prestige Select Crystal Rose Akali",
-      "type": "Wild Rift",
-      "card": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg"
-        ]
-      },
-      "fullscreen": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg"
         ]
       }
     },
@@ -3551,10 +3551,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR.jpg?b8f54",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 396261,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR_HD.jpg?00cca",
+        "width": 7686,
+        "height": 3553,
+        "bytes": 19149220,
         "contentType": "image/jpeg"
       }
     },
@@ -3621,10 +3621,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_AshenAvengerSkin_WR.jpg?2a01b",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 319685,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_AshenAvengerSkin_WR_HD.jpg?f8432",
+        "width": 9000,
+        "height": 4158,
+        "bytes": 8160265,
         "contentType": "image/jpeg"
       }
     },
@@ -3681,20 +3681,21 @@
       "type": "Wild Rift",
       "releaseDate": "2026-07-09",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 300323,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 300323,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
+        ]
       }
     },
     {
@@ -4160,21 +4161,20 @@
       "type": "Wild Rift",
       "releaseDate": "2026-08-14",
       "card": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg"
-        ]
+        "ok": true,
+        "url": "https://i0.wp.com/wildrift-jp-wiki.com/wp-content/uploads/2026/08/HPFnP9wWgAAY2o_.jpg?resize=1920%2C1080&ssl=1",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 180936,
+        "contentType": "image/webp"
       },
       "fullscreen": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg"
-        ]
+        "ok": true,
+        "url": "https://i0.wp.com/wildrift-jp-wiki.com/wp-content/uploads/2026/08/HPFnP9wWgAAY2o_.jpg?resize=1920%2C1080&ssl=1",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 180936,
+        "contentType": "image/webp"
       }
     },
     {
