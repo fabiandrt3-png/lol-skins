@@ -16,4 +16,4 @@
 # IMPORTANT : laisse le # au début des exemples. Ils sont ignorés par l'application.
 # Ajoute tes vraies lignes en dessous sans #.
 
-Garen | Iconic | Wild Rift | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR.jpg | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR_HD.jpg
+Garen | Iconic | Wild Rift | https://wiki.leagueoflegends.com/en-us/images/thumb/Garen_IconicSkin_WR_HD.jpg/1024px-Garen_IconicSkin_WR_HD.jpg?ac5a9 | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR_HD.jpg?ac5a9
