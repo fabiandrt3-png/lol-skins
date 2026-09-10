@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T19:36:31.696Z",
+  "generatedAt": "2026-09-10T22:15:43.578Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
@@ -3100,10 +3100,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR.jpg?9519d",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 340785,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg?9639d",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 7262868,
         "contentType": "image/jpeg"
       }
     },
@@ -3148,10 +3148,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 346164,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 8601125,
         "contentType": "image/jpeg"
       }
     },
