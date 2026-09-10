@@ -2,6 +2,46 @@
 
 Galerie responsive de champions, skins, chromas et variantes League of Legends / Wild Rift.
 
+## Ajouter un skin manuellement
+
+Pour ajouter un skin toi-même, **ne modifie plus `data/image-overrides.json`**.
+
+Modifie uniquement `data/manual-skins.txt`.
+
+Une ligne = un skin :
+
+```text
+Champion | Nom du skin | PC ou WR | image carte | image plein écran HD | après ce skin (optionnel)
+```
+
+Exemple :
+
+```text
+Anivia | Old God Anivia | PC | https://exemple.com/anivia.jpg | https://exemple.com/anivia-hd.jpg
+```
+
+Pour Wild Rift, écris `WR` :
+
+```text
+Lux | Nouveau skin Lux | WR | https://exemple.com/lux.jpg | https://exemple.com/lux-hd.jpg
+```
+
+Pour placer un chroma ou une variante juste après son skin parent, ajoute le nom du parent en 6e colonne :
+
+```text
+Aatrox | Variante spéciale | PC | https://exemple.com/carte.jpg | https://exemple.com/hd.jpg | Mecha Aatrox
+```
+
+Règles simples :
+
+- les lignes qui commencent par `#` sont des commentaires et sont ignorées ;
+- `PC` est utilisé par défaut si tu écris autre chose que `WR` / `Wild Rift` ;
+- l'identifiant technique est créé automatiquement ;
+- si tu ne renseignes pas la 6e colonne, le skin est ajouté après le dernier skin du champion ;
+- si une ligne est mal écrite, elle est ignorée au lieu de casser toute l'application ;
+- le fichier est rechargé sans cache : tu n'as pas besoin de modifier `version.json` après chaque ajout manuel ;
+- utilise de préférence un lien direct vers une image pour `image` et `fullImage`.
+
 ## Architecture
 
 Le front est volontairement compact :
@@ -9,8 +49,9 @@ Le front est volontairement compact :
 - `index.html` : structure sémantique de l’interface
 - `styles.css` : **unique feuille de styles** pour desktop et mobile
 - `app.js` : navigation, recherche, filtres, favoris, lightbox et gestion des images
-- `data-loader.js` : charge la source de données centralisée
-- `data/image-overrides.json` : **fichier de données unique** contenant le catalogue complet des skins et la carte des meilleures sources de splash arts vérifiées
+- `data-loader.js` : charge le catalogue principal et les ajouts manuels
+- `data/image-overrides.json` : catalogue principal et carte des meilleures sources de splash arts vérifiées
+- `data/manual-skins.txt` : **petit fichier à modifier à la main pour ajouter/corriger rapidement des skins**
 - `legacy/index-original.html` : copie intacte du prototype initial, conservée uniquement comme référence historique
 - `scripts/` : audit, réparation Wild Rift et recherche d’originaux haute résolution
 
@@ -31,12 +72,9 @@ Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. 
 
 ## Chargement et performances
 
-Au runtime, l’application ne télécharge plus les métadonnées Data Dragon / CommunityDragon à chaque ouverture de champion. Le catalogue complet et les URLs vérifiées sont regroupés dans `data/image-overrides.json`.
+Au runtime, l’application charge le catalogue principal depuis `data/image-overrides.json`, puis ajoute les quelques lignes éventuelles de `data/manual-skins.txt`.
 
-Le navigateur charge donc seulement :
-
-1. le fichier de données centralisé ;
-2. les images réellement visibles, en lazy loading.
+Le petit fichier manuel est chargé sans cache afin qu'un nouveau skin apparaisse après le déploiement GitHub Pages sans avoir à modifier la version de l'application.
 
 Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
