@@ -9065,13 +9065,15 @@
       "champ": "Ambessa",
       "skin": "T1 Ambessa",
       "type": "PC",
-      "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg",
+      "image": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_8.skins_ambessa_skin08.jpg",
       "fallbacks": [
-        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg"
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ambessa_8.jpg",
+        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_8.skins_ambessa_skin08.jpg"
       ],
-      "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_08.skins_ambessa_skin08.jpg",
+      "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_uncentered_8.skins_ambessa_skin08.jpg",
       "fullHdFallbacks": [
-        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_08.skins_ambessa_skin08.jpg"
+        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/skin08/images/ambessa_splash_centered_8.skins_ambessa_skin08.jpg",
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ambessa_8.jpg"
       ],
       "sourceKind": "new-skins"
     },
@@ -14991,6 +14993,6 @@
       "sourceKind": "post-cutoff"
     }
   ],
-  "catalogGeneratedAt": "2026-09-10T19:08:28.871Z",
+  "catalogGeneratedAt": "2026-09-10T19:15:47.710Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded"
 }
