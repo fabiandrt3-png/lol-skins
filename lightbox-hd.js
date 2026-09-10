@@ -79,13 +79,12 @@ function setupDesktopZoom(lightbox, image, title) {
     x: 0,
     y: 0,
     dragging: false,
-    moved: false,
     pointerId: null,
     startPointerX: 0,
     startPointerY: 0,
     startX: 0,
     startY: 0,
-    title: "",
+    title: title.textContent.trim(),
   };
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
@@ -133,7 +132,6 @@ function setupDesktopZoom(lightbox, image, title) {
     zoom.x = 0;
     zoom.y = 0;
     zoom.dragging = false;
-    zoom.moved = false;
     zoom.pointerId = null;
     applyZoom({ animate });
   };
@@ -164,7 +162,6 @@ function setupDesktopZoom(lightbox, image, title) {
     if (!isActive() || event.pointerType !== "mouse" || zoom.scale <= 1) return;
     event.preventDefault();
     zoom.dragging = true;
-    zoom.moved = false;
     zoom.pointerId = event.pointerId;
     zoom.startPointerX = event.clientX;
     zoom.startPointerY = event.clientY;
@@ -176,19 +173,19 @@ function setupDesktopZoom(lightbox, image, title) {
 
   image.addEventListener("pointermove", (event) => {
     if (!zoom.dragging || event.pointerId !== zoom.pointerId) return;
-    const deltaX = event.clientX - zoom.startPointerX;
-    const deltaY = event.clientY - zoom.startPointerY;
-    if (Math.abs(deltaX) > 2 || Math.abs(deltaY) > 2) zoom.moved = true;
-    zoom.x = zoom.startX + deltaX;
-    zoom.y = zoom.startY + deltaY;
+    zoom.x = zoom.startX + (event.clientX - zoom.startPointerX);
+    zoom.y = zoom.startY + (event.clientY - zoom.startPointerY);
     applyZoom({ animate: false });
   });
 
   const stopDragging = (event) => {
     if (!zoom.dragging || (event?.pointerId != null && event.pointerId !== zoom.pointerId)) return;
-    if (zoom.pointerId != null) image.releasePointerCapture?.(zoom.pointerId);
+    const pointerId = zoom.pointerId;
     zoom.dragging = false;
     zoom.pointerId = null;
+    if (event?.type !== "lostpointercapture" && pointerId != null && image.hasPointerCapture?.(pointerId)) {
+      image.releasePointerCapture(pointerId);
+    }
     applyZoom({ animate: false });
   };
 
@@ -211,14 +208,6 @@ function setupDesktopZoom(lightbox, image, title) {
     applyZoom({ animate: false });
   }, { capture: true });
 
-  title.addEventListener("DOMSubtreeModified", () => {
-    const currentTitle = title.textContent.trim();
-    if (currentTitle !== zoom.title) {
-      zoom.title = currentTitle;
-      resetZoom();
-    }
-  });
-
   const stateObserver = new MutationObserver(() => {
     const currentTitle = title.textContent.trim();
     if (lightbox.hidden || currentTitle !== zoom.title) {
@@ -234,7 +223,6 @@ function setupDesktopZoom(lightbox, image, title) {
   }, { passive: true });
 
   desktopPointer.addEventListener?.("change", () => resetZoom());
-  zoom.title = title.textContent.trim();
   applyZoom({ animate: false });
 }
 
