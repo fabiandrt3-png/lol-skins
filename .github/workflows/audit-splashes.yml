@@ -36,6 +36,9 @@ jobs:
       - name: Install image probe
         run: npm install --no-save sharp@0.34.3
 
+      - name: Audit recent PC and Wild Rift additions
+        run: node scripts/audit-additions.mjs
+
       - name: Audit historical splash arts
         continue-on-error: true
         run: node scripts/audit-splashes.mjs
@@ -47,9 +50,6 @@ jobs:
       - name: Search higher resolution exact originals
         continue-on-error: true
         run: node scripts/upgrade-low-res.mjs
-
-      - name: Audit recent PC and Wild Rift additions
-        run: node scripts/audit-additions.mjs
 
       - name: Save verified image map and audit reports
         shell: bash
@@ -71,17 +71,14 @@ jobs:
               echo "Audit updates pushed successfully"
               exit 0
             fi
-
             echo "Remote changed while the audit was running; rebasing (attempt ${attempt}/3)..."
             git fetch origin main
-
             if ! git rebase origin/main; then
               git rebase --abort || true
               echo "::warning::Could not rebase audit updates. Verification completed, but generated files were not published."
               exit 0
             fi
           done
-
           echo "::warning::Could not push audit updates after 3 attempts. Verification completed without failing the workflow."
           exit 0
 
