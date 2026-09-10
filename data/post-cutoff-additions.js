@@ -9,7 +9,7 @@ function wikiFile(champion, descriptor, suffix = "") {
   return `${WIKI}${encodeURIComponent(`${prefix}_${descriptor}Skin${suffix}.jpg`)}`;
 }
 
-function wr(champ, skin, releaseDate, descriptor, extraFallbacks = []) {
+function wr(champ, skin, releaseDate, descriptor, extraFallbacks = [], hasWrHd = true) {
   const standard = wikiFile(champ, descriptor, "_WR");
   const hd = wikiFile(champ, descriptor, "_WR_HD");
   const pcStandard = wikiFile(champ, descriptor, "");
@@ -17,9 +17,9 @@ function wr(champ, skin, releaseDate, descriptor, extraFallbacks = []) {
   return {
     id: `${slugify(champ)}::${slugify(skin)}::wild-rift`, champ, skin, type: "Wild Rift", releaseDate,
     image: standard,
-    fallbacks: [...extraFallbacks, pcStandard, hd],
-    fullImage: hd,
-    fullHdFallbacks: [pcHd, standard, pcStandard, ...extraFallbacks],
+    fallbacks: hasWrHd ? [...extraFallbacks, pcStandard, hd] : [...extraFallbacks, pcStandard],
+    fullImage: hasWrHd ? hd : pcHd,
+    fullHdFallbacks: hasWrHd ? [pcHd, standard, pcStandard, ...extraFallbacks] : [standard, pcStandard, ...extraFallbacks],
   };
 }
 
@@ -38,6 +38,13 @@ function pc(champ, skin, releaseDate, alias, number, descriptor) {
 }
 
 export const postCutoffAdditions = [
+  // Aatrox Wild Rift backfill: official catalog entries missing from the legacy file.
+  // These four WR splashes have no dedicated WR_HD file on the Wiki, so fullscreen skips a known 404 and uses the PC HD artwork first.
+  wr("Aatrox", "Classic Aatrox", "2022-11-17", "Original", [], false),
+  wr("Aatrox", "Blood Moon Aatrox", "2022-11-17", "BloodMoon", [], false),
+  wr("Aatrox", "Mecha Aatrox", "2023-08-25", "Mecha", [], false),
+  wr("Aatrox", "Primordian Aatrox", "2024-11-08", "Primordian", [], false),
+
   pc("Jayce", "Petals of Spring Jayce", "2026-02-19", "jayce", 38, "PetalsofSpring"),
   pc("Katarina", "Petals of Spring Katarina", "2026-02-19", "katarina", 70, "PetalsofSpring"),
   pc("Lillia", "Petals of Spring Lillia", "2026-02-19", "lillia", 46, "PetalsofSpring"),
