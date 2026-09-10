@@ -7,6 +7,7 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
+let catalogChanged = false;
 const grandReckoningAlistar = {
   id: 'alistar::grand-reckoning-alistar::pc',
   champ: 'Alistar',
@@ -36,6 +37,7 @@ if (!payload.catalog.some((item) => item?.id === grandReckoningAlistar.id)) {
     );
     payload.catalog.splice(lastAlistarIndex + 1, 0, grandReckoningAlistar);
   }
+  catalogChanged = true;
 }
 
 const before = payload.catalog;
@@ -51,7 +53,7 @@ const afterIds = sorted.map(stableId);
 
 assertCatalogIntegrity(before, sorted);
 
-const changed = beforeIds.some((id, index) => id !== afterIds[index]);
+const changed = catalogChanged || beforeIds.some((id, index) => id !== afterIds[index]);
 const strategy = 'single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded';
 
 if (!changed && payload.catalogStrategy === strategy) {
