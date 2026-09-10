@@ -8672,6 +8672,18 @@
       "sourceKind": "legacy"
     },
     {
+      "id": "alistar::black-alistar-modern::pc",
+      "champ": "Alistar",
+      "skin": "Black Alistar Modern",
+      "type": "PC",
+      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_49.jpg",
+      "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_uncentered_49.project_jade.jpg",
+      "fallbacks": [
+        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg"
+      ],
+      "sourceKind": "post-cutoff"
+    },
+    {
       "id": "alistar::golden-alistar::100",
       "champ": "Alistar",
       "skin": "Golden Alistar",
@@ -8790,18 +8802,6 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Alistar_GrandReckoningSkin_HD.jpg",
         "https://wiki.leagueoflegends.com/en-us/images/Alistar_GrandReckoningSkin.jpg"
-      ],
-      "sourceKind": "post-cutoff"
-    },
-    {
-      "id": "alistar::black-alistar-modern::pc",
-      "champ": "Alistar",
-      "skin": "Black Alistar Modern",
-      "type": "PC",
-      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_49.jpg",
-      "fullImage": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_uncentered_49.project_jade.jpg",
-      "fallbacks": [
-        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg"
       ],
       "sourceKind": "post-cutoff"
     },
@@ -14776,6 +14776,6 @@
       "sourceKind": "post-cutoff"
     }
   ],
-  "catalogGeneratedAt": "2026-09-10T19:03:13.270Z",
+  "catalogGeneratedAt": "2026-09-10T19:08:28.871Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded"
 }
