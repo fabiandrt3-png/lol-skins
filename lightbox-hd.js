@@ -60,12 +60,182 @@ if (lightbox && lightboxImage && lightboxTitle) {
     preload.src = source;
   };
 
+  setupDesktopZoom(lightbox, lightboxImage, lightboxTitle);
+
   // app.js updates the image and title synchronously. Deferring one microtask
   // lets us always read the final skin title before choosing its HD source.
   const observer = new MutationObserver(() => queueMicrotask(syncFullscreenSource));
   observer.observe(lightboxTitle, { childList: true, subtree: true, characterData: true });
   observer.observe(lightboxImage, { attributes: true, attributeFilter: ["src"] });
   syncFullscreenSource();
+}
+
+function setupDesktopZoom(lightbox, image, title) {
+  const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const figure = image.closest(".lightbox-figure");
+  const zoom = {
+    scale: 1,
+    x: 0,
+    y: 0,
+    dragging: false,
+    moved: false,
+    pointerId: null,
+    startPointerX: 0,
+    startPointerY: 0,
+    startX: 0,
+    startY: 0,
+    title: "",
+  };
+
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const isActive = () => desktopPointer.matches && !lightbox.hidden;
+
+  const clampPan = () => {
+    if (!figure || zoom.scale <= 1) {
+      zoom.x = 0;
+      zoom.y = 0;
+      return;
+    }
+
+    const imageWidth = image.clientWidth || 0;
+    const imageHeight = image.clientHeight || 0;
+    const figureWidth = figure.clientWidth || window.innerWidth;
+    const figureHeight = figure.clientHeight || window.innerHeight;
+    const maxX = Math.max(0, ((imageWidth * zoom.scale) - figureWidth) / 2);
+    const maxY = Math.max(0, ((imageHeight * zoom.scale) - figureHeight) / 2);
+
+    zoom.x = clamp(zoom.x, -maxX, maxX);
+    zoom.y = clamp(zoom.y, -maxY, maxY);
+  };
+
+  const applyZoom = ({ animate = true } = {}) => {
+    clampPan();
+    image.style.transformOrigin = "center center";
+    image.style.transform = `translate3d(${zoom.x}px, ${zoom.y}px, 0) scale(${zoom.scale})`;
+    image.style.transition = animate && !zoom.dragging && !reducedMotion.matches
+      ? "transform 140ms cubic-bezier(.2,.8,.2,1)"
+      : "none";
+    image.style.willChange = zoom.scale > 1 ? "transform" : "auto";
+    image.style.cursor = zoom.scale > 1
+      ? (zoom.dragging ? "grabbing" : "grab")
+      : "zoom-in";
+    image.title = desktopPointer.matches
+      ? (zoom.scale > 1
+        ? "Glisser pour déplacer · molette pour zoomer · double-clic pour réinitialiser"
+        : "Molette ou double-clic pour zoomer")
+      : "";
+    lightbox.dataset.desktopZoomed = zoom.scale > 1 ? "true" : "false";
+  };
+
+  const resetZoom = ({ animate = false } = {}) => {
+    zoom.scale = 1;
+    zoom.x = 0;
+    zoom.y = 0;
+    zoom.dragging = false;
+    zoom.moved = false;
+    zoom.pointerId = null;
+    applyZoom({ animate });
+  };
+
+  const setScale = (nextScale, { animate = true } = {}) => {
+    zoom.scale = clamp(nextScale, 1, 5);
+    if (zoom.scale <= 1.001) {
+      resetZoom({ animate });
+      return;
+    }
+    applyZoom({ animate });
+  };
+
+  figure?.addEventListener("wheel", (event) => {
+    if (!isActive()) return;
+    event.preventDefault();
+    const factor = event.deltaY < 0 ? 1.16 : 1 / 1.16;
+    setScale(zoom.scale * factor, { animate: false });
+  }, { passive: false });
+
+  image.addEventListener("dblclick", (event) => {
+    if (!isActive()) return;
+    event.preventDefault();
+    setScale(zoom.scale > 1 ? 1 : 2.25);
+  });
+
+  image.addEventListener("pointerdown", (event) => {
+    if (!isActive() || event.pointerType !== "mouse" || zoom.scale <= 1) return;
+    event.preventDefault();
+    zoom.dragging = true;
+    zoom.moved = false;
+    zoom.pointerId = event.pointerId;
+    zoom.startPointerX = event.clientX;
+    zoom.startPointerY = event.clientY;
+    zoom.startX = zoom.x;
+    zoom.startY = zoom.y;
+    image.setPointerCapture?.(event.pointerId);
+    applyZoom({ animate: false });
+  });
+
+  image.addEventListener("pointermove", (event) => {
+    if (!zoom.dragging || event.pointerId !== zoom.pointerId) return;
+    const deltaX = event.clientX - zoom.startPointerX;
+    const deltaY = event.clientY - zoom.startPointerY;
+    if (Math.abs(deltaX) > 2 || Math.abs(deltaY) > 2) zoom.moved = true;
+    zoom.x = zoom.startX + deltaX;
+    zoom.y = zoom.startY + deltaY;
+    applyZoom({ animate: false });
+  });
+
+  const stopDragging = (event) => {
+    if (!zoom.dragging || (event?.pointerId != null && event.pointerId !== zoom.pointerId)) return;
+    if (zoom.pointerId != null) image.releasePointerCapture?.(zoom.pointerId);
+    zoom.dragging = false;
+    zoom.pointerId = null;
+    applyZoom({ animate: false });
+  };
+
+  image.addEventListener("pointerup", stopDragging);
+  image.addEventListener("pointercancel", stopDragging);
+  image.addEventListener("lostpointercapture", stopDragging);
+
+  document.addEventListener("keydown", (event) => {
+    if (!isActive() || zoom.scale <= 1) return;
+
+    const step = event.shiftKey ? 160 : 72;
+    if (event.key === "ArrowLeft") zoom.x += step;
+    else if (event.key === "ArrowRight") zoom.x -= step;
+    else if (event.key === "ArrowUp") zoom.y += step;
+    else if (event.key === "ArrowDown") zoom.y -= step;
+    else return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    applyZoom({ animate: false });
+  }, { capture: true });
+
+  title.addEventListener("DOMSubtreeModified", () => {
+    const currentTitle = title.textContent.trim();
+    if (currentTitle !== zoom.title) {
+      zoom.title = currentTitle;
+      resetZoom();
+    }
+  });
+
+  const stateObserver = new MutationObserver(() => {
+    const currentTitle = title.textContent.trim();
+    if (lightbox.hidden || currentTitle !== zoom.title) {
+      zoom.title = currentTitle;
+      resetZoom();
+    }
+  });
+  stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
+  stateObserver.observe(title, { childList: true, subtree: true, characterData: true });
+
+  window.addEventListener("resize", () => {
+    if (zoom.scale > 1) applyZoom({ animate: false });
+  }, { passive: true });
+
+  desktopPointer.addEventListener?.("change", () => resetZoom());
+  zoom.title = title.textContent.trim();
+  applyZoom({ animate: false });
 }
 
 async function loadFullscreenSources() {
