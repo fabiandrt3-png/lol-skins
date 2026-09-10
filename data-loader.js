@@ -1,4 +1,5 @@
-const CATALOG_SOURCE = "data/image-overrides.json";
+const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
+const CATALOG_SOURCE = VERIFIED_IMAGE_MAP;
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 
 let skinDataPromise;
