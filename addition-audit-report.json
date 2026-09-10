@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10T16:12:32.534Z",
+  "generatedAt": "2026-09-10T16:13:16.786Z",
   "summary": {
-    "total": 127,
-    "fullyVerified": 81,
-    "unresolved": 46,
-    "pc": 64,
+    "total": 128,
+    "fullyVerified": 83,
+    "unresolved": 45,
+    "pc": 65,
     "wildRift": 63,
     "belowCardTarget": 1,
     "belowFullscreenTarget": 42
@@ -323,28 +323,6 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ornn_ChooChooSkin.jpg"
-        ]
-      }
-    },
-    {
-      "champion": "Nocturne",
-      "skin": "Weather Entity Nocturne",
-      "type": "Wild Rift",
-      "card": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
-        ]
-      },
-      "fullscreen": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
         ]
       }
     },
@@ -768,23 +746,23 @@
     },
     {
       "champion": "Akali",
-      "skin": "Prestige Crystal Rose Akali",
+      "skin": "Prestige Select Crystal Rose Akali",
       "type": "Wild Rift",
       "card": {
         "ok": false,
         "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg"
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg"
         ]
       },
       "fullscreen": {
         "ok": false,
         "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg"
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg"
         ]
       }
     },
@@ -1010,7 +988,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 139912,
+        "bytes": 136351,
         "contentType": "image/jpeg"
       }
     },
@@ -1058,7 +1036,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127178,
+        "bytes": 122660,
         "contentType": "image/jpeg"
       }
     },
@@ -1106,7 +1084,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127157,
+        "bytes": 124395,
         "contentType": "image/jpeg"
       }
     },
@@ -1130,7 +1108,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 143885,
+        "bytes": 140584,
         "contentType": "image/jpeg"
       }
     },
@@ -1166,7 +1144,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129098,
+        "bytes": 126113,
         "contentType": "image/jpeg"
       }
     },
@@ -1202,7 +1180,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145057,
+        "bytes": 137247,
         "contentType": "image/jpeg"
       }
     },
@@ -1238,7 +1216,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 128210,
+        "bytes": 123831,
         "contentType": "image/jpeg"
       }
     },
@@ -1310,7 +1288,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 123911,
+        "bytes": 118017,
         "contentType": "image/jpeg"
       }
     },
@@ -1394,7 +1372,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 136076,
+        "bytes": 131569,
         "contentType": "image/jpeg"
       }
     },
@@ -1519,7 +1497,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 139912,
+        "bytes": 136351,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -1527,7 +1505,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/skin75/images/sona_splash_centered_75.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 139912,
+        "bytes": 136351,
         "contentType": "image/jpeg"
       }
     },
@@ -1611,7 +1589,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127178,
+        "bytes": 122660,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -1619,7 +1597,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127178,
+        "bytes": 122660,
         "contentType": "image/jpeg"
       }
     },
@@ -1703,7 +1681,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127157,
+        "bytes": 124395,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -1711,7 +1689,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127157,
+        "bytes": 124395,
         "contentType": "image/jpeg"
       }
     },
@@ -1770,7 +1748,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 143885,
+        "bytes": 140584,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -1778,7 +1756,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 143885,
+        "bytes": 140584,
         "contentType": "image/jpeg"
       }
     },
@@ -2049,7 +2027,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129098,
+        "bytes": 126113,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2057,7 +2035,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129098,
+        "bytes": 126113,
         "contentType": "image/jpeg"
       }
     },
@@ -2118,7 +2096,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145057,
+        "bytes": 137247,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2126,7 +2104,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145057,
+        "bytes": 137247,
         "contentType": "image/jpeg"
       }
     },
@@ -2187,7 +2165,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 128210,
+        "bytes": 123831,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2195,7 +2173,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin53/images/brand_splash_centered_53.skins_brand_skin53.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 128210,
+        "bytes": 123831,
         "contentType": "image/jpeg"
       }
     },
@@ -2325,7 +2303,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 123911,
+        "bytes": 118017,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2333,7 +2311,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 123911,
+        "bytes": 118017,
         "contentType": "image/jpeg"
       }
     },
@@ -2507,7 +2485,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 136076,
+        "bytes": 131569,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2515,7 +2493,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/skin42/images/jax_splash_centered_42.skins_jax_skin42.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 136076,
+        "bytes": 131569,
         "contentType": "image/jpeg"
       }
     },
@@ -2819,6 +2797,29 @@
       }
     },
     {
+      "id": "akali::spirit-blossom-akali-citrine-chroma::pc",
+      "champion": "Akali",
+      "skin": "Spirit Blossom Akali (Citrine Chroma)",
+      "type": "PC",
+      "releaseDate": "2026-04-29",
+      "card": {
+        "ok": true,
+        "url": "https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-139accb4-5d87-48c8-9885-d2c329114ad7.jpg",
+        "width": 2110,
+        "height": 1289,
+        "bytes": 329673,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://game.gtimg.cn/images/lol/act/a20230715chromahub/skin/site3-139accb4-5d87-48c8-9885-d2c329114ad7.jpg",
+        "width": 2110,
+        "height": 1289,
+        "bytes": 329673,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "jayce::petals-of-spring-jayce::pc",
       "champion": "Jayce",
       "skin": "Petals of Spring Jayce",
@@ -2829,7 +2830,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/skin38/images/jayce_splash_centered_38.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 139180,
+        "bytes": 134465,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3550,10 +3551,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR_HD.jpg?00cca",
-        "width": 7686,
-        "height": 3553,
-        "bytes": 19149220,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR.jpg?b8f54",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 396261,
         "contentType": "image/jpeg"
       }
     },
@@ -3680,21 +3681,20 @@
       "type": "Wild Rift",
       "releaseDate": "2026-07-09",
       "card": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg"
-        ]
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 300323,
+        "contentType": "image/jpeg"
       },
       "fullscreen": {
-        "ok": false,
-        "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Nocturne_WeatherEntitySkin.jpg"
-        ]
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 300323,
+        "contentType": "image/jpeg"
       }
     },
     {
@@ -4154,26 +4154,26 @@
       }
     },
     {
-      "id": "akali::prestige-crystal-rose-akali::wild-rift",
+      "id": "akali::prestige-select-crystal-rose-akali::wild-rift",
       "champion": "Akali",
-      "skin": "Prestige Crystal Rose Akali",
+      "skin": "Prestige Select Crystal Rose Akali",
       "type": "Wild Rift",
       "releaseDate": "2026-08-14",
       "card": {
         "ok": false,
         "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg"
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg"
         ]
       },
       "fullscreen": {
         "ok": false,
         "attempted": [
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_HD.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin_WR.jpg",
-          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeCrystalRoseSkin.jpg"
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Akali_PrestigeSelectCrystalRoseSkin.jpg"
         ]
       }
     },
