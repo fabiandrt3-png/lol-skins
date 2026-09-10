@@ -135,9 +135,13 @@ function mapCatalogSkin(item, verifiedImages) {
 
   const explicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
   const verifiedFullscreenCandidates = highResolutionImageCandidates(cardCandidates);
+  const inferredFullscreenCandidates = explicitFullscreenCandidates.length || verifiedFullscreenCandidates.length
+    ? []
+    : inferredWikiHdCandidates(item);
   const highResImageCandidates = unique([
     ...explicitFullscreenCandidates,
     ...verifiedFullscreenCandidates,
+    ...inferredFullscreenCandidates,
   ]);
 
   return {
@@ -177,6 +181,34 @@ function highResolutionImageCandidates(candidates) {
     ...hdCandidates.flatMap(wikiOriginalCandidates),
     ...hdCandidates,
   ]);
+}
+
+function inferredWikiHdCandidates(item) {
+  if (!item?.champ || !item?.skin || /chroma/i.test(item.skin)) return [];
+
+  const championToken = wikiFileToken(item.champ);
+  const rawSkinName = String(item.skin)
+    .replace(/\(Wild Rift\)/gi, " ")
+    .replace(new RegExp(escapeRegExp(item.champ), "ig"), " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const skinToken = /^classic(?:\s|$)/i.test(rawSkinName) ? "Original" : wikiFileToken(rawSkinName);
+  if (!championToken || !skinToken) return [];
+
+  const platformSuffix = item.type === "Wild Rift" ? "_WR" : "";
+  const filename = `${championToken}_${skinToken}Skin${platformSuffix}_HD.jpg`;
+  return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(filename)}`];
+}
+
+function wikiFileToken(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^A-Za-z0-9]+/g, "");
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function wikiStandardCandidates(url) {
