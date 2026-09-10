@@ -1,162 +1,51 @@
-const LEGACY_SOURCE = "legacy/index-original.html";
-const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
-const NEW_SKINS_SOURCE = "data/new-skins.json";
-const POST_CUTOFF_SOURCE = "data/post-cutoff-additions.js";
-const ENTRY_FIELDS = ["champ", "skin", "image", "icon", "type"];
+const CATALOG_SOURCE = "data/image-overrides.json";
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
-const AATROX_CHRONOLOGY = new Map([
-  "Classic Aatrox",
-  "Justicar Aatrox",
-  "Mecha Aatrox",
-  "Mecha Aatrox (Pearl Chroma)",
-  "Sea Hunter Aatrox",
-  "Blood Moon Aatrox",
-  "Blood Moon Aatrox (Prestige)",
-  "Victorious Aatrox",
-  "Odyssey Aatrox",
-  "Lunar Eclipse Aatrox",
-  "DRX Aatrox",
-  "DRX Aatrox (Prestige)",
-  "Shan Hai Scrolls Aatrox",
-  "Dragon Lantern Aatrox",
-  "Dragon Lantern Aatrox (Prestige Select)",
-  "Primordian Aatrox",
-  "Primordian Aatrox (Catseye Chroma)",
-  "Primordian Aatrox (Ruby Chroma)",
-  "Primordian Aatrox (Sapphire Chroma)",
-  "Weather Entity Aatrox",
-  "Mecha Aatrox (Exquisite Edition)",
-].map((skin, index) => [skin, index]));
-
-// Base splash arts remain chronological. A chroma with its own distinct splash art
-// is deliberately grouped immediately after its parent skin, regardless of release date.
-// Platform suffixes distinguish same-name PC/WR skins only when their artwork is genuinely different.
-const AHRI_CHRONOLOGY = new Map([
-  "Classic Ahri::pc",
-  "Dynasty Ahri",
-  "Midnight Ahri",
-  "Midnight Ahri (Ahri-versary Chroma)",
-  "Foxfire Ahri::pc",
-  "Foxfire Ahri (Emerald Chroma)",
-  "Popstar Ahri::pc",
-  "Popstar Ahri (Amethyst Chroma)",
-  "Popstar Ahri (Catseye Chroma)",
-  "Popstar Ahri (Pearl Chroma)",
-  "Popstar Ahri (Ahri-versary Chroma)",
-  "Challenger Ahri",
-  "Academy Ahri",
-  "Arcade Ahri",
-  "Star Guardian Ahri",
-  "Star Guardian Ahri (Mythic Chroma)",
-  "K/DA Ahri",
-  "K/DA Ahri (Ahri-versary Chroma)",
-  "K/DA Ahri (Prestige)",
-  "Elderwood Ahri",
-  "Foxfire Ahri::wild-rift",
-  "Spirit Blossom Ahri",
-  "Spirit Blossom Ahri (Rose Quartz Chroma)",
-  "K/DA ALL OUT Ahri",
-  "K/DA ALL OUT Ahri (Rose Quartz Chroma)",
-  "Coven Ahri",
-  "Coven Ahri (Ahri-versary Chroma)",
-  "Coven Ahri (Pearl Chroma)",
-  "Arcana Ahri",
-  "Snow Moon Ahri",
-  "Snow Moon Ahri (Turquoise Chroma)",
-  "Soda Pop Ahri",
-  "Shan Hai Scrolls Ahri",
-  "Risen Legend Ahri",
-  "Immortalized Legend Ahri",
-  "Spirit Blossom Springs Ahri",
-  "Spirit Blossom Springs Ahri (Pearl Chroma)",
-  "Spirit Blossom Springs Ahri (Ruby Chroma)",
-  "Spirit Blossom Springs Ahri (Sapphire Chroma)",
-  "Spirit Blossom Springs Ahri (Tanzanite Chroma)",
-  "Spirit Blossom Springs Ahri (Catseye Chroma)",
-  "After Hours Spirit Blossom Springs Ahri",
-  "Crystal Rose Ahri",
-].map((skin, index) => [skin, index]));
-
-const AKALI_CHRONOLOGY = new Map([
-  "Classic Akali",
-  "Stinger Akali",
-  "Infernal Akali",
-  "All-star Akali",
-  "Nurse Akali",
-  "Blood Moon Akali",
-  "Silverfang Akali",
-  "Headhunter Akali",
-  "Headhunter Akali (Pearl Chroma)",
-  "Sashimi Akali",
-  "K/DA Akali",
-  "K/DA Akali (Prestige)",
-  "PROJECT: Akali",
-  "True Damage Akali",
-  "K/DA ALL OUT Akali",
-  "K/DA ALL OUT Akali (Rose Quartz Chroma)",
-  "Crime City Nightmare Akali",
-  "Star Guardian Akali",
-  "Star Guardian Akali (Rose Quartz Chroma)",
-  "Star Guardian Akali (Ruby Chroma)",
-  "Crystal Rose Akali",
-  "DRX Akali",
-  "Coven Akali",
-  "Coven Akali (Sapphire Chroma)",
-  "Coven Akali (Prestige)",
-  "Supreme Cells Akali",
-  "Empyrean Akali",
-  "Spirit Blossom Akali",
-  "Spirit Blossom Akali (Citrine Chroma)",
-  "Spirit Blossom Akali (Rose Quartz Chroma)",
-  "Spirit Blossom Akali (Pearl Chroma)",
-  "Calligraphia Akali",
-  "Prestige Select Crystal Rose Akali",
-].map((skin, index) => [skin, index]));
-
-// These Wild Rift files exist, but use the same underlying illustration as the PC entry.
-// Keep one copy in the catalogue; same-name WR art that is genuinely different (Foxfire) remains visible.
-const HIDDEN_DUPLICATE_SPLASHES = new Set([
-  "ahri::classic-ahri::wild-rift",
-  "ahri::popstar-ahri::wild-rift",
-]);
 
 let skinDataPromise;
 
 export function loadSkinData() {
   if (!skinDataPromise) {
-    skinDataPromise = Promise.all([
-      fetchText(LEGACY_SOURCE),
-      loadVerifiedImageMap(),
-      loadNewSkins(),
-      loadPostCutoffSkins(),
-    ]).then(([source, verifiedImages, newSkins, postCutoffSkins]) => {
-      const historicalData = parseLegacyCatalog(source);
-      const historicalSkins = historicalData.map((item, index) => mapHistoricalSkin(item, index, verifiedImages));
-      const additions = [...newSkins, ...postCutoffSkins].map(mapNewSkin);
+    skinDataPromise = fetch(versionedAppAsset(CATALOG_SOURCE), { cache: "default" })
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`Catalogue centralisé (${response.status})`);
+        const payload = await response.json();
+        const catalog = payload?.catalog;
+        const verifiedImages = payload?.entries;
 
-      // Keep one entry per actual catalogue record, then remove only artwork duplicates that were visually audited.
-      let catalog = dedupeSkins([...historicalSkins, ...additions]).filter((item) => !isHiddenDuplicateSplash(item));
-      catalog = sortChampionByKnownChronology(catalog, "Aatrox", AATROX_CHRONOLOGY);
-      catalog = sortChampionByKnownChronology(catalog, "Ahri", AHRI_CHRONOLOGY);
-      catalog = sortChampionByKnownChronology(catalog, "Akali", AKALI_CHRONOLOGY);
-      return catalog;
-    });
+        if (!Array.isArray(catalog) || !catalog.length) {
+          throw new Error("Le catalogue centralisé est vide ou invalide.");
+        }
+
+        const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
+        return catalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
+      });
   }
 
   return skinDataPromise;
 }
 
-function mapHistoricalSkin(item, index, verifiedImages) {
-  const id = `${slugify(item.champ)}::${slugify(item.skin)}::${index}`;
+function mapCatalogSkin(item, verifiedImages) {
+  const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
   const verified = verifiedImages[id] || null;
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
-  const legacyCandidates = legacyImageCandidates(item.image);
-  const allCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
-  const imageCandidates = cardImageCandidates(allCandidates);
-  const highResImageCandidates = highResolutionImageCandidates(allCandidates);
+  const sourceCandidates = item.sourceKind === "legacy"
+    ? legacyImageCandidates(item.image)
+    : unique([item.image, ...(item.fallbacks || [])]);
+  const cardCandidates = unique([...verifiedCandidates, ...sourceCandidates]);
+  const imageCandidates = cardImageCandidates(cardCandidates);
+
+  const explicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
+  const verifiedFullscreenCandidates = highResolutionImageCandidates(cardCandidates);
+  const highResImageCandidates = unique([
+    ...explicitFullscreenCandidates,
+    ...verifiedFullscreenCandidates,
+  ]);
 
   return {
-    ...item,
+    champ: item.champ,
+    skin: item.skin,
+    ...(item.type ? { type: item.type } : {}),
+    ...(item.releaseDate ? { releaseDate: item.releaseDate } : {}),
     _id: id,
     _legacyImage: item.image,
     _verifiedImageMeta: verified,
@@ -167,162 +56,14 @@ function mapHistoricalSkin(item, index, verifiedImages) {
   };
 }
 
-function mapNewSkin(item) {
-  const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
-  const imageCandidates = unique([item.image, ...(item.fallbacks || [])]);
-  const highResImageCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
-
-  return {
-    champ: item.champ,
-    skin: item.skin,
-    ...(item.type ? { type: item.type } : {}),
-    ...(item.releaseDate ? { releaseDate: item.releaseDate } : {}),
-    _id: id,
-    _legacyImage: item.image,
-    _verifiedImageMeta: null,
-    imageCandidates,
-    highResImageCandidates,
-    iconCandidates: unique([item.icon]),
-    image: imageCandidates[0] || item.image,
-  };
-}
-
-function dedupeSkins(items) {
-  const seen = new Set();
-  return items.filter((item) => {
-    const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
-    const key = `${slugify(item.champ)}::${slugify(item.skin)}::${platform}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-}
-
-function isHiddenDuplicateSplash(item) {
-  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
-  const key = `${slugify(item.champ)}::${slugify(item.skin)}::${platform}`;
-  return HIDDEN_DUPLICATE_SPLASHES.has(key);
-}
-
-function sortChampionByKnownChronology(items, champion, chronology) {
-  const championItems = [];
-  const remainder = [];
-  let insertAt = -1;
-
-  for (const item of items) {
-    if (item.champ === champion) {
-      if (insertAt === -1) insertAt = remainder.length;
-      championItems.push(item);
-    } else {
-      remainder.push(item);
-    }
-  }
-
-  if (championItems.length < 2) return items;
-  championItems.sort((a, b) => knownChronologyOrder(a, chronology) - knownChronologyOrder(b, chronology));
-  remainder.splice(insertAt, 0, ...championItems);
-  return remainder;
-}
-
-function knownChronologyOrder(item, chronology) {
-  const platform = item.type === "Wild Rift" ? "wild-rift" : "pc";
-  return chronology.get(`${item.skin}::${platform}`)
-    ?? chronology.get(item.skin)
-    ?? Number.MAX_SAFE_INTEGER;
-}
-
-async function loadNewSkins() {
-  try {
-    const response = await fetch(versionedAppAsset(NEW_SKINS_SOURCE), { cache: "default" });
-    if (response.status === 404) return [];
-    if (!response.ok) throw new Error(`Nouveaux skins (${response.status})`);
-    const payload = await response.json();
-    const entries = Array.isArray(payload) ? payload : payload?.entries;
-    return validSkinEntries(entries);
-  } catch (error) {
-    console.warn("Catalogue des nouveaux skins indisponible.", error);
-    return [];
-  }
-}
-
-async function loadPostCutoffSkins() {
-  try {
-    const module = await import(versionedAppAsset(`./${POST_CUTOFF_SOURCE}`));
-    return validSkinEntries(module?.postCutoffAdditions);
-  } catch (error) {
-    console.warn("Catalogue postérieur à la création du projet indisponible.", error);
-    return [];
-  }
-}
-
-function validSkinEntries(entries) {
-  return Array.isArray(entries)
-    ? entries.filter((item) => item?.champ && item?.skin && item?.image)
-    : [];
+function validSkinEntry(item) {
+  return Boolean(item?.champ && item?.skin && item?.image);
 }
 
 function versionedAppAsset(url) {
   if (!APP_ASSET_VERSION) return url;
   const separator = url.includes("?") ? "&" : "?";
   return `${url}${separator}v=${encodeURIComponent(APP_ASSET_VERSION)}`;
-}
-
-async function fetchText(url) {
-  const response = await fetch(url, { cache: "default" });
-  if (!response.ok) throw new Error(`Impossible de charger ${url} (${response.status})`);
-  return response.text();
-}
-
-async function loadVerifiedImageMap() {
-  try {
-    const response = await fetch(VERIFIED_IMAGE_MAP, { cache: "default" });
-    if (response.status === 404) return {};
-    if (!response.ok) throw new Error(`Carte d’images vérifiées (${response.status})`);
-    const payload = await response.json();
-    return payload?.entries || {};
-  } catch (error) {
-    console.warn("Carte d’images vérifiées indisponible, utilisation des sources historiques.", error);
-    return {};
-  }
-}
-
-function parseLegacyCatalog(source) {
-  const declaration = "const championsSkins = [";
-  const declarationIndex = source.indexOf(declaration);
-  if (declarationIndex === -1) throw new Error("La collection championsSkins est introuvable.");
-
-  const arrayStart = source.indexOf("[", declarationIndex);
-  const arrayEnd = source.indexOf("];", arrayStart);
-  if (arrayStart === -1 || arrayEnd === -1) throw new Error("La collection championsSkins est incomplète.");
-
-  const arraySource = source.slice(arrayStart + 1, arrayEnd);
-  const entries = [];
-  const objectPattern = /\{([^{}]*)\}/g;
-  let match;
-
-  while ((match = objectPattern.exec(arraySource))) {
-    const body = match[1];
-    const item = {};
-
-    for (const field of ENTRY_FIELDS) {
-      const fieldPattern = new RegExp(`\\b${field}\\s*:\\s*\"((?:\\\\.|[^\"\\\\])*)\"`);
-      const fieldMatch = fieldPattern.exec(body);
-      if (fieldMatch) item[field] = decodeString(fieldMatch[1]);
-    }
-
-    if (item.champ && item.skin && item.image) entries.push(item);
-  }
-
-  if (!entries.length) throw new Error("Aucune entrée de skin n’a pu être lue.");
-  return entries;
-}
-
-function decodeString(value) {
-  try {
-    return JSON.parse(`"${value}"`);
-  } catch {
-    return value.replace(/\\\"/g, '"').replace(/\\\\/g, "\\");
-  }
 }
 
 function cardImageCandidates(candidates) {
