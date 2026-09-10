@@ -1,5 +1,8 @@
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
-const NEW_SKINS_SOURCE = versionedAsset("data/new-skins.json");
+const dataLoaderUrl = APP_ASSET_VERSION
+  ? `./data-loader.js?v=${encodeURIComponent(APP_ASSET_VERSION)}`
+  : "./data-loader.js";
+const { loadSkinData } = await import(dataLoaderUrl);
 
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = document.querySelector("#lightboxImage");
@@ -15,8 +18,12 @@ if (lightbox && lightboxImage && lightboxTitle) {
     if (lightbox.hidden) return;
 
     const displayName = lightboxTitle.textContent.trim();
-    const source = fullscreenSources.get(displayName);
-    if (!source || failedSources.has(source) || lightboxImage.getAttribute("src") === source) return;
+    const candidates = fullscreenSources.get(displayName) || [];
+    const currentSource = lightboxImage.getAttribute("src") || "";
+    if (!candidates.length || candidates.includes(currentSource)) return;
+
+    const source = candidates.find((candidate) => !failedSources.has(candidate));
+    if (!source) return;
 
     if (loadedSources.has(source)) {
       lightboxImage.src = source;
@@ -25,9 +32,9 @@ if (lightbox && lightboxImage && lightboxTitle) {
 
     if (pendingSources.has(source)) return;
 
-    // Keep the normal splash visible while the large file downloads. This avoids
-    // blank frames and prevents the gallery's own fallback handler from treating
-    // a temporarily unavailable HD source as a failed normal splash.
+    // Keep the normal-size card splash visible until the HD file is ready.
+    // Only the currently opened image is upgraded, so adjacent carousel slides
+    // stay lightweight on mobile and desktop.
     const preload = new Image();
     preload.decoding = "async";
     pendingSources.set(source, preload);
@@ -35,7 +42,11 @@ if (lightbox && lightboxImage && lightboxTitle) {
     preload.onload = () => {
       pendingSources.delete(source);
       loadedSources.add(source);
-      if (!lightbox.hidden && fullscreenSources.get(lightboxTitle.textContent.trim()) === source) {
+      if (
+        !lightbox.hidden &&
+        lightboxTitle.textContent.trim() === displayName &&
+        (fullscreenSources.get(displayName) || []).includes(source)
+      ) {
         lightboxImage.src = source;
       }
     };
@@ -43,11 +54,14 @@ if (lightbox && lightboxImage && lightboxTitle) {
     preload.onerror = () => {
       pendingSources.delete(source);
       failedSources.add(source);
+      queueMicrotask(syncFullscreenSource);
     };
 
     preload.src = source;
   };
 
+  // app.js updates the image and title synchronously. Deferring one microtask
+  // lets us always read the final skin title before choosing its HD source.
   const observer = new MutationObserver(() => queueMicrotask(syncFullscreenSource));
   observer.observe(lightboxTitle, { childList: true, subtree: true, characterData: true });
   observer.observe(lightboxImage, { attributes: true, attributeFilter: ["src"] });
@@ -56,32 +70,27 @@ if (lightbox && lightboxImage && lightboxTitle) {
 
 async function loadFullscreenSources() {
   try {
-    const response = await fetch(NEW_SKINS_SOURCE, { cache: "default" });
-    if (!response.ok) return new Map();
-
-    const payload = await response.json();
-    const entries = Array.isArray(payload) ? payload : payload?.entries;
-    if (!Array.isArray(entries)) return new Map();
-
+    const skins = await loadSkinData();
     const sources = new Map();
-    for (const item of entries) {
-      if (!item?.skin || !item?.fullImage) continue;
-      sources.set(displaySkinName(item), item.fullImage);
+
+    for (const skin of skins) {
+      const candidates = unique(skin?.highResImageCandidates || []);
+      if (candidates.length) sources.set(displaySkinName(skin), candidates);
     }
+
     return sources;
-  } catch {
+  } catch (error) {
+    console.warn("Sources HD plein écran indisponibles, utilisation des splash arts standards.", error);
     return new Map();
   }
 }
 
-function displaySkinName(item) {
-  return item.type === "Wild Rift" && !/\(Wild Rift\)/i.test(item.skin)
-    ? `${item.skin} (Wild Rift)`
-    : item.skin;
+function displaySkinName(skin) {
+  return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin)
+    ? `${skin.skin} (Wild Rift)`
+    : skin.skin;
 }
 
-function versionedAsset(url) {
-  if (!APP_ASSET_VERSION) return url;
-  const separator = url.includes("?") ? "&" : "?";
-  return `${url}${separator}v=${encodeURIComponent(APP_ASSET_VERSION)}`;
+function unique(values) {
+  return [...new Set((values || []).filter(Boolean))];
 }

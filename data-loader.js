@@ -37,7 +37,9 @@ function mapHistoricalSkin(item, index, verifiedImages) {
   const verified = verifiedImages[id] || null;
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
   const legacyCandidates = legacyImageCandidates(item.image);
-  const imageCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
+  const allCandidates = unique([...verifiedCandidates, ...legacyCandidates]);
+  const imageCandidates = cardImageCandidates(allCandidates);
+  const highResImageCandidates = highResolutionImageCandidates(allCandidates);
 
   return {
     ...item,
@@ -45,6 +47,7 @@ function mapHistoricalSkin(item, index, verifiedImages) {
     _legacyImage: item.image,
     _verifiedImageMeta: verified,
     imageCandidates,
+    highResImageCandidates,
     iconCandidates: unique([item.icon]),
     image: imageCandidates[0] || item.image,
   };
@@ -53,7 +56,7 @@ function mapHistoricalSkin(item, index, verifiedImages) {
 function mapNewSkin(item) {
   const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
   const imageCandidates = unique([item.image, ...(item.fallbacks || [])]);
-  const fullImageCandidates = unique([item.fullImage, ...(item.fullFallbacks || []), ...imageCandidates]);
+  const highResImageCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
 
   return {
     champ: item.champ,
@@ -63,10 +66,9 @@ function mapNewSkin(item) {
     _legacyImage: item.image,
     _verifiedImageMeta: null,
     imageCandidates,
-    fullImageCandidates,
+    highResImageCandidates,
     iconCandidates: unique([item.icon]),
     image: imageCandidates[0] || item.image,
-    fullImage: fullImageCandidates[0] || imageCandidates[0] || item.image,
   };
 }
 
@@ -154,14 +156,54 @@ function decodeString(value) {
   }
 }
 
+function cardImageCandidates(candidates) {
+  const standardWikiCandidates = candidates.flatMap(wikiStandardCandidates);
+  const nonHdCandidates = candidates.filter((source) => !isWikiHighDefinitionSource(source));
+
+  // Cards prefer normal-size splash files. HD remains a last-resort fallback so
+  // a missing standard file never turns a valid skin into a broken card.
+  return unique([...standardWikiCandidates, ...nonHdCandidates, ...candidates]);
+}
+
+function highResolutionImageCandidates(candidates) {
+  const hdCandidates = candidates.filter(isWikiHighDefinitionSource);
+  return unique([
+    ...hdCandidates.flatMap(wikiOriginalCandidates),
+    ...hdCandidates,
+  ]);
+}
+
+function wikiStandardCandidates(url) {
+  if (!isWikiHighDefinitionSource(url)) return [];
+  const filename = wikiFilename(url);
+  if (!filename) return [];
+  const standardFilename = filename.replace(/_HD(?=\.(?:jpe?g|png|webp)$)/i, "");
+  if (standardFilename === filename) return [];
+  return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(standardFilename)}`];
+}
+
+function isWikiHighDefinitionSource(url) {
+  const filename = wikiFilename(url);
+  return Boolean(filename && /_HD\.(?:jpe?g|png|webp)$/i.test(filename));
+}
+
+function wikiFilename(url) {
+  if (!url || !/wiki\.leagueoflegends\.com\/en-us\//i.test(url)) return "";
+  const rawFilename = url.split("/").pop() || "";
+  try {
+    return decodeURIComponent(rawFilename.split(/[?#]/)[0]);
+  } catch {
+    return rawFilename.split(/[?#]/)[0];
+  }
+}
+
 function legacyImageCandidates(url) {
   return unique([...wikiOriginalCandidates(url), url]);
 }
 
 function wikiOriginalCandidates(url) {
   if (!url || !/wiki\.leagueoflegends\.com\/en-us\/images\//i.test(url)) return [];
-  const rawFilename = url.split("/").pop() || "";
-  const filename = decodeURIComponent(rawFilename.split(/[?#]/)[0]);
+  const filename = wikiFilename(url);
   if (!filename) return [];
   return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(filename)}`];
 }
