@@ -8,6 +8,7 @@ const AATROX_CHRONOLOGY = new Map([
   "Classic Aatrox",
   "Justicar Aatrox",
   "Mecha Aatrox",
+  "Mecha Aatrox (Pearl Chroma)",
   "Sea Hunter Aatrox",
   "Blood Moon Aatrox",
   "Blood Moon Aatrox (Prestige)",
@@ -17,15 +18,14 @@ const AATROX_CHRONOLOGY = new Map([
   "DRX Aatrox",
   "DRX Aatrox (Prestige)",
   "Shan Hai Scrolls Aatrox",
-  "Mecha Aatrox (Pearl Chroma)",
   "Dragon Lantern Aatrox",
   "Dragon Lantern Aatrox (Prestige Select)",
   "Primordian Aatrox",
   "Primordian Aatrox (Catseye Chroma)",
-  "Weather Entity Aatrox",
-  "Mecha Aatrox (Exquisite Edition)",
   "Primordian Aatrox (Ruby Chroma)",
   "Primordian Aatrox (Sapphire Chroma)",
+  "Weather Entity Aatrox",
+  "Mecha Aatrox (Exquisite Edition)",
 ].map((skin, index) => [skin, index]));
 
 let skinDataPromise;
