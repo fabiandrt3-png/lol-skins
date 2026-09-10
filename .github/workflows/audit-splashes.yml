@@ -11,6 +11,7 @@ on:
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
+      - 'scripts/upgrade-low-res.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -141,6 +142,7 @@ jobs:
           console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
           console.log(`- Historical PC: ${s.pcVerified ?? '?'} / ${s.pcTotal ?? '?'}`);
           console.log(`- Historical Wild Rift: ${s.wildRiftVerified ?? '?'} / ${s.wildRiftTotal ?? '?'}`);
+          console.log(`- Historical fullscreen below 2560x1440: ${s.below2560x1440 ?? '?'}`);
           console.log(`- Recent additions fully verified: ${a.fullyVerified ?? '?'} / ${a.total ?? '?'}`);
           console.log(`- Recent additions unresolved: ${a.unresolved ?? '?'}`);
           console.log(`- Recent fullscreen below 1600x900: ${a.belowFullscreenTarget ?? '?'}`);
