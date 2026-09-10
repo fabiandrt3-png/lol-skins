@@ -7,28 +7,6 @@ if (!Array.isArray(payload.catalog) || !payload.catalog.length) {
   throw new Error('data/image-overrides.json does not contain a non-empty catalog array');
 }
 
-const clockPuncherAlistar = {
-  id: 'alistar::clock-puncher-alistar::wild-rift',
-  champ: 'Alistar',
-  skin: 'Clock Puncher Alistar',
-  type: 'Wild Rift',
-  releaseDate: '2026-03-27',
-  image: 'https://images3.alphacoders.com/140/thumb-1920-1408000.jpg',
-  fallbacks: [
-    'https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg',
-  ],
-  fullImage: 'https://images3.alphacoders.com/140/1408000.jpg',
-  fullHdFallbacks: [
-    'https://images3.alphacoders.com/140/thumb-1920-1408000.jpg',
-    'https://image-5.uhdpaper.com/wallpaper/alistar-clock-puncher-lol-skin-splash-art-4k-wallpaper-uhdpaper.com-495%405%40n.jpg',
-  ],
-  sourceKind: 'post-cutoff',
-};
-
-if (!payload.catalog.some((item) => item?.id === clockPuncherAlistar.id)) {
-  payload.catalog.push(clockPuncherAlistar);
-}
-
 const before = payload.catalog;
 const beforeIds = before.map(stableId);
 const sorted = before
