@@ -36,6 +36,16 @@ function wr(champ, skin, releaseDate, descriptor, extraFallbacks = []) {
   };
 }
 
+function wrDirect(champ, skin, releaseDate, image, fullImage = image) {
+  return {
+    id: `${slugify(champ)}::${slugify(skin)}::wild-rift`, champ, skin, type: "Wild Rift", releaseDate,
+    image,
+    fallbacks: fullImage === image ? [] : [fullImage],
+    fullImage,
+    fullHdFallbacks: fullImage === image ? [] : [image],
+  };
+}
+
 function pc(champ, skin, releaseDate, alias, number, descriptor) {
   const skinFolder = `skin${String(number).padStart(2, "0")}`;
   const root = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${alias}/skins/${skinFolder}/images/${alias}_splash_`;
@@ -137,7 +147,13 @@ export const postCutoffAdditions = [
   wr("Nami", "Crystal Rose Nami", "2026-08-14", "CrystalRose"),
   wr("Miss Fortune", "Crystal Rose Miss Fortune", "2026-08-14", "CrystalRose"),
   wr("Yasuo", "Crystal Rose Yasuo", "2026-08-14", "CrystalRose"),
-  wr("Akali", "Prestige Select Crystal Rose Akali", "2026-08-14", "PrestigeSelectCrystalRose"),
+  wrDirect(
+    "Akali",
+    "Prestige Select Crystal Rose Akali",
+    "2026-08-14",
+    "https://i0.wp.com/wildrift-jp-wiki.com/wp-content/uploads/2026/08/HPFnP9wWgAAY2o_.jpg?resize=1920%2C1080&ssl=1",
+    "https://www.sportsdunia.com/cdn-cgi/image/width%3D3840%2Conerror%3Dredirect/https%3A//sdprodstorage.blob.core.windows.net/sd-cms-prod/Screenshot%20%28222%29-1785932216582.webp",
+  ),
   wr("Sona", "Prestige Crystal Rose Sona", "2026-08-14", "PrestigeCrystalRose"),
   wr("Skarner", "Scorpio Deity Skarner", "2026-08-27", "ScorpioDeity"),
   wr("Skarner", "Scorpio Deity Ancient Wisdom Skarner", "2026-08-27", "ScorpioDeityAncientWisdom"),
