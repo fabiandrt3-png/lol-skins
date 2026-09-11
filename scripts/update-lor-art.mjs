@@ -70,7 +70,7 @@ const orderedSets = loadedSets.sort((a, b) => a.name.localeCompare(b.name, 'en',
 const stableNext = {
   source: 'Riot Games — Legends of Runeterra Data Dragon',
   sourceDocs: RIOT_LOR_DOCS,
-  strategy: 'Official LoR full card illustrations indexed as secondary art candidates; automatic use is limited to safe fallbacks or explicit curated skin matches.',
+  strategy: 'Official LoR full champion-card illustrations indexed as secondary art candidates; automatic use is limited to safe fallbacks or explicit curated skin matches.',
   sets: orderedSets,
   champions: orderedChampions,
   matches,
@@ -131,7 +131,7 @@ async function fetchJson(url) {
 }
 
 function isChampionCard(card) {
-  return normalize(card?.supertype) === 'champion' || normalize(card?.rarityRef) === 'champion';
+  return normalize(card?.type) === 'unit' && normalize(card?.supertype) === 'champion';
 }
 
 function fullArtUrls(card) {
