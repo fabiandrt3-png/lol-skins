@@ -1,5 +1,6 @@
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 const LORE_METADATA_SOURCE = "data/skin-lore.json";
+const WILD_RIFT_LORE_SOURCE = "data/wild-rift-lore.json";
 const COMMUNITYDRAGON_BASE = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
 const CHAMPION_SUMMARY_SOURCE = `${COMMUNITYDRAGON_BASE}/champion-summary.json`;
 
@@ -51,18 +52,18 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   const championDataCache = new Map();
   let championSummaryPromise = null;
   let metadataEntries = [];
+  let wildRiftLoreEntries = [];
   let currentLore = null;
   let syncToken = 0;
 
-  try {
-    const response = await fetch(versionedAsset(LORE_METADATA_SOURCE), { cache: "default" });
-    if (response.ok) {
-      const payload = await response.json();
-      metadataEntries = Array.isArray(payload?.entries) ? payload.entries : [];
-    }
-  } catch (error) {
-    console.warn("Lore metadata unavailable.", error);
-  }
+  await Promise.all([
+    loadLocalEntries(LORE_METADATA_SOURCE, "Lore metadata").then((entries) => {
+      metadataEntries = entries;
+    }),
+    loadLocalEntries(WILD_RIFT_LORE_SOURCE, "Wild Rift lore").then((entries) => {
+      wildRiftLoreEntries = entries;
+    }),
+  ]);
 
   const currentChampion = () => {
     const params = new URLSearchParams(location.hash.replace(/^#/, ""));
@@ -70,6 +71,11 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   };
 
   const metadataFor = (championName, skinName) => metadataEntries.find((entry) =>
+    normalizeKey(entry?.champion) === normalizeKey(championName)
+      && normalizeKey(entry?.skin) === normalizeKey(skinName)
+  ) || null;
+
+  const wildRiftLoreFor = (championName, skinName) => wildRiftLoreEntries.find((entry) =>
     normalizeKey(entry?.champion) === normalizeKey(championName)
       && normalizeKey(entry?.skin) === normalizeKey(skinName)
   ) || null;
@@ -117,13 +123,31 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
 
   const resolveOfficialLore = async (championName, displayedSkinName) => {
     if (!championName || !displayedSkinName) return null;
-    const championData = await loadChampionData(championName);
-    if (!championData) return null;
 
     const cleanSkinName = stripPlatformSuffix(displayedSkinName);
     const skinKey = normalizeKey(cleanSkinName);
     const championKey = normalizeKey(championName);
     const isBaseSkin = skinKey === championKey || skinKey === normalizeKey(`Classic ${championName}`);
+    const isWildRiftSkin = /\(\s*wild\s+rift\s*\)\s*$/i.test(displayedSkinName);
+    const metadata = metadataFor(championName, displayedSkinName) || metadataFor(championName, cleanSkinName);
+
+    // Wild Rift-exclusive skin lore is not exposed by Riot's public champion webpage.
+    // Use only exact client strings that were transcribed from the Wild Rift client;
+    // never substitute or generate a description for a missing WR entry.
+    if (isWildRiftSkin) {
+      const wrEntry = wildRiftLoreFor(championName, cleanSkinName);
+      const text = officialText(wrEntry?.text);
+      if (!text) return null;
+
+      return {
+        skin: displayedSkinName,
+        universe: wrEntry?.universe || metadata?.universe || "Wild Rift",
+        text,
+      };
+    }
+
+    const championData = await loadChampionData(championName);
+    if (!championData) return null;
 
     let text = "";
     if (isBaseSkin) {
@@ -144,7 +168,6 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
     }
 
     if (!text) return null;
-    const metadata = metadataFor(championName, displayedSkinName) || metadataFor(championName, cleanSkinName);
 
     return {
       skin: displayedSkinName,
@@ -230,6 +253,18 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   window.addEventListener("hashchange", () => queueMicrotask(sync));
 
   sync();
+}
+
+async function loadLocalEntries(source, label) {
+  try {
+    const response = await fetch(versionedAsset(source), { cache: "default" });
+    if (!response.ok) throw new Error(`${label} unavailable (${response.status})`);
+    const payload = await response.json();
+    return Array.isArray(payload?.entries) ? payload.entries : [];
+  } catch (error) {
+    console.warn(`${label} unavailable.`, error);
+    return [];
+  }
 }
 
 function versionedAsset(url) {
