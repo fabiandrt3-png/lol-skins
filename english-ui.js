@@ -21,7 +21,6 @@ const exactTranslations = new Map([
 ]);
 
 const WILD_RIFT_SUFFIX = /\s*\(\s*Wild Rift\s*\)/gi;
-const CHROMA_TOKEN = /\s*[-–—:|/]?\s*\bchroma\b\s*[-–—:|/]?\s*/gi;
 
 function translateValue(value) {
   if (!value) return value;
@@ -143,15 +142,80 @@ function installCardBadgeStyles() {
   `;
 }
 
-function cleanSkinCardName(value) {
+function currentChampionName() {
+  const params = new URLSearchParams(location.hash.replace(/^#/, ""));
+  return params.get("champion") || "";
+}
+
+function normalizeDisplayName(value) {
   return String(value || "")
-    .replace(WILD_RIFT_SUFFIX, " ")
-    .replace(CHROMA_TOKEN, " ")
     .replace(/[()]/g, " ")
     .replace(/\s+([,.;!?])/g, "$1")
     .replace(/(?:\s*[-–—:|/]\s*)+$/g, "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeChromaLabel(value) {
+  const clean = normalizeDisplayName(value)
+    .replace(/^[-–—:|/\s]+|[-–—:|/\s]+$/g, "")
+    .trim();
+  if (!clean) return "Chroma";
+  return /\bChroma$/i.test(clean) ? clean.replace(/\bchroma$/i, "Chroma") : `${clean} Chroma`;
+}
+
+function escapeRegExp(value) {
+  return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function parseCardSkinName(rawValue) {
+  const raw = String(rawValue || "").trim();
+  let displayName = raw;
+  let chromaLabel = "";
+
+  const isWildRift = /\(\s*Wild Rift\s*\)/i.test(raw) || /\bWild Rift\b/i.test(raw);
+
+  displayName = displayName.replace(/\(([^()]*)\)/g, (full, content) => {
+    if (/\bChroma\b/i.test(content) && !chromaLabel) {
+      chromaLabel = normalizeChromaLabel(content);
+      return " ";
+    }
+    if (/^\s*Wild Rift\s*$/i.test(content)) return " ";
+    return ` ${content} `;
+  });
+
+  displayName = displayName.replace(/\bWild Rift\b/gi, " ");
+
+  if (!chromaLabel && /\bChroma\b/i.test(displayName)) {
+    const champion = currentChampionName();
+    if (champion) {
+      const championPattern = escapeRegExp(champion);
+      const match = displayName.match(new RegExp(`^(.*?\\b${championPattern}\\b)\\s*[-–—:|/]?\\s*(.+?\\bChroma\\b)\\s*$`, "i"));
+      if (match) {
+        displayName = match[1];
+        chromaLabel = normalizeChromaLabel(match[2]);
+      }
+    }
+  }
+
+  if (!chromaLabel && /\bChroma\b/i.test(displayName)) {
+    const separated = displayName.match(/^(.*?)\s*[-–—:|/]\s*(.+?\bChroma\b)\s*$/i);
+    if (separated) {
+      displayName = separated[1];
+      chromaLabel = normalizeChromaLabel(separated[2]);
+    }
+  }
+
+  if (!chromaLabel && /\bChroma\b/i.test(displayName)) {
+    chromaLabel = "Chroma";
+    displayName = displayName.replace(/\bChroma\b/gi, " ");
+  }
+
+  return {
+    displayName: normalizeDisplayName(displayName),
+    chromaLabel,
+    isWildRift,
+  };
 }
 
 function ensureBadge(row, className, label) {
@@ -170,10 +234,10 @@ function processSkinCard(card) {
 
   const titleWrap = card.querySelector(".skin-title-wrap");
   const title = titleWrap?.querySelector("h3");
-  const preview = card.querySelector(".skin-preview");
-  if (!titleWrap || !title || !preview) return;
+  if (!titleWrap || !title) return;
 
   const rawTitle = title.textContent || "";
+  const parsed = parseCardSkinName(rawTitle);
   const inlineWildRiftTag = title.querySelector(".skin-tag-wr");
   const existingWildRiftBadge = card.querySelector(".badge-wr");
   const existingChromaBadge = card.querySelector(".badge-chroma");
@@ -181,22 +245,16 @@ function processSkinCard(card) {
     .find((element) => /^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim()));
 
   const isWildRift = Boolean(
-    inlineWildRiftTag
+    parsed.isWildRift
+    || inlineWildRiftTag
     || existingWildRiftBadge
-    || /\(\s*Wild Rift\s*\)/i.test(rawTitle)
     || /^Wild Rift$/i.test(legacyPlatformText?.textContent?.trim() || "")
   );
-  const isChroma = Boolean(existingChromaBadge || /\bchroma\b/i.test(rawTitle));
+  const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\bchroma\b/i.test(rawTitle));
+  const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";
 
   card.dataset.cardBadgesReady = "true";
-
-  title.textContent = cleanSkinCardName(rawTitle);
-
-  const image = preview.querySelector("img");
-  if (image?.alt) image.alt = cleanSkinCardName(image.alt);
-
-  const ariaLabel = preview.getAttribute("aria-label");
-  if (ariaLabel) preview.setAttribute("aria-label", cleanSkinCardName(ariaLabel));
+  title.textContent = parsed.displayName;
 
   titleWrap.querySelectorAll(".skin-platform-label").forEach((element) => element.remove());
   titleWrap.querySelectorAll("p").forEach((element) => {
@@ -221,7 +279,7 @@ function processSkinCard(card) {
     });
 
     if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");
-    if (isChroma) ensureBadge(badgeRow, "badge-chroma", "Chroma");
+    if (isChroma) ensureBadge(badgeRow, "badge-chroma", chromaLabel);
 
     if (!badgeRow.children.length) badgeRow.remove();
   }
