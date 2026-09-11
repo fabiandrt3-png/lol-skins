@@ -10,7 +10,7 @@ export function loadSkinData() {
   if (!skinDataPromise) {
     skinDataPromise = Promise.all([
       fetch(versionedAppAsset(CATALOG_SOURCE), { cache: "default" }).then(async (response) => {
-        if (!response.ok) throw new Error(`Catalogue centralisé (${response.status})`);
+        if (!response.ok) throw new Error(`Central catalog (${response.status})`);
         return response.json();
       }),
       loadManualSkins(),
@@ -19,7 +19,7 @@ export function loadSkinData() {
       const verifiedImages = payload?.entries;
 
       if (!Array.isArray(catalog) || !catalog.length) {
-        throw new Error("Le catalogue centralisé est vide ou invalide.");
+        throw new Error("The central catalog is empty or invalid.");
       }
 
       const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
@@ -37,7 +37,7 @@ async function loadManualSkins() {
     if (!response.ok) return [];
     return parseManualSkins(await response.text());
   } catch (error) {
-    console.warn("Fichier des skins manuels indisponible, catalogue principal utilisé.", error);
+    console.warn("Manual skins file unavailable; using the main catalog.", error);
     return [];
   }
 }
@@ -52,13 +52,13 @@ function parseManualSkins(text) {
 
     const parts = line.split("|").map((part) => part.trim());
     if (parts.length < 4) {
-      console.warn(`Skin manuel ignoré ligne ${index + 1}: format incomplet.`);
+      console.warn(`Manual skin ignored at line ${index + 1}: incomplete format.`);
       return;
     }
 
     const [champ, skin, rawType, image, fullImage = "", afterSkin = ""] = parts;
     if (!champ || !skin || !image) {
-      console.warn(`Skin manuel ignoré ligne ${index + 1}: champion, skin ou image manquant.`);
+      console.warn(`Manual skin ignored at line ${index + 1}: missing champion, skin or image.`);
       return;
     }
 
@@ -81,7 +81,7 @@ function parseManualSkins(text) {
 }
 
 function normalizeManualType(value) {
-  const type = String(value || "PC").trim().toLocaleLowerCase("fr");
+  const type = String(value || "PC").trim().toLocaleLowerCase("en");
   if (["wr", "wild rift", "wild-rift", "wildrift"].includes(type)) return "Wild Rift";
   return "PC";
 }
@@ -128,12 +128,17 @@ function mapCatalogSkin(item, verifiedImages) {
   const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
   const verified = verifiedImages[id] || null;
   const isManual = item.sourceKind === "manual";
+  const isChroma = isChromaSkin(item);
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
   const sourceCandidates = item.sourceKind === "legacy"
     ? legacyImageCandidates(item.image)
     : unique([item.image, ...(item.fallbacks || [])]);
 
-  const explicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
+  const rawExplicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
+  const explicitFullscreenCandidates = isChroma
+    ? rawExplicitFullscreenCandidates.filter((source) => isSafeChromaFullscreenSource(source, item))
+    : rawExplicitFullscreenCandidates;
+
   const optimizedExactCardCandidates = !isManual && shouldUseExactHdPreview(item)
     ? explicitFullscreenCandidates.flatMap((source) => wikiSizedImageCandidates(source, CARD_PREVIEW_WIDTH))
     : [];
@@ -145,15 +150,16 @@ function mapCatalogSkin(item, verifiedImages) {
     ...cardImageCandidates(cardCandidates),
   ]);
 
-  const verifiedFullscreenCandidates = highResolutionImageCandidates(cardCandidates);
-  const inferredFullscreenCandidates = explicitFullscreenCandidates.length || verifiedFullscreenCandidates.length
-    ? []
-    : inferredWikiHdCandidates(item);
-  const highResImageCandidates = unique([
-    ...explicitFullscreenCandidates,
-    ...verifiedFullscreenCandidates,
-    ...inferredFullscreenCandidates,
-  ]);
+  // Chromas are special: a base-skin HD splash must never replace a real chroma
+  // splash in fullscreen. Keep the exact chroma source unless a fullscreen source
+  // is explicitly the same image or is clearly chroma-specific.
+  const highResImageCandidates = isChroma
+    ? unique([
+        ...explicitFullscreenCandidates,
+        ...verifiedCandidates,
+        ...sourceCandidates,
+      ])
+    : buildStandardFullscreenCandidates(item, cardCandidates, explicitFullscreenCandidates);
 
   return {
     champ: item.champ,
@@ -170,6 +176,37 @@ function mapCatalogSkin(item, verifiedImages) {
   };
 }
 
+function buildStandardFullscreenCandidates(item, cardCandidates, explicitFullscreenCandidates) {
+  const verifiedFullscreenCandidates = highResolutionImageCandidates(cardCandidates);
+  const inferredFullscreenCandidates = explicitFullscreenCandidates.length || verifiedFullscreenCandidates.length
+    ? []
+    : inferredWikiHdCandidates(item);
+
+  return unique([
+    ...explicitFullscreenCandidates,
+    ...verifiedFullscreenCandidates,
+    ...inferredFullscreenCandidates,
+  ]);
+}
+
+function isChromaSkin(item) {
+  return /\bchroma\b/i.test(String(item?.skin || ""));
+}
+
+function isSafeChromaFullscreenSource(source, item) {
+  if (!source) return false;
+  if (sameImageSource(source, item?.image)) return true;
+
+  let readable = String(source);
+  try {
+    readable = decodeURIComponent(readable);
+  } catch {
+    // Keep the raw URL if it is not valid percent-encoding.
+  }
+
+  return /\bchroma\b/i.test(readable);
+}
+
 function validSkinEntry(item) {
   return Boolean(item?.champ && item?.skin && item?.image);
 }
@@ -182,6 +219,7 @@ function versionedAppAsset(url) {
 
 function shouldUseExactHdPreview(item) {
   if (!item?.fullImage || !isWikiHighDefinitionSource(item.fullImage)) return false;
+  if (isChromaSkin(item) && !isSafeChromaFullscreenSource(item.fullImage, item)) return false;
   return !isLeagueWikiSource(item.image);
 }
 
@@ -200,7 +238,7 @@ function highResolutionImageCandidates(candidates) {
 }
 
 function inferredWikiHdCandidates(item) {
-  if (!item?.champ || !item?.skin || /chroma/i.test(item.skin)) return [];
+  if (!item?.champ || !item?.skin || isChromaSkin(item)) return [];
 
   const championToken = wikiFileToken(item.champ);
   const rawSkinName = String(item.skin)
@@ -271,6 +309,23 @@ function wikiOriginalCandidates(url) {
   const filename = wikiFilename(url);
   if (!filename) return [];
   return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(filename)}`];
+}
+
+function sameImageSource(left, right) {
+  if (!left || !right) return false;
+
+  const normalize = (value) => {
+    try {
+      const url = new URL(value, "https://example.invalid/");
+      url.hash = "";
+      url.search = "";
+      return url.href;
+    } catch {
+      return String(value).split(/[?#]/)[0];
+    }
+  };
+
+  return normalize(left) === normalize(right);
 }
 
 function unique(values) {
