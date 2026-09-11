@@ -13,6 +13,7 @@ on:
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
       - 'scripts/upgrade-low-res.mjs'
+      - 'scripts/finalize-hd.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -97,6 +98,10 @@ jobs:
         continue-on-error: true
         run: node scripts/upgrade-low-res.mjs
 
+      - name: Search unlisted higher-resolution Wiki files and repair cards
+        continue-on-error: true
+        run: node scripts/finalize-hd.mjs
+
       - name: Save verified image map and audit reports
         shell: bash
         if: always()
@@ -139,6 +144,7 @@ jobs:
           const s = historical.summary || {};
           const a = additions.summary || {};
           const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
+          const f = historical.finalHdPass || additions.finalHdPass || {};
           console.log('## Splash art verification');
           console.log('');
           console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
@@ -150,7 +156,9 @@ jobs:
           console.log(`- Recent fullscreen below 1600x900: ${a.belowFullscreenTarget ?? '?'}`);
           console.log(`- Exact Wiki HD historical upgrades: ${m.historicalUpgraded ?? '?'}`);
           console.log(`- Exact Wiki HD catalog upgrades: ${m.catalogUpgraded ?? '?'}`);
-          console.log(`- Cards repaired with standard Wiki splash: ${m.catalogCardsRepaired ?? '?'}`);
+          console.log(`- Recovered higher unlisted Wiki files: ${f.historicalRecoveredHigher ?? 0}`);
+          console.log(`- Recent higher unlisted Wiki files: ${f.catalogRecoveredHigher ?? 0}`);
+          console.log(`- Broken card fallbacks repaired: ${f.cardFallbacksRepaired ?? 0}`);
           console.log(`- Chroma entries checked/upgraded: ${m.chromaChecked ?? '?'} / ${m.chromaUpgraded ?? '?'}`);
           console.log('');
           console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
