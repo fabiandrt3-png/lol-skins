@@ -1,5 +1,7 @@
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
-const LORE_SOURCE = "data/skin-lore.json";
+const LORE_METADATA_SOURCE = "data/skin-lore.json";
+const COMMUNITYDRAGON_BASE = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
+const CHAMPION_SUMMARY_SOURCE = `${COMMUNITYDRAGON_BASE}/champion-summary.json`;
 
 const lightbox = document.querySelector("#lightbox");
 const loreButton = document.querySelector("#lightboxLore");
@@ -37,27 +39,29 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
       <button class="lore-close" type="button" aria-label="Close lore">×</button>
     </div>
     <div class="lore-universe" id="loreUniverse"></div>
-    <p class="lore-summary" id="loreSummary"></p>
-    <div class="lore-details" id="loreDetails"></div>`;
+    <div class="lore-text" id="loreText"></div>`;
 
   lightbox.append(scrim, panel);
 
   const panelTitle = panel.querySelector("#lorePanelTitle");
   const universe = panel.querySelector("#loreUniverse");
-  const summary = panel.querySelector("#loreSummary");
-  const details = panel.querySelector("#loreDetails");
+  const loreText = panel.querySelector("#loreText");
   const closeButton = panel.querySelector(".lore-close");
 
-  let entries = [];
+  const championDataCache = new Map();
+  let championSummaryPromise = null;
+  let metadataEntries = [];
+  let currentLore = null;
+  let syncToken = 0;
 
   try {
-    const url = versionedAsset(LORE_SOURCE);
-    const response = await fetch(url, { cache: "default" });
-    if (!response.ok) throw new Error(`Lore unavailable (${response.status})`);
-    const payload = await response.json();
-    entries = Array.isArray(payload?.entries) ? payload.entries : [];
+    const response = await fetch(versionedAsset(LORE_METADATA_SOURCE), { cache: "default" });
+    if (response.ok) {
+      const payload = await response.json();
+      metadataEntries = Array.isArray(payload?.entries) ? payload.entries : [];
+    }
   } catch (error) {
-    console.warn("Lore data unavailable.", error);
+    console.warn("Lore metadata unavailable.", error);
   }
 
   const currentChampion = () => {
@@ -65,27 +69,94 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
     return params.get("champion") || "";
   };
 
-  const findCurrentEntry = () => {
-    const championKey = normalizeKey(currentChampion());
-    const skinKey = normalizeKey(lightboxTitle.textContent);
-    if (!championKey || !skinKey) return null;
+  const metadataFor = (championName, skinName) => metadataEntries.find((entry) =>
+    normalizeKey(entry?.champion) === normalizeKey(championName)
+      && normalizeKey(entry?.skin) === normalizeKey(skinName)
+  ) || null;
 
-    return entries.find((entry) =>
-      normalizeKey(entry?.champion) === championKey && normalizeKey(entry?.skin) === skinKey
-    ) || null;
+  const loadChampionSummary = () => {
+    if (!championSummaryPromise) {
+      championSummaryPromise = fetch(CHAMPION_SUMMARY_SOURCE, { cache: "default" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`Champion summary unavailable (${response.status})`);
+          return response.json();
+        })
+        .then((payload) => Array.isArray(payload) ? payload : [])
+        .catch((error) => {
+          championSummaryPromise = null;
+          throw error;
+        });
+    }
+    return championSummaryPromise;
   };
 
-  const renderEntry = (entry) => {
-    panelTitle.textContent = entry?.skin || lightboxTitle.textContent.trim();
-    universe.textContent = entry?.universe || "Alternate universe";
-    summary.textContent = entry?.summary || "";
+  const loadChampionData = async (championName) => {
+    const key = normalizeKey(championName);
+    if (!key) return null;
+    if (championDataCache.has(key)) return championDataCache.get(key);
 
-    details.replaceChildren();
-    for (const paragraph of entry?.details || []) {
-      const element = document.createElement("p");
-      element.textContent = paragraph;
-      details.appendChild(element);
+    const promise = (async () => {
+      const summary = await loadChampionSummary();
+      const champion = summary.find((entry) =>
+        normalizeKey(entry?.name) === key || normalizeKey(entry?.alias) === key
+      );
+      if (!champion?.id) return null;
+
+      const response = await fetch(`${COMMUNITYDRAGON_BASE}/champions/${champion.id}.json`, { cache: "default" });
+      if (!response.ok) throw new Error(`Champion lore unavailable (${response.status})`);
+      return response.json();
+    })().catch((error) => {
+      championDataCache.delete(key);
+      console.warn(`Official Riot lore unavailable for ${championName}.`, error);
+      return null;
+    });
+
+    championDataCache.set(key, promise);
+    return promise;
+  };
+
+  const resolveOfficialLore = async (championName, displayedSkinName) => {
+    if (!championName || !displayedSkinName) return null;
+    const championData = await loadChampionData(championName);
+    if (!championData) return null;
+
+    const cleanSkinName = stripPlatformSuffix(displayedSkinName);
+    const skinKey = normalizeKey(cleanSkinName);
+    const championKey = normalizeKey(championName);
+    const isBaseSkin = skinKey === championKey || skinKey === normalizeKey(`Classic ${championName}`);
+
+    let text = "";
+    if (isBaseSkin) {
+      text = officialText(championData.shortBio);
+    } else {
+      const skin = (championData.skins || []).find((entry) => normalizeKey(entry?.name) === skinKey);
+      text = officialText(skin?.description);
+
+      if (!text) {
+        for (const parentSkin of championData.skins || []) {
+          const chroma = (parentSkin?.chromas || []).find((entry) => normalizeKey(entry?.name) === skinKey);
+          if (chroma) {
+            text = officialText(chroma.description);
+            break;
+          }
+        }
+      }
     }
+
+    if (!text) return null;
+    const metadata = metadataFor(championName, displayedSkinName) || metadataFor(championName, cleanSkinName);
+
+    return {
+      skin: displayedSkinName,
+      universe: metadata?.universe || (isBaseSkin ? "Runeterra Prime" : "League of Legends"),
+      text,
+    };
+  };
+
+  const renderLore = (entry) => {
+    panelTitle.textContent = entry?.skin || lightboxTitle.textContent.trim();
+    universe.textContent = entry?.universe || "League of Legends";
+    loreText.textContent = entry?.text || "";
   };
 
   const closeLore = ({ restoreFocus = true } = {}) => {
@@ -98,10 +169,8 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   };
 
   const openLore = () => {
-    const entry = findCurrentEntry();
-    if (!entry) return;
-
-    renderEntry(entry);
+    if (!currentLore) return;
+    renderLore(currentLore);
     scrim.hidden = false;
     panel.hidden = false;
     lightbox.classList.add("is-lore-open");
@@ -109,17 +178,33 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
     requestAnimationFrame(() => closeButton?.focus({ preventScroll: true }));
   };
 
-  const sync = () => {
-    const entry = findCurrentEntry();
-    const available = Boolean(entry) && !lightbox.hidden;
+  const sync = async () => {
+    const token = ++syncToken;
+    currentLore = null;
+    loreButton.hidden = true;
+    loreButton.disabled = true;
+
+    if (lightbox.hidden) {
+      closeLore({ restoreFocus: false });
+      return;
+    }
+
+    const championName = currentChampion();
+    const displayedSkinName = lightboxTitle.textContent.trim();
+    const lore = await resolveOfficialLore(championName, displayedSkinName);
+    if (token !== syncToken || lightbox.hidden) return;
+    if (displayedSkinName !== lightboxTitle.textContent.trim()) return;
+
+    currentLore = lore;
+    const available = Boolean(lore?.text);
     loreButton.hidden = !available;
     loreButton.disabled = !available;
-    loreButton.setAttribute("aria-label", available ? `View ${lightboxTitle.textContent.trim()} lore` : "Lore unavailable");
+    loreButton.setAttribute("aria-label", available ? `View ${displayedSkinName} lore` : "Lore unavailable");
     loreButton.title = available ? "View lore" : "";
 
     if (lightbox.classList.contains("is-lore-open")) {
       if (!available) closeLore({ restoreFocus: false });
-      else renderEntry(entry);
+      else renderLore(lore);
     }
   };
 
@@ -151,6 +236,17 @@ function versionedAsset(url) {
   if (!APP_ASSET_VERSION) return url;
   const separator = url.includes("?") ? "&" : "?";
   return `${url}${separator}v=${encodeURIComponent(APP_ASSET_VERSION)}`;
+}
+
+function stripPlatformSuffix(value) {
+  return String(value || "").replace(/\s*\(\s*wild\s+rift\s*\)\s*$/i, "").trim();
+}
+
+function officialText(value) {
+  return String(value || "")
+    .replace(/<br\s*\/?\s*>/gi, "\n")
+    .replace(/\r\n?/g, "\n")
+    .trim();
 }
 
 function normalizeKey(value) {
