@@ -113,10 +113,7 @@ jobs:
 
       - name: Preserve previously verified higher-resolution sources
         continue-on-error: true
-        run: >-
-          node scripts/preserve-audit-quality.mjs
-          "$RUNNER_TEMP/image-overrides-before-audit.json"
-          "https://raw.githubusercontent.com/fabiandrt3-png/lol-skins/483d8d45fd0304eedc96165d92b4e15c136b7a20/data/image-overrides.json"
+        run: node scripts/preserve-audit-quality.mjs "$RUNNER_TEMP/image-overrides-before-audit.json"
 
       - name: Attach official Legends of Runeterra fallbacks
         continue-on-error: true
