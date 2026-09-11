@@ -2,6 +2,7 @@ const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 const CATALOG_SOURCE = VERIFIED_IMAGE_MAP;
 const MANUAL_SKINS_SOURCE = "data/manual-skins.txt";
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
+const CARD_PREVIEW_WIDTH = 2560;
 
 let skinDataPromise;
 
@@ -130,10 +131,17 @@ function mapCatalogSkin(item, verifiedImages) {
   const sourceCandidates = item.sourceKind === "legacy"
     ? legacyImageCandidates(item.image)
     : unique([item.image, ...(item.fallbacks || [])]);
-  const cardCandidates = unique([...verifiedCandidates, ...sourceCandidates]);
-  const imageCandidates = cardImageCandidates(cardCandidates);
 
   const explicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
+  const optimizedExactCardCandidates = shouldUseExactHdPreview(item)
+    ? explicitFullscreenCandidates.flatMap((source) => wikiSizedImageCandidates(source, CARD_PREVIEW_WIDTH))
+    : [];
+  const cardCandidates = unique([...verifiedCandidates, ...sourceCandidates]);
+  const imageCandidates = unique([
+    ...optimizedExactCardCandidates,
+    ...cardImageCandidates(cardCandidates),
+  ]);
+
   const verifiedFullscreenCandidates = highResolutionImageCandidates(cardCandidates);
   const inferredFullscreenCandidates = explicitFullscreenCandidates.length || verifiedFullscreenCandidates.length
     ? []
@@ -167,6 +175,11 @@ function versionedAppAsset(url) {
   if (!APP_ASSET_VERSION) return url;
   const separator = url.includes("?") ? "&" : "?";
   return `${url}${separator}v=${encodeURIComponent(APP_ASSET_VERSION)}`;
+}
+
+function shouldUseExactHdPreview(item) {
+  if (!item?.fullImage || !isWikiHighDefinitionSource(item.fullImage)) return false;
+  return !isLeagueWikiSource(item.image);
 }
 
 function cardImageCandidates(candidates) {
@@ -211,6 +224,13 @@ function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function wikiSizedImageCandidates(url, width) {
+  if (!isWikiHighDefinitionSource(url)) return [];
+  const filename = wikiFilename(url);
+  if (!filename) return [];
+  return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(filename)}?width=${width}`];
+}
+
 function wikiStandardCandidates(url) {
   if (!isWikiHighDefinitionSource(url)) return [];
   const filename = wikiFilename(url);
@@ -220,13 +240,17 @@ function wikiStandardCandidates(url) {
   return [`https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/${encodeURIComponent(standardFilename)}`];
 }
 
+function isLeagueWikiSource(url) {
+  return Boolean(url && /wiki\.leagueoflegends\.com\/en-us\//i.test(url));
+}
+
 function isWikiHighDefinitionSource(url) {
   const filename = wikiFilename(url);
   return Boolean(filename && /_HD\.(?:jpe?g|png|webp)$/i.test(filename));
 }
 
 function wikiFilename(url) {
-  if (!url || !/wiki\.leagueoflegends\.com\/en-us\//i.test(url)) return "";
+  if (!isLeagueWikiSource(url)) return "";
   const rawFilename = url.split("/").pop() || "";
   try {
     return decodeURIComponent(rawFilename.split(/[?#]/)[0]);
