@@ -208,16 +208,16 @@ function bindEvents() {
 
     if (els.lightbox.hidden) return;
     if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowLeft") moveLightbox(-1, { animate: true });
-    if (event.key === "ArrowRight") moveLightbox(1, { animate: true });
+    if (event.key === "ArrowLeft") moveLightbox(-1);
+    if (event.key === "ArrowRight") moveLightbox(1);
   });
 
   document.querySelectorAll("[data-close-lightbox]").forEach((element) => {
     element.addEventListener("click", closeLightbox);
   });
 
-  els.lightboxPrev.addEventListener("click", () => moveLightbox(-1, { animate: true }));
-  els.lightboxNext.addEventListener("click", () => moveLightbox(1, { animate: true }));
+  els.lightboxPrev.addEventListener("click", () => moveLightbox(-1));
+  els.lightboxNext.addEventListener("click", () => moveLightbox(1));
   els.lightboxFavorite.addEventListener("click", () => {
     const skin = state.visibleSkins[state.lightboxIndex];
     if (skin) toggleFavorite(skin._id);
