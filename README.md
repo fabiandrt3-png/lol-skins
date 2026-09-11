@@ -101,6 +101,12 @@ Le fichier de lore est chargé une seule fois par session du module plein écran
 
 Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
+La fusion des catalogues utilise également un index par identifiant, en conservant l’ordre des skins et la priorité des ajouts manuels. Les consommateurs partagent le même chargement ; une erreur du catalogue principal libère ce chargement pour permettre une nouvelle tentative.
+
+Un changement de favori met à jour les boutons concernés sans recréer les cartes ni réinitialiser l’image HD ou le zoom. La galerie est recalculée lorsqu’un retrait dans le filtre Favoris modifie les résultats. Les traductions et badges ne parcourent que les éléments ajoutés ou modifiés.
+
+Les images HD sont associées à l’identifiant unique du skin : deux niveaux LoR ayant le même titre affiché conservent chacun leur propre artwork.
+
 ## Sources de splash arts
 
 Les sources peuvent notamment inclure League of Legends Wiki HD, Riot/CommunityDragon, Data Dragon League of Legends, les ressources Wild Rift vérifiées et le Data Dragon officiel Legends of Runeterra.
@@ -132,3 +138,13 @@ python -m http.server 8000
 ```
 
 Puis ouvrir `http://localhost:8000`.
+
+## Vérifications
+
+Avec Node.js 22 ou supérieur, sans dépendance à installer :
+
+```bash
+node --test tests/*.test.mjs
+```
+
+Ces tests vérifient l’ordre des niveaux LoR, les doublons, les ajouts et corrections manuels, le partage des requêtes et la reprise après un échec de chargement. Le workflow `Runtime regression tests` les exécute sur les push et pull requests, avec une vérification de syntaxe des modules du navigateur.

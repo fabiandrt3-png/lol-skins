@@ -28,6 +28,9 @@ export function loadSkinData() {
       const withLor = mergeLorSkins(catalog, lorSkins);
       const mergedCatalog = mergeManualSkins(withLor, manualSkins);
       return mergedCatalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
+    }).catch((error) => {
+      skinDataPromise = undefined;
+      throw error;
     });
   }
 
@@ -104,6 +107,7 @@ function normalizeManualType(value) {
 
 function mergeLorSkins(catalog, lorSkins) {
   const merged = catalog.map((item) => ({ ...item }));
+  const byId = indexSkinEntries(merged);
   const orderedLor = (lorSkins || [])
     .filter(validSkinEntry)
     .map((item, index) => ({ ...item, _lorInputIndex: index }))
@@ -111,9 +115,9 @@ function mergeLorSkins(catalog, lorSkins) {
 
   for (const lor of orderedLor) {
     const id = stableSkinId(lor);
-    const existingIndex = merged.findIndex((item) => stableSkinId(item) === id);
-    if (existingIndex >= 0) {
-      if (merged[existingIndex]?.sourceKind === "lor") merged[existingIndex] = { ...merged[existingIndex], ...lor };
+    const existing = byId.get(id);
+    if (existing) {
+      if (existing.sourceKind === "lor") Object.assign(existing, lor);
       continue;
     }
 
@@ -153,6 +157,7 @@ function mergeLorSkins(catalog, lorSkins) {
     const cleanLor = { ...lor };
     delete cleanLor._lorInputIndex;
     merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanLor);
+    byId.set(id, cleanLor);
   }
 
   return merged;
@@ -186,12 +191,14 @@ function compareReleaseDates(left, right) {
 }
 
 function mergeManualSkins(catalog, manualSkins) {
+  if (!manualSkins.length) return catalog;
   const merged = catalog.map((item) => ({ ...item }));
+  const byId = indexSkinEntries(merged);
 
   for (const manual of manualSkins) {
-    const existingIndex = merged.findIndex((item) => stableSkinId(item) === manual.id);
-    if (existingIndex >= 0) {
-      merged[existingIndex] = { ...merged[existingIndex], ...manual };
+    const existing = byId.get(manual.id);
+    if (existing) {
+      Object.assign(existing, manual);
       continue;
     }
 
@@ -212,9 +219,20 @@ function mergeManualSkins(catalog, manualSkins) {
     const cleanManual = { ...manual };
     delete cleanManual._manualAfterSkin;
     merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanManual);
+    byId.set(manual.id, cleanManual);
   }
 
   return merged;
+}
+
+function indexSkinEntries(items) {
+  const byId = new Map();
+  for (const item of items) {
+    const id = stableSkinId(item);
+    // Match findIndex semantics when a source contains a duplicate ID.
+    if (!byId.has(id)) byId.set(id, item);
+  }
+  return byId;
 }
 
 function stableSkinId(item) {

@@ -462,12 +462,11 @@ function renderSkinsView(champion) {
 }
 
 function renderCards(items, factory, className) {
-  els.cardGrid.replaceChildren();
   els.cardGrid.className = className;
 
   const fragment = document.createDocumentFragment();
   items.forEach((item, index) => fragment.appendChild(factory(item, index)));
-  els.cardGrid.appendChild(fragment);
+  els.cardGrid.replaceChildren(fragment);
   setEmpty(items.length === 0);
 }
 
@@ -577,12 +576,10 @@ function renderLightbox() {
   els.lightboxImage.alt = displaySkinName(skin);
   els.lightboxTitle.textContent = displaySkinName(skin);
   els.lightboxPosition.textContent = `${state.lightboxIndex + 1} / ${length}`;
+  // Display titles can be identical for different LoR levels.
+  els.lightbox.dataset.skinId = skin._id;
 
-  const isFavorite = state.favorites.has(skin._id);
-  els.lightboxFavorite.textContent = isFavorite ? "♥" : "♡";
-  els.lightboxFavorite.classList.toggle("is-favorite", isFavorite);
-  els.lightboxFavorite.setAttribute("aria-label", isFavorite ? "Retirer des favoris" : "Ajouter aux favoris");
-  els.lightboxFavorite.setAttribute("aria-pressed", String(isFavorite));
+  updateFavoriteButton(els.lightboxFavorite, skin._id);
 
   state.lightboxZoomed = null;
   syncLightboxZoomState();
@@ -595,6 +592,15 @@ function toggleFavorite(id) {
   if (state.favorites.has(id)) state.favorites.delete(id);
   else state.favorites.add(id);
   saveFavorites();
+  if (state.filter !== "favorites") {
+    // The result set is unchanged: retain cards, focus, loaded HD images and zoom.
+    for (const button of els.cardGrid.querySelectorAll("[data-favorite-id]")) {
+      if (button.dataset.favoriteId === id) updateFavoriteButton(button, id);
+    }
+    if (previousLightboxId === id) updateFavoriteButton(els.lightboxFavorite, id);
+    return;
+  }
+
   renderCurrentView();
 
   if (!els.lightbox.hidden && previousLightboxId) {
@@ -605,6 +611,14 @@ function toggleFavorite(id) {
       renderLightbox();
     }
   }
+}
+
+function updateFavoriteButton(button, id) {
+  const isFavorite = state.favorites.has(id);
+  button.textContent = isFavorite ? "♥" : "♡";
+  button.classList.toggle("is-favorite", isFavorite);
+  button.setAttribute("aria-label", isFavorite ? "Retirer des favoris" : "Ajouter aux favoris");
+  button.setAttribute("aria-pressed", String(isFavorite));
 }
 
 function navigateToChampion(champion) {
