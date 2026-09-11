@@ -517,8 +517,9 @@ function matchesCurrentFilters(skin) {
   if (!displaySkinName(skin).toLocaleLowerCase("fr").includes(state.search)) return false;
 
   switch (state.filter) {
-    case "pc": return skin.type !== "Wild Rift";
+    case "pc": return skin.type !== "Wild Rift" && skin.type !== "Legends of Runeterra";
     case "wild-rift": return skin.type === "Wild Rift";
+    case "lor": return skin.type === "Legends of Runeterra";
     case "prestige": return /prestige|mythic chroma|special edition|exquisite edition/i.test(skin.skin);
     case "chroma": return /chroma/i.test(skin.skin);
     case "favorites": return state.favorites.has(skin._id);
@@ -625,6 +626,7 @@ function navigateHome() {
 function badgesFor(skin) {
   const badges = [];
   if (skin.type === "Wild Rift") badges.push('<span class="badge badge-wr">Wild Rift</span>');
+  if (skin.type === "Legends of Runeterra") badges.push('<span class="badge badge-lor">Legends of Runeterra</span>');
   if (/prestige/i.test(skin.skin)) badges.push('<span class="badge badge-prestige">Prestige</span>');
   else if (/mythic chroma|special edition|exquisite edition/i.test(skin.skin)) badges.push('<span class="badge badge-prestige">Mythic</span>');
   if (/chroma/i.test(skin.skin)) badges.push('<span class="badge badge-chroma">Chroma</span>');
