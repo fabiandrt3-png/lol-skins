@@ -11,8 +11,11 @@ const DESKTOP_MAX_ZOOM_SCALE = 4;
 
 if (lightbox && image && title) {
   const fullscreenSources = await loadFullscreenSources();
-  const hdController = setupHdSourceController(lightbox, image, title, fullscreenSources);
   const desktopViewer = setupDesktopViewer(lightbox, image, title);
+  const hdController = setupHdSourceController(lightbox, image, title, fullscreenSources, {
+    beforeSwap: desktopViewer.reset,
+    afterSwap: desktopViewer.reset,
+  });
 
   const syncSkin = () => {
     desktopViewer.reset();
@@ -26,7 +29,7 @@ if (lightbox && image && title) {
   syncSkin();
 }
 
-function setupHdSourceController(lightbox, image, title, fullscreenSources) {
+function setupHdSourceController(lightbox, image, title, fullscreenSources, hooks = {}) {
   const failedSources = new Set();
   const preloadCache = new Map();
   let requestToken = 0;
@@ -39,15 +42,22 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
       candidate.decoding = "async";
       candidate.loading = "eager";
       candidate.fetchPriority = "high";
+
       candidate.onload = async () => {
         try {
           await candidate.decode();
         } catch {
-          // onload is sufficient; decode() only prepares the bitmap earlier.
+          // onload already confirms the source is usable.
         }
-        resolve(candidate.naturalWidth > 0 && candidate.naturalHeight > 0);
+
+        resolve({
+          ok: candidate.naturalWidth > 0 && candidate.naturalHeight > 0,
+          width: candidate.naturalWidth,
+          height: candidate.naturalHeight,
+        });
       };
-      candidate.onerror = () => resolve(false);
+
+      candidate.onerror = () => resolve({ ok: false, width: 0, height: 0 });
       candidate.src = source;
     });
 
@@ -66,11 +76,16 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
 
     if (!champion || !skinName || !candidates.length) {
       lightbox.dataset.hdState = "unavailable";
+      image.removeAttribute("data-hd-source");
       return;
     }
 
-    const currentSource = image.getAttribute("src") || "";
-    if (candidates.includes(currentSource) && image.complete && image.naturalWidth > 0) {
+    const currentSource = image.currentSrc || image.getAttribute("src") || "";
+    if (
+      image.complete
+      && image.naturalWidth > 0
+      && candidates.some((candidate) => sameImageSource(candidate, currentSource))
+    ) {
       lightbox.dataset.hdState = "ready";
       return;
     }
@@ -84,23 +99,35 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources) {
       if (token !== requestToken || lightbox.hidden) return;
       if (skinKey(currentChampion(), title.textContent.trim()) !== key) return;
 
-      if (!loaded) {
+      if (!loaded.ok) {
         failedSources.add(source);
         continue;
       }
+
+      const liveSource = image.currentSrc || image.getAttribute("src") || "";
+      if (sameImageSource(source, liveSource) && image.complete && image.naturalWidth > 0) {
+        lightbox.dataset.hdState = "ready";
+        return;
+      }
+
+      // Reset before changing the bitmap. Default presentation is always CSS
+      // contain; HD loading must never inherit stale zoom geometry.
+      hooks.beforeSwap?.();
 
       image.loading = "eager";
       image.fetchPriority = "high";
       image.dataset.hdSource = source;
 
       const markReady = () => {
-        if (image.getAttribute("src") !== source) return;
+        if (!sameImageSource(image.currentSrc || image.getAttribute("src") || "", source)) return;
         image.removeEventListener("load", markReady);
+        hooks.afterSwap?.();
         lightbox.dataset.hdState = "ready";
       };
 
       image.addEventListener("load", markReady);
       image.src = source;
+
       if (image.complete && image.naturalWidth > 0) queueMicrotask(markReady);
       return;
     }
@@ -118,7 +145,7 @@ function setupDesktopViewer(lightbox, image, title) {
 
   const state = {
     scale: 1,
-    maxScale: 1,
+    maxScale: DESKTOP_MAX_ZOOM_SCALE,
     baseWidth: 0,
     baseHeight: 0,
     width: 0,
@@ -132,28 +159,12 @@ function setupDesktopViewer(lightbox, image, title) {
     dragStartLeft: 0,
     dragStartTop: 0,
     skinName: title.textContent.trim(),
-    frame: 0,
   };
 
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
   const isOpen = () => desktopPointer.matches && !lightbox.hidden;
 
-  const applyDesktopFrame = () => {
-    const container = slide();
-    if (!figure || !container) return;
-
-    figure.style.width = "calc(100vw - 24px)";
-    figure.style.height = "calc(100dvh - 24px)";
-    figure.style.maxWidth = "none";
-    figure.style.maxHeight = "none";
-
-    container.style.position = "relative";
-    container.style.overflow = "hidden";
-  };
-
-  const clearDesktopFrame = () => {
-    const container = slide();
-
+  const clearImageGeometry = () => {
     image.style.width = "";
     image.style.height = "";
     image.style.maxWidth = "";
@@ -165,23 +176,59 @@ function setupDesktopViewer(lightbox, image, title) {
     image.style.transformOrigin = "";
     image.style.transition = "";
     image.style.willChange = "";
-    image.style.cursor = "";
     image.style.imageRendering = "";
-    image.title = "";
+    image.style.cursor = "";
+  };
 
-    if (container) {
-      container.style.position = "";
-      container.style.overflow = "";
-    }
+  const reset = () => {
+    state.scale = 1;
+    state.maxScale = DESKTOP_MAX_ZOOM_SCALE;
+    state.baseWidth = 0;
+    state.baseHeight = 0;
+    state.width = 0;
+    state.height = 0;
+    state.left = 0;
+    state.top = 0;
+    state.dragging = false;
+    state.pointerId = null;
 
-    if (figure) {
-      figure.style.width = "";
-      figure.style.height = "";
-      figure.style.maxWidth = "";
-      figure.style.maxHeight = "";
-    }
-
+    // Set the flag before clearing geometry so CSS contain wins immediately,
+    // even during an asynchronous HD source replacement.
     lightbox.dataset.desktopZoomed = "false";
+    clearImageGeometry();
+
+    const container = slide();
+    if (container) {
+      container.style.position = "relative";
+      container.style.overflow = "hidden";
+    }
+
+    image.title = isOpen() ? "Wheel or double-click to zoom" : "";
+  };
+
+  const captureContainedGeometry = () => {
+    const container = slide();
+    if (!isOpen() || !container || !image.complete || image.naturalWidth <= 0 || image.naturalHeight <= 0) {
+      return false;
+    }
+
+    const containerRect = container.getBoundingClientRect();
+    const imageRect = image.getBoundingClientRect();
+    if (imageRect.width <= 0 || imageRect.height <= 0 || containerRect.width <= 0 || containerRect.height <= 0) {
+      return false;
+    }
+
+    // Use the browser's actual CSS-contained rectangle as the 1x zoom basis.
+    // This guarantees that zoom starts from the exact fully-visible splash.
+    state.baseWidth = imageRect.width;
+    state.baseHeight = imageRect.height;
+    state.width = imageRect.width;
+    state.height = imageRect.height;
+    state.left = imageRect.left - containerRect.left;
+    state.top = imageRect.top - containerRect.top;
+    state.scale = 1;
+    state.maxScale = DESKTOP_MAX_ZOOM_SCALE;
+    return true;
   };
 
   const clampPlacement = () => {
@@ -191,19 +238,24 @@ function setupDesktopViewer(lightbox, image, title) {
     const viewportWidth = container.clientWidth;
     const viewportHeight = container.clientHeight;
 
-    const minLeft = Math.min(0, viewportWidth - state.width);
-    const maxLeft = Math.max(0, viewportWidth - state.width);
-    const minTop = Math.min(0, viewportHeight - state.height);
-    const maxTop = Math.max(0, viewportHeight - state.height);
+    if (state.width <= viewportWidth) {
+      state.left = (viewportWidth - state.width) / 2;
+    } else {
+      state.left = clamp(state.left, viewportWidth - state.width, 0);
+    }
 
-    state.left = clamp(state.left, minLeft, maxLeft);
-    state.top = clamp(state.top, minTop, maxTop);
+    if (state.height <= viewportHeight) {
+      state.top = (viewportHeight - state.height) / 2;
+    } else {
+      state.top = clamp(state.top, viewportHeight - state.height, 0);
+    }
   };
 
-  const render = () => {
-    if (!isOpen() || !state.width || !state.height) return;
+  const renderZoomed = () => {
+    if (!isOpen() || state.scale <= 1.001 || !state.width || !state.height) return;
 
     clampPlacement();
+    lightbox.dataset.desktopZoomed = "true";
 
     image.style.position = "absolute";
     image.style.maxWidth = "none";
@@ -215,140 +267,55 @@ function setupDesktopViewer(lightbox, image, title) {
     image.style.transform = "none";
     image.style.transformOrigin = "0 0";
     image.style.transition = "none";
-    image.style.willChange = "auto";
+    image.style.willChange = state.dragging ? "left, top" : "auto";
     image.style.imageRendering = "auto";
-    image.style.cursor = state.scale > 1.001
-      ? (state.dragging ? "grabbing" : "grab")
-      : (state.maxScale > 1.001 ? "zoom-in" : "default");
-
-    image.title = state.scale > 1.001
-      ? "Molette : zoom sous la souris · glisser : déplacer · double-clic : réinitialiser"
-      : "Molette ou double-clic pour zoomer";
-
-    lightbox.dataset.desktopZoomed = state.scale > 1.001 ? "true" : "false";
-  };
-
-  const centerImage = () => {
-    const container = slide();
-    if (!container) return;
-    state.left = (container.clientWidth - state.width) / 2;
-    state.top = (container.clientHeight - state.height) / 2;
-  };
-
-  const measure = ({ preserveView = true } = {}) => {
-    cancelAnimationFrame(state.frame);
-
-    if (!isOpen()) {
-      state.baseWidth = 0;
-      state.baseHeight = 0;
-      state.width = 0;
-      state.height = 0;
-      state.maxScale = 1;
-      clearDesktopFrame();
-      return;
-    }
-
-    applyDesktopFrame();
-
-    state.frame = requestAnimationFrame(() => {
-      const container = slide();
-      if (!container || !image.complete || image.naturalWidth <= 0 || image.naturalHeight <= 0) return;
-
-      const oldWidth = state.width;
-      const oldHeight = state.height;
-      const oldLeft = state.left;
-      const oldTop = state.top;
-      const viewportWidth = container.clientWidth;
-      const viewportHeight = container.clientHeight;
-
-      let focusX = 0.5;
-      let focusY = 0.5;
-      if (preserveView && oldWidth > 0 && oldHeight > 0) {
-        focusX = clamp((viewportWidth / 2 - oldLeft) / oldWidth, 0, 1);
-        focusY = clamp((viewportHeight / 2 - oldTop) / oldHeight, 0, 1);
-      }
-
-      const fit = Math.min(
-        1,
-        viewportWidth / image.naturalWidth,
-        viewportHeight / image.naturalHeight,
-      );
-
-      state.baseWidth = Math.max(1, image.naturalWidth * fit);
-      state.baseHeight = Math.max(1, image.naturalHeight * fit);
-      // Keep zoom available even when the source is close to or smaller than the
-      // viewport. High-resolution images stay sharp; smaller manual images can
-      // still be inspected by intentionally upscaling them.
-      state.maxScale = DESKTOP_MAX_ZOOM_SCALE;
-      state.scale = preserveView ? clamp(state.scale, 1, state.maxScale) : 1;
-      state.width = state.baseWidth * state.scale;
-      state.height = state.baseHeight * state.scale;
-
-      if (preserveView && oldWidth > 0 && oldHeight > 0) {
-        state.left = viewportWidth / 2 - focusX * state.width;
-        state.top = viewportHeight / 2 - focusY * state.height;
-      } else {
-        centerImage();
-      }
-
-      render();
-    });
-  };
-
-  const reset = () => {
-    state.scale = 1;
-    state.maxScale = 1;
-    state.baseWidth = 0;
-    state.baseHeight = 0;
-    state.width = 0;
-    state.height = 0;
-    state.left = 0;
-    state.top = 0;
-    state.dragging = false;
-    state.pointerId = null;
-
-    if (isOpen()) measure({ preserveView: false });
-    else clearDesktopFrame();
+    image.style.cursor = state.dragging ? "grabbing" : "grab";
+    image.title = "Wheel: zoom under cursor · drag: pan · double-click: reset";
   };
 
   const zoomAt = (nextScale, clientX, clientY) => {
-    const container = slide();
-    if (!isOpen() || !container || !state.width || !state.height) return;
+    if (!isOpen()) return;
 
     const targetScale = clamp(nextScale, 1, state.maxScale);
-    if (Math.abs(targetScale - state.scale) < 0.0001) return;
-
     if (targetScale <= 1.001) {
-      state.scale = 1;
-      state.width = state.baseWidth;
-      state.height = state.baseHeight;
-      centerImage();
-      render();
+      reset();
       return;
     }
+
+    if (state.scale <= 1.001 || !state.baseWidth || !state.baseHeight) {
+      if (!captureContainedGeometry()) return;
+    }
+
+    const container = slide();
+    if (!container) return;
 
     const containerRect = container.getBoundingClientRect();
     const pointerX = clientX - containerRect.left;
     const pointerY = clientY - containerRect.top;
 
-    const anchorX = clamp(pointerX, state.left, state.left + state.width);
-    const anchorY = clamp(pointerY, state.top, state.top + state.height);
-    const localX = (anchorX - state.left) / state.width;
-    const localY = (anchorY - state.top) / state.height;
+    const currentWidth = state.width || state.baseWidth;
+    const currentHeight = state.height || state.baseHeight;
+    const currentLeft = state.left;
+    const currentTop = state.top;
+
+    const anchorX = clamp(pointerX, currentLeft, currentLeft + currentWidth);
+    const anchorY = clamp(pointerY, currentTop, currentTop + currentHeight);
+    const localX = currentWidth ? (anchorX - currentLeft) / currentWidth : 0.5;
+    const localY = currentHeight ? (anchorY - currentTop) / currentHeight : 0.5;
 
     state.scale = targetScale;
     state.width = state.baseWidth * state.scale;
     state.height = state.baseHeight * state.scale;
     state.left = anchorX - localX * state.width;
     state.top = anchorY - localY * state.height;
-    render();
+    renderZoomed();
   };
 
   figure?.addEventListener("wheel", (event) => {
     if (!isOpen()) return;
     event.preventDefault();
 
-    if (!state.width || !state.height) measure({ preserveView: false });
+    if (state.scale <= 1.001 && !captureContainedGeometry()) return;
     const factor = Math.exp(-event.deltaY * 0.0015);
     zoomAt(state.scale * factor, event.clientX, event.clientY);
   }, { passive: false });
@@ -358,10 +325,12 @@ function setupDesktopViewer(lightbox, image, title) {
     event.preventDefault();
 
     if (state.scale > 1.001) {
-      zoomAt(1, event.clientX, event.clientY);
-    } else {
-      zoomAt(Math.min(2, state.maxScale), event.clientX, event.clientY);
+      reset();
+      return;
     }
+
+    if (!captureContainedGeometry()) return;
+    zoomAt(Math.min(2, state.maxScale), event.clientX, event.clientY);
   });
 
   image.addEventListener("pointerdown", (event) => {
@@ -375,7 +344,7 @@ function setupDesktopViewer(lightbox, image, title) {
     state.dragStartLeft = state.left;
     state.dragStartTop = state.top;
     image.setPointerCapture?.(event.pointerId);
-    render();
+    renderZoomed();
   });
 
   image.addEventListener("pointermove", (event) => {
@@ -383,7 +352,7 @@ function setupDesktopViewer(lightbox, image, title) {
 
     state.left = state.dragStartLeft + event.clientX - state.dragStartX;
     state.top = state.dragStartTop + event.clientY - state.dragStartY;
-    render();
+    renderZoomed();
   });
 
   const stopDragging = (event) => {
@@ -396,17 +365,18 @@ function setupDesktopViewer(lightbox, image, title) {
     if (event?.type !== "lostpointercapture" && pointerId != null && image.hasPointerCapture?.(pointerId)) {
       image.releasePointerCapture(pointerId);
     }
-    render();
+    renderZoomed();
   };
 
   image.addEventListener("pointerup", stopDragging);
   image.addEventListener("pointercancel", stopDragging);
   image.addEventListener("lostpointercapture", stopDragging);
 
-  image.addEventListener("load", () => measure({ preserveView: true }));
+  // Any bitmap replacement (standard -> HD, fallback, skin change) returns to
+  // the canonical fully-visible state. No image load is allowed to preserve or
+  // recalculate a zoom automatically.
+  image.addEventListener("load", reset);
 
-  // Navigation always wins over panning: reset the current zoom before app.js
-  // starts its existing carousel transition, without stopping the event.
   lightbox.addEventListener("click", (event) => {
     if (event.target.closest(".lightbox-nav")) reset();
   }, { capture: true });
@@ -425,7 +395,7 @@ function setupDesktopViewer(lightbox, image, title) {
   stateObserver.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
   stateObserver.observe(title, { childList: true, subtree: true, characterData: true });
 
-  window.addEventListener("resize", () => measure({ preserveView: true }), { passive: true });
+  window.addEventListener("resize", reset, { passive: true });
   desktopPointer.addEventListener?.("change", reset);
 
   reset();
@@ -445,7 +415,7 @@ async function loadFullscreenSources() {
 
     return sources;
   } catch (error) {
-    console.warn("Sources HD plein écran indisponibles, utilisation des splash arts standards.", error);
+    console.warn("Fullscreen HD sources unavailable; using standard splash arts.", error);
     return new Map();
   }
 }
@@ -463,6 +433,21 @@ function displaySkinName(skin) {
   return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin)
     ? `${skin.skin} (Wild Rift)`
     : skin.skin;
+}
+
+function sameImageSource(left, right) {
+  if (!left || !right) return false;
+
+  try {
+    const normalize = (value) => {
+      const url = new URL(value, location.href);
+      url.hash = "";
+      return url.href;
+    };
+    return normalize(left) === normalize(right);
+  } catch {
+    return String(left) === String(right);
+  }
 }
 
 function unique(values) {
