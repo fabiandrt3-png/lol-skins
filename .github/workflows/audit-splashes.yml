@@ -18,6 +18,7 @@ on:
       - 'scripts/finalize-hd.mjs'
       - 'scripts/update-lor-art.mjs'
       - 'scripts/update-lor-skins.mjs'
+      - 'scripts/repair-lor-skin-images.mjs'
       - 'scripts/lor-art-source.mjs'
       - 'scripts/cleanup-lor-fallbacks.mjs'
       - 'scripts/preserve-audit-quality.mjs'
@@ -37,6 +38,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -50,6 +53,27 @@ jobs:
       - name: Refresh Legends of Runeterra skin catalog
         continue-on-error: true
         run: node scripts/update-lor-skins.mjs
+
+      - name: Resolve and verify Legends of Runeterra splash arts
+        run: node scripts/repair-lor-skin-images.mjs
+
+      - name: Bump asset version for LoR catalog changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/lor-skins.json; then
+            echo "LoR catalog unchanged"
+            exit 0
+          fi
+          node <<'NODE'
+          const fs = require('fs');
+          const file = 'version.json';
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const current = String(data.version || '20260911-97');
+          const match = current.match(/^(.*-)(\d+)$/);
+          data.version = match ? `${match[1]}${Number(match[2]) + 1}` : `${current}-1`;
+          fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+          console.log(`Version: ${current} -> ${data.version}`);
+          NODE
 
       - name: Sort centralized catalogue
         run: node scripts/centralize-catalog.mjs
@@ -170,6 +194,7 @@ jobs:
           const a = additions.summary || {};
           const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
           const f = historical.finalHdPass || additions.finalHdPass || {};
+          const l = lorSkins.imageAudit || {};
           console.log('## Splash art verification');
           console.log('');
           console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
@@ -187,8 +212,10 @@ jobs:
           console.log(`- Chroma entries checked/upgraded: ${m.chromaChecked ?? '?'} / ${m.chromaUpgraded ?? '?'}`);
           console.log(`- Legends of Runeterra champion art names indexed: ${Object.keys(lor.champions || {}).length}`);
           console.log(`- Legends of Runeterra level artworks: ${(lorSkins.entries || []).length}`);
+          console.log(`- Legends of Runeterra verified artworks: ${l.verified ?? '?'} / ${l.total ?? '?'}`);
+          console.log(`- Legends of Runeterra unresolved artworks: ${l.unresolved ?? '?'}`);
           console.log('');
-          console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
+          console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0 || (l.unresolved ?? 0) > 0
             ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
             : '✅ No unresolved splash arts detected.');
           NODE
