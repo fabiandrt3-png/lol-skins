@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-09-11",
+  "language": "fr",
+  "note": "Résumés français basés sur les descriptions et univers officiels Riot. Les formulations sont volontairement reformulées pour rester lisibles dans l’application.",
+  "entries": [
+    {
+      "champion": "Akshan",
+      "skin": "Classic Akshan",
+      "universe": "Runeterra Prime",
+      "summary": "Akshan est un Sentinelle rebelle qui combat les criminels avec panache, discrétion et un sens très personnel de la justice.",
+      "details": [
+        "Expert du combat furtif, il sait disparaître du regard de ses ennemis puis revenir là où ils l’attendent le moins.",
+        "Il porte une arme légendaire capable d’inverser la mort. Cette puissance nourrit sa quête contre ceux qu’il considère comme des scélérats, mais Akshan refuse de suivre aveuglément les règles : il agit selon son propre code moral et privilégie ce qu’il juge juste."
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — données du client LoL",
+          "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/166.json"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Cyber Pop Akshan",
+      "universe": "Cyber Pop / Sound City",
+      "summary": "Dans Sound City, Akshan est devenu l’un des héros de l’underground face aux puissantes corporations qui surveillent la ville.",
+      "details": [
+        "Son courage, son esprit et surtout son talent pour pénétrer dans des bâtiments ultra-sécurisés sans se faire repérer lui ont donné une réputation presque légendaire parmi les rebelles.",
+        "Il conserve aussi tout son charme et son assurance : dans cet univers, Akshan est autant un infiltrateur audacieux qu’une figure populaire de la résistance de Sound City."
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — données du client LoL",
+          "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/166.json"
+        },
+        {
+          "label": "LoL Wiki — univers Cyber Pop",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe:PROJECT/Cyber_Pop"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Battle Academia Akshan",
+      "universe": "Battle Academia / God Weapon",
+      "summary": "Akshan est un nouvel élève transféré à l’académie Durandal, où il s’est rapidement fait remarquer au sein du Battle Club.",
+      "details": [
+        "Face aux adversaires qui jouent sale, il n’hésite pas à se jeter directement dans la mêlée pour donner l’avantage à ses camarades et arracher la victoire.",
+        "Son sens moral, son tempérament casse-cou et sa volonté de défendre les autres en font un allié apprécié des élèves de deuxième année. Même dans une école où la puissance domine, Akshan garde une idée très claire de ce qui est juste."
+      ],
+      "sources": [
+        {
+          "label": "LoL Wiki — univers Battle Academia",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe:God_Weapon"
+        },
+        {
+          "label": "Riot Games — page officielle Wild Rift d’Akshan",
+          "url": "https://wildrift.leagueoflegends.com/en-sg/champions/akshan/"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Crystal Rose Akshan",
+      "universe": "Crystal Rose",
+      "summary": "Même le toujours-aventureux Akshan met ses escapades de côté chaque année pour apparaître au prestigieux Festival de la Rose de Cristal.",
+      "details": [
+        "Très demandé lors de l’événement, il peut bien accorder quelques danses aux invités, mais son attention reste tournée vers une seule personne dans la foule.",
+        "Leurs façons de voir le monde sont loin d’être parfaitement compatibles, pourtant leur attirance est suffisamment forte pour rendre ces différences presque secondaires. Cette version d’Akshan met donc davantage l’accent sur son charme, ses relations et les intrigues sociales du festival."
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — données du client LoL",
+          "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/166.json"
+        },
+        {
+          "label": "LoL Wiki — univers Crystal Rose",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe:Crystal_Rose/Crystal_Rose"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Three Honors Akshan",
+      "universe": "Three Honors / Order of Solace",
+      "summary": "Après le meurtre de son mentor, Akshan s’était enfermé dans un cycle de vengeance jusqu’à devenir presque entièrement défini par la mort et la revanche.",
+      "details": [
+        "L’Ordre de Solace l’a trouvé alors qu’il n’était plus qu’une arme animée par son désir de rendre coup pour coup. Ses enseignements ont peu à peu rempli le vide laissé par son deuil et lui ont permis de reconstruire un but qui ne repose plus uniquement sur la vengeance.",
+        "Désormais, Akshan se tient aux côtés de Malzahar comme l’un des piliers des Three Honors. Il combat les Essents avec une philosophie tournée vers l’harmonie, sans avoir perdu son goût pour les remarques pleines d’assurance."
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — données du client LoL",
+          "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/166.json"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Dawnbringer Akshan",
+      "universe": "Nightbringer & Dawnbringer / Versus",
+      "summary": "Élevé dans un monde dominé par le chaos, Akshan est devenu un ranger cosmique qui rêve d’un univers plus juste et plus ordonné.",
+      "details": [
+        "Son ambition est de délivrer les peuples de la souffrance, mais il se méfie profondément de la violence et de la vengeance comme moyens d’y parvenir.",
+        "Il sait que répondre à la terreur par davantage de brutalité ne fait qu’alimenter un nouveau cycle de douleur — exactement ce que recherchent les forces du chaos. Sa place parmi les Dawnbringers repose donc autant sur sa quête de justice que sur sa volonté de ne pas devenir ce qu’il combat."
+      ],
+      "sources": [
+        {
+          "label": "LoL Wiki — Nightbringer & Dawnbringer",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe:Versus/Nightbringer_and_Dawnbringer"
+        }
+      ]
+    },
+    {
+      "champion": "Akshan",
+      "skin": "High Noon Akshan",
+      "universe": "High Noon",
+      "summary": "Derrière un autel s’ouvre la route vers l’Enfer, et Akshan est venu réclamer le droit de l’emprunter.",
+      "details": [
+        "Un homme au sourire inquiétant lui rappelle que les morts devraient rester morts. Akshan n’est pourtant pas venu demander une autorisation : ni la loi, ni la mort, ni un chasseur de primes convaincu de posséder cette route ne le feront renoncer.",
+        "La confrontation se termine face à face. Akshan lève son arme et arme le chien, prêt à forcer le passage s’il le faut. Cette incarnation transpose directement son obsession de défier la mort dans l’Ouest démoniaque de High Noon."
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — données du client LoL",
+          "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/166.json"
+        }
+      ]
+    }
+  ]
+}
