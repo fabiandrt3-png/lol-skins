@@ -8,12 +8,13 @@
   <meta http-equiv="Expires" content="0">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
-  <meta name="description" content="Explore League of Legends and Wild Rift champions and skins.">
+  <meta name="description" content="Explore League of Legends, Wild Rift, and Legends of Runeterra champions and skins.">
   <title>LoL Skins</title>
   <link rel="preconnect" href="https://wiki.leagueoflegends.com">
   <link rel="preconnect" href="https://game.gtimg.cn">
-  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-65">
-  <link id="loreStyles" rel="stylesheet" href="lore.css?v=20260911-65">
+  <link rel="preconnect" href="https://dd.b.pvp.net">
+  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-85">
+  <link id="loreStyles" rel="stylesheet" href="lore.css?v=20260911-85">
   <style>
     body:not(.is-champion-view) #sectionKicker,
     body:not(.is-champion-view) #resultCount,
@@ -91,6 +92,7 @@
           <button class="filter-chip is-active" type="button" data-filter="all">All</button>
           <button class="filter-chip" type="button" data-filter="pc">PC</button>
           <button class="filter-chip" type="button" data-filter="wild-rift">Wild Rift</button>
+          <button class="filter-chip" type="button" data-filter="lor">Legends of Runeterra</button>
           <button class="filter-chip" type="button" data-filter="prestige">Prestige / Mythic</button>
           <button class="filter-chip" type="button" data-filter="chroma">Chromas</button>
           <button class="filter-chip" type="button" data-filter="favorites">♥ Favorites</button>
@@ -175,7 +177,7 @@
   </script>
 
   <script type="module">
-    const fallbackVersion = "20260911-65";
+    const fallbackVersion = "20260911-85";
     let version = fallbackVersion;
 
     try {
