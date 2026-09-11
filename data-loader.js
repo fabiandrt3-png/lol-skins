@@ -130,6 +130,10 @@ function mapCatalogSkin(item, verifiedImages) {
   const isManual = item.sourceKind === "manual";
   const isChroma = isChromaSkin(item);
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
+  const lorFallbackCandidates = unique([
+    ...(item.lorFallbacks || []),
+    ...(verified?.lorFallbacks || []),
+  ]);
   const sourceCandidates = item.sourceKind === "legacy"
     ? legacyImageCandidates(item.image)
     : unique([item.image, ...(item.fallbacks || [])]);
@@ -148,18 +152,24 @@ function mapCatalogSkin(item, verifiedImages) {
   const imageCandidates = unique([
     ...optimizedExactCardCandidates,
     ...cardImageCandidates(cardCandidates),
+    ...lorFallbackCandidates,
   ]);
 
   // Chromas are special: a base-skin HD splash must never replace a real chroma
   // splash in fullscreen. Keep the exact chroma source unless a fullscreen source
-  // is explicitly the same image or is clearly chroma-specific.
-  const highResImageCandidates = isChroma
+  // is explicitly the same image or is clearly chroma-specific. LoR is always
+  // appended last so an alternate official illustration never outranks LoL/WR.
+  const primaryFullscreenCandidates = isChroma
     ? unique([
         ...explicitFullscreenCandidates,
         ...verifiedCandidates,
         ...sourceCandidates,
       ])
     : buildStandardFullscreenCandidates(item, cardCandidates, explicitFullscreenCandidates);
+  const highResImageCandidates = unique([
+    ...primaryFullscreenCandidates,
+    ...lorFallbackCandidates,
+  ]);
 
   return {
     champ: item.champ,
@@ -169,6 +179,7 @@ function mapCatalogSkin(item, verifiedImages) {
     _id: id,
     _legacyImage: item.image,
     _verifiedImageMeta: verified,
+    _lorFallbackCandidates: lorFallbackCandidates,
     imageCandidates,
     highResImageCandidates,
     iconCandidates: unique([item.icon]),
