@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'data/image-overrides.json'
+      - 'data/manual-skins.txt'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
@@ -24,7 +25,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -69,10 +70,6 @@ jobs:
         continue-on-error: true
         run: node scripts/resolve-missing-wr.mjs
 
-      - name: Search higher resolution exact originals
-        continue-on-error: true
-        run: node scripts/upgrade-low-res.mjs
-
       - name: Restore centralized catalogue
         if: always()
         shell: bash
@@ -96,20 +93,24 @@ jobs:
           console.log(`Preserved ${before.catalog.length} centralized skin records`);
           NODE
 
+      - name: Maximize every exact Wiki HD splash
+        continue-on-error: true
+        run: node scripts/upgrade-low-res.mjs
+
       - name: Save verified image map and audit reports
         shell: bash
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json audit-report.json addition-audit-report.json 2>/dev/null || true
+          git add data/image-overrides.json data/manual-skins.txt audit-report.json addition-audit-report.json version.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No audit changes"
             exit 0
           fi
 
-          git commit -m "Update verified splash art sources"
+          git commit -m "Maximize verified splash art sources"
 
           for attempt in 1 2 3; do
             if git push; then
@@ -137,6 +138,7 @@ jobs:
           const additions = fs.existsSync('addition-audit-report.json') ? JSON.parse(fs.readFileSync('addition-audit-report.json', 'utf8')) : {};
           const s = historical.summary || {};
           const a = additions.summary || {};
+          const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
           console.log('## Splash art verification');
           console.log('');
           console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
@@ -146,6 +148,10 @@ jobs:
           console.log(`- Recent additions fully verified: ${a.fullyVerified ?? '?'} / ${a.total ?? '?'}`);
           console.log(`- Recent additions unresolved: ${a.unresolved ?? '?'}`);
           console.log(`- Recent fullscreen below 1600x900: ${a.belowFullscreenTarget ?? '?'}`);
+          console.log(`- Exact Wiki HD historical upgrades: ${m.historicalUpgraded ?? '?'}`);
+          console.log(`- Exact Wiki HD catalog upgrades: ${m.catalogUpgraded ?? '?'}`);
+          console.log(`- Cards repaired with standard Wiki splash: ${m.catalogCardsRepaired ?? '?'}`);
+          console.log(`- Chroma entries checked/upgraded: ${m.chromaChecked ?? '?'} / ${m.chromaUpgraded ?? '?'}`);
           console.log('');
           console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
             ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
