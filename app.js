@@ -626,7 +626,11 @@ function navigateHome() {
 function badgesFor(skin) {
   const badges = [];
   if (skin.type === "Wild Rift") badges.push('<span class="badge badge-wr">Wild Rift</span>');
-  if (skin.type === "Legends of Runeterra") badges.push('<span class="badge badge-lor">Legends of Runeterra</span>');
+  if (skin.type === "Legends of Runeterra") {
+    const level = String(skin.lorLevel || "").trim();
+    const label = level ? `Legends of Runeterra · ${level}` : "Legends of Runeterra";
+    badges.push(`<span class="badge badge-lor" style="border:1px solid color-mix(in srgb,#bf5af2 30%,transparent);background:color-mix(in srgb,#bf5af2 14%,transparent);color:color-mix(in srgb,#bf5af2 84%,var(--text))">${escapeHtml(label)}</span>`);
+  }
   if (/prestige/i.test(skin.skin)) badges.push('<span class="badge badge-prestige">Prestige</span>');
   else if (/mythic chroma|special edition|exquisite edition/i.test(skin.skin)) badges.push('<span class="badge badge-prestige">Mythic</span>');
   if (/chroma/i.test(skin.skin)) badges.push('<span class="badge badge-chroma">Chroma</span>');
@@ -634,6 +638,12 @@ function badgesFor(skin) {
 }
 
 function displaySkinName(skin) {
+  if (skin.type === "Legends of Runeterra") {
+    return String(skin.skin || "")
+      .replace(/\s*[—–-]\s*Level\s+\d+\s*$/i, "")
+      .trim();
+  }
+
   return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin)
     ? `${skin.skin} (Wild Rift)`
     : skin.skin;
