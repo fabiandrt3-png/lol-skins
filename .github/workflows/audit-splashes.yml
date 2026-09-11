@@ -47,8 +47,29 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Snapshot catalog before sync
+        shell: bash
+        run: cp data/image-overrides.json "$RUNNER_TEMP/image-overrides-before-sync.json"
+
       - name: Sync missing PC and Wild Rift skins
         run: node scripts/sync-missing-skins.mjs
+
+      - name: Drop no-op sync metadata changes
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const target = 'data/image-overrides.json';
+          const snapshot = `${process.env.RUNNER_TEMP}/image-overrides-before-sync.json`;
+          const current = JSON.parse(fs.readFileSync(target, 'utf8'));
+          const added = Number(current?.catalogSync?.added || 0);
+          if (added === 0) {
+            fs.copyFileSync(snapshot, target);
+            console.log('No skins added; restored catalog snapshot to avoid timestamp-only changes.');
+          } else {
+            console.log(`Kept sync changes: ${added} skin(s) added.`);
+          }
+          NODE
 
       - name: Sort centralized catalogue
         run: node scripts/centralize-catalog.mjs
