@@ -69,8 +69,6 @@ jobs:
           const before = JSON.parse(fs.readFileSync(snapshot, 'utf8'));
           const added = Number(current?.catalogSync?.added || 0);
           if (added === 0) {
-            // Keep the fresh zero-missing/unresolved result, but remove volatile timestamps.
-            // This persists a corrected status once and makes every later no-op pass byte-stable.
             current.catalogGeneratedAt = before.catalogGeneratedAt;
             if (current.catalogSync) delete current.catalogSync.runAt;
             fs.writeFileSync(target, JSON.stringify(current, null, 2) + '\n');
@@ -92,10 +90,25 @@ jobs:
           git add data/image-overrides.json version.json
           if git diff --cached --quiet; then
             echo "Centralized catalogue already synchronized and sorted"
-          else
-            git commit -m "Sync and sort centralized skin catalogue"
-            git push
+            exit 0
           fi
+
+          git commit -m "Sync and sort centralized skin catalogue"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Centralized catalogue pushed successfully"
+              exit 0
+            fi
+            echo "Remote changed during catalogue sync; rebasing (attempt ${attempt}/3)..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Could not safely rebase synchronized catalogue."
+              exit 1
+            fi
+          done
+          echo "::error::Could not push synchronized catalogue after 3 attempts."
+          exit 1
 
       - name: Refresh official Legends of Runeterra art index
         continue-on-error: true
