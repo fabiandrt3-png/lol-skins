@@ -3,12 +3,14 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const OUTPUT_FILE = path.join(ROOT, 'data', 'lor-skins.json');
-const USER_AGENT = 'lol-skins-lor-skins/1.0 (+https://github.com/fabiandrt3-png/lol-skins)';
+const USER_AGENT = 'lol-skins-lor-skins/1.1 (+https://github.com/fabiandrt3-png/lol-skins)';
 const TIMEOUT_MS = 30000;
 const RIOT_DOCS = 'https://developer.riotgames.com/docs/lor';
-const SKIN_METADATA_SOURCE = 'https://leagueoflegends.fandom.com/wiki/Module:LoRCosmetics/skins?action=raw';
-const WIKI_API = 'https://wiki.leagueoflegends.com/en-us/api.php';
 const WIKI_FILE_REDIRECT = 'https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/';
+const SKIN_METADATA_SOURCES = [
+  'https://wiki.leagueoflegends.com/en-us/Module:LoRCosmetics/skins?action=raw',
+  'https://wiki.leagueoflegends.com/en-us/index.php?title=Module%3ALoRCosmetics%2Fskins&action=raw',
+];
 
 const SETS = [
   source('set1', '1_0_0'),
@@ -44,16 +46,11 @@ for (const set of SETS) {
 
 if (!cardMap.size) throw new Error('No official LoR cards could be loaded.');
 
-const rawMetadata = await fetchText(SKIN_METADATA_SOURCE);
-if (!rawMetadata) throw new Error('LoR skin metadata source is unavailable.');
+const metadata = await firstText(SKIN_METADATA_SOURCES);
+if (!metadata) throw new Error('LoR skin metadata source is unavailable.');
 
-const parsedSkins = parseSkinModule(rawMetadata, cardMap);
+const parsedSkins = parseSkinModule(metadata.text, cardMap);
 if (!parsedSkins.length) throw new Error('No LoR champion skins could be parsed.');
-
-const wikiFileNames = unique(parsedSkins.flatMap((skin) => skin.levels.flatMap((level) =>
-  candidateWikiFiles(level.cardCode, skin.skinName)
-)));
-const wikiInfo = await loadWikiFileInfo(wikiFileNames);
 
 const entries = [];
 for (const skin of parsedSkins) {
@@ -61,22 +58,22 @@ for (const skin of parsedSkins) {
     const card = cardMap.get(level.cardCode);
     const normalFiles = normalWikiFiles(level.cardCode, skin.skinName);
     const hdFiles = hdWikiFiles(level.cardCode, skin.skinName);
-    const exactWikiCandidates = candidateWikiFiles(level.cardCode, skin.skinName)
-      .map((filename) => ({ filename, ...(wikiInfo.get(filename) || {}) }))
-      .filter((item) => item.url);
-
     const officialFull = skin.skinName === 'Original' ? officialFullArt(card) : null;
+
+    // Card previews keep the original/full LoR art. For original champion cards,
+    // Riot Data Dragon is the most direct official source. Cosmetic skins use the
+    // exact LoR skin file from the League Wiki mirror.
     const cardCandidates = unique([
       officialFull,
-      ...normalFiles.map((filename) => wikiInfo.get(filename)?.url || wikiRedirect(filename)),
+      ...normalFiles.map(wikiRedirect),
     ]);
 
+    // Fullscreen always tries the exact HD LoR file first. Special:Redirect/file
+    // safely falls through in the browser if an HD variant does not exist, avoiding
+    // hundreds of MediaWiki API requests and the associated rate limiting.
     const fullscreenCandidates = unique([
-      ...exactWikiCandidates
-        .sort((a, b) => pixelArea(b) - pixelArea(a) || filePreference(b.filename) - filePreference(a.filename))
-        .map((item) => item.url),
-      officialFull,
       ...hdFiles.map(wikiRedirect),
+      officialFull,
       ...normalFiles.map(wikiRedirect),
     ]);
 
@@ -115,8 +112,8 @@ const previous = readJson(OUTPUT_FILE, {});
 const stableNext = {
   source: 'Riot Games LoR Data Dragon + League of Legends Wiki LoR cosmetics metadata',
   sourceDocs: RIOT_DOCS,
-  metadataSource: SKIN_METADATA_SOURCE,
-  strategy: 'LoR champion skins are first-class gallery entries. Skins are ordered by release date, then skin index, then champion level. Card previews use the exact original/full artwork; fullscreen prefers the highest verified exact HD file when available.',
+  metadataSource: metadata.url,
+  strategy: 'LoR champion skins are first-class gallery entries. Skins are ordered by release date, then skin index, then champion level. Card previews use the exact original/full artwork; fullscreen tries the exact HD LoR artwork first.',
   sets: loadedSets.sort((a, b) => a.name.localeCompare(b.name, 'en', { numeric: true })),
   entries,
 };
@@ -131,6 +128,7 @@ const stablePrevious = {
 
 if (JSON.stringify(stableNext) === JSON.stringify(stablePrevious)) {
   console.log(`LoR skin catalog unchanged: ${entries.length} level artworks across ${countSkins(entries)} skins.`);
+  printAkshan(entries);
   process.exit(0);
 }
 
@@ -140,9 +138,13 @@ fs.writeFileSync(OUTPUT_FILE, JSON.stringify({
   ...stableNext,
 }, null, 2) + '\n');
 
-const akshan = entries.filter((entry) => entry.champ === 'Akshan');
 console.log(`LoR skin catalog updated: ${entries.length} level artworks across ${countSkins(entries)} skins.`);
-if (akshan.length) console.log(`Akshan: ${akshan.map((entry) => entry.skin).join(' > ')}`);
+printAkshan(entries);
+
+function printAkshan(values) {
+  const akshan = values.filter((entry) => entry.champ === 'Akshan');
+  if (akshan.length) console.log(`Akshan: ${akshan.map((entry) => entry.skin).join(' > ')}`);
+}
 
 function source(name, version = '') {
   const urls = [`https://dd.b.pvp.net/latest/${name}/en_us/data/${name}-en_us.json`];
@@ -154,6 +156,14 @@ async function firstJson(urls) {
   for (const url of urls) {
     const payload = await fetchJson(url);
     if (payload) return { url, payload };
+  }
+  return null;
+}
+
+async function firstText(urls) {
+  for (const url of urls) {
+    const text = await fetchText(url);
+    if (text && /LoRCosmetics|associatedCards|cardcode/i.test(text)) return { url, text };
   }
   return null;
 }
@@ -174,9 +184,13 @@ async function fetchText(url, accept = 'text/plain,text/*;q=0.9,*/*;q=0.8') {
       signal: controller.signal,
       headers: { 'user-agent': USER_AGENT, accept },
     });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      console.warn(`LoR metadata request failed: ${response.status} ${url}`);
+      return null;
+    }
     return await response.text();
-  } catch {
+  } catch (error) {
+    console.warn(`LoR metadata request failed: ${url} (${error?.name || 'network error'})`);
     return null;
   } finally {
     clearTimeout(timer);
@@ -184,7 +198,8 @@ async function fetchText(url, accept = 'text/plain,text/*;q=0.9,*/*;q=0.8') {
 }
 
 function parseSkinModule(text, cards) {
-  const championBlocks = namedBlocks(text, (name) => /^\d{2}[A-Z]{2}\d{3}$/.test(name));
+  const moduleBody = returnTableBody(text);
+  const championBlocks = namedBlocks(moduleBody, (name) => /^\d{2}[A-Z]{2}\d{3}$/.test(name));
   const result = [];
 
   for (const championBlock of championBlocks) {
@@ -222,6 +237,14 @@ function parseSkinModule(text, cards) {
     || a.skinIndex - b.skinIndex
     || a.skinName.localeCompare(b.skinName, 'en', { sensitivity: 'base' })
   );
+}
+
+function returnTableBody(text) {
+  const match = /\breturn\s*\{/m.exec(text);
+  if (!match) return text;
+  const openIndex = match.index + match[0].lastIndexOf('{');
+  const closeIndex = findMatchingBrace(text, openIndex);
+  return closeIndex > openIndex ? text.slice(openIndex + 1, closeIndex) : text;
 }
 
 function parseAssociatedLevels(body) {
@@ -280,14 +303,21 @@ function braceDepthAt(text, index) {
   let depth = 0;
   let quote = '';
   let escaped = false;
+  let lineComment = false;
   for (let i = 0; i < index; i += 1) {
     const char = text[i];
+    const next = text[i + 1];
+    if (lineComment) {
+      if (char === '\n') lineComment = false;
+      continue;
+    }
     if (quote) {
       if (escaped) escaped = false;
       else if (char === '\\') escaped = true;
       else if (char === quote) quote = '';
       continue;
     }
+    if (char === '-' && next === '-') { lineComment = true; i += 1; continue; }
     if (char === '"' || char === "'") { quote = char; continue; }
     if (char === '{') depth += 1;
     else if (char === '}') depth = Math.max(0, depth - 1);
@@ -336,10 +366,6 @@ function numberField(text, field) {
   return value == null ? null : Number(value);
 }
 
-function candidateWikiFiles(cardCode, skinName) {
-  return unique([...hdWikiFiles(cardCode, skinName), ...normalWikiFiles(cardCode, skinName)]);
-}
-
 function hdWikiFiles(cardCode, skinName) {
   if (skinName === 'Original') return [`${cardCode}-HD-full.jpg`];
   return [`${cardCode} ${skinName}-HD-full.jpg`];
@@ -351,34 +377,6 @@ function normalWikiFiles(cardCode, skinName) {
     `${cardCode} ${skinName}-full.png`,
     `${cardCode} ${skinName}-alt-full.png`,
   ];
-}
-
-async function loadWikiFileInfo(filenames) {
-  const result = new Map();
-  const chunks = chunk(filenames, 40);
-  for (const names of chunks) {
-    const params = new URLSearchParams({
-      action: 'query',
-      format: 'json',
-      formatversion: '2',
-      prop: 'imageinfo',
-      iiprop: 'url|size',
-      titles: names.map((name) => `File:${name}`).join('|'),
-    });
-    const payload = await fetchJson(`${WIKI_API}?${params.toString()}`);
-    for (const page of payload?.query?.pages || []) {
-      const title = String(page?.title || '').replace(/^File:/i, '');
-      const info = page?.imageinfo?.[0];
-      if (!title || !info?.url) continue;
-      result.set(title, {
-        url: secureUrl(info.url),
-        width: Number(info.width) || 0,
-        height: Number(info.height) || 0,
-        bytes: Number(info.size) || 0,
-      });
-    }
-  }
-  return result;
 }
 
 function officialFullArt(card) {
@@ -395,17 +393,6 @@ function isChampionUnit(card) {
 
 function wikiRedirect(filename) {
   return `${WIKI_FILE_REDIRECT}${encodeURIComponent(filename)}`;
-}
-
-function pixelArea(item) {
-  return (Number(item?.width) || 0) * (Number(item?.height) || 0);
-}
-
-function filePreference(filename = '') {
-  if (/-HD-full\.jpg$/i.test(filename)) return 3;
-  if (/-full\.png$/i.test(filename) && !/-alt-full\.png$/i.test(filename)) return 2;
-  if (/-alt-full\.png$/i.test(filename)) return 1;
-  return 0;
 }
 
 function compareEntries(a, b) {
@@ -438,12 +425,6 @@ function secureUrl(url) {
 
 function countSkins(entries) {
   return new Set(entries.map((entry) => `${entry.champ}|${entry.lorSkinName}`)).size;
-}
-
-function chunk(values, size) {
-  const result = [];
-  for (let index = 0; index < values.length; index += size) result.push(values.slice(index, index + size));
-  return result;
 }
 
 function unique(values) {
