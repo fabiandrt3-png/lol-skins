@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:24:47.549Z",
+  "generatedAt": "2026-09-11T15:51:17.127Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
@@ -1205,7 +1205,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ivern_RainShepherdSkin_HD.jpg?947f4",
         "width": 7000,
         "height": 4130,
-        "bytes": 19476792,
+        "bytes": 18893546,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -1518,7 +1518,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kindred_PandemoniumSkin_HD.jpg?793a5",
         "width": 7976,
         "height": 4481,
-        "bytes": 19998286,
+        "bytes": 19159175,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2020,10 +2020,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 8601125,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 346164,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2068,10 +2068,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR_HD.jpg?48e9d",
-        "width": 8000,
-        "height": 3696,
-        "bytes": 8667234,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR.jpg?02415",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 308284,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2092,10 +2092,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR_HD.jpg?ef9c0",
-        "width": 10000,
-        "height": 4500,
-        "bytes": 9044440,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 379295,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2116,10 +2116,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR_HD.jpg?19991",
-        "width": 10000,
-        "height": 4619,
-        "bytes": 8884601,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR.jpg?c78de",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 372817,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2140,10 +2140,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR_HD.jpg?9973b",
-        "width": 10000,
-        "height": 4500,
-        "bytes": 8327953,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 300323,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2164,10 +2164,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Norra_CafeCutiesSkin_WR_HD.jpg?4ec43",
-        "width": 10000,
-        "height": 4500,
-        "bytes": 8437016,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Norra_CafeCutiesSkin_WR.jpg?9d436",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 387188,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2188,10 +2188,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Orianna_RisenLegendSkin_HD.jpg?db9db",
-        "width": 7000,
-        "height": 4130,
-        "bytes": 3226675,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Orianna_RisenLegendSkin.jpg?10b7d",
+        "width": 1215,
+        "height": 717,
+        "bytes": 255871,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2553,7 +2553,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shaco_PrestigePandemoniumSkin_HD.jpg?89e6a",
         "width": 7000,
         "height": 4130,
-        "bytes": 19208438,
+        "bytes": 18898980,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2649,7 +2649,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_PROJECTSkin_HD.jpg?89755",
         "width": 7000,
         "height": 3931,
-        "bytes": 19845712,
+        "bytes": 19305456,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3233,7 +3233,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vladimir_PsyOpsSkin_HD.jpg?674b3",
         "width": 8000,
         "height": 4720,
-        "bytes": 19389409,
+        "bytes": 18864137,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3449,7 +3449,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zac_SpaceGrooveSkin_HD.jpg?87fa1",
         "width": 6000,
         "height": 3540,
-        "bytes": 9376015,
+        "bytes": 8962940,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3487,7 +3487,7 @@
     }
   ],
   "wikiMaximumPass": {
-    "runAt": "2026-09-11T15:25:34.392Z",
+    "runAt": "2026-09-11T15:52:41.654Z",
     "sourcesChecked": {
       "pc": "https://wiki.leagueoflegends.com/en-us/Category:High_definition_champion_skins",
       "wr": "https://wiki.leagueoflegends.com/en-us/Category:WR_High_definition_champion_skins",
@@ -3505,7 +3505,7 @@
     "noExactWikiHd": 149
   },
   "finalHdPass": {
-    "runAt": "2026-09-11T15:26:12.437Z",
+    "runAt": "2026-09-11T15:53:34.039Z",
     "historicalSearched": 208,
     "historicalRecoveredHigher": 3,
     "catalogSearched": 99,
