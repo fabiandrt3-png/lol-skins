@@ -18,6 +18,7 @@ on:
       - 'scripts/update-lor-art.mjs'
       - 'scripts/lor-art-source.mjs'
       - 'scripts/apply-lor-fallbacks.mjs'
+      - 'scripts/preserve-audit-quality.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -109,6 +110,13 @@ jobs:
       - name: Search unlisted higher-resolution Wiki files and repair cards
         continue-on-error: true
         run: node scripts/finalize-hd.mjs
+
+      - name: Preserve previously verified higher-resolution sources
+        continue-on-error: true
+        run: >-
+          node scripts/preserve-audit-quality.mjs
+          "$RUNNER_TEMP/image-overrides-before-audit.json"
+          "https://raw.githubusercontent.com/fabiandrt3-png/lol-skins/483d8d45fd0304eedc96165d92b4e15c136b7a20/data/image-overrides.json"
 
       - name: Attach official Legends of Runeterra fallbacks
         continue-on-error: true
