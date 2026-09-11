@@ -119,8 +119,10 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources, hook
       image.dataset.hdSource = source;
 
       const markReady = () => {
-        if (!sameImageSource(image.currentSrc || image.getAttribute("src") || "", source)) return;
         image.removeEventListener("load", markReady);
+        if (token !== requestToken || lightbox.hidden) return;
+        if (skinKey(currentChampion(), title.textContent.trim()) !== key) return;
+        if (!sameImageSource(image.currentSrc || image.getAttribute("src") || "", source)) return;
         hooks.afterSwap?.();
         lightbox.dataset.hdState = "ready";
       };
