@@ -290,10 +290,191 @@ function processSkinCards(root = document) {
   root.querySelectorAll?.(".skin-card").forEach(processSkinCard);
 }
 
+function installFullscreenNavigationBehavior() {
+  const lightbox = document.querySelector("#lightbox");
+  const figure = document.querySelector("#lightboxFigure");
+  const previousButton = document.querySelector("#lightboxPrev");
+  const nextButton = document.querySelector("#lightboxNext");
+  if (!lightbox || !figure || !previousButton || !nextButton) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const track = () => figure.firstElementChild;
+  const isZoomed = () =>
+    lightbox.dataset.zoomed === "true"
+    || lightbox.dataset.desktopZoomed === "true"
+    || (window.visualViewport?.scale ?? 1) > 1.01;
+
+  const finishAppTransitionImmediately = () => {
+    queueMicrotask(() => {
+      const element = track();
+      if (!element) return;
+      element.dispatchEvent(new Event("transitionend", { bubbles: true }));
+    });
+  };
+
+  // Arrow buttons and keyboard arrows should never visibly slide. app.js still
+  // performs its normal state update; we simply finish its carousel transition
+  // in the same event turn, before the browser paints an intermediate frame.
+  lightbox.addEventListener("click", (event) => {
+    if (event.target.closest(".lightbox-nav")) finishAppTransitionImmediately();
+  }, { capture: true });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") finishAppTransitionImmediately();
+  }, { capture: true });
+
+  let pointerId = null;
+  let startX = 0;
+  let startY = 0;
+  let lastX = 0;
+  let lastY = 0;
+  let startedAt = 0;
+  let dragging = false;
+  let blocked = false;
+  let finishing = false;
+
+  const clearPointer = () => {
+    pointerId = null;
+    startX = 0;
+    startY = 0;
+    lastX = 0;
+    lastY = 0;
+    startedAt = 0;
+    dragging = false;
+    blocked = false;
+    figure.style.cursor = "";
+  };
+
+  const setTrackOffset = (offset, animate) => {
+    const element = track();
+    if (!element) return;
+    element.style.transition = animate && !reducedMotion.matches
+      ? "transform 260ms cubic-bezier(.22, .61, .36, 1)"
+      : "none";
+    element.style.transform = `translate3d(calc(-33.333333% + ${offset}px), 0, 0)`;
+  };
+
+  const snapBack = () => {
+    setTrackOffset(0, true);
+  };
+
+  const completeMouseSwipe = (direction) => {
+    if (finishing) return;
+    finishing = true;
+    const element = track();
+    if (!element) {
+      finishing = false;
+      return;
+    }
+
+    const width = figure.clientWidth || window.innerWidth;
+    setTrackOffset(direction > 0 ? -width : width, true);
+
+    let completed = false;
+    const finish = () => {
+      if (completed) return;
+      completed = true;
+      finishing = false;
+      if (direction > 0) nextButton.click();
+      else previousButton.click();
+    };
+
+    if (reducedMotion.matches) {
+      finish();
+      return;
+    }
+
+    element.addEventListener("transitionend", finish, { once: true });
+    window.setTimeout(finish, 340);
+  };
+
+  figure.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0 || lightbox.hidden || isZoomed()) return;
+    if (previousButton.disabled && nextButton.disabled) return;
+
+    pointerId = event.pointerId;
+    startX = lastX = event.clientX;
+    startY = lastY = event.clientY;
+    startedAt = performance.now();
+    dragging = false;
+    blocked = false;
+    setTrackOffset(0, false);
+    figure.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+  });
+
+  figure.addEventListener("pointermove", (event) => {
+    if (pointerId === null || event.pointerId !== pointerId || finishing) return;
+    if (isZoomed()) {
+      blocked = true;
+      setTrackOffset(0, false);
+      return;
+    }
+
+    lastX = event.clientX;
+    lastY = event.clientY;
+    const deltaX = lastX - startX;
+    const deltaY = lastY - startY;
+
+    if (!dragging) {
+      if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) return;
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        blocked = true;
+        return;
+      }
+      dragging = true;
+      figure.style.cursor = "grabbing";
+    }
+
+    if (!blocked) setTrackOffset(deltaX, false);
+  });
+
+  const endPointerSwipe = (event) => {
+    if (pointerId === null || event.pointerId !== pointerId) return;
+
+    const activePointerId = pointerId;
+    const wasDragging = dragging;
+    const wasBlocked = blocked || isZoomed();
+    const deltaX = lastX - startX;
+    const deltaY = lastY - startY;
+    const duration = Math.max(performance.now() - startedAt, 1);
+
+    clearPointer();
+    if (figure.hasPointerCapture?.(activePointerId)) figure.releasePointerCapture(activePointerId);
+
+    if (wasBlocked || !wasDragging) {
+      snapBack();
+      return;
+    }
+
+    const width = figure.clientWidth || window.innerWidth;
+    const threshold = Math.min(90, Math.max(48, width * 0.16));
+    const velocity = Math.abs(deltaX) / duration;
+    const horizontal = Math.abs(deltaX) > Math.abs(deltaY) * 1.15;
+    const shouldChange = horizontal && (Math.abs(deltaX) >= threshold || (Math.abs(deltaX) >= 28 && velocity >= 0.45));
+
+    if (!shouldChange) {
+      snapBack();
+      return;
+    }
+
+    completeMouseSwipe(deltaX < 0 ? 1 : -1);
+  };
+
+  figure.addEventListener("pointerup", endPointerSwipe);
+  figure.addEventListener("pointercancel", (event) => {
+    if (pointerId === null || event.pointerId !== pointerId) return;
+    clearPointer();
+    snapBack();
+  });
+}
+
 document.documentElement.lang = "en";
 installCardBadgeStyles();
 translateElement(document.body);
 processSkinCards(document);
+installFullscreenNavigationBehavior();
 
 const observer = new MutationObserver((mutations) => {
   for (const mutation of mutations) {
