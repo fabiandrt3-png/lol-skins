@@ -22,40 +22,11 @@ jobs:
           python3 <<'PY'
           from pathlib import Path
           import json
+          import re
 
-          loader_path = Path('data-loader.js')
+          loader_path = Path("data-loader.js")
           loader = loader_path.read_text()
-          old_merge = '''function mergeLorSkins(catalog, lorSkins) {
-            const merged = catalog.map((item) => ({ ...item }));
-            const orderedLor = (lorSkins || [])
-              .filter(validSkinEntry)
-              .map((item, index) => ({ ...item, _lorInputIndex: index }))
-              .sort(compareLorEntries);
-
-            for (const lor of orderedLor) {
-              const id = stableSkinId(lor);
-              const existingIndex = merged.findIndex((item) => stableSkinId(item) === id);
-              if (existingIndex >= 0) {
-                if (merged[existingIndex]?.sourceKind === "lor") merged[existingIndex] = { ...merged[existingIndex], ...lor };
-                continue;
-              }
-
-              let insertAt = -1;
-              for (let index = merged.length - 1; index >= 0; index -= 1) {
-                if (merged[index].champ === lor.champ) {
-                  insertAt = index;
-                  break;
-                }
-              }
-
-              const cleanLor = { ...lor };
-              delete cleanLor._lorInputIndex;
-              merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanLor);
-            }
-
-            return merged;
-          }
-'''.replace('          ', '')
+          merge_pattern = re.compile(r"function mergeLorSkins\(catalog, lorSkins\) \{.*?\n\}\n(?=\nfunction compareLorEntries)", re.S)
           new_merge = '''function mergeLorSkins(catalog, lorSkins) {
             const merged = catalog.map((item) => ({ ...item }));
             const orderedLor = (lorSkins || [])
@@ -122,50 +93,38 @@ jobs:
             const pcClassic = items.findIndex((item) => isClassic(item) && item.type !== "Wild Rift");
             return pcClassic >= 0 ? pcClassic : items.findIndex(isClassic);
           }
-'''.replace('          ', '')
-          if old_merge not in loader:
-              raise SystemExit('Expected mergeLorSkins block not found')
-          loader = loader.replace(old_merge, new_merge, 1)
+          '''
+          loader, count = merge_pattern.subn(lambda _: new_merge.rstrip(), loader, count=1)
+          if count != 1:
+              raise SystemExit("mergeLorSkins patch target not found")
           loader_path.write_text(loader)
 
-          ui_path = Path('english-ui.js')
+          ui_path = Path("english-ui.js")
           ui = ui_path.read_text()
           ui = ui.replace('const WILD_RIFT_SUFFIX = /\\s*\\(\\s*Wild Rift\\s*\\)/gi;\n\n', '', 1)
 
-          old_style = '''    .skin-title-wrap .badge-wr {
+          wr_style = '''    .skin-title-wrap .badge-wr {
               border-color: rgba(100, 210, 255, .24);
               background: rgba(100, 210, 255, .13);
               color: #64d2ff;
             }
-
-            .skin-title-wrap .badge-chroma {'''.replace('            ', '')
-          new_style = '''    .skin-title-wrap .badge-wr {
-              border-color: rgba(100, 210, 255, .24);
-              background: rgba(100, 210, 255, .13);
-              color: #64d2ff;
-            }
-
+          '''
+          lor_style = wr_style + '''
             .skin-title-wrap .badge-lor {
               border-color: rgba(191, 90, 242, .28);
               background: rgba(191, 90, 242, .14);
               color: #bf5af2;
             }
+          '''
+          if wr_style not in ui:
+              raise SystemExit("LoR style insertion target not found")
+          ui = ui.replace(wr_style, lor_style, 1)
 
-            .skin-title-wrap .badge-chroma {'''.replace('            ', '')
-          if old_style not in ui:
-              raise SystemExit('Expected badge style block not found')
-          ui = ui.replace(old_style, new_style, 1)
-
-          old_parse_start = '''function parseCardSkinName(rawValue) {
-            const raw = String(rawValue || "").trim();
-            let displayName = raw;
+          parse_anchor = '''  let displayName = raw;
             let chromaLabel = "";
 
-            const isWildRift = /\\(\\s*Wild Rift\\s*\\)/i.test(raw) || /\\bWild Rift\\b/i.test(raw);
-'''.replace('            ', '')
-          new_parse_start = '''function parseCardSkinName(rawValue) {
-            const raw = String(rawValue || "").trim();
-            let displayName = raw;
+            const isWildRift ='''
+          parse_replacement = '''  let displayName = raw;
             let chromaLabel = "";
             let lorLevel = "";
 
@@ -175,115 +134,73 @@ jobs:
               displayName = displayName.slice(0, levelMatch.index).trim();
             }
 
-            const isWildRift = /\\(\\s*Wild Rift\\s*\\)/i.test(raw) || /\\bWild Rift\\b/i.test(raw);
-'''.replace('            ', '')
-          if old_parse_start not in ui:
-              raise SystemExit('Expected parseCardSkinName start not found')
-          ui = ui.replace(old_parse_start, new_parse_start, 1)
+            const isWildRift ='''
+          if parse_anchor not in ui:
+              raise SystemExit("LoR level parse target not found")
+          ui = ui.replace(parse_anchor, parse_replacement, 1)
+          ui = ui.replace('    chromaLabel,\n    isWildRift,', '    chromaLabel,\n    lorLevel,\n    isWildRift,', 1)
 
-          old_return = '''  return {
-              displayName: normalizeDisplayName(displayName),
-              chromaLabel,
-              isWildRift,
-            };
-'''.replace('            ', '')
-          new_return = '''  return {
-              displayName: normalizeDisplayName(displayName),
-              chromaLabel,
-              lorLevel,
-              isWildRift,
-            };
-'''.replace('            ', '')
-          if old_return not in ui:
-              raise SystemExit('Expected parseCardSkinName return not found')
-          ui = ui.replace(old_return, new_return, 1)
+          ui = ui.replace('  const existingWildRiftBadge = card.querySelector(".badge-wr");\n', '  const existingWildRiftBadge = card.querySelector(".badge-wr");\n  const existingLorBadge = card.querySelector(".badge-lor");\n', 1)
+          ui = ui.replace('/^(Wild Rift|League of Legends PC)$/i', '/^(Wild Rift|League of Legends PC|Legends of Runeterra)$/i')
 
-          old_card_head = '''  const inlineWildRiftTag = title.querySelector(".skin-tag-wr");
-            const existingWildRiftBadge = card.querySelector(".badge-wr");
-            const existingChromaBadge = card.querySelector(".badge-chroma");
-            const legacyPlatformText = [...titleWrap.querySelectorAll("p")]
-              .find((element) => /^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim()));
-'''.replace('            ', '')
-          new_card_head = '''  const inlineWildRiftTag = title.querySelector(".skin-tag-wr");
-            const existingWildRiftBadge = card.querySelector(".badge-wr");
-            const existingLorBadge = card.querySelector(".badge-lor");
-            const existingChromaBadge = card.querySelector(".badge-chroma");
-            const legacyPlatformText = [...titleWrap.querySelectorAll("p")]
-              .find((element) => /^(Wild Rift|League of Legends PC|Legends of Runeterra)$/i.test(element.textContent.trim()));
-'''.replace('            ', '')
-          if old_card_head not in ui:
-              raise SystemExit('Expected card badge head not found')
-          ui = ui.replace(old_card_head, new_card_head, 1)
-
-          old_flags = '''  const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\\bchroma\\b/i.test(rawTitle));
-            const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";
-'''.replace('            ', '')
-          new_flags = '''  const isLor = Boolean(
-              existingLorBadge
-              || /^Legends of Runeterra$/i.test(legacyPlatformText?.textContent?.trim() || "")
-            );
-            const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\\bchroma\\b/i.test(rawTitle));
-            const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";
-            const lorLabel = parsed.lorLevel ? `Legends of Runeterra · ${parsed.lorLevel}` : "Legends of Runeterra";
-'''.replace('            ', '')
-          if old_flags not in ui:
-              raise SystemExit('Expected card flags block not found')
-          ui = ui.replace(old_flags, new_flags, 1)
-
-          ui = ui.replace('/^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim())', '/^(Wild Rift|League of Legends PC|Legends of Runeterra)$/i.test(element.textContent.trim())', 1)
+          chroma_flag = '  const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\\bchroma\\b/i.test(rawTitle));\n'
+          lor_flag = '''  const isLor = Boolean(
+            existingLorBadge
+            || /^Legends of Runeterra$/i.test(legacyPlatformText?.textContent?.trim() || "")
+          );
+          '''
+          if chroma_flag not in ui:
+              raise SystemExit("LoR badge flag target not found")
+          ui = ui.replace(chroma_flag, lor_flag + chroma_flag, 1)
+          ui = ui.replace('  const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";\n', '  const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";\n  const lorLabel = parsed.lorLevel ? `Legends of Runeterra · ${parsed.lorLevel}` : "Legends of Runeterra";\n', 1)
           ui = ui.replace('const needsBadgeRow = isWildRift || isChroma || Boolean(badgeRow?.children.length);', 'const needsBadgeRow = isWildRift || isLor || isChroma || Boolean(badgeRow?.children.length);', 1)
 
-          old_cleanup = '''    badgeRow.querySelectorAll(".badge-chroma").forEach((badge, index) => {
+          cleanup_anchor = '''    badgeRow.querySelectorAll(".badge-chroma").forEach((badge, index) => {
               if (!isChroma || index > 0) badge.remove();
             });
-
-            if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");
-            if (isChroma) ensureBadge(badgeRow, "badge-chroma", chromaLabel);
-'''.replace('            ', '')
-          new_cleanup = '''    badgeRow.querySelectorAll(".badge-lor").forEach((badge, index) => {
+          '''
+          cleanup_replacement = '''    badgeRow.querySelectorAll(".badge-lor").forEach((badge, index) => {
               if (!isLor || index > 0) badge.remove();
             });
             badgeRow.querySelectorAll(".badge-chroma").forEach((badge, index) => {
               if (!isChroma || index > 0) badge.remove();
             });
+          '''
+          if cleanup_anchor not in ui:
+              raise SystemExit("LoR badge cleanup target not found")
+          ui = ui.replace(cleanup_anchor, cleanup_replacement, 1)
+          ui = ui.replace('    if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");\n', '    if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");\n    if (isLor) ensureBadge(badgeRow, "badge-lor", lorLabel);\n', 1)
 
-            if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");
-            if (isLor) ensureBadge(badgeRow, "badge-lor", lorLabel);
-            if (isChroma) ensureBadge(badgeRow, "badge-chroma", chromaLabel);
-'''.replace('            ', '')
-          if old_cleanup not in ui:
-              raise SystemExit('Expected badge cleanup block not found')
-          ui = ui.replace(old_cleanup, new_cleanup, 1)
-
-          marker = '''function processSkinCards(root = document) {
-            if (root instanceof Element && root.matches(".skin-card")) processSkinCard(root);
-            root.querySelectorAll?.(".skin-card").forEach(processSkinCard);
+          text_branch = '''  if (target.nodeType === Node.TEXT_NODE) {
+            const current = target.nodeValue;
+            const translated = translateValue(current);
+            if (translated !== current) target.nodeValue = translated;
+            return;
           }
-'''.replace('            ', '')
-          replacement = marker + '''
-function stripLightboxLorLevel(root = document) {
-  const title = root instanceof Element && root.id === "lightboxTitle"
-    ? root
-    : root.querySelector?.("#lightboxTitle");
-  if (!title) return;
-  const parsed = parseCardSkinName(title.textContent || "");
-  if (parsed.lorLevel && title.textContent !== parsed.displayName) title.textContent = parsed.displayName;
-}
-'''
-          if marker not in ui:
-              raise SystemExit('Expected processSkinCards block not found')
-          ui = ui.replace(marker, replacement, 1)
-
-          ui = ui.replace('processSkinCards(document);\ninstallFullscreenNavigationBehavior();', 'processSkinCards(document);\nstripLightboxLorLevel(document);\ninstallFullscreenNavigationBehavior();', 1)
-          ui = ui.replace('if (node instanceof Element) processSkinCards(node);', 'if (node instanceof Element) {\n          processSkinCards(node);\n          stripLightboxLorLevel(node);\n        }', 1)
-          ui = ui.replace('if (mutation.target instanceof Element) processSkinCards(mutation.target);', 'if (mutation.target instanceof Element) {\n        processSkinCards(mutation.target);\n        stripLightboxLorLevel(mutation.target);\n      }', 1)
-          ui = ui.replace('    } else {\n      translateMutationTarget(mutation.target);\n    }', '    } else {\n      translateMutationTarget(mutation.target);\n      if (mutation.target.parentElement) stripLightboxLorLevel(mutation.target.parentElement);\n    }', 1)
+          '''
+          text_replacement = '''  if (target.nodeType === Node.TEXT_NODE) {
+            const current = target.nodeValue;
+            if (target.parentElement?.id === "lightboxTitle") {
+              const parsed = parseCardSkinName(current);
+              if (parsed.lorLevel) {
+                target.nodeValue = parsed.displayName;
+                return;
+              }
+            }
+            const translated = translateValue(current);
+            if (translated !== current) target.nodeValue = translated;
+            return;
+          }
+          '''
+          if text_branch not in ui:
+              raise SystemExit("Lightbox title cleanup target not found")
+          ui = ui.replace(text_branch, text_replacement, 1)
           ui_path.write_text(ui)
 
-          version_path = Path('version.json')
+          version_path = Path("version.json")
           version = json.loads(version_path.read_text())
-          version['version'] = '20260911-91'
-          version_path.write_text(json.dumps(version, indent=2) + '\n')
+          version["version"] = "20260911-91"
+          version_path.write_text(json.dumps(version, indent=2) + "\n")
           PY
 
       - name: Verify JavaScript syntax
@@ -292,6 +209,7 @@ function stripLightboxLorLevel(root = document) {
           node --check english-ui.js
           grep -q 'Legends of Runeterra ·' english-ui.js
           grep -q 'findClassicSkinIndex' data-loader.js
+          grep -q '20260911-91' version.json
 
       - name: Commit patch and remove one-shot workflow
         shell: bash
