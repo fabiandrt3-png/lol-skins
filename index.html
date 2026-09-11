@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,12 +8,12 @@
   <meta http-equiv="Expires" content="0">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
-  <meta name="description" content="Explore les champions et skins de League of Legends et Wild Rift.">
+  <meta name="description" content="Explore League of Legends and Wild Rift champions and skins.">
   <title>LoL Skins</title>
   <link rel="preconnect" href="https://wiki.leagueoflegends.com">
   <link rel="preconnect" href="https://game.gtimg.cn">
-  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-61">
-  <link id="loreStyles" rel="stylesheet" href="lore.css?v=20260911-61">
+  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-62">
+  <link id="loreStyles" rel="stylesheet" href="lore.css?v=20260911-62">
   <style>
     body:not(.is-champion-view) #sectionKicker,
     body:not(.is-champion-view) #resultCount,
@@ -65,7 +65,7 @@
 </head>
 <body>
   <div class="app-shell">
-    <button class="back-button" id="backButton" type="button" aria-label="Retour aux champions" hidden>
+    <button class="back-button" id="backButton" type="button" aria-label="Back to champions" hidden>
       <span aria-hidden="true">←</span>
     </button>
 
@@ -78,22 +78,22 @@
         </div>
       </section>
 
-      <section class="controls" aria-label="Recherche et filtres">
+      <section class="controls" aria-label="Search and filters">
         <label class="search-box" for="searchInput">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
             <path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <input id="searchInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Rechercher un champion…">
+          <input id="searchInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search for a champion…">
           <kbd aria-hidden="true">/</kbd>
         </label>
 
-        <div class="filter-row" id="filterRow" aria-label="Filtres" hidden>
-          <button class="filter-chip is-active" type="button" data-filter="all">Tout</button>
+        <div class="filter-row" id="filterRow" aria-label="Filters" hidden>
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
           <button class="filter-chip" type="button" data-filter="pc">PC</button>
           <button class="filter-chip" type="button" data-filter="wild-rift">Wild Rift</button>
           <button class="filter-chip" type="button" data-filter="prestige">Prestige / Mythic</button>
           <button class="filter-chip" type="button" data-filter="chroma">Chromas</button>
-          <button class="filter-chip" type="button" data-filter="favorites">♥ Favoris</button>
+          <button class="filter-chip" type="button" data-filter="favorites">♥ Favorites</button>
         </div>
       </section>
 
@@ -108,13 +108,13 @@
 
         <div class="loading-state" id="loadingState">
           <span class="spinner" aria-hidden="true"></span>
-          <p>Chargement de la collection…</p>
+          <p>Loading collection…</p>
         </div>
 
         <div class="empty-state" id="emptyState" hidden>
           <span aria-hidden="true">⌕</span>
-          <h3>Aucun résultat</h3>
-          <p>Essaie une autre recherche ou enlève un filtre.</p>
+          <h3>No results</h3>
+          <p>Try another search or remove a filter.</p>
         </div>
 
         <div class="card-grid" id="cardGrid" hidden></div>
@@ -122,32 +122,33 @@
     </main>
   </div>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu du skin" hidden>
-    <button class="lightbox-backdrop" type="button" data-close-lightbox aria-label="Fermer l’aperçu"></button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Skin preview" hidden>
+    <button class="lightbox-backdrop" type="button" data-close-lightbox aria-label="Close preview"></button>
     <div class="lightbox-toolbar">
       <div class="lightbox-caption">
         <span id="lightboxPosition"></span>
         <strong id="lightboxTitle"></strong>
       </div>
       <div class="lightbox-actions">
-        <button class="icon-button lore-button" id="lightboxLore" type="button" aria-label="Voir le lore" aria-controls="lorePanel" aria-expanded="false" hidden>
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M5 4.75A2.75 2.75 0 0 1 7.75 2H11a3 3 0 0 1 3 3v14.25A2.75 2.75 0 0 0 11.25 16H7.75A2.75 2.75 0 0 0 5 18.75V4.75Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M19 4.75A2.75 2.75 0 0 0 16.25 2H14v17.25A2.75 2.75 0 0 1 16.75 16h2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <button class="icon-button lore-button" id="lightboxLore" type="button" aria-label="View lore" aria-controls="lorePanel" aria-expanded="false" hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="M12 6.5v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M3.5 18.5V4.75A2.75 2.75 0 0 1 6.25 2H9a3 3 0 0 1 3 3v15.5a3.5 3.5 0 0 0-3.5-3.5H5a1.5 1.5 0 0 0-1.5 1.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.5 18.5V4.75A2.75 2.75 0 0 0 17.75 2H15a3 3 0 0 0-3 3v15.5a3.5 3.5 0 0 1 3.5-3.5H19a1.5 1.5 0 0 1 1.5 1.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Ajouter aux favoris">♡</button>
-        <button class="icon-button" id="lightboxClose" type="button" data-close-lightbox aria-label="Fermer">×</button>
+        <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Add to favorites">♡</button>
+        <button class="icon-button" id="lightboxClose" type="button" data-close-lightbox aria-label="Close">×</button>
       </div>
     </div>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Skin précédent">‹</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous skin">‹</button>
     <figure class="lightbox-figure" id="lightboxFigure">
       <img id="lightboxImage" alt="" decoding="async">
     </figure>
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Skin suivant">›</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next skin">›</button>
   </div>
 
-  <noscript>Cette application nécessite JavaScript pour afficher les skins.</noscript>
+  <noscript>This application requires JavaScript to display skins.</noscript>
 
   <script>
     (() => {
@@ -174,7 +175,7 @@
   </script>
 
   <script type="module">
-    const fallbackVersion = "20260911-61";
+    const fallbackVersion = "20260911-62";
     let version = fallbackVersion;
 
     try {
@@ -184,7 +185,7 @@
         if (typeof payload?.version === "string" && payload.version) version = payload.version;
       }
     } catch (error) {
-      console.warn("Version distante indisponible, utilisation de la version intégrée.", error);
+      console.warn("Remote version unavailable; using the bundled version.", error);
     }
 
     const stylesheet = document.querySelector("#appStyles");
@@ -195,15 +196,21 @@
     await import(`./app.js?v=${encodeURIComponent(version)}`);
 
     try {
+      await import(`./english-ui.js?v=${encodeURIComponent(version)}`);
+    } catch (error) {
+      console.warn("English UI helper unavailable.", error);
+    }
+
+    try {
       await import(`./lore.js?v=${encodeURIComponent(version)}`);
     } catch (error) {
-      console.warn("Module de lore indisponible.", error);
+      console.warn("Lore module unavailable.", error);
     }
 
     try {
       await import(`./lightbox-hd.js?v=${encodeURIComponent(version)}`);
     } catch (error) {
-      console.warn("Module HD plein écran indisponible, utilisation des splash arts standards.", error);
+      console.warn("Fullscreen HD module unavailable; using standard splash arts.", error);
     }
   </script>
 </body>
