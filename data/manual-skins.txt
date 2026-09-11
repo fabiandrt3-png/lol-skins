@@ -1,19 +1,29 @@
-# AJOUTS MANUELS DE SKINS
+# MODIFICATIONS ET AJOUTS MANUELS DE SKINS
+#
+# CE FICHIER EST LE SEUL À MODIFIER À LA MAIN.
+# Ne touche plus à data/image-overrides.json pour changer un skin existant.
 #
 # Une ligne = un skin.
 # Format :
-# Champion | Nom du skin | PC ou WR | image carte | image plein écran HD | après ce skin (optionnel)
+# Champion | Nom exact du skin | PC ou WR | image carte | image plein écran HD | après ce skin (optionnel)
 #
-# Exemple PC :
-# Anivia | Old God Anivia | PC | https://exemple.com/anivia.jpg | https://exemple.com/anivia-hd.jpg
+# POUR MODIFIER UN SKIN DÉJÀ EXISTANT :
+# Ajoute simplement une ligne avec le même champion, le même nom de skin et le même type.
+# Cette ligne devient prioritaire sur les données automatiques.
 #
-# Exemple Wild Rift :
+# Exemple pour Prestige Select Crystal Rose Akali :
+# Akali | Prestige Select Crystal Rose Akali | WR | https://exemple.com/akali-carte.jpg | https://exemple.com/akali-hd.jpg
+#
+# POUR AJOUTER UN NOUVEAU SKIN :
 # Lux | Nouveau skin Lux | WR | https://exemple.com/lux.jpg | https://exemple.com/lux-hd.jpg
 #
-# Exemple chroma/variante à placer juste après son parent :
+# POUR LE PLACER JUSTE APRÈS UN AUTRE SKIN :
 # Aatrox | Variante spéciale | PC | https://exemple.com/carte.jpg | https://exemple.com/hd.jpg | Mecha Aatrox
 #
-# IMPORTANT : laisse le # au début des exemples. Ils sont ignorés par l'application.
-# Ajoute tes vraies lignes en dessous sans #.
+# PC = League of Legends PC
+# WR = Wild Rift
+#
+# IMPORTANT : les lignes qui commencent par # sont seulement des exemples et sont ignorées.
+# Ajoute ou modifie tes vraies lignes en dessous, sans #.
 
 Garen | Iconic | Wild Rift | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR.jpg | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR_HD.jpg?ac5a9
