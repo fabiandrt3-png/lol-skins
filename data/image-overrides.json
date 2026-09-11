@@ -48602,7 +48602,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-11T23:19:34.048Z",
+  "catalogGeneratedAt": "2026-09-11T23:21:46.396Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48611,193 +48611,17 @@
     ],
     "PC": {
       "total": 2134,
-      "missing": 29,
+      "missing": 0,
       "added": 0,
-      "unresolved": 29
+      "unresolved": 0
     },
     "Wild Rift": {
       "total": 1056,
-      "missing": 6,
+      "missing": 0,
       "added": 0,
-      "unresolved": 6
+      "unresolved": 0
     },
     "added": 0,
-    "unresolved": [
-      {
-        "champion": "Aatrox",
-        "skin": "Prestige Blood Moon Aatrox (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Ahri",
-        "skin": "Prestige K/DA Ahri (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Akali",
-        "skin": "Prestige K/DA Akali (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Caitlyn",
-        "skin": "Prestige Arcade Caitlyn (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Evelynn",
-        "skin": "Prestige K/DA Evelynn (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Fizz",
-        "skin": "Prestige Fuzz Fizz (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Irelia",
-        "skin": "Prestige PROJECT: Irelia (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Kai'Sa",
-        "skin": "Prestige K/DA Kai'Sa (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Lee Sin",
-        "skin": "Prestige Nightbringer Lee Sin (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Lux",
-        "skin": "Prestige Battle Academia Lux (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Miss Fortune",
-        "skin": "Prestige Bewitching Miss Fortune (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Neeko",
-        "skin": "Prestige Star Guardian Neeko (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Classic Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Sasquatch Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Workshop Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Grungy Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Nunu & Willump Bot",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Demolisher Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "TPA Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Zombie Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Papercraft Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Space Groove Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Nunu & Beelump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Cosmic Paladins Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Fright Night Nunu & Willump",
-        "type": "PC"
-      },
-      {
-        "champion": "Qiyana",
-        "skin": "Prestige True Damage Qiyana (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Riven",
-        "skin": "Prestige Valiant Sword Riven (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Thresh",
-        "skin": "Prestige Pulsefire Thresh (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Vayne",
-        "skin": "Prestige Firecracker Vayne (2022)",
-        "type": "PC"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Classic Nunu & Willump",
-        "type": "Wild Rift"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Grungy Nunu & Willump",
-        "type": "Wild Rift"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Zombie Nunu & Willump",
-        "type": "Wild Rift"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Space Groove Nunu & Willump",
-        "type": "Wild Rift"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Nunu & Beelump",
-        "type": "Wild Rift"
-      },
-      {
-        "champion": "Nunu & Willump",
-        "skin": "Dreambuilder Nunu & Willump",
-        "type": "Wild Rift"
-      }
-    ]
+    "unresolved": []
   }
 }
