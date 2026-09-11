@@ -20,6 +20,8 @@ const exactTranslations = new Map([
   ["Molette ou double-clic pour zoomer", "Wheel or double-click to zoom"],
 ]);
 
+const WILD_RIFT_SUFFIX = /\s*\(\s*Wild Rift\s*\)/gi;
+
 function translateValue(value) {
   if (!value) return value;
   if (exactTranslations.has(value)) return exactTranslations.get(value);
@@ -88,14 +90,109 @@ function translateMutationTarget(target) {
   if (target instanceof Element) translateElement(target);
 }
 
+function installCardPlatformStyles() {
+  if (document.querySelector("#skin-platform-card-styles")) return;
+
+  const style = document.createElement("style");
+  style.id = "skin-platform-card-styles";
+  style.textContent = `
+    .skin-preview { position: relative; }
+    .skin-preview .skin-platform-badge {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      z-index: 2;
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      padding: 0 9px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      background: rgba(28,28,30,.72);
+      color: #64d2ff;
+      box-shadow: 0 4px 14px rgba(0,0,0,.22);
+      backdrop-filter: blur(14px) saturate(1.15);
+      -webkit-backdrop-filter: blur(14px) saturate(1.15);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1;
+      pointer-events: none;
+    }
+    @media (max-width: 720px) {
+      .skin-preview .skin-platform-badge {
+        left: 9px;
+        bottom: 9px;
+        min-height: 23px;
+        padding-inline: 8px;
+        font-size: 9px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function cleanWildRiftLabel(value) {
+  return String(value || "").replace(WILD_RIFT_SUFFIX, "").replace(/\s{2,}/g, " ").trim();
+}
+
+function processWildRiftCard(card) {
+  if (!(card instanceof Element) || card.dataset.wildRiftCardReady === "true") return;
+
+  const title = card.querySelector(".skin-title-wrap h3");
+  const preview = card.querySelector(".skin-preview");
+  if (!title || !preview) return;
+
+  const inlineTag = title.querySelector(".skin-tag-wr");
+  const existingBadge = card.querySelector(".badge-wr");
+  const isWildRift = Boolean(inlineTag || existingBadge || /\(\s*Wild Rift\s*\)/i.test(title.textContent || ""));
+  if (!isWildRift) {
+    card.dataset.wildRiftCardReady = "true";
+    return;
+  }
+
+  card.dataset.wildRiftCardReady = "true";
+
+  inlineTag?.remove();
+  title.normalize();
+
+  for (const node of title.childNodes) {
+    if (node.nodeType === Node.TEXT_NODE) node.nodeValue = cleanWildRiftLabel(node.nodeValue);
+  }
+
+  const image = preview.querySelector("img");
+  if (image?.alt) image.alt = cleanWildRiftLabel(image.alt);
+
+  const ariaLabel = preview.getAttribute("aria-label");
+  if (ariaLabel) preview.setAttribute("aria-label", cleanWildRiftLabel(ariaLabel));
+
+  const badge = existingBadge || document.createElement("span");
+  badge.classList.add("badge", "badge-wr", "skin-platform-badge");
+  badge.textContent = "Wild Rift";
+  preview.appendChild(badge);
+
+  const oldBadgeRow = card.querySelector(".skin-badges");
+  if (oldBadgeRow && !oldBadgeRow.children.length) oldBadgeRow.remove();
+}
+
+function processSkinCards(root = document) {
+  if (root instanceof Element && root.matches(".skin-card")) processWildRiftCard(root);
+  root.querySelectorAll?.(".skin-card").forEach(processWildRiftCard);
+}
+
 document.documentElement.lang = "en";
+installCardPlatformStyles();
 translateElement(document.body);
+processSkinCards(document);
 
 const observer = new MutationObserver((mutations) => {
   for (const mutation of mutations) {
     if (mutation.type === "childList") {
-      mutation.addedNodes.forEach(translateMutationTarget);
+      mutation.addedNodes.forEach((node) => {
+        translateMutationTarget(node);
+        if (node instanceof Element) processSkinCards(node);
+      });
       translateMutationTarget(mutation.target);
+      if (mutation.target instanceof Element) processSkinCards(mutation.target);
     } else {
       translateMutationTarget(mutation.target);
     }
