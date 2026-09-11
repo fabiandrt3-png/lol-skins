@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:15:12.398Z",
+  "generatedAt": "2026-09-11T15:18:02.402Z",
   "summary": {
     "total": 657,
     "verified": 647,
@@ -10,8 +10,8 @@
     "wildRiftVerified": 76,
     "wildRiftUnresolved": 10,
     "degradedFallbacks": 0,
-    "below1600x900": 69,
-    "below2560x1440": 192,
+    "below1600x900": 73,
+    "below2560x1440": 197,
     "unresolvedEntries": [
       {
         "champion": "Ahri",
@@ -847,28 +847,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "title": "Aatrox LunarEclipseSkin HD.jpg",
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_LunarEclipseSkin_HD.jpg?ce465",
-        "width": 8000,
-        "height": 3952,
-        "bytes": 7169915,
-        "mime": "image/jpeg",
-        "source": "league-wiki-searched-maximum",
-        "semantic": "exact-quality-upgrade",
-        "area": 31616000
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aatrox/skins/skin21/images/aatrox_splash_centered_21.jpg",
+        "source": "communitydragon-centered",
+        "semantic": "exact",
+        "width": 1280,
+        "height": 720,
+        "bytes": 110442,
+        "contentType": "image/jpeg",
+        "area": 921600
       },
       "validCandidates": [
-        {
-          "title": "Aatrox LunarEclipseSkin HD.jpg",
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_LunarEclipseSkin_HD.jpg?ce465",
-          "width": 8000,
-          "height": 3952,
-          "bytes": 7169915,
-          "mime": "image/jpeg",
-          "source": "league-wiki-searched-maximum",
-          "semantic": "exact-quality-upgrade",
-          "area": 31616000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aatrox/skins/skin21/images/aatrox_splash_uncentered_21.jpg",
           "source": "communitydragon-uncentered",
@@ -926,8 +914,7 @@
           "source": "legacy",
           "semantic": "exact"
         }
-      ],
-      "qualityUpgraded": true
+      ]
     },
     {
       "id": "aatrox::drx-aatrox::10",
@@ -3409,9 +3396,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg?2d9c3",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 8000,
+        "knownHeight": 4000,
         "width": 8000,
         "height": 4000,
         "bytes": 4293929,
@@ -3419,6 +3408,28 @@
         "area": 32000000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg?2d9c3",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 8000,
+          "knownHeight": 4000,
+          "width": 8000,
+          "height": 4000,
+          "bytes": 4293929,
+          "contentType": "image/jpeg",
+          "area": 32000000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg?2d9c3",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 8000,
+          "height": 4000,
+          "bytes": 4293929,
+          "contentType": "image/jpeg",
+          "area": 32000000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin42/images/ahri_splash_uncentered_42.jpg",
           "source": "communitydragon-uncentered",
@@ -3461,6 +3472,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_CovenSkin_HD.jpg?2d9c3",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ahri_CovenSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -4112,16 +4128,6 @@
           "area": 29560000
         },
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_ShanHaiScrollsSkin_WR_HD.jpg?7bb98",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 8000,
-          "height": 3695,
-          "bytes": 3900056,
-          "contentType": "image/jpeg",
-          "area": 29560000
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_ShanHaiScrollsSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
           "semantic": "exact",
@@ -4160,40 +4166,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3540,
         "width": 6000,
         "height": 3540,
-        "bytes": 9928729,
+        "bytes": 10466758,
         "contentType": "image/jpeg",
         "area": 21240000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3540,
-          "width": 6000,
-          "height": 3540,
-          "bytes": 9928729,
-          "contentType": "image/jpeg",
-          "area": 21240000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3540,
-          "bytes": 9928729,
-          "contentType": "image/jpeg",
-          "area": 21240000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/skin88/images/ahri_splash_uncentered_88.jpg",
           "source": "communitydragon-uncentered",
@@ -4236,11 +4218,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ahri_SpiritBlossomSpringsSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -5468,28 +5445,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "title": "Akali SashimiSkin HD.jpg",
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Akali_SashimiSkin_HD.jpg?c2b05",
-        "width": 7000,
-        "height": 4130,
-        "bytes": 2231650,
-        "mime": "image/jpeg",
-        "source": "league-wiki-searched-maximum",
-        "semantic": "exact-quality-upgrade",
-        "area": 28910000
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/skin08/images/akali_splash_centered_8.jpg",
+        "source": "communitydragon-centered",
+        "semantic": "exact",
+        "width": 1280,
+        "height": 720,
+        "bytes": 78561,
+        "contentType": "image/jpeg",
+        "area": 921600
       },
       "validCandidates": [
-        {
-          "title": "Akali SashimiSkin HD.jpg",
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Akali_SashimiSkin_HD.jpg?c2b05",
-          "width": 7000,
-          "height": 4130,
-          "bytes": 2231650,
-          "mime": "image/jpeg",
-          "source": "league-wiki-searched-maximum",
-          "semantic": "exact-quality-upgrade",
-          "area": 28910000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/skin08/images/akali_splash_uncentered_8.jpg",
           "source": "communitydragon-uncentered",
@@ -5547,8 +5512,7 @@
           "source": "legacy",
           "semantic": "exact"
         }
-      ],
-      "qualityUpgraded": true
+      ]
     },
     {
       "id": "akali::k-da-akali::71",
@@ -7944,28 +7908,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "title": "Alistar LonghornSkin old HD.jpg",
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_LonghornSkin_old_HD.jpg?b192a",
-        "width": 4000,
-        "height": 2333,
-        "bytes": 2933867,
-        "mime": "image/jpeg",
-        "source": "league-wiki-searched-maximum",
-        "semantic": "exact-quality-upgrade",
-        "area": 9332000
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_LonghornSkin_HD.jpg",
+        "source": "legacy",
+        "semantic": "exact",
+        "width": 1728,
+        "height": 1080,
+        "bytes": 1169129,
+        "contentType": "image/jpeg",
+        "area": 1866240
       },
       "validCandidates": [
-        {
-          "title": "Alistar LonghornSkin old HD.jpg",
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_LonghornSkin_old_HD.jpg?b192a",
-          "width": 4000,
-          "height": 2333,
-          "bytes": 2933867,
-          "mime": "image/jpeg",
-          "source": "league-wiki-searched-maximum",
-          "semantic": "exact-quality-upgrade",
-          "area": 9332000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin04/images/alistar_splash_uncentered_4.jpg",
           "source": "communitydragon-uncentered",
@@ -8033,8 +7985,7 @@
           "source": "legacy",
           "semantic": "exact"
         }
-      ],
-      "qualityUpgraded": true
+      ]
     },
     {
       "id": "alistar::unchained-alistar::103",
@@ -8303,28 +8254,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "title": "Alistar MarauderSkin HD.jpg",
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_MarauderSkin_HD.jpg?8b724",
-        "width": 7000,
-        "height": 4180,
-        "bytes": 8562823,
-        "mime": "image/jpeg",
-        "source": "league-wiki-searched-maximum",
-        "semantic": "exact-quality-upgrade",
-        "area": 29260000
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin08/images/alistar_splash_centered_8.jpg",
+        "source": "communitydragon-centered",
+        "semantic": "exact",
+        "width": 1280,
+        "height": 720,
+        "bytes": 97205,
+        "contentType": "image/jpeg",
+        "area": 921600
       },
       "validCandidates": [
-        {
-          "title": "Alistar MarauderSkin HD.jpg",
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_MarauderSkin_HD.jpg?8b724",
-          "width": 7000,
-          "height": 4180,
-          "bytes": 8562823,
-          "mime": "image/jpeg",
-          "source": "league-wiki-searched-maximum",
-          "semantic": "exact-quality-upgrade",
-          "area": 29260000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin08/images/alistar_splash_uncentered_8.jpg",
           "source": "communitydragon-uncentered",
@@ -8382,8 +8321,7 @@
           "source": "legacy",
           "semantic": "exact"
         }
-      ],
-      "qualityUpgraded": true
+      ]
     },
     {
       "id": "alistar::skt-t1-alistar::107",
@@ -8395,28 +8333,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "title": "Alistar SKTT1Skin HD.jpg",
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_SKTT1Skin_HD.jpg?34473",
-        "width": 6000,
-        "height": 3547,
-        "bytes": 6150641,
-        "mime": "image/jpeg",
-        "source": "league-wiki-searched-maximum",
-        "semantic": "exact-quality-upgrade",
-        "area": 21282000
+        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin09/images/alistar_splash_centered_9.jpg",
+        "source": "communitydragon-centered",
+        "semantic": "exact",
+        "width": 1280,
+        "height": 720,
+        "bytes": 91190,
+        "contentType": "image/jpeg",
+        "area": 921600
       },
       "validCandidates": [
-        {
-          "title": "Alistar SKTT1Skin HD.jpg",
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_SKTT1Skin_HD.jpg?34473",
-          "width": 6000,
-          "height": 3547,
-          "bytes": 6150641,
-          "mime": "image/jpeg",
-          "source": "league-wiki-searched-maximum",
-          "semantic": "exact-quality-upgrade",
-          "area": 21282000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/skin09/images/alistar_splash_uncentered_9.jpg",
           "source": "communitydragon-uncentered",
@@ -8474,8 +8400,7 @@
           "source": "legacy",
           "semantic": "exact"
         }
-      ],
-      "qualityUpgraded": true
+      ]
     },
     {
       "id": "alistar::moo-cow-alistar::108",
@@ -15812,9 +15737,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg?6eb64",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3938,
         "width": 7000,
         "height": 3938,
         "bytes": 8234517,
@@ -15822,6 +15749,28 @@
         "area": 27566000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg?6eb64",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3938,
+          "width": 7000,
+          "height": 3938,
+          "bytes": 8234517,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg?6eb64",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3938,
+          "bytes": 8234517,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin17/images/ashe_splash_uncentered_17.jpg",
           "source": "communitydragon-uncentered",
@@ -15865,6 +15814,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonSkin_HD.jpg?6eb64",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_HighNoonSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -15901,9 +15855,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg?81027",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 4872,
+        "knownHeight": 2250,
         "width": 4872,
         "height": 2250,
         "bytes": 625425,
@@ -15911,6 +15867,28 @@
         "area": 10962000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg?81027",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 4872,
+          "knownHeight": 2250,
+          "width": 4872,
+          "height": 2250,
+          "bytes": 625425,
+          "contentType": "image/jpeg",
+          "area": 10962000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg?81027",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 4872,
+          "height": 2250,
+          "bytes": 625425,
+          "contentType": "image/jpeg",
+          "area": 10962000
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -15923,6 +15901,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg?81027",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_HighNoonMythicChromaSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -15945,16 +15928,40 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg?a823b",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3540,
         "width": 6000,
         "height": 3540,
-        "bytes": 6750233,
+        "bytes": 7878928,
         "contentType": "image/jpeg",
         "area": 21240000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg?a823b",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3540,
+          "width": 6000,
+          "height": 3540,
+          "bytes": 7878928,
+          "contentType": "image/jpeg",
+          "area": 21240000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg?a823b",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3540,
+          "bytes": 7878928,
+          "contentType": "image/jpeg",
+          "area": 21240000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin23/images/ashe_splash_uncentered_23.jpg",
           "source": "communitydragon-uncentered",
@@ -15997,6 +16004,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_FaeDragonSkin_HD.jpg?a823b",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_FaeDragonSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -16103,9 +16115,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg?6ef6a",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3380,
         "width": 6000,
         "height": 3380,
         "bytes": 2352568,
@@ -16113,6 +16127,28 @@
         "area": 20280000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg?6ef6a",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3380,
+          "width": 6000,
+          "height": 3380,
+          "bytes": 2352568,
+          "contentType": "image/jpeg",
+          "area": 20280000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg?6ef6a",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3380,
+          "bytes": 2352568,
+          "contentType": "image/jpeg",
+          "area": 20280000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin32/images/ashe_splash_uncentered_32.jpg",
           "source": "communitydragon-uncentered",
@@ -16155,6 +16191,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CovenSkin_HD.jpg?6ef6a",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_CovenSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -16340,16 +16381,40 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg?baeaf",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 8000,
+        "knownHeight": 4500,
         "width": 8000,
         "height": 4500,
-        "bytes": 14294061,
+        "bytes": 12585348,
         "contentType": "image/jpeg",
         "area": 36000000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg?baeaf",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 8000,
+          "knownHeight": 4500,
+          "width": 8000,
+          "height": 4500,
+          "bytes": 12585348,
+          "contentType": "image/jpeg",
+          "area": 36000000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg?baeaf",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 8000,
+          "height": 4500,
+          "bytes": 12585348,
+          "contentType": "image/jpeg",
+          "area": 36000000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin52/images/ashe_splash_uncentered_52.jpg",
           "source": "communitydragon-uncentered",
@@ -16392,6 +16457,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_LunarEmpressSkin_HD.jpg?baeaf",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_LunarEmpressSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -16671,16 +16741,6 @@
           "area": 22941750
         },
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_GloriousArmadaSkin_WR_HD.jpg?26804",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7059,
-          "height": 3250,
-          "bytes": 3897842,
-          "contentType": "image/jpeg",
-          "area": 22941750
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_GloriousArmadaSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
           "semantic": "exact",
@@ -16719,11 +16779,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg?7cc3d",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3376,
         "width": 6000,
         "height": 3376,
         "bytes": 5455054,
@@ -16731,28 +16789,6 @@
         "area": 20256000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg?7cc3d",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3376,
-          "width": 6000,
-          "height": 3376,
-          "bytes": 5455054,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg?7cc3d",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3376,
-          "bytes": 5455054,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin65/images/ashe_splash_uncentered_65.jpg",
           "source": "communitydragon-uncentered",
@@ -16796,11 +16832,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalisMotusSkin_HD.jpg?7cc3d",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_CrystalisMotusSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -16837,11 +16868,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg?9d449",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3941,
         "width": 7000,
         "height": 3941,
         "bytes": 4453514,
@@ -16849,28 +16878,6 @@
         "area": 27587000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg?9d449",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3941,
-          "width": 7000,
-          "height": 3941,
-          "bytes": 4453514,
-          "contentType": "image/jpeg",
-          "area": 27587000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg?9d449",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3941,
-          "bytes": 4453514,
-          "contentType": "image/jpeg",
-          "area": 27587000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin67/images/ashe_splash_uncentered_67.jpg",
           "source": "communitydragon-uncentered",
@@ -16914,11 +16921,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_InfernalSkin_HD.jpg?9d449",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_InfernalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -16955,11 +16957,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg?393d7",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 8000,
-        "knownHeight": 3600,
         "width": 8000,
         "height": 3600,
         "bytes": 8824261,
@@ -16967,28 +16967,6 @@
         "area": 28800000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg?393d7",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 8000,
-          "knownHeight": 3600,
-          "width": 8000,
-          "height": 3600,
-          "bytes": 8824261,
-          "contentType": "image/jpeg",
-          "area": 28800000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg?393d7",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 8000,
-          "height": 3600,
-          "bytes": 8824261,
-          "contentType": "image/jpeg",
-          "area": 28800000
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -17001,11 +16979,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_CrystalRoseSkin_WR_HD.jpg?393d7",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_CrystalRoseSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -17028,11 +17001,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg?d4d66",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 4130,
         "width": 7000,
         "height": 4130,
         "bytes": 2262862,
@@ -17040,28 +17011,6 @@
         "area": 28910000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg?d4d66",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 4130,
-          "width": 7000,
-          "height": 4130,
-          "bytes": 2262862,
-          "contentType": "image/jpeg",
-          "area": 28910000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg?d4d66",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4130,
-          "bytes": 2262862,
-          "contentType": "image/jpeg",
-          "area": 28910000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/skin76/images/ashe_splash_uncentered_76.jpg",
           "source": "communitydragon-uncentered",
@@ -17104,11 +17053,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ashe_SpiritBlossomSkin_HD.jpg?d4d66",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ashe_SpiritBlossomSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -19857,9 +19801,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg?9d914",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5333,
+        "knownHeight": 3000,
         "width": 5333,
         "height": 3000,
         "bytes": 6019635,
@@ -19867,6 +19813,28 @@
         "area": 15999000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg?9d914",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5333,
+          "knownHeight": 3000,
+          "width": 5333,
+          "height": 3000,
+          "bytes": 6019635,
+          "contentType": "image/jpeg",
+          "area": 15999000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg?9d914",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5333,
+          "height": 3000,
+          "bytes": 6019635,
+          "contentType": "image/jpeg",
+          "area": 15999000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/skin17/images/bard_splash_uncentered_17.jpg",
           "source": "communitydragon-uncentered",
@@ -19910,6 +19878,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_CafeCutiesSkin_HD.jpg?9d914",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bard_CafeCutiesSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -19946,9 +19919,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg?543c2",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3938,
         "width": 7000,
         "height": 3938,
         "bytes": 4129100,
@@ -19956,6 +19931,28 @@
         "area": 27566000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg?543c2",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3938,
+          "width": 7000,
+          "height": 3938,
+          "bytes": 4129100,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg?543c2",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3938,
+          "bytes": 4129100,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/skin26/images/bard_splash_uncentered_26.jpg",
           "source": "communitydragon-uncentered",
@@ -19998,6 +19995,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_ShanHaiScrollsSkin_HD.jpg?543c2",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bard_ShanHaiScrollsSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -20183,9 +20185,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg?df23b",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3938,
         "width": 7000,
         "height": 3938,
         "bytes": 5883637,
@@ -20193,6 +20197,28 @@
         "area": 27566000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg?df23b",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3938,
+          "width": 7000,
+          "height": 3938,
+          "bytes": 5883637,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg?df23b",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3938,
+          "bytes": 5883637,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/skin37/images/bard_splash_uncentered_37.jpg",
           "source": "communitydragon-uncentered",
@@ -20236,6 +20262,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_SpiritBlossomSkin_HD.jpg?df23b",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bard_SpiritBlossomSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -20272,9 +20303,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg?7167d",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 7500,
+        "knownHeight": 3465,
         "width": 7500,
         "height": 3465,
         "bytes": 4001787,
@@ -20282,6 +20315,28 @@
         "area": 25987500
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg?7167d",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 7500,
+          "knownHeight": 3465,
+          "width": 7500,
+          "height": 3465,
+          "bytes": 4001787,
+          "contentType": "image/jpeg",
+          "area": 25987500
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg?7167d",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7500,
+          "height": 3465,
+          "bytes": 4001787,
+          "contentType": "image/jpeg",
+          "area": 25987500
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -20294,6 +20349,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_MysticalHeraldSkin_WR_HD.jpg?7167d",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Bard_MysticalHeraldSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -21774,9 +21834,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg?3a1bf",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 8000,
+        "knownHeight": 4500,
         "width": 8000,
         "height": 4500,
         "bytes": 3956584,
@@ -21784,6 +21846,28 @@
         "area": 36000000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg?3a1bf",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 8000,
+          "knownHeight": 4500,
+          "width": 8000,
+          "height": 4500,
+          "bytes": 3956584,
+          "contentType": "image/jpeg",
+          "area": 36000000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg?3a1bf",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 8000,
+          "height": 4500,
+          "bytes": 3956584,
+          "contentType": "image/jpeg",
+          "area": 36000000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin29/images/blitzcrank_splash_uncentered_29.jpg",
           "source": "communitydragon-uncentered",
@@ -21827,6 +21911,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_HD.jpg?3a1bf",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Blitzcrank_SpaceGrooveSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -21863,9 +21952,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg?fc0f8",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7200,
+        "knownHeight": 4091,
         "width": 7200,
         "height": 4091,
         "bytes": 12185457,
@@ -21873,6 +21964,28 @@
         "area": 29455200
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg?fc0f8",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7200,
+          "knownHeight": 4091,
+          "width": 7200,
+          "height": 4091,
+          "bytes": 12185457,
+          "contentType": "image/jpeg",
+          "area": 29455200
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg?fc0f8",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7200,
+          "height": 4091,
+          "bytes": 12185457,
+          "contentType": "image/jpeg",
+          "area": 29455200
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin36/images/blitzcrank_splash_uncentered_36.jpg",
           "source": "communitydragon-uncentered",
@@ -21915,6 +22028,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_VictoriousSkin_HD.jpg?fc0f8",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Blitzcrank_VictoriousSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -22055,9 +22173,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg?5e9d6",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7777,
+        "knownHeight": 4536,
         "width": 7777,
         "height": 4536,
         "bytes": 20726146,
@@ -22065,6 +22185,28 @@
         "area": 35276472
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg?5e9d6",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7777,
+          "knownHeight": 4536,
+          "width": 7777,
+          "height": 4536,
+          "bytes": 20726146,
+          "contentType": "image/jpeg",
+          "area": 35276472
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg?5e9d6",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7777,
+          "height": 4536,
+          "bytes": 20726146,
+          "contentType": "image/jpeg",
+          "area": 35276472
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/skin56/images/blitzcrank_splash_uncentered_56.jpg",
           "source": "communitydragon-uncentered",
@@ -22107,6 +22249,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_BeezcrankSkin_HD.jpg?5e9d6",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Blitzcrank_BeezcrankSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -23349,16 +23496,40 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg?f9c15",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3941,
         "width": 7000,
         "height": 3941,
-        "bytes": 8101731,
+        "bytes": 8974538,
         "contentType": "image/jpeg",
         "area": 27587000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg?f9c15",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3941,
+          "width": 7000,
+          "height": 3941,
+          "bytes": 8974538,
+          "contentType": "image/jpeg",
+          "area": 27587000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg?f9c15",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3941,
+          "bytes": 8974538,
+          "contentType": "image/jpeg",
+          "area": 27587000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/skin42/images/brand_splash_uncentered_42.jpg",
           "source": "communitydragon-uncentered",
@@ -23402,6 +23573,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_EmpyreanSkin_HD.jpg?f9c15",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Brand_EmpyreanSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -23438,9 +23614,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg?bfde5",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 3000,
+        "knownHeight": 1385,
         "width": 3000,
         "height": 1385,
         "bytes": 980756,
@@ -23448,6 +23626,28 @@
         "area": 4155000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg?bfde5",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 3000,
+          "knownHeight": 1385,
+          "width": 3000,
+          "height": 1385,
+          "bytes": 980756,
+          "contentType": "image/jpeg",
+          "area": 4155000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg?bfde5",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 3000,
+          "height": 1385,
+          "bytes": 980756,
+          "contentType": "image/jpeg",
+          "area": 4155000
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -23460,6 +23660,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSkin_WR_HD.jpg?bfde5",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Brand_ChromacrashSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -23482,9 +23687,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg?58741",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 3000,
+        "knownHeight": 1385,
         "width": 3000,
         "height": 1385,
         "bytes": 999657,
@@ -23492,6 +23699,28 @@
         "area": 4155000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg?58741",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 3000,
+          "knownHeight": 1385,
+          "width": 3000,
+          "height": 1385,
+          "bytes": 999657,
+          "contentType": "image/jpeg",
+          "area": 4155000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg?58741",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 3000,
+          "height": 1385,
+          "bytes": 999657,
+          "contentType": "image/jpeg",
+          "area": 4155000
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -23504,6 +23733,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg?58741",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Brand_ChromacrashSpecialEditionSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -25482,8 +25716,8 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_HD.jpg?f1f9f",
+        "source": "league-wiki-redirect",
         "semantic": "exact",
         "width": 5000,
         "height": 2964,
@@ -25492,6 +25726,16 @@
         "area": 14820000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_HD.jpg?f1f9f",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 2964,
+          "bytes": 10698537,
+          "contentType": "image/jpeg",
+          "area": 14820000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin11/images/caitlyn_splash_uncentered_11.jpg",
           "source": "communitydragon-uncentered",
@@ -25788,9 +26032,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg?3f61f",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3541,
         "width": 6000,
         "height": 3541,
         "bytes": 5010059,
@@ -25798,6 +26044,28 @@
         "area": 21246000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg?3f61f",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3541,
+          "width": 6000,
+          "height": 3541,
+          "bytes": 5010059,
+          "contentType": "image/jpeg",
+          "area": 21246000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg?3f61f",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3541,
+          "bytes": 5010059,
+          "contentType": "image/jpeg",
+          "area": 21246000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin19/images/caitlyn_splash_uncentered_19.jpg",
           "source": "communitydragon-uncentered",
@@ -25841,6 +26109,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_ArcadeSkin_HD.jpg?3f61f",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Caitlyn_ArcadeSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -25877,9 +26150,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg?3072f",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3540,
         "width": 6000,
         "height": 3540,
         "bytes": 5172063,
@@ -25887,6 +26162,28 @@
         "area": 21240000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg?3072f",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3540,
+          "width": 6000,
+          "height": 3540,
+          "bytes": 5172063,
+          "contentType": "image/jpeg",
+          "area": 21240000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg?3072f",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3540,
+          "bytes": 5172063,
+          "contentType": "image/jpeg",
+          "area": 21240000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin20/images/caitlyn_splash_uncentered_20.jpg",
           "source": "communitydragon-uncentered",
@@ -25929,6 +26226,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg?3072f",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Caitlyn_PrestigeArcadeSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -26296,16 +26598,6 @@
           "area": 29099000
         },
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_SnowMoonSkin_HD.jpg?20e7c",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4157,
-          "bytes": 10036221,
-          "contentType": "image/jpeg",
-          "area": 29099000
-        },
-        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/skin30/images/caitlyn_splash_uncentered_30.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -26389,11 +26681,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg?48187",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 7187,
-        "knownHeight": 3321,
         "width": 7187,
         "height": 3321,
         "bytes": 12836024,
@@ -26401,28 +26691,6 @@
         "area": 23868027
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg?48187",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 7187,
-          "knownHeight": 3321,
-          "width": 7187,
-          "height": 3321,
-          "bytes": 12836024,
-          "contentType": "image/jpeg",
-          "area": 23868027
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg?48187",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7187,
-          "height": 3321,
-          "bytes": 12836024,
-          "contentType": "image/jpeg",
-          "area": 23868027
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -26435,11 +26703,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSkin_WR_HD.jpg?48187",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Caitlyn_MythmakerSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -26462,11 +26725,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg?6adcf",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 7187,
-        "knownHeight": 3321,
         "width": 7187,
         "height": 3321,
         "bytes": 1787357,
@@ -26474,28 +26735,6 @@
         "area": 23868027
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg?6adcf",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 7187,
-          "knownHeight": 3321,
-          "width": 7187,
-          "height": 3321,
-          "bytes": 1787357,
-          "contentType": "image/jpeg",
-          "area": 23868027
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg?6adcf",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7187,
-          "height": 3321,
-          "bytes": 1787357,
-          "contentType": "image/jpeg",
-          "area": 23868027
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -26508,11 +26747,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg?6adcf",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Caitlyn_MythmakerSpecialEditionSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -28241,11 +28475,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg?e5717",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 4019,
         "width": 7000,
         "height": 4019,
         "bytes": 9042760,
@@ -28253,28 +28485,6 @@
         "area": 28133000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg?e5717",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 4019,
-          "width": 7000,
-          "height": 4019,
-          "bytes": 9042760,
-          "contentType": "image/jpeg",
-          "area": 28133000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg?e5717",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4019,
-          "bytes": 9042760,
-          "contentType": "image/jpeg",
-          "area": 28133000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/camille/skins/skin32/images/camille_splash_uncentered_32.jpg",
           "source": "communitydragon-uncentered",
@@ -28318,11 +28528,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeWinterblessedSkin_HD.jpg?e5717",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Camille_PrestigeWinterblessedSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -28359,40 +28564,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg?07f48",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 7201,
-        "knownHeight": 3326,
         "width": 7201,
         "height": 3326,
-        "bytes": 11939301,
+        "bytes": 10500698,
         "contentType": "image/jpeg",
         "area": 23950526
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg?07f48",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 7201,
-          "knownHeight": 3326,
-          "width": 7201,
-          "height": 3326,
-          "bytes": 11939301,
-          "contentType": "image/jpeg",
-          "area": 23950526
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg?07f48",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7201,
-          "height": 3326,
-          "bytes": 11939301,
-          "contentType": "image/jpeg",
-          "area": 23950526
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -28405,11 +28586,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_FiendQuellerSkin_WR_HD.jpg?07f48",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Camille_FiendQuellerSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -28432,11 +28608,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg?f3542",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 4131,
         "width": 7000,
         "height": 4131,
         "bytes": 8821669,
@@ -28444,28 +28618,6 @@
         "area": 28917000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg?f3542",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 4131,
-          "width": 7000,
-          "height": 4131,
-          "bytes": 8821669,
-          "contentType": "image/jpeg",
-          "area": 28917000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg?f3542",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4131,
-          "bytes": 8821669,
-          "contentType": "image/jpeg",
-          "area": 28917000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/camille/skins/skin44/images/camille_splash_uncentered_44.jpg",
           "source": "communitydragon-uncentered",
@@ -28508,11 +28660,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Camille_PetalsofSpringSkin_HD.jpg?f3542",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Camille_PetalsofSpringSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -29153,16 +29300,26 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_SpiritBlossomSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_SpiritBlossomSkin_HD.jpg?f0331",
+        "source": "league-wiki-redirect",
         "semantic": "exact",
         "width": 7000,
         "height": 3939,
-        "bytes": 14457023,
+        "bytes": 12448416,
         "contentType": "image/jpeg",
         "area": 27573000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_SpiritBlossomSkin_HD.jpg?f0331",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3939,
+          "bytes": 12448416,
+          "contentType": "image/jpeg",
+          "area": 27573000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/cassiopeia/skins/skin09/images/cassiopeia_splash_uncentered_9.jpg",
           "source": "communitydragon-uncentered",
@@ -29380,9 +29537,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg?50289",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3938,
         "width": 7000,
         "height": 3938,
         "bytes": 20881633,
@@ -29390,6 +29549,28 @@
         "area": 27566000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg?50289",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3938,
+          "width": 7000,
+          "height": 3938,
+          "bytes": 20881633,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg?50289",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 3938,
+          "bytes": 20881633,
+          "contentType": "image/jpeg",
+          "area": 27566000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/cassiopeia/skins/skin18/images/cassiopeia_splash_uncentered_18.jpg",
           "source": "communitydragon-uncentered",
@@ -29433,6 +29614,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_CovenSkin_HD.jpg?50289",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cassiopeia_CovenSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -29469,9 +29655,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg?32dba",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 8000,
+        "knownHeight": 4780,
         "width": 8000,
         "height": 4780,
         "bytes": 11532658,
@@ -29479,6 +29667,28 @@
         "area": 38240000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg?32dba",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 8000,
+          "knownHeight": 4780,
+          "width": 8000,
+          "height": 4780,
+          "bytes": 11532658,
+          "contentType": "image/jpeg",
+          "area": 38240000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg?32dba",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 8000,
+          "height": 4780,
+          "bytes": 11532658,
+          "contentType": "image/jpeg",
+          "area": 38240000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/cassiopeia/skins/skin28/images/cassiopeia_splash_uncentered_28.jpg",
           "source": "communitydragon-uncentered",
@@ -29522,6 +29732,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_BewitchingSkin_HD.jpg?32dba",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cassiopeia_BewitchingSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -29558,9 +29773,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg?f6f5d",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 8000,
+        "knownHeight": 4504,
         "width": 8000,
         "height": 4504,
         "bytes": 3875368,
@@ -29568,6 +29785,28 @@
         "area": 36032000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg?f6f5d",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 8000,
+          "knownHeight": 4504,
+          "width": 8000,
+          "height": 4504,
+          "bytes": 3875368,
+          "contentType": "image/jpeg",
+          "area": 36032000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg?f6f5d",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 8000,
+          "height": 4504,
+          "bytes": 3875368,
+          "contentType": "image/jpeg",
+          "area": 36032000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/cassiopeia/skins/skin38/images/cassiopeia_splash_uncentered_38.jpg",
           "source": "communitydragon-uncentered",
@@ -29610,6 +29849,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cassiopeia_PrestigeMythmakerSkin_HD.jpg?f6f5d",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cassiopeia_PrestigeMythmakerSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -30092,9 +30336,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg?1bc56",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5000,
+        "knownHeight": 3125,
         "width": 5000,
         "height": 3125,
         "bytes": 4672559,
@@ -30102,6 +30348,28 @@
         "area": 15625000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg?1bc56",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5000,
+          "knownHeight": 3125,
+          "width": 5000,
+          "height": 3125,
+          "bytes": 4672559,
+          "contentType": "image/jpeg",
+          "area": 15625000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg?1bc56",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 3125,
+          "bytes": 4672559,
+          "contentType": "image/jpeg",
+          "area": 15625000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/skin05/images/chogath_splash_uncentered_5.jpg",
           "source": "communitydragon-uncentered",
@@ -30144,6 +30412,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BattlecastPrimeSkin_HD.jpg?1bc56",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cho'Gath_BattlecastPrimeSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -30260,9 +30533,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg?e3229",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 4130,
         "width": 7000,
         "height": 4130,
         "bytes": 10367297,
@@ -30270,6 +30545,28 @@
         "area": 28910000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg?e3229",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 4130,
+          "width": 7000,
+          "height": 4130,
+          "bytes": 10367297,
+          "contentType": "image/jpeg",
+          "area": 28910000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg?e3229",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7000,
+          "height": 4130,
+          "bytes": 10367297,
+          "contentType": "image/jpeg",
+          "area": 28910000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/skin07/images/chogath_splash_uncentered_7.jpg",
           "source": "communitydragon-uncentered",
@@ -30313,6 +30610,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_DarkStarSkin_HD.jpg?e3229",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cho'Gath_DarkStarSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -30349,9 +30651,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg?8f82f",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5000,
+        "knownHeight": 2812,
         "width": 5000,
         "height": 2812,
         "bytes": 5623729,
@@ -30359,6 +30663,28 @@
         "area": 14060000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg?8f82f",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5000,
+          "knownHeight": 2812,
+          "width": 5000,
+          "height": 2812,
+          "bytes": 5623729,
+          "contentType": "image/jpeg",
+          "area": 14060000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg?8f82f",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 2812,
+          "bytes": 5623729,
+          "contentType": "image/jpeg",
+          "area": 14060000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/skin14/images/chogath_splash_uncentered_14.jpg",
           "source": "communitydragon-uncentered",
@@ -30401,6 +30727,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ShanHaiScrollsSkin_HD.jpg?8f82f",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cho'Gath_ShanHaiScrollsSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -30507,9 +30838,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg?8db6b",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7100,
+        "knownHeight": 3959,
         "width": 7100,
         "height": 3959,
         "bytes": 2942370,
@@ -30517,6 +30850,28 @@
         "area": 28108900
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg?8db6b",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7100,
+          "knownHeight": 3959,
+          "width": 7100,
+          "height": 3959,
+          "bytes": 2942370,
+          "contentType": "image/jpeg",
+          "area": 28108900
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg?8db6b",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7100,
+          "height": 3959,
+          "bytes": 2942370,
+          "contentType": "image/jpeg",
+          "area": 28108900
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/skin23/images/chogath_splash_uncentered_23.jpg",
           "source": "communitydragon-uncentered",
@@ -30560,6 +30915,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_BrokenCovenantSkin_HD.jpg?8db6b",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cho'Gath_BrokenCovenantSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -30596,9 +30956,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg?dbbdc",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 3573,
+        "knownHeight": 2000,
         "width": 3573,
         "height": 2000,
         "bytes": 6626178,
@@ -30606,6 +30968,28 @@
         "area": 7146000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg?dbbdc",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 3573,
+          "knownHeight": 2000,
+          "width": 3573,
+          "height": 2000,
+          "bytes": 6626178,
+          "contentType": "image/jpeg",
+          "area": 7146000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg?dbbdc",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 3573,
+          "height": 2000,
+          "bytes": 6626178,
+          "contentType": "image/jpeg",
+          "area": 7146000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/skin32/images/chogath_splash_uncentered_32.jpg",
           "source": "communitydragon-uncentered",
@@ -30648,6 +31032,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_HD.jpg?dbbdc",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Cho'Gath_ToyTerrorSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -31061,6 +31450,28 @@
       },
       "validCandidates": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_IceTobogganSkin.jpg?8688d",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 1215,
+          "knownHeight": 717,
+          "width": 1215,
+          "height": 717,
+          "bytes": 116296,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_IceTobogganSkin.jpg?8688d",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 1215,
+          "height": 717,
+          "bytes": 116296,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin02/images/corki_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -31102,6 +31513,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_IceTobogganSkin.jpg?8688d",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_IceTobogganSkin.jpg",
           "source": "league-wiki-redirect",
@@ -31150,6 +31566,28 @@
       },
       "validCandidates": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_RedBaronSkin.jpg?88f75",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 1215,
+          "knownHeight": 717,
+          "width": 1215,
+          "height": 717,
+          "bytes": 168903,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_RedBaronSkin.jpg?88f75",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 1215,
+          "height": 717,
+          "bytes": 168903,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin03/images/corki_splash_uncentered_3.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -31191,6 +31629,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_RedBaronSkin.jpg?88f75",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_RedBaronSkin.jpg",
           "source": "league-wiki-redirect",
@@ -31239,6 +31682,28 @@
       },
       "validCandidates": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_HotRodSkin.jpg?4ba7c",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 1215,
+          "knownHeight": 717,
+          "width": 1215,
+          "height": 717,
+          "bytes": 87040,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_HotRodSkin.jpg?4ba7c",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 1215,
+          "height": 717,
+          "bytes": 87040,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin04/images/corki_splash_uncentered_4.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -31280,6 +31745,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_HotRodSkin.jpg?4ba7c",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_HotRodSkin.jpg",
           "source": "league-wiki-redirect",
@@ -31328,6 +31798,28 @@
       },
       "validCandidates": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_UrfriderSkin.jpg?1dda5",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 1215,
+          "knownHeight": 717,
+          "width": 1215,
+          "height": 717,
+          "bytes": 80451,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_UrfriderSkin.jpg?1dda5",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 1215,
+          "height": 717,
+          "bytes": 80451,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin05/images/corki_splash_uncentered_5.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -31369,6 +31861,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_UrfriderSkin.jpg?1dda5",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_UrfriderSkin.jpg",
           "source": "league-wiki-redirect",
@@ -31417,6 +31914,28 @@
       },
       "validCandidates": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_DragonwingSkin.jpg?fc559",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 1215,
+          "knownHeight": 717,
+          "width": 1215,
+          "height": 717,
+          "bytes": 180458,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_DragonwingSkin.jpg?fc559",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 1215,
+          "height": 717,
+          "bytes": 180458,
+          "contentType": "image/jpeg",
+          "area": 871155
+        },
+        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin06/images/corki_splash_uncentered_6.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -31458,6 +31977,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_DragonwingSkin.jpg?fc559",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_DragonwingSkin.jpg",
           "source": "league-wiki-redirect",
@@ -32024,16 +32548,6 @@
       },
       "validCandidates": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_GloriousAigretteSkin_WR_HD.jpg?16051",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7680,
-          "height": 3547,
-          "bytes": 1325046,
-          "contentType": "image/jpeg",
-          "area": 27240960
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_GloriousAigretteSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
           "semantic": "exact",
@@ -32067,11 +32581,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg?4f098",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7280,
-        "knownHeight": 4141,
         "width": 7280,
         "height": 4141,
         "bytes": 13369730,
@@ -32079,28 +32591,6 @@
         "area": 30146480
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg?4f098",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7280,
-          "knownHeight": 4141,
-          "width": 7280,
-          "height": 4141,
-          "bytes": 13369730,
-          "contentType": "image/jpeg",
-          "area": 30146480
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg?4f098",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7280,
-          "height": 4141,
-          "bytes": 13369730,
-          "contentType": "image/jpeg",
-          "area": 30146480
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/skin36/images/corki_splash_uncentered_36.jpg",
           "source": "communitydragon-uncentered",
@@ -32144,11 +32634,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_BrickToySkin_HD.jpg?4f098",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_BrickToySkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -32185,11 +32670,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg?60479",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 2436,
-        "knownHeight": 1124,
         "width": 2436,
         "height": 1124,
         "bytes": 371786,
@@ -32197,28 +32680,6 @@
         "area": 2738064
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg?60479",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 2436,
-          "knownHeight": 1124,
-          "width": 2436,
-          "height": 1124,
-          "bytes": 371786,
-          "contentType": "image/jpeg",
-          "area": 2738064
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg?60479",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 2436,
-          "height": 1124,
-          "bytes": 371786,
-          "contentType": "image/jpeg",
-          "area": 2738064
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg",
           "source": "legacy-wild-rift",
@@ -32231,11 +32692,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Corki_OceanSkin_WR.jpg?60479",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Corki_OceanSkin_WR.jpg",
           "source": "league-wiki-redirect",
@@ -32258,9 +32714,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg?bb152",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3583,
         "width": 6000,
         "height": 3583,
         "bytes": 4730288,
@@ -32268,6 +32726,28 @@
         "area": 21498000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg?bb152",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3583,
+          "width": 6000,
+          "height": 3583,
+          "bytes": 4730288,
+          "contentType": "image/jpeg",
+          "area": 21498000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg?bb152",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3583,
+          "bytes": 4730288,
+          "contentType": "image/jpeg",
+          "area": 21498000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/base/images/darius_splash_uncentered_0.jpg",
           "source": "communitydragon-uncentered",
@@ -32311,6 +32791,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_OriginalSkin_HD.jpg?bb152",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_OriginalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -32347,9 +32832,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg?dc6b6",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5000,
+        "knownHeight": 3125,
         "width": 5000,
         "height": 3125,
         "bytes": 5369805,
@@ -32357,6 +32844,28 @@
         "area": 15625000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg?dc6b6",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5000,
+          "knownHeight": 3125,
+          "width": 5000,
+          "height": 3125,
+          "bytes": 5369805,
+          "contentType": "image/jpeg",
+          "area": 15625000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg?dc6b6",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 3125,
+          "bytes": 5369805,
+          "contentType": "image/jpeg",
+          "area": 15625000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin01/images/darius_splash_uncentered_1.jpg",
           "source": "communitydragon-uncentered",
@@ -32400,6 +32909,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LordSkin_HD.jpg?dc6b6",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_LordSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -32436,9 +32950,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg?2a7d6",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5000,
+        "knownHeight": 3000,
         "width": 5000,
         "height": 3000,
         "bytes": 9719558,
@@ -32446,6 +32962,28 @@
         "area": 15000000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg?2a7d6",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5000,
+          "knownHeight": 3000,
+          "width": 5000,
+          "height": 3000,
+          "bytes": 9719558,
+          "contentType": "image/jpeg",
+          "area": 15000000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg?2a7d6",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 3000,
+          "bytes": 9719558,
+          "contentType": "image/jpeg",
+          "area": 15000000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin02/images/darius_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
@@ -32489,6 +33027,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_HD.jpg?2a7d6",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_BioforgeSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -32525,9 +33068,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg?bb867",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3600,
         "width": 6000,
         "height": 3600,
         "bytes": 5931148,
@@ -32535,6 +33080,28 @@
         "area": 21600000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg?bb867",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3600,
+          "width": 6000,
+          "height": 3600,
+          "bytes": 5931148,
+          "contentType": "image/jpeg",
+          "area": 21600000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg?bb867",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3600,
+          "bytes": 5931148,
+          "contentType": "image/jpeg",
+          "area": 21600000
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -32547,6 +33114,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_BioforgeSkin_WR_HD.jpg?bb867",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_BioforgeSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -32569,9 +33141,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg?d29ef",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3541,
         "width": 6000,
         "height": 3541,
         "bytes": 5623590,
@@ -32579,6 +33153,28 @@
         "area": 21246000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg?d29ef",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3541,
+          "width": 6000,
+          "height": 3541,
+          "bytes": 5623590,
+          "contentType": "image/jpeg",
+          "area": 21246000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg?d29ef",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3541,
+          "bytes": 5623590,
+          "contentType": "image/jpeg",
+          "area": 21246000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin03/images/darius_splash_uncentered_3.jpg",
           "source": "communitydragon-uncentered",
@@ -32622,6 +33218,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_WoadKingSkin_HD.jpg?d29ef",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_WoadKingSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -32658,9 +33259,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg?4f865",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 5000,
+        "knownHeight": 2968,
         "width": 5000,
         "height": 2968,
         "bytes": 4900259,
@@ -32668,6 +33271,28 @@
         "area": 14840000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg?4f865",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 5000,
+          "knownHeight": 2968,
+          "width": 5000,
+          "height": 2968,
+          "bytes": 4900259,
+          "contentType": "image/jpeg",
+          "area": 14840000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg?4f865",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 5000,
+          "height": 2968,
+          "bytes": 4900259,
+          "contentType": "image/jpeg",
+          "area": 14840000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin04/images/darius_splash_uncentered_4.jpg",
           "source": "communitydragon-uncentered",
@@ -32710,6 +33335,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DunkmasterSkin_HD.jpg?4f865",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_DunkmasterSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -33073,8 +33703,8 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_HighNoonSkin_HD.jpg?5aa4d",
-        "source": "league-wiki-redirect",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_HighNoonSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
         "width": 9000,
         "height": 4995,
@@ -33083,16 +33713,6 @@
         "area": 44955000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_HighNoonSkin_HD.jpg?5aa4d",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 9000,
-          "height": 4995,
-          "bytes": 9226479,
-          "contentType": "image/jpeg",
-          "area": 44955000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin16/images/darius_splash_uncentered_16.jpg",
           "source": "communitydragon-uncentered",
@@ -33172,11 +33792,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg?2e8c1",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5595,
-        "knownHeight": 3146,
         "width": 5595,
         "height": 3146,
         "bytes": 2058448,
@@ -33184,28 +33802,6 @@
         "area": 17601870
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg?2e8c1",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5595,
-          "knownHeight": 3146,
-          "width": 5595,
-          "height": 3146,
-          "bytes": 2058448,
-          "contentType": "image/jpeg",
-          "area": 17601870
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg?2e8c1",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5595,
-          "height": 3146,
-          "bytes": 2058448,
-          "contentType": "image/jpeg",
-          "area": 17601870
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin24/images/darius_splash_uncentered_24.jpg",
           "source": "communitydragon-uncentered",
@@ -33249,11 +33845,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_LunarBeastSkin_HD.jpg?2e8c1",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_LunarBeastSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -33290,40 +33881,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg?c0a6a",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7200,
-        "knownHeight": 4043,
         "width": 7200,
         "height": 4043,
-        "bytes": 8192393,
+        "bytes": 8598995,
         "contentType": "image/jpeg",
         "area": 29109600
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg?c0a6a",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7200,
-          "knownHeight": 4043,
-          "width": 7200,
-          "height": 4043,
-          "bytes": 8192393,
-          "contentType": "image/jpeg",
-          "area": 29109600
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg?c0a6a",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7200,
-          "height": 4043,
-          "bytes": 8192393,
-          "contentType": "image/jpeg",
-          "area": 29109600
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin33/images/darius_splash_uncentered_33.jpg",
           "source": "communitydragon-uncentered",
@@ -33367,11 +33934,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_CrimeCityNightmareSkin_HD.jpg?c0a6a",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_CrimeCityNightmareSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -33408,11 +33970,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg?ff32b",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7891,
-        "knownHeight": 4615,
         "width": 7891,
         "height": 4615,
         "bytes": 10832414,
@@ -33420,28 +33980,6 @@
         "area": 36416965
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg?ff32b",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7891,
-          "knownHeight": 4615,
-          "width": 7891,
-          "height": 4615,
-          "bytes": 10832414,
-          "contentType": "image/jpeg",
-          "area": 36416965
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg?ff32b",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7891,
-          "height": 4615,
-          "bytes": 10832414,
-          "contentType": "image/jpeg",
-          "area": 36416965
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin43/images/darius_splash_uncentered_43.jpg",
           "source": "communitydragon-uncentered",
@@ -33485,11 +34023,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SpiritBlossomSkin_HD.jpg?ff32b",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_SpiritBlossomSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -33526,11 +34059,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg?1f031",
-        "source": "league-wiki-original-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg",
+        "source": "legacy-wild-rift",
         "semantic": "exact",
-        "knownWidth": 8000,
-        "knownHeight": 3695,
         "width": 8000,
         "height": 3695,
         "bytes": 5411416,
@@ -33538,28 +34069,6 @@
         "area": 29560000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg?1f031",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact",
-          "knownWidth": 8000,
-          "knownHeight": 3695,
-          "width": 8000,
-          "height": 3695,
-          "bytes": 5411416,
-          "contentType": "image/jpeg",
-          "area": 29560000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg?1f031",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 8000,
-          "height": 3695,
-          "bytes": 5411416,
-          "contentType": "image/jpeg",
-          "area": 29560000
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -33572,11 +34081,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_SupremeCellsSkin_WR_HD.jpg?1f031",
-          "source": "league-wiki-original-wild-rift",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_SupremeCellsSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -33599,11 +34103,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg?616f7",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 12493,
-        "knownHeight": 7009,
         "width": 12493,
         "height": 7009,
         "bytes": 20745540,
@@ -33611,28 +34113,6 @@
         "area": 87563437
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg?616f7",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 12493,
-          "knownHeight": 7009,
-          "width": 12493,
-          "height": 7009,
-          "bytes": 20745540,
-          "contentType": "image/jpeg",
-          "area": 87563437
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg?616f7",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 12493,
-          "height": 7009,
-          "bytes": 20745540,
-          "contentType": "image/jpeg",
-          "area": 87563437
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/skin54/images/darius_splash_uncentered_54.jpg",
           "source": "communitydragon-uncentered",
@@ -33675,11 +34155,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_PorcelainSkin_HD.jpg?616f7",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Darius_PorcelainSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -34087,9 +34562,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg?8f060",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6189,
+        "knownHeight": 3604,
         "width": 6189,
         "height": 3604,
         "bytes": 4647396,
@@ -34097,6 +34574,28 @@
         "area": 22305156
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg?8f060",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6189,
+          "knownHeight": 3604,
+          "width": 6189,
+          "height": 3604,
+          "bytes": 4647396,
+          "contentType": "image/jpeg",
+          "area": 22305156
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg?8f060",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6189,
+          "height": 3604,
+          "bytes": 4647396,
+          "contentType": "image/jpeg",
+          "area": 22305156
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/base/images/diana_splash_uncentered_0.jpg",
           "source": "communitydragon-uncentered",
@@ -34140,6 +34639,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_OriginalSkin_HD.jpg?8f060",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_OriginalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -34176,16 +34680,40 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg?d0fd0",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7648,
+        "knownHeight": 4529,
         "width": 7648,
         "height": 4529,
-        "bytes": 9821645,
+        "bytes": 11744058,
         "contentType": "image/jpeg",
         "area": 34637792
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg?d0fd0",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7648,
+          "knownHeight": 4529,
+          "width": 7648,
+          "height": 4529,
+          "bytes": 11744058,
+          "contentType": "image/jpeg",
+          "area": 34637792
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg?d0fd0",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 7648,
+          "height": 4529,
+          "bytes": 11744058,
+          "contentType": "image/jpeg",
+          "area": 34637792
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin01/images/diana_splash_uncentered_1.jpg",
           "source": "communitydragon-uncentered",
@@ -34229,6 +34757,11 @@
       ],
       "attempted": [
         {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_HD.jpg?d0fd0",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
+        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_DarkValkyrieSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -34265,9 +34798,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg",
-        "source": "legacy-wild-rift",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg?b3519",
+        "source": "league-wiki-original-wild-rift",
         "semantic": "exact",
+        "knownWidth": 3840,
+        "knownHeight": 2274,
         "width": 3840,
         "height": 2274,
         "bytes": 2516866,
@@ -34275,6 +34810,28 @@
         "area": 8732160
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg?b3519",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact",
+          "knownWidth": 3840,
+          "knownHeight": 2274,
+          "width": 3840,
+          "height": 2274,
+          "bytes": 2516866,
+          "contentType": "image/jpeg",
+          "area": 8732160
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg?b3519",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 3840,
+          "height": 2274,
+          "bytes": 2516866,
+          "contentType": "image/jpeg",
+          "area": 8732160
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg",
           "source": "legacy-wild-rift",
@@ -34287,6 +34844,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkValkyrieSkin_WR_HD.jpg?b3519",
+          "source": "league-wiki-original-wild-rift",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_DarkValkyrieSkin_WR_HD.jpg",
           "source": "league-wiki-redirect",
@@ -34309,9 +34871,11 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg",
-        "source": "legacy",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg?9c5e5",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 6000,
+        "knownHeight": 3388,
         "width": 6000,
         "height": 3388,
         "bytes": 4486424,
@@ -34319,6 +34883,28 @@
         "area": 20328000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg?9c5e5",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 6000,
+          "knownHeight": 3388,
+          "width": 6000,
+          "height": 3388,
+          "bytes": 4486424,
+          "contentType": "image/jpeg",
+          "area": 20328000
+        },
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg?9c5e5",
+          "source": "league-wiki-redirect",
+          "semantic": "exact",
+          "width": 6000,
+          "height": 3388,
+          "bytes": 4486424,
+          "contentType": "image/jpeg",
+          "area": 20328000
+        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin02/images/diana_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
@@ -34361,6 +34947,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_LunarGoddessSkin_HD.jpg?9c5e5",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_LunarGoddessSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -34536,11 +35127,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg?e5e93",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5000,
-        "knownHeight": 2910,
         "width": 5000,
         "height": 2910,
         "bytes": 3484680,
@@ -34548,28 +35137,6 @@
         "area": 14550000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg?e5e93",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5000,
-          "knownHeight": 2910,
-          "width": 5000,
-          "height": 2910,
-          "bytes": 3484680,
-          "contentType": "image/jpeg",
-          "area": 14550000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg?e5e93",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5000,
-          "height": 2910,
-          "bytes": 3484680,
-          "contentType": "image/jpeg",
-          "area": 14550000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin03/images/diana_splash_uncentered_3.jpg",
           "source": "communitydragon-uncentered",
@@ -34613,11 +35180,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_HD.jpg?e5e93",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_InfernalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -34654,11 +35216,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg?d25af",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5000,
-        "knownHeight": 2964,
         "width": 5000,
         "height": 2964,
         "bytes": 10889020,
@@ -34666,28 +35226,6 @@
         "area": 14820000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg?d25af",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5000,
-          "knownHeight": 2964,
-          "width": 5000,
-          "height": 2964,
-          "bytes": 10889020,
-          "contentType": "image/jpeg",
-          "area": 14820000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg?d25af",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5000,
-          "height": 2964,
-          "bytes": 10889020,
-          "contentType": "image/jpeg",
-          "area": 14820000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin11/images/diana_splash_uncentered_11.jpg",
           "source": "communitydragon-uncentered",
@@ -34731,11 +35269,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_HD.jpg?d25af",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_BloodMoonSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -34772,11 +35305,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg?c0b88",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 4130,
         "width": 7000,
         "height": 4130,
         "bytes": 20235530,
@@ -34784,28 +35315,6 @@
         "area": 28910000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg?c0b88",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 4130,
-          "width": 7000,
-          "height": 4130,
-          "bytes": 20235530,
-          "contentType": "image/jpeg",
-          "area": 28910000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg?c0b88",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4130,
-          "bytes": 20235530,
-          "contentType": "image/jpeg",
-          "area": 28910000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin12/images/diana_splash_uncentered_12.jpg",
           "source": "communitydragon-uncentered",
@@ -34848,11 +35357,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_DarkWatersSkin_HD.jpg?c0b88",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_DarkWatersSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -34969,11 +35473,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg?f49d0",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3376,
         "width": 6000,
         "height": 3376,
         "bytes": 5662682,
@@ -34981,28 +35483,6 @@
         "area": 20256000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg?f49d0",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3376,
-          "width": 6000,
-          "height": 3376,
-          "bytes": 5662682,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg?f49d0",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3376,
-          "bytes": 5662682,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin25/images/diana_splash_uncentered_25.jpg",
           "source": "communitydragon-uncentered",
@@ -35046,11 +35526,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BattleQueenSkin_HD.jpg?f49d0",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_BattleQueenSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -35087,11 +35562,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg?aaa52",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3376,
         "width": 6000,
         "height": 3376,
         "bytes": 2814880,
@@ -35099,28 +35572,6 @@
         "area": 20256000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg?aaa52",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3376,
-          "width": 6000,
-          "height": 3376,
-          "bytes": 2814880,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg?aaa52",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3376,
-          "bytes": 2814880,
-          "contentType": "image/jpeg",
-          "area": 20256000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin26/images/diana_splash_uncentered_26.jpg",
           "source": "communitydragon-uncentered",
@@ -35164,11 +35615,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_PrestigeBattleQueenSkin_HD.jpg?aaa52",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_PrestigeBattleQueenSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -35205,11 +35651,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg?11a98",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3975,
         "width": 7000,
         "height": 3975,
         "bytes": 9437409,
@@ -35217,28 +35661,6 @@
         "area": 27825000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg?11a98",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3975,
-          "width": 7000,
-          "height": 3975,
-          "bytes": 9437409,
-          "contentType": "image/jpeg",
-          "area": 27825000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg?11a98",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3975,
-          "bytes": 9437409,
-          "contentType": "image/jpeg",
-          "area": 27825000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin27/images/diana_splash_uncentered_27.jpg",
           "source": "communitydragon-uncentered",
@@ -35281,11 +35703,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_SentinelSkin_HD.jpg?11a98",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Diana_SentinelSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -36296,8 +36713,10 @@
       "degraded": false,
       "best": {
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSkin_HD.jpg?593f8",
-        "source": "league-wiki-redirect",
+        "source": "league-wiki-original",
         "semantic": "exact",
+        "knownWidth": 7000,
+        "knownHeight": 3972,
         "width": 7000,
         "height": 3972,
         "bytes": 10843668,
@@ -36305,6 +36724,18 @@
         "area": 27804000
       },
       "validCandidates": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSkin_HD.jpg?593f8",
+          "source": "league-wiki-original",
+          "semantic": "exact",
+          "knownWidth": 7000,
+          "knownHeight": 3972,
+          "width": 7000,
+          "height": 3972,
+          "bytes": 10843668,
+          "contentType": "image/jpeg",
+          "area": 27804000
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSkin_HD.jpg?593f8",
           "source": "league-wiki-redirect",
@@ -36357,6 +36788,11 @@
         }
       ],
       "attempted": [
+        {
+          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_OriginalSkin_HD.jpg?593f8",
+          "source": "league-wiki-original",
+          "semantic": "exact"
+        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Dr._Mundo_OriginalSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -36537,16 +36973,6 @@
           "area": 15594930
         },
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_Mr.MundoverseSkin_HD.jpg?16add",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5265,
-          "height": 2962,
-          "bytes": 7721918,
-          "contentType": "image/jpeg",
-          "area": 15594930
-        },
-        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin02/images/drmundo_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -36630,11 +37056,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg?c8095",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5500,
-        "knownHeight": 3246,
         "width": 5500,
         "height": 3246,
         "bytes": 6592577,
@@ -36642,28 +37066,6 @@
         "area": 17853000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg?c8095",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5500,
-          "knownHeight": 3246,
-          "width": 5500,
-          "height": 3246,
-          "bytes": 6592577,
-          "contentType": "image/jpeg",
-          "area": 17853000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg?c8095",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5500,
-          "height": 3246,
-          "bytes": 6592577,
-          "contentType": "image/jpeg",
-          "area": 17853000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin03/images/drmundo_splash_uncentered_3.jpg",
           "source": "communitydragon-uncentered",
@@ -36707,11 +37109,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_HD.jpg?c8095",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Dr._Mundo_CorporateMundoSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -36748,40 +37145,16 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3937,
         "width": 7000,
         "height": 3937,
-        "bytes": 10605411,
+        "bytes": 10160516,
         "contentType": "image/jpeg",
         "area": 27559000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3937,
-          "width": 7000,
-          "height": 3937,
-          "bytes": 10605411,
-          "contentType": "image/jpeg",
-          "area": 27559000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3937,
-          "bytes": 10605411,
-          "contentType": "image/jpeg",
-          "area": 27559000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin04/images/drmundo_splash_uncentered_4.jpg",
           "source": "communitydragon-uncentered",
@@ -36825,11 +37198,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Dr._Mundo_MundoMundoSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -36866,11 +37234,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg?4b98c",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3910,
         "width": 7000,
         "height": 3910,
         "bytes": 2668785,
@@ -36878,28 +37244,6 @@
         "area": 27370000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg?4b98c",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3910,
-          "width": 7000,
-          "height": 3910,
-          "bytes": 2668785,
-          "contentType": "image/jpeg",
-          "area": 27370000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg?4b98c",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3910,
-          "bytes": 2668785,
-          "contentType": "image/jpeg",
-          "area": 27370000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin05/images/drmundo_splash_uncentered_5.jpg",
           "source": "communitydragon-uncentered",
@@ -36943,11 +37287,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_ExecutionerMundoSkin_HD.jpg?4b98c",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Dr._Mundo_ExecutionerMundoSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -36984,11 +37323,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg?bc7b4",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3940,
         "width": 7000,
         "height": 3940,
         "bytes": 8773292,
@@ -36996,28 +37333,6 @@
         "area": 27580000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg?bc7b4",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3940,
-          "width": 7000,
-          "height": 3940,
-          "bytes": 8773292,
-          "contentType": "image/jpeg",
-          "area": 27580000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg?bc7b4",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3940,
-          "bytes": 8773292,
-          "contentType": "image/jpeg",
-          "area": 27580000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/skin06/images/drmundo_splash_uncentered_6.jpg",
           "source": "communitydragon-uncentered",
@@ -37060,11 +37375,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_RagebornMundoSkin_HD.jpg?bc7b4",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Dr._Mundo_RagebornMundoSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -39641,11 +39951,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg?68f6d",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5000,
-        "knownHeight": 2950,
         "width": 5000,
         "height": 2950,
         "bytes": 15022296,
@@ -39653,28 +39961,6 @@
         "area": 14750000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg?68f6d",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5000,
-          "knownHeight": 2950,
-          "width": 5000,
-          "height": 2950,
-          "bytes": 15022296,
-          "contentType": "image/jpeg",
-          "area": 14750000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg?68f6d",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5000,
-          "height": 2950,
-          "bytes": 15022296,
-          "contentType": "image/jpeg",
-          "area": 14750000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ekko/skins/skin12/images/ekko_splash_uncentered_12.jpg",
           "source": "communitydragon-uncentered",
@@ -39718,11 +40004,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrickorTreatSkin_HD.jpg?68f6d",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ekko_TrickorTreatSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -39759,11 +40040,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg?e5b41",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3541,
         "width": 6000,
         "height": 3541,
         "bytes": 7580418,
@@ -39771,18 +40050,6 @@
         "area": 21246000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg?e5b41",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3541,
-          "width": 6000,
-          "height": 3541,
-          "bytes": 7580418,
-          "contentType": "image/jpeg",
-          "area": 21246000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ekko/skins/skin19/images/ekko_splash_uncentered_19.jpg",
           "source": "communitydragon-uncentered",
@@ -39825,11 +40092,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg?e5b41",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ekko_TrueDamageSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -40651,16 +40913,6 @@
           "area": 28966000
         },
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_OriginalSkin_HD.jpg?7ec49",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4138,
-          "bytes": 2390846,
-          "contentType": "image/jpeg",
-          "area": 28966000
-        },
-        {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/base/images/elise_splash_uncentered_0.jpg",
           "source": "communitydragon-uncentered",
           "semantic": "exact",
@@ -40744,11 +40996,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg?58fbf",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3541,
         "width": 6000,
         "height": 3541,
         "bytes": 1930577,
@@ -40756,28 +41006,6 @@
         "area": 21246000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg?58fbf",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3541,
-          "width": 6000,
-          "height": 3541,
-          "bytes": 1930577,
-          "contentType": "image/jpeg",
-          "area": 21246000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg?58fbf",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3541,
-          "bytes": 1930577,
-          "contentType": "image/jpeg",
-          "area": 21246000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin01/images/elise_splash_uncentered_1.jpg",
           "source": "communitydragon-uncentered",
@@ -40821,11 +41049,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_DeathBlossomSkin_HD.jpg?58fbf",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_DeathBlossomSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -40862,11 +41085,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg?a2abd",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 6000,
-        "knownHeight": 3388,
         "width": 6000,
         "height": 3388,
         "bytes": 1411762,
@@ -40874,28 +41095,6 @@
         "area": 20328000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg?a2abd",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 6000,
-          "knownHeight": 3388,
-          "width": 6000,
-          "height": 3388,
-          "bytes": 1411762,
-          "contentType": "image/jpeg",
-          "area": 20328000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg?a2abd",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 6000,
-          "height": 3388,
-          "bytes": 1411762,
-          "contentType": "image/jpeg",
-          "area": 20328000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin02/images/elise_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
@@ -40939,11 +41138,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_VictoriousSkin_HD.jpg?a2abd",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_VictoriousSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -40980,11 +41174,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg?3ca76",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3941,
         "width": 7000,
         "height": 3941,
         "bytes": 5792781,
@@ -40992,28 +41184,6 @@
         "area": 27587000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg?3ca76",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3941,
-          "width": 7000,
-          "height": 3941,
-          "bytes": 5792781,
-          "contentType": "image/jpeg",
-          "area": 27587000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg?3ca76",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3941,
-          "bytes": 5792781,
-          "contentType": "image/jpeg",
-          "area": 27587000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin03/images/elise_splash_uncentered_3.jpg",
           "source": "communitydragon-uncentered",
@@ -41056,11 +41226,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BloodMoonSkin_HD.jpg?3ca76",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_BloodMoonSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -41177,11 +41342,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg?646d2",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5979,
-        "knownHeight": 3543,
         "width": 5979,
         "height": 3543,
         "bytes": 2235187,
@@ -41189,28 +41352,6 @@
         "area": 21183597
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg?646d2",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5979,
-          "knownHeight": 3543,
-          "width": 5979,
-          "height": 3543,
-          "bytes": 2235187,
-          "contentType": "image/jpeg",
-          "area": 21183597
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg?646d2",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5979,
-          "height": 3543,
-          "bytes": 2235187,
-          "contentType": "image/jpeg",
-          "area": 21183597
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin05/images/elise_splash_uncentered_5.jpg",
           "source": "communitydragon-uncentered",
@@ -41254,11 +41395,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_SuperGalaxySkin_HD.jpg?646d2",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_SuperGalaxySkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -41295,11 +41431,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg?6dc42",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3940,
         "width": 7000,
         "height": 3940,
         "bytes": 2054121,
@@ -41307,28 +41441,6 @@
         "area": 27580000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg?6dc42",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3940,
-          "width": 7000,
-          "height": 3940,
-          "bytes": 2054121,
-          "contentType": "image/jpeg",
-          "area": 27580000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg?6dc42",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3940,
-          "bytes": 2054121,
-          "contentType": "image/jpeg",
-          "area": 27580000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin06/images/elise_splash_uncentered_6.jpg",
           "source": "communitydragon-uncentered",
@@ -41372,11 +41484,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_BewitchingSkin_HD.jpg?6dc42",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_BewitchingSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -41413,11 +41520,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg?e6e0c",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 3908,
         "width": 7000,
         "height": 3908,
         "bytes": 7674698,
@@ -41425,28 +41530,6 @@
         "area": 27356000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg?e6e0c",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 3908,
-          "width": 7000,
-          "height": 3908,
-          "bytes": 7674698,
-          "contentType": "image/jpeg",
-          "area": 27356000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg?e6e0c",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 3908,
-          "bytes": 7674698,
-          "contentType": "image/jpeg",
-          "area": 27356000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/skin15/images/elise_splash_uncentered_15.jpg",
           "source": "communitydragon-uncentered",
@@ -41489,11 +41572,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Elise_WitheredRoseSkin_HD.jpg?e6e0c",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Elise_WitheredRoseSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -41916,11 +41994,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg?57eea",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 4000,
-        "knownHeight": 2360,
         "width": 4000,
         "height": 2360,
         "bytes": 786593,
@@ -41928,28 +42004,6 @@
         "area": 9440000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg?57eea",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 4000,
-          "knownHeight": 2360,
-          "width": 4000,
-          "height": 2360,
-          "bytes": 786593,
-          "contentType": "image/jpeg",
-          "area": 9440000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg?57eea",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 4000,
-          "height": 2360,
-          "bytes": 786593,
-          "contentType": "image/jpeg",
-          "area": 9440000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/base/images/evelynn_splash_uncentered_0.jpg",
           "source": "communitydragon-uncentered",
@@ -41993,11 +42047,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_OriginalSkin_HD.jpg?57eea",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Evelynn_OriginalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -42034,11 +42083,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg?b456b",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 4000,
-        "knownHeight": 2361,
         "width": 4000,
         "height": 2361,
         "bytes": 1451681,
@@ -42046,28 +42093,6 @@
         "area": 9444000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg?b456b",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 4000,
-          "knownHeight": 2361,
-          "width": 4000,
-          "height": 2361,
-          "bytes": 1451681,
-          "contentType": "image/jpeg",
-          "area": 9444000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg?b456b",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 4000,
-          "height": 2361,
-          "bytes": 1451681,
-          "contentType": "image/jpeg",
-          "area": 9444000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/skin01/images/evelynn_splash_uncentered_1.jpg",
           "source": "communitydragon-uncentered",
@@ -42111,11 +42136,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_ShadowSkin_HD.jpg?b456b",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Evelynn_ShadowSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -42152,11 +42172,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg?dfda9",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 4000,
-        "knownHeight": 2360,
         "width": 4000,
         "height": 2360,
         "bytes": 1615757,
@@ -42164,28 +42182,6 @@
         "area": 9440000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg?dfda9",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 4000,
-          "knownHeight": 2360,
-          "width": 4000,
-          "height": 2360,
-          "bytes": 1615757,
-          "contentType": "image/jpeg",
-          "area": 9440000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg?dfda9",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 4000,
-          "height": 2360,
-          "bytes": 1615757,
-          "contentType": "image/jpeg",
-          "area": 9440000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/skin02/images/evelynn_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
@@ -42228,11 +42224,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_MasqueradeSkin_HD.jpg?dfda9",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Evelynn_MasqueradeSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -43968,11 +43959,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg?9d129",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5913,
-        "knownHeight": 3368,
         "width": 5913,
         "height": 3368,
         "bytes": 4719007,
@@ -43980,28 +43969,6 @@
         "area": 19914984
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg?9d129",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5913,
-          "knownHeight": 3368,
-          "width": 5913,
-          "height": 3368,
-          "bytes": 4719007,
-          "contentType": "image/jpeg",
-          "area": 19914984
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg?9d129",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5913,
-          "height": 3368,
-          "bytes": 4719007,
-          "contentType": "image/jpeg",
-          "area": 19914984
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/base/images/ezreal_splash_uncentered_0.jpg",
           "source": "communitydragon-uncentered",
@@ -44045,11 +44012,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_OriginalSkin_HD.jpg?9d129",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ezreal_OriginalSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -44086,11 +44048,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg?2171e",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 5000,
-        "knownHeight": 2950,
         "width": 5000,
         "height": 2950,
         "bytes": 4108240,
@@ -44098,28 +44058,6 @@
         "area": 14750000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg?2171e",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 5000,
-          "knownHeight": 2950,
-          "width": 5000,
-          "height": 2950,
-          "bytes": 4108240,
-          "contentType": "image/jpeg",
-          "area": 14750000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg?2171e",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 5000,
-          "height": 2950,
-          "bytes": 4108240,
-          "contentType": "image/jpeg",
-          "area": 14750000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/skin01/images/ezreal_splash_uncentered_1.jpg",
           "source": "communitydragon-uncentered",
@@ -44163,11 +44101,6 @@
       ],
       "attempted": [
         {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_NottinghamSkin_HD.jpg?2171e",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
-        {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ezreal_NottinghamSkin_HD.jpg",
           "source": "league-wiki-redirect",
           "semantic": "exact"
@@ -44204,11 +44137,9 @@
       "verified": true,
       "degraded": false,
       "best": {
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg?bccb2",
-        "source": "league-wiki-original",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg",
+        "source": "legacy",
         "semantic": "exact",
-        "knownWidth": 7000,
-        "knownHeight": 4157,
         "width": 7000,
         "height": 4157,
         "bytes": 8203365,
@@ -44216,28 +44147,6 @@
         "area": 29099000
       },
       "validCandidates": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg?bccb2",
-          "source": "league-wiki-original",
-          "semantic": "exact",
-          "knownWidth": 7000,
-          "knownHeight": 4157,
-          "width": 7000,
-          "height": 4157,
-          "bytes": 8203365,
-          "contentType": "image/jpeg",
-          "area": 29099000
-        },
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg?bccb2",
-          "source": "league-wiki-redirect",
-          "semantic": "exact",
-          "width": 7000,
-          "height": 4157,
-          "bytes": 8203365,
-          "contentType": "image/jpeg",
-          "area": 29099000
-        },
         {
           "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/skin02/images/ezreal_splash_uncentered_2.jpg",
           "source": "communitydragon-uncentered",
@@ -44280,11 +44189,6 @@
         }
       ],
       "attempted": [
-        {
-          "url": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_StrikerSkin_HD.jpg?bccb2",
-          "source": "league-wiki-original",
-          "semantic": "exact"
-        },
         {
           "url": "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Ezreal_StrikerSkin_HD.jpg",
           "source": "league-wiki-redirect",
@@ -53543,10 +53447,10 @@
     }
   ],
   "finalHdPass": {
-    "runAt": "2026-09-11T15:15:12.932Z",
+    "runAt": "2026-09-11T15:18:02.966Z",
     "historicalSearched": 197,
-    "historicalRecoveredHigher": 5,
-    "catalogSearched": 100,
+    "historicalRecoveredHigher": 0,
+    "catalogSearched": 99,
     "catalogRecoveredHigher": 0,
     "cardFallbacksRepaired": 0,
     "stillUnresolved": 12

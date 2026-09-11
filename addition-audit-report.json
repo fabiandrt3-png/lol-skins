@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:14:51.187Z",
+  "generatedAt": "2026-09-11T15:17:41.688Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
@@ -1907,10 +1907,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR.jpg?b8f54",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 396261,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR_HD.jpg?00cca",
+        "width": 7686,
+        "height": 3553,
+        "bytes": 19149220,
         "contentType": "image/jpeg"
       }
     },
@@ -2020,10 +2020,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 346164,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR_HD.jpg?819a3",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 8601125,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3487,10 +3487,10 @@
     }
   ],
   "finalHdPass": {
-    "runAt": "2026-09-11T15:15:12.932Z",
+    "runAt": "2026-09-11T15:18:02.966Z",
     "historicalSearched": 197,
-    "historicalRecoveredHigher": 5,
-    "catalogSearched": 100,
+    "historicalRecoveredHigher": 0,
+    "catalogSearched": 99,
     "catalogRecoveredHigher": 0,
     "cardFallbacksRepaired": 0,
     "stillUnresolved": 12
