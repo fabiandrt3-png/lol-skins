@@ -26,4 +26,5 @@
 # IMPORTANT : les lignes qui commencent par # sont seulement des exemples et sont ignorées.
 # Ajoute ou modifie tes vraies lignes en dessous, sans #.
 
-Garen | Iconic | Wild Rift | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR.jpg | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR_HD.jpg?ac5a9
+Garen | Iconic Garen | Wild Rift | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR.jpg | https://wiki.leagueoflegends.com/en-us/images/Garen_IconicSkin_WR_HD.jpg?ac5a9
+Anivia | Old God Anivia | PC | https://wiki.leagueoflegends.com/en-us/images/thumb/Anivia_OldGodSkin_HD.jpg/1024px-Anivia_OldGodSkin_HD.jpg?f2cb3 | https://wiki.leagueoflegends.com/en-us/images/Anivia_OldGodSkin_HD.jpg?f2cb3
