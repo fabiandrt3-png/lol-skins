@@ -1,0 +1,38 @@
+name: Apply LoR chronology and level display fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-fix-lor-chronology-levels.yml'
+      - 'scripts/tmp-fix-lor-chronology-levels.mjs'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Apply patch
+        run: node scripts/tmp-fix-lor-chronology-levels.mjs
+      - name: Verify JavaScript syntax
+        run: |
+          node --check data-loader.js
+          node --check english-ui.js
+          node --check scripts/update-lor-skins.mjs
+      - name: Verify Akshan Pulsefire metadata
+        run: |
+          node -e "const p=require('./data/lor-skins.json');const a=p.entries.filter(x=>x.champ==='Akshan'&&x.lorSkinName==='Pulsefire');if(a.length!==2||a.some(x=>x.insertAfterSkin!=='Crystal Rose Akshan'||!/^Level [12]$/.test(x.lorLevel)))process.exit(1)"
+      - name: Commit verified patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/tmp-fix-lor-chronology-levels.yml scripts/tmp-fix-lor-chronology-levels.mjs
+          git add data-loader.js english-ui.js scripts/update-lor-skins.mjs data/lor-skins.json version.json
+          git commit -m 'Fix LoR chronology and level badges'
+          git push
