@@ -3,7 +3,7 @@
   "source": "Riot Games LoR Data Dragon + League of Legends Wiki LoR cosmetics metadata",
   "sourceDocs": "https://developer.riotgames.com/docs/lor",
   "metadataSource": "https://wiki.leagueoflegends.com/en-us/Module:LoRCosmetics/skins?action=raw",
-  "strategy": "LoR champion skins are first-class gallery entries. Skins are ordered by release date, then skin index, then champion level. Card previews use the exact original/full artwork; fullscreen tries the exact HD LoR artwork first.",
+  "strategy": "LoR champion skins are first-class gallery entries. Original LoR levels sit immediately after Classic; cosmetic LoR skins follow chronological anchors/release order and keep Level metadata in platform badges. Card previews use the exact original/full artwork; fullscreen tries the exact HD LoR artwork first.",
   "sets": [
     {
       "name": "set1",
@@ -405,7 +405,8 @@
       "lorLevelNumber": 1,
       "lorSkinIndex": 1,
       "lorCardCode": "04SH130",
-      "lorAvailability": "Limited"
+      "lorAvailability": "Limited",
+      "insertAfterSkin": "Crystal Rose Akshan"
     },
     {
       "id": "lor::akshan::pulsefire::level-2",
@@ -428,7 +429,8 @@
       "lorLevelNumber": 2,
       "lorSkinIndex": 1,
       "lorCardCode": "04SH130T2",
-      "lorAvailability": "Limited"
+      "lorAvailability": "Limited",
+      "insertAfterSkin": "Crystal Rose Akshan"
     },
     {
       "id": "lor::anivia::original::level-1",

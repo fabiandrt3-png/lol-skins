@@ -128,6 +128,17 @@ function mergeLorSkins(catalog, lorSkins) {
       ) {
         insertAt += 1;
       }
+    } else if (lor.insertAfterSkin) {
+      insertAt = merged.findIndex((item) => item.champ === lor.champ && item.skin === lor.insertAfterSkin);
+      while (
+        insertAt >= 0
+        && insertAt + 1 < merged.length
+        && merged[insertAt + 1].champ === lor.champ
+        && merged[insertAt + 1].type === "Legends of Runeterra"
+        && merged[insertAt + 1].lorSkinName === lor.lorSkinName
+      ) {
+        insertAt += 1;
+      }
     }
 
     if (insertAt < 0) {

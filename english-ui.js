@@ -276,7 +276,7 @@ function processSkinCard(card) {
   );
   const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\bchroma\b/i.test(rawTitle));
   const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";
-  const lorLabel = parsed.lorLevel ? `Legends of Runeterra · ${parsed.lorLevel}` : "Legends of Runeterra";
+  const lorLabel = parsed.lorLevel ? `Legends of Runeterra · ${parsed.lorLevel}` : existingLorBadge?.textContent?.trim() || "Legends of Runeterra";
 
   card.dataset.cardBadgesReady = "true";
   title.textContent = parsed.displayName;

@@ -12,6 +12,13 @@ const SKIN_METADATA_SOURCES = [
   'https://wiki.leagueoflegends.com/en-us/index.php?title=Module%3ALoRCosmetics%2Fskins&action=raw',
 ];
 
+// Explicit chronology anchors are only needed where the main LoL/WR catalogue
+// predates release-date metadata. Keep these anchors semantic (skin names), not
+// numeric positions, so catalogue growth cannot silently reorder LoR artwork.
+const CHRONOLOGY_ANCHORS = new Map([
+  ['akshan|pulsefire', 'Crystal Rose Akshan'],
+]);
+
 const SETS = [
   source('set1', '1_0_0'),
   source('set2', '1_0_0'),
@@ -84,6 +91,7 @@ for (const skin of parsedSkins) {
     const displayName = skin.skinName === 'Original'
       ? `Original ${skin.champion} — ${level.levelName}`
       : `${skin.skinName} ${skin.champion} — ${level.levelName}`;
+    const insertAfterSkin = CHRONOLOGY_ANCHORS.get(`${slugify(skin.champion)}|${slugify(skin.skinName)}`) || null;
 
     entries.push({
       id: `lor::${slugify(skin.champion)}::${slugify(skin.skinName)}::${slugify(level.levelName)}`,
@@ -91,6 +99,7 @@ for (const skin of parsedSkins) {
       skin: displayName,
       type: 'Legends of Runeterra',
       releaseDate: skin.releaseDate || null,
+      ...(insertAfterSkin ? { insertAfterSkin } : {}),
       image,
       ...(fullscreenCandidates[0] ? { fullImage: fullscreenCandidates[0] } : {}),
       ...(cardCandidates.length > 1 ? { fallbacks: cardCandidates.slice(1) } : {}),
