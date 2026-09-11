@@ -12,6 +12,7 @@ on:
       - 'data/lor-art.json'
       - 'data/lor-skins.json'
       - 'data-loader.js'
+      - 'scripts/sync-missing-skins.mjs'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
       - 'scripts/upgrade-low-res.mjs'
@@ -46,6 +47,25 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Sync missing PC and Wild Rift skins
+        run: node scripts/sync-missing-skins.mjs
+
+      - name: Sort centralized catalogue
+        run: node scripts/centralize-catalog.mjs
+
+      - name: Persist synchronized skin catalogue
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/image-overrides.json version.json
+          if git diff --cached --quiet; then
+            echo "Centralized catalogue already synchronized and sorted"
+          else
+            git commit -m "Sync and sort centralized skin catalogue"
+            git push
+          fi
+
       - name: Refresh official Legends of Runeterra art index
         continue-on-error: true
         run: node scripts/update-lor-art.mjs
@@ -74,22 +94,6 @@ jobs:
           fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
           console.log(`Version: ${current} -> ${data.version}`);
           NODE
-
-      - name: Sort centralized catalogue
-        run: node scripts/centralize-catalog.mjs
-
-      - name: Persist centralized catalogue ordering
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json
-          if git diff --cached --quiet; then
-            echo "Centralized catalogue already sorted"
-          else
-            git commit -m "Sort centralized skin catalogue"
-            git push
-          fi
 
       - name: Preserve centralized catalogue
         shell: bash
@@ -129,6 +133,7 @@ jobs:
           current.catalog = before.catalog;
           current.catalogGeneratedAt = before.catalogGeneratedAt;
           current.catalogStrategy = before.catalogStrategy;
+          current.catalogSync = before.catalogSync;
           fs.writeFileSync(targetPath, JSON.stringify(current, null, 2) + '\n');
           console.log(`Preserved ${before.catalog.length} centralized skin records`);
           NODE
@@ -188,15 +193,19 @@ jobs:
           const fs = require('fs');
           const historical = fs.existsSync('audit-report.json') ? JSON.parse(fs.readFileSync('audit-report.json', 'utf8')) : {};
           const additions = fs.existsSync('addition-audit-report.json') ? JSON.parse(fs.readFileSync('addition-audit-report.json', 'utf8')) : {};
+          const catalogData = fs.existsSync('data/image-overrides.json') ? JSON.parse(fs.readFileSync('data/image-overrides.json', 'utf8')) : {};
           const lor = fs.existsSync('data/lor-art.json') ? JSON.parse(fs.readFileSync('data/lor-art.json', 'utf8')) : {};
           const lorSkins = fs.existsSync('data/lor-skins.json') ? JSON.parse(fs.readFileSync('data/lor-skins.json', 'utf8')) : {};
           const s = historical.summary || {};
           const a = additions.summary || {};
+          const c = catalogData.catalogSync || {};
           const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
           const f = historical.finalHdPass || additions.finalHdPass || {};
           const l = lorSkins.imageAudit || {};
           console.log('## Splash art verification');
           console.log('');
+          console.log(`- Catalog skins added by sync: ${c.added ?? '?'}`);
+          console.log(`- Catalog sync unresolved: ${(c.unresolved || []).length}`);
           console.log(`- Historical verified: ${s.verified ?? '?'} / ${s.total ?? '?'}`);
           console.log(`- Historical PC: ${s.pcVerified ?? '?'} / ${s.pcTotal ?? '?'}`);
           console.log(`- Historical Wild Rift: ${s.wildRiftVerified ?? '?'} / ${s.wildRiftTotal ?? '?'}`);
@@ -215,7 +224,7 @@ jobs:
           console.log(`- Legends of Runeterra verified artworks: ${l.verified ?? '?'} / ${l.total ?? '?'}`);
           console.log(`- Legends of Runeterra unresolved artworks: ${l.unresolved ?? '?'}`);
           console.log('');
-          console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0 || (l.unresolved ?? 0) > 0
+          console.log((c.unresolved || []).length > 0 || (s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0 || (l.unresolved ?? 0) > 0
             ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
             : '✅ No unresolved splash arts detected.');
           NODE
