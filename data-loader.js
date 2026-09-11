@@ -118,10 +118,24 @@ function mergeLorSkins(catalog, lorSkins) {
     }
 
     let insertAt = -1;
-    for (let index = merged.length - 1; index >= 0; index -= 1) {
-      if (merged[index].champ === lor.champ) {
-        insertAt = index;
-        break;
+    if (isOriginalLorSkin(lor)) {
+      insertAt = merged.findIndex((item) => isClassicLeagueSkin(item, lor.champ));
+      while (
+        insertAt >= 0
+        && insertAt + 1 < merged.length
+        && merged[insertAt + 1].champ === lor.champ
+        && isOriginalLorSkin(merged[insertAt + 1])
+      ) {
+        insertAt += 1;
+      }
+    }
+
+    if (insertAt < 0) {
+      for (let index = merged.length - 1; index >= 0; index -= 1) {
+        if (merged[index].champ === lor.champ) {
+          insertAt = index;
+          break;
+        }
       }
     }
 
@@ -131,6 +145,19 @@ function mergeLorSkins(catalog, lorSkins) {
   }
 
   return merged;
+}
+
+function isOriginalLorSkin(item) {
+  if (item?.type !== "Legends of Runeterra") return false;
+  const skinName = String(item?.lorSkinName || "").trim();
+  return /^original$/i.test(skinName) || /^Original\b/i.test(String(item?.skin || ""));
+}
+
+function isClassicLeagueSkin(item, champion) {
+  return item?.champ === champion
+    && item?.type !== "Wild Rift"
+    && item?.type !== "Legends of Runeterra"
+    && /^Classic\b/i.test(String(item?.skin || ""));
 }
 
 function compareLorEntries(a, b) {
