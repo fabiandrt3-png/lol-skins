@@ -8411,6 +8411,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "aatrox::prestige-blood-moon-aatrox-2022::pc",
+      "champ": "Aatrox",
+      "skin": "Prestige Blood Moon Aatrox (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin.jpg?98f20",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin_HD.jpg?c085f",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "ahri::classic-ahri::19",
       "champ": "Ahri",
       "skin": "Classic Ahri",
@@ -8547,8 +8557,11 @@
       "id": "ahri::k-da-ahri-prestige::38",
       "champ": "Ahri",
       "skin": "K/DA Ahri (Prestige)",
-      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_HD.jpg",
-      "sourceKind": "legacy"
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_old.jpg?561bd",
+      "sourceKind": "wiki-prestige-original-edition",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_old_HD.jpg?55823",
+      "cardSource": "league-wiki-original-edition",
+      "hdSource": "league-wiki-original-edition-hd"
     },
     {
       "id": "ahri::elderwood-ahri::40",
@@ -8818,6 +8831,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "ahri::prestige-k-da-ahri-2022::pc",
+      "champ": "Ahri",
+      "skin": "Prestige K/DA Ahri (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin.jpg?64ab0",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_HD.jpg?2e915",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "akali::classic-akali::61",
@@ -9155,6 +9178,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "akali::prestige-k-da-akali-2022::pc",
+      "champ": "Akali",
+      "skin": "Prestige K/DA Akali (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Akali_PrestigeKDASkin.jpg?40df3",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Akali_PrestigeKDASkin_HD.jpg?136d6",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "akshan::classic-akshan::92",
@@ -11694,8 +11727,11 @@
       "id": "caitlyn::arcade-caitlyn-prestige::323",
       "champ": "Caitlyn",
       "skin": "Arcade Caitlyn (Prestige)",
-      "image": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg",
-      "sourceKind": "legacy"
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_old.jpg?c84dc",
+      "sourceKind": "wiki-prestige-original-edition",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_old_HD.jpg?7d60c",
+      "cardSource": "league-wiki-original-edition",
+      "hdSource": "league-wiki-original-edition-hd"
     },
     {
       "id": "caitlyn::battle-academia-caitlyn::324",
@@ -11915,6 +11951,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "caitlyn::prestige-arcade-caitlyn-2022::pc",
+      "champ": "Caitlyn",
+      "skin": "Prestige Arcade Caitlyn (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin.jpg?1bb79",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_HD.jpg?3072f",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "camille::classic-camille::343",
@@ -13840,6 +13886,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "evelynn::prestige-k-da-evelynn-2022::pc",
+      "champ": "Evelynn",
+      "skin": "Prestige K/DA Evelynn (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeKDASkin.jpg?a060c",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeKDASkin_HD.jpg?8a421",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "ezreal::classic-ezreal::538",
       "champ": "Ezreal",
       "skin": "Classic Ezreal",
@@ -14807,6 +14863,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "fizz::prestige-fuzz-fizz-2022::pc",
+      "champ": "Fizz",
+      "skin": "Prestige Fuzz Fizz (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fizz_PrestigeFuzzSkin.jpg?dbc7f",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Fizz_PrestigeFuzzSkin_HD.jpg?30784",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "galio::classic-galio::628",
@@ -17565,6 +17631,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Irelia_PrestigeSoulFighterSkin_WR_HD.jpg?379a2",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:01.176Z"
+    },
+    {
+      "id": "irelia::prestige-project-irelia-2022::pc",
+      "champ": "Irelia",
+      "skin": "Prestige PROJECT: Irelia (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Irelia_PrestigePROJECTSkin.jpg?a9985",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Irelia_PrestigePROJECTSkin_HD.jpg?13b89",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "ivern::rain-shepherd-ivern::pc",
@@ -20340,6 +20416,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "kai-sa::prestige-k-da-kai-sa-2022::pc",
+      "champ": "Kai'Sa",
+      "skin": "Prestige K/DA Kai'Sa (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_PrestigeKDASkin.jpg?4f251",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_PrestigeKDASkin_HD.jpg?1ef96",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "kalista::classic-kalista::pc",
@@ -23407,13 +23493,13 @@
       "champ": "Lee Sin",
       "skin": "Prestige Nightbringer Lee Sin",
       "releaseDate": "2019-12-12",
-      "image": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin.jpg?c6754",
-      "sourceKind": "wiki-catalog-sync",
-      "cardSource": "league-wiki-current-client",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_old.jpg?28d99",
+      "sourceKind": "wiki-prestige-original-edition",
+      "cardSource": "league-wiki-original-edition",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z",
       "fullHdFallbacks": [],
-      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_HD.jpg?8e811",
-      "hdSource": "league-wiki-hd-maximum",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_old_HD.jpg?d7920",
+      "hdSource": "league-wiki-original-edition-hd",
       "hdVerifiedAt": "2026-09-11T22:46:03.376Z"
     },
     {
@@ -23672,6 +23758,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "lee-sin::prestige-nightbringer-lee-sin-2022::pc",
+      "champ": "Lee Sin",
+      "skin": "Prestige Nightbringer Lee Sin (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin.jpg?c6754",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_HD.jpg?8e811",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "leona::eternal-aspect-leona::pc",
@@ -25694,6 +25790,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:04.533Z"
     },
     {
+      "id": "lux::prestige-battle-academia-lux-2022::pc",
+      "champ": "Lux",
+      "skin": "Prestige Battle Academia Lux (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lux_PrestigeBattleAcademiaSkin.jpg?b680c",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lux_PrestigeBattleAcademiaSkin_HD.jpg?dda1b",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "malphite::classic-malphite::pc",
       "champ": "Malphite",
       "skin": "Classic Malphite",
@@ -27609,6 +27715,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:05.616Z"
     },
     {
+      "id": "miss-fortune::prestige-bewitching-miss-fortune-2022::pc",
+      "champ": "Miss Fortune",
+      "skin": "Prestige Bewitching Miss Fortune (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_PrestigeBewitchingSkin.jpg?9144b",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_PrestigeBewitchingSkin_HD.jpg?d9195",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "mordekaiser::prestige-money-miser-mordekaiser::pc",
       "champ": "Mordekaiser",
       "skin": "Prestige Money Miser Mordekaiser",
@@ -29380,6 +29496,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:06.067Z"
     },
     {
+      "id": "neeko::prestige-star-guardian-neeko-2022::pc",
+      "champ": "Neeko",
+      "skin": "Prestige Star Guardian Neeko (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Neeko_PrestigeStarGuardianSkin.jpg?ba4f8",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Neeko_PrestigeStarGuardianSkin_HD.jpg?2168d",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "nidalee::classic-nidalee::pc",
       "champ": "Nidalee",
       "skin": "Classic Nidalee",
@@ -30024,6 +30150,190 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Norra_OriginalSkin_WR_HD.jpg?a5fa7",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:06.229Z"
+    },
+    {
+      "id": "nunu-willump::classic-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Classic Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin.jpg?8ee2a",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::sasquatch-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Sasquatch Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_SasquatchSkin.jpg?3a5cd",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_SasquatchSkin_HD.jpg?6f138",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::workshop-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Workshop Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_WorkshopSkin.jpg?08755",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_WorkshopSkin_HD.jpg?a686d",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::grungy-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Grungy Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_GrungySkin.jpg?4abea",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_GrungySkin_HD.jpg?b364b",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::nunu-and-willump-bot::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Nunu & Willump Bot",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_NunuBotSkin.jpg?65cbe",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_NunuBotSkin_HD.jpg?3a148",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::demolisher-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Demolisher Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_DemolisherSkin.jpg?7cbaf",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_DemolisherSkin_HD.jpg?34a19",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::tpa-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "TPA Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_TPASkin.jpg?ce020",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_TPASkin_HD.jpg?232a2",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::zombie-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Zombie Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_ZombieSkin.jpg?656ba",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_ZombieSkin_HD.jpg?7fe10",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::papercraft-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Papercraft Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_PapercraftSkin.jpg?42fba",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_PapercraftSkin_HD.jpg?38277",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::space-groove-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Space Groove Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_SpaceGrooveSkin.jpg?75fee",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_SpaceGrooveSkin_HD.jpg?06209",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::nunu-and-beelump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Nunu & Beelump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_Nunu%26BeelumpSkin.jpg?cacfd",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_Nunu%26BeelumpSkin_HD.jpg?e7e8d",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::cosmic-paladins-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Cosmic Paladins Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_CosmicPaladinsSkin.jpg?2d80c",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_CosmicPaladinsSkin_HD.jpg?25f51",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::fright-night-nunu-and-willump::pc",
+      "champ": "Nunu & Willump",
+      "skin": "Fright Night Nunu & Willump",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_FrightNightSkin.jpg?41025",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_FrightNightSkin_HD.jpg?7c419",
+      "hdSource": "league-wiki-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::classic-nunu-and-willump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Classic Nunu & Willump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin_WR.jpg?9633e",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::grungy-nunu-and-willump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Grungy Nunu & Willump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_GrungySkin_WR.jpg?2adb3",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::zombie-nunu-and-willump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Zombie Nunu & Willump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_ZombieSkin_WR.jpg?ef850",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::space-groove-nunu-and-willump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Space Groove Nunu & Willump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_SpaceGrooveSkin_WR.jpg?e48e9",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::nunu-and-beelump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Nunu & Beelump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_Nunu%26BeelumpSkin_WR.jpg?9caa7",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
+    },
+    {
+      "id": "nunu-willump::dreambuilder-nunu-and-willump::wild-rift",
+      "champ": "Nunu & Willump",
+      "skin": "Dreambuilder Nunu & Willump",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nunu_DreambuilderSkin_WR.jpg?bfa69",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Nunu_DreambuilderSkin_WR_HD.jpg?641f4",
+      "hdSource": "league-wiki-wr-hd-maximum",
+      "sourceKind": "wiki-catalog-nunu-alias",
+      "cardSource": "league-wiki-current-client"
     },
     {
       "id": "olaf::classic-olaf::pc",
@@ -31665,6 +31975,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Qiyana_PrestigeBattleAcademiaSkin_HD.jpg?41f38",
       "hdSource": "league-wiki-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:06.652Z"
+    },
+    {
+      "id": "qiyana::prestige-true-damage-qiyana-2022::pc",
+      "champ": "Qiyana",
+      "skin": "Prestige True Damage Qiyana (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Qiyana_PrestigeTrueDamageSkin.jpg?6a7a0",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Qiyana_PrestigeTrueDamageSkin_HD.jpg?60803",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "quinn::project-quinn::pc",
@@ -33490,6 +33810,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Riven_LoveConfessionSkin_WR_HD.jpg?93e42",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:07.142Z"
+    },
+    {
+      "id": "riven::prestige-valiant-sword-riven-2022::pc",
+      "champ": "Riven",
+      "skin": "Prestige Valiant Sword Riven (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Riven_PrestigeValiantSwordSkin.jpg?e27e7",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Riven_PrestigeValiantSwordSkin_HD.jpg?39d89",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "rumble::classic-rumble::pc",
@@ -39704,6 +40034,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:09.474Z"
     },
     {
+      "id": "thresh::prestige-pulsefire-thresh-2022::pc",
+      "champ": "Thresh",
+      "skin": "Prestige Pulsefire Thresh (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PrestigePulsefireSkin.jpg?8c727",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PrestigePulsefireSkin_HD.jpg?8b2a2",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
+    },
+    {
       "id": "tristana::risen-legend-tristana::pc",
       "champ": "Tristana",
       "skin": "Risen Legend Tristana",
@@ -42333,6 +42673,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PrestigeCalligraphiaSkin_WR_HD.jpg?fd554",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:10.994Z"
+    },
+    {
+      "id": "vayne::prestige-firecracker-vayne-2022::pc",
+      "champ": "Vayne",
+      "skin": "Prestige Firecracker Vayne (2022)",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PrestigeFirecrackerSkin.jpg?9e3f6",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PrestigeFirecrackerSkin_HD.jpg?71df8",
+      "sourceKind": "wiki-prestige-2022-special-edition",
+      "cardSource": "league-wiki-current-client",
+      "hdSource": "league-wiki-hd-maximum"
     },
     {
       "id": "veigar::prestige-magma-chamber-veigar::pc",
@@ -48252,7 +48602,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-11T23:05:05.468Z",
+  "catalogGeneratedAt": "2026-09-11T23:19:34.048Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
