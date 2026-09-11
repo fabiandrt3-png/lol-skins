@@ -1,76 +1,42 @@
 {
   "generatedAt": "2026-09-11",
   "language": "en",
+  "note": "This file only stores display metadata. Lore text is loaded directly from Riot client data through CommunityDragon and is never generated or paraphrased by the app.",
   "entries": [
     {
       "champion": "Akshan",
       "skin": "Classic Akshan",
-      "universe": "Runeterra Prime",
-      "summary": "Akshan is a rebellious Sentinel who hunts villains with flair, stealth, and a deeply personal sense of justice.",
-      "details": [
-        "A master of covert combat, he can vanish from his enemies' sight and reappear where they least expect him.",
-        "He carries a legendary weapon capable of reversing death. That power fuels his hunt for those he considers scoundrels, but Akshan refuses to follow rules blindly: he acts according to his own moral code and chooses what he believes is right."
-      ]
+      "universe": "Runeterra Prime"
     },
     {
       "champion": "Akshan",
       "skin": "Cyber Pop Akshan",
-      "universe": "Cyber Pop / Sound City",
-      "summary": "In Sound City, Akshan has become one of the underground's heroes against the powerful corporations watching over the city.",
-      "details": [
-        "His courage, wit, and especially his talent for slipping into heavily secured corporate buildings without being detected have made him almost legendary among the underground.",
-        "He still keeps all of his charm and confidence: in this universe, Akshan is as much a daring infiltrator as he is a popular figure of resistance in Sound City."
-      ]
+      "universe": "Cyber Pop / Sound City"
     },
     {
       "champion": "Akshan",
       "skin": "Battle Academia Akshan",
-      "universe": "Battle Academia / God Weapon",
-      "summary": "Akshan is a transfer student at Durandal Academy who quickly made a name for himself in the Battle Club.",
-      "details": [
-        "When opponents fight dirty, he does not hesitate to throw himself directly into the action to give his classmates the advantage and secure the win.",
-        "His strong moral compass, reckless confidence, and instinct to protect others make him a valued ally among the second-year students. Even in a school where power rules, Akshan has a very clear idea of what is right."
-      ]
+      "universe": "Battle Academia / God Weapon"
     },
     {
       "champion": "Akshan",
       "skin": "Crystal Rose Akshan",
-      "universe": "Crystal Rose",
-      "summary": "Even the ever-adventurous Akshan puts his escapades aside each year to appear at the prestigious Crystal Rose Festival.",
-      "details": [
-        "Highly sought after during the event, he may grant a few dances to the guests, but his attention remains fixed on one particular person in the crowd.",
-        "Their views of the world are far from perfectly compatible, yet their attraction is strong enough to make those differences feel almost secondary. This version of Akshan leans into his charm, relationships, and the social intrigue surrounding the festival."
-      ]
+      "universe": "Crystal Rose"
     },
     {
       "champion": "Akshan",
       "skin": "Three Honors Akshan",
-      "universe": "Three Honors / Order of Solace",
-      "summary": "After the murder of his mentor, Akshan became trapped in a cycle of revenge until death and retribution nearly defined his entire existence.",
-      "details": [
-        "The Order of Solace found him when he had become little more than a weapon driven by the need to strike back. Its teachings gradually filled the emptiness left by his grief and helped him rebuild a purpose that no longer rests entirely on vengeance.",
-        "Now Akshan stands beside Malzahar as one of the pillars of the Three Honors. He fights the Essents with a philosophy centered on harmony, without losing his taste for confident remarks along the way."
-      ]
+      "universe": "Three Honors / Order of Solace"
     },
     {
       "champion": "Akshan",
       "skin": "Dawnbringer Akshan",
-      "universe": "Nightbringer & Dawnbringer / Versus",
-      "summary": "Raised in a world dominated by chaos, Akshan became a cosmic ranger who dreams of a fairer and more ordered universe.",
-      "details": [
-        "He wants to free people from suffering, but he deeply distrusts violence and revenge as ways to achieve that goal.",
-        "He understands that answering terror with more brutality only feeds another cycle of pain, exactly what the forces of chaos desire. His place among the Dawnbringers is therefore defined as much by his pursuit of justice as by his refusal to become what he fights."
-      ]
+      "universe": "Nightbringer & Dawnbringer / Versus"
     },
     {
       "champion": "Akshan",
       "skin": "High Noon Akshan",
-      "universe": "High Noon",
-      "summary": "Beyond an altar lies the road to Hell, and Akshan has come to claim the right to travel it.",
-      "details": [
-        "A man with an unsettling smile reminds him that the dead should stay dead. Akshan is not there to ask permission, however: neither law, death, nor a bounty hunter convinced that he owns the road will make him turn back.",
-        "The confrontation ends face to face. Akshan raises his weapon and cocks the hammer, ready to force his way through if necessary. This incarnation carries his determination to defy death directly into High Noon's demonic frontier."
-      ]
+      "universe": "High Noon"
     }
   ]
 }
