@@ -1,78 +1,107 @@
 import fs from 'node:fs';
 
 const FILE = 'data/lor-skins.json';
-const USER_AGENT = 'lol-skins-lor-image-repair/1.0 (+https://github.com/fabiandrt3-png/lol-skins)';
+const USER_AGENT = 'lol-skins-lor-image-repair/1.1 (+https://github.com/fabiandrt3-png/lol-skins)';
 const WIKI_API = 'https://wiki.leagueoflegends.com/en-us/api.php';
 const TIMEOUT_MS = 25000;
-const CONCURRENCY = 6;
+const REQUEST_DELAY_MS = 350;
+const MAX_RETRIES = 5;
 
 const payload = JSON.parse(fs.readFileSync(FILE, 'utf8'));
 const entries = Array.isArray(payload?.entries) ? payload.entries : [];
 if (!entries.length) throw new Error('LoR skin catalog is empty.');
 
-const byCardCode = new Map();
-for (const entry of entries) {
-  const code = String(entry?.lorCardCode || '').trim();
-  if (!code) continue;
-  if (!byCardCode.has(code)) byCardCode.set(code, []);
-  byCardCode.get(code).push(entry);
-}
-
+const queryPrefixes = unique(entries
+  .map((entry) => baseCardCode(entry?.lorCardCode))
+  .filter(Boolean));
 const wikiFiles = new Map();
-await mapLimit([...byCardCode.keys()], CONCURRENCY, async (code) => {
-  const files = await listWikiFiles(code);
-  wikiFiles.set(code, files);
-  console.log(`LoR ${code}: ${files.length} Wiki image file(s) discovered`);
-});
+
+for (const prefix of queryPrefixes) {
+  const files = await listWikiFiles(prefix);
+  wikiFiles.set(prefix, files);
+  if (Array.isArray(files)) console.log(`LoR ${prefix}: ${files.length} Wiki image file(s) discovered`);
+  else console.warn(`LoR ${prefix}: Wiki lookup unavailable; existing sources will be preserved`);
+  await sleep(REQUEST_DELAY_MS);
+}
 
 let repaired = 0;
 let unresolved = 0;
+let unchecked = 0;
 let removedBrokenCandidates = 0;
 const unresolvedEntries = [];
+const uncheckedEntries = [];
 
 for (const entry of entries) {
   const original = isOriginal(entry);
-  const discovered = selectWikiCandidates(entry, wikiFiles.get(entry.lorCardCode) || []);
-  const riotCandidates = original ? officialRiotCandidates(entry) : [];
+  const prefix = baseCardCode(entry.lorCardCode);
+  const pool = wikiFiles.get(prefix);
+  const lookupAvailable = Array.isArray(pool);
   const existing = existingCandidates(entry);
 
-  const cardCandidates = unique([
+  // Never destroy a usable source merely because the Wiki API is temporarily
+  // rate-limited or offline. The next scheduled repair can validate it later.
+  if (!lookupAvailable) {
+    if (entry.image) {
+      entry.imageStatus = entry.imageStatus === 'verified' ? 'verified' : 'unchecked';
+      unchecked += entry.imageStatus === 'unchecked' ? 1 : 0;
+      if (entry.imageStatus === 'unchecked') uncheckedEntries.push(`${entry.champ} — ${entry.skin}`);
+    } else {
+      entry.imageStatus = 'unresolved';
+      unresolved += 1;
+      unresolvedEntries.push(`${entry.champ} — ${entry.skin}`);
+    }
+    continue;
+  }
+
+  const discovered = selectWikiCandidates(entry, pool);
+  const riotCandidates = original ? officialRiotCandidates(entry) : [];
+  let cardCandidates = unique([
     ...riotCandidates,
     ...discovered.card,
-    ...existing.filter((url) => isRiotImage(url)),
   ]);
-  const fullscreenCandidates = unique([
+  let fullscreenCandidates = unique([
     ...discovered.fullscreen,
     ...riotCandidates,
     ...discovered.card,
-    ...existing.filter((url) => isRiotImage(url)),
   ]);
 
-  // If the Wiki API did not find a matching cosmetic file, validate the old
-  // candidates before keeping them. This prevents guessed dead redirects from
-  // reappearing in the published catalog.
-  if (!original && !discovered.card.length && !discovered.fullscreen.length) {
+  // When the exact Wiki lookup succeeds but no matching file is found, probe
+  // the previous candidates before discarding them. Only real image responses
+  // survive; guessed HTML/404 redirects are removed permanently.
+  if (!discovered.card.length && !discovered.fullscreen.length) {
     const validatedExisting = [];
     for (const url of existing) {
       if (await isLiveImage(url)) validatedExisting.push(url);
       else removedBrokenCandidates += 1;
     }
-    cardCandidates.push(...validatedExisting);
-    fullscreenCandidates.push(...validatedExisting);
+    cardCandidates = unique([...cardCandidates, ...validatedExisting]);
+    fullscreenCandidates = unique([...fullscreenCandidates, ...validatedExisting]);
   }
 
-  const finalCard = unique(cardCandidates);
-  const finalFullscreen = unique(fullscreenCandidates);
-  const image = finalCard[0] || finalFullscreen[0] || '';
-
+  const image = cardCandidates[0] || fullscreenCandidates[0] || '';
   if (!image) {
-    unresolved += 1;
-    unresolvedEntries.push(`${entry.champ} — ${entry.skin}`);
+    const before = JSON.stringify({
+      image: entry.image,
+      fullImage: entry.fullImage,
+      fallbacks: entry.fallbacks,
+      fullHdFallbacks: entry.fullHdFallbacks,
+      imageStatus: entry.imageStatus,
+    });
     entry.imageStatus = 'unresolved';
     delete entry.image;
     delete entry.fullImage;
     delete entry.fallbacks;
     delete entry.fullHdFallbacks;
+    const after = JSON.stringify({
+      image: entry.image,
+      fullImage: entry.fullImage,
+      fallbacks: entry.fallbacks,
+      fullHdFallbacks: entry.fullHdFallbacks,
+      imageStatus: entry.imageStatus,
+    });
+    if (before !== after) repaired += 1;
+    unresolved += 1;
+    unresolvedEntries.push(`${entry.champ} — ${entry.skin}`);
     continue;
   }
 
@@ -85,10 +114,10 @@ for (const entry of entries) {
   });
 
   entry.image = image;
-  entry.fullImage = finalFullscreen[0] || image;
-  if (finalCard.length > 1) entry.fallbacks = finalCard.slice(1);
+  entry.fullImage = fullscreenCandidates[0] || image;
+  if (cardCandidates.length > 1) entry.fallbacks = cardCandidates.slice(1);
   else delete entry.fallbacks;
-  if (finalFullscreen.length > 1) entry.fullHdFallbacks = finalFullscreen.slice(1);
+  if (fullscreenCandidates.length > 1) entry.fullHdFallbacks = fullscreenCandidates.slice(1);
   else delete entry.fullHdFallbacks;
   entry.imageStatus = 'verified';
 
@@ -104,16 +133,20 @@ for (const entry of entries) {
 
 payload.imageAudit = {
   verifiedAt: new Date().toISOString(),
-  strategy: 'MediaWiki allimages lookup by exact LoR card code and cosmetic name; direct image URLs only; dead guessed redirects removed',
+  strategy: 'Rate-limited MediaWiki allimages lookup by base card code; exact level-code matching; direct image URLs only; dead guessed redirects removed; previous sources preserved when lookup is unavailable',
   total: entries.length,
   repaired,
+  verified: entries.filter((entry) => entry.imageStatus === 'verified' && entry.image).length,
+  unchecked,
   unresolved,
   removedBrokenCandidates,
+  uncheckedEntries,
   unresolvedEntries,
 };
 
 fs.writeFileSync(FILE, JSON.stringify(payload, null, 2) + '\n');
-console.log(`LoR image repair complete: ${entries.length - unresolved}/${entries.length} resolved, ${repaired} updated, ${removedBrokenCandidates} dead candidate(s) removed.`);
+console.log(`LoR image repair complete: ${payload.imageAudit.verified}/${entries.length} verified, ${unchecked} unchecked, ${unresolved} unresolved, ${repaired} updated, ${removedBrokenCandidates} dead candidate(s) removed.`);
+if (uncheckedEntries.length) console.warn(`Temporarily unchecked LoR artwork: ${uncheckedEntries.join(' | ')}`);
 if (unresolvedEntries.length) console.warn(`Unresolved LoR artwork: ${unresolvedEntries.join(' | ')}`);
 
 async function listWikiFiles(prefix) {
@@ -126,32 +159,48 @@ async function listWikiFiles(prefix) {
     ailimit: 'max',
     aiprop: 'url|mime|size|dimensions',
   });
-  const payload = await fetchJson(`${WIKI_API}?${params}`);
-  return (payload?.query?.allimages || [])
-    .filter((file) => String(file?.mime || '').startsWith('image/'))
-    .map((file) => ({
-      name: String(file.name || ''),
-      url: secureUrl(file.url),
-      width: Number(file.width || 0),
-      height: Number(file.height || 0),
-      size: Number(file.size || 0),
-    }))
-    .filter((file) => file.name && file.url);
+  const url = `${WIKI_API}?${params}`;
+
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt += 1) {
+    const result = await fetchJsonResponse(url);
+    if (result.ok) {
+      return (result.payload?.query?.allimages || [])
+        .filter((file) => String(file?.mime || '').startsWith('image/'))
+        .map((file) => ({
+          name: String(file.name || ''),
+          url: secureUrl(file.url),
+          width: Number(file.width || 0),
+          height: Number(file.height || 0),
+          size: Number(file.size || 0),
+        }))
+        .filter((file) => file.name && file.url);
+    }
+
+    if (result.status !== 429) return null;
+    const waitMs = Math.max(result.retryAfterMs || 0, 1500 * (2 ** attempt));
+    console.warn(`Wiki rate limit for ${prefix}; retrying in ${waitMs}ms (${attempt + 1}/${MAX_RETRIES})`);
+    await sleep(waitMs);
+  }
+
+  return null;
 }
 
 function selectWikiCandidates(entry, files) {
-  const code = normalizeFileToken(entry.lorCardCode);
-  const skin = normalizeFileToken(entry.lorSkinName);
+  const code = String(entry?.lorCardCode || '').trim();
+  const skin = normalizeFileToken(entry?.lorSkinName);
   const original = isOriginal(entry);
+  const codePattern = new RegExp(`^${escapeRegExp(code)}(?=[^A-Za-z0-9]|$)`, 'i');
 
   const matches = files.filter((file) => {
-    const name = normalizeFileToken(file.name);
-    if (!name.startsWith(code)) return false;
+    const rawName = String(file.name || '');
+    if (!codePattern.test(rawName)) return false;
+
+    const remainder = rawName.slice(code.length);
     if (original) {
-      const remainder = name.slice(code.length);
-      return !remainder || /^(hdfull|full|altfull|hdfulljpg|fullpng)/.test(remainder);
+      return /^[ _-]*(?:(?:HD|alt)[ _-]*)*full\.(?:png|jpe?g|webp)$/i.test(remainder);
     }
-    return skin && name.includes(skin);
+
+    return skin && normalizeFileToken(rawName).includes(skin);
   });
 
   const ranked = matches
@@ -175,7 +224,7 @@ function scoreWikiFile(file, entry) {
   if (!/alt/i.test(name)) score += 300;
   if (/\.png$/i.test(name)) score += 80;
   if (/\.jpe?g$/i.test(name)) score += 60;
-  if (normalizeFileToken(name).startsWith(normalizeFileToken(entry.lorCardCode))) score += 150;
+  if (new RegExp(`^${escapeRegExp(String(entry.lorCardCode || ''))}(?=[^A-Za-z0-9]|$)`, 'i').test(file.name)) score += 200;
   score += Math.min((file.width * file.height) / 100000, 400);
   return score;
 }
@@ -205,6 +254,10 @@ function existingCandidates(entry) {
 
 function isOriginal(entry) {
   return /^original$/i.test(String(entry?.lorSkinName || '').trim());
+}
+
+function baseCardCode(value = '') {
+  return String(value).trim().replace(/T\d+$/i, '');
 }
 
 function isHdFile(name) {
@@ -239,7 +292,7 @@ async function isLiveImage(url) {
   }
 }
 
-async function fetchJson(url) {
+async function fetchJsonResponse(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
@@ -248,28 +301,18 @@ async function fetchJson(url) {
       signal: controller.signal,
       headers: { 'user-agent': USER_AGENT, accept: 'application/json,*/*;q=0.8' },
     });
+    const retryAfterSeconds = Number(response.headers.get('retry-after') || 0);
     if (!response.ok) {
-      console.warn(`Wiki image index failed: ${response.status} ${url}`);
-      return null;
+      if (response.status !== 429) console.warn(`Wiki image index failed: ${response.status} ${url}`);
+      return { ok: false, status: response.status, retryAfterMs: retryAfterSeconds * 1000, payload: null };
     }
-    return await response.json();
+    return { ok: true, status: response.status, retryAfterMs: 0, payload: await response.json() };
   } catch (error) {
     console.warn(`Wiki image index failed: ${url} (${error?.name || 'network error'})`);
-    return null;
+    return { ok: false, status: 0, retryAfterMs: 0, payload: null };
   } finally {
     clearTimeout(timer);
   }
-}
-
-async function mapLimit(values, limit, mapper) {
-  let index = 0;
-  const workers = Array.from({ length: Math.min(limit, values.length) }, async () => {
-    while (index < values.length) {
-      const current = values[index++];
-      await mapper(current);
-    }
-  });
-  await Promise.all(workers);
 }
 
 function normalizeFileToken(value = '') {
@@ -286,4 +329,12 @@ function secureUrl(url) {
 
 function unique(values) {
   return [...new Set((values || []).filter(Boolean))];
+}
+
+function escapeRegExp(value = '') {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
