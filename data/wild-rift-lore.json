@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-09-11",
+  "language": "en",
+  "note": "Exact Wild Rift client lore strings. No generated or paraphrased text. Sources are retained as provenance metadata only and are not shown in the app UI.",
+  "entries": [
+    {
+      "champion": "Akshan",
+      "skin": "Battle Academia Akshan",
+      "universe": "Battle Academia / God Weapon",
+      "text": "Durandal's latest transfer student has made quite a splash in the Battle Club. Underhanded opponents have quickly discovered that Akshan will throw himself into the fray to give his clubmates the upper hand and win the day. His moral compass makes this daredevil a welcome advocate for the rest of the 2nd years. The good looks don't hurt, either.",
+      "sourceKind": "wild-rift-client-lore",
+      "sourceUrl": "https://leagueoflegends.fandom.com/wiki/Module:SkinDataWR/data"
+    },
+    {
+      "champion": "Akshan",
+      "skin": "Dawnbringer Akshan",
+      "universe": "Nightbringer & Dawnbringer / Versus",
+      "text": "Having grown up in a world ruled by chaos, Akshan is a ranger of the cosmos who, more than anyone, aspires to establish a just and orderly world. Yet, despite his noble ambition to deliver the masses of the cosmos from suffering, Akshan is wary of taking the path of violence and vengeance. For he knows all too well that doing so only breeds more terror and suffering… and plays right into the hands of the forces of chaos.",
+      "sourceKind": "wild-rift-client-lore",
+      "sourceUrl": "https://leagueoflegends.fandom.com/wiki/Module:SkinDataWR/data"
+    }
+  ]
+}
