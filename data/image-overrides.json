@@ -630,7 +630,7 @@
       "fallbacks": []
     },
     "ahri::spirit-blossom-springs-ahri::54": {
-      "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_AfterHoursSpiritBlossomSpringsSkin_HD.jpg?8cfc3",
+      "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
       "width": 6500,
       "height": 3660,
       "bytes": 8109228,
@@ -8565,7 +8565,7 @@
       "id": "ahri::spirit-blossom-springs-ahri::54",
       "champ": "Ahri",
       "skin": "Spirit Blossom Springs Ahri",
-      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
       "sourceKind": "legacy"
     },
     {
