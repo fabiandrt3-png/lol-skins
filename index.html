@@ -12,7 +12,8 @@
   <title>LoL Skins</title>
   <link rel="preconnect" href="https://wiki.leagueoflegends.com">
   <link rel="preconnect" href="https://game.gtimg.cn">
-  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-58">
+  <link id="appStyles" rel="stylesheet" href="styles.css?v=20260911-61">
+  <link id="loreStyles" rel="stylesheet" href="lore.css?v=20260911-61">
   <style>
     body:not(.is-champion-view) #sectionKicker,
     body:not(.is-champion-view) #resultCount,
@@ -129,6 +130,12 @@
         <strong id="lightboxTitle"></strong>
       </div>
       <div class="lightbox-actions">
+        <button class="icon-button lore-button" id="lightboxLore" type="button" aria-label="Voir le lore" aria-controls="lorePanel" aria-expanded="false" hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M5 4.75A2.75 2.75 0 0 1 7.75 2H11a3 3 0 0 1 3 3v14.25A2.75 2.75 0 0 0 11.25 16H7.75A2.75 2.75 0 0 0 5 18.75V4.75Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M19 4.75A2.75 2.75 0 0 0 16.25 2H14v17.25A2.75 2.75 0 0 1 16.75 16h2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
         <button class="icon-button" id="lightboxFavorite" type="button" aria-label="Ajouter aux favoris">♡</button>
         <button class="icon-button" id="lightboxClose" type="button" data-close-lightbox aria-label="Fermer">×</button>
       </div>
@@ -167,7 +174,7 @@
   </script>
 
   <script type="module">
-    const fallbackVersion = "20260911-58";
+    const fallbackVersion = "20260911-61";
     let version = fallbackVersion;
 
     try {
@@ -182,7 +189,16 @@
 
     const stylesheet = document.querySelector("#appStyles");
     if (stylesheet) stylesheet.href = `styles.css?v=${encodeURIComponent(version)}`;
+    const loreStylesheet = document.querySelector("#loreStyles");
+    if (loreStylesheet) loreStylesheet.href = `lore.css?v=${encodeURIComponent(version)}`;
+
     await import(`./app.js?v=${encodeURIComponent(version)}`);
+
+    try {
+      await import(`./lore.js?v=${encodeURIComponent(version)}`);
+    } catch (error) {
+      console.warn("Module de lore indisponible.", error);
+    }
 
     try {
       await import(`./lightbox-hd.js?v=${encodeURIComponent(version)}`);
