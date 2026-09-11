@@ -12,6 +12,7 @@ on:
       - 'data/lor-art.json'
       - 'data/lor-skins.json'
       - 'data-loader.js'
+      - 'scripts/repair-catalog-edge-cases.mjs'
       - 'scripts/sync-missing-skins.mjs'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
@@ -46,6 +47,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Repair catalog naming edge cases
+        run: node scripts/repair-catalog-edge-cases.mjs
 
       - name: Snapshot catalog before sync
         shell: bash
