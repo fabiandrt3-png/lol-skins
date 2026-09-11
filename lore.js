@@ -18,7 +18,7 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   scrim.type = "button";
   scrim.className = "lore-scrim";
   scrim.hidden = true;
-  scrim.setAttribute("aria-label", "Fermer le lore");
+  scrim.setAttribute("aria-label", "Close lore");
 
   const panel = document.createElement("section");
   panel.className = "lore-panel";
@@ -34,16 +34,11 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
         <span class="lore-kicker">Lore</span>
         <h2 id="lorePanelTitle"></h2>
       </div>
-      <button class="lore-close" type="button" aria-label="Fermer le lore">×</button>
+      <button class="lore-close" type="button" aria-label="Close lore">×</button>
     </div>
     <div class="lore-universe" id="loreUniverse"></div>
     <p class="lore-summary" id="loreSummary"></p>
-    <div class="lore-details" id="loreDetails"></div>
-    <div class="lore-sources-wrap">
-      <span>Sources</span>
-      <div class="lore-sources" id="loreSources"></div>
-    </div>
-    <p class="lore-note">Résumé français basé sur les descriptions et univers Riot disponibles.</p>`;
+    <div class="lore-details" id="loreDetails"></div>`;
 
   lightbox.append(scrim, panel);
 
@@ -51,20 +46,18 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   const universe = panel.querySelector("#loreUniverse");
   const summary = panel.querySelector("#loreSummary");
   const details = panel.querySelector("#loreDetails");
-  const sources = panel.querySelector("#loreSources");
   const closeButton = panel.querySelector(".lore-close");
 
   let entries = [];
-  let currentEntry = null;
 
   try {
     const url = versionedAsset(LORE_SOURCE);
     const response = await fetch(url, { cache: "default" });
-    if (!response.ok) throw new Error(`Lore indisponible (${response.status})`);
+    if (!response.ok) throw new Error(`Lore unavailable (${response.status})`);
     const payload = await response.json();
     entries = Array.isArray(payload?.entries) ? payload.entries : [];
   } catch (error) {
-    console.warn("Données de lore indisponibles.", error);
+    console.warn("Lore data unavailable.", error);
   }
 
   const currentChampion = () => {
@@ -84,7 +77,7 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
 
   const renderEntry = (entry) => {
     panelTitle.textContent = entry?.skin || lightboxTitle.textContent.trim();
-    universe.textContent = entry?.universe || "Univers alternatif";
+    universe.textContent = entry?.universe || "Alternate universe";
     summary.textContent = entry?.summary || "";
 
     details.replaceChildren();
@@ -92,17 +85,6 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
       const element = document.createElement("p");
       element.textContent = paragraph;
       details.appendChild(element);
-    }
-
-    sources.replaceChildren();
-    for (const source of entry?.sources || []) {
-      if (!source?.label || !source?.url) continue;
-      const link = document.createElement("a");
-      link.href = source.url;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = source.label;
-      sources.appendChild(link);
     }
   };
 
@@ -116,10 +98,10 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   };
 
   const openLore = () => {
-    currentEntry = findCurrentEntry();
-    if (!currentEntry) return;
+    const entry = findCurrentEntry();
+    if (!entry) return;
 
-    renderEntry(currentEntry);
+    renderEntry(entry);
     scrim.hidden = false;
     panel.hidden = false;
     lightbox.classList.add("is-lore-open");
@@ -130,11 +112,10 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   const sync = () => {
     const entry = findCurrentEntry();
     const available = Boolean(entry) && !lightbox.hidden;
-    currentEntry = entry;
     loreButton.hidden = !available;
     loreButton.disabled = !available;
-    loreButton.setAttribute("aria-label", available ? `Voir le lore de ${lightboxTitle.textContent.trim()}` : "Lore indisponible");
-    loreButton.title = available ? "Voir le lore" : "";
+    loreButton.setAttribute("aria-label", available ? `View ${lightboxTitle.textContent.trim()} lore` : "Lore unavailable");
+    loreButton.title = available ? "View lore" : "";
 
     if (lightbox.classList.contains("is-lore-open")) {
       if (!available) closeLore({ restoreFocus: false });
@@ -179,5 +160,5 @@ function normalizeKey(value) {
     .replace(/\s*\(\s*wild\s+rift\s*\)\s*/gi, " ")
     .replace(/\s+/g, " ")
     .trim()
-    .toLocaleLowerCase("fr");
+    .toLocaleLowerCase("en");
 }
