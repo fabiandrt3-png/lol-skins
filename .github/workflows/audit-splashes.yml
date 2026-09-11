@@ -9,11 +9,15 @@ on:
     paths:
       - 'data/image-overrides.json'
       - 'data/manual-skins.txt'
+      - 'data/lor-art.json'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
       - 'scripts/upgrade-low-res.mjs'
       - 'scripts/finalize-hd.mjs'
+      - 'scripts/update-lor-art.mjs'
+      - 'scripts/lor-art-source.mjs'
+      - 'scripts/apply-lor-fallbacks.mjs'
       - '.github/workflows/audit-splashes.yml'
 
 concurrency:
@@ -35,6 +39,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Refresh official Legends of Runeterra art index
+        continue-on-error: true
+        run: node scripts/update-lor-art.mjs
 
       - name: Sort centralized catalogue
         run: node scripts/centralize-catalog.mjs
@@ -102,13 +110,17 @@ jobs:
         continue-on-error: true
         run: node scripts/finalize-hd.mjs
 
+      - name: Attach official Legends of Runeterra fallbacks
+        continue-on-error: true
+        run: node scripts/apply-lor-fallbacks.mjs
+
       - name: Save verified image map and audit reports
         shell: bash
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json data/manual-skins.txt audit-report.json addition-audit-report.json version.json 2>/dev/null || true
+          git add data/image-overrides.json data/manual-skins.txt data/lor-art.json audit-report.json addition-audit-report.json version.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No audit changes"
@@ -141,6 +153,7 @@ jobs:
           const fs = require('fs');
           const historical = fs.existsSync('audit-report.json') ? JSON.parse(fs.readFileSync('audit-report.json', 'utf8')) : {};
           const additions = fs.existsSync('addition-audit-report.json') ? JSON.parse(fs.readFileSync('addition-audit-report.json', 'utf8')) : {};
+          const lor = fs.existsSync('data/lor-art.json') ? JSON.parse(fs.readFileSync('data/lor-art.json', 'utf8')) : {};
           const s = historical.summary || {};
           const a = additions.summary || {};
           const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
@@ -160,6 +173,7 @@ jobs:
           console.log(`- Recent higher unlisted Wiki files: ${f.catalogRecoveredHigher ?? 0}`);
           console.log(`- Broken card fallbacks repaired: ${f.cardFallbacksRepaired ?? 0}`);
           console.log(`- Chroma entries checked/upgraded: ${m.chromaChecked ?? '?'} / ${m.chromaUpgraded ?? '?'}`);
+          console.log(`- Legends of Runeterra champion art names indexed: ${Object.keys(lor.champions || {}).length}`);
           console.log('');
           console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
             ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
