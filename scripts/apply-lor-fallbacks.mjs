@@ -29,11 +29,10 @@ for (const [id, override] of Object.entries(payload.entries || {})) {
   }, lorIndex).slice(0, MAX_LOR_FALLBACKS);
   if (!lor.length) continue;
 
-  const urls = lor.map((candidate) => candidate.url);
-  const before = JSON.stringify(override.fallbacks || []);
-  override.fallbacks = appendUnique(override.fallbacks, urls, 10, override.url);
+  const urls = unique(lor.map((candidate) => candidate.url));
+  const before = JSON.stringify(override.lorFallbacks || []);
   override.lorFallbacks = urls;
-  if (JSON.stringify(override.fallbacks) !== before) changedEntries += 1;
+  if (JSON.stringify(override.lorFallbacks) !== before) changedEntries += 1;
   linkedCandidates += urls.length;
 }
 
@@ -41,26 +40,21 @@ for (const item of payload.catalog || []) {
   const lor = lorCandidatesForEntry(item, lorIndex).slice(0, MAX_LOR_FALLBACKS);
   if (!lor.length) continue;
 
-  const urls = lor.map((candidate) => candidate.url);
-  const beforeCard = JSON.stringify(item.fallbacks || []);
-  const beforeFull = JSON.stringify(item.fullHdFallbacks || []);
+  const urls = unique(lor.map((candidate) => candidate.url));
+  const before = JSON.stringify(item.lorFallbacks || []);
 
-  // Keep the original LoL/Wild Rift art first. LoR is an official alternate-art
-  // fallback and must not silently replace a healthy skin splash.
-  item.fallbacks = appendUnique(item.fallbacks, urls, 10, item.image);
-  item.fullHdFallbacks = appendUnique(item.fullHdFallbacks, urls, 10, item.fullImage);
+  // Dedicated field on purpose: data-loader appends these after every LoL/WR
+  // candidate, so LoR can never outrank a healthy native splash.
   item.lorFallbacks = urls;
 
-  if (JSON.stringify(item.fallbacks) !== beforeCard || JSON.stringify(item.fullHdFallbacks) !== beforeFull) {
-    changedCatalog += 1;
-  }
+  if (JSON.stringify(item.lorFallbacks) !== before) changedCatalog += 1;
 }
 
 payload.lorArt = {
   source: lorIndex.source || 'Riot Games — Legends of Runeterra Data Dragon',
   generatedAt: lorIndex.generatedAt || null,
   championsIndexed: Object.keys(lorIndex.champions || {}).length,
-  policy: 'secondary official fallback; exact skin matches require explicit curation',
+  policy: 'secondary official fallback; native LoL/WR sources always remain first; exact skin matches require explicit curation',
 };
 
 const changed = changedEntries > 0 || changedCatalog > 0;
@@ -78,18 +72,6 @@ console.log(JSON.stringify({
   versionBumped: changed,
 }, null, 2));
 
-function appendUnique(existing, extra, limit, primary) {
-  const result = [];
-  const seen = new Set(primary ? [primary] : []);
-  for (const value of [...(existing || []), ...(extra || [])]) {
-    if (!value || seen.has(value)) continue;
-    seen.add(value);
-    result.push(value);
-    if (result.length >= limit) break;
-  }
-  return result;
-}
-
 function bumpVersion() {
   const payload = readJson(VERSION_FILE, {});
   const current = String(payload?.version || '');
@@ -104,4 +86,8 @@ function bumpVersion() {
 function readJson(file, fallback) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
   catch { return fallback; }
+}
+
+function unique(values) {
+  return [...new Set((values || []).filter(Boolean))];
 }
