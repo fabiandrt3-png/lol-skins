@@ -48,9 +48,7 @@ function translateValue(value) {
   return value;
 }
 
-function translateElement(element) {
-  if (!(element instanceof Element)) return;
-
+function translateAttributes(element) {
   for (const attribute of ["placeholder", "aria-label", "title"]) {
     const current = element.getAttribute(attribute);
     if (!current) continue;
@@ -65,6 +63,12 @@ function translateElement(element) {
       // Ignore malformed data URLs and keep the existing fallback.
     }
   }
+
+}
+
+function translateElement(element) {
+  if (!(element instanceof Element)) return;
+  translateAttributes(element);
 
   for (const child of element.childNodes) {
     if (child.nodeType === Node.TEXT_NODE) {
@@ -506,17 +510,40 @@ processSkinCards(document);
 installFullscreenNavigationBehavior();
 
 const observer = new MutationObserver((mutations) => {
+  const addedRoots = new Set();
+  const changedTargets = new Set();
+  const changedAttributes = new Set();
   for (const mutation of mutations) {
     if (mutation.type === "childList") {
       mutation.addedNodes.forEach((node) => {
-        translateMutationTarget(node);
-        if (node instanceof Element) processSkinCards(node);
+        if (node instanceof Element) addedRoots.add(node);
+        else changedTargets.add(node);
       });
-      translateMutationTarget(mutation.target);
-      if (mutation.target instanceof Element) processSkinCards(mutation.target);
+    } else if (mutation.type === "attributes") {
+      changedAttributes.add(mutation.target);
     } else {
-      translateMutationTarget(mutation.target);
+      changedTargets.add(mutation.target);
     }
+  }
+
+  // Added subtrees contain their descendants already. Visit each root once,
+  // without walking the entire grid again for every inserted card or badge.
+  const coveredByAddedRoot = (node) => {
+    for (let parent = node.parentElement; parent; parent = parent.parentElement) {
+      if (addedRoots.has(parent)) return true;
+    }
+    return false;
+  };
+  for (const root of addedRoots) {
+    if (!root.isConnected || coveredByAddedRoot(root)) continue;
+    translateElement(root);
+    processSkinCards(root);
+  }
+  for (const target of changedTargets) {
+    if (target.isConnected && !coveredByAddedRoot(target)) translateMutationTarget(target);
+  }
+  for (const target of changedAttributes) {
+    if (target.isConnected && !addedRoots.has(target) && !coveredByAddedRoot(target)) translateAttributes(target);
   }
 });
 

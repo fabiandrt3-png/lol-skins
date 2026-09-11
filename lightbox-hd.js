@@ -23,8 +23,7 @@ if (lightbox && image && title) {
   };
 
   const observer = new MutationObserver(() => queueMicrotask(syncSkin));
-  observer.observe(title, { childList: true, subtree: true, characterData: true });
-  observer.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
+  observer.observe(lightbox, { attributes: true, attributeFilter: ["hidden", "data-skin-id"] });
 
   syncSkin();
 }
@@ -69,12 +68,10 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources, hook
     const token = ++requestToken;
     if (lightbox.hidden) return;
 
-    const champion = currentChampion();
-    const skinName = title.textContent.trim();
-    const key = skinKey(champion, skinName);
+    const key = lightbox.dataset.skinId;
     const candidates = unique(fullscreenSources.get(key) || []);
 
-    if (!champion || !skinName || !candidates.length) {
+    if (!key || !candidates.length) {
       lightbox.dataset.hdState = "unavailable";
       image.removeAttribute("data-hd-source");
       return;
@@ -97,7 +94,7 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources, hook
 
       const loaded = await preload(source);
       if (token !== requestToken || lightbox.hidden) return;
-      if (skinKey(currentChampion(), title.textContent.trim()) !== key) return;
+      if (lightbox.dataset.skinId !== key) return;
 
       if (!loaded.ok) {
         failedSources.add(source);
@@ -121,7 +118,7 @@ function setupHdSourceController(lightbox, image, title, fullscreenSources, hook
       const markReady = () => {
         image.removeEventListener("load", markReady);
         if (token !== requestToken || lightbox.hidden) return;
-        if (skinKey(currentChampion(), title.textContent.trim()) !== key) return;
+        if (lightbox.dataset.skinId !== key) return;
         if (!sameImageSource(image.currentSrc || image.getAttribute("src") || "", source)) return;
         hooks.afterSwap?.();
         lightbox.dataset.hdState = "ready";
@@ -412,7 +409,7 @@ async function loadFullscreenSources() {
     for (const skin of skins) {
       const candidates = unique(skin?.highResImageCandidates || []);
       if (!candidates.length) continue;
-      sources.set(skinKey(skin.champ, displaySkinName(skin)), candidates);
+      sources.set(skin._id, candidates);
     }
 
     return sources;
@@ -420,21 +417,6 @@ async function loadFullscreenSources() {
     console.warn("Fullscreen HD sources unavailable; using standard splash arts.", error);
     return new Map();
   }
-}
-
-function currentChampion() {
-  const params = new URLSearchParams(location.hash.replace(/^#/, ""));
-  return params.get("champion") || "";
-}
-
-function skinKey(champion, skinName) {
-  return `${champion}\u0000${skinName}`;
-}
-
-function displaySkinName(skin) {
-  return skin.type === "Wild Rift" && !/\(Wild Rift\)/i.test(skin.skin)
-    ? `${skin.skin} (Wild Rift)`
-    : skin.skin;
 }
 
 function sameImageSource(left, right) {
