@@ -276,14 +276,10 @@ function setupDesktopViewer(lightbox, image, title) {
 
       state.baseWidth = Math.max(1, image.naturalWidth * fit);
       state.baseHeight = Math.max(1, image.naturalHeight * fit);
-      state.maxScale = Math.max(
-        1,
-        Math.min(
-          DESKTOP_MAX_ZOOM_SCALE,
-          image.naturalWidth / state.baseWidth,
-          image.naturalHeight / state.baseHeight,
-        ),
-      );
+      // Keep zoom available even when the source is close to or smaller than the
+      // viewport. High-resolution images stay sharp; smaller manual images can
+      // still be inspected by intentionally upscaling them.
+      state.maxScale = DESKTOP_MAX_ZOOM_SCALE;
       state.scale = preserveView ? clamp(state.scale, 1, state.maxScale) : 1;
       state.width = state.baseWidth * state.scale;
       state.height = state.baseHeight * state.scale;
