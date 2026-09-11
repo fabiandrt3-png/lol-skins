@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:10:04.011Z",
+  "generatedAt": "2026-09-11T15:14:51.187Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
@@ -1907,10 +1907,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR_HD.jpg?00cca",
-        "width": 7686,
-        "height": 3553,
-        "bytes": 19149220,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_NeonDaredevilSwiftbladezSkin_WR.jpg?b8f54",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 396261,
         "contentType": "image/jpeg"
       }
     },
@@ -2068,10 +2068,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR.jpg?02415",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 308284,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_CrystalRoseSkin_WR_HD.jpg?48e9d",
+        "width": 8000,
+        "height": 3696,
+        "bytes": 8667234,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2092,10 +2092,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 379295,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR_HD.jpg?ef9c0",
+        "width": 10000,
+        "height": 4500,
+        "bytes": 9044440,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2116,10 +2116,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR.jpg?c78de",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 372817,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_DragonmancerSkin_WR_HD.jpg?19991",
+        "width": 10000,
+        "height": 4619,
+        "bytes": 8884601,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -2140,10 +2140,10 @@
       "sourceKind": "post-cutoff",
       "card": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR.jpg?13431",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 300323,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_WeatherEntitySkin_WR_HD.jpg?9973b",
+        "width": 10000,
+        "height": 4500,
+        "bytes": 8327953,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -3485,5 +3485,14 @@
         "contentType": "image/jpeg"
       }
     }
-  ]
+  ],
+  "finalHdPass": {
+    "runAt": "2026-09-11T15:15:12.932Z",
+    "historicalSearched": 197,
+    "historicalRecoveredHigher": 5,
+    "catalogSearched": 100,
+    "catalogRecoveredHigher": 0,
+    "cardFallbacksRepaired": 0,
+    "stillUnresolved": 12
+  }
 }
