@@ -228,6 +228,20 @@
   top: calc(var(--lightbox-art-top) + (100dvh - var(--lightbox-art-top) - var(--lightbox-art-bottom)) / 2);
 }
 
+/* At the default zoom level every splash art must remain fully visible.
+   Desktop zoom code writes inline geometry, so these rules deliberately win
+   until the user actually zooms in. */
+.lightbox:not([data-desktop-zoomed="true"]) .lightbox-figure img {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
 @media (max-width: 720px) {
   .lightbox {
     --lightbox-art-top: calc(env(safe-area-inset-top) + 64px);
