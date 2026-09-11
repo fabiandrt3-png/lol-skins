@@ -1,6 +1,7 @@
 const VERIFIED_IMAGE_MAP = "data/image-overrides.json";
 const CATALOG_SOURCE = VERIFIED_IMAGE_MAP;
 const MANUAL_SKINS_SOURCE = "data/manual-skins.txt";
+const LOR_SKINS_SOURCE = "data/lor-skins.json";
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
 const CARD_PREVIEW_WIDTH = 2560;
 
@@ -14,7 +15,8 @@ export function loadSkinData() {
         return response.json();
       }),
       loadManualSkins(),
-    ]).then(([payload, manualSkins]) => {
+      loadLorSkins(),
+    ]).then(([payload, manualSkins, lorSkins]) => {
       const catalog = payload?.catalog;
       const verifiedImages = payload?.entries;
 
@@ -23,7 +25,8 @@ export function loadSkinData() {
       }
 
       const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
-      const mergedCatalog = mergeManualSkins(catalog, manualSkins);
+      const withLor = mergeLorSkins(catalog, lorSkins);
+      const mergedCatalog = mergeManualSkins(withLor, manualSkins);
       return mergedCatalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
     });
   }
@@ -38,6 +41,18 @@ async function loadManualSkins() {
     return parseManualSkins(await response.text());
   } catch (error) {
     console.warn("Manual skins file unavailable; using the main catalog.", error);
+    return [];
+  }
+}
+
+async function loadLorSkins() {
+  try {
+    const response = await fetch(versionedAppAsset(LOR_SKINS_SOURCE), { cache: "default" });
+    if (!response.ok) return [];
+    const payload = await response.json();
+    return Array.isArray(payload?.entries) ? payload.entries : [];
+  } catch (error) {
+    console.warn("Legends of Runeterra skin catalog unavailable; continuing without LoR entries.", error);
     return [];
   }
 }
@@ -63,7 +78,7 @@ function parseManualSkins(text) {
     }
 
     const type = normalizeManualType(rawType);
-    const id = `${slugify(champ)}::${slugify(skin)}::${type === "Wild Rift" ? "wild-rift" : "pc"}`;
+    const id = `${slugify(champ)}::${slugify(skin)}::${platformSlug(type)}`;
 
     result.push({
       id,
@@ -83,7 +98,53 @@ function parseManualSkins(text) {
 function normalizeManualType(value) {
   const type = String(value || "PC").trim().toLocaleLowerCase("en");
   if (["wr", "wild rift", "wild-rift", "wildrift"].includes(type)) return "Wild Rift";
+  if (["lor", "legends of runeterra", "legends-of-runeterra", "runeterra"].includes(type)) return "Legends of Runeterra";
   return "PC";
+}
+
+function mergeLorSkins(catalog, lorSkins) {
+  const merged = catalog.map((item) => ({ ...item }));
+  const orderedLor = (lorSkins || [])
+    .filter(validSkinEntry)
+    .map((item, index) => ({ ...item, _lorInputIndex: index }))
+    .sort(compareLorEntries);
+
+  for (const lor of orderedLor) {
+    const id = stableSkinId(lor);
+    const existingIndex = merged.findIndex((item) => stableSkinId(item) === id);
+    if (existingIndex >= 0) {
+      if (merged[existingIndex]?.sourceKind === "lor") merged[existingIndex] = { ...merged[existingIndex], ...lor };
+      continue;
+    }
+
+    let insertAt = -1;
+    for (let index = merged.length - 1; index >= 0; index -= 1) {
+      if (merged[index].champ === lor.champ) {
+        insertAt = index;
+        break;
+      }
+    }
+
+    const cleanLor = { ...lor };
+    delete cleanLor._lorInputIndex;
+    merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanLor);
+  }
+
+  return merged;
+}
+
+function compareLorEntries(a, b) {
+  return String(a.champ || "").localeCompare(String(b.champ || ""), "en", { sensitivity: "base" })
+    || compareReleaseDates(a.releaseDate, b.releaseDate)
+    || Number(a.lorSkinIndex ?? 9999) - Number(b.lorSkinIndex ?? 9999)
+    || Number(a.lorLevelNumber ?? 9999) - Number(b.lorLevelNumber ?? 9999)
+    || Number(a._lorInputIndex ?? 0) - Number(b._lorInputIndex ?? 0);
+}
+
+function compareReleaseDates(left, right) {
+  const a = /^\d{4}-\d{2}-\d{2}$/.test(String(left || "")) ? String(left) : "9999-12-31";
+  const b = /^\d{4}-\d{2}-\d{2}$/.test(String(right || "")) ? String(right) : "9999-12-31";
+  return a.localeCompare(b);
 }
 
 function mergeManualSkins(catalog, manualSkins) {
@@ -120,20 +181,21 @@ function mergeManualSkins(catalog, manualSkins) {
 
 function stableSkinId(item) {
   if (item?.id) return String(item.id);
-  const platform = item?.type === "Wild Rift" ? "wild-rift" : "pc";
-  return `${slugify(item?.champ)}::${slugify(item?.skin)}::${platform}`;
+  return `${slugify(item?.champ)}::${slugify(item?.skin)}::${platformSlug(item?.type)}`;
+}
+
+function platformSlug(type) {
+  if (type === "Wild Rift") return "wild-rift";
+  if (type === "Legends of Runeterra") return "legends-of-runeterra";
+  return "pc";
 }
 
 function mapCatalogSkin(item, verifiedImages) {
-  const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
+  const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${platformSlug(item.type)}`;
   const verified = verifiedImages[id] || null;
   const isManual = item.sourceKind === "manual";
   const isChroma = isChromaSkin(item);
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
-  const lorFallbackCandidates = unique([
-    ...(item.lorFallbacks || []),
-    ...(verified?.lorFallbacks || []),
-  ]);
   const sourceCandidates = item.sourceKind === "legacy"
     ? legacyImageCandidates(item.image)
     : unique([item.image, ...(item.fallbacks || [])]);
@@ -152,34 +214,31 @@ function mapCatalogSkin(item, verifiedImages) {
   const imageCandidates = unique([
     ...optimizedExactCardCandidates,
     ...cardImageCandidates(cardCandidates),
-    ...lorFallbackCandidates,
   ]);
 
   // Chromas are special: a base-skin HD splash must never replace a real chroma
   // splash in fullscreen. Keep the exact chroma source unless a fullscreen source
-  // is explicitly the same image or is clearly chroma-specific. LoR is always
-  // appended last so an alternate official illustration never outranks LoL/WR.
-  const primaryFullscreenCandidates = isChroma
+  // is explicitly the same image or is clearly chroma-specific.
+  const highResImageCandidates = isChroma
     ? unique([
         ...explicitFullscreenCandidates,
         ...verifiedCandidates,
         ...sourceCandidates,
       ])
     : buildStandardFullscreenCandidates(item, cardCandidates, explicitFullscreenCandidates);
-  const highResImageCandidates = unique([
-    ...primaryFullscreenCandidates,
-    ...lorFallbackCandidates,
-  ]);
 
   return {
     champ: item.champ,
     skin: item.skin,
     ...(item.type ? { type: item.type } : {}),
     ...(item.releaseDate ? { releaseDate: item.releaseDate } : {}),
+    ...(item.lorSkinName ? { lorSkinName: item.lorSkinName } : {}),
+    ...(item.lorLevel ? { lorLevel: item.lorLevel } : {}),
+    ...(item.lorLevelNumber ? { lorLevelNumber: item.lorLevelNumber } : {}),
+    ...(item.lorCardCode ? { lorCardCode: item.lorCardCode } : {}),
     _id: id,
     _legacyImage: item.image,
     _verifiedImageMeta: verified,
-    _lorFallbackCandidates: lorFallbackCandidates,
     imageCandidates,
     highResImageCandidates,
     iconCandidates: unique([item.icon]),
@@ -229,6 +288,7 @@ function versionedAppAsset(url) {
 }
 
 function shouldUseExactHdPreview(item) {
+  if (item?.sourceKind === "lor") return false;
   if (!item?.fullImage || !isWikiHighDefinitionSource(item.fullImage)) return false;
   if (isChromaSkin(item) && !isSafeChromaFullscreenSource(item.fullImage, item)) return false;
   return !isLeagueWikiSource(item.image);
@@ -249,7 +309,7 @@ function highResolutionImageCandidates(candidates) {
 }
 
 function inferredWikiHdCandidates(item) {
-  if (!item?.champ || !item?.skin || isChromaSkin(item)) return [];
+  if (!item?.champ || !item?.skin || isChromaSkin(item) || item?.type === "Legends of Runeterra") return [];
 
   const championToken = wikiFileToken(item.champ);
   const rawSkinName = String(item.skin)
