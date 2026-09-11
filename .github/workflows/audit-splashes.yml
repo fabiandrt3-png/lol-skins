@@ -10,14 +10,16 @@ on:
       - 'data/image-overrides.json'
       - 'data/manual-skins.txt'
       - 'data/lor-art.json'
+      - 'data/lor-skins.json'
       - 'data-loader.js'
       - 'scripts/audit-additions.mjs'
       - 'scripts/centralize-catalog.mjs'
       - 'scripts/upgrade-low-res.mjs'
       - 'scripts/finalize-hd.mjs'
       - 'scripts/update-lor-art.mjs'
+      - 'scripts/update-lor-skins.mjs'
       - 'scripts/lor-art-source.mjs'
-      - 'scripts/apply-lor-fallbacks.mjs'
+      - 'scripts/cleanup-lor-fallbacks.mjs'
       - 'scripts/preserve-audit-quality.mjs'
       - '.github/workflows/audit-splashes.yml'
 
@@ -44,6 +46,10 @@ jobs:
       - name: Refresh official Legends of Runeterra art index
         continue-on-error: true
         run: node scripts/update-lor-art.mjs
+
+      - name: Refresh Legends of Runeterra skin catalog
+        continue-on-error: true
+        run: node scripts/update-lor-skins.mjs
 
       - name: Sort centralized catalogue
         run: node scripts/centralize-catalog.mjs
@@ -115,24 +121,24 @@ jobs:
         continue-on-error: true
         run: node scripts/preserve-audit-quality.mjs "$RUNNER_TEMP/image-overrides-before-audit.json"
 
-      - name: Attach official Legends of Runeterra fallbacks
+      - name: Remove obsolete LoR fallback metadata
         continue-on-error: true
-        run: node scripts/apply-lor-fallbacks.mjs
+        run: node scripts/cleanup-lor-fallbacks.mjs
 
-      - name: Save verified image map and audit reports
+      - name: Save verified image map, LoR catalog, and audit reports
         shell: bash
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json data/manual-skins.txt data/lor-art.json audit-report.json addition-audit-report.json version.json 2>/dev/null || true
+          git add data/image-overrides.json data/manual-skins.txt data/lor-art.json data/lor-skins.json audit-report.json addition-audit-report.json version.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No audit changes"
             exit 0
           fi
 
-          git commit -m "Maximize verified splash art sources"
+          git commit -m "Refresh verified splash art sources"
 
           for attempt in 1 2 3; do
             if git push; then
@@ -159,6 +165,7 @@ jobs:
           const historical = fs.existsSync('audit-report.json') ? JSON.parse(fs.readFileSync('audit-report.json', 'utf8')) : {};
           const additions = fs.existsSync('addition-audit-report.json') ? JSON.parse(fs.readFileSync('addition-audit-report.json', 'utf8')) : {};
           const lor = fs.existsSync('data/lor-art.json') ? JSON.parse(fs.readFileSync('data/lor-art.json', 'utf8')) : {};
+          const lorSkins = fs.existsSync('data/lor-skins.json') ? JSON.parse(fs.readFileSync('data/lor-skins.json', 'utf8')) : {};
           const s = historical.summary || {};
           const a = additions.summary || {};
           const m = historical.wikiMaximumPass || additions.wikiMaximumPass || {};
@@ -179,6 +186,7 @@ jobs:
           console.log(`- Broken card fallbacks repaired: ${f.cardFallbacksRepaired ?? 0}`);
           console.log(`- Chroma entries checked/upgraded: ${m.chromaChecked ?? '?'} / ${m.chromaUpgraded ?? '?'}`);
           console.log(`- Legends of Runeterra champion art names indexed: ${Object.keys(lor.champions || {}).length}`);
+          console.log(`- Legends of Runeterra level artworks: ${(lorSkins.entries || []).length}`);
           console.log('');
           console.log((s.unresolved ?? 0) > 0 || (a.unresolved ?? 0) > 0
             ? '⚠️ Some splash arts are unresolved. Inspect the audit reports for details.'
