@@ -4,9 +4,11 @@ const CATALOG_FILE = 'data/image-overrides.json';
 const MANUAL_FILE = 'data/manual-skins.txt';
 const VERSION_FILE = 'version.json';
 const WIKI_API = 'https://wiki.leagueoflegends.com/en-us/api.php';
-const USER_AGENT = 'lol-skins-catalog-sync/1.0 (+https://github.com/fabiandrt3-png/lol-skins)';
+const USER_AGENT = 'lol-skins-catalog-sync/1.1 (+https://github.com/fabiandrt3-png/lol-skins)';
 const TIMEOUT_MS = 25000;
 const SENSITIVE_TERMS = ['prestige', 'select', 'special', 'edition', 'exquisite', 'mythic'];
+const CATALOG_STRATEGY =
+  'single runtime catalogue; champions A-Z; existing per-champion skin order preserved; all released PC and Wild Rift skins synced from League Wiki skin data; nested chromas excluded unless represented as a standalone skin with its own splash; duplicate artwork remains excluded';
 const SOURCES = [
   { module: 'Module:SkinData/data', type: 'PC', platform: 'pc' },
   { module: 'Module:SkinDataWR/data', type: 'Wild Rift', platform: 'wild-rift' },
@@ -53,6 +55,7 @@ for (const record of discovered) {
     continue;
   }
 
+  const verifiedAt = now.toISOString();
   const item = {
     id: `${slugify(record.champion)}::${slugify(record.displayName)}::${record.platform}`,
     champ: record.champion,
@@ -62,8 +65,8 @@ for (const record of discovered) {
     image: image.url,
     sourceKind: 'wiki-catalog-sync',
     cardSource: image.isHd ? 'league-wiki-hd-fallback' : 'league-wiki-current-client',
-    cardVerifiedAt: now.toISOString(),
-    ...(image.isHd ? { fullImage: image.url, hdSource: 'league-wiki-hd-fallback', hdVerifiedAt: now.toISOString() } : {}),
+    cardVerifiedAt: verifiedAt,
+    ...(image.isHd ? { fullImage: image.url, hdSource: 'league-wiki-hd-fallback', hdVerifiedAt: verifiedAt } : {}),
   };
 
   insertCatalogItem(catalog, item);
@@ -72,20 +75,42 @@ for (const record of discovered) {
   console.log(`+ ${record.type}: ${record.champion} — ${record.displayName}`);
 }
 
-payload.catalog = catalog;
-payload.catalogGeneratedAt = now.toISOString();
-payload.catalogStrategy = 'single runtime catalogue; champions A-Z; existing per-champion skin order preserved; all released PC and Wild Rift skins synced from League Wiki skin data; nested chromas excluded unless represented as a standalone skin with its own splash; duplicate artwork remains excluded';
-payload.catalogSync = {
-  runAt: now.toISOString(),
+const addedCount = Object.values(sourceStats).reduce((sum, value) => sum + value.added, 0);
+const nextSync = {
   sources: SOURCES.map((source) => source.module),
   ...sourceStats,
-  added: Object.values(sourceStats).reduce((sum, value) => sum + value.added, 0),
+  added: addedCount,
   unresolved,
 };
+const currentSync = stableSyncState(payload.catalogSync);
+const syncChanged = !deepEqual(currentSync, nextSync);
+const catalogChanged = addedCount > 0;
+const strategyChanged = payload.catalogStrategy !== CATALOG_STRATEGY;
+const shouldWrite = catalogChanged || syncChanged || strategyChanged;
 
-fs.writeFileSync(CATALOG_FILE, JSON.stringify(payload, null, 2) + '\n');
-if (payload.catalogSync.added > 0) bumpVersion();
-console.log(JSON.stringify({ runDate, ...payload.catalogSync }, null, 2));
+if (shouldWrite) {
+  payload.catalog = catalog;
+  payload.catalogGeneratedAt = now.toISOString();
+  payload.catalogStrategy = CATALOG_STRATEGY;
+  payload.catalogSync = nextSync;
+  fs.writeFileSync(CATALOG_FILE, JSON.stringify(payload, null, 2) + '\n');
+  console.log(`Catalog state updated (${addedCount} skin${addedCount === 1 ? '' : 's'} added).`);
+} else {
+  console.log('Catalog already synchronized; no material file changes.');
+}
+
+if (catalogChanged) bumpVersion();
+console.log(JSON.stringify({ runDate, changed: shouldWrite, ...nextSync }, null, 2));
+
+function stableSyncState(value) {
+  if (!value || typeof value !== 'object') return {};
+  const { runAt: _runAt, checkedAt: _checkedAt, ...stable } = value;
+  return stable;
+}
+
+function deepEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
 
 function bumpVersion() {
   if (!fs.existsSync(VERSION_FILE)) return;
