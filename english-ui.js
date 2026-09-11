@@ -21,6 +21,7 @@ const exactTranslations = new Map([
 ]);
 
 const WILD_RIFT_SUFFIX = /\s*\(\s*Wild Rift\s*\)/gi;
+const CHROMA_TOKEN = /\s*[-–—:|/]?\s*\bchroma\b\s*[-–—:|/]?\s*/gi;
 
 function translateValue(value) {
   if (!value) return value;
@@ -90,7 +91,7 @@ function translateMutationTarget(target) {
   if (target instanceof Element) translateElement(target);
 }
 
-function installCardPlatformStyles() {
+function installCardBadgeStyles() {
   let style = document.querySelector("#skin-platform-card-styles");
   if (!style) {
     style = document.createElement("style");
@@ -99,69 +100,131 @@ function installCardPlatformStyles() {
   }
 
   style.textContent = `
-    .skin-title-wrap .skin-platform-label {
-      display: block;
-      margin: 7px 0 0;
-      color: var(--tertiary);
-      font-size: 10px;
-      font-weight: 500;
-      line-height: 1.2;
+    .skin-title-wrap .skin-platform-label,
+    .skin-title-wrap > p:not(.skin-badges) {
+      display: none !important;
+    }
+
+    .skin-title-wrap .skin-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 7px;
+    }
+
+    .skin-title-wrap .badge {
+      min-height: 22px;
+      padding: 0 8px;
+      border: 1px solid var(--separator-strong);
+      border-radius: 999px;
+      background: var(--surface-soft);
+      font-size: 9px;
+      font-weight: 650;
+      line-height: 1;
+    }
+
+    .skin-title-wrap .badge-wr {
+      border-color: rgba(100, 210, 255, .24);
+      background: rgba(100, 210, 255, .13);
+      color: #64d2ff;
+    }
+
+    .skin-title-wrap .badge-chroma {
+      border-color: rgba(255, 159, 154, .22);
+      background: rgba(255, 159, 154, .10);
+      color: #ff9f9a;
+    }
+
+    .skin-title-wrap .badge-prestige {
+      border-color: color-mix(in srgb, var(--yellow) 26%, transparent);
+      background: color-mix(in srgb, var(--yellow) 10%, transparent);
+      color: var(--yellow);
     }
   `;
 }
 
-function cleanWildRiftLabel(value) {
-  return String(value || "").replace(WILD_RIFT_SUFFIX, "").replace(/\s{2,}/g, " ").trim();
+function cleanSkinCardName(value) {
+  return String(value || "")
+    .replace(WILD_RIFT_SUFFIX, " ")
+    .replace(CHROMA_TOKEN, " ")
+    .replace(/[()]/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/(?:\s*[-–—:|/]\s*)+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function ensureBadge(row, className, label) {
+  let badge = row.querySelector(`.${className}`);
+  if (!badge) {
+    badge = document.createElement("span");
+    badge.className = `badge ${className}`;
+    row.appendChild(badge);
+  }
+  badge.textContent = label;
+  return badge;
 }
 
 function processSkinCard(card) {
-  if (!(card instanceof Element) || card.dataset.platformLabelReady === "true") return;
+  if (!(card instanceof Element) || card.dataset.cardBadgesReady === "true") return;
 
   const titleWrap = card.querySelector(".skin-title-wrap");
   const title = titleWrap?.querySelector("h3");
   const preview = card.querySelector(".skin-preview");
   if (!titleWrap || !title || !preview) return;
 
+  const rawTitle = title.textContent || "";
   const inlineWildRiftTag = title.querySelector(".skin-tag-wr");
-  const wildRiftBadge = card.querySelector(".badge-wr");
-  const existingPlatformText = [...titleWrap.querySelectorAll("p")]
+  const existingWildRiftBadge = card.querySelector(".badge-wr");
+  const existingChromaBadge = card.querySelector(".badge-chroma");
+  const legacyPlatformText = [...titleWrap.querySelectorAll("p")]
     .find((element) => /^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim()));
+
   const isWildRift = Boolean(
     inlineWildRiftTag
-    || wildRiftBadge
-    || /\(\s*Wild Rift\s*\)/i.test(title.textContent || "")
-    || /^Wild Rift$/i.test(existingPlatformText?.textContent?.trim() || "")
+    || existingWildRiftBadge
+    || /\(\s*Wild Rift\s*\)/i.test(rawTitle)
+    || /^Wild Rift$/i.test(legacyPlatformText?.textContent?.trim() || "")
   );
+  const isChroma = Boolean(existingChromaBadge || /\bchroma\b/i.test(rawTitle));
 
-  card.dataset.platformLabelReady = "true";
+  card.dataset.cardBadgesReady = "true";
 
-  if (isWildRift) {
-    inlineWildRiftTag?.remove();
-    title.normalize();
+  title.textContent = cleanSkinCardName(rawTitle);
 
-    for (const node of title.childNodes) {
-      if (node.nodeType === Node.TEXT_NODE) node.nodeValue = cleanWildRiftLabel(node.nodeValue);
-    }
+  const image = preview.querySelector("img");
+  if (image?.alt) image.alt = cleanSkinCardName(image.alt);
 
-    const image = preview.querySelector("img");
-    if (image?.alt) image.alt = cleanWildRiftLabel(image.alt);
+  const ariaLabel = preview.getAttribute("aria-label");
+  if (ariaLabel) preview.setAttribute("aria-label", cleanSkinCardName(ariaLabel));
 
-    const ariaLabel = preview.getAttribute("aria-label");
-    if (ariaLabel) preview.setAttribute("aria-label", cleanWildRiftLabel(ariaLabel));
+  titleWrap.querySelectorAll(".skin-platform-label").forEach((element) => element.remove());
+  titleWrap.querySelectorAll("p").forEach((element) => {
+    if (/^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim())) element.remove();
+  });
 
-    wildRiftBadge?.remove();
+  let badgeRow = titleWrap.querySelector(".skin-badges");
+  const needsBadgeRow = isWildRift || isChroma || Boolean(badgeRow?.children.length);
+
+  if (needsBadgeRow && !badgeRow) {
+    badgeRow = document.createElement("div");
+    badgeRow.className = "skin-badges";
+    titleWrap.appendChild(badgeRow);
   }
 
-  const oldBadgeRow = card.querySelector(".skin-badges");
-  if (oldBadgeRow && !oldBadgeRow.children.length) oldBadgeRow.remove();
+  if (badgeRow) {
+    badgeRow.querySelectorAll(".badge-wr").forEach((badge, index) => {
+      if (!isWildRift || index > 0) badge.remove();
+    });
+    badgeRow.querySelectorAll(".badge-chroma").forEach((badge, index) => {
+      if (!isChroma || index > 0) badge.remove();
+    });
 
-  existingPlatformText?.remove();
-  titleWrap.querySelectorAll(".skin-platform-label").forEach((element) => element.remove());
+    if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");
+    if (isChroma) ensureBadge(badgeRow, "badge-chroma", "Chroma");
 
-  const platformLabel = document.createElement("p");
-  platformLabel.className = "skin-platform-label";
-  platformLabel.textContent = isWildRift ? "Wild Rift" : "League of Legends PC";
-  titleWrap.appendChild(platformLabel);
+    if (!badgeRow.children.length) badgeRow.remove();
+  }
 }
 
 function processSkinCards(root = document) {
@@ -170,7 +233,7 @@ function processSkinCards(root = document) {
 }
 
 document.documentElement.lang = "en";
-installCardPlatformStyles();
+installCardBadgeStyles();
 translateElement(document.body);
 processSkinCards(document);
 
