@@ -13,9 +13,12 @@ if (lightbox && loreButton && lightboxTitle) {
 }
 
 async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
-  loreButton.hidden = true;
+  // Keep the control visible in the fullscreen toolbar at all times. It is
+  // temporarily disabled only while lore data is loading or truly unavailable.
+  loreButton.hidden = false;
   loreButton.disabled = true;
   loreButton.setAttribute("aria-expanded", "false");
+  loreButton.setAttribute("aria-label", "Loading lore");
 
   const scrim = document.createElement("button");
   scrim.type = "button";
@@ -55,15 +58,6 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   let wildRiftLoreEntries = [];
   let currentLore = null;
   let syncToken = 0;
-
-  await Promise.all([
-    loadLocalEntries(LORE_METADATA_SOURCE, "Lore metadata").then((entries) => {
-      metadataEntries = entries;
-    }),
-    loadLocalEntries(WILD_RIFT_LORE_SOURCE, "Wild Rift lore").then((entries) => {
-      wildRiftLoreEntries = entries;
-    }),
-  ]);
 
   const currentChampion = () => {
     const params = new URLSearchParams(location.hash.replace(/^#/, ""));
@@ -131,9 +125,6 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
     const isWildRiftSkin = /\(\s*wild\s+rift\s*\)\s*$/i.test(displayedSkinName);
     const metadata = metadataFor(championName, displayedSkinName) || metadataFor(championName, cleanSkinName);
 
-    // Wild Rift-exclusive skin lore is not exposed by Riot's public champion webpage.
-    // Use only exact client strings that were transcribed from the Wild Rift client;
-    // never substitute or generate a description for a missing WR entry.
     if (isWildRiftSkin) {
       const wrEntry = wildRiftLoreFor(championName, cleanSkinName);
       const text = officialText(wrEntry?.text);
@@ -188,7 +179,7 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
     panel.hidden = true;
     scrim.hidden = true;
     loreButton.setAttribute("aria-expanded", "false");
-    if (restoreFocus && !loreButton.hidden) loreButton.focus({ preventScroll: true });
+    if (restoreFocus) loreButton.focus({ preventScroll: true });
   };
 
   const openLore = () => {
@@ -204,8 +195,11 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   const sync = async () => {
     const token = ++syncToken;
     currentLore = null;
-    loreButton.hidden = true;
+    loreButton.hidden = false;
     loreButton.disabled = true;
+    loreButton.classList.add("is-loading-lore");
+    loreButton.setAttribute("aria-label", "Loading lore");
+    loreButton.title = "Loading lore";
 
     if (lightbox.hidden) {
       closeLore({ restoreFocus: false });
@@ -220,10 +214,11 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
 
     currentLore = lore;
     const available = Boolean(lore?.text);
-    loreButton.hidden = !available;
+    loreButton.hidden = false;
     loreButton.disabled = !available;
+    loreButton.classList.remove("is-loading-lore");
     loreButton.setAttribute("aria-label", available ? `View ${displayedSkinName} lore` : "Lore unavailable");
-    loreButton.title = available ? "View lore" : "";
+    loreButton.title = available ? "View lore" : "Lore unavailable";
 
     if (lightbox.classList.contains("is-lore-open")) {
       if (!available) closeLore({ restoreFocus: false });
@@ -252,12 +247,24 @@ async function setupLorePanel(lightbox, loreButton, lightboxTitle) {
   observer.observe(lightbox, { attributes: true, attributeFilter: ["hidden"] });
   window.addEventListener("hashchange", () => queueMicrotask(sync));
 
+  // Register the UI first, then load local lore in parallel. Once the files are
+  // ready, resync the current skin so opening fullscreen during deployment or a
+  // slow network can no longer leave the button permanently hidden.
+  Promise.all([
+    loadLocalEntries(LORE_METADATA_SOURCE, "Lore metadata").then((entries) => {
+      metadataEntries = entries;
+    }),
+    loadLocalEntries(WILD_RIFT_LORE_SOURCE, "Wild Rift lore").then((entries) => {
+      wildRiftLoreEntries = entries;
+    }),
+  ]).finally(() => queueMicrotask(sync));
+
   sync();
 }
 
 async function loadLocalEntries(source, label) {
   try {
-    const response = await fetch(versionedAsset(source), { cache: "default" });
+    const response = await fetch(versionedAsset(source), { cache: "no-store" });
     if (!response.ok) throw new Error(`${label} unavailable (${response.status})`);
     const payload = await response.json();
     return Array.isArray(payload?.entries) ? payload.entries : [];
