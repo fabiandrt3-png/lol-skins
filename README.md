@@ -44,18 +44,22 @@ Règles simples :
 
 ## Architecture
 
-Le front est volontairement compact :
+Le front reste volontairement compact :
 
 - `index.html` : structure sémantique de l’interface
-- `styles.css` : **unique feuille de styles** pour desktop et mobile
+- `styles.css` : styles principaux desktop et mobile
+- `lore.css` : styles isolés du panneau de lore plein écran
 - `app.js` : navigation, recherche, filtres, favoris, lightbox et gestion des images
+- `lightbox-hd.js` : sources HD et zoom plein écran desktop
+- `lore.js` : bouton et panneau de lore, sans modifier le carrousel ou le zoom
 - `data-loader.js` : charge le catalogue principal et les ajouts manuels
 - `data/image-overrides.json` : catalogue principal et carte des meilleures sources de splash arts vérifiées
 - `data/manual-skins.txt` : **petit fichier à modifier à la main pour ajouter/corriger rapidement des skins**
+- `data/skin-lore.json` : lore affiché dans le plein écran ; l’essai initial couvre Akshan et ses skins
 - `legacy/index-original.html` : copie intacte du prototype initial, conservée uniquement comme référence historique
 - `scripts/` : audit, réparation Wild Rift et recherche d’originaux haute résolution
 
-Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. Cela évite les conflits de spécificité et garantit que desktop et téléphone utilisent la même base visuelle avec des media queries adaptées.
+Les styles principaux Apple/mobile restent fusionnés dans `styles.css`. Le panneau de lore est volontairement isolé dans une petite feuille dédiée pour ne pas perturber les règles existantes du plein écran, du zoom et des cartes.
 
 ## Fonctionnalités
 
@@ -65,6 +69,8 @@ Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. 
 - favoris persistants dans `localStorage`
 - navigation par URL avec `#champion=...`
 - lightbox clavier + swipe mobile
+- bouton Lore en plein écran lorsqu’un lore est disponible
+- panneau de lore responsive avec le splash art conservé en arrière-plan, obscurci et flouté
 - splash arts toujours affichés en entier (`object-fit: contain`)
 - chargement paresseux des images
 - fallbacks automatiques avec mémorisation des URLs en échec pendant la session
@@ -75,6 +81,8 @@ Les anciennes couches CSS Apple/mobile ont été fusionnées dans `styles.css`. 
 Au runtime, l’application charge le catalogue principal depuis `data/image-overrides.json`, puis ajoute les quelques lignes éventuelles de `data/manual-skins.txt`.
 
 Le petit fichier manuel est chargé sans cache afin qu'un nouveau skin apparaisse après le déploiement GitHub Pages sans avoir à modifier la version de l'application.
+
+Le fichier de lore est chargé une seule fois par session du module plein écran. Le panneau n’est rendu que lorsqu’un skin disposant d’une entrée de lore est ouvert.
 
 Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
