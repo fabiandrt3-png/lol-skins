@@ -1,6 +1,6 @@
 # LoL Skins
 
-Galerie responsive de champions, skins, chromas et variantes League of Legends / Wild Rift.
+Galerie responsive de champions, skins, chromas et variantes League of Legends, Wild Rift et Legends of Runeterra.
 
 ## Ajouter un skin manuellement
 
@@ -11,7 +11,7 @@ Modifie uniquement `data/manual-skins.txt`.
 Une ligne = un skin :
 
 ```text
-Champion | Nom du skin | PC ou WR | image carte | image plein écran HD | après ce skin (optionnel)
+Champion | Nom du skin | PC, WR ou LoR | image carte | image plein écran HD | après ce skin (optionnel)
 ```
 
 Exemple :
@@ -26,6 +26,12 @@ Pour Wild Rift, écris `WR` :
 Lux | Nouveau skin Lux | WR | https://exemple.com/lux.jpg | https://exemple.com/lux-hd.jpg
 ```
 
+Pour Legends of Runeterra, écris `LoR` :
+
+```text
+Akshan | Variante LoR Akshan — Level 1 | LoR | https://exemple.com/akshan-lor.png | https://exemple.com/akshan-lor-hd.jpg
+```
+
 Pour placer un chroma ou une variante juste après son skin parent, ajoute le nom du parent en 6e colonne :
 
 ```text
@@ -35,7 +41,7 @@ Aatrox | Variante spéciale | PC | https://exemple.com/carte.jpg | https://exemp
 Règles simples :
 
 - les lignes qui commencent par `#` sont des commentaires et sont ignorées ;
-- `PC` est utilisé par défaut si tu écris autre chose que `WR` / `Wild Rift` ;
+- `PC` est utilisé par défaut si tu écris autre chose que `WR` / `Wild Rift` ou `LoR` / `Legends of Runeterra` ;
 - l'identifiant technique est créé automatiquement ;
 - si tu ne renseignes pas la 6e colonne, le skin est ajouté après le dernier skin du champion ;
 - si une ligne est mal écrite, elle est ignorée au lieu de casser toute l'application ;
@@ -52,13 +58,14 @@ Le front reste volontairement compact :
 - `app.js` : navigation, recherche, filtres, favoris, lightbox et gestion des images
 - `lightbox-hd.js` : sources HD et zoom plein écran desktop
 - `lore.js` : bouton et panneau de lore, sans modifier le carrousel ou le zoom
-- `data-loader.js` : charge le catalogue principal et les ajouts manuels
-- `data/image-overrides.json` : catalogue principal et carte des meilleures sources de splash arts vérifiées
-- `data/lor-art.json` : index généré des illustrations officielles Legends of Runeterra provenant du Data Dragon Riot
+- `data-loader.js` : charge le catalogue principal, les skins LoR générés et les ajouts manuels
+- `data/image-overrides.json` : catalogue principal LoL / Wild Rift et carte des meilleures sources de splash arts vérifiées
+- `data/lor-skins.json` : catalogue généré des skins Legends of Runeterra, avec une entrée distincte pour chaque artwork de niveau
+- `data/lor-art.json` : index technique des illustrations officielles de champions LoR provenant du Data Dragon Riot
 - `data/manual-skins.txt` : **petit fichier à modifier à la main pour ajouter/corriger rapidement des skins**
-- `data/skin-lore.json` : lore affiché dans le plein écran ; l’essai initial couvre Akshan et ses skins
+- `data/skin-lore.json` : métadonnées de lore affichées dans le plein écran
 - `legacy/index-original.html` : copie intacte du prototype initial, conservée uniquement comme référence historique
-- `scripts/` : audit, réparation Wild Rift, index LoR et recherche d’originaux haute résolution
+- `scripts/` : audit, réparation Wild Rift, génération LoR et recherche d’originaux haute résolution
 
 Les styles principaux Apple/mobile restent fusionnés dans `styles.css`. Le panneau de lore est volontairement isolé dans une petite feuille dédiée pour ne pas perturber les règles existantes du plein écran, du zoom et des cartes.
 
@@ -66,25 +73,29 @@ Les styles principaux Apple/mobile restent fusionnés dans `styles.css`. Le pann
 
 - interface Apple-inspired sobre, responsive PC / téléphone
 - recherche de champions et de skins
-- filtres PC, Wild Rift, Prestige / Mythic, Chromas et Favoris
+- filtres PC, Wild Rift, Legends of Runeterra, Prestige / Mythic, Chromas et Favoris
 - favoris persistants dans `localStorage`
 - navigation par URL avec `#champion=...`
 - lightbox clavier + swipe mobile
-- bouton Lore en plein écran lorsqu’un lore est disponible
+- bouton Lore en plein écran lorsqu’un lore officiel est disponible
 - panneau de lore responsive avec le splash art conservé en arrière-plan, obscurci et flouté
-- splash arts toujours affichés en entier (`object-fit: contain`)
+- splash arts toujours affichés en entier en plein écran (`object-fit: contain`)
 - chargement paresseux des images
 - fallbacks automatiques avec mémorisation des URLs en échec pendant la session
-- source officielle Legends of Runeterra disponible comme fallback secondaire sûr
+- skins LoR affichés comme de vraies entrées distinctes, y compris leurs différents niveaux
 - respect de `prefers-reduced-motion` et des safe areas iPhone
 
 ## Chargement et performances
 
-Au runtime, l’application charge le catalogue principal depuis `data/image-overrides.json`, puis ajoute les quelques lignes éventuelles de `data/manual-skins.txt`.
+Au runtime, l’application charge le catalogue principal depuis `data/image-overrides.json`, puis le petit catalogue pré-généré `data/lor-skins.json`, puis les quelques lignes éventuelles de `data/manual-skins.txt`.
+
+Le navigateur ne télécharge jamais les gros jeux de données complets de Legends of Runeterra. GitHub Actions les traite en amont et ne publie que les entrées nécessaires dans `data/lor-skins.json`.
+
+Pour LoR, les artworks d’un même champion sont ordonnés chronologiquement par date de sortie, puis par variante et par niveau. Par exemple, un champion possédant un skin Original puis un skin Pulsefire est présenté Original Level 1, Original Level 2, puis Pulsefire Level 1, Pulsefire Level 2.
+
+Les cartes LoR conservent l’artwork exact de leur niveau. Le plein écran essaie en priorité la version HD exacte correspondante ; si elle n’existe pas, il retombe sur l’artwork original sans changer de variante.
 
 Le petit fichier manuel est chargé sans cache afin qu'un nouveau skin apparaisse après le déploiement GitHub Pages sans avoir à modifier la version de l'application.
-
-Les gros jeux de données Legends of Runeterra ne sont **pas** téléchargés par le navigateur. Le workflow GitHub construit `data/lor-art.json` depuis le Data Dragon officiel Riot puis rattache uniquement quelques URLs utiles au catalogue principal.
 
 Le fichier de lore est chargé une seule fois par session du module plein écran. Le panneau n’est rendu que lorsqu’un skin disposant d’une entrée de lore est ouvert.
 
@@ -92,22 +103,23 @@ Les données sont indexées une fois en mémoire par champion afin d’éviter l
 
 ## Sources de splash arts
 
-Les sources peuvent notamment inclure League of Legends Wiki HD, Riot/CommunityDragon, Data Dragon League of Legends, les ressources Wild Rift vérifiées et désormais **Legends of Runeterra Data Dragon**.
+Les sources peuvent notamment inclure League of Legends Wiki HD, Riot/CommunityDragon, Data Dragon League of Legends, les ressources Wild Rift vérifiées et le Data Dragon officiel Legends of Runeterra.
 
-Les illustrations LoR sont des artworks officiels Riot, mais elles peuvent être différentes du splash League correspondant. Elles restent donc derrière les sources LoL/WR normales. Pour un champion PC de base elles peuvent servir de dernier fallback officiel ; pour un skin précis, une illustration LoR n’est utilisée que si une correspondance explicite a été validée dans l’index.
+Legends of Runeterra est traité comme une plateforme distincte : ses artworks ne servent plus à remplacer silencieusement des splash arts LoL ou Wild Rift. Chaque skin/niveau LoR possède sa propre entrée et ses propres candidats d’image.
 
 ## Audit des splash arts
 
 Le workflow `.github/workflows/audit-splashes.yml` s’exécute une fois par semaine (et manuellement à la demande). Il :
 
-- actualise l’index officiel Legends of Runeterra depuis Riot Data Dragon ;
-- vérifie les splash arts ;
+- actualise les données officielles Legends of Runeterra et régénère `data/lor-skins.json` ;
+- conserve l’ordre chronologique des skins LoR et l’ordre des niveaux ;
+- vérifie les splash arts LoL / Wild Rift ;
 - tente de réparer les sources Wild Rift manquantes ;
 - recherche les originaux exacts en meilleure résolution ;
-- ajoute les fallbacks LoR sans remplacer un splash LoL/WR sain par un artwork différent ;
+- protège les sources déjà vérifiées contre toute baisse de résolution ;
+- retire les anciennes métadonnées de fallback LoR devenues obsolètes ;
 - conserve le catalogue centralisé intact ;
-- met à jour `data/image-overrides.json`, `data/lor-art.json` et les rapports d’audit si nécessaire ;
-- reste silencieux en cas d’éléments non résolus afin d’éviter le spam d’e-mails GitHub.
+- met à jour les fichiers générés et les rapports d’audit si nécessaire.
 
 ## Lancer le projet
 
