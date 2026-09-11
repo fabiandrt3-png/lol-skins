@@ -20,8 +20,6 @@ const exactTranslations = new Map([
   ["Molette ou double-clic pour zoomer", "Wheel or double-click to zoom"],
 ]);
 
-const WILD_RIFT_SUFFIX = /\s*\(\s*Wild Rift\s*\)/gi;
-
 function translateValue(value) {
   if (!value) return value;
   if (exactTranslations.has(value)) return exactTranslations.get(value);
@@ -82,6 +80,13 @@ function translateElement(element) {
 function translateMutationTarget(target) {
   if (target.nodeType === Node.TEXT_NODE) {
     const current = target.nodeValue;
+    if (target.parentElement?.id === "lightboxTitle") {
+      const parsed = parseCardSkinName(current);
+      if (parsed.lorLevel) {
+        target.nodeValue = parsed.displayName;
+        return;
+      }
+    }
     const translated = translateValue(current);
     if (translated !== current) target.nodeValue = translated;
     return;
@@ -128,6 +133,12 @@ function installCardBadgeStyles() {
       color: #64d2ff;
     }
 
+    .skin-title-wrap .badge-lor {
+      border-color: rgba(191, 90, 242, .28);
+      background: rgba(191, 90, 242, .14);
+      color: #bf5af2;
+    }
+
     .skin-title-wrap .badge-chroma {
       border-color: rgba(255, 159, 154, .22);
       background: rgba(255, 159, 154, .10);
@@ -172,6 +183,13 @@ function parseCardSkinName(rawValue) {
   const raw = String(rawValue || "").trim();
   let displayName = raw;
   let chromaLabel = "";
+  let lorLevel = "";
+
+  const levelMatch = displayName.match(/\s*[—–-]\s*(Level\s*\d+)\s*$/i);
+  if (levelMatch) {
+    lorLevel = levelMatch[1].replace(/level/i, "Level").replace(/\s+/g, " ");
+    displayName = displayName.slice(0, levelMatch.index).trim();
+  }
 
   const isWildRift = /\(\s*Wild Rift\s*\)/i.test(raw) || /\bWild Rift\b/i.test(raw);
 
@@ -214,6 +232,7 @@ function parseCardSkinName(rawValue) {
   return {
     displayName: normalizeDisplayName(displayName),
     chromaLabel,
+    lorLevel,
     isWildRift,
   };
 }
@@ -240,9 +259,10 @@ function processSkinCard(card) {
   const parsed = parseCardSkinName(rawTitle);
   const inlineWildRiftTag = title.querySelector(".skin-tag-wr");
   const existingWildRiftBadge = card.querySelector(".badge-wr");
+  const existingLorBadge = card.querySelector(".badge-lor");
   const existingChromaBadge = card.querySelector(".badge-chroma");
   const legacyPlatformText = [...titleWrap.querySelectorAll("p")]
-    .find((element) => /^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim()));
+    .find((element) => /^(Wild Rift|League of Legends PC|Legends of Runeterra)$/i.test(element.textContent.trim()));
 
   const isWildRift = Boolean(
     parsed.isWildRift
@@ -250,19 +270,24 @@ function processSkinCard(card) {
     || existingWildRiftBadge
     || /^Wild Rift$/i.test(legacyPlatformText?.textContent?.trim() || "")
   );
+  const isLor = Boolean(
+    existingLorBadge
+    || /^Legends of Runeterra$/i.test(legacyPlatformText?.textContent?.trim() || "")
+  );
   const isChroma = Boolean(parsed.chromaLabel || existingChromaBadge || /\bchroma\b/i.test(rawTitle));
   const chromaLabel = parsed.chromaLabel || existingChromaBadge?.textContent?.trim() || "Chroma";
+  const lorLabel = parsed.lorLevel ? `Legends of Runeterra · ${parsed.lorLevel}` : "Legends of Runeterra";
 
   card.dataset.cardBadgesReady = "true";
   title.textContent = parsed.displayName;
 
   titleWrap.querySelectorAll(".skin-platform-label").forEach((element) => element.remove());
   titleWrap.querySelectorAll("p").forEach((element) => {
-    if (/^(Wild Rift|League of Legends PC)$/i.test(element.textContent.trim())) element.remove();
+    if (/^(Wild Rift|League of Legends PC|Legends of Runeterra)$/i.test(element.textContent.trim())) element.remove();
   });
 
   let badgeRow = titleWrap.querySelector(".skin-badges");
-  const needsBadgeRow = isWildRift || isChroma || Boolean(badgeRow?.children.length);
+  const needsBadgeRow = isWildRift || isLor || isChroma || Boolean(badgeRow?.children.length);
 
   if (needsBadgeRow && !badgeRow) {
     badgeRow = document.createElement("div");
@@ -274,11 +299,15 @@ function processSkinCard(card) {
     badgeRow.querySelectorAll(".badge-wr").forEach((badge, index) => {
       if (!isWildRift || index > 0) badge.remove();
     });
+    badgeRow.querySelectorAll(".badge-lor").forEach((badge, index) => {
+      if (!isLor || index > 0) badge.remove();
+    });
     badgeRow.querySelectorAll(".badge-chroma").forEach((badge, index) => {
       if (!isChroma || index > 0) badge.remove();
     });
 
     if (isWildRift) ensureBadge(badgeRow, "badge-wr", "Wild Rift");
+    if (isLor) ensureBadge(badgeRow, "badge-lor", lorLabel);
     if (isChroma) ensureBadge(badgeRow, "badge-chroma", chromaLabel);
 
     if (!badgeRow.children.length) badgeRow.remove();
