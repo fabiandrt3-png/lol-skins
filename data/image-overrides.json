@@ -48218,27 +48218,26 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-11T22:42:42.544Z",
+  "catalogGeneratedAt": "2026-09-11T23:05:05.468Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
-    "runAt": "2026-09-11T22:40:37.130Z",
     "sources": [
       "Module:SkinData/data",
       "Module:SkinDataWR/data"
     ],
     "PC": {
       "total": 2134,
-      "missing": 1592,
-      "added": 1563,
+      "missing": 29,
+      "added": 0,
       "unresolved": 29
     },
     "Wild Rift": {
       "total": 1056,
-      "missing": 898,
-      "added": 892,
+      "missing": 6,
+      "added": 0,
       "unresolved": 6
     },
-    "added": 2455,
+    "added": 0,
     "unresolved": [
       {
         "champion": "Aatrox",
