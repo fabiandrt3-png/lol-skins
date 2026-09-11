@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10T23:50:55.195Z",
+  "generatedAt": "2026-09-11T00:32:57.474Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
     "total": 131,
-    "fullyVerified": 86,
-    "unresolved": 45,
+    "fullyVerified": 85,
+    "unresolved": 46,
     "pc": 67,
     "wildRift": 64,
     "belowCardTarget": 1,
@@ -128,6 +128,28 @@
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_HD.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin_WR.jpg",
           "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Mel_LoveConfessionSkin.jpg"
+        ]
+      }
+    },
+    {
+      "champion": "Morgana",
+      "skin": "Island Vacation Morgana",
+      "type": "Wild Rift",
+      "card": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg"
+        ]
+      },
+      "fullscreen": {
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg"
         ]
       }
     },
@@ -1973,7 +1995,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_NeonDaredevilSkin_WR_HD.jpg?3173d",
         "width": 7680,
         "height": 3547,
-        "bytes": 14027508,
+        "bytes": 12602760,
         "contentType": "image/jpeg"
       }
     },
@@ -3166,10 +3188,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR_HD.jpg?9639d",
-        "width": 7680,
-        "height": 3548,
-        "bytes": 7262868,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Miss_Fortune_CrystalRoseSkin_WR.jpg?9519d",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 340785,
         "contentType": "image/jpeg"
       }
     },
@@ -3205,20 +3227,21 @@
       "releaseDate": "2026-07-24",
       "sourceKind": "post-cutoff",
       "card": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 346164,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg"
+        ]
       },
       "fullscreen": {
-        "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Morgana_IslandVacationSkin_WR.jpg?21718",
-        "width": 2436,
-        "height": 1124,
-        "bytes": 346164,
-        "contentType": "image/jpeg"
+        "ok": false,
+        "attempted": [
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_HD.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin_WR.jpg",
+          "https://wiki.leagueoflegends.com/en-us/Special:Redirect/file/Morgana_IslandVacationSkin.jpg"
+        ]
       }
     },
     {
