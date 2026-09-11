@@ -202,3 +202,25 @@
     transition: none;
   }
 }
+
+/* Keep the fullscreen artwork entirely below the top toolbar. The figure height
+   is important because the desktop zoom controller also writes an inline height. */
+.lightbox {
+  --lightbox-toolbar-clearance: calc(max(14px, env(safe-area-inset-top)) + 66px);
+  padding-top: var(--lightbox-toolbar-clearance);
+}
+
+.lightbox-figure {
+  height: min(900px, calc(100dvh - var(--lightbox-toolbar-clearance) - max(12px, env(safe-area-inset-bottom)))) !important;
+}
+
+@media (max-width: 720px) {
+  .lightbox {
+    --lightbox-toolbar-clearance: calc(env(safe-area-inset-top) + 64px);
+    padding-top: var(--lightbox-toolbar-clearance);
+  }
+
+  .lightbox-figure {
+    height: calc(100dvh - var(--lightbox-toolbar-clearance) - max(12px, env(safe-area-inset-bottom))) !important;
+  }
+}
