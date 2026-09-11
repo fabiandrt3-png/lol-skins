@@ -127,16 +127,19 @@ function stableSkinId(item) {
 function mapCatalogSkin(item, verifiedImages) {
   const id = item.id || `${slugify(item.champ)}::${slugify(item.skin)}::${slugify(item.type || "pc")}`;
   const verified = verifiedImages[id] || null;
+  const isManual = item.sourceKind === "manual";
   const verifiedCandidates = unique([verified?.url, ...(verified?.fallbacks || [])]);
   const sourceCandidates = item.sourceKind === "legacy"
     ? legacyImageCandidates(item.image)
     : unique([item.image, ...(item.fallbacks || [])]);
 
   const explicitFullscreenCandidates = unique([item.fullImage, ...(item.fullHdFallbacks || [])]);
-  const optimizedExactCardCandidates = shouldUseExactHdPreview(item)
+  const optimizedExactCardCandidates = !isManual && shouldUseExactHdPreview(item)
     ? explicitFullscreenCandidates.flatMap((source) => wikiSizedImageCandidates(source, CARD_PREVIEW_WIDTH))
     : [];
-  const cardCandidates = unique([...verifiedCandidates, ...sourceCandidates]);
+  const cardCandidates = isManual
+    ? unique([...sourceCandidates, ...verifiedCandidates])
+    : unique([...verifiedCandidates, ...sourceCandidates]);
   const imageCandidates = unique([
     ...optimizedExactCardCandidates,
     ...cardImageCandidates(cardCandidates),
