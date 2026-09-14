@@ -23759,6 +23759,17 @@
       "hdSource": "league-wiki-hd-maximum"
     },
     {
+      "id": "lee-sin::playmaker-lee-sin-exquisite-edition::wild-rift",
+      "champ": "Lee Sin",
+      "skin": "Playmaker Lee Sin Exquisite Edition",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-12",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PlaymakerExquisiteEditionSkin_WR.jpg?850e4",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-14T09:53:28.690Z"
+    },
+    {
       "id": "leona::eternal-aspect-leona::pc",
       "champ": "Leona",
       "skin": "Eternal Aspect Leona",
@@ -48591,7 +48602,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-11T23:21:46.396Z",
+  "catalogGeneratedAt": "2026-09-14T09:53:30.811Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48605,12 +48616,12 @@
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1056,
-      "missing": 0,
-      "added": 0,
+      "total": 1058,
+      "missing": 1,
+      "added": 1,
       "unresolved": 0
     },
-    "added": 0,
+    "added": 1,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
