@@ -48673,7 +48673,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-14T09:53:30.811Z",
+  "catalogGeneratedAt": "2026-09-16T10:47:00.461Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48687,12 +48687,12 @@
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1058,
-      "missing": 1,
-      "added": 1,
+      "total": 1062,
+      "missing": 0,
+      "added": 0,
       "unresolved": 0
     },
-    "added": 1,
+    "added": 0,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
