@@ -8,7 +8,7 @@ const lor = (id, level, extra = {}) => skin(`Original Aatrox — Level ${level}`
   lorLevelNumber: level, releaseDate: "2023-01-01", ...extra,
 });
 
-async function setup(t, { catalog = [skin("Classic Aatrox")], entries = {}, lorSkins = [], manual = "", failCatalog = false } = {}) {
+async function setup(t, { catalog = [skin("Classic Aatrox")], entries = {}, lorSkins = [], manual = "", failCatalog = false, metadata = { entries: {} }, failMetadata = false } = {}) {
   const requests = [];
   const payload = { catalog, entries };
   const original = JSON.stringify(payload);
@@ -21,6 +21,7 @@ async function setup(t, { catalog = [skin("Classic Aatrox")], entries = {}, lorS
     }
     if (url.startsWith("data/lor-skins.json")) return { ok: true, json: async () => ({ entries: lorSkins }) };
     if (url.startsWith("data/manual-skins.txt")) return { ok: true, text: async () => manual };
+    if (url.startsWith("data/skin-order.json")) return { ok: !failMetadata, status: failMetadata ? 503 : 200, json: async () => metadata };
     throw new Error(`Unexpected request: ${url}`);
   });
   const loader = await import(`../data-loader.js?v=test-${++moduleId}`);
@@ -43,10 +44,9 @@ test("updates the first duplicate ID and keeps non-LoR entries authoritative", a
     lorSkins: [lor("duplicate", 1, { image: "https://images.example/updated.jpg" }), lor("protected", 2)],
   });
   const result = await loader.loadSkinData();
-  assert.equal(result.length, 3);
+  assert.equal(result.length, 2);
   assert.equal(result[0]._legacyImage, "https://images.example/updated.jpg");
-  assert.equal(result[1].skin, "Original Aatrox — Level 2");
-  assert.equal(result[2].skin, "Mecha Aatrox");
+  assert.equal(result[1].skin, "Mecha Aatrox");
   loader.assertUnchanged();
 });
 
@@ -82,8 +82,31 @@ test("simultaneous consumers share one catalog request", async (t) => {
   const second = loader.loadSkinData();
   assert.equal(first, second);
   assert.equal(await first, await second);
-  assert.equal(loader.requests.length, 3);
+  assert.equal(loader.requests.length, 4);
   assert.match(loader.requests[0].url, /\?v=test-/);
+});
+
+test("a manual correction of LoR level 2 never overwrites level 1", async (t) => {
+  const loader = await setup(t, {
+    lorSkins: [lor("level-1", 1), lor("level-2", 2)],
+    manual: "Aatrox | Original Aatrox — Level 2 | LoR | https://images.example/correct-level-2.png",
+  });
+  const result = await loader.loadSkinData();
+  assert.equal(result.length, 3);
+  assert.equal(result[1]._id, "level-1");
+  assert.equal(result[1].skin, "Original Aatrox — Level 1");
+  assert.equal(result[2]._id, "level-2");
+  assert.equal(result[2].image, "https://images.example/correct-level-2.png");
+});
+
+test("missing chronology metadata retains all art and falls back to catalog dates", async (t) => {
+  t.mock.method(console, "warn", () => {});
+  const loader = await setup(t, {
+    failMetadata: true,
+    catalog: [skin("Mecha Aatrox", { releaseDate: "2014-01-01" }), skin("Justicar Aatrox", { releaseDate: "2013-01-01" })],
+  });
+  const result = await loader.loadSkinData();
+  assert.deepEqual(result.map(item => item.skin), ["Justicar Aatrox", "Mecha Aatrox"]);
 });
 
 test("a failed catalog request can be retried without reloading the module", async (t) => {

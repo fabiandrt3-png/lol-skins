@@ -43,7 +43,7 @@ Règles simples :
 - les lignes qui commencent par `#` sont des commentaires et sont ignorées ;
 - `PC` est utilisé par défaut si tu écris autre chose que `WR` / `Wild Rift` ou `LoR` / `Legends of Runeterra` ;
 - l'identifiant technique est créé automatiquement ;
-- si tu ne renseignes pas la 6e colonne, le skin est ajouté après le dernier skin du champion ;
+- sans 6e colonne, le skin suit le tri automatique ; s'il n'a ni date connue ni parent, il reste à la fin du champion ;
 - si une ligne est mal écrite, elle est ignorée au lieu de casser toute l'application ;
 - le fichier est rechargé sans cache : tu n'as pas besoin de modifier `version.json` après chaque ajout manuel ;
 - utilise de préférence un lien direct vers une image pour `image` et `fullImage`.
@@ -59,6 +59,10 @@ Le front reste volontairement compact :
 - `lightbox-hd.js` : sources HD et zoom plein écran desktop
 - `lore.js` : bouton et panneau de lore, sans modifier le carrousel ou le zoom
 - `data-loader.js` : charge le catalogue principal, les skins LoR générés et les ajouts manuels
+- `catalog-order.js` : tri chronologique, rattachement aux skins PC et dédoublonnage des illustrations
+- `data/skin-order.json` : dates et univers pré-générés, chargés avec le catalogue
+- `data/skin-order-overrides.json` : dates absentes du Wiki, accompagnées de leur source
+- `data/skin-artwork-corrections.json` : corrections vérifiées de liens vers une mauvaise illustration, intégrées aux métadonnées générées
 - `data/image-overrides.json` : catalogue principal LoL / Wild Rift et carte des meilleures sources de splash arts vérifiées
 - `data/lor-skins.json` : catalogue généré des skins Legends of Runeterra, avec une entrée distincte pour chaque artwork de niveau
 - `data/lor-art.json` : index technique des illustrations officielles de champions LoR provenant du Data Dragon Riot
@@ -87,11 +91,15 @@ Les styles principaux Apple/mobile restent fusionnés dans `styles.css`. Le pann
 
 ## Chargement et performances
 
-Au runtime, l’application charge le catalogue principal depuis `data/image-overrides.json`, puis le petit catalogue pré-généré `data/lor-skins.json`, puis les quelques lignes éventuelles de `data/manual-skins.txt`.
+Au runtime, l’application charge en parallèle le catalogue principal, les entrées LoR, les ajouts manuels et les métadonnées de tri pré-générées. Elle ne contacte pas le Wiki pour retrouver les dates et les univers.
 
 Le navigateur ne télécharge jamais les gros jeux de données complets de Legends of Runeterra. GitHub Actions les traite en amont et ne publie que les entrées nécessaires dans `data/lor-skins.json`.
 
-Pour LoR, les artworks d’un même champion sont ordonnés chronologiquement par date de sortie, puis par variante et par niveau. Par exemple, un champion possédant un skin Original puis un skin Pulsefire est présenté Original Level 1, Original Level 2, puis Pulsefire Level 1, Pulsefire Level 2.
+Pour chaque champion, les skins PC forment la base chronologique, avec Classic en premier. Une illustration Wild Rift ou LoR suit son équivalent PC, sinon le premier skin PC de la même gamme, sinon du même univers. La gamme exacte est prioritaire sur l'univers plus large (par exemple Coven avant Eclipse). Les skins sans équivalent PC restent classés selon leur propre date. Les chromas suivent leur parent, les niveaux LoR restent dans l'ordre et les placements manuels explicites sont prioritaires.
+
+Une même illustration, identifiée par son fichier source canonique et son skin, n'apparaît qu'une fois. Les miniatures et versions HD du même fichier sont rapprochées ; les artworks distincts, chromas et niveaux LoR sont conservés. Un lien HD ou de secours commun ne suffit pas à fusionner deux skins. Les favoris d'un doublon sont transférés à la carte conservée. Les corrections de liens erronés sont appliquées avant cette comparaison.
+
+Les dates et univers proviennent des modules SkinData, SkinDataWR et LoRCosmetics du League of Legends Wiki. Un skin sans date fiable reste à la fin de son groupe ; aucune date n'est inventée pour une sortie annulée ou annoncée. Au 16 septembre 2026, les entrées indépendantes concernées sont Grand Reckoning Alistar (annulé), Old God Anivia (à venir) et Founders Silver Kayle (jour exact non confirmé). Une indisponibilité des métadonnées laisse fonctionner la galerie avec les dates du catalogue et les correspondances de noms exactes.
 
 Les cartes LoR conservent l’artwork exact de leur niveau. Le plein écran essaie en priorité la version HD exacte correspondante ; si elle n’existe pas, il retombe sur l’artwork original sans changer de variante.
 
@@ -101,7 +109,7 @@ Le fichier de lore est chargé une seule fois par session du module plein écran
 
 Les données sont indexées une fois en mémoire par champion afin d’éviter les filtrages complets répétés à chaque rendu.
 
-La fusion des catalogues utilise également un index par identifiant, en conservant l’ordre des skins et la priorité des ajouts manuels. Les consommateurs partagent le même chargement ; une erreur du catalogue principal libère ce chargement pour permettre une nouvelle tentative.
+La fusion des catalogues utilise également un index par identifiant et conserve la priorité des ajouts manuels avant le tri. Les consommateurs partagent le même chargement ; une erreur du catalogue principal libère ce chargement pour permettre une nouvelle tentative.
 
 Un changement de favori met à jour les boutons concernés sans recréer les cartes ni réinitialiser l’image HD ou le zoom. La galerie est recalculée lorsqu’un retrait dans le filtre Favoris modifie les résultats. Les traductions et badges ne parcourent que les éléments ajoutés ou modifiés.
 
@@ -119,6 +127,7 @@ Le workflow `.github/workflows/audit-splashes.yml` s’exécute une fois par sem
 
 - actualise les données officielles Legends of Runeterra et régénère `data/lor-skins.json` ;
 - conserve l’ordre chronologique des skins LoR et l’ordre des niveaux ;
+- actualise les dates et univers avec `node scripts/update-skin-order.mjs`, en gardant le fichier précédent si une source est incomplète ou indisponible ;
 - vérifie les splash arts LoL / Wild Rift ;
 - tente de réparer les sources Wild Rift manquantes ;
 - recherche les originaux exacts en meilleure résolution ;
@@ -147,4 +156,4 @@ Avec Node.js 22 ou supérieur, sans dépendance à installer :
 node --test tests/*.test.mjs
 ```
 
-Ces tests vérifient l’ordre des niveaux LoR, les doublons, les ajouts et corrections manuels, le partage des requêtes et la reprise après un échec de chargement. Le workflow `Runtime regression tests` les exécute sur les push et pull requests, avec une vérification de syntaxe des modules du navigateur.
+Ces tests vérifient le tri PC et les regroupements par univers, les niveaux LoR, les doublons et leurs alias de favoris, les ajouts manuels, le partage des requêtes, la reprise après un échec de chargement et la conservation des entrées du catalogue complet. Le workflow `Runtime regression tests` les exécute sur les push et pull requests, avec une vérification de syntaxe des modules du navigateur.

@@ -73,6 +73,15 @@ async function init() {
 
   try {
     state.skins = await loadSkinData();
+    // Keep favorites when an old duplicate ID now points at a single artwork.
+    let favoritesChanged = false;
+    for (const skin of state.skins) for (const alias of skin._duplicateIds || []) {
+      if (state.favorites.delete(alias)) {
+        state.favorites.add(skin._id);
+        favoritesChanged = true;
+      }
+    }
+    if (favoritesChanged) saveFavorites();
     buildIndexes();
     setLoaded(true);
     handleRoute();
@@ -516,9 +525,9 @@ function matchesCurrentFilters(skin) {
   if (!displaySkinName(skin).toLocaleLowerCase("fr").includes(state.search)) return false;
 
   switch (state.filter) {
-    case "pc": return skin.type !== "Wild Rift" && skin.type !== "Legends of Runeterra";
-    case "wild-rift": return skin.type === "Wild Rift";
-    case "lor": return skin.type === "Legends of Runeterra";
+    case "pc": return skin.platforms.includes("PC");
+    case "wild-rift": return skin.platforms.includes("Wild Rift");
+    case "lor": return skin.platforms.includes("Legends of Runeterra");
     case "prestige": return /prestige|mythic chroma|special edition|exquisite edition/i.test(skin.skin);
     case "chroma": return /chroma/i.test(skin.skin);
     case "favorites": return state.favorites.has(skin._id);
@@ -639,8 +648,8 @@ function navigateHome() {
 
 function badgesFor(skin) {
   const badges = [];
-  if (skin.type === "Wild Rift") badges.push('<span class="badge badge-wr">Wild Rift</span>');
-  if (skin.type === "Legends of Runeterra") {
+  if (skin.platforms.includes("Wild Rift")) badges.push('<span class="badge badge-wr">Wild Rift</span>');
+  if (skin.platforms.includes("Legends of Runeterra")) {
     const level = String(skin.lorLevel || "").trim();
     const label = level ? `Legends of Runeterra · ${level}` : "Legends of Runeterra";
     badges.push(`<span class="badge badge-lor" style="border:1px solid color-mix(in srgb,#bf5af2 30%,transparent);background:color-mix(in srgb,#bf5af2 14%,transparent);color:color-mix(in srgb,#bf5af2 84%,var(--text))">${escapeHtml(label)}</span>`);
