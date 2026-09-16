@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T09:53:39.089Z",
+  "generatedAt": "2026-09-16T10:47:05.919Z",
   "source": "Riot Games LoR Data Dragon + League of Legends Wiki LoR cosmetics metadata",
   "sourceDocs": "https://developer.riotgames.com/docs/lor",
   "metadataSource": "https://wiki.leagueoflegends.com/en-us/Module:LoRCosmetics/skins?action=raw",
@@ -10993,7 +10993,7 @@
     }
   ],
   "imageAudit": {
-    "verifiedAt": "2026-09-14T09:54:45.130Z",
+    "verifiedAt": "2026-09-16T10:48:10.376Z",
     "strategy": "Rate-limited MediaWiki allimages lookup by base card code; exact level-code matching; direct image URLs only; dead guessed redirects removed; previous sources preserved when lookup is unavailable",
     "total": 524,
     "repaired": 524,
