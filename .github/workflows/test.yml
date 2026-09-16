@@ -18,7 +18,7 @@ jobs:
           node-version: '22'
       - name: Check browser module syntax
         run: |
-          for file in app.js data-loader.js english-ui.js lightbox-hd.js lore.js; do
+          for file in app.js data-loader.js catalog-order.js english-ui.js lightbox-hd.js lore.js scripts/update-skin-order.mjs scripts/wiki-skin-metadata.mjs; do
             node --check "$file"
           done
       - name: Test catalog loading and ordering

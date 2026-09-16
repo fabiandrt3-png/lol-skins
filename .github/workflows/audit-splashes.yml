@@ -12,6 +12,11 @@ on:
       - 'data/lor-art.json'
       - 'data/lor-skins.json'
       - 'data-loader.js'
+      - 'catalog-order.js'
+      - 'data/skin-order-overrides.json'
+      - 'data/skin-artwork-corrections.json'
+      - 'scripts/update-skin-order.mjs'
+      - 'scripts/wiki-skin-metadata.mjs'
       - 'scripts/repair-catalog-edge-cases.mjs'
       - 'scripts/sync-missing-skins.mjs'
       - 'scripts/audit-additions.mjs'
@@ -121,11 +126,15 @@ jobs:
       - name: Resolve and verify Legends of Runeterra splash arts
         run: node scripts/repair-lor-skin-images.mjs
 
-      - name: Bump asset version for LoR catalog changes
+      - name: Refresh skin release dates and universe groups
+        continue-on-error: true
+        run: node scripts/update-skin-order.mjs
+
+      - name: Bump asset version for catalog and chronology changes
         shell: bash
         run: |
-          if git diff --quiet -- data/lor-skins.json; then
-            echo "LoR catalog unchanged"
+          if git diff --quiet -- data/lor-skins.json data/skin-order.json; then
+            echo "LoR catalog and chronology unchanged"
             exit 0
           fi
           node <<'NODE'
@@ -204,7 +213,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-overrides.json data/manual-skins.txt data/lor-art.json data/lor-skins.json audit-report.json addition-audit-report.json version.json 2>/dev/null || true
+          git add data/image-overrides.json data/manual-skins.txt data/lor-art.json data/lor-skins.json data/skin-order.json audit-report.json addition-audit-report.json version.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No audit changes"

@@ -3,6 +3,8 @@ const CATALOG_SOURCE = VERIFIED_IMAGE_MAP;
 const MANUAL_SKINS_SOURCE = "data/manual-skins.txt";
 const LOR_SKINS_SOURCE = "data/lor-skins.json";
 const APP_ASSET_VERSION = new URL(import.meta.url).searchParams.get("v");
+const { organizeSkins, metadataKey, normalizeName } = await import(APP_ASSET_VERSION
+  ? `./catalog-order.js?v=${encodeURIComponent(APP_ASSET_VERSION)}` : "./catalog-order.js");
 const CARD_PREVIEW_WIDTH = 2560;
 
 let skinDataPromise;
@@ -16,7 +18,8 @@ export function loadSkinData() {
       }),
       loadManualSkins(),
       loadLorSkins(),
-    ]).then(([payload, manualSkins, lorSkins]) => {
+      loadOrderMetadata(),
+    ]).then(([payload, manualSkins, lorSkins, orderMetadata]) => {
       const catalog = payload?.catalog;
       const verifiedImages = payload?.entries;
 
@@ -27,7 +30,15 @@ export function loadSkinData() {
       const verifiedMap = verifiedImages && !Array.isArray(verifiedImages) ? verifiedImages : {};
       const withLor = mergeLorSkins(catalog, lorSkins);
       const mergedCatalog = mergeManualSkins(withLor, manualSkins);
-      return mergedCatalog.filter(validSkinEntry).map((item) => mapCatalogSkin(item, verifiedMap));
+      const mapped = mergedCatalog.filter(validSkinEntry).map((item) => {
+        const correction = orderMetadata.artworkOverrides?.[item.id];
+        // Manual image choices always remain authoritative.
+        if (correction && item.sourceKind !== "manual") {
+          return mapCatalogSkin({ ...item, ...correction, fallbacks: [], fullHdFallbacks: [] }, {});
+        }
+        return mapCatalogSkin(item, verifiedMap);
+      });
+      return organizeSkins(mapped, orderMetadata);
     }).catch((error) => {
       skinDataPromise = undefined;
       throw error;
@@ -35,6 +46,18 @@ export function loadSkinData() {
   }
 
   return skinDataPromise;
+}
+
+async function loadOrderMetadata() {
+  try {
+    const response = await fetch(versionedAppAsset("data/skin-order.json"), { cache: "default" });
+    if (!response.ok) throw new Error(`Skin chronology (${response.status})`);
+    const payload = await response.json();
+    return payload && typeof payload === "object" && !Array.isArray(payload) ? payload : {};
+  } catch (error) {
+    console.warn("Skin chronology unavailable; using catalog dates and exact skin names.", error);
+    return {};
+  }
 }
 
 async function loadManualSkins() {
@@ -196,9 +219,16 @@ function mergeManualSkins(catalog, manualSkins) {
   const byId = indexSkinEntries(merged);
 
   for (const manual of manualSkins) {
-    const existing = byId.get(manual.id);
+    const existing = byId.get(manual.id) || merged.find((item) => metadataKey(item) === metadataKey(manual)
+      && normalizeName(item.skin) === normalizeName(manual.skin));
     if (existing) {
+      const originalId = existing.id;
       Object.assign(existing, manual);
+      if (originalId && originalId !== manual.id) {
+        existing.id = originalId;
+        existing._duplicateIds = [...new Set([...(existing._duplicateIds || []), manual.id])];
+      }
+      byId.set(manual.id, existing);
       continue;
     }
 
@@ -217,6 +247,7 @@ function mergeManualSkins(catalog, manualSkins) {
     }
 
     const cleanManual = { ...manual };
+    if (manual._manualAfterSkin) cleanManual._orderAfterSkin = manual._manualAfterSkin;
     delete cleanManual._manualAfterSkin;
     merged.splice(insertAt >= 0 ? insertAt + 1 : merged.length, 0, cleanManual);
     byId.set(manual.id, cleanManual);
@@ -293,6 +324,8 @@ function mapCatalogSkin(item, verifiedImages) {
     ...(item.lorLevelNumber ? { lorLevelNumber: item.lorLevelNumber } : {}),
     ...(item.lorCardCode ? { lorCardCode: item.lorCardCode } : {}),
     _id: id,
+    _duplicateIds: item._duplicateIds || [],
+    _orderAfterSkin: item._manualAfterSkin || item._orderAfterSkin || null,
     _legacyImage: item.image,
     _verifiedImageMeta: verified,
     imageCandidates,

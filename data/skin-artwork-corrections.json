@@ -1,0 +1,86 @@
+{
+  "verifiedAt": "2026-09-16T10:32:01.418Z",
+  "source": "League Wiki imageinfo API; exact file names",
+  "artworkOverrides": {
+    "ahri::spirit-blossom-springs-ahri::54": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ahri_SpiritBlossomSpringsSkin_HD.jpg?8bcea",
+      "width": 6000,
+      "height": 3540,
+      "sha1": "245809ec14b4c13e58657e99ed0c76274338ec52",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "alistar::black-alistar::99": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Alistar_BlackSkin_HD.jpg?b01f8",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Alistar_BlackSkin_HD.jpg?b01f8",
+      "width": 2796,
+      "height": 2298,
+      "sha1": "e42f278134da5c42a601f0dfa4983955ff12806e",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "camille::ig-camille::346": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Camille_iGSkin_HD.jpg?f4386",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Camille_iGSkin_HD.jpg?f4386",
+      "width": 4651,
+      "height": 2744,
+      "sha1": "8ebe0da1cdbc67b19b8a051e1ae68c81a570413a",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "darius::god-king-darius::410": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_HD.jpg?f0c67",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_HD.jpg?f0c67",
+      "width": 6375,
+      "height": 3539,
+      "sha1": "f6bd76b8110a6d1998f7987e3248ea1dd8fbb9e7",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "dr-mundo::mundo-mundo::452": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_HD.jpg?3440c",
+      "width": 7000,
+      "height": 3937,
+      "sha1": "9b08c3042ae2f34e016b66409abb3134ec459e40",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "ekko::true-damage-ekko::488": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg?e5b41",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_HD.jpg?e5b41",
+      "width": 6000,
+      "height": 3541,
+      "sha1": "b91b808e7a846c37d753fa01bf99bc331a5a119c",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "fiora::ig-fiora::597": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fiora_iGSkin_HD.jpg?bc836",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Fiora_iGSkin_HD.jpg?bc836",
+      "width": 4651,
+      "height": 2744,
+      "sha1": "482e118585156685690072e01b06a70de9715260",
+      "reason": "Exact named artwork; replace incorrect automatic match."
+    },
+    "ahri::k-da-ahri-prestige::38": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_old_HD.jpg?55823",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_old_HD.jpg?55823",
+      "width": 4000,
+      "height": 2342,
+      "sha1": "0ac13abeb0830b83a0950add0a8b9a654c555429",
+      "reason": "Keep original Prestige artwork distinct from Prestige K/DA Ahri (2022)."
+    },
+    "caitlyn::arcade-caitlyn-prestige::323": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_old_HD.jpg?7d60c",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_old_HD.jpg?7d60c",
+      "width": 4000,
+      "height": 2360,
+      "sha1": "5730ef42a1e79aedb60dab9dde22df6ca1914fbd",
+      "reason": "Keep original Prestige artwork distinct from Prestige Arcade Caitlyn (2022)."
+    },
+    "lee-sin::prestige-nightbringer-lee-sin::pc": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_old_HD.jpg?d7920",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_old_HD.jpg?d7920",
+      "width": 4096,
+      "height": 2301,
+      "sha1": "0c7a141a1e56ebd1745f7acc5a9627f60b1ba241",
+      "reason": "Keep original Prestige artwork distinct from Prestige Nightbringer Lee Sin (2022)."
+    }
+  }
+}
