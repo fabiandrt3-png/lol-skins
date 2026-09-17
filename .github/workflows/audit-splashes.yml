@@ -15,6 +15,7 @@ on:
       - 'catalog-order.js'
       - 'data/skin-order-overrides.json'
       - 'data/skin-artwork-corrections.json'
+      - 'data/skin-visual-duplicates.json'
       - 'scripts/update-skin-order.mjs'
       - 'scripts/wiki-skin-metadata.mjs'
       - 'scripts/repair-catalog-edge-cases.mjs'

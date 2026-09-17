@@ -138,6 +138,8 @@ async function main() {
   }
   const fixes = 'data/skin-artwork-corrections.json';
   if (fs.existsSync(fixes)) next.artworkOverrides = JSON.parse(fs.readFileSync(fixes, 'utf8')).artworkOverrides;
+  const visualDuplicates = 'data/skin-visual-duplicates.json';
+  if (fs.existsSync(visualDuplicates)) next.artworkEquivalences = JSON.parse(fs.readFileSync(visualDuplicates, 'utf8')).artworkEquivalences;
   const file = 'data/skin-order.json';
   const previous = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
   const { generatedAt, ...stablePrevious } = previous;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T10:41:01.934Z",
+  "generatedAt": "2026-09-17T18:18:35.022Z",
   "schemaVersion": 1,
   "sources": [
     "https://wiki.leagueoflegends.com/en-us/Module:SkinData/data",
@@ -104,8 +104,3199 @@
       "height": 2301,
       "sha1": "0c7a141a1e56ebd1745f7acc5a9627f60b1ba241",
       "reason": "Keep original Prestige artwork distinct from Prestige Nightbringer Lee Sin (2022)."
+    },
+    "dr-mundo::pool-party-mundo::456": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin.jpg?13f1e",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin.jpg?13f1e",
+      "width": 1215,
+      "height": 717,
+      "sha1": "b69a03b0c3a18a13b4163ac7c103ca6300ddc6d8",
+      "reason": "Replace nonexistent shared PoolParty2015Skin_Unused file with champion-specific current illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Dr._Mundo_PoolPartyMundoSkin.jpg"
+    },
+    "draven::draven-draven::468": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Draven_DravenDravenSkin.jpg?d5658",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Draven_DravenDravenSkin_HD.jpg?3bd86",
+      "width": 1215,
+      "height": 717,
+      "sha1": "cd769af9a982c8ae2412b7f519fdf5b156510760",
+      "reason": "Replace nonexistent shared AprilFools2016Skin file with champion-specific current illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Draven_DravenDravenSkin.jpg"
+    },
+    "fiddlesticks::star-nemesis-fiddlesticks::584": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_StarNemesisSkin.jpg?7da38",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_StarNemesisSkin.jpg?7da38",
+      "width": 1215,
+      "height": 717,
+      "sha1": "725e4393db3eeabf011d00e67fe29955f150073c",
+      "reason": "Correct nonexistent PNG artwork filename to verified JPG.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Fiddlesticks_StarNemesisSkin.jpg"
+    },
+    "lillia::petals-of-spring-lillia::pc": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lillia_PetalsofSpringSkin.jpg?1e823",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lillia_PetalsofSpringSkin.jpg?1e823",
+      "width": 1215,
+      "height": 717,
+      "sha1": "9572add72aac969d78f5bbc54e412fcd47d9fa16",
+      "reason": "Replace nonexistent HD source with verified illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Lillia_PetalsofSpringSkin.jpg"
+    },
+    "ornn::choo-choo-ornn::wild-rift": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ornn_Choo-ChooSkin_WR.jpg?ac179",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ornn_Choo-ChooSkin_WR.jpg?ac179",
+      "width": 2436,
+      "height": 1124,
+      "sha1": "f4fb33e344a5445620c1319690ad3529135cb59b",
+      "reason": "Restore missing hyphen in Choo-Choo Wild Rift artwork filename.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Ornn_Choo-ChooSkin_WR.jpg"
     }
   },
+  "artworkEquivalences": [
+    {
+      "pcId": "aatrox::classic-aatrox::0",
+      "wrId": "aatrox::classic-aatrox::wild-rift",
+      "pcArtwork": "wiki:aatrox_originalskin.jpg",
+      "wrArtwork": "wiki:aatrox_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "aatrox::mecha-aatrox::2",
+      "wrId": "aatrox::mecha-aatrox::wild-rift",
+      "pcArtwork": "wiki:aatrox_mechaskin.jpg",
+      "wrArtwork": "wiki:aatrox_mechaskin_wr.jpg"
+    },
+    {
+      "pcId": "aatrox::blood-moon-aatrox::5",
+      "wrId": "aatrox::blood-moon-aatrox::wild-rift",
+      "pcArtwork": "wiki:aatrox_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:aatrox_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "aatrox::primordian-aatrox::15",
+      "wrId": "aatrox::primordian-aatrox::wild-rift",
+      "pcArtwork": "wiki:aatrox_primordianskin.jpg",
+      "wrArtwork": "wiki:aatrox_primordianskin_wr.jpg"
+    },
+    {
+      "pcId": "ahri::popstar-ahri::27",
+      "wrId": "ahri::popstar-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_popstarskin.jpg",
+      "wrArtwork": "wiki:ahri_popstarskin_wr.png"
+    },
+    {
+      "pcId": "ahri::academy-ahri::33",
+      "wrId": "ahri::academy-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_academyskin.jpg",
+      "wrArtwork": "wiki:ahri_academyskin_wr.png"
+    },
+    {
+      "pcId": "ahri::arcade-ahri::34",
+      "wrId": "ahri::arcade-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_arcadeskin.jpg",
+      "wrArtwork": "wiki:ahri_arcadeskin_wr.png"
+    },
+    {
+      "pcId": "ahri::star-guardian-ahri::35",
+      "wrId": "ahri::star-guardian-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_starguardianskin.jpg",
+      "wrArtwork": "wiki:ahri_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "ahri::spirit-blossom-ahri::41",
+      "wrId": "ahri::spirit-blossom-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:ahri_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "ahri::k-da-all-out-ahri::43",
+      "wrId": "ahri::k-da-all-out-ahri::wild-rift",
+      "pcArtwork": "wiki:ahri_kdaalloutskin.jpg",
+      "wrArtwork": "wiki:ahri_kdaalloutskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::classic-akali::61",
+      "wrId": "akali::classic-akali::wild-rift",
+      "pcArtwork": "wiki:akali_originalskin.jpg",
+      "wrArtwork": "wiki:akali_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::silverfang-akali::67",
+      "wrId": "akali::silverfang-akali::wild-rift",
+      "pcArtwork": "wiki:akali_silverfangskin.jpg",
+      "wrArtwork": "wiki:akali_silverfangskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::headhunter-akali::68",
+      "wrId": "akali::headhunter-akali::wild-rift",
+      "pcArtwork": "wiki:akali_headhunterskin.jpg",
+      "wrArtwork": "wiki:akali_headhunterskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::project-akali::73",
+      "wrId": "akali::project-akali::wild-rift",
+      "pcArtwork": "wiki:akali_projectskin.jpg",
+      "wrArtwork": "wiki:akali_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::true-damage-akali::74",
+      "wrId": "akali::true-damage-akali::wild-rift",
+      "pcArtwork": "wiki:akali_truedamageskin.jpg",
+      "wrArtwork": "wiki:akali_truedamageskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::k-da-all-out-akali::75",
+      "wrId": "akali::k-da-all-out-akali::wild-rift",
+      "pcArtwork": "wiki:akali_kdaalloutskin.jpg",
+      "wrArtwork": "wiki:akali_kdaalloutskin_wr.jpg"
+    },
+    {
+      "pcId": "akali::star-guardian-akali::78",
+      "wrId": "akali::star-guardian-akali::wild-rift",
+      "pcArtwork": "wiki:akali_starguardianskin.jpg",
+      "wrArtwork": "wiki:akali_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "akshan::classic-akshan::92",
+      "wrId": "akshan::classic-akshan::wild-rift",
+      "pcArtwork": "wiki:akshan_originalskin.jpg",
+      "wrArtwork": "wiki:akshan_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "alistar::classic-alistar::98",
+      "wrId": "alistar::classic-alistar::wild-rift",
+      "pcArtwork": "wiki:alistar_originalskin.jpg",
+      "wrArtwork": "wiki:alistar_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "alistar::marauder-alistar::106",
+      "wrId": "alistar::marauder-alistar::wild-rift",
+      "pcArtwork": "wiki:alistar_marauderskin.jpg",
+      "wrArtwork": "wiki:alistar_marauderskin_wr.jpg"
+    },
+    {
+      "pcId": "alistar::moo-cow-alistar::108",
+      "wrId": "alistar::moo-cow-alistar::wild-rift",
+      "pcArtwork": "wiki:alistar_moocowskin.jpg",
+      "wrArtwork": "wiki:alistar_moocowskin_wr.jpg"
+    },
+    {
+      "pcId": "alistar::hextech-alistar::109",
+      "wrId": "alistar::hextech-alistar::wild-rift",
+      "pcArtwork": "wiki:alistar_hextechskin.jpg",
+      "wrArtwork": "wiki:alistar_hextechskin_wr.jpg"
+    },
+    {
+      "pcId": "alistar::lunar-beast-alistar::113",
+      "wrId": "alistar::lunar-beast-alistar::wild-rift",
+      "pcArtwork": "wiki:alistar_lunarbeastskin.jpg",
+      "wrArtwork": "wiki:alistar_lunarbeastskin_wr.jpg"
+    },
+    {
+      "pcId": "ambessa::classic-ambessa::115",
+      "wrId": "ambessa::classic-ambessa::wild-rift",
+      "pcArtwork": "wiki:ambessa_originalskin.jpg",
+      "wrArtwork": "wiki:ambessa_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "amumu::classic-amumu::118",
+      "wrId": "amumu::classic-amumu::wild-rift",
+      "pcArtwork": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/amumu/skins/base/images/amumu_splash_centered_0.jpg",
+      "wrArtwork": "wiki:amumu_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "amumu::infernal-amumu::129",
+      "wrId": "amumu::infernal-amumu::wild-rift",
+      "pcArtwork": "wiki:amumu_infernalskin.jpg",
+      "wrArtwork": "wiki:amumu_infernalskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::classic-annie::149",
+      "wrId": "annie::classic-annie::wild-rift",
+      "pcArtwork": "wiki:annie_originalskin.jpg",
+      "wrArtwork": "wiki:annie_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::panda-annie::159",
+      "wrId": "annie::panda-annie::wild-rift",
+      "pcArtwork": "wiki:annie_pandaskin.jpg",
+      "wrArtwork": "wiki:annie_pandaskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::sweetheart-annie::160",
+      "wrId": "annie::sweetheart-annie::wild-rift",
+      "pcArtwork": "wiki:annie_sweetheartskin.jpg",
+      "wrArtwork": "wiki:annie_sweetheartskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::super-galaxy-annie::163",
+      "wrId": "annie::super-galaxy-annie::wild-rift",
+      "pcArtwork": "wiki:annie_supergalaxyskin.jpg",
+      "wrArtwork": "wiki:annie_supergalaxyskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::annie-versary::164",
+      "wrId": "annie::annie-versary::wild-rift",
+      "pcArtwork": "wiki:annie_annie-versaryskin.jpg",
+      "wrArtwork": "wiki:annie_annie-versaryskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::lunar-beast-annie::165",
+      "wrId": "annie::lunar-beast-annie::wild-rift",
+      "pcArtwork": "wiki:annie_lunarbeastskin.jpg",
+      "wrArtwork": "wiki:annie_lunarbeastskin_wr.jpg"
+    },
+    {
+      "pcId": "annie::winterblessed-annie::169",
+      "wrId": "annie::winterblessed-annie::wild-rift",
+      "pcArtwork": "wiki:annie_winterblessedskin.jpg",
+      "wrArtwork": "wiki:annie_winterblessedskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::classic-ashe::183",
+      "wrId": "ashe::classic-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_originalskin.jpg",
+      "wrArtwork": "wiki:ashe_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::marauder-ashe::192",
+      "wrId": "ashe::marauder-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_marauderskin.jpg",
+      "wrArtwork": "wiki:ashe_marauderskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::project-ashe::193",
+      "wrId": "ashe::project-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_projectskin.jpg",
+      "wrArtwork": "wiki:ashe_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::cosmic-queen-ashe::197",
+      "wrId": "ashe::cosmic-queen-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_cosmicqueenskin.jpg",
+      "wrArtwork": "wiki:ashe_cosmicqueenskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::high-noon-ashe::198",
+      "wrId": "ashe::high-noon-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_highnoonskin.jpg",
+      "wrArtwork": "wiki:ashe_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::fae-dragon-ashe::200",
+      "wrId": "ashe::fae-dragon-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_faedragonskin.jpg",
+      "wrArtwork": "wiki:ashe_faedragonskin_wr.jpg"
+    },
+    {
+      "pcId": "ashe::ocean-song-ashe::203",
+      "wrId": "ashe::ocean-song-ashe::wild-rift",
+      "pcArtwork": "wiki:ashe_oceansongskin.jpg",
+      "wrArtwork": "wiki:ashe_oceansongskin_wr.jpg"
+    },
+    {
+      "pcId": "aurelion-sol::classic-aurelion-sol::219",
+      "wrId": "aurelion-sol::classic-aurelion-sol::wild-rift",
+      "pcArtwork": "wiki:aurelion_sol_originalskin.jpg",
+      "wrArtwork": "wiki:aurelion_sol_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "aurelion-sol::ashen-lord-aurelion-sol::220",
+      "wrId": "aurelion-sol::ashen-lord-aurelion-sol::wild-rift",
+      "pcArtwork": "wiki:aurelion_sol_ashenlordskin.jpg",
+      "wrArtwork": "wiki:aurelion_sol_ashenlordskin_wr.jpg"
+    },
+    {
+      "pcId": "aurelion-sol::mecha-aurelion-sol::221",
+      "wrId": "aurelion-sol::mecha-aurelion-sol::wild-rift",
+      "pcArtwork": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurelionsol/skins/skin02/images/aurelionsol_splash_centered_2.jpg",
+      "wrArtwork": "wiki:aurelion_sol_mechaskin_wr.jpg"
+    },
+    {
+      "pcId": "aurelion-sol::storm-dragon-aurelion-sol::222",
+      "wrId": "aurelion-sol::storm-dragon-aurelion-sol::wild-rift",
+      "pcArtwork": "wiki:aurelion_sol_stormdragonskin.jpg",
+      "wrArtwork": "wiki:aurelion_sol_stormdragonskin_wr.jpg"
+    },
+    {
+      "pcId": "aurelion-sol::porcelain-protector-aurelion-sol::225",
+      "wrId": "aurelion-sol::porcelain-protector-aurelion-sol::wild-rift",
+      "pcArtwork": "wiki:aurelion_sol_porcelainprotectorskin.jpg",
+      "wrArtwork": "wiki:aurelion_sol_porcelainprotectorskin_wr.jpg"
+    },
+    {
+      "pcId": "aurora::classic-aurora::227",
+      "wrId": "aurora::classic-aurora::wild-rift",
+      "pcArtwork": "wiki:aurora_originalskin.jpg",
+      "wrArtwork": "wiki:aurora_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "bard::classic-bard::242",
+      "wrId": "bard::classic-bard::wild-rift",
+      "pcArtwork": "wiki:bard_originalskin.jpg",
+      "wrArtwork": "wiki:bard_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "blitzcrank::classic-blitzcrank::258",
+      "wrId": "blitzcrank::classic-blitzcrank::wild-rift",
+      "pcArtwork": "wiki:blitzcrank_originalskin.jpg",
+      "wrArtwork": "wiki:blitzcrank_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "blitzcrank::iblitzcrank::265",
+      "wrId": "blitzcrank::iblitzcrank-blitzcrank::wild-rift",
+      "pcArtwork": "wiki:blitzcrank_iblitzcrankskin.jpg",
+      "wrArtwork": "wiki:blitzcrank_iblitzcrankskin_wr.jpg"
+    },
+    {
+      "pcId": "blitzcrank::battle-boss-blitzcrank::267",
+      "wrId": "blitzcrank::battle-boss-blitzcrank::wild-rift",
+      "pcArtwork": "wiki:blitzcrank_battlebossskin.jpg",
+      "wrArtwork": "wiki:blitzcrank_battlebossskin_wr.jpg"
+    },
+    {
+      "pcId": "blitzcrank::space-groove-blitz-crank::271",
+      "wrId": "blitzcrank::space-groove-blitz-crank::wild-rift",
+      "pcArtwork": "wiki:blitzcrank_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:blitzcrank_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "brand::zombie-brand::282",
+      "wrId": "brand::zombie-brand::wild-rift",
+      "pcArtwork": "wiki:brand_zombieskin.jpg",
+      "wrArtwork": "wiki:brand_zombieskin_wr.jpg"
+    },
+    {
+      "pcId": "brand::spirit-fire-brand::283",
+      "wrId": "brand::spirit-fire-brand::wild-rift",
+      "pcArtwork": "wiki:brand_spiritfireskin.jpg",
+      "wrArtwork": "wiki:brand_spiritfireskin_wr.jpg"
+    },
+    {
+      "pcId": "brand::battle-boss-brand::284",
+      "wrId": "brand::battle-boss-brand::wild-rift",
+      "pcArtwork": "wiki:brand_battlebossskin.jpg",
+      "wrArtwork": "wiki:brand_battlebossskin_wr.jpg"
+    },
+    {
+      "pcId": "brand::arclight-brand::285",
+      "wrId": "brand::arclight-brand::wild-rift",
+      "pcArtwork": "wiki:brand_arclightskin.jpg",
+      "wrArtwork": "wiki:brand_arclightskin_wr.jpg"
+    },
+    {
+      "pcId": "brand::eternal-dragon-brand::286",
+      "wrId": "brand::eternal-dragon-brand::wild-rift",
+      "pcArtwork": "wiki:brand_eternaldragonskin.jpg",
+      "wrArtwork": "wiki:brand_eternaldragonskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::classic-braum::294",
+      "wrId": "braum::classic-braum::wild-rift",
+      "pcArtwork": "wiki:braum_originalskin.jpg",
+      "wrArtwork": "wiki:braum_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::dragonslayer-braum::295",
+      "wrId": "braum::dragonslayer-braum::wild-rift",
+      "pcArtwork": "wiki:braum_dragonslayerskin.jpg",
+      "wrArtwork": "wiki:braum_dragonslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::el-tigre-braum::297",
+      "wrId": "braum::el-tigre-braum::wild-rift",
+      "pcArtwork": "wiki:braum_eltigreskin.jpg",
+      "wrArtwork": "wiki:braum_eltigreskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::braum-lionheart::298",
+      "wrId": "braum::braum-lionheart::wild-rift",
+      "pcArtwork": "wiki:braum_braumlionheartskin.jpg",
+      "wrArtwork": "wiki:braum_braumlionheartskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::santa-braum::299",
+      "wrId": "braum::santa-braum::wild-rift",
+      "pcArtwork": "wiki:braum_santaskin.jpg",
+      "wrArtwork": "wiki:braum_santaskin_wr.jpg"
+    },
+    {
+      "pcId": "braum::crime-city-braum::300",
+      "wrId": "braum::crime-city-braum::wild-rift",
+      "pcArtwork": "wiki:braum_crimecityskin.jpg",
+      "wrArtwork": "wiki:braum_crimecityskin_wr.jpg"
+    },
+    {
+      "pcId": "caitlyn::classic-caitlyn::310",
+      "wrId": "caitlyn::classic-caitlyn::wild-rift",
+      "pcArtwork": "wiki:caitlyn_originalskin.jpg",
+      "wrArtwork": "wiki:caitlyn_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "caitlyn::pulsefire-caitlyn::318",
+      "wrId": "caitlyn::pulsefire-caitlyn::wild-rift",
+      "pcArtwork": "wiki:caitlyn_pulsefireskin.jpg",
+      "wrArtwork": "wiki:caitlyn_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "caitlyn::arcade-caitlyn::322",
+      "wrId": "caitlyn::arcade-caitlyn::wild-rift",
+      "pcArtwork": "wiki:caitlyn_arcadeskin.jpg",
+      "wrArtwork": "wiki:caitlyn_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "caitlyn::battle-academia-caitlyn::324",
+      "wrId": "caitlyn::battle-academia-caitlyn::wild-rift",
+      "pcArtwork": "wiki:caitlyn_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:caitlyn_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "camille::classic-camille::343",
+      "wrId": "camille::classic-camille::wild-rift",
+      "pcArtwork": "wiki:camille_originalskin.jpg",
+      "wrArtwork": "wiki:camille_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "camille::program-camille::344",
+      "wrId": "camille::program-camille::wild-rift",
+      "pcArtwork": "wiki:camille_programskin.jpg",
+      "wrArtwork": "wiki:camille_programskin_wr.jpg"
+    },
+    {
+      "pcId": "camille::coven-camille::345",
+      "wrId": "camille::coven-camille::wild-rift",
+      "pcArtwork": "wiki:camille_covenskin.jpg",
+      "wrArtwork": "wiki:camille_covenskin_wr.jpg"
+    },
+    {
+      "pcId": "cho-gath::classic-cho-gath::370",
+      "wrId": "cho-gath::classic-cho-gath::wild-rift",
+      "pcArtwork": "wiki:cho'gath_originalskin.jpg",
+      "wrArtwork": "wiki:cho'gath_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "corki::classic-corki::384",
+      "wrId": "corki::classic-corki::wild-rift",
+      "pcArtwork": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/base/images/corki_splash_centered_0.jpg",
+      "wrArtwork": "wiki:corki_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "corki::arcade-corki::393",
+      "wrId": "corki::arcade-corki::wild-rift",
+      "pcArtwork": "wiki:corki_arcadeskin.jpg",
+      "wrArtwork": "wiki:corki_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "corki::corgi-corki::394",
+      "wrId": "corki::corgi-corki::wild-rift",
+      "pcArtwork": "wiki:corki_corgiskin.jpg",
+      "wrArtwork": "wiki:corki_corgiskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::classic-darius::401",
+      "wrId": "darius::classic-darius::wild-rift",
+      "pcArtwork": "wiki:darius_originalskin.jpg",
+      "wrArtwork": "wiki:darius_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::dunkmaster-darius::406",
+      "wrId": "darius::dunkmaster-darius::wild-rift",
+      "pcArtwork": "wiki:darius_dunkmasterskin.jpg",
+      "wrArtwork": "wiki:darius_dunkmasterskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::academy-darius::408",
+      "wrId": "darius::academy-darius::wild-rift",
+      "pcArtwork": "wiki:darius_academyskin.jpg",
+      "wrArtwork": "wiki:darius_academyskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::dreadnova-darius::409",
+      "wrId": "darius::dreadnova-darius::wild-rift",
+      "pcArtwork": "wiki:darius_dreadnovaskin.jpg",
+      "wrArtwork": "wiki:darius_dreadnovaskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::god-king-darius::410",
+      "wrId": "darius::god-king-darius::wild-rift",
+      "pcArtwork": "wiki:darius_god-kingskin.jpg",
+      "wrArtwork": "wiki:darius_god-kingskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::high-noon-darius::411",
+      "wrId": "darius::high-noon-darius::wild-rift",
+      "pcArtwork": "wiki:darius_highnoonskin.jpg",
+      "wrArtwork": "wiki:darius_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "darius::lunar-beast-darius::412",
+      "wrId": "darius::lunar-beast-darius::wild-rift",
+      "pcArtwork": "wiki:darius_lunarbeastskin.jpg",
+      "wrArtwork": "wiki:darius_lunarbeastskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::classic-diana::422",
+      "wrId": "diana::classic-diana::wild-rift",
+      "pcArtwork": "wiki:diana_originalskin.jpg",
+      "wrArtwork": "wiki:diana_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::lunar-goddess-diana::425",
+      "wrId": "diana::lunar-goddess-diana::wild-rift",
+      "pcArtwork": "wiki:diana_lunargoddessskin.jpg",
+      "wrArtwork": "wiki:diana_lunargoddessskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::infernal-diana::428",
+      "wrId": "diana::infernal-diana::wild-rift",
+      "pcArtwork": "wiki:diana_infernalskin.jpg",
+      "wrArtwork": "wiki:diana_infernalskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::blood-moon-diana::429",
+      "wrId": "diana::blood-moon-diana::wild-rift",
+      "pcArtwork": "wiki:diana_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:diana_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::sentinel-diana::434",
+      "wrId": "diana::sentinel-diana::wild-rift",
+      "pcArtwork": "wiki:diana_sentinelskin.jpg",
+      "wrArtwork": "wiki:diana_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "diana::winterblessed-diana::438",
+      "wrId": "diana::winterblessed-diana::wild-rift",
+      "pcArtwork": "wiki:diana_winterblessedskin.jpg",
+      "wrArtwork": "wiki:diana_winterblessedskin_wr.jpg"
+    },
+    {
+      "pcId": "dr-mundo::classic-dr-mundo::448",
+      "wrId": "dr-mundo::classic-dr-mundo::wild-rift",
+      "pcArtwork": "wiki:dr._mundo_originalskin.jpg",
+      "wrArtwork": "wiki:dr._mundo_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "dr-mundo::corporate-mundo::451",
+      "wrId": "dr-mundo::corporate-mundo::wild-rift",
+      "pcArtwork": "wiki:dr._mundo_corporatemundoskin.jpg",
+      "wrArtwork": "wiki:dr._mundo_corporatemundoskin_wr.jpg"
+    },
+    {
+      "pcId": "dr-mundo::rageborn-mundo::454",
+      "wrId": "dr-mundo::rageborn-mundo::wild-rift",
+      "pcArtwork": "wiki:dr._mundo_ragebornmundoskin.jpg",
+      "wrArtwork": "wiki:dr._mundo_ragebornmundoskin_wr.jpg"
+    },
+    {
+      "pcId": "dr-mundo::pool-party-mundo::456",
+      "wrId": "dr-mundo::pool-party-mundo::wild-rift",
+      "pcArtwork": "wiki:dr._mundo_poolpartymundoskin.jpg",
+      "wrArtwork": "wiki:dr._mundo_poolpartymundoskin_wr.jpg"
+    },
+    {
+      "pcId": "dr-mundo::frozen-prince-mundo::458",
+      "wrId": "dr-mundo::frozen-prince-mundo::wild-rift",
+      "pcArtwork": "wiki:dr._mundo_frozenprincemundoskin.jpg",
+      "wrArtwork": "wiki:dr._mundo_frozenprincemundoskin_wr.jpg"
+    },
+    {
+      "pcId": "draven::primetime-draven::465",
+      "wrId": "draven::primetime-draven::wild-rift",
+      "pcArtwork": "wiki:draven_primetimeskin.jpg",
+      "wrArtwork": "wiki:draven_primetimeskin_wr.jpg"
+    },
+    {
+      "pcId": "draven::draven-draven::468",
+      "wrId": "draven::draven-draven::wild-rift",
+      "pcArtwork": "wiki:draven_dravendravenskin.jpg",
+      "wrArtwork": "wiki:draven_dravendravenskin_wr.jpg"
+    },
+    {
+      "pcId": "draven::ruined-draven::471",
+      "wrId": "draven::ruined-draven::wild-rift",
+      "pcArtwork": "wiki:draven_ruinedskin.jpg",
+      "wrArtwork": "wiki:draven_ruinedskin_wr.jpg"
+    },
+    {
+      "pcId": "ekko::classic-ekko::482",
+      "wrId": "ekko::classic-ekko::wild-rift",
+      "pcArtwork": "wiki:ekko_originalskin.jpg",
+      "wrArtwork": "wiki:ekko_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "ekko::sandstorm-ekko::483",
+      "wrId": "ekko::sandstorm-ekko::wild-rift",
+      "pcArtwork": "wiki:ekko_sandstormskin.jpg",
+      "wrArtwork": "wiki:ekko_sandstormskin_wr.jpg"
+    },
+    {
+      "pcId": "evelynn::tango-evelynn::516",
+      "wrId": "evelynn::tango-evelynn::wild-rift",
+      "pcArtwork": "wiki:evelynn_tangoskin.jpg",
+      "wrArtwork": "wiki:evelynn_tangoskin_wr.jpg"
+    },
+    {
+      "pcId": "evelynn::coven-evelynn::524",
+      "wrId": "evelynn::coven-evelynn::wild-rift",
+      "pcArtwork": "wiki:evelynn_covenskin.jpg",
+      "wrArtwork": "wiki:evelynn_covenskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::classic-ezreal::538",
+      "wrId": "ezreal::classic-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_originalskin.jpg",
+      "wrArtwork": "wiki:ezreal_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::striker-ezreal::540",
+      "wrId": "ezreal::striker-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_strikerskin.jpg",
+      "wrArtwork": "wiki:ezreal_strikerskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::frosted-ezreal::541",
+      "wrId": "ezreal::frosted-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_frostedskin.jpg",
+      "wrArtwork": "wiki:ezreal_frostedskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::arcade-ezreal::547",
+      "wrId": "ezreal::arcade-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_arcadeskin.jpg",
+      "wrArtwork": "wiki:ezreal_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::star-guardian-ezreal::548",
+      "wrId": "ezreal::star-guardian-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_starguardianskin.jpg",
+      "wrArtwork": "wiki:ezreal_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::pajama-guardian-ezreal::550",
+      "wrId": "ezreal::pajama-guardian-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_pajamaguardianskin.jpg",
+      "wrArtwork": "wiki:ezreal_pajamaguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::battle-academia-ezreal::551",
+      "wrId": "ezreal::battle-academia-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:ezreal_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "ezreal::heartsteel-ezreal::559",
+      "wrId": "ezreal::heartsteel-ezreal::wild-rift",
+      "pcArtwork": "wiki:ezreal_heartsteelskin.jpg",
+      "wrArtwork": "wiki:ezreal_heartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "fiddlesticks::classic-fiddlesticks::574",
+      "wrId": "fiddlesticks::classic-fiddlesticks::wild-rift",
+      "pcArtwork": "wiki:fiddlesticks_originalskin.jpg",
+      "wrArtwork": "wiki:fiddlesticks_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "fiddlesticks::pumpkinhead-fiddlesticks::578",
+      "wrId": "fiddlesticks::pumpkinhead-fiddlesticks::wild-rift",
+      "pcArtwork": "wiki:fiddlesticks_pumpkinheadskin.jpg",
+      "wrArtwork": "wiki:fiddlesticks_pumpkinheadskin_wr.jpg"
+    },
+    {
+      "pcId": "fiddlesticks::star-nemesis-fiddlesticks::584",
+      "wrId": "fiddlesticks::star-nemesis-fiddlesticks::wild-rift",
+      "pcArtwork": "wiki:fiddlesticks_starnemesisskin.jpg",
+      "wrArtwork": "wiki:fiddlesticks_starnemesisskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::classic-fiora::587",
+      "wrId": "fiora::classic-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_originalskin.jpg",
+      "wrArtwork": "wiki:fiora_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::royal-guard-fiora::588",
+      "wrId": "fiora::royal-guard-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_royalguardskin.jpg",
+      "wrArtwork": "wiki:fiora_royalguardskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::project-fiora::591",
+      "wrId": "fiora::project-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_projectskin.jpg",
+      "wrArtwork": "wiki:fiora_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::pool-party-fiora::593",
+      "wrId": "fiora::pool-party-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_poolpartyskin.jpg",
+      "wrArtwork": "wiki:fiora_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::soaring-sword-fiora::595",
+      "wrId": "fiora::soaring-sword-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_soaringswordskin.jpg",
+      "wrArtwork": "wiki:fiora_soaringswordskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::pulsefire-fiora::600",
+      "wrId": "fiora::pulsefire-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_pulsefireskin.jpg",
+      "wrArtwork": "wiki:fiora_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::lunar-beast-fiora::601",
+      "wrId": "fiora::lunar-beast-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_lunarbeastskin.jpg",
+      "wrArtwork": "wiki:fiora_lunarbeastskin_wr.jpg"
+    },
+    {
+      "pcId": "fiora::dragonmancer-fiora::606",
+      "wrId": "fiora::dragonmancer-fiora::wild-rift",
+      "pcArtwork": "wiki:fiora_dragonmancerskin.jpg",
+      "wrArtwork": "wiki:fiora_dragonmancerskin_wr.jpg"
+    },
+    {
+      "pcId": "fizz::classic-fizz::613",
+      "wrId": "fizz::classic-fizz::wild-rift",
+      "pcArtwork": "wiki:fizz_originalskin.jpg",
+      "wrArtwork": "wiki:fizz_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "fizz::cottontail-fizz::618",
+      "wrId": "fizz::cottontail-fizz::wild-rift",
+      "pcArtwork": "wiki:fizz_cottontailskin.jpg",
+      "wrArtwork": "wiki:fizz_cottontailskin_wr.jpg"
+    },
+    {
+      "pcId": "fizz::super-galaxy-fizz::619",
+      "wrId": "fizz::super-galaxy-fizz::wild-rift",
+      "pcArtwork": "wiki:fizz_supergalaxyskin.jpg",
+      "wrArtwork": "wiki:fizz_supergalaxyskin_wr.jpg"
+    },
+    {
+      "pcId": "fizz::omega-squad-fizz::620",
+      "wrId": "fizz::omega-squad-fizz::wild-rift",
+      "pcArtwork": "wiki:fizz_omegasquadskin.jpg",
+      "wrArtwork": "wiki:fizz_omegasquadskin_wr.jpg"
+    },
+    {
+      "pcId": "fizz::fuzz-fizz::621",
+      "wrId": "fizz::fuzz-fizz::wild-rift",
+      "pcArtwork": "wiki:fizz_fuzzskin.jpg",
+      "wrArtwork": "wiki:fizz_fuzzskin_wr.jpg"
+    },
+    {
+      "pcId": "galio::classic-galio::628",
+      "wrId": "galio::classic-galio::wild-rift",
+      "pcArtwork": "wiki:galio_originalskin.jpg",
+      "wrArtwork": "wiki:galio_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "galio::gatekeeper-galio::632",
+      "wrId": "galio::gatekeeper-galio::wild-rift",
+      "pcArtwork": "wiki:galio_gatekeeperskin.jpg",
+      "wrArtwork": "wiki:galio_gatekeeperskin_wr.jpg"
+    },
+    {
+      "pcId": "galio::birdio::634",
+      "wrId": "galio::birdio::wild-rift",
+      "pcArtwork": "wiki:galio_birdioskin.jpg",
+      "wrArtwork": "wiki:galio_birdioskin_wr.jpg"
+    },
+    {
+      "pcId": "galio::infernal-galio::635",
+      "wrId": "galio::infernal-galio::wild-rift",
+      "pcArtwork": "wiki:galio_infernalskin.jpg",
+      "wrArtwork": "wiki:galio_infernalskin_wr.jpg"
+    },
+    {
+      "pcId": "galio::dragon-guardian-galio::636",
+      "wrId": "galio::dragon-guardian-galio::wild-rift",
+      "pcArtwork": "wiki:galio_dragonguardianskin.jpg",
+      "wrArtwork": "wiki:galio_dragonguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "garen::classic-garen::656",
+      "wrId": "garen::classic-garen::wild-rift",
+      "pcArtwork": "wiki:garen_originalskin.jpg",
+      "wrArtwork": "wiki:garen_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "garen::steel-legion-garen::pc",
+      "wrId": "garen::steel-legion-garen::wild-rift",
+      "pcArtwork": "wiki:garen_steellegionskin.jpg",
+      "wrArtwork": "wiki:garen_steellegionskin_wr.jpg"
+    },
+    {
+      "pcId": "garen::rogue-admiral-garen::pc",
+      "wrId": "garen::rogue-admiral-garen::wild-rift",
+      "pcArtwork": "wiki:garen_rogueadmiralskin.jpg",
+      "wrArtwork": "wiki:garen_rogueadmiralskin_wr.jpg"
+    },
+    {
+      "pcId": "garen::warring-kingdoms-garen::pc",
+      "wrId": "garen::warring-kingdoms-garen::wild-rift",
+      "pcArtwork": "wiki:garen_warringkingdomsskin.jpg",
+      "wrArtwork": "wiki:garen_warringkingdomsskin_wr.jpg"
+    },
+    {
+      "pcId": "garen::god-king-garen::pc",
+      "wrId": "garen::god-king-garen::wild-rift",
+      "pcArtwork": "wiki:garen_god-kingskin.jpg",
+      "wrArtwork": "wiki:garen_god-kingskin_wr.jpg"
+    },
+    {
+      "pcId": "gnar::classic-gnar::pc",
+      "wrId": "gnar::classic-gnar::wild-rift",
+      "pcArtwork": "wiki:gnar_originalskin.jpg",
+      "wrArtwork": "wiki:gnar_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "gnar::super-galaxy-gnar::pc",
+      "wrId": "gnar::super-galaxy-gnar::wild-rift",
+      "pcArtwork": "wiki:gnar_supergalaxyskin.jpg",
+      "wrArtwork": "wiki:gnar_supergalaxyskin_wr.jpg"
+    },
+    {
+      "pcId": "gragas::classic-gragas::pc",
+      "wrId": "gragas::classic-gragas::wild-rift",
+      "pcArtwork": "wiki:gragas_originalskin.jpg",
+      "wrArtwork": "wiki:gragas_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "gragas::gragas-caskbreaker::pc",
+      "wrId": "gragas::gragas-caskbreaker::wild-rift",
+      "pcArtwork": "wiki:gragas_gragascaskbreakerskin.jpg",
+      "wrArtwork": "wiki:gragas_gragascaskbreakerskin_wr.jpg"
+    },
+    {
+      "pcId": "gragas::arctic-ops-gragas::pc",
+      "wrId": "gragas::arctic-ops-gragas::wild-rift",
+      "pcArtwork": "wiki:gragas_arcticopsskin.jpg",
+      "wrArtwork": "wiki:gragas_arcticopsskin_wr.jpg"
+    },
+    {
+      "pcId": "graves::pool-party-graves::pc",
+      "wrId": "graves::pool-party-graves::wild-rift",
+      "pcArtwork": "wiki:graves_poolpartyskin.jpg",
+      "wrArtwork": "wiki:graves_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "graves::cutthroat-graves::pc",
+      "wrId": "graves::cutthroat-graves::wild-rift",
+      "pcArtwork": "wiki:graves_cutthroatskin.jpg",
+      "wrArtwork": "wiki:graves_cutthroatskin_wr.jpg"
+    },
+    {
+      "pcId": "graves::praetorian-graves::pc",
+      "wrId": "graves::praetorian-graves::wild-rift",
+      "pcArtwork": "wiki:graves_praetorianskin.jpg",
+      "wrArtwork": "wiki:graves_praetorianskin_wr.jpg"
+    },
+    {
+      "pcId": "graves::battle-professor-graves::pc",
+      "wrId": "graves::battle-professor-graves::wild-rift",
+      "pcArtwork": "wiki:graves_battleprofessorskin.jpg",
+      "wrArtwork": "wiki:graves_battleprofessorskin_wr.jpg"
+    },
+    {
+      "pcId": "graves::sentinel-graves::pc",
+      "wrId": "graves::sentinel-graves::wild-rift",
+      "pcArtwork": "wiki:graves_sentinelskin.jpg",
+      "wrArtwork": "wiki:graves_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "gwen::classic-gwen::pc",
+      "wrId": "gwen::classic-gwen::wild-rift",
+      "pcArtwork": "wiki:gwen_originalskin.jpg",
+      "wrArtwork": "wiki:gwen_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "gwen::space-groove-gwen::pc",
+      "wrId": "gwen::space-groove-gwen::wild-rift",
+      "pcArtwork": "wiki:gwen_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:gwen_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "gwen::cafe-cuties-gwen::pc",
+      "wrId": "gwen::cafe-cuties-gwen::wild-rift",
+      "pcArtwork": "wiki:gwen_cafecutiesskin.jpg",
+      "wrArtwork": "wiki:gwen_cafecutiesskin_wr.jpg"
+    },
+    {
+      "pcId": "gwen::soul-fighter-gwen::pc",
+      "wrId": "gwen::soul-fighter-gwen::wild-rift",
+      "pcArtwork": "wiki:gwen_soulfighterskin.jpg",
+      "wrArtwork": "wiki:gwen_soulfighterskin_wr.jpg"
+    },
+    {
+      "pcId": "hecarim::classic-hecarim::pc",
+      "wrId": "hecarim::classic-hecarim::wild-rift",
+      "pcArtwork": "wiki:hecarim_originalskin.jpg",
+      "wrArtwork": "wiki:hecarim_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "hecarim::arcade-hecarim::pc",
+      "wrId": "hecarim::arcade-hecarim::wild-rift",
+      "pcArtwork": "wiki:hecarim_arcadeskin.jpg",
+      "wrArtwork": "wiki:hecarim_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "hecarim::high-noon-hecarim::pc",
+      "wrId": "hecarim::high-noon-hecarim::wild-rift",
+      "pcArtwork": "wiki:hecarim_highnoonskin.jpg",
+      "wrArtwork": "wiki:hecarim_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "hecarim::winterblessed-hecarim::pc",
+      "wrId": "hecarim::winterblessed-hecarim::wild-rift",
+      "pcArtwork": "wiki:hecarim_winterblessedskin.jpg",
+      "wrArtwork": "wiki:hecarim_winterblessedskin_wr.jpg"
+    },
+    {
+      "pcId": "heimerdinger::dragon-trainer-heimerdinger::pc",
+      "wrId": "heimerdinger::dragon-trainer-heimerdinger::wild-rift",
+      "pcArtwork": "wiki:heimerdinger_dragontrainerskin.jpg",
+      "wrArtwork": "wiki:heimerdinger_dragontrainerskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::classic-irelia::pc",
+      "wrId": "irelia::classic-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_originalskin.jpg",
+      "wrArtwork": "wiki:irelia_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::frostblade-irelia::pc",
+      "wrId": "irelia::frostblade-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_frostbladeskin.jpg",
+      "wrArtwork": "wiki:irelia_frostbladeskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::order-of-the-lotus-irelia::pc",
+      "wrId": "irelia::order-of-the-lotus-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_orderofthelotusskin.jpg",
+      "wrArtwork": "wiki:irelia_orderofthelotusskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::divine-sword-irelia::pc",
+      "wrId": "irelia::divine-sword-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_divineswordskin.jpg",
+      "wrArtwork": "wiki:irelia_divineswordskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::high-noon-irelia::pc",
+      "wrId": "irelia::high-noon-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_highnoonskin.jpg",
+      "wrArtwork": "wiki:irelia_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "irelia::sentinel-irelia::pc",
+      "wrId": "irelia::sentinel-irelia::wild-rift",
+      "pcArtwork": "wiki:irelia_sentinelskin.jpg",
+      "wrArtwork": "wiki:irelia_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "janna::star-guardian-janna::pc",
+      "wrId": "janna::star-guardian-janna::wild-rift",
+      "pcArtwork": "wiki:janna_starguardianskin.jpg",
+      "wrArtwork": "wiki:janna_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "janna::sacred-sword-janna::pc",
+      "wrId": "janna::sacred-sword-janna::wild-rift",
+      "pcArtwork": "wiki:janna_sacredswordskin.jpg",
+      "wrArtwork": "wiki:janna_sacredswordskin_wr.jpg"
+    },
+    {
+      "pcId": "janna::bewitching-janna::pc",
+      "wrId": "janna::bewitching-janna::wild-rift",
+      "pcArtwork": "wiki:janna_bewitchingskin.jpg",
+      "wrArtwork": "wiki:janna_bewitchingskin_wr.jpg"
+    },
+    {
+      "pcId": "jarvan-iv::classic-jarvan-iv::pc",
+      "wrId": "jarvan-iv::classic-jarvan-iv::wild-rift",
+      "pcArtwork": "wiki:jarvan_iv_originalskin.jpg",
+      "wrArtwork": "wiki:jarvan_iv_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "jarvan-iv::dark-star-jarvan-iv::pc",
+      "wrId": "jarvan-iv::dark-star-jarvan-iv::wild-rift",
+      "pcArtwork": "wiki:jarvan_iv_darkstarskin.jpg",
+      "wrArtwork": "wiki:jarvan_iv_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "jarvan-iv::hextech-jarvan-iv::pc",
+      "wrId": "jarvan-iv::hextech-jarvan-iv::wild-rift",
+      "pcArtwork": "wiki:jarvan_iv_hextechskin.jpg",
+      "wrArtwork": "wiki:jarvan_iv_hextechskin_wr.jpg"
+    },
+    {
+      "pcId": "jarvan-iv::lunar-beast-jarvan-iv::pc",
+      "wrId": "jarvan-iv::lunar-beast-jarvan-iv::wild-rift",
+      "pcArtwork": "wiki:jarvan_iv_lunarbeastskin.jpg",
+      "wrArtwork": "wiki:jarvan_iv_lunarbeastskin_wr.jpg"
+    },
+    {
+      "pcId": "jax::angler-jax::pc",
+      "wrId": "jax::angler-jax::wild-rift",
+      "pcArtwork": "wiki:jax_anglerskin.jpg",
+      "wrArtwork": "wiki:jax_anglerskin_wr.jpg"
+    },
+    {
+      "pcId": "jax::warden-jax::pc",
+      "wrId": "jax::warden-jax::wild-rift",
+      "pcArtwork": "wiki:jax_wardenskin.jpg",
+      "wrArtwork": "wiki:jax_wardenskin_wr.jpg"
+    },
+    {
+      "pcId": "jax::god-staff-jax::pc",
+      "wrId": "jax::god-staff-jax::wild-rift",
+      "pcArtwork": "wiki:jax_godstaffskin.jpg",
+      "wrArtwork": "wiki:jax_godstaffskin_wr.jpg"
+    },
+    {
+      "pcId": "jayce::classic-jayce::pc",
+      "wrId": "jayce::classic-jayce::wild-rift",
+      "pcArtwork": "wiki:jayce_originalskin.jpg",
+      "wrArtwork": "wiki:jayce_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "jayce::debonair-jayce::pc",
+      "wrId": "jayce::debonair-jayce::wild-rift",
+      "pcArtwork": "wiki:jayce_debonairskin.jpg",
+      "wrArtwork": "wiki:jayce_debonairskin_wr.jpg"
+    },
+    {
+      "pcId": "jayce::jayce-brighthammer::pc",
+      "wrId": "jayce::jayce-brighthammer::wild-rift",
+      "pcArtwork": "wiki:jayce_jaycebrighthammerskin.jpg",
+      "wrArtwork": "wiki:jayce_jaycebrighthammerskin_wr.jpg"
+    },
+    {
+      "pcId": "jayce::battle-academia-jayce::pc",
+      "wrId": "jayce::battle-academia-jayce::wild-rift",
+      "pcArtwork": "wiki:jayce_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:jayce_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "jayce::resistance-jayce::pc",
+      "wrId": "jayce::resistance-jayce::wild-rift",
+      "pcArtwork": "wiki:jayce_resistanceskin.jpg",
+      "wrArtwork": "wiki:jayce_resistanceskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::classic-jhin::pc",
+      "wrId": "jhin::classic-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_originalskin.jpg",
+      "wrArtwork": "wiki:jhin_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::high-noon-jhin::pc",
+      "wrId": "jhin::high-noon-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_highnoonskin.jpg",
+      "wrArtwork": "wiki:jhin_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::blood-moon-jhin::pc",
+      "wrId": "jhin::blood-moon-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:jhin_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::project-jhin::pc",
+      "wrId": "jhin::project-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_projectskin.jpg",
+      "wrArtwork": "wiki:jhin_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::dark-cosmic-jhin::pc",
+      "wrId": "jhin::dark-cosmic-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_darkcosmicskin.jpg",
+      "wrArtwork": "wiki:jhin_darkcosmicskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::shan-hai-scrolls-jhin::pc",
+      "wrId": "jhin::shan-hai-scrolls-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_shanhaiscrollsskin.jpg",
+      "wrArtwork": "wiki:jhin_shanhaiscrollsskin_wr.jpg"
+    },
+    {
+      "pcId": "jhin::soul-fighter-jhin::pc",
+      "wrId": "jhin::soul-fighter-jhin::wild-rift",
+      "pcArtwork": "wiki:jhin_soulfighterskin.jpg",
+      "wrArtwork": "wiki:jhin_soulfighterskin_wr.jpg"
+    },
+    {
+      "pcId": "jinx::crime-city-jinx::pc",
+      "wrId": "jinx::crime-city-jinx::wild-rift",
+      "pcArtwork": "wiki:jinx_crimecityskin.jpg",
+      "wrArtwork": "wiki:jinx_crimecityskin_wr.jpg"
+    },
+    {
+      "pcId": "jinx::firecracker-jinx::pc",
+      "wrId": "jinx::firecracker-jinx::wild-rift",
+      "pcArtwork": "wiki:jinx_firecrackerskin.jpg",
+      "wrArtwork": "wiki:jinx_firecrackerskin_wr.jpg"
+    },
+    {
+      "pcId": "jinx::zombie-slayer-jinx::pc",
+      "wrId": "jinx::zombie-slayer-jinx::wild-rift",
+      "pcArtwork": "wiki:jinx_zombieslayerskin.jpg",
+      "wrArtwork": "wiki:jinx_zombieslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "jinx::star-guardian-jinx::pc",
+      "wrId": "jinx::star-guardian-jinx::wild-rift",
+      "pcArtwork": "wiki:jinx_starguardianskin.jpg",
+      "wrArtwork": "wiki:jinx_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "jinx::battle-cat-jinx::pc",
+      "wrId": "jinx::battle-cat-jinx::wild-rift",
+      "pcArtwork": "wiki:jinx_battlecatskin.jpg",
+      "wrArtwork": "wiki:jinx_battlecatskin_wr.jpg"
+    },
+    {
+      "pcId": "k-sante::classic-k-sante::pc",
+      "wrId": "k-sante::classic-k-sante::wild-rift",
+      "pcArtwork": "wiki:k'sante_originalskin.jpg",
+      "wrArtwork": "wiki:k'sante_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "k-sante::heartsteel-k-sante::pc",
+      "wrId": "k-sante::heartsteel-k-sante::wild-rift",
+      "pcArtwork": "wiki:k'sante_heartsteelskin.jpg",
+      "wrArtwork": "wiki:k'sante_heartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::classic-kai-sa::pc",
+      "wrId": "kai-sa::classic-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_originalskin.jpg",
+      "wrArtwork": "wiki:kai'sa_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::bullet-angel-kai-sa::pc",
+      "wrId": "kai-sa::bullet-angel-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_bulletangelskin.jpg",
+      "wrArtwork": "wiki:kai'sa_bulletangelskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::arcade-kai-sa::pc",
+      "wrId": "kai-sa::arcade-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_arcadeskin.jpg",
+      "wrArtwork": "wiki:kai'sa_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::k-da-all-out-kai-sa::pc",
+      "wrId": "kai-sa::k-da-all-out-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_kdaalloutskin.jpg",
+      "wrArtwork": "wiki:kai'sa_kdaalloutskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::lagoon-dragon-kai-sa::pc",
+      "wrId": "kai-sa::lagoon-dragon-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_lagoondragonskin.jpg",
+      "wrArtwork": "wiki:kai'sa_lagoondragonskin_wr.jpg"
+    },
+    {
+      "pcId": "kai-sa::star-guardian-kai-sa::pc",
+      "wrId": "kai-sa::star-guardian-kai-sa::wild-rift",
+      "pcArtwork": "wiki:kai'sa_starguardianskin.jpg",
+      "wrArtwork": "wiki:kai'sa_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "kalista::classic-kalista::pc",
+      "wrId": "kalista::classic-kalista::wild-rift",
+      "pcArtwork": "wiki:kalista_originalskin.jpg",
+      "wrArtwork": "wiki:kalista_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::classic-karma::pc",
+      "wrId": "karma::classic-karma::wild-rift",
+      "pcArtwork": "wiki:karma_originalskin.jpg",
+      "wrArtwork": "wiki:karma_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::warden-karma::pc",
+      "wrId": "karma::warden-karma::wild-rift",
+      "pcArtwork": "wiki:karma_wardenskin.jpg",
+      "wrArtwork": "wiki:karma_wardenskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::dark-star-karma::pc",
+      "wrId": "karma::dark-star-karma::wild-rift",
+      "pcArtwork": "wiki:karma_darkstarskin.jpg",
+      "wrArtwork": "wiki:karma_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::dawnbringer-karma::pc",
+      "wrId": "karma::dawnbringer-karma::wild-rift",
+      "pcArtwork": "wiki:karma_dawnbringerskin.jpg",
+      "wrArtwork": "wiki:karma_dawnbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::tranquility-dragon-karma::pc",
+      "wrId": "karma::tranquility-dragon-karma::wild-rift",
+      "pcArtwork": "wiki:karma_tranquilitydragonskin.jpg",
+      "wrArtwork": "wiki:karma_tranquilitydragonskin_wr.jpg"
+    },
+    {
+      "pcId": "karma::spirit-blossom-karma::pc",
+      "wrId": "karma::spirit-blossom-karma::wild-rift",
+      "pcArtwork": "wiki:karma_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:karma_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "kassadin::classic-kassadin::pc",
+      "wrId": "kassadin::classic-kassadin::wild-rift",
+      "pcArtwork": "wiki:kassadin_originalskin.jpg",
+      "wrArtwork": "wiki:kassadin_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kassadin::count-kassadin::pc",
+      "wrId": "kassadin::count-kassadin::wild-rift",
+      "pcArtwork": "wiki:kassadin_countskin.jpg",
+      "wrArtwork": "wiki:kassadin_countskin_wr.jpg"
+    },
+    {
+      "pcId": "kassadin::dragonmancer-kassadin::pc",
+      "wrId": "kassadin::dragonmancer-kassadin::wild-rift",
+      "pcArtwork": "wiki:kassadin_dragonmancerskin.jpg",
+      "wrArtwork": "wiki:kassadin_dragonmancerskin_wr.jpg"
+    },
+    {
+      "pcId": "katarina::project-katarina::pc",
+      "wrId": "katarina::project-katarina::wild-rift",
+      "pcArtwork": "wiki:katarina_projectskin.jpg",
+      "wrArtwork": "wiki:katarina_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "katarina::death-sworn-katarina::pc",
+      "wrId": "katarina::death-sworn-katarina::wild-rift",
+      "pcArtwork": "wiki:katarina_deathswornskin.jpg",
+      "wrArtwork": "wiki:katarina_deathswornskin_wr.jpg"
+    },
+    {
+      "pcId": "katarina::battle-academia-katarina::pc",
+      "wrId": "katarina::battle-academia-katarina::wild-rift",
+      "pcArtwork": "wiki:katarina_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:katarina_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "katarina::high-noon-katarina::pc",
+      "wrId": "katarina::high-noon-katarina::wild-rift",
+      "pcArtwork": "wiki:katarina_highnoonskin.jpg",
+      "wrArtwork": "wiki:katarina_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "kayle::classic-kayle::pc",
+      "wrId": "kayle::classic-kayle::wild-rift",
+      "pcArtwork": "wiki:kayle_originalskin.jpg",
+      "wrArtwork": "wiki:kayle_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kayle::viridian-kayle::pc",
+      "wrId": "kayle::viridian-kayle::wild-rift",
+      "pcArtwork": "wiki:kayle_viridianskin.jpg",
+      "wrArtwork": "wiki:kayle_viridianskin_wr.jpg"
+    },
+    {
+      "pcId": "kayle::psyops-kayle::pc",
+      "wrId": "kayle::psyops-kayle::wild-rift",
+      "pcArtwork": "wiki:kayle_psyopsskin.jpg",
+      "wrArtwork": "wiki:kayle_psyopsskin_wr.jpg"
+    },
+    {
+      "pcId": "kayle::dragonslayer-kayle::pc",
+      "wrId": "kayle::dragonslayer-kayle::wild-rift",
+      "pcArtwork": "wiki:kayle_dragonslayerskin.jpg",
+      "wrArtwork": "wiki:kayle_dragonslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "kayle::immortal-journey-kayle::pc",
+      "wrId": "kayle::immortal-journey-kayle::wild-rift",
+      "pcArtwork": "wiki:kayle_immortaljourneyskin.jpg",
+      "wrArtwork": "wiki:kayle_immortaljourneyskin_wr.jpg"
+    },
+    {
+      "pcId": "kayn::classic-kayn::pc",
+      "wrId": "kayn::classic-kayn::wild-rift",
+      "pcArtwork": "wiki:kayn_originalskin.jpg",
+      "wrArtwork": "wiki:kayn_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kayn::soulhunter-kayn::pc",
+      "wrId": "kayn::soulhunter-kayn::wild-rift",
+      "pcArtwork": "wiki:kayn_soulhunterskin.jpg",
+      "wrArtwork": "wiki:kayn_soulhunterskin_wr.jpg"
+    },
+    {
+      "pcId": "kayn::odyssey-kayn::pc",
+      "wrId": "kayn::odyssey-kayn::wild-rift",
+      "pcArtwork": "wiki:kayn_odysseyskin.jpg",
+      "wrArtwork": "wiki:kayn_odysseyskin_wr.jpg"
+    },
+    {
+      "pcId": "kayn::nightbringer-kayn::pc",
+      "wrId": "kayn::nightbringer-kayn::wild-rift",
+      "pcArtwork": "wiki:kayn_nightbringerskin.jpg",
+      "wrArtwork": "wiki:kayn_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "kayn::heartsteel-kayn::pc",
+      "wrId": "kayn::heartsteel-kayn::wild-rift",
+      "pcArtwork": "wiki:kayn_heartsteelskin.jpg",
+      "wrArtwork": "wiki:kayn_heartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "kennen::classic-kennen::pc",
+      "wrId": "kennen::classic-kennen::wild-rift",
+      "pcArtwork": "wiki:kennen_originalskin.jpg",
+      "wrArtwork": "wiki:kennen_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kennen::blood-moon-kennen::pc",
+      "wrId": "kennen::blood-moon-kennen::wild-rift",
+      "pcArtwork": "wiki:kennen_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:kennen_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "kennen::super-kennen::pc",
+      "wrId": "kennen::super-kennen::wild-rift",
+      "pcArtwork": "wiki:kennen_superskin.jpg",
+      "wrArtwork": "wiki:kennen_superskin_wr.jpg"
+    },
+    {
+      "pcId": "kennen::infernal-kennen::pc",
+      "wrId": "kennen::infernal-kennen::wild-rift",
+      "pcArtwork": "wiki:kennen_infernalskin.jpg",
+      "wrArtwork": "wiki:kennen_infernalskin_wr.jpg"
+    },
+    {
+      "pcId": "kha-zix::classic-kha-zix::pc",
+      "wrId": "kha-zix::classic-kha-zix::wild-rift",
+      "pcArtwork": "wiki:kha'zix_originalskin.jpg",
+      "wrArtwork": "wiki:kha'zix_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kha-zix::mecha-kha-zix::pc",
+      "wrId": "kha-zix::mecha-kha-zix::wild-rift",
+      "pcArtwork": "wiki:kha'zix_mechaskin.jpg",
+      "wrArtwork": "wiki:kha'zix_mechaskin_wr.jpg"
+    },
+    {
+      "pcId": "kha-zix::death-blossom-kha-zix::pc",
+      "wrId": "kha-zix::death-blossom-kha-zix::wild-rift",
+      "pcArtwork": "wiki:kha'zix_deathblossomskin.jpg",
+      "wrArtwork": "wiki:kha'zix_deathblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "kha-zix::dark-star-kha-zix::pc",
+      "wrId": "kha-zix::dark-star-kha-zix::wild-rift",
+      "pcArtwork": "wiki:kha'zix_darkstarskin.jpg",
+      "wrArtwork": "wiki:kha'zix_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "kindred::classic-kindred::pc",
+      "wrId": "kindred::classic-kindred::wild-rift",
+      "pcArtwork": "wiki:kindred_originalskin.jpg",
+      "wrArtwork": "wiki:kindred_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kindred::spirit-blossom-kindred::pc",
+      "wrId": "kindred::spirit-blossom-kindred::wild-rift",
+      "pcArtwork": "wiki:kindred_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:kindred_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "kindred::porcelain-kindred::pc",
+      "wrId": "kindred::porcelain-kindred::wild-rift",
+      "pcArtwork": "wiki:kindred_porcelainskin.jpg",
+      "wrArtwork": "wiki:kindred_porcelainskin_wr.jpg"
+    },
+    {
+      "pcId": "kindred::woof-and-lamb-kindred::pc",
+      "wrId": "kindred::woof-and-lamb-kindred::wild-rift",
+      "pcArtwork": "wiki:kindred_woofandlambskin.jpg",
+      "wrArtwork": "wiki:kindred_woofandlambskin_wr.jpg"
+    },
+    {
+      "pcId": "kog-maw::classic-kog-maw::pc",
+      "wrId": "kog-maw::classic-kog-maw::wild-rift",
+      "pcArtwork": "wiki:kog'maw_originalskin.jpg",
+      "wrArtwork": "wiki:kog'maw_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "kog-maw::pug-maw::pc",
+      "wrId": "kog-maw::pug-maw::wild-rift",
+      "pcArtwork": "wiki:kog'maw_pug'mawskin.jpg",
+      "wrArtwork": "wiki:kog'maw_pug'mawskin_wr.jpg"
+    },
+    {
+      "pcId": "kog-maw::shan-hai-scrolls-kog-maw::pc",
+      "wrId": "kog-maw::shan-hai-scrolls-kog-maw::wild-rift",
+      "pcArtwork": "wiki:kog'maw_shanhaiscrollsskin.jpg",
+      "wrArtwork": "wiki:kog'maw_shanhaiscrollsskin_wr.jpg"
+    },
+    {
+      "pcId": "lee-sin::classic-lee-sin::pc",
+      "wrId": "lee-sin::classic-lee-sin::wild-rift",
+      "pcArtwork": "wiki:lee_sin_originalskin.jpg",
+      "wrArtwork": "wiki:lee_sin_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lee-sin::god-fist-lee-sin::pc",
+      "wrId": "lee-sin::god-fist-lee-sin::wild-rift",
+      "pcArtwork": "wiki:lee_sin_godfistskin.jpg",
+      "wrArtwork": "wiki:lee_sin_godfistskin_wr.jpg"
+    },
+    {
+      "pcId": "lee-sin::nightbringer-lee-sin::pc",
+      "wrId": "lee-sin::nightbringer-lee-sin::wild-rift",
+      "pcArtwork": "wiki:lee_sin_nightbringerskin.jpg",
+      "wrArtwork": "wiki:lee_sin_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::pool-party-leona::pc",
+      "wrId": "leona::pool-party-leona::wild-rift",
+      "pcArtwork": "wiki:leona_poolpartyskin.jpg",
+      "wrArtwork": "wiki:leona_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::project-leona::pc",
+      "wrId": "leona::project-leona::wild-rift",
+      "pcArtwork": "wiki:leona_projectskin.jpg",
+      "wrArtwork": "wiki:leona_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::solar-eclipse-leona::pc",
+      "wrId": "leona::solar-eclipse-leona::wild-rift",
+      "pcArtwork": "wiki:leona_solareclipseskin.jpg",
+      "wrArtwork": "wiki:leona_solareclipseskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::lunar-eclipse-leona::pc",
+      "wrId": "leona::lunar-eclipse-leona::wild-rift",
+      "pcArtwork": "wiki:leona_lunareclipseskin.jpg",
+      "wrArtwork": "wiki:leona_lunareclipseskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::battle-academia-leona::pc",
+      "wrId": "leona::battle-academia-leona::wild-rift",
+      "pcArtwork": "wiki:leona_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:leona_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "leona::high-noon-leona::pc",
+      "wrId": "leona::high-noon-leona::wild-rift",
+      "pcArtwork": "wiki:leona_highnoonskin.jpg",
+      "wrArtwork": "wiki:leona_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "lillia::classic-lillia::pc",
+      "wrId": "lillia::classic-lillia::wild-rift",
+      "pcArtwork": "wiki:lillia_originalskin.jpg",
+      "wrArtwork": "wiki:lillia_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lillia::spirit-blossom-lillia::pc",
+      "wrId": "lillia::spirit-blossom-lillia::wild-rift",
+      "pcArtwork": "wiki:lillia_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:lillia_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "lillia::nightbringer-lillia::pc",
+      "wrId": "lillia::nightbringer-lillia::wild-rift",
+      "pcArtwork": "wiki:lillia_nightbringerskin.jpg",
+      "wrArtwork": "wiki:lillia_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "lissandra::classic-lissandra::pc",
+      "wrId": "lissandra::classic-lissandra::wild-rift",
+      "pcArtwork": "wiki:lissandra_originalskin.jpg",
+      "wrArtwork": "wiki:lissandra_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lissandra::porcelain-lissandra::pc",
+      "wrId": "lissandra::porcelain-lissandra::wild-rift",
+      "pcArtwork": "wiki:lissandra_porcelainskin.jpg",
+      "wrArtwork": "wiki:lissandra_porcelainskin_wr.jpg"
+    },
+    {
+      "pcId": "lissandra::prestige-porcelain-lissandra::pc",
+      "wrId": "lissandra::prestige-porcelain-lissandra::wild-rift",
+      "pcArtwork": "wiki:lissandra_prestigeporcelainskin.jpg",
+      "wrArtwork": "wiki:lissandra_prestigeporcelainskin_wr.jpg"
+    },
+    {
+      "pcId": "lucian::classic-lucian::pc",
+      "wrId": "lucian::classic-lucian::wild-rift",
+      "pcArtwork": "wiki:lucian_originalskin.jpg",
+      "wrArtwork": "wiki:lucian_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lucian::hired-gun-lucian::pc",
+      "wrId": "lucian::hired-gun-lucian::wild-rift",
+      "pcArtwork": "wiki:lucian_hiredgunskin.jpg",
+      "wrArtwork": "wiki:lucian_hiredgunskin_wr.jpg"
+    },
+    {
+      "pcId": "lucian::high-noon-lucian::pc",
+      "wrId": "lucian::high-noon-lucian::wild-rift",
+      "pcArtwork": "wiki:lucian_highnoonskin.jpg",
+      "wrArtwork": "wiki:lucian_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "lucian::pulsefire-lucian::pc",
+      "wrId": "lucian::pulsefire-lucian::wild-rift",
+      "pcArtwork": "wiki:lucian_pulsefireskin.jpg",
+      "wrArtwork": "wiki:lucian_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::classic-lulu::pc",
+      "wrId": "lulu::classic-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_originalskin.jpg",
+      "wrArtwork": "wiki:lulu_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::wicked-lulu::pc",
+      "wrId": "lulu::wicked-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_wickedskin.jpg",
+      "wrArtwork": "wiki:lulu_wickedskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::dragon-trainer-lulu::pc",
+      "wrId": "lulu::dragon-trainer-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_dragontrainerskin.jpg",
+      "wrArtwork": "wiki:lulu_dragontrainerskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::winter-wonder-lulu::pc",
+      "wrId": "lulu::winter-wonder-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_winterwonderskin.jpg",
+      "wrArtwork": "wiki:lulu_winterwonderskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::pool-party-lulu::pc",
+      "wrId": "lulu::pool-party-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_poolpartyskin.jpg",
+      "wrArtwork": "wiki:lulu_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::star-guardian-lulu::pc",
+      "wrId": "lulu::star-guardian-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_starguardianskin.jpg",
+      "wrArtwork": "wiki:lulu_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::cosmic-enchantress-lulu::pc",
+      "wrId": "lulu::cosmic-enchantress-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_cosmicenchantressskin.jpg",
+      "wrArtwork": "wiki:lulu_cosmicenchantressskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::pajama-guardian-lulu::pc",
+      "wrId": "lulu::pajama-guardian-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_pajamaguardianskin.jpg",
+      "wrArtwork": "wiki:lulu_pajamaguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "lulu::space-groove-lulu::pc",
+      "wrId": "lulu::space-groove-lulu::wild-rift",
+      "pcArtwork": "wiki:lulu_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:lulu_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::classic-lux::pc",
+      "wrId": "lux::classic-lux::wild-rift",
+      "pcArtwork": "wiki:lux_originalskin.jpg",
+      "wrArtwork": "wiki:lux_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::spellthief-lux::pc",
+      "wrId": "lux::spellthief-lux::wild-rift",
+      "pcArtwork": "wiki:lux_spellthiefskin.jpg",
+      "wrArtwork": "wiki:lux_spellthiefskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::star-guardian-lux::pc",
+      "wrId": "lux::star-guardian-lux::wild-rift",
+      "pcArtwork": "wiki:lux_starguardianskin.jpg",
+      "wrArtwork": "wiki:lux_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::pajama-guardian-lux::pc",
+      "wrId": "lux::pajama-guardian-lux::wild-rift",
+      "pcArtwork": "wiki:lux_pajamaguardianskin.jpg",
+      "wrArtwork": "wiki:lux_pajamaguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::battle-academia-lux::pc",
+      "wrId": "lux::battle-academia-lux::wild-rift",
+      "pcArtwork": "wiki:lux_battleacademiaskin.jpg",
+      "wrArtwork": "wiki:lux_battleacademiaskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::dark-cosmic-lux::pc",
+      "wrId": "lux::dark-cosmic-lux::wild-rift",
+      "pcArtwork": "wiki:lux_darkcosmicskin.jpg",
+      "wrArtwork": "wiki:lux_darkcosmicskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::cosmic-lux::pc",
+      "wrId": "lux::cosmic-lux::wild-rift",
+      "pcArtwork": "wiki:lux_cosmicskin.jpg",
+      "wrArtwork": "wiki:lux_cosmicskin_wr.jpg"
+    },
+    {
+      "pcId": "lux::space-groove-lux::pc",
+      "wrId": "lux::space-groove-lux::wild-rift",
+      "pcArtwork": "wiki:lux_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:lux_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "malphite::classic-malphite::pc",
+      "wrId": "malphite::classic-malphite::wild-rift",
+      "pcArtwork": "wiki:malphite_originalskin.jpg",
+      "wrArtwork": "wiki:malphite_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "malphite::glacial-malphite::pc",
+      "wrId": "malphite::glacial-malphite::wild-rift",
+      "pcArtwork": "wiki:malphite_glacialskin.jpg",
+      "wrArtwork": "wiki:malphite_glacialskin_wr.jpg"
+    },
+    {
+      "pcId": "malphite::mecha-malphite::pc",
+      "wrId": "malphite::mecha-malphite::wild-rift",
+      "pcArtwork": "wiki:malphite_mechaskin.jpg",
+      "wrArtwork": "wiki:malphite_mechaskin_wr.jpg"
+    },
+    {
+      "pcId": "malphite::ironside-malphite::pc",
+      "wrId": "malphite::ironside-malphite::wild-rift",
+      "pcArtwork": "wiki:malphite_ironsideskin.jpg",
+      "wrArtwork": "wiki:malphite_ironsideskin_wr.jpg"
+    },
+    {
+      "pcId": "malphite::dark-star-malphite::pc",
+      "wrId": "malphite::dark-star-malphite::wild-rift",
+      "pcArtwork": "wiki:malphite_darkstarskin.jpg",
+      "wrArtwork": "wiki:malphite_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::classic-master-yi::pc",
+      "wrId": "master-yi::classic-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_originalskin.jpg",
+      "wrArtwork": "wiki:master_yi_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::assassin-master-yi::pc",
+      "wrId": "master-yi::assassin-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_assassinskin.jpg",
+      "wrArtwork": "wiki:master_yi_assassinskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::project-yi::pc",
+      "wrId": "master-yi::project-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_projectyiskin.jpg",
+      "wrArtwork": "wiki:master_yi_projectyiskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::cosmic-blade-master-yi::pc",
+      "wrId": "master-yi::cosmic-blade-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_cosmicbladeskin.jpg",
+      "wrArtwork": "wiki:master_yi_cosmicbladeskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::eternal-sword-yi::pc",
+      "wrId": "master-yi::eternal-sword-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_eternalswordyiskin.jpg",
+      "wrArtwork": "wiki:master_yi_eternalswordyiskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::snow-man-yi::pc",
+      "wrId": "master-yi::snow-man-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_snowmanyiskin.jpg",
+      "wrArtwork": "wiki:master_yi_snowmanyiskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::psyops-master-yi::pc",
+      "wrId": "master-yi::psyops-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_psyopsskin.jpg",
+      "wrArtwork": "wiki:master_yi_psyopsskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::spirit-blossom-master-yi::pc",
+      "wrId": "master-yi::spirit-blossom-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:master_yi_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "master-yi::prestige-spirit-blossom-master-yi::pc",
+      "wrId": "master-yi::prestige-spirit-blossom-master-yi::wild-rift",
+      "pcArtwork": "wiki:master_yi_prestigespiritblossomskin.jpg",
+      "wrArtwork": "wiki:master_yi_prestigespiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "mel::classic-mel::pc",
+      "wrId": "mel::classic-mel::wild-rift",
+      "pcArtwork": "wiki:mel_originalskin.jpg",
+      "wrArtwork": "wiki:mel_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "milio::classic-milio::pc",
+      "wrId": "milio::classic-milio::wild-rift",
+      "pcArtwork": "wiki:milio_originalskin.jpg",
+      "wrArtwork": "wiki:milio_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "miss-fortune::star-guardian-miss-fortune::pc",
+      "wrId": "miss-fortune::star-guardian-miss-fortune::wild-rift",
+      "pcArtwork": "wiki:miss_fortune_starguardianskin.jpg",
+      "wrArtwork": "wiki:miss_fortune_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "miss-fortune::bewitching-miss-fortune::pc",
+      "wrId": "miss-fortune::bewitching-miss-fortune::wild-rift",
+      "pcArtwork": "wiki:miss_fortune_bewitchingskin.jpg",
+      "wrArtwork": "wiki:miss_fortune_bewitchingskin_wr.jpg"
+    },
+    {
+      "pcId": "miss-fortune::battle-bunny-miss-fortune::pc",
+      "wrId": "miss-fortune::battle-bunny-miss-fortune::wild-rift",
+      "pcArtwork": "wiki:miss_fortune_battlebunnyskin.jpg",
+      "wrArtwork": "wiki:miss_fortune_battlebunnyskin_wr.jpg"
+    },
+    {
+      "pcId": "mordekaiser::classic-mordekaiser::pc",
+      "wrId": "mordekaiser::classic-mordekaiser::wild-rift",
+      "pcArtwork": "wiki:mordekaiser_originalskin.jpg",
+      "wrArtwork": "wiki:mordekaiser_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "mordekaiser::project-mordekaiser::pc",
+      "wrId": "mordekaiser::project-mordekaiser::wild-rift",
+      "pcArtwork": "wiki:mordekaiser_projectskin.jpg",
+      "wrArtwork": "wiki:mordekaiser_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "mordekaiser::ashen-graveknight-mordekaiser::pc",
+      "wrId": "mordekaiser::ashen-graveknight-mordekaiser::wild-rift",
+      "pcArtwork": "wiki:mordekaiser_ashengraveknightskin.jpg",
+      "wrArtwork": "wiki:mordekaiser_ashengraveknightskin_wr.jpg"
+    },
+    {
+      "pcId": "mordekaiser::old-god-mordekaiser::pc",
+      "wrId": "mordekaiser::old-god-mordekaiser::wild-rift",
+      "pcArtwork": "wiki:mordekaiser_oldgodskin.jpg",
+      "wrArtwork": "wiki:mordekaiser_oldgodskin_wr.jpg"
+    },
+    {
+      "pcId": "morgana::classic-morgana::pc",
+      "wrId": "morgana::classic-morgana::wild-rift",
+      "pcArtwork": "wiki:morgana_originalskin.jpg",
+      "wrArtwork": "wiki:morgana_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "morgana::majestic-empress-morgana::pc",
+      "wrId": "morgana::majestic-empress-morgana::wild-rift",
+      "pcArtwork": "wiki:morgana_majesticempressskin.jpg",
+      "wrArtwork": "wiki:morgana_majesticempressskin_wr.jpg"
+    },
+    {
+      "pcId": "morgana::coven-morgana::pc",
+      "wrId": "morgana::coven-morgana::wild-rift",
+      "pcArtwork": "wiki:morgana_covenskin.jpg",
+      "wrArtwork": "wiki:morgana_covenskin_wr.jpg"
+    },
+    {
+      "pcId": "nami::river-spirit-nami::pc",
+      "wrId": "nami::river-spirit-nami::wild-rift",
+      "pcArtwork": "wiki:nami_riverspiritskin.jpg",
+      "wrArtwork": "wiki:nami_riverspiritskin_wr.jpg"
+    },
+    {
+      "pcId": "nami::program-nami::pc",
+      "wrId": "nami::program-nami::wild-rift",
+      "pcArtwork": "wiki:nami_programskin.jpg",
+      "wrArtwork": "wiki:nami_programskin_wr.jpg"
+    },
+    {
+      "pcId": "nami::splendid-staff-nami::pc",
+      "wrId": "nami::splendid-staff-nami::wild-rift",
+      "pcArtwork": "wiki:nami_splendidstaffskin.jpg",
+      "wrArtwork": "wiki:nami_splendidstaffskin_wr.jpg"
+    },
+    {
+      "pcId": "nasus::classic-nasus::pc",
+      "wrId": "nasus::classic-nasus::wild-rift",
+      "pcArtwork": "wiki:nasus_originalskin.jpg",
+      "wrArtwork": "wiki:nasus_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "nasus::worldbreaker-nasus::pc",
+      "wrId": "nasus::worldbreaker-nasus::wild-rift",
+      "pcArtwork": "wiki:nasus_worldbreakerskin.jpg",
+      "wrArtwork": "wiki:nasus_worldbreakerskin_wr.jpg"
+    },
+    {
+      "pcId": "nasus::lunar-guardian-nasus::pc",
+      "wrId": "nasus::lunar-guardian-nasus::wild-rift",
+      "pcArtwork": "wiki:nasus_lunarguardianskin.jpg",
+      "wrArtwork": "wiki:nasus_lunarguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "nasus::battlecast-nasus::pc",
+      "wrId": "nasus::battlecast-nasus::wild-rift",
+      "pcArtwork": "wiki:nasus_battlecastskin.jpg",
+      "wrArtwork": "wiki:nasus_battlecastskin_wr.jpg"
+    },
+    {
+      "pcId": "nasus::space-groove-nasus::pc",
+      "wrId": "nasus::space-groove-nasus::wild-rift",
+      "pcArtwork": "wiki:nasus_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:nasus_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "nautilus::astronautilus::pc",
+      "wrId": "nautilus::astronautilus::wild-rift",
+      "pcArtwork": "wiki:nautilus_astronautilusskin.jpg",
+      "wrArtwork": "wiki:nautilus_astronautilusskin_wr.jpg"
+    },
+    {
+      "pcId": "nautilus::warden-nautilus::pc",
+      "wrId": "nautilus::warden-nautilus::wild-rift",
+      "pcArtwork": "wiki:nautilus_wardenskin.jpg",
+      "wrArtwork": "wiki:nautilus_wardenskin_wr.jpg"
+    },
+    {
+      "pcId": "nautilus::shan-hai-scrolls-nautilus::pc",
+      "wrId": "nautilus::shan-hai-scrolls-nautilus::wild-rift",
+      "pcArtwork": "wiki:nautilus_shanhaiscrollsskin.jpg",
+      "wrArtwork": "wiki:nautilus_shanhaiscrollsskin_wr.jpg"
+    },
+    {
+      "pcId": "nilah::classic-nilah::pc",
+      "wrId": "nilah::classic-nilah::wild-rift",
+      "pcArtwork": "wiki:nilah_originalskin.jpg",
+      "wrArtwork": "wiki:nilah_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "nilah::coven-nilah::pc",
+      "wrId": "nilah::coven-nilah::wild-rift",
+      "pcArtwork": "wiki:nilah_covenskin.jpg",
+      "wrArtwork": "wiki:nilah_covenskin_wr.jpg"
+    },
+    {
+      "pcId": "nunu-willump::classic-nunu-and-willump::pc",
+      "wrId": "nunu-willump::classic-nunu-and-willump::wild-rift",
+      "pcArtwork": "wiki:nunu_originalskin.jpg",
+      "wrArtwork": "wiki:nunu_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "nunu-willump::grungy-nunu-and-willump::pc",
+      "wrId": "nunu-willump::grungy-nunu-and-willump::wild-rift",
+      "pcArtwork": "wiki:nunu_grungyskin.jpg",
+      "wrArtwork": "wiki:nunu_grungyskin_wr.jpg"
+    },
+    {
+      "pcId": "nunu-willump::zombie-nunu-and-willump::pc",
+      "wrId": "nunu-willump::zombie-nunu-and-willump::wild-rift",
+      "pcArtwork": "wiki:nunu_zombieskin.jpg",
+      "wrArtwork": "wiki:nunu_zombieskin_wr.jpg"
+    },
+    {
+      "pcId": "nunu-willump::space-groove-nunu-and-willump::pc",
+      "wrId": "nunu-willump::space-groove-nunu-and-willump::wild-rift",
+      "pcArtwork": "wiki:nunu_spacegrooveskin.jpg",
+      "wrArtwork": "wiki:nunu_spacegrooveskin_wr.jpg"
+    },
+    {
+      "pcId": "nunu-willump::nunu-and-beelump::pc",
+      "wrId": "nunu-willump::nunu-and-beelump::wild-rift",
+      "pcArtwork": "wiki:nunu_nunu&beelumpskin.jpg",
+      "wrArtwork": "wiki:nunu_nunu&beelumpskin_wr.jpg"
+    },
+    {
+      "pcId": "olaf::classic-olaf::pc",
+      "wrId": "olaf::classic-olaf::wild-rift",
+      "pcArtwork": "wiki:olaf_originalskin.jpg",
+      "wrArtwork": "wiki:olaf_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "olaf::pentakill-olaf::pc",
+      "wrId": "olaf::pentakill-olaf::wild-rift",
+      "pcArtwork": "wiki:olaf_pentakillskin.jpg",
+      "wrArtwork": "wiki:olaf_pentakillskin_wr.jpg"
+    },
+    {
+      "pcId": "olaf::marauder-olaf::pc",
+      "wrId": "olaf::marauder-olaf::wild-rift",
+      "pcArtwork": "wiki:olaf_marauderskin.jpg",
+      "wrArtwork": "wiki:olaf_marauderskin_wr.jpg"
+    },
+    {
+      "pcId": "olaf::dragonslayer-olaf::pc",
+      "wrId": "olaf::dragonslayer-olaf::wild-rift",
+      "pcArtwork": "wiki:olaf_dragonslayerskin.jpg",
+      "wrArtwork": "wiki:olaf_dragonslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "olaf::sentinel-olaf::pc",
+      "wrId": "olaf::sentinel-olaf::wild-rift",
+      "pcArtwork": "wiki:olaf_sentinelskin.jpg",
+      "wrArtwork": "wiki:olaf_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "orianna::classic-orianna::pc",
+      "wrId": "orianna::classic-orianna::wild-rift",
+      "pcArtwork": "wiki:orianna_originalskin.jpg",
+      "wrArtwork": "wiki:orianna_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "orianna::winter-wonder-orianna::pc",
+      "wrId": "orianna::winter-wonder-orianna::wild-rift",
+      "pcArtwork": "wiki:orianna_winterwonderskin.jpg",
+      "wrArtwork": "wiki:orianna_winterwonderskin_wr.jpg"
+    },
+    {
+      "pcId": "orianna::dark-star-orianna::pc",
+      "wrId": "orianna::dark-star-orianna::wild-rift",
+      "pcArtwork": "wiki:orianna_darkstarskin.jpg",
+      "wrArtwork": "wiki:orianna_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "orianna::pool-party-orianna::pc",
+      "wrId": "orianna::pool-party-orianna::wild-rift",
+      "pcArtwork": "wiki:orianna_poolpartyskin.jpg",
+      "wrArtwork": "wiki:orianna_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "orianna::star-guardian-orianna::pc",
+      "wrId": "orianna::star-guardian-orianna::wild-rift",
+      "pcArtwork": "wiki:orianna_starguardianskin.jpg",
+      "wrArtwork": "wiki:orianna_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "ornn::classic-ornn::pc",
+      "wrId": "ornn::classic-ornn::wild-rift",
+      "pcArtwork": "wiki:ornn_originalskin.jpg",
+      "wrArtwork": "wiki:ornn_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "ornn::thunder-lord-ornn::pc",
+      "wrId": "ornn::thunder-lord-ornn::wild-rift",
+      "pcArtwork": "wiki:ornn_thunderlordskin.jpg",
+      "wrArtwork": "wiki:ornn_thunderlordskin_wr.jpg"
+    },
+    {
+      "pcId": "ornn::choo-choo-ornn::pc",
+      "wrId": "ornn::choo-choo-ornn::wild-rift",
+      "pcArtwork": "wiki:ornn_choo-chooskin.jpg",
+      "wrArtwork": "wiki:ornn_choo-chooskin_wr.jpg"
+    },
+    {
+      "pcId": "pantheon::classic-pantheon::pc",
+      "wrId": "pantheon::classic-pantheon::wild-rift",
+      "pcArtwork": "wiki:pantheon_originalskin.jpg",
+      "wrArtwork": "wiki:pantheon_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "pantheon::full-metal-pantheon::pc",
+      "wrId": "pantheon::full-metal-pantheon::wild-rift",
+      "pcArtwork": "wiki:pantheon_fullmetalskin.jpg",
+      "wrArtwork": "wiki:pantheon_fullmetalskin_wr.jpg"
+    },
+    {
+      "pcId": "pantheon::zombie-slayer-pantheon::pc",
+      "wrId": "pantheon::zombie-slayer-pantheon::wild-rift",
+      "pcArtwork": "wiki:pantheon_zombieslayerskin.jpg",
+      "wrArtwork": "wiki:pantheon_zombieslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "pantheon::pulsefire-pantheon::pc",
+      "wrId": "pantheon::pulsefire-pantheon::wild-rift",
+      "pcArtwork": "wiki:pantheon_pulsefireskin.jpg",
+      "wrArtwork": "wiki:pantheon_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "pantheon::ashen-conqueror-pantheon::pc",
+      "wrId": "pantheon::ashen-conqueror-pantheon::wild-rift",
+      "pcArtwork": "wiki:pantheon_ashenconquerorskin.jpg",
+      "wrArtwork": "wiki:pantheon_ashenconquerorskin_wr.jpg"
+    },
+    {
+      "pcId": "poppy::classic-poppy::pc",
+      "wrId": "poppy::classic-poppy::wild-rift",
+      "pcArtwork": "wiki:poppy_originalskin.jpg",
+      "wrArtwork": "wiki:poppy_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "pyke::classic-pyke::pc",
+      "wrId": "pyke::classic-pyke::wild-rift",
+      "pcArtwork": "wiki:pyke_originalskin.jpg",
+      "wrArtwork": "wiki:pyke_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "pyke::sand-wraith-pyke::pc",
+      "wrId": "pyke::sand-wraith-pyke::wild-rift",
+      "pcArtwork": "wiki:pyke_sandwraithskin.jpg",
+      "wrArtwork": "wiki:pyke_sandwraithskin_wr.jpg"
+    },
+    {
+      "pcId": "pyke::project-pyke::pc",
+      "wrId": "pyke::project-pyke::wild-rift",
+      "pcArtwork": "wiki:pyke_projectskin.jpg",
+      "wrArtwork": "wiki:pyke_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "pyke::ashen-knight-pyke::pc",
+      "wrId": "pyke::ashen-knight-pyke::wild-rift",
+      "pcArtwork": "wiki:pyke_ashenknightskin.jpg",
+      "wrArtwork": "wiki:pyke_ashenknightskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::classic-rakan::pc",
+      "wrId": "rakan::classic-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_originalskin.jpg",
+      "wrArtwork": "wiki:rakan_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::cosmic-dawn-rakan::pc",
+      "wrId": "rakan::cosmic-dawn-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_cosmicdawnskin.jpg",
+      "wrArtwork": "wiki:rakan_cosmicdawnskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::sweetheart-rakan::pc",
+      "wrId": "rakan::sweetheart-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_sweetheartskin.jpg",
+      "wrArtwork": "wiki:rakan_sweetheartskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::star-guardian-rakan::pc",
+      "wrId": "rakan::star-guardian-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_starguardianskin.jpg",
+      "wrArtwork": "wiki:rakan_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::elderwood-rakan::pc",
+      "wrId": "rakan::elderwood-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_elderwoodskin.jpg",
+      "wrArtwork": "wiki:rakan_elderwoodskin_wr.jpg"
+    },
+    {
+      "pcId": "rakan::redeemed-star-guardian-rakan::pc",
+      "wrId": "rakan::redeemed-star-guardian-rakan::wild-rift",
+      "pcArtwork": "wiki:rakan_redeemedstarguardianskin.jpg",
+      "wrArtwork": "wiki:rakan_redeemedstarguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "rammus::classic-rammus::pc",
+      "wrId": "rammus::classic-rammus::wild-rift",
+      "pcArtwork": "wiki:rammus_originalskin.jpg",
+      "wrArtwork": "wiki:rammus_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "rammus::durian-defender-rammus::pc",
+      "wrId": "rammus::durian-defender-rammus::wild-rift",
+      "pcArtwork": "wiki:rammus_duriandefenderskin.jpg",
+      "wrArtwork": "wiki:rammus_duriandefenderskin_wr.jpg"
+    },
+    {
+      "pcId": "rell::classic-rell::pc",
+      "wrId": "rell::classic-rell::wild-rift",
+      "pcArtwork": "wiki:rell_originalskin.jpg",
+      "wrArtwork": "wiki:rell_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "rell::star-guardian-rell::pc",
+      "wrId": "rell::star-guardian-rell::wild-rift",
+      "pcArtwork": "wiki:rell_starguardianskin.jpg",
+      "wrArtwork": "wiki:rell_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::classic-renekton::pc",
+      "wrId": "renekton::classic-renekton::wild-rift",
+      "pcArtwork": "wiki:renekton_originalskin.jpg",
+      "wrArtwork": "wiki:renekton_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::scorched-earth-renekton::pc",
+      "wrId": "renekton::scorched-earth-renekton::wild-rift",
+      "pcArtwork": "wiki:renekton_scorchedearthskin.jpg",
+      "wrArtwork": "wiki:renekton_scorchedearthskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::prehistoric-renekton::pc",
+      "wrId": "renekton::prehistoric-renekton::wild-rift",
+      "pcArtwork": "wiki:renekton_prehistoricskin.jpg",
+      "wrArtwork": "wiki:renekton_prehistoricskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::renektoy::pc",
+      "wrId": "renekton::renektoy::wild-rift",
+      "pcArtwork": "wiki:renekton_renektoyskin.jpg",
+      "wrArtwork": "wiki:renekton_renektoyskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::blackfrost-renekton::pc",
+      "wrId": "renekton::blackfrost-renekton::wild-rift",
+      "pcArtwork": "wiki:renekton_blackfrostskin.jpg",
+      "wrArtwork": "wiki:renekton_blackfrostskin_wr.jpg"
+    },
+    {
+      "pcId": "renekton::project-renekton::pc",
+      "wrId": "renekton::project-renekton::wild-rift",
+      "pcArtwork": "wiki:renekton_projectskin.jpg",
+      "wrArtwork": "wiki:renekton_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "rengar::night-hunter-rengar::pc",
+      "wrId": "rengar::night-hunter-rengar::wild-rift",
+      "pcArtwork": "wiki:rengar_nighthunterskin.jpg",
+      "wrArtwork": "wiki:rengar_nighthunterskin_wr.jpg"
+    },
+    {
+      "pcId": "rengar::mecha-rengar::pc",
+      "wrId": "rengar::mecha-rengar::wild-rift",
+      "pcArtwork": "wiki:rengar_mechaskin.jpg",
+      "wrArtwork": "wiki:rengar_mechaskin_wr.jpg"
+    },
+    {
+      "pcId": "rengar::pretty-kitty-rengar::pc",
+      "wrId": "rengar::pretty-kitty-rengar::wild-rift",
+      "pcArtwork": "wiki:rengar_prettykittyskin.jpg",
+      "wrArtwork": "wiki:rengar_prettykittyskin_wr.jpg"
+    },
+    {
+      "pcId": "riven::arcade-riven::pc",
+      "wrId": "riven::arcade-riven::wild-rift",
+      "pcArtwork": "wiki:riven_arcadeskin.jpg",
+      "wrArtwork": "wiki:riven_arcadeskin_wr.jpg"
+    },
+    {
+      "pcId": "riven::dawnbringer-riven::pc",
+      "wrId": "riven::dawnbringer-riven::wild-rift",
+      "pcArtwork": "wiki:riven_dawnbringerskin.jpg",
+      "wrArtwork": "wiki:riven_dawnbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "riven::pulsefire-riven::pc",
+      "wrId": "riven::pulsefire-riven::wild-rift",
+      "pcArtwork": "wiki:riven_pulsefireskin.jpg",
+      "wrArtwork": "wiki:riven_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "riven::spirit-blossom-riven::pc",
+      "wrId": "riven::spirit-blossom-riven::wild-rift",
+      "pcArtwork": "wiki:riven_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:riven_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "riven::sentinel-riven::pc",
+      "wrId": "riven::sentinel-riven::wild-rift",
+      "pcArtwork": "wiki:riven_sentinelskin.jpg",
+      "wrArtwork": "wiki:riven_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "rumble::classic-rumble::pc",
+      "wrId": "rumble::classic-rumble::wild-rift",
+      "pcArtwork": "wiki:rumble_originalskin.jpg",
+      "wrArtwork": "wiki:rumble_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "rumble::badlands-baron-rumble::pc",
+      "wrId": "rumble::badlands-baron-rumble::wild-rift",
+      "pcArtwork": "wiki:rumble_badlandsbaronskin.jpg",
+      "wrArtwork": "wiki:rumble_badlandsbaronskin_wr.jpg"
+    },
+    {
+      "pcId": "ryze::classic-ryze::pc",
+      "wrId": "ryze::classic-ryze::wild-rift",
+      "pcArtwork": "wiki:ryze_originalskin.jpg",
+      "wrArtwork": "wiki:ryze_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "samira::classic-samira::pc",
+      "wrId": "samira::classic-samira::wild-rift",
+      "pcArtwork": "wiki:samira_originalskin.jpg",
+      "wrArtwork": "wiki:samira_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "samira::high-noon-samira::pc",
+      "wrId": "samira::high-noon-samira::wild-rift",
+      "pcArtwork": "wiki:samira_highnoonskin.jpg",
+      "wrArtwork": "wiki:samira_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "samira::soul-fighter-samira::pc",
+      "wrId": "samira::soul-fighter-samira::wild-rift",
+      "pcArtwork": "wiki:samira_soulfighterskin.jpg",
+      "wrArtwork": "wiki:samira_soulfighterskin_wr.jpg"
+    },
+    {
+      "pcId": "senna::classic-senna::pc",
+      "wrId": "senna::classic-senna::wild-rift",
+      "pcArtwork": "wiki:senna_originalskin.jpg",
+      "wrArtwork": "wiki:senna_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "senna::true-damage-senna::pc",
+      "wrId": "senna::true-damage-senna::wild-rift",
+      "pcArtwork": "wiki:senna_truedamageskin.jpg",
+      "wrArtwork": "wiki:senna_truedamageskin_wr.jpg"
+    },
+    {
+      "pcId": "senna::high-noon-senna::pc",
+      "wrId": "senna::high-noon-senna::wild-rift",
+      "pcArtwork": "wiki:senna_highnoonskin.jpg",
+      "wrArtwork": "wiki:senna_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "senna::star-guardian-senna::pc",
+      "wrId": "senna::star-guardian-senna::wild-rift",
+      "pcArtwork": "wiki:senna_starguardianskin.jpg",
+      "wrArtwork": "wiki:senna_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "seraphine::classic-seraphine::pc",
+      "wrId": "seraphine::classic-seraphine::wild-rift",
+      "pcArtwork": "wiki:seraphine_originalskin.jpg",
+      "wrArtwork": "wiki:seraphine_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "seraphine::ocean-song-seraphine::pc",
+      "wrId": "seraphine::ocean-song-seraphine::wild-rift",
+      "pcArtwork": "wiki:seraphine_oceansongskin.jpg",
+      "wrArtwork": "wiki:seraphine_oceansongskin_wr.jpg"
+    },
+    {
+      "pcId": "seraphine::star-guardian-seraphine::pc",
+      "wrId": "seraphine::star-guardian-seraphine::wild-rift",
+      "pcArtwork": "wiki:seraphine_starguardianskin.jpg",
+      "wrArtwork": "wiki:seraphine_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "sett::classic-sett::pc",
+      "wrId": "sett::classic-sett::wild-rift",
+      "pcArtwork": "wiki:sett_originalskin.jpg",
+      "wrArtwork": "wiki:sett_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "sett::obsidian-dragon-sett::pc",
+      "wrId": "sett::obsidian-dragon-sett::wild-rift",
+      "pcArtwork": "wiki:sett_obsidiandragonskin.jpg",
+      "wrArtwork": "wiki:sett_obsidiandragonskin_wr.jpg"
+    },
+    {
+      "pcId": "sett::firecracker-sett::pc",
+      "wrId": "sett::firecracker-sett::wild-rift",
+      "pcArtwork": "wiki:sett_firecrackerskin.jpg",
+      "wrArtwork": "wiki:sett_firecrackerskin_wr.jpg"
+    },
+    {
+      "pcId": "sett::spirit-blossom-sett::pc",
+      "wrId": "sett::spirit-blossom-sett::wild-rift",
+      "pcArtwork": "wiki:sett_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:sett_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "sett::heartsteel-sett::pc",
+      "wrId": "sett::heartsteel-sett::wild-rift",
+      "pcArtwork": "wiki:sett_heartsteelskin.jpg",
+      "wrArtwork": "wiki:sett_heartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "shen::blood-moon-shen::pc",
+      "wrId": "shen::blood-moon-shen::wild-rift",
+      "pcArtwork": "wiki:shen_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:shen_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "shen::pulsefire-shen::pc",
+      "wrId": "shen::pulsefire-shen::wild-rift",
+      "pcArtwork": "wiki:shen_pulsefireskin.jpg",
+      "wrArtwork": "wiki:shen_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "shen::infernal-shen::pc",
+      "wrId": "shen::infernal-shen::wild-rift",
+      "pcArtwork": "wiki:shen_infernalskin.jpg",
+      "wrArtwork": "wiki:shen_infernalskin_wr.jpg"
+    },
+    {
+      "pcId": "singed::classic-singed::pc",
+      "wrId": "singed::classic-singed::wild-rift",
+      "pcArtwork": "wiki:singed_originalskin.jpg",
+      "wrArtwork": "wiki:singed_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "singed::augmented-singed::pc",
+      "wrId": "singed::augmented-singed::wild-rift",
+      "pcArtwork": "wiki:singed_augmentedskin.jpg",
+      "wrArtwork": "wiki:singed_augmentedskin_wr.jpg"
+    },
+    {
+      "pcId": "singed::beekeeper-singed::pc",
+      "wrId": "singed::beekeeper-singed::wild-rift",
+      "pcArtwork": "wiki:singed_beekeeperskin.jpg",
+      "wrArtwork": "wiki:singed_beekeeperskin_wr.jpg"
+    },
+    {
+      "pcId": "sion::warmonger-sion::pc",
+      "wrId": "sion::warmonger-sion::wild-rift",
+      "pcArtwork": "wiki:sion_warmongerskin.jpg",
+      "wrArtwork": "wiki:sion_warmongerskin_wr.jpg"
+    },
+    {
+      "pcId": "sion::mecha-zero-sion::pc",
+      "wrId": "sion::mecha-zero-sion::wild-rift",
+      "pcArtwork": "wiki:sion_mechazeroskin.jpg",
+      "wrArtwork": "wiki:sion_mechazeroskin_wr.jpg"
+    },
+    {
+      "pcId": "sivir::classic-sivir::pc",
+      "wrId": "sivir::classic-sivir::wild-rift",
+      "pcArtwork": "wiki:sivir_originalskin.jpg",
+      "wrArtwork": "wiki:sivir_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "sivir::pizza-delivery-sivir::pc",
+      "wrId": "sivir::pizza-delivery-sivir::wild-rift",
+      "pcArtwork": "wiki:sivir_pizzadeliveryskin.jpg",
+      "wrArtwork": "wiki:sivir_pizzadeliveryskin_wr.jpg"
+    },
+    {
+      "pcId": "sivir::blood-moon-sivir::pc",
+      "wrId": "sivir::blood-moon-sivir::wild-rift",
+      "pcArtwork": "wiki:sivir_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:sivir_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "skarner::classic-skarner::pc",
+      "wrId": "skarner::classic-skarner::wild-rift",
+      "pcArtwork": "wiki:skarner_originalskin.jpg",
+      "wrArtwork": "wiki:skarner_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "skarner::cosmic-sting-skarner::pc",
+      "wrId": "skarner::cosmic-sting-skarner::wild-rift",
+      "pcArtwork": "wiki:skarner_cosmicstingskin.jpg",
+      "wrArtwork": "wiki:skarner_cosmicstingskin_wr.jpg"
+    },
+    {
+      "pcId": "smolder::classic-smolder::pc",
+      "wrId": "smolder::classic-smolder::wild-rift",
+      "pcArtwork": "wiki:smolder_originalskin.jpg",
+      "wrArtwork": "wiki:smolder_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "sona::pentakill-sona::pc",
+      "wrId": "sona::pentakill-sona::wild-rift",
+      "pcArtwork": "wiki:sona_pentakillskin.jpg",
+      "wrArtwork": "wiki:sona_pentakillskin_wr.jpg"
+    },
+    {
+      "pcId": "sona::star-guardian-sona::pc",
+      "wrId": "sona::star-guardian-sona::wild-rift",
+      "pcArtwork": "wiki:sona_starguardianskin.jpg",
+      "wrArtwork": "wiki:sona_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "soraka::program-soraka::pc",
+      "wrId": "soraka::program-soraka::wild-rift",
+      "pcArtwork": "wiki:soraka_programskin.jpg",
+      "wrArtwork": "wiki:soraka_programskin_wr.jpg"
+    },
+    {
+      "pcId": "soraka::star-guardian-soraka::pc",
+      "wrId": "soraka::star-guardian-soraka::wild-rift",
+      "pcArtwork": "wiki:soraka_starguardianskin.jpg",
+      "wrArtwork": "wiki:soraka_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "soraka::winter-wonder-soraka::pc",
+      "wrId": "soraka::winter-wonder-soraka::wild-rift",
+      "pcArtwork": "wiki:soraka_winterwonderskin.jpg",
+      "wrArtwork": "wiki:soraka_winterwonderskin_wr.jpg"
+    },
+    {
+      "pcId": "soraka::immortal-journey-soraka::pc",
+      "wrId": "soraka::immortal-journey-soraka::wild-rift",
+      "pcArtwork": "wiki:soraka_immortaljourneyskin.jpg",
+      "wrArtwork": "wiki:soraka_immortaljourneyskin_wr.jpg"
+    },
+    {
+      "pcId": "swain::classic-swain::pc",
+      "wrId": "swain::classic-swain::wild-rift",
+      "pcArtwork": "wiki:swain_originalskin.jpg",
+      "wrArtwork": "wiki:swain_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "swain::tyrant-swain::pc",
+      "wrId": "swain::tyrant-swain::wild-rift",
+      "pcArtwork": "wiki:swain_tyrantskin.jpg",
+      "wrArtwork": "wiki:swain_tyrantskin_wr.jpg"
+    },
+    {
+      "pcId": "syndra::classic-syndra::pc",
+      "wrId": "syndra::classic-syndra::wild-rift",
+      "pcArtwork": "wiki:syndra_originalskin.jpg",
+      "wrArtwork": "wiki:syndra_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "syndra::star-guardian-syndra::pc",
+      "wrId": "syndra::star-guardian-syndra::wild-rift",
+      "pcArtwork": "wiki:syndra_starguardianskin.jpg",
+      "wrArtwork": "wiki:syndra_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "syndra::prestige-star-guardian-syndra::pc",
+      "wrId": "syndra::prestige-star-guardian-syndra::wild-rift",
+      "pcArtwork": "wiki:syndra_prestigestarguardianskin.jpg",
+      "wrArtwork": "wiki:syndra_prestigestarguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "syndra::spirit-blossom-syndra::pc",
+      "wrId": "syndra::spirit-blossom-syndra::wild-rift",
+      "pcArtwork": "wiki:syndra_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:syndra_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "taliyah::classic-taliyah::pc",
+      "wrId": "taliyah::classic-taliyah::wild-rift",
+      "pcArtwork": "wiki:taliyah_originalskin.jpg",
+      "wrArtwork": "wiki:taliyah_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "taliyah::pool-party-taliyah::pc",
+      "wrId": "taliyah::pool-party-taliyah::wild-rift",
+      "pcArtwork": "wiki:taliyah_poolpartyskin.jpg",
+      "wrArtwork": "wiki:taliyah_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "talon::enduring-sword-talon::pc",
+      "wrId": "talon::enduring-sword-talon::wild-rift",
+      "pcArtwork": "wiki:talon_enduringswordskin.jpg",
+      "wrArtwork": "wiki:talon_enduringswordskin_wr.jpg"
+    },
+    {
+      "pcId": "talon::high-noon-talon::pc",
+      "wrId": "talon::high-noon-talon::wild-rift",
+      "pcArtwork": "wiki:talon_highnoonskin.jpg",
+      "wrArtwork": "wiki:talon_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "teemo::cottontail-teemo::pc",
+      "wrId": "teemo::cottontail-teemo::wild-rift",
+      "pcArtwork": "wiki:teemo_cottontailskin.jpg",
+      "wrArtwork": "wiki:teemo_cottontailskin_wr.jpg"
+    },
+    {
+      "pcId": "teemo::omega-squad-teemo::pc",
+      "wrId": "teemo::omega-squad-teemo::wild-rift",
+      "pcArtwork": "wiki:teemo_omegasquadskin.jpg",
+      "wrArtwork": "wiki:teemo_omegasquadskin_wr.jpg"
+    },
+    {
+      "pcId": "teemo::beemo::pc",
+      "wrId": "teemo::beemo::wild-rift",
+      "pcArtwork": "wiki:teemo_beemoskin.jpg",
+      "wrArtwork": "wiki:teemo_beemoskin_wr.jpg"
+    },
+    {
+      "pcId": "teemo::spirit-blossom-teemo::pc",
+      "wrId": "teemo::spirit-blossom-teemo::wild-rift",
+      "pcArtwork": "wiki:teemo_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:teemo_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "teemo::firecracker-teemo::pc",
+      "wrId": "teemo::firecracker-teemo::wild-rift",
+      "pcArtwork": "wiki:teemo_firecrackerskin.jpg",
+      "wrArtwork": "wiki:teemo_firecrackerskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::blood-moon-thresh::pc",
+      "wrId": "thresh::blood-moon-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:thresh_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::dark-star-thresh::pc",
+      "wrId": "thresh::dark-star-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_darkstarskin.jpg",
+      "wrArtwork": "wiki:thresh_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::high-noon-thresh::pc",
+      "wrId": "thresh::high-noon-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_highnoonskin.jpg",
+      "wrArtwork": "wiki:thresh_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::pulsefire-thresh::pc",
+      "wrId": "thresh::pulsefire-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_pulsefireskin.jpg",
+      "wrArtwork": "wiki:thresh_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::spirit-blossom-thresh::pc",
+      "wrId": "thresh::spirit-blossom-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:thresh_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::steel-dragon-thresh::pc",
+      "wrId": "thresh::steel-dragon-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_steeldragonskin.jpg",
+      "wrArtwork": "wiki:thresh_steeldragonskin_wr.jpg"
+    },
+    {
+      "pcId": "thresh::janitor-thresh::pc",
+      "wrId": "thresh::janitor-thresh::wild-rift",
+      "pcArtwork": "wiki:thresh_janitorskin.jpg",
+      "wrArtwork": "wiki:thresh_janitorskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::classic-tristana::pc",
+      "wrId": "tristana::classic-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_originalskin.jpg",
+      "wrArtwork": "wiki:tristana_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::guerilla-tristana::pc",
+      "wrId": "tristana::guerilla-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_guerillaskin.jpg",
+      "wrArtwork": "wiki:tristana_guerillaskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::dragon-trainer-tristana::pc",
+      "wrId": "tristana::dragon-trainer-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_dragontrainerskin.jpg",
+      "wrArtwork": "wiki:tristana_dragontrainerskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::omega-squad-tristana::pc",
+      "wrId": "tristana::omega-squad-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_omegasquadskin.jpg",
+      "wrArtwork": "wiki:tristana_omegasquadskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::little-demon-tristana::pc",
+      "wrId": "tristana::little-demon-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_littledemonskin.jpg",
+      "wrArtwork": "wiki:tristana_littledemonskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::pengu-cosplay-tristana::pc",
+      "wrId": "tristana::pengu-cosplay-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_pengucosplayskin.jpg",
+      "wrArtwork": "wiki:tristana_pengucosplayskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::firecracker-tristana::pc",
+      "wrId": "tristana::firecracker-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_firecrackerskin.jpg",
+      "wrArtwork": "wiki:tristana_firecrackerskin_wr.jpg"
+    },
+    {
+      "pcId": "tristana::spirit-blossom-tristana::pc",
+      "wrId": "tristana::spirit-blossom-tristana::wild-rift",
+      "pcArtwork": "wiki:tristana_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:tristana_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "tryndamere::classic-tryndamere::pc",
+      "wrId": "tryndamere::classic-tryndamere::wild-rift",
+      "pcArtwork": "wiki:tryndamere_originalskin.jpg",
+      "wrArtwork": "wiki:tryndamere_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "tryndamere::warring-kingdoms-tryndamere::pc",
+      "wrId": "tryndamere::warring-kingdoms-tryndamere::wild-rift",
+      "pcArtwork": "wiki:tryndamere_warringkingdomsskin.jpg",
+      "wrArtwork": "wiki:tryndamere_warringkingdomsskin_wr.jpg"
+    },
+    {
+      "pcId": "tryndamere::blood-moon-tryndamere::pc",
+      "wrId": "tryndamere::blood-moon-tryndamere::wild-rift",
+      "pcArtwork": "wiki:tryndamere_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:tryndamere_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "tryndamere::nightbringer-tryndamere::pc",
+      "wrId": "tryndamere::nightbringer-tryndamere::wild-rift",
+      "pcArtwork": "wiki:tryndamere_nightbringerskin.jpg",
+      "wrArtwork": "wiki:tryndamere_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "twisted-fate::tango-twisted-fate::pc",
+      "wrId": "twisted-fate::tango-twisted-fate::wild-rift",
+      "pcArtwork": "wiki:twisted_fate_tangoskin.jpg",
+      "wrArtwork": "wiki:twisted_fate_tangoskin_wr.jpg"
+    },
+    {
+      "pcId": "twisted-fate::cutpurse-twisted-fate::pc",
+      "wrId": "twisted-fate::cutpurse-twisted-fate::wild-rift",
+      "pcArtwork": "wiki:twisted_fate_cutpurseskin.jpg",
+      "wrArtwork": "wiki:twisted_fate_cutpurseskin_wr.jpg"
+    },
+    {
+      "pcId": "twisted-fate::blood-moon-twisted-fate::pc",
+      "wrId": "twisted-fate::blood-moon-twisted-fate::wild-rift",
+      "pcArtwork": "wiki:twisted_fate_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:twisted_fate_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "twisted-fate::pulsefire-twisted-fate::pc",
+      "wrId": "twisted-fate::pulsefire-twisted-fate::wild-rift",
+      "pcArtwork": "wiki:twisted_fate_pulsefireskin.jpg",
+      "wrArtwork": "wiki:twisted_fate_pulsefireskin_wr.jpg"
+    },
+    {
+      "pcId": "twitch::classic-twitch::pc",
+      "wrId": "twitch::classic-twitch::wild-rift",
+      "pcArtwork": "wiki:twitch_originalskin.jpg",
+      "wrArtwork": "wiki:twitch_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "twitch::omega-squad-twitch::pc",
+      "wrId": "twitch::omega-squad-twitch::wild-rift",
+      "pcArtwork": "wiki:twitch_omegasquadskin.jpg",
+      "wrArtwork": "wiki:twitch_omegasquadskin_wr.jpg"
+    },
+    {
+      "pcId": "twitch::high-noon-twitch::pc",
+      "wrId": "twitch::high-noon-twitch::wild-rift",
+      "pcArtwork": "wiki:twitch_highnoonskin.jpg",
+      "wrArtwork": "wiki:twitch_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "urgot::classic-urgot::pc",
+      "wrId": "urgot::classic-urgot::wild-rift",
+      "pcArtwork": "wiki:urgot_originalskin.jpg",
+      "wrArtwork": "wiki:urgot_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "urgot::battlecast-urgot::pc",
+      "wrId": "urgot::battlecast-urgot::wild-rift",
+      "pcArtwork": "wiki:urgot_battlecastskin.jpg",
+      "wrArtwork": "wiki:urgot_battlecastskin_wr.jpg"
+    },
+    {
+      "pcId": "urgot::high-noon-urgot::pc",
+      "wrId": "urgot::high-noon-urgot::wild-rift",
+      "pcArtwork": "wiki:urgot_highnoonskin.jpg",
+      "wrArtwork": "wiki:urgot_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "urgot::pajama-guardian-cosplay-urgot::pc",
+      "wrId": "urgot::pajama-guardian-cosplay-urgot::wild-rift",
+      "pcArtwork": "wiki:urgot_pajamaguardiancosplayskin.jpg",
+      "wrArtwork": "wiki:urgot_pajamaguardiancosplayskin_wr.jpg"
+    },
+    {
+      "pcId": "varus::classic-varus::pc",
+      "wrId": "varus::classic-varus::wild-rift",
+      "pcArtwork": "wiki:varus_originalskin.jpg",
+      "wrArtwork": "wiki:varus_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "varus::arctic-ops-varus::pc",
+      "wrId": "varus::arctic-ops-varus::wild-rift",
+      "pcArtwork": "wiki:varus_arcticopsskin.jpg",
+      "wrArtwork": "wiki:varus_arcticopsskin_wr.jpg"
+    },
+    {
+      "pcId": "varus::varus-swiftbolt::pc",
+      "wrId": "varus::varus-swiftbolt::wild-rift",
+      "pcArtwork": "wiki:varus_varusswiftboltskin.jpg",
+      "wrArtwork": "wiki:varus_varusswiftboltskin_wr.jpg"
+    },
+    {
+      "pcId": "varus::dark-star-varus::pc",
+      "wrId": "varus::dark-star-varus::wild-rift",
+      "pcArtwork": "wiki:varus_darkstarskin.jpg",
+      "wrArtwork": "wiki:varus_darkstarskin_wr.jpg"
+    },
+    {
+      "pcId": "varus::project-varus::pc",
+      "wrId": "varus::project-varus::wild-rift",
+      "pcArtwork": "wiki:varus_projectskin.jpg",
+      "wrArtwork": "wiki:varus_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::classic-vayne::pc",
+      "wrId": "vayne::classic-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_originalskin.jpg",
+      "wrArtwork": "wiki:vayne_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::project-vayne::pc",
+      "wrId": "vayne::project-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_projectskin.jpg",
+      "wrArtwork": "wiki:vayne_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::firecracker-vayne::pc",
+      "wrId": "vayne::firecracker-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_firecrackerskin.jpg",
+      "wrArtwork": "wiki:vayne_firecrackerskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::sentinel-vayne::pc",
+      "wrId": "vayne::sentinel-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_sentinelskin.jpg",
+      "wrArtwork": "wiki:vayne_sentinelskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::battle-bat-vayne::pc",
+      "wrId": "vayne::battle-bat-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_battlebatskin.jpg",
+      "wrArtwork": "wiki:vayne_battlebatskin_wr.jpg"
+    },
+    {
+      "pcId": "vayne::dragonmancer-vayne::pc",
+      "wrId": "vayne::dragonmancer-vayne::wild-rift",
+      "pcArtwork": "wiki:vayne_dragonmancerskin.jpg",
+      "wrArtwork": "wiki:vayne_dragonmancerskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::classic-veigar::pc",
+      "wrId": "veigar::classic-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_originalskin.jpg",
+      "wrArtwork": "wiki:veigar_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::superb-villain-veigar::pc",
+      "wrId": "veigar::superb-villain-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_superbvillainskin.jpg",
+      "wrArtwork": "wiki:veigar_superbvillainskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::bad-santa-veigar::pc",
+      "wrId": "veigar::bad-santa-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_badsantaskin.jpg",
+      "wrArtwork": "wiki:veigar_badsantaskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::final-boss-veigar::pc",
+      "wrId": "veigar::final-boss-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_finalbossskin.jpg",
+      "wrArtwork": "wiki:veigar_finalbossskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::omega-squad-veigar::pc",
+      "wrId": "veigar::omega-squad-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_omegasquadskin.jpg",
+      "wrArtwork": "wiki:veigar_omegasquadskin_wr.jpg"
+    },
+    {
+      "pcId": "veigar::furyhorn-cosplay-veigar::pc",
+      "wrId": "veigar::furyhorn-cosplay-veigar::wild-rift",
+      "pcArtwork": "wiki:veigar_furyhorncosplayskin.jpg",
+      "wrArtwork": "wiki:veigar_furyhorncosplayskin_wr.jpg"
+    },
+    {
+      "pcId": "vel-koz::classic-vel-koz::pc",
+      "wrId": "vel-koz::classic-vel-koz::wild-rift",
+      "pcArtwork": "wiki:vel'koz_originalskin.jpg",
+      "wrArtwork": "wiki:vel'koz_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "vel-koz::arclight-vel-koz::pc",
+      "wrId": "vel-koz::arclight-vel-koz::wild-rift",
+      "pcArtwork": "wiki:vel'koz_arclightskin.jpg",
+      "wrArtwork": "wiki:vel'koz_arclightskin_wr.jpg"
+    },
+    {
+      "pcId": "vex::classic-vex::pc",
+      "wrId": "vex::classic-vex::wild-rift",
+      "pcArtwork": "wiki:vex_originalskin.jpg",
+      "wrArtwork": "wiki:vex_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "vi::classic-vi::pc",
+      "wrId": "vi::classic-vi::wild-rift",
+      "pcArtwork": "wiki:vi_originalskin.jpg",
+      "wrArtwork": "wiki:vi_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "vi::warring-kingdoms-vi::pc",
+      "wrId": "vi::warring-kingdoms-vi::wild-rift",
+      "pcArtwork": "wiki:vi_warringkingdomsskin.jpg",
+      "wrArtwork": "wiki:vi_warringkingdomsskin_wr.jpg"
+    },
+    {
+      "pcId": "vi::project-vi::pc",
+      "wrId": "vi::project-vi::wild-rift",
+      "pcArtwork": "wiki:vi_projectskin.jpg",
+      "wrArtwork": "wiki:vi_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "viego::classic-viego::pc",
+      "wrId": "viego::classic-viego::wild-rift",
+      "pcArtwork": "wiki:viego_originalskin.jpg",
+      "wrArtwork": "wiki:viego_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "viego::soul-fighter-viego::pc",
+      "wrId": "viego::soul-fighter-viego::wild-rift",
+      "pcArtwork": "wiki:viego_soulfighterskin.jpg",
+      "wrArtwork": "wiki:viego_soulfighterskin_wr.jpg"
+    },
+    {
+      "pcId": "viktor::classic-viktor::pc",
+      "wrId": "viktor::classic-viktor::wild-rift",
+      "pcArtwork": "wiki:viktor_originalskin.jpg",
+      "wrArtwork": "wiki:viktor_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "viktor::high-noon-viktor::pc",
+      "wrId": "viktor::high-noon-viktor::wild-rift",
+      "pcArtwork": "wiki:viktor_highnoonskin.jpg",
+      "wrArtwork": "wiki:viktor_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "vladimir::nightbringer-vladimir::pc",
+      "wrId": "vladimir::nightbringer-vladimir::wild-rift",
+      "pcArtwork": "wiki:vladimir_nightbringerskin.jpg",
+      "wrArtwork": "wiki:vladimir_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "volibear::classic-volibear::pc",
+      "wrId": "volibear::classic-volibear::wild-rift",
+      "pcArtwork": "wiki:volibear_originalskin.jpg",
+      "wrArtwork": "wiki:volibear_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "volibear::duality-dragon-volibear::pc",
+      "wrId": "volibear::duality-dragon-volibear::wild-rift",
+      "pcArtwork": "wiki:volibear_dualitydragonskin.jpg",
+      "wrArtwork": "wiki:volibear_dualitydragonskin_wr.jpg"
+    },
+    {
+      "pcId": "warwick::classic-warwick::pc",
+      "wrId": "warwick::classic-warwick::wild-rift",
+      "pcArtwork": "wiki:warwick_originalskin.jpg",
+      "wrArtwork": "wiki:warwick_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "warwick::lunar-guardian-warwick::pc",
+      "wrId": "warwick::lunar-guardian-warwick::wild-rift",
+      "pcArtwork": "wiki:warwick_lunarguardianskin.jpg",
+      "wrArtwork": "wiki:warwick_lunarguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "warwick::project-warwick::pc",
+      "wrId": "warwick::project-warwick::wild-rift",
+      "pcArtwork": "wiki:warwick_projectskin.jpg",
+      "wrArtwork": "wiki:warwick_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "warwick::old-god-warwick::pc",
+      "wrId": "warwick::old-god-warwick::wild-rift",
+      "pcArtwork": "wiki:warwick_oldgodskin.jpg",
+      "wrArtwork": "wiki:warwick_oldgodskin_wr.jpg"
+    },
+    {
+      "pcId": "wukong::classic-wukong::pc",
+      "wrId": "wukong::classic-wukong::wild-rift",
+      "pcArtwork": "wiki:wukong_originalskin.jpg",
+      "wrArtwork": "wiki:wukong_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "wukong::general-wukong::pc",
+      "wrId": "wukong::general-wukong::wild-rift",
+      "pcArtwork": "wiki:wukong_generalskin.jpg",
+      "wrArtwork": "wiki:wukong_generalskin_wr.jpg"
+    },
+    {
+      "pcId": "wukong::underworld-wukong::pc",
+      "wrId": "wukong::underworld-wukong::wild-rift",
+      "pcArtwork": "wiki:wukong_underworldskin.jpg",
+      "wrArtwork": "wiki:wukong_underworldskin_wr.jpg"
+    },
+    {
+      "pcId": "wukong::radiant-wukong::pc",
+      "wrId": "wukong::radiant-wukong::wild-rift",
+      "pcArtwork": "wiki:wukong_radiantskin.jpg",
+      "wrArtwork": "wiki:wukong_radiantskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::classic-xayah::pc",
+      "wrId": "xayah::classic-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_originalskin.jpg",
+      "wrArtwork": "wiki:xayah_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::cosmic-dusk-xayah::pc",
+      "wrId": "xayah::cosmic-dusk-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_cosmicduskskin.jpg",
+      "wrArtwork": "wiki:xayah_cosmicduskskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::sweetheart-xayah::pc",
+      "wrId": "xayah::sweetheart-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_sweetheartskin.jpg",
+      "wrArtwork": "wiki:xayah_sweetheartskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::star-guardian-xayah::pc",
+      "wrId": "xayah::star-guardian-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_starguardianskin.jpg",
+      "wrArtwork": "wiki:xayah_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::elderwood-xayah::pc",
+      "wrId": "xayah::elderwood-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_elderwoodskin.jpg",
+      "wrArtwork": "wiki:xayah_elderwoodskin_wr.jpg"
+    },
+    {
+      "pcId": "xayah::redeemed-star-guardian-xayah::pc",
+      "wrId": "xayah::redeemed-star-guardian-xayah::wild-rift",
+      "pcArtwork": "wiki:xayah_redeemedstarguardianskin.jpg",
+      "wrArtwork": "wiki:xayah_redeemedstarguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "xin-zhao::dragonslayer-xin-zhao::pc",
+      "wrId": "xin-zhao::dragonslayer-xin-zhao::wild-rift",
+      "pcArtwork": "wiki:xin_zhao_dragonslayerskin.jpg",
+      "wrArtwork": "wiki:xin_zhao_dragonslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "xin-zhao::cosmic-defender-xin-zhao::pc",
+      "wrId": "xin-zhao::cosmic-defender-xin-zhao::wild-rift",
+      "pcArtwork": "wiki:xin_zhao_cosmicdefenderskin.jpg",
+      "wrArtwork": "wiki:xin_zhao_cosmicdefenderskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::classic-yasuo::pc",
+      "wrId": "yasuo::classic-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_originalskin.jpg",
+      "wrArtwork": "wiki:yasuo_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::high-noon-yasuo::pc",
+      "wrId": "yasuo::high-noon-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_highnoonskin.jpg",
+      "wrArtwork": "wiki:yasuo_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::project-yasuo::pc",
+      "wrId": "yasuo::project-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_projectskin.jpg",
+      "wrArtwork": "wiki:yasuo_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::blood-moon-yasuo::pc",
+      "wrId": "yasuo::blood-moon-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:yasuo_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::nightbringer-yasuo::pc",
+      "wrId": "yasuo::nightbringer-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_nightbringerskin.jpg",
+      "wrArtwork": "wiki:yasuo_nightbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::battle-boss-yasuo::pc",
+      "wrId": "yasuo::battle-boss-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_battlebossskin.jpg",
+      "wrArtwork": "wiki:yasuo_battlebossskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::true-damage-yasuo::pc",
+      "wrId": "yasuo::true-damage-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_truedamageskin.jpg",
+      "wrArtwork": "wiki:yasuo_truedamageskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::spirit-blossom-yasuo::pc",
+      "wrId": "yasuo::spirit-blossom-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:yasuo_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "yasuo::truth-dragon-yasuo::pc",
+      "wrId": "yasuo::truth-dragon-yasuo::wild-rift",
+      "pcArtwork": "wiki:yasuo_truthdragonskin.jpg",
+      "wrArtwork": "wiki:yasuo_truthdragonskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::classic-yone::pc",
+      "wrId": "yone::classic-yone::wild-rift",
+      "pcArtwork": "wiki:yone_originalskin.jpg",
+      "wrArtwork": "wiki:yone_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::spirit-blossom-yone::pc",
+      "wrId": "yone::spirit-blossom-yone::wild-rift",
+      "pcArtwork": "wiki:yone_spiritblossomskin.jpg",
+      "wrArtwork": "wiki:yone_spiritblossomskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::dawnbringer-yone::pc",
+      "wrId": "yone::dawnbringer-yone::wild-rift",
+      "pcArtwork": "wiki:yone_dawnbringerskin.jpg",
+      "wrArtwork": "wiki:yone_dawnbringerskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::heartsteel-yone::pc",
+      "wrId": "yone::heartsteel-yone::wild-rift",
+      "pcArtwork": "wiki:yone_heartsteelskin.jpg",
+      "wrArtwork": "wiki:yone_heartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::prestige-heartsteel-yone::pc",
+      "wrId": "yone::prestige-heartsteel-yone::wild-rift",
+      "pcArtwork": "wiki:yone_prestigeheartsteelskin.jpg",
+      "wrArtwork": "wiki:yone_prestigeheartsteelskin_wr.jpg"
+    },
+    {
+      "pcId": "yone::high-noon-yone::pc",
+      "wrId": "yone::high-noon-yone::wild-rift",
+      "pcArtwork": "wiki:yone_highnoonskin.jpg",
+      "wrArtwork": "wiki:yone_highnoonskin_wr.jpg"
+    },
+    {
+      "pcId": "yunara::classic-yunara::pc",
+      "wrId": "yunara::classic-yunara::wild-rift",
+      "pcArtwork": "wiki:yunara_originalskin.jpg",
+      "wrArtwork": "wiki:yunara_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "yuumi::classic-yuumi::pc",
+      "wrId": "yuumi::classic-yuumi::wild-rift",
+      "pcArtwork": "wiki:yuumi_originalskin.jpg",
+      "wrArtwork": "wiki:yuumi_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "yuumi::battle-principal-yuumi::pc",
+      "wrId": "yuumi::battle-principal-yuumi::wild-rift",
+      "pcArtwork": "wiki:yuumi_battleprincipalskin.jpg",
+      "wrArtwork": "wiki:yuumi_battleprincipalskin_wr.jpg"
+    },
+    {
+      "pcId": "yuumi::heartseeker-yuumi::pc",
+      "wrId": "yuumi::heartseeker-yuumi::wild-rift",
+      "pcArtwork": "wiki:yuumi_heartseekerskin.jpg",
+      "wrArtwork": "wiki:yuumi_heartseekerskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::classic-zed::pc",
+      "wrId": "zed::classic-zed::wild-rift",
+      "pcArtwork": "wiki:zed_originalskin.jpg",
+      "wrArtwork": "wiki:zed_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::project-zed::pc",
+      "wrId": "zed::project-zed::wild-rift",
+      "pcArtwork": "wiki:zed_projectskin.jpg",
+      "wrArtwork": "wiki:zed_projectskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::death-sworn-zed::pc",
+      "wrId": "zed::death-sworn-zed::wild-rift",
+      "pcArtwork": "wiki:zed_deathswornskin.jpg",
+      "wrArtwork": "wiki:zed_deathswornskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::galaxy-slayer-zed::pc",
+      "wrId": "zed::galaxy-slayer-zed::wild-rift",
+      "pcArtwork": "wiki:zed_galaxyslayerskin.jpg",
+      "wrArtwork": "wiki:zed_galaxyslayerskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::psyops-zed::pc",
+      "wrId": "zed::psyops-zed::wild-rift",
+      "pcArtwork": "wiki:zed_psyopsskin.jpg",
+      "wrArtwork": "wiki:zed_psyopsskin_wr.jpg"
+    },
+    {
+      "pcId": "zed::immortal-journey-zed::pc",
+      "wrId": "zed::immortal-journey-zed::wild-rift",
+      "pcArtwork": "wiki:zed_immortaljourneyskin.jpg",
+      "wrArtwork": "wiki:zed_immortaljourneyskin_wr.jpg"
+    },
+    {
+      "pcId": "zeri::classic-zeri::pc",
+      "wrId": "zeri::classic-zeri::wild-rift",
+      "pcArtwork": "wiki:zeri_originalskin.jpg",
+      "wrArtwork": "wiki:zeri_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "zeri::ocean-song-zeri::pc",
+      "wrId": "zeri::ocean-song-zeri::wild-rift",
+      "pcArtwork": "wiki:zeri_oceansongskin.jpg",
+      "wrArtwork": "wiki:zeri_oceansongskin_wr.jpg"
+    },
+    {
+      "pcId": "ziggs::classic-ziggs::pc",
+      "wrId": "ziggs::classic-ziggs::wild-rift",
+      "pcArtwork": "wiki:ziggs_originalskin.jpg",
+      "wrArtwork": "wiki:ziggs_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "ziggs::pool-party-ziggs::pc",
+      "wrId": "ziggs::pool-party-ziggs::wild-rift",
+      "pcArtwork": "wiki:ziggs_poolpartyskin.jpg",
+      "wrArtwork": "wiki:ziggs_poolpartyskin_wr.jpg"
+    },
+    {
+      "pcId": "ziggs::master-arcanist-ziggs::pc",
+      "wrId": "ziggs::master-arcanist-ziggs::wild-rift",
+      "pcArtwork": "wiki:ziggs_masterarcanistskin.jpg",
+      "wrArtwork": "wiki:ziggs_masterarcanistskin_wr.jpg"
+    },
+    {
+      "pcId": "ziggs::battle-boss-ziggs::pc",
+      "wrId": "ziggs::battle-boss-ziggs::wild-rift",
+      "pcArtwork": "wiki:ziggs_battlebossskin.jpg",
+      "wrArtwork": "wiki:ziggs_battlebossskin_wr.jpg"
+    },
+    {
+      "pcId": "ziggs::hextech-ziggs::pc",
+      "wrId": "ziggs::hextech-ziggs::wild-rift",
+      "pcArtwork": "wiki:ziggs_hextechskin.jpg",
+      "wrArtwork": "wiki:ziggs_hextechskin_wr.jpg"
+    },
+    {
+      "pcId": "zilean::blood-moon-zilean::pc",
+      "wrId": "zilean::blood-moon-zilean::wild-rift",
+      "pcArtwork": "wiki:zilean_bloodmoonskin.jpg",
+      "wrArtwork": "wiki:zilean_bloodmoonskin_wr.jpg"
+    },
+    {
+      "pcId": "zoe::classic-zoe::pc",
+      "wrId": "zoe::classic-zoe::wild-rift",
+      "pcArtwork": "wiki:zoe_originalskin.jpg",
+      "wrArtwork": "wiki:zoe_originalskin_wr.jpg"
+    },
+    {
+      "pcId": "zoe::cyber-pop-zoe::pc",
+      "wrId": "zoe::cyber-pop-zoe::wild-rift",
+      "pcArtwork": "wiki:zoe_cyberpopskin.jpg",
+      "wrArtwork": "wiki:zoe_cyberpopskin_wr.jpg"
+    },
+    {
+      "pcId": "zoe::star-guardian-zoe::pc",
+      "wrId": "zoe::star-guardian-zoe::wild-rift",
+      "pcArtwork": "wiki:zoe_starguardianskin.jpg",
+      "wrArtwork": "wiki:zoe_starguardianskin_wr.jpg"
+    },
+    {
+      "pcId": "zyra::coven-zyra::pc",
+      "wrId": "zyra::coven-zyra::wild-rift",
+      "pcArtwork": "wiki:zyra_covenskin.jpg",
+      "wrArtwork": "wiki:zyra_covenskin_wr.jpg"
+    }
+  ],
   "entries": {
     "Legends of Runeterra|aatrox|eclipse lunar": {"releaseDate":"2023-09-13","canonicalSkin":"lunar eclipse","skinLines":["Eclipse"],"universes":["Eclipse"]},
     "Legends of Runeterra|aatrox|original": {"releaseDate":"2022-07-20","canonicalSkin":"original"},

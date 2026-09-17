@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { deduplicateSkins, metadataKey, organizeSkins } from "../catalog-order.js";
+import { artworkKey, deduplicateSkins, metadataKey, organizeSkins, platformOf } from "../catalog-order.js";
 
 const skin = (id, name, releaseDate, extra = {}) => ({
   _id: id, champ: "Ahri", skin: name, releaseDate,
@@ -8,6 +8,11 @@ const skin = (id, name, releaseDate, extra = {}) => ({
 });
 const wr = (id, name, releaseDate, extra = {}) => skin(id, name, releaseDate, { type: "Wild Rift", ...extra });
 const ids = (skins) => skins.map((item) => item._id);
+const equivalent = (pc, wildRift) => ({
+  pcId: pc._id, wrId: wildRift._id,
+  pcArtwork: artworkKey(pc.imageCandidates?.[0] || pc.image),
+  wrArtwork: artworkKey(wildRift.imageCandidates?.[0] || wildRift.image),
+});
 
 test("sorts the PC spine by release date, with original first and unknown dates last", () => {
   const input = [
@@ -109,6 +114,7 @@ test("identical art keeps the PC record and every favorite alias, regardless of 
   const [result] = deduplicateSkins(input);
   assert.equal(deduplicateSkins(input).length, 1);
   assert.equal(result._id, "pc");
+  assert.equal(platformOf(result), "PC");
   assert.deepEqual(new Set(result.platforms), new Set(["PC", "Wild Rift"]));
   assert.deepEqual(new Set(result._duplicateIds), new Set(["wr", "alias", "older-wr", "older-pc"]));
   assert.deepEqual(input, before);
@@ -154,4 +160,93 @@ test("duplicate IDs appear once, while records without usable art are retained",
     skin("missing-b", "Arcana Ahri", null, { image: null }),
   ]);
   assert.deepEqual(ids(result), ["same", "missing-a", "missing-b"]);
+});
+
+test("verified identical WR artwork uses the PC card despite different file names", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-08-12", {
+    imageCandidates: ["https://images.example/pc.jpg"],
+    highResImageCandidates: ["https://images.example/pc-hd.jpg"], _duplicateIds: ["older-pc"],
+  });
+  const wildRift = wr("wr", "Coven Ahri (Wild Rift)", "2023-08-12", {
+    imageCandidates: ["https://images.example/mobile.jpg"],
+    highResImageCandidates: ["https://images.example/mobile-hd.jpg"], _duplicateIds: ["older-wr"],
+  });
+  for (const input of [[pc, wildRift], [wildRift, pc]]) {
+    const before = structuredClone(input);
+    const result = organizeSkins(input, { artworkEquivalences: [equivalent(pc, wildRift)] });
+    assert.deepEqual(ids(result), ["pc"]);
+    assert.equal(platformOf(result[0]), "PC");
+    assert.equal(result[0].releaseDate, pc.releaseDate);
+    assert.deepEqual(result[0].imageCandidates, [...pc.imageCandidates, ...wildRift.imageCandidates]);
+    assert.deepEqual(result[0].highResImageCandidates, [...pc.highResImageCandidates, ...wildRift.highResImageCandidates]);
+    assert.deepEqual(new Set(result[0]._duplicateIds), new Set(["older-pc", "wr", "older-wr"]));
+    assert.deepEqual(new Set(result[0].platforms), new Set(["PC", "Wild Rift"]));
+    assert.deepEqual(input, before);
+  }
+});
+
+test("visual evidence expires when either primary file changes", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01");
+  const wildRift = wr("wr", "Coven Ahri", "2023-01-01");
+  const metadata = { artworkEquivalences: [equivalent(pc, wildRift)] };
+  const changeArt = (item) => ({ ...item, imageCandidates: ["https://images.example/replaced.jpg", item.image] });
+  assert.deepEqual(ids(organizeSkins([pc, changeArt(wildRift)], metadata)), ["pc", "wr"]);
+  assert.deepEqual(ids(organizeSkins([changeArt(pc), wildRift], metadata)), ["pc", "wr"]);
+  assert.deepEqual(ids(organizeSkins([pc], metadata)), ["pc"]);
+});
+
+test("similar names and shared HD files are not visual equivalence evidence", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01", { highResImageCandidates: ["https://images.example/shared.jpg"] });
+  const wildRift = wr("wr", "Coven Ahri", "2023-01-01", { highResImageCandidates: pc.highResImageCandidates });
+  const distinct = wr("distinct", "Coven Ahri", "2024-01-01");
+  const result = organizeSkins([pc, wildRift, distinct], { artworkEquivalences: [equivalent(pc, wildRift)] });
+  assert.deepEqual(ids(result), ["pc", "distinct"]);
+  assert.deepEqual(result[0]._duplicateIds, ["wr"]);
+  assert.deepEqual(ids(organizeSkins([pc, wildRift])), ["pc", "wr"]);
+});
+
+test("visual evidence cannot cross champions, variants, or game boundaries", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01");
+  for (const other of [
+    wr("other", "Coven Evelynn", "2023-01-01", { champ: "Evelynn" }),
+    wr("other", "Prestige Coven Ahri", "2023-01-01"),
+    wr("other", "Coven Ahri Chroma Pearl", "2023-01-01"),
+    skin("other", "Coven Ahri — Level 1", "2023-01-01", { type: "Legends of Runeterra", lorCardCode: "05IO004", lorLevelNumber: 1 }),
+  ]) {
+    assert.equal(organizeSkins([pc, other], { artworkEquivalences: [equivalent(pc, other)] }).length, 2);
+  }
+});
+
+test("WR chromas and distinct LoR levels remain after the merged PC parent", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01");
+  const wildRift = wr("wr", "Coven Ahri (Wild Rift)", "2023-01-01");
+  const result = organizeSkins([
+    skin("later", "Arcana Ahri", "2022-01-01"),
+    wr("chroma", "Coven Ahri Chroma Pearl", "2023-02-01"), wildRift,
+    skin("level2", "Coven Ahri — Level 2", "2024-01-01", { type: "Legends of Runeterra", lorCardCode: "05IO004T1", lorLevelNumber: 2 }),
+    skin("level1", "Coven Ahri — Level 1", "2024-01-01", { type: "Legends of Runeterra", lorCardCode: "05IO004", lorLevelNumber: 1 }), pc,
+  ], { artworkEquivalences: [equivalent(pc, wildRift)] });
+  assert.deepEqual(ids(result), ["pc", "chroma", "level1", "level2", "later"]);
+  assert.ok(result.slice(1, 4).every((item) => item._chronologyParentId === "pc"));
+  assert.equal(platformOf(result[1]), "Wild Rift");
+  assert.deepEqual(result.filter((item) => platformOf(item) === "Legends of Runeterra").map((item) => item.lorCardCode), ["05IO004", "05IO004T1"]);
+});
+
+test("a renamed WR parent still anchors its chroma after a verified PC merge", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01", { canonicalSkin: "Coven" });
+  const wildRift = wr("wr", "Enchanted Coven Ahri", "2023-01-01", { canonicalSkin: "Coven" });
+  const result = organizeSkins([
+    wr("chroma", "Enchanted Coven Ahri Chroma Pearl", null), wildRift, pc,
+  ], { artworkEquivalences: [equivalent(pc, wildRift)] });
+  assert.deepEqual(ids(result), ["pc", "chroma"]);
+  assert.equal(result[1]._chronologyParentId, "pc");
+  assert.deepEqual(result[0]._duplicateSkinNames, ["Enchanted Coven Ahri"]);
+});
+
+test("conflicting visual evidence retains all unverified art", () => {
+  const pc = skin("pc", "Coven Ahri", "2021-01-01");
+  const alternative = skin("alternative", "Coven Ahri", "2022-01-01");
+  const wildRift = wr("wr", "Coven Ahri", "2023-01-01");
+  const result = deduplicateSkins([pc, alternative, wildRift], [equivalent(pc, wildRift), equivalent(alternative, wildRift)]);
+  assert.deepEqual(ids(result), ["pc", "alternative", "wr"]);
 });

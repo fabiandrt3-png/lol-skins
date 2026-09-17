@@ -63,6 +63,7 @@ Le front reste volontairement compact :
 - `data/skin-order.json` : dates et univers pré-générés, chargés avec le catalogue
 - `data/skin-order-overrides.json` : dates absentes du Wiki, accompagnées de leur source
 - `data/skin-artwork-corrections.json` : corrections vérifiées de liens vers une mauvaise illustration, intégrées aux métadonnées générées
+- `data/skin-visual-duplicates.json` : équivalences PC/Wild Rift vérifiées en comparant les images, avec preuves et variantes conservées
 - `data/image-overrides.json` : catalogue principal LoL / Wild Rift et carte des meilleures sources de splash arts vérifiées
 - `data/lor-skins.json` : catalogue généré des skins Legends of Runeterra, avec une entrée distincte pour chaque artwork de niveau
 - `data/lor-art.json` : index technique des illustrations officielles de champions LoR provenant du Data Dragon Riot
@@ -98,6 +99,8 @@ Le navigateur ne télécharge jamais les gros jeux de données complets de Legen
 Pour chaque champion, les skins PC forment la base chronologique, avec Classic en premier. Une illustration Wild Rift ou LoR suit son équivalent PC, sinon le premier skin PC de la même gamme, sinon du même univers. La gamme exacte est prioritaire sur l'univers plus large (par exemple Coven avant Eclipse). Les skins sans équivalent PC restent classés selon leur propre date. Les chromas suivent leur parent, les niveaux LoR restent dans l'ordre et les placements manuels explicites sont prioritaires.
 
 Une même illustration, identifiée par son fichier source canonique et son skin, n'apparaît qu'une fois. Les miniatures et versions HD du même fichier sont rapprochées ; les artworks distincts, chromas et niveaux LoR sont conservés. Un lien HD ou de secours commun ne suffit pas à fusionner deux skins. Les favoris d'un doublon sont transférés à la carte conservée. Les corrections de liens erronés sont appliquées avant cette comparaison.
+
+Les fichiers PC et Wild Rift peuvent aussi contenir la même illustration sous des noms différents, avec un recadrage, une symétrie ou une compression différente. Le catalogue utilise alors les équivalences visuelles vérifiées de `data/skin-visual-duplicates.json`. La carte PC est conservée avec les deux badges et reste accessible dans les deux filtres. Les favoris WR rejoignent cette carte ; les chromas WR suivent toujours leur parent. Une équivalence n'est appliquée que si les deux identifiants, le skin et les fichiers principaux correspondent encore aux preuves. Les versions redessinées ou comportant des détails visuels différents restent séparées. La comparaison ne s'exécute pas dans le navigateur.
 
 Les dates et univers proviennent des modules SkinData, SkinDataWR et LoRCosmetics du League of Legends Wiki. Un skin sans date fiable reste à la fin de son groupe ; aucune date n'est inventée pour une sortie annulée ou annoncée. Au 16 septembre 2026, les entrées indépendantes concernées sont Grand Reckoning Alistar (annulé), Old God Anivia (à venir) et Founders Silver Kayle (jour exact non confirmé). Une indisponibilité des métadonnées laisse fonctionner la galerie avec les dates du catalogue et les correspondances de noms exactes.
 
