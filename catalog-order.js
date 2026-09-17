@@ -59,16 +59,48 @@ const rank = (skin) => ["PC", "Wild Rift", "Legends of Runeterra"].indexOf(platf
 const isChroma = (skin) => /\bchroma\b/i.test(skin.skin);
 const isOriginal = (skin) => skinTheme(skin) === "original";
 
-export function deduplicateSkins(skins) {
+function identityKey(skin) {
+  let identity = normalizeName(skin.canonicalSkin || skinTheme(skin));
+  if (identity.includes("prestige")) identity = identity.replace(/\b2022\b/g, "");
+  identity = identity.replace(/^reignited\s+/, "").split(" ").filter(Boolean).sort().join(" ");
+  return `${normalizeName(skin.champ)}|${identity}|${variantKey(skin)}`;
+}
+
+function primaryArtwork(skin) { return artworkKey(skin.imageCandidates?.[0] || skin.image); }
+function duplicateKey(skin) {
+  const image = primaryArtwork(skin);
+  return image ? `${identityKey(skin)}|${image}` : "";
+}
+
+function verifiedArtworkAliases(skins, equivalences) {
+  const records = new Map(skins.map((skin) => [idOf(skin), skin]));
+  const targets = new Map();
+  for (const evidence of Array.isArray(equivalences) ? equivalences : []) {
+    if (!evidence) continue;
+    const pc = records.get(evidence.pcId);
+    const wr = records.get(evidence.wrId);
+    // Similar names alone are not proof: an explicit visual comparison must
+    // still refer to these exact primary files and the same skin/variant.
+    if (!pc || !wr || platformOf(pc) !== "PC" || platformOf(wr) !== "Wild Rift"
+      || identityKey(pc) !== identityKey(wr)
+      || !evidence.pcArtwork || !evidence.wrArtwork
+      || primaryArtwork(pc) !== evidence.pcArtwork || primaryArtwork(wr) !== evidence.wrArtwork) continue;
+    const source = duplicateKey(wr);
+    if (!targets.has(source)) targets.set(source, new Set());
+    targets.get(source).add(duplicateKey(pc));
+  }
+  // Conflicting evidence is ignored until the source data is reviewed again.
+  return new Map([...targets].filter(([, values]) => values.size === 1).map(([source, values]) => [source, [...values][0]]));
+}
+
+export function deduplicateSkins(skins, artworkEquivalences = []) {
+  const artworkAliases = verifiedArtworkAliases(skins, artworkEquivalences);
   const byArtwork = new Map();
   const byId = new Map();
   const output = [];
   for (const skin of skins) {
-    const image = artworkKey(skin.imageCandidates?.[0] || skin.image);
-    let identity = normalizeName(skin.canonicalSkin || skinTheme(skin));
-    if (identity.includes("prestige")) identity = identity.replace(/\b2022\b/g, "");
-    identity = identity.replace(/^reignited\s+/, "").split(" ").filter(Boolean).sort().join(" ");
-    const key = image ? `${normalizeName(skin.champ)}|${identity}|${variantKey(skin)}|${image}` : "";
+    const originalKey = duplicateKey(skin);
+    const key = artworkAliases.get(originalKey) || originalKey;
     const previous = byId.get(idOf(skin)) || (key && byArtwork.get(key));
     if (!previous) {
       const entry = { ...skin, platforms: [...platforms(skin)], _duplicateIds: [...(skin._duplicateIds || [])] };
@@ -79,12 +111,16 @@ export function deduplicateSkins(skins) {
     }
     const old = { ...previous };
     const preferred = rank(skin) < rank(old) || (rank(skin) === rank(old) && old.isAlias && !skin.isAlias) ? skin : old;
+    // Replace, rather than overlay, the surviving record so a former WR type
+    // or alias flag cannot leak onto the preferred PC record.
+    for (const property of Object.keys(previous)) delete previous[property];
     Object.assign(previous, preferred, {
       platforms: unique([...platforms(old), ...platforms(skin)]),
       _duplicateIds: unique([idOf(old), idOf(skin), ...(old._duplicateIds || []), ...(skin._duplicateIds || [])]).filter((id) => id !== idOf(preferred)),
+      _duplicateSkinNames: unique([old.skin, skin.skin, ...(old._duplicateSkinNames || []), ...(skin._duplicateSkinNames || [])]).filter((name) => name !== preferred.skin),
       imageCandidates: unique([...(preferred.imageCandidates || []), ...(old.imageCandidates || []), ...(skin.imageCandidates || [])]),
       highResImageCandidates: unique([...(preferred.highResImageCandidates || []), ...(old.highResImageCandidates || []), ...(skin.highResImageCandidates || [])]),
-      iconCandidates: unique([...(old.iconCandidates || []), ...(skin.iconCandidates || [])]),
+      iconCandidates: unique([...(preferred.iconCandidates || []), ...(old.iconCandidates || []), ...(skin.iconCandidates || [])]),
     });
     if (key) byArtwork.set(key, previous);
     if (idOf(skin)) byId.set(idOf(skin), previous);
@@ -109,9 +145,11 @@ function shares(left, right) {
 function chromaParent(skin, candidates) {
   if (!isChroma(skin)) return null;
   const name = skinTheme(skin);
-  return candidates.filter((candidate) => !isChroma(candidate) && platformOf(candidate) === platformOf(skin))
-    .filter((candidate) => name.startsWith(`${skinTheme(candidate)} `))
-    .sort((a, b) => skinTheme(b).length - skinTheme(a).length)[0] || null;
+  return candidates.filter((candidate) => !isChroma(candidate) && platforms(candidate).includes(platformOf(skin)))
+    .map((candidate) => ({ candidate, length: Math.max(0, ...[candidate.skin, ...(candidate._duplicateSkinNames || [])]
+      .map((alias) => skinTheme({ ...candidate, skin: alias }))
+      .filter((theme) => name.startsWith(`${theme} `)).map((theme) => theme.length)) }))
+    .filter(({ length }) => length > 0).sort((a, b) => b.length - a.length)[0]?.candidate || null;
 }
 
 function choosePcAnchor(skin, pc) {
@@ -135,7 +173,7 @@ export function organizeSkins(skins, metadata = {}) {
     const info = entries[metadataKey(skin)] || {};
     return { ...skin, ...info, releaseDate: validDate(info.releaseDate) || validDate(skin.releaseDate) || null, _inputOrder: index };
   });
-  const uniqueSkins = deduplicateSkins(enriched);
+  const uniqueSkins = deduplicateSkins(enriched, metadata.artworkEquivalences);
   const champions = new Map();
   for (const skin of uniqueSkins) {
     const key = normalizeName(skin.champ);
@@ -148,7 +186,8 @@ export function organizeSkins(skins, metadata = {}) {
     const parents = new Map();
     // Explicit placements win before automatic cross-platform grouping.
     for (const skin of group) {
-      const manualParent = skin._orderAfterSkin && group.find((item) => item !== skin && !item._orderAfterSkin && !isChroma(item) && item.skin === skin._orderAfterSkin);
+      const manualParent = skin._orderAfterSkin && group.find((item) => item !== skin && !item._orderAfterSkin && !isChroma(item)
+        && (item.skin === skin._orderAfterSkin || item._duplicateSkinNames?.includes(skin._orderAfterSkin)));
       if (manualParent) parents.set(skin, manualParent);
     }
     for (const skin of group) {

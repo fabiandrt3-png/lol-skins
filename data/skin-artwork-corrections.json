@@ -81,6 +81,51 @@
       "height": 2301,
       "sha1": "0c7a141a1e56ebd1745f7acc5a9627f60b1ba241",
       "reason": "Keep original Prestige artwork distinct from Prestige Nightbringer Lee Sin (2022)."
+    },
+    "dr-mundo::pool-party-mundo::456": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin.jpg?13f1e",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin.jpg?13f1e",
+      "width": 1215,
+      "height": 717,
+      "sha1": "b69a03b0c3a18a13b4163ac7c103ca6300ddc6d8",
+      "reason": "Replace nonexistent shared PoolParty2015Skin_Unused file with champion-specific current illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Dr._Mundo_PoolPartyMundoSkin.jpg"
+    },
+    "draven::draven-draven::468": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Draven_DravenDravenSkin.jpg?d5658",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Draven_DravenDravenSkin_HD.jpg?3bd86",
+      "width": 1215,
+      "height": 717,
+      "sha1": "cd769af9a982c8ae2412b7f519fdf5b156510760",
+      "reason": "Replace nonexistent shared AprilFools2016Skin file with champion-specific current illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Draven_DravenDravenSkin.jpg"
+    },
+    "fiddlesticks::star-nemesis-fiddlesticks::584": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_StarNemesisSkin.jpg?7da38",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_StarNemesisSkin.jpg?7da38",
+      "width": 1215,
+      "height": 717,
+      "sha1": "725e4393db3eeabf011d00e67fe29955f150073c",
+      "reason": "Correct nonexistent PNG artwork filename to verified JPG.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Fiddlesticks_StarNemesisSkin.jpg"
+    },
+    "lillia::petals-of-spring-lillia::pc": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Lillia_PetalsofSpringSkin.jpg?1e823",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Lillia_PetalsofSpringSkin.jpg?1e823",
+      "width": 1215,
+      "height": 717,
+      "sha1": "9572add72aac969d78f5bbc54e412fcd47d9fa16",
+      "reason": "Replace nonexistent HD source with verified illustration.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Lillia_PetalsofSpringSkin.jpg"
+    },
+    "ornn::choo-choo-ornn::wild-rift": {
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ornn_Choo-ChooSkin_WR.jpg?ac179",
+      "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Ornn_Choo-ChooSkin_WR.jpg?ac179",
+      "width": 2436,
+      "height": 1124,
+      "sha1": "f4fb33e344a5445620c1319690ad3529135cb59b",
+      "reason": "Restore missing hyphen in Choo-Choo Wild Rift artwork filename.",
+      "source": "https://wiki.leagueoflegends.com/en-us/File:Ornn_Choo-ChooSkin_WR.jpg"
     }
   }
 }

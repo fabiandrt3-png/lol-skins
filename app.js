@@ -648,6 +648,7 @@ function navigateHome() {
 
 function badgesFor(skin) {
   const badges = [];
+  if (skin.platforms.includes("PC") && skin.platforms.length > 1) badges.push('<span class="badge">PC</span>');
   if (skin.platforms.includes("Wild Rift")) badges.push('<span class="badge badge-wr">Wild Rift</span>');
   if (skin.platforms.includes("Legends of Runeterra")) {
     const level = String(skin.lorLevel || "").trim();
