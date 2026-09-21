@@ -12596,6 +12596,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "cho-gath::toy-terror-cho-gath::wild-rift",
+      "champ": "Cho'Gath",
+      "skin": "Toy Terror Cho'Gath",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-19",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_WR.jpg?f817b",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-21T09:57:37.448Z"
+    },
+    {
       "id": "corki::classic-corki::384",
       "champ": "Corki",
       "skin": "Classic Corki",
@@ -48929,7 +48940,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-17T18:21:51.454Z",
+  "catalogGeneratedAt": "2026-09-21T09:57:39.491Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48943,12 +48954,12 @@
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1062,
-      "missing": 0,
-      "added": 0,
+      "total": 1070,
+      "missing": 1,
+      "added": 1,
       "unresolved": 0
     },
-    "added": 0,
+    "added": 1,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
