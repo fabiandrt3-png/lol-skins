@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-21T10:02:13.942Z",
+  "generatedAt": "2026-09-28T11:00:36.094Z",
   "source": "data/image-overrides.json#catalog",
   "summary": {
-    "total": 2625,
-    "fullyVerified": 2618,
+    "total": 2636,
+    "fullyVerified": 2629,
     "unresolved": 7,
-    "pc": 1661,
-    "wildRift": 964,
+    "pc": 1664,
+    "wildRift": 972,
     "belowCardTarget": 463,
     "belowFullscreenTarget": 427
   },
@@ -175,7 +175,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_WR.jpg?81673",
         "width": 1024,
         "height": 568,
-        "bytes": 111720,
+        "bytes": 115072,
         "contentType": "image/jpeg"
       }
     },
@@ -259,7 +259,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_WR.jpg?f4e5e",
         "width": 1024,
         "height": 568,
-        "bytes": 128477,
+        "bytes": 131917,
         "contentType": "image/jpeg"
       }
     },
@@ -271,7 +271,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_WR.jpg?99edd",
         "width": 1024,
         "height": 568,
-        "bytes": 67289,
+        "bytes": 64780,
         "contentType": "image/jpeg"
       }
     },
@@ -319,7 +319,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_HextechSkin_WR.jpg?b4faa",
         "width": 1024,
         "height": 568,
-        "bytes": 150885,
+        "bytes": 145152,
         "contentType": "image/jpeg"
       }
     },
@@ -343,7 +343,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Amumu_InfernalSkin_WR.jpg?5175e",
         "width": 1024,
         "height": 568,
-        "bytes": 64767,
+        "bytes": 58779,
         "contentType": "image/jpeg"
       }
     },
@@ -367,7 +367,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_WR.jpg?e3716",
         "width": 1024,
         "height": 568,
-        "bytes": 65274,
+        "bytes": 73219,
         "contentType": "image/jpeg"
       }
     },
@@ -499,7 +499,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin_WR.jpg?c7229",
         "width": 1024,
         "height": 568,
-        "bytes": 70766,
+        "bytes": 63084,
         "contentType": "image/jpeg"
       }
     },
@@ -523,7 +523,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_WR.jpg?b0a07",
         "width": 1024,
         "height": 568,
-        "bytes": 128312,
+        "bytes": 124612,
         "contentType": "image/jpeg"
       }
     },
@@ -535,7 +535,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSkin_WR.jpg?a6f75",
         "width": 1024,
         "height": 568,
-        "bytes": 92579,
+        "bytes": 84423,
         "contentType": "image/jpeg"
       }
     },
@@ -571,7 +571,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_WR.jpg?7ba7a",
         "width": 1024,
         "height": 568,
-        "bytes": 104253,
+        "bytes": 107705,
         "contentType": "image/jpeg"
       }
     },
@@ -607,7 +607,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_WR.jpg?71cbd",
         "width": 1024,
         "height": 568,
-        "bytes": 73939,
+        "bytes": 66015,
         "contentType": "image/jpeg"
       }
     },
@@ -619,7 +619,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_WR.jpg?fe62d",
         "width": 1024,
         "height": 568,
-        "bytes": 74463,
+        "bytes": 68142,
         "contentType": "image/jpeg"
       }
     },
@@ -631,7 +631,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_WR.jpg?96203",
         "width": 1024,
         "height": 568,
-        "bytes": 61592,
+        "bytes": 68757,
         "contentType": "image/jpeg"
       }
     },
@@ -667,7 +667,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_WR.jpg?5cef7",
         "width": 1024,
         "height": 568,
-        "bytes": 144861,
+        "bytes": 149839,
         "contentType": "image/jpeg"
       }
     },
@@ -679,7 +679,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSkin_WR.jpg?d3f45",
         "width": 1024,
         "height": 568,
-        "bytes": 133551,
+        "bytes": 136490,
         "contentType": "image/jpeg"
       }
     },
@@ -847,7 +847,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_WR.jpg?c7d29",
         "width": 1024,
         "height": 568,
-        "bytes": 54009,
+        "bytes": 51503,
         "contentType": "image/jpeg"
       }
     },
@@ -871,7 +871,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DreadnovaSkin_WR.jpg?6c30b",
         "width": 1024,
         "height": 568,
-        "bytes": 121004,
+        "bytes": 124070,
         "contentType": "image/jpeg"
       }
     },
@@ -895,7 +895,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_WR.jpg?f5425",
         "width": 1024,
         "height": 568,
-        "bytes": 66315,
+        "bytes": 68645,
         "contentType": "image/jpeg"
       }
     },
@@ -907,7 +907,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_WR.jpg?d1da2",
         "width": 1024,
         "height": 568,
-        "bytes": 44123,
+        "bytes": 50089,
         "contentType": "image/jpeg"
       }
     },
@@ -919,7 +919,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_FirecrackerSkin_WR.jpg?5e327",
         "width": 1024,
         "height": 568,
-        "bytes": 122829,
+        "bytes": 116704,
         "contentType": "image/jpeg"
       }
     },
@@ -955,7 +955,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_WR.jpg?a98dd",
         "width": 1029,
         "height": 571,
-        "bytes": 115380,
+        "bytes": 118286,
         "contentType": "image/jpeg"
       }
     },
@@ -979,7 +979,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_FrozenPrinceMundoSkin_WR.jpg?ec370",
         "width": 1024,
         "height": 568,
-        "bytes": 133855,
+        "bytes": 137758,
         "contentType": "image/jpeg"
       }
     },
@@ -991,7 +991,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin_WR.jpg?25e82",
         "width": 1024,
         "height": 568,
-        "bytes": 209570,
+        "bytes": 218409,
         "contentType": "image/jpeg"
       }
     },
@@ -1207,7 +1207,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_RoyalGuardSkin_WR.jpg?24ea6",
         "width": 1024,
         "height": 568,
-        "bytes": 74156,
+        "bytes": 67098,
         "contentType": "image/jpeg"
       }
     },
@@ -1351,7 +1351,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_DebonairSkin_WR.jpg?fe9dd",
         "width": 1024,
         "height": 568,
-        "bytes": 144856,
+        "bytes": 145984,
         "contentType": "image/jpeg"
       }
     },
@@ -1363,7 +1363,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_InfernalSkin_WR.jpg?ad78f",
         "width": 1024,
         "height": 568,
-        "bytes": 76302,
+        "bytes": 79333,
         "contentType": "image/jpeg"
       }
     },
@@ -1459,7 +1459,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_OriginalSkin_WR.jpg?4cc8a",
         "width": 1024,
         "height": 568,
-        "bytes": 47490,
+        "bytes": 54611,
         "contentType": "image/jpeg"
       }
     },
@@ -1519,7 +1519,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_PraetorianSkin_WR.jpg?36a88",
         "width": 1024,
         "height": 568,
-        "bytes": 46173,
+        "bytes": 39258,
         "contentType": "image/jpeg"
       }
     },
@@ -1627,7 +1627,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_OriginalSkin_WR.jpg?ef772",
         "width": 1024,
         "height": 568,
-        "bytes": 488244,
+        "bytes": 543186,
         "contentType": "image/jpeg"
       }
     },
@@ -1651,7 +1651,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_SentinelSkin_WR.jpg?4ddc7",
         "width": 1024,
         "height": 568,
-        "bytes": 91321,
+        "bytes": 93360,
         "contentType": "image/jpeg"
       }
     },
@@ -1771,7 +1771,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_OriginalSkin_WR.jpg?03994",
         "width": 1024,
         "height": 568,
-        "bytes": 73082,
+        "bytes": 80122,
         "contentType": "image/jpeg"
       }
     },
@@ -1795,7 +1795,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_DarkStarSkin_WR.jpg?c3a20",
         "width": 1024,
         "height": 568,
-        "bytes": 91279,
+        "bytes": 87285,
         "contentType": "image/jpeg"
       }
     },
@@ -1831,7 +1831,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_HextechSkin_WR.jpg?6af54",
         "width": 1024,
         "height": 568,
-        "bytes": 127930,
+        "bytes": 131101,
         "contentType": "image/jpeg"
       }
     },
@@ -1843,7 +1843,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_OriginalSkin_WR.jpg?7ac2a",
         "width": 1024,
         "height": 568,
-        "bytes": 47931,
+        "bytes": 54266,
         "contentType": "image/jpeg"
       }
     },
@@ -1867,7 +1867,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GodStaffSkin_WR.jpg?1d4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 64082,
+        "bytes": 71249,
         "contentType": "image/jpeg"
       }
     },
@@ -1891,7 +1891,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_WardenSkin_WR.jpg?fc037",
         "width": 1024,
         "height": 568,
-        "bytes": 149660,
+        "bytes": 145041,
         "contentType": "image/jpeg"
       }
     },
@@ -1915,7 +1915,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_JayceBrighthammerSkin_WR.jpg?ee858",
         "width": 1024,
         "height": 568,
-        "bytes": 103666,
+        "bytes": 103658,
         "contentType": "image/jpeg"
       }
     },
@@ -1951,7 +1951,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_OriginalSkin_WR.jpg?45519",
         "width": 1024,
         "height": 568,
-        "bytes": 57605,
+        "bytes": 50488,
         "contentType": "image/jpeg"
       }
     },
@@ -1963,7 +1963,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_HighNoonSkin_WR.jpg?dd056",
         "width": 1024,
         "height": 568,
-        "bytes": 81170,
+        "bytes": 90534,
         "contentType": "image/jpeg"
       }
     },
@@ -1999,7 +1999,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_PROJECTSkin_WR.jpg?15e4a",
         "width": 1024,
         "height": 568,
-        "bytes": 120954,
+        "bytes": 124667,
         "contentType": "image/jpeg"
       }
     },
@@ -2023,7 +2023,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jinx_OriginalSkin_WR.jpg?dd4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 73937,
+        "bytes": 71575,
         "contentType": "image/jpeg"
       }
     },
@@ -2131,7 +2131,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAALLOUTSkin_WR.jpg?45b50",
         "width": 1024,
         "height": 568,
-        "bytes": 63569,
+        "bytes": 61614,
         "contentType": "image/jpeg"
       }
     },
@@ -2191,7 +2191,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Karma_StargazerSkin_WR.jpg?28198",
         "width": 1024,
         "height": 568,
-        "bytes": 146912,
+        "bytes": 150735,
         "contentType": "image/jpeg"
       }
     },
@@ -2203,7 +2203,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_OriginalSkin_WR.jpg?7b0ba",
         "width": 1024,
         "height": 568,
-        "bytes": 87533,
+        "bytes": 89656,
         "contentType": "image/jpeg"
       }
     },
@@ -2227,7 +2227,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_CosmicReaverSkin_WR.jpg?77bfa",
         "width": 1024,
         "height": 568,
-        "bytes": 126965,
+        "bytes": 130895,
         "contentType": "image/jpeg"
       }
     },
@@ -2275,7 +2275,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Katarina_BattleAcademiaSkin_WR.jpg?f6d41",
         "width": 1024,
         "height": 568,
-        "bytes": 86337,
+        "bytes": 89821,
         "contentType": "image/jpeg"
       }
     },
@@ -2323,7 +2323,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayle_OriginalSkin_WR.jpg?692fe",
         "width": 1024,
         "height": 568,
-        "bytes": 130946,
+        "bytes": 127492,
         "contentType": "image/jpeg"
       }
     },
@@ -2383,7 +2383,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_OriginalSkin_WR.jpg?53339",
         "width": 1024,
         "height": 568,
-        "bytes": 117409,
+        "bytes": 121306,
         "contentType": "image/jpeg"
       }
     },
@@ -2407,7 +2407,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_SuperSkin_WR.jpg?35aa1",
         "width": 1024,
         "height": 568,
-        "bytes": 130499,
+        "bytes": 130507,
         "contentType": "image/jpeg"
       }
     },
@@ -2419,7 +2419,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_BloodMoonSkin_WR.jpg?08ef4",
         "width": 1024,
         "height": 568,
-        "bytes": 62585,
+        "bytes": 70642,
         "contentType": "image/jpeg"
       }
     },
@@ -2431,7 +2431,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_InfernalSkin_WR.jpg?4df70",
         "width": 1024,
         "height": 568,
-        "bytes": 105530,
+        "bytes": 111738,
         "contentType": "image/jpeg"
       }
     },
@@ -2455,7 +2455,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kha%27Zix_OriginalSkin_WR.jpg?b62d9",
         "width": 1024,
         "height": 568,
-        "bytes": 56381,
+        "bytes": 49360,
         "contentType": "image/jpeg"
       }
     },
@@ -2623,7 +2623,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_PoolPartySkin_WR.jpg?a900a",
         "width": 1024,
         "height": 568,
-        "bytes": 82353,
+        "bytes": 73749,
         "contentType": "image/jpeg"
       }
     },
@@ -2683,7 +2683,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_SpiritBlossomSkin_WR.jpg?f0a30",
         "width": 1024,
         "height": 568,
-        "bytes": 106855,
+        "bytes": 104465,
         "contentType": "image/jpeg"
       }
     },
@@ -2707,7 +2707,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HiredGunSkin_WR.jpg?ed47e",
         "width": 1024,
         "height": 568,
-        "bytes": 507376,
+        "bytes": 560207,
         "contentType": "image/jpeg"
       }
     },
@@ -2719,7 +2719,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HighNoonSkin_WR.jpg?74cee",
         "width": 1024,
         "height": 568,
-        "bytes": 49660,
+        "bytes": 47824,
         "contentType": "image/jpeg"
       }
     },
@@ -2743,7 +2743,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_OriginalSkin_WR.jpg?a1ed4",
         "width": 1024,
         "height": 568,
-        "bytes": 90418,
+        "bytes": 87423,
         "contentType": "image/jpeg"
       }
     },
@@ -2935,7 +2935,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Malphite_OriginalSkin_WR.jpg?e2555",
         "width": 1024,
         "height": 568,
-        "bytes": 68992,
+        "bytes": 77667,
         "contentType": "image/jpeg"
       }
     },
@@ -3019,7 +3019,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_AssassinSkin_WR.jpg?c9e26",
         "width": 1024,
         "height": 568,
-        "bytes": 59911,
+        "bytes": 61616,
         "contentType": "image/jpeg"
       }
     },
@@ -3091,7 +3091,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PROJECTYiSkin_WR.jpg?487a8",
         "width": 1024,
         "height": 568,
-        "bytes": 135259,
+        "bytes": 130692,
         "contentType": "image/jpeg"
       }
     },
@@ -3259,7 +3259,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_OriginalSkin_WR.jpg?364e9",
         "width": 1024,
         "height": 568,
-        "bytes": 158398,
+        "bytes": 152512,
         "contentType": "image/jpeg"
       }
     },
@@ -3283,7 +3283,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_RiverSpiritSkin_WR.jpg?a14f8",
         "width": 1024,
         "height": 568,
-        "bytes": 89753,
+        "bytes": 87204,
         "contentType": "image/jpeg"
       }
     },
@@ -3295,7 +3295,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_ProgramSkin_WR.jpg?80187",
         "width": 1024,
         "height": 568,
-        "bytes": 73254,
+        "bytes": 71060,
         "contentType": "image/jpeg"
       }
     },
@@ -3331,7 +3331,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_OriginalSkin_WR.jpg?5ef29",
         "width": 1024,
         "height": 568,
-        "bytes": 77801,
+        "bytes": 70647,
         "contentType": "image/jpeg"
       }
     },
@@ -3355,7 +3355,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_ArchdukeSkin_WR.jpg?2fc62",
         "width": 1024,
         "height": 568,
-        "bytes": 86313,
+        "bytes": 92490,
         "contentType": "image/jpeg"
       }
     },
@@ -3403,7 +3403,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_AstroNautilusSkin_WR.jpg?52313",
         "width": 1024,
         "height": 568,
-        "bytes": 115647,
+        "bytes": 119066,
         "contentType": "image/jpeg"
       }
     },
@@ -3415,7 +3415,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin_WR.jpg?9633e",
         "width": 1024,
         "height": 568,
-        "bytes": 103504,
+        "bytes": 100300,
         "contentType": "image/jpeg"
       }
     },
@@ -3487,7 +3487,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Olaf_DragonslayerSkin_WR.jpg?52077",
         "width": 1024,
         "height": 568,
-        "bytes": 119633,
+        "bytes": 113010,
         "contentType": "image/jpeg"
       }
     },
@@ -3655,7 +3655,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_SandWraithSkin_WR.jpg?14133",
         "width": 1024,
         "height": 568,
-        "bytes": 130471,
+        "bytes": 126183,
         "contentType": "image/jpeg"
       }
     },
@@ -3691,7 +3691,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_SweetheartSkin_WR.jpg?e6d2d",
         "width": 1024,
         "height": 568,
-        "bytes": 81944,
+        "bytes": 73600,
         "contentType": "image/jpeg"
       }
     },
@@ -3703,7 +3703,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_StarGuardianSkin_WR.jpg?e7301",
         "width": 1024,
         "height": 568,
-        "bytes": 120906,
+        "bytes": 117694,
         "contentType": "image/jpeg"
       }
     },
@@ -3727,7 +3727,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_OriginalSkin_WR.jpg?cf6c5",
         "width": 1024,
         "height": 568,
-        "bytes": 65555,
+        "bytes": 58281,
         "contentType": "image/jpeg"
       }
     },
@@ -3751,7 +3751,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_SweeperSkin_WR.jpg?fd7f3",
         "width": 1024,
         "height": 568,
-        "bytes": 162109,
+        "bytes": 156634,
         "contentType": "image/jpeg"
       }
     },
@@ -3763,7 +3763,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_OriginalSkin_WR.jpg?06313",
         "width": 1024,
         "height": 568,
-        "bytes": 67901,
+        "bytes": 75557,
         "contentType": "image/jpeg"
       }
     },
@@ -3799,7 +3799,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PrehistoricSkin_WR.jpg?63488",
         "width": 1024,
         "height": 568,
-        "bytes": 169657,
+        "bytes": 163401,
         "contentType": "image/jpeg"
       }
     },
@@ -3811,7 +3811,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_RenektoySkin_WR.jpg?7ef98",
         "width": 1024,
         "height": 568,
-        "bytes": 140750,
+        "bytes": 136168,
         "contentType": "image/jpeg"
       }
     },
@@ -3823,7 +3823,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PROJECTSkin_WR.jpg?69a08",
         "width": 1024,
         "height": 568,
-        "bytes": 127123,
+        "bytes": 130826,
         "contentType": "image/jpeg"
       }
     },
@@ -3835,7 +3835,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_OriginalSkin_WR.jpg?f3360",
         "width": 1024,
         "height": 568,
-        "bytes": 556064,
+        "bytes": 499739,
         "contentType": "image/jpeg"
       }
     },
@@ -3847,7 +3847,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_NightHunterSkin_WR.jpg?358f2",
         "width": 1024,
         "height": 568,
-        "bytes": 68157,
+        "bytes": 65905,
         "contentType": "image/jpeg"
       }
     },
@@ -3883,7 +3883,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Riven_OriginalSkin_WR.jpg?d7630",
         "width": 1024,
         "height": 568,
-        "bytes": 79164,
+        "bytes": 81708,
         "contentType": "image/jpeg"
       }
     },
@@ -4111,7 +4111,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_OriginalSkin_WR.jpg?3edb7",
         "width": 1024,
         "height": 568,
-        "bytes": 96858,
+        "bytes": 99146,
         "contentType": "image/jpeg"
       }
     },
@@ -4135,7 +4135,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_PulsefireSkin_WR.jpg?5f0bc",
         "width": 1024,
         "height": 568,
-        "bytes": 108484,
+        "bytes": 105354,
         "contentType": "image/jpeg"
       }
     },
@@ -4183,7 +4183,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_SuperGalaxySkin_WR.jpg?81057",
         "width": 1024,
         "height": 568,
-        "bytes": 77548,
+        "bytes": 79620,
         "contentType": "image/jpeg"
       }
     },
@@ -4219,7 +4219,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Singed_OriginalSkin_WR.jpg?4457f",
         "width": 1024,
         "height": 568,
-        "bytes": 73091,
+        "bytes": 65655,
         "contentType": "image/jpeg"
       }
     },
@@ -4267,7 +4267,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_OriginalSkin_WR.jpg?78e4d",
         "width": 1024,
         "height": 568,
-        "bytes": 111230,
+        "bytes": 114350,
         "contentType": "image/jpeg"
       }
     },
@@ -4291,7 +4291,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sona_OriginalSkin_WR.jpg?e55b5",
         "width": 1024,
         "height": 568,
-        "bytes": 470505,
+        "bytes": 516554,
         "contentType": "image/jpeg"
       }
     },
@@ -4423,7 +4423,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Teemo_OriginalSkin_WR.jpg?d7a25",
         "width": 1024,
         "height": 568,
-        "bytes": 65618,
+        "bytes": 72801,
         "contentType": "image/jpeg"
       }
     },
@@ -4531,7 +4531,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PulsefireSkin_WR.jpg?4068e",
         "width": 1024,
         "height": 568,
-        "bytes": 125715,
+        "bytes": 129337,
         "contentType": "image/jpeg"
       }
     },
@@ -4603,7 +4603,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_LittleDemonSkin_WR.jpg?0d118",
         "width": 1024,
         "height": 568,
-        "bytes": 65552,
+        "bytes": 63999,
         "contentType": "image/jpeg"
       }
     },
@@ -4615,7 +4615,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_OmegaSquadSkin_WR.jpg?04681",
         "width": 1024,
         "height": 568,
-        "bytes": 77775,
+        "bytes": 80509,
         "contentType": "image/jpeg"
       }
     },
@@ -4711,7 +4711,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_WarringKingdomsSkin_WR.jpg?f39e2",
         "width": 1024,
         "height": 568,
-        "bytes": 73948,
+        "bytes": 76501,
         "contentType": "image/jpeg"
       }
     },
@@ -4735,7 +4735,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twisted_Fate_PulsefireSkin_WR.jpg?2b079",
         "width": 1024,
         "height": 568,
-        "bytes": 57259,
+        "bytes": 63921,
         "contentType": "image/jpeg"
       }
     },
@@ -4819,7 +4819,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_ArcticOpsSkin_WR.jpg?23007",
         "width": 1024,
         "height": 568,
-        "bytes": 61644,
+        "bytes": 68873,
         "contentType": "image/jpeg"
       }
     },
@@ -4843,7 +4843,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_VarusSwiftboltSkin_WR.jpg?7b1cf",
         "width": 1024,
         "height": 568,
-        "bytes": 138433,
+        "bytes": 131864,
         "contentType": "image/jpeg"
       }
     },
@@ -4855,7 +4855,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_DarkStarSkin_WR.jpg?74579",
         "width": 1024,
         "height": 568,
-        "bytes": 127232,
+        "bytes": 122174,
         "contentType": "image/jpeg"
       }
     },
@@ -4939,7 +4939,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PROJECTSkin_WR.jpg?d0006",
         "width": 1024,
         "height": 568,
-        "bytes": 157276,
+        "bytes": 152428,
         "contentType": "image/jpeg"
       }
     },
@@ -4951,7 +4951,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_FirecrackerSkin_WR.jpg?5cf40",
         "width": 1024,
         "height": 568,
-        "bytes": 129333,
+        "bytes": 134056,
         "contentType": "image/jpeg"
       }
     },
@@ -4963,7 +4963,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_OriginalSkin_WR.jpg?cd80f",
         "width": 1024,
         "height": 568,
-        "bytes": 74447,
+        "bytes": 76863,
         "contentType": "image/jpeg"
       }
     },
@@ -4987,7 +4987,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_BadSantaSkin_WR.jpg?2c32d",
         "width": 1024,
         "height": 568,
-        "bytes": 166057,
+        "bytes": 171569,
         "contentType": "image/jpeg"
       }
     },
@@ -5083,7 +5083,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vi_ArcaneSkin_WR.jpg?45a11",
         "width": 1024,
         "height": 568,
-        "bytes": 120063,
+        "bytes": 123576,
         "contentType": "image/jpeg"
       }
     },
@@ -5143,7 +5143,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_OldGodSkin_WR.jpg?807fe",
         "width": 1024,
         "height": 568,
-        "bytes": 111244,
+        "bytes": 108369,
         "contentType": "image/jpeg"
       }
     },
@@ -5215,7 +5215,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Wukong_RadiantSkin_WR.jpg?751e8",
         "width": 1024,
         "height": 568,
-        "bytes": 188486,
+        "bytes": 179679,
         "contentType": "image/jpeg"
       }
     },
@@ -5275,7 +5275,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xayah_StarGuardianSkin_WR.jpg?b932e",
         "width": 1024,
         "height": 568,
-        "bytes": 117694,
+        "bytes": 120906,
         "contentType": "image/jpeg"
       }
     },
@@ -5299,7 +5299,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xin_Zhao_OriginalSkin_WR.jpg?8697c",
         "width": 1024,
         "height": 568,
-        "bytes": 75698,
+        "bytes": 83804,
         "contentType": "image/jpeg"
       }
     },
@@ -5371,7 +5371,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_OriginalSkin_WR.jpg?4a6f3",
         "width": 1024,
         "height": 568,
-        "bytes": 85922,
+        "bytes": 77265,
         "contentType": "image/jpeg"
       }
     },
@@ -5383,7 +5383,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_HighNoonSkin_WR.jpg?fd07f",
         "width": 1024,
         "height": 568,
-        "bytes": 51296,
+        "bytes": 58042,
         "contentType": "image/jpeg"
       }
     },
@@ -5419,7 +5419,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_BloodMoonSkin_WR.jpg?53cc1",
         "width": 1024,
         "height": 568,
-        "bytes": 49821,
+        "bytes": 43812,
         "contentType": "image/jpeg"
       }
     },
@@ -5491,7 +5491,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_OriginalSkin_WR.jpg?1bf39",
         "width": 1024,
         "height": 568,
-        "bytes": 136314,
+        "bytes": 143532,
         "contentType": "image/jpeg"
       }
     },
@@ -5503,7 +5503,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_HeartseekerSkin_WR.jpg?82d19",
         "width": 1024,
         "height": 568,
-        "bytes": 125587,
+        "bytes": 118726,
         "contentType": "image/jpeg"
       }
     },
@@ -5515,7 +5515,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_BattlePrincipalSkin_WR.jpg?da5a6",
         "width": 1024,
         "height": 568,
-        "bytes": 139123,
+        "bytes": 143408,
         "contentType": "image/jpeg"
       }
     },
@@ -5527,7 +5527,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_OriginalSkin_WR.jpg?2cd1b",
         "width": 1024,
         "height": 568,
-        "bytes": 87407,
+        "bytes": 84548,
         "contentType": "image/jpeg"
       }
     },
@@ -5575,7 +5575,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_GalaxySlayerSkin_WR.jpg?3b3d7",
         "width": 1024,
         "height": 568,
-        "bytes": 51150,
+        "bytes": 53568,
         "contentType": "image/jpeg"
       }
     },
@@ -5587,7 +5587,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_PsyOpsSkin_WR.jpg?0b937",
         "width": 1024,
         "height": 568,
-        "bytes": 91277,
+        "bytes": 93770,
         "contentType": "image/jpeg"
       }
     },
@@ -5647,7 +5647,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_MasterArcanistSkin_WR.jpg?d6dbe",
         "width": 1024,
         "height": 568,
-        "bytes": 68166,
+        "bytes": 61296,
         "contentType": "image/jpeg"
       }
     },
@@ -5695,7 +5695,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_PoolPartySkin_WR.jpg?8dac5",
         "width": 1024,
         "height": 568,
-        "bytes": 118451,
+        "bytes": 114587,
         "contentType": "image/jpeg"
       }
     },
@@ -5733,7 +5733,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_WR.jpg?81673",
         "width": 1024,
         "height": 568,
-        "bytes": 111720,
+        "bytes": 115072,
         "contentType": "image/jpeg"
       }
     },
@@ -5829,7 +5829,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_WR.jpg?f4e5e",
         "width": 1024,
         "height": 568,
-        "bytes": 128477,
+        "bytes": 131917,
         "contentType": "image/jpeg"
       }
     },
@@ -5841,7 +5841,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 144043,
+        "bytes": 135559,
         "contentType": "image/jpeg"
       }
     },
@@ -5853,7 +5853,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_WR.jpg?99edd",
         "width": 1024,
         "height": 568,
-        "bytes": 67289,
+        "bytes": 64780,
         "contentType": "image/jpeg"
       }
     },
@@ -5901,7 +5901,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_HextechSkin_WR.jpg?b4faa",
         "width": 1024,
         "height": 568,
-        "bytes": 150885,
+        "bytes": 145152,
         "contentType": "image/jpeg"
       }
     },
@@ -5925,7 +5925,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Amumu_InfernalSkin_WR.jpg?5175e",
         "width": 1024,
         "height": 568,
-        "bytes": 64767,
+        "bytes": 58779,
         "contentType": "image/jpeg"
       }
     },
@@ -5961,7 +5961,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_WR.jpg?e3716",
         "width": 1024,
         "height": 568,
-        "bytes": 65274,
+        "bytes": 73219,
         "contentType": "image/jpeg"
       }
     },
@@ -6093,7 +6093,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin_WR.jpg?c7229",
         "width": 1024,
         "height": 568,
-        "bytes": 70766,
+        "bytes": 63084,
         "contentType": "image/jpeg"
       }
     },
@@ -6117,7 +6117,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_WR.jpg?b0a07",
         "width": 1024,
         "height": 568,
-        "bytes": 128312,
+        "bytes": 124612,
         "contentType": "image/jpeg"
       }
     },
@@ -6153,7 +6153,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSkin_WR.jpg?a6f75",
         "width": 1024,
         "height": 568,
-        "bytes": 92579,
+        "bytes": 84423,
         "contentType": "image/jpeg"
       }
     },
@@ -6189,7 +6189,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_WR.jpg?7ba7a",
         "width": 1024,
         "height": 568,
-        "bytes": 104253,
+        "bytes": 107705,
         "contentType": "image/jpeg"
       }
     },
@@ -6213,7 +6213,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_WR.jpg?71cbd",
         "width": 1024,
         "height": 568,
-        "bytes": 73939,
+        "bytes": 66015,
         "contentType": "image/jpeg"
       }
     },
@@ -6225,7 +6225,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_WR.jpg?fe62d",
         "width": 1024,
         "height": 568,
-        "bytes": 74463,
+        "bytes": 68142,
         "contentType": "image/jpeg"
       }
     },
@@ -6237,7 +6237,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_WR.jpg?96203",
         "width": 1024,
         "height": 568,
-        "bytes": 61592,
+        "bytes": 68757,
         "contentType": "image/jpeg"
       }
     },
@@ -6273,7 +6273,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_WR.jpg?5cef7",
         "width": 1024,
         "height": 568,
-        "bytes": 144861,
+        "bytes": 149839,
         "contentType": "image/jpeg"
       }
     },
@@ -6285,7 +6285,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSkin_WR.jpg?d3f45",
         "width": 1024,
         "height": 568,
-        "bytes": 133551,
+        "bytes": 136490,
         "contentType": "image/jpeg"
       }
     },
@@ -6441,7 +6441,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_WR.jpg?c7d29",
         "width": 1024,
         "height": 568,
-        "bytes": 54009,
+        "bytes": 51503,
         "contentType": "image/jpeg"
       }
     },
@@ -6465,7 +6465,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DreadnovaSkin_WR.jpg?6c30b",
         "width": 1024,
         "height": 568,
-        "bytes": 121004,
+        "bytes": 124070,
         "contentType": "image/jpeg"
       }
     },
@@ -6489,7 +6489,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_WR.jpg?f5425",
         "width": 1024,
         "height": 568,
-        "bytes": 66315,
+        "bytes": 68645,
         "contentType": "image/jpeg"
       }
     },
@@ -6501,7 +6501,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_WR.jpg?d1da2",
         "width": 1024,
         "height": 568,
-        "bytes": 44123,
+        "bytes": 50089,
         "contentType": "image/jpeg"
       }
     },
@@ -6513,7 +6513,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_FirecrackerSkin_WR.jpg?5e327",
         "width": 1024,
         "height": 568,
-        "bytes": 122829,
+        "bytes": 116704,
         "contentType": "image/jpeg"
       }
     },
@@ -6549,7 +6549,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_WR.jpg?a98dd",
         "width": 1029,
         "height": 571,
-        "bytes": 115380,
+        "bytes": 118286,
         "contentType": "image/jpeg"
       }
     },
@@ -6573,7 +6573,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin_WR.jpg?25e82",
         "width": 1024,
         "height": 568,
-        "bytes": 209570,
+        "bytes": 218409,
         "contentType": "image/jpeg"
       }
     },
@@ -6789,7 +6789,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_RoyalGuardSkin_WR.jpg?24ea6",
         "width": 1024,
         "height": 568,
-        "bytes": 74156,
+        "bytes": 67098,
         "contentType": "image/jpeg"
       }
     },
@@ -6921,7 +6921,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_InfernalSkin_WR.jpg?ad78f",
         "width": 1024,
         "height": 568,
-        "bytes": 76302,
+        "bytes": 79333,
         "contentType": "image/jpeg"
       }
     },
@@ -7017,7 +7017,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_OriginalSkin_WR.jpg?4cc8a",
         "width": 1024,
         "height": 568,
-        "bytes": 47490,
+        "bytes": 54611,
         "contentType": "image/jpeg"
       }
     },
@@ -7065,7 +7065,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_PraetorianSkin_WR.jpg?36a88",
         "width": 1024,
         "height": 568,
-        "bytes": 46173,
+        "bytes": 39258,
         "contentType": "image/jpeg"
       }
     },
@@ -7137,7 +7137,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_OriginalSkin_WR.jpg?ef772",
         "width": 1024,
         "height": 568,
-        "bytes": 488244,
+        "bytes": 543186,
         "contentType": "image/jpeg"
       }
     },
@@ -7161,7 +7161,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_SentinelSkin_WR.jpg?4ddc7",
         "width": 1024,
         "height": 568,
-        "bytes": 91321,
+        "bytes": 93360,
         "contentType": "image/jpeg"
       }
     },
@@ -7269,7 +7269,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_OriginalSkin_WR.jpg?03994",
         "width": 1024,
         "height": 568,
-        "bytes": 73082,
+        "bytes": 80122,
         "contentType": "image/jpeg"
       }
     },
@@ -7281,7 +7281,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_DarkStarSkin_WR.jpg?c3a20",
         "width": 1024,
         "height": 568,
-        "bytes": 91279,
+        "bytes": 87285,
         "contentType": "image/jpeg"
       }
     },
@@ -7305,7 +7305,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_HextechSkin_WR.jpg?6af54",
         "width": 1024,
         "height": 568,
-        "bytes": 127930,
+        "bytes": 131101,
         "contentType": "image/jpeg"
       }
     },
@@ -7329,7 +7329,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_OriginalSkin_WR.jpg?7ac2a",
         "width": 1024,
         "height": 568,
-        "bytes": 47931,
+        "bytes": 54266,
         "contentType": "image/jpeg"
       }
     },
@@ -7353,7 +7353,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GodStaffSkin_WR.jpg?1d4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 64082,
+        "bytes": 71249,
         "contentType": "image/jpeg"
       }
     },
@@ -7365,7 +7365,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_WardenSkin_WR.jpg?fc037",
         "width": 1024,
         "height": 568,
-        "bytes": 149660,
+        "bytes": 145041,
         "contentType": "image/jpeg"
       }
     },
@@ -7389,7 +7389,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_JayceBrighthammerSkin_WR.jpg?ee858",
         "width": 1024,
         "height": 568,
-        "bytes": 103666,
+        "bytes": 103658,
         "contentType": "image/jpeg"
       }
     },
@@ -7413,7 +7413,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_OriginalSkin_WR.jpg?45519",
         "width": 1024,
         "height": 568,
-        "bytes": 57605,
+        "bytes": 50488,
         "contentType": "image/jpeg"
       }
     },
@@ -7425,7 +7425,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_HighNoonSkin_WR.jpg?dd056",
         "width": 1024,
         "height": 568,
-        "bytes": 81170,
+        "bytes": 90534,
         "contentType": "image/jpeg"
       }
     },
@@ -7461,7 +7461,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jinx_OriginalSkin_WR.jpg?dd4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 73937,
+        "bytes": 71575,
         "contentType": "image/jpeg"
       }
     },
@@ -7533,7 +7533,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAALLOUTSkin_WR.jpg?45b50",
         "width": 1024,
         "height": 568,
-        "bytes": 63569,
+        "bytes": 61614,
         "contentType": "image/jpeg"
       }
     },
@@ -7605,7 +7605,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_OriginalSkin_WR.jpg?7b0ba",
         "width": 1024,
         "height": 568,
-        "bytes": 87533,
+        "bytes": 89656,
         "contentType": "image/jpeg"
       }
     },
@@ -7617,7 +7617,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_CosmicReaverSkin_WR.jpg?77bfa",
         "width": 1024,
         "height": 568,
-        "bytes": 126965,
+        "bytes": 130895,
         "contentType": "image/jpeg"
       }
     },
@@ -7653,7 +7653,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Katarina_BattleAcademiaSkin_WR.jpg?f6d41",
         "width": 1024,
         "height": 568,
-        "bytes": 86337,
+        "bytes": 89821,
         "contentType": "image/jpeg"
       }
     },
@@ -7725,7 +7725,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayle_OriginalSkin_WR.jpg?692fe",
         "width": 1024,
         "height": 568,
-        "bytes": 130946,
+        "bytes": 127492,
         "contentType": "image/jpeg"
       }
     },
@@ -7833,7 +7833,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_OriginalSkin_WR.jpg?53339",
         "width": 1024,
         "height": 568,
-        "bytes": 117409,
+        "bytes": 121306,
         "contentType": "image/jpeg"
       }
     },
@@ -7845,7 +7845,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_SuperSkin_WR.jpg?35aa1",
         "width": 1024,
         "height": 568,
-        "bytes": 130499,
+        "bytes": 130507,
         "contentType": "image/jpeg"
       }
     },
@@ -7857,7 +7857,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_BloodMoonSkin_WR.jpg?08ef4",
         "width": 1024,
         "height": 568,
-        "bytes": 62585,
+        "bytes": 70642,
         "contentType": "image/jpeg"
       }
     },
@@ -7869,7 +7869,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_InfernalSkin_WR.jpg?4df70",
         "width": 1024,
         "height": 568,
-        "bytes": 105530,
+        "bytes": 111738,
         "contentType": "image/jpeg"
       }
     },
@@ -7881,7 +7881,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kha%27Zix_OriginalSkin_WR.jpg?b62d9",
         "width": 1024,
         "height": 568,
-        "bytes": 56381,
+        "bytes": 49360,
         "contentType": "image/jpeg"
       }
     },
@@ -8037,7 +8037,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_PoolPartySkin_WR.jpg?a900a",
         "width": 1024,
         "height": 568,
-        "bytes": 82353,
+        "bytes": 73749,
         "contentType": "image/jpeg"
       }
     },
@@ -8073,7 +8073,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 138454,
+        "bytes": 131039,
         "contentType": "image/jpeg"
       }
     },
@@ -8097,7 +8097,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_SpiritBlossomSkin_WR.jpg?f0a30",
         "width": 1024,
         "height": 568,
-        "bytes": 106855,
+        "bytes": 104465,
         "contentType": "image/jpeg"
       }
     },
@@ -8121,7 +8121,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HiredGunSkin_WR.jpg?ed47e",
         "width": 1024,
         "height": 568,
-        "bytes": 507376,
+        "bytes": 560207,
         "contentType": "image/jpeg"
       }
     },
@@ -8133,7 +8133,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HighNoonSkin_WR.jpg?74cee",
         "width": 1024,
         "height": 568,
-        "bytes": 49660,
+        "bytes": 47824,
         "contentType": "image/jpeg"
       }
     },
@@ -8217,7 +8217,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_OriginalSkin_WR.jpg?a1ed4",
         "width": 1024,
         "height": 568,
-        "bytes": 90418,
+        "bytes": 87423,
         "contentType": "image/jpeg"
       }
     },
@@ -8349,7 +8349,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Malphite_OriginalSkin_WR.jpg?e2555",
         "width": 1024,
         "height": 568,
-        "bytes": 68992,
+        "bytes": 77667,
         "contentType": "image/jpeg"
       }
     },
@@ -8409,7 +8409,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_AssassinSkin_WR.jpg?c9e26",
         "width": 1024,
         "height": 568,
-        "bytes": 59911,
+        "bytes": 61616,
         "contentType": "image/jpeg"
       }
     },
@@ -8469,7 +8469,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PROJECTYiSkin_WR.jpg?487a8",
         "width": 1024,
         "height": 568,
-        "bytes": 135259,
+        "bytes": 130692,
         "contentType": "image/jpeg"
       }
     },
@@ -8637,7 +8637,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_OriginalSkin_WR.jpg?364e9",
         "width": 1024,
         "height": 568,
-        "bytes": 158398,
+        "bytes": 152512,
         "contentType": "image/jpeg"
       }
     },
@@ -8661,7 +8661,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_RiverSpiritSkin_WR.jpg?a14f8",
         "width": 1024,
         "height": 568,
-        "bytes": 89753,
+        "bytes": 87204,
         "contentType": "image/jpeg"
       }
     },
@@ -8673,7 +8673,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_ProgramSkin_WR.jpg?80187",
         "width": 1024,
         "height": 568,
-        "bytes": 73254,
+        "bytes": 71060,
         "contentType": "image/jpeg"
       }
     },
@@ -8697,7 +8697,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_OriginalSkin_WR.jpg?5ef29",
         "width": 1024,
         "height": 568,
-        "bytes": 77801,
+        "bytes": 70647,
         "contentType": "image/jpeg"
       }
     },
@@ -8721,7 +8721,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_ArchdukeSkin_WR.jpg?2fc62",
         "width": 1024,
         "height": 568,
-        "bytes": 86313,
+        "bytes": 92490,
         "contentType": "image/jpeg"
       }
     },
@@ -8733,7 +8733,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_AstroNautilusSkin_WR.jpg?52313",
         "width": 1024,
         "height": 568,
-        "bytes": 115647,
+        "bytes": 119066,
         "contentType": "image/jpeg"
       }
     },
@@ -8757,7 +8757,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin_WR.jpg?9633e",
         "width": 1024,
         "height": 568,
-        "bytes": 103504,
+        "bytes": 100300,
         "contentType": "image/jpeg"
       }
     },
@@ -8829,7 +8829,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Olaf_DragonslayerSkin_WR.jpg?52077",
         "width": 1024,
         "height": 568,
-        "bytes": 119633,
+        "bytes": 113010,
         "contentType": "image/jpeg"
       }
     },
@@ -9009,7 +9009,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_SandWraithSkin_WR.jpg?14133",
         "width": 1024,
         "height": 568,
-        "bytes": 130471,
+        "bytes": 126183,
         "contentType": "image/jpeg"
       }
     },
@@ -9045,7 +9045,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_SweetheartSkin_WR.jpg?e6d2d",
         "width": 1024,
         "height": 568,
-        "bytes": 81944,
+        "bytes": 73600,
         "contentType": "image/jpeg"
       }
     },
@@ -9057,7 +9057,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_StarGuardianSkin_WR.jpg?e7301",
         "width": 1024,
         "height": 568,
-        "bytes": 120906,
+        "bytes": 117694,
         "contentType": "image/jpeg"
       }
     },
@@ -9093,7 +9093,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_OriginalSkin_WR.jpg?cf6c5",
         "width": 1024,
         "height": 568,
-        "bytes": 65555,
+        "bytes": 58281,
         "contentType": "image/jpeg"
       }
     },
@@ -9105,7 +9105,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_SweeperSkin_WR.jpg?fd7f3",
         "width": 1024,
         "height": 568,
-        "bytes": 162109,
+        "bytes": 156634,
         "contentType": "image/jpeg"
       }
     },
@@ -9141,7 +9141,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_OriginalSkin_WR.jpg?06313",
         "width": 1024,
         "height": 568,
-        "bytes": 67901,
+        "bytes": 75557,
         "contentType": "image/jpeg"
       }
     },
@@ -9153,7 +9153,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PrehistoricSkin_WR.jpg?63488",
         "width": 1024,
         "height": 568,
-        "bytes": 169657,
+        "bytes": 163401,
         "contentType": "image/jpeg"
       }
     },
@@ -9165,7 +9165,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_RenektoySkin_WR.jpg?7ef98",
         "width": 1024,
         "height": 568,
-        "bytes": 140750,
+        "bytes": 136168,
         "contentType": "image/jpeg"
       }
     },
@@ -9177,7 +9177,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PROJECTSkin_WR.jpg?69a08",
         "width": 1024,
         "height": 568,
-        "bytes": 127123,
+        "bytes": 130826,
         "contentType": "image/jpeg"
       }
     },
@@ -9189,7 +9189,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_NightHunterSkin_WR.jpg?358f2",
         "width": 1024,
         "height": 568,
-        "bytes": 68157,
+        "bytes": 65905,
         "contentType": "image/jpeg"
       }
     },
@@ -9429,7 +9429,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_OriginalSkin_WR.jpg?3edb7",
         "width": 1024,
         "height": 568,
-        "bytes": 96858,
+        "bytes": 99146,
         "contentType": "image/jpeg"
       }
     },
@@ -9453,7 +9453,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_PulsefireSkin_WR.jpg?5f0bc",
         "width": 1024,
         "height": 568,
-        "bytes": 108484,
+        "bytes": 105354,
         "contentType": "image/jpeg"
       }
     },
@@ -9501,7 +9501,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_SuperGalaxySkin_WR.jpg?81057",
         "width": 1024,
         "height": 568,
-        "bytes": 77548,
+        "bytes": 79620,
         "contentType": "image/jpeg"
       }
     },
@@ -9525,7 +9525,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Singed_OriginalSkin_WR.jpg?4457f",
         "width": 1024,
         "height": 568,
-        "bytes": 73091,
+        "bytes": 65655,
         "contentType": "image/jpeg"
       }
     },
@@ -9573,7 +9573,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sona_OriginalSkin_WR.jpg?e55b5",
         "width": 1024,
         "height": 568,
-        "bytes": 470505,
+        "bytes": 516554,
         "contentType": "image/jpeg"
       }
     },
@@ -9693,7 +9693,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Teemo_OriginalSkin_WR.jpg?d7a25",
         "width": 1024,
         "height": 568,
-        "bytes": 65618,
+        "bytes": 72801,
         "contentType": "image/jpeg"
       }
     },
@@ -9789,7 +9789,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PulsefireSkin_WR.jpg?4068e",
         "width": 1024,
         "height": 568,
-        "bytes": 125715,
+        "bytes": 129337,
         "contentType": "image/jpeg"
       }
     },
@@ -9861,7 +9861,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_LittleDemonSkin_WR.jpg?0d118",
         "width": 1024,
         "height": 568,
-        "bytes": 65552,
+        "bytes": 63999,
         "contentType": "image/jpeg"
       }
     },
@@ -9873,7 +9873,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_OmegaSquadSkin_WR.jpg?04681",
         "width": 1024,
         "height": 568,
-        "bytes": 77775,
+        "bytes": 80509,
         "contentType": "image/jpeg"
       }
     },
@@ -9945,7 +9945,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_WarringKingdomsSkin_WR.jpg?f39e2",
         "width": 1024,
         "height": 568,
-        "bytes": 73948,
+        "bytes": 76501,
         "contentType": "image/jpeg"
       }
     },
@@ -9969,7 +9969,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twisted_Fate_PulsefireSkin_WR.jpg?2b079",
         "width": 1024,
         "height": 568,
-        "bytes": 57259,
+        "bytes": 63921,
         "contentType": "image/jpeg"
       }
     },
@@ -10041,7 +10041,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_ArcticOpsSkin_WR.jpg?23007",
         "width": 1024,
         "height": 568,
-        "bytes": 61644,
+        "bytes": 68873,
         "contentType": "image/jpeg"
       }
     },
@@ -10053,7 +10053,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_VarusSwiftboltSkin_WR.jpg?7b1cf",
         "width": 1024,
         "height": 568,
-        "bytes": 138433,
+        "bytes": 131864,
         "contentType": "image/jpeg"
       }
     },
@@ -10065,7 +10065,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_DarkStarSkin_WR.jpg?74579",
         "width": 1024,
         "height": 568,
-        "bytes": 127232,
+        "bytes": 122174,
         "contentType": "image/jpeg"
       }
     },
@@ -10149,7 +10149,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PROJECTSkin_WR.jpg?d0006",
         "width": 1024,
         "height": 568,
-        "bytes": 157276,
+        "bytes": 152428,
         "contentType": "image/jpeg"
       }
     },
@@ -10161,7 +10161,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_FirecrackerSkin_WR.jpg?5cf40",
         "width": 1024,
         "height": 568,
-        "bytes": 129333,
+        "bytes": 134056,
         "contentType": "image/jpeg"
       }
     },
@@ -10173,7 +10173,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_OriginalSkin_WR.jpg?cd80f",
         "width": 1024,
         "height": 568,
-        "bytes": 74447,
+        "bytes": 76863,
         "contentType": "image/jpeg"
       }
     },
@@ -10197,7 +10197,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_BadSantaSkin_WR.jpg?2c32d",
         "width": 1024,
         "height": 568,
-        "bytes": 166057,
+        "bytes": 171569,
         "contentType": "image/jpeg"
       }
     },
@@ -10317,7 +10317,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_OldGodSkin_WR.jpg?807fe",
         "width": 1024,
         "height": 568,
-        "bytes": 111244,
+        "bytes": 108369,
         "contentType": "image/jpeg"
       }
     },
@@ -10377,7 +10377,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Wukong_RadiantSkin_WR.jpg?751e8",
         "width": 1024,
         "height": 568,
-        "bytes": 188486,
+        "bytes": 179679,
         "contentType": "image/jpeg"
       }
     },
@@ -10425,7 +10425,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xayah_StarGuardianSkin_WR.jpg?b932e",
         "width": 1024,
         "height": 568,
-        "bytes": 117694,
+        "bytes": 120906,
         "contentType": "image/jpeg"
       }
     },
@@ -10449,7 +10449,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xin_Zhao_OriginalSkin_WR.jpg?8697c",
         "width": 1024,
         "height": 568,
-        "bytes": 75698,
+        "bytes": 83804,
         "contentType": "image/jpeg"
       }
     },
@@ -10521,7 +10521,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_OriginalSkin_WR.jpg?4a6f3",
         "width": 1024,
         "height": 568,
-        "bytes": 85922,
+        "bytes": 77265,
         "contentType": "image/jpeg"
       }
     },
@@ -10533,7 +10533,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_HighNoonSkin_WR.jpg?fd07f",
         "width": 1024,
         "height": 568,
-        "bytes": 51296,
+        "bytes": 58042,
         "contentType": "image/jpeg"
       }
     },
@@ -10569,7 +10569,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_BloodMoonSkin_WR.jpg?53cc1",
         "width": 1024,
         "height": 568,
-        "bytes": 49821,
+        "bytes": 43812,
         "contentType": "image/jpeg"
       }
     },
@@ -10641,7 +10641,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_OriginalSkin_WR.jpg?1bf39",
         "width": 1024,
         "height": 568,
-        "bytes": 136314,
+        "bytes": 143532,
         "contentType": "image/jpeg"
       }
     },
@@ -10653,7 +10653,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_HeartseekerSkin_WR.jpg?82d19",
         "width": 1024,
         "height": 568,
-        "bytes": 125587,
+        "bytes": 118726,
         "contentType": "image/jpeg"
       }
     },
@@ -10665,7 +10665,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_BattlePrincipalSkin_WR.jpg?da5a6",
         "width": 1024,
         "height": 568,
-        "bytes": 139123,
+        "bytes": 143408,
         "contentType": "image/jpeg"
       }
     },
@@ -10701,7 +10701,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_OriginalSkin_WR.jpg?2cd1b",
         "width": 1024,
         "height": 568,
-        "bytes": 87407,
+        "bytes": 84548,
         "contentType": "image/jpeg"
       }
     },
@@ -10749,7 +10749,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_GalaxySlayerSkin_WR.jpg?3b3d7",
         "width": 1024,
         "height": 568,
-        "bytes": 51150,
+        "bytes": 53568,
         "contentType": "image/jpeg"
       }
     },
@@ -10761,7 +10761,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_PsyOpsSkin_WR.jpg?0b937",
         "width": 1024,
         "height": 568,
-        "bytes": 91277,
+        "bytes": 93770,
         "contentType": "image/jpeg"
       }
     },
@@ -10797,7 +10797,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_MasterArcanistSkin_WR.jpg?d6dbe",
         "width": 1024,
         "height": 568,
-        "bytes": 68166,
+        "bytes": 61296,
         "contentType": "image/jpeg"
       }
     },
@@ -10833,7 +10833,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_PoolPartySkin_WR.jpg?8dac5",
         "width": 1024,
         "height": 568,
-        "bytes": 118451,
+        "bytes": 114587,
         "contentType": "image/jpeg"
       }
     },
@@ -10911,7 +10911,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_WR.jpg?81673",
         "width": 1024,
         "height": 568,
-        "bytes": 111720,
+        "bytes": 115072,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -10919,7 +10919,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_OriginalSkin_WR.jpg?81673",
         "width": 1024,
         "height": 568,
-        "bytes": 111720,
+        "bytes": 115072,
         "contentType": "image/jpeg"
       }
     },
@@ -11015,7 +11015,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aatrox_PrestigeBloodMoonSkin_HD.jpg?c085f",
         "width": 5000,
         "height": 2757,
-        "bytes": 4034257,
+        "bytes": 4835037,
         "contentType": "image/jpeg"
       }
     },
@@ -11055,7 +11055,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_PrestigeKDASkin_old.jpg?561bd",
         "width": 1215,
         "height": 717,
-        "bytes": 147468,
+        "bytes": 155111,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11151,16 +11151,16 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_ArcadeSkin_WR.png?d8c50",
         "width": 2436,
         "height": 1124,
-        "bytes": 4090392,
-        "contentType": "image/png"
+        "bytes": 2677050,
+        "contentType": "image/webp"
       },
       "fullscreen": {
         "ok": true,
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ahri_ArcadeSkin_WR.png?d8c50",
         "width": 2436,
         "height": 1124,
-        "bytes": 4090392,
-        "contentType": "image/png"
+        "bytes": 2677050,
+        "contentType": "image/webp"
       }
     },
     {
@@ -11567,7 +11567,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Akali_PrestigeKDASkin_HD.jpg?136d6",
         "width": 6921,
         "height": 4052,
-        "bytes": 9581212,
+        "bytes": 11039322,
         "contentType": "image/jpeg"
       }
     },
@@ -11607,7 +11607,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_WR.jpg?f4e5e",
         "width": 1024,
         "height": 568,
-        "bytes": 128477,
+        "bytes": 131917,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11615,7 +11615,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Akshan_OriginalSkin_WR.jpg?f4e5e",
         "width": 1024,
         "height": 568,
-        "bytes": 128477,
+        "bytes": 131917,
         "contentType": "image/jpeg"
       }
     },
@@ -11639,7 +11639,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jade_alistar/skins/skin49/images/jade_alistar_splash_centered_49.project_jade.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 144043,
+        "bytes": 135559,
         "contentType": "image/jpeg"
       }
     },
@@ -11703,7 +11703,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_WR.jpg?99edd",
         "width": 1024,
         "height": 568,
-        "bytes": 67289,
+        "bytes": 64780,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11711,7 +11711,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_OriginalSkin_WR.jpg?99edd",
         "width": 1024,
         "height": 568,
-        "bytes": 67289,
+        "bytes": 64780,
         "contentType": "image/jpeg"
       }
     },
@@ -11799,7 +11799,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_HextechSkin_WR.jpg?b4faa",
         "width": 1024,
         "height": 568,
-        "bytes": 150885,
+        "bytes": 145152,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11807,7 +11807,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Alistar_HextechSkin_WR.jpg?b4faa",
         "width": 1024,
         "height": 568,
-        "bytes": 150885,
+        "bytes": 145152,
         "contentType": "image/jpeg"
       }
     },
@@ -11871,7 +11871,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_OriginalSkin_WR.jpg?9f9c4",
         "width": 2436,
         "height": 1124,
-        "bytes": 373834,
+        "bytes": 346064,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11879,7 +11879,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ambessa_OriginalSkin_WR.jpg?9f9c4",
         "width": 2436,
         "height": 1124,
-        "bytes": 373834,
+        "bytes": 346064,
         "contentType": "image/jpeg"
       }
     },
@@ -11943,7 +11943,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Amumu_InfernalSkin_WR.jpg?5175e",
         "width": 1024,
         "height": 568,
-        "bytes": 64767,
+        "bytes": 58779,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -11951,7 +11951,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Amumu_InfernalSkin_WR.jpg?5175e",
         "width": 1024,
         "height": 568,
-        "bytes": 64767,
+        "bytes": 58779,
         "contentType": "image/jpeg"
       }
     },
@@ -12015,7 +12015,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_Annie-VersarySkin_WR.jpg?3d5b2",
         "width": 2436,
         "height": 1124,
-        "bytes": 325945,
+        "bytes": 355229,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12063,7 +12063,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_WR.jpg?e3716",
         "width": 1024,
         "height": 568,
-        "bytes": 65274,
+        "bytes": 73219,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12071,7 +12071,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_OriginalSkin_WR.jpg?e3716",
         "width": 1024,
         "height": 568,
-        "bytes": 65274,
+        "bytes": 73219,
         "contentType": "image/jpeg"
       }
     },
@@ -12183,7 +12183,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_PandaSkin_WR.jpg?b6d95",
         "width": 2436,
         "height": 1124,
-        "bytes": 326487,
+        "bytes": 361456,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12191,7 +12191,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Annie_PandaSkin_WR.jpg?b6d95",
         "width": 2436,
         "height": 1124,
-        "bytes": 326487,
+        "bytes": 361456,
         "contentType": "image/jpeg"
       }
     },
@@ -12471,7 +12471,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin_WR.jpg?c7229",
         "width": 1024,
         "height": 568,
-        "bytes": 70766,
+        "bytes": 63084,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12479,7 +12479,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_MechaSkin_WR.jpg?c7229",
         "width": 1024,
         "height": 568,
-        "bytes": 70766,
+        "bytes": 63084,
         "contentType": "image/jpeg"
       }
     },
@@ -12519,7 +12519,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_WR.jpg?b0a07",
         "width": 1024,
         "height": 568,
-        "bytes": 128312,
+        "bytes": 124612,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12527,7 +12527,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_StormDragonSkin_WR.jpg?b0a07",
         "width": 1024,
         "height": 568,
-        "bytes": 128312,
+        "bytes": 124612,
         "contentType": "image/jpeg"
       }
     },
@@ -12543,7 +12543,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_PorcelainProtectorSkin_WR.jpg?62e28",
         "width": 2436,
         "height": 1124,
-        "bytes": 384963,
+        "bytes": 357667,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12551,7 +12551,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurelion_Sol_PorcelainProtectorSkin_WR.jpg?62e28",
         "width": 2436,
         "height": 1124,
-        "bytes": 384963,
+        "bytes": 357667,
         "contentType": "image/jpeg"
       }
     },
@@ -12615,7 +12615,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSkin_WR.jpg?b860a",
         "width": 2436,
         "height": 1124,
-        "bytes": 347846,
+        "bytes": 377618,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12623,7 +12623,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Aurora_OriginalSkin_WR.jpg?b860a",
         "width": 2436,
         "height": 1124,
-        "bytes": 347846,
+        "bytes": 377618,
         "contentType": "image/jpeg"
       }
     },
@@ -12639,7 +12639,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_OriginalSkin_WR.jpg?8ddc6",
         "width": 2436,
         "height": 1124,
-        "bytes": 302391,
+        "bytes": 326959,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12647,7 +12647,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Bard_OriginalSkin_WR.jpg?8ddc6",
         "width": 2436,
         "height": 1124,
-        "bytes": 302391,
+        "bytes": 326959,
         "contentType": "image/jpeg"
       }
     },
@@ -12759,7 +12759,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSkin_WR.jpg?a6f75",
         "width": 1024,
         "height": 568,
-        "bytes": 92579,
+        "bytes": 84423,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12767,7 +12767,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_OriginalSkin_WR.jpg?a6f75",
         "width": 1024,
         "height": 568,
-        "bytes": 92579,
+        "bytes": 84423,
         "contentType": "image/jpeg"
       }
     },
@@ -12831,7 +12831,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_WR.jpg?a6f31",
         "width": 2436,
         "height": 1124,
-        "bytes": 382417,
+        "bytes": 374218,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12839,7 +12839,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Blitzcrank_SpaceGrooveSkin_WR.jpg?a6f31",
         "width": 2436,
         "height": 1124,
-        "bytes": 382417,
+        "bytes": 374218,
         "contentType": "image/jpeg"
       }
     },
@@ -12903,7 +12903,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_WR.jpg?7ba7a",
         "width": 1024,
         "height": 568,
-        "bytes": 104253,
+        "bytes": 107705,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -12911,7 +12911,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_SpiritFireSkin_WR.jpg?7ba7a",
         "width": 1024,
         "height": 568,
-        "bytes": 104253,
+        "bytes": 107705,
         "contentType": "image/jpeg"
       }
     },
@@ -12999,7 +12999,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ZombieSkin_WR.jpg?05c9f",
         "width": 2436,
         "height": 1124,
-        "bytes": 320288,
+        "bytes": 345871,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13007,7 +13007,31 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_ZombieSkin_WR.jpg?05c9f",
         "width": 2436,
         "height": 1124,
-        "bytes": 320288,
+        "bytes": 345871,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "brand::battle-boss-brand-exquisite-edition::wild-rift",
+      "champion": "Brand",
+      "skin": "Battle Boss Brand Exquisite Edition",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_BattleBossExquisiteEditionSkin_WR.jpg?e6d57",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 390687,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Brand_BattleBossExquisiteEditionSkin_WR.jpg?e6d57",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 390687,
         "contentType": "image/jpeg"
       }
     },
@@ -13047,7 +13071,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_WR.jpg?71cbd",
         "width": 1024,
         "height": 568,
-        "bytes": 73939,
+        "bytes": 66015,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13055,7 +13079,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_OriginalSkin_WR.jpg?71cbd",
         "width": 1024,
         "height": 568,
-        "bytes": 73939,
+        "bytes": 66015,
         "contentType": "image/jpeg"
       }
     },
@@ -13071,7 +13095,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_WR.jpg?fe62d",
         "width": 1024,
         "height": 568,
-        "bytes": 74463,
+        "bytes": 68142,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13079,7 +13103,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_DragonslayerSkin_WR.jpg?fe62d",
         "width": 1024,
         "height": 568,
-        "bytes": 74463,
+        "bytes": 68142,
         "contentType": "image/jpeg"
       }
     },
@@ -13095,7 +13119,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_WR.jpg?96203",
         "width": 1024,
         "height": 568,
-        "bytes": 61592,
+        "bytes": 68757,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13103,7 +13127,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_CrimeCitySkin_WR.jpg?96203",
         "width": 1024,
         "height": 568,
-        "bytes": 61592,
+        "bytes": 68757,
         "contentType": "image/jpeg"
       }
     },
@@ -13167,7 +13191,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_WR.jpg?5cef7",
         "width": 1024,
         "height": 568,
-        "bytes": 144861,
+        "bytes": 149839,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13175,7 +13199,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Braum_SantaSkin_WR.jpg?5cef7",
         "width": 1024,
         "height": 568,
-        "bytes": 144861,
+        "bytes": 149839,
         "contentType": "image/jpeg"
       }
     },
@@ -13191,7 +13215,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PrestigeArcadeSkin_old.jpg?c84dc",
         "width": 1215,
         "height": 717,
-        "bytes": 192784,
+        "bytes": 201221,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13239,7 +13263,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSkin_WR.jpg?d3f45",
         "width": 1024,
         "height": 568,
-        "bytes": 133551,
+        "bytes": 136490,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13247,7 +13271,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_OriginalSkin_WR.jpg?d3f45",
         "width": 1024,
         "height": 568,
-        "bytes": 133551,
+        "bytes": 136490,
         "contentType": "image/jpeg"
       }
     },
@@ -13311,7 +13335,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_WR.jpg?13480",
         "width": 2436,
         "height": 1124,
-        "bytes": 444367,
+        "bytes": 457685,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13319,7 +13343,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Caitlyn_PulsefireSkin_WR.jpg?13480",
         "width": 2436,
         "height": 1124,
-        "bytes": 444367,
+        "bytes": 457685,
         "contentType": "image/jpeg"
       }
     },
@@ -13479,7 +13503,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_OriginalSkin_WR.jpg?24695",
         "width": 2436,
         "height": 1124,
-        "bytes": 247409,
+        "bytes": 281314,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13487,7 +13511,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_OriginalSkin_WR.jpg?24695",
         "width": 2436,
         "height": 1124,
-        "bytes": 247409,
+        "bytes": 281314,
         "contentType": "image/jpeg"
       }
     },
@@ -13503,7 +13527,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_WR.jpg?f817b",
         "width": 2436,
         "height": 1124,
-        "bytes": 337472,
+        "bytes": 366827,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13511,7 +13535,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Cho%27Gath_ToyTerrorSkin_WR.jpg?f817b",
         "width": 2436,
         "height": 1124,
-        "bytes": 337472,
+        "bytes": 366827,
         "contentType": "image/jpeg"
       }
     },
@@ -13719,7 +13743,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_WR.jpg?c7d29",
         "width": 1024,
         "height": 568,
-        "bytes": 54009,
+        "bytes": 51503,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13727,7 +13751,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_God-KingSkin_WR.jpg?c7d29",
         "width": 1024,
         "height": 568,
-        "bytes": 54009,
+        "bytes": 51503,
         "contentType": "image/jpeg"
       }
     },
@@ -13767,7 +13791,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DreadnovaSkin_WR.jpg?6c30b",
         "width": 1024,
         "height": 568,
-        "bytes": 121004,
+        "bytes": 124070,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13775,7 +13799,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Darius_DreadnovaSkin_WR.jpg?6c30b",
         "width": 1024,
         "height": 568,
-        "bytes": 121004,
+        "bytes": 124070,
         "contentType": "image/jpeg"
       }
     },
@@ -13788,10 +13812,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin76/images/diana_splash_centered_76.skins_diana_skin76.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 145057,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_EternalAspectSkin_HD.jpg?85292",
+        "width": 7000,
+        "height": 4131,
+        "bytes": 9237261,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13812,10 +13836,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/skin77/images/diana_splash_centered_77.skins_diana_skin77.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 143696,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_EclipseEternalAspectSkin_HD.jpg?02d42",
+        "width": 7000,
+        "height": 4130,
+        "bytes": 16971602,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13887,7 +13911,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_WR.jpg?f5425",
         "width": 1024,
         "height": 568,
-        "bytes": 66315,
+        "bytes": 68645,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13895,7 +13919,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_InfernalSkin_WR.jpg?f5425",
         "width": 1024,
         "height": 568,
-        "bytes": 66315,
+        "bytes": 68645,
         "contentType": "image/jpeg"
       }
     },
@@ -13911,7 +13935,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_WR.jpg?d1da2",
         "width": 1024,
         "height": 568,
-        "bytes": 44123,
+        "bytes": 50089,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13919,7 +13943,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_BloodMoonSkin_WR.jpg?d1da2",
         "width": 1024,
         "height": 568,
-        "bytes": 44123,
+        "bytes": 50089,
         "contentType": "image/jpeg"
       }
     },
@@ -13935,7 +13959,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_FirecrackerSkin_WR.jpg?5e327",
         "width": 1024,
         "height": 568,
-        "bytes": 122829,
+        "bytes": 116704,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -13943,7 +13967,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Diana_FirecrackerSkin_WR.jpg?5e327",
         "width": 1024,
         "height": 568,
-        "bytes": 122829,
+        "bytes": 116704,
         "contentType": "image/jpeg"
       }
     },
@@ -14079,7 +14103,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_WR.jpg?a98dd",
         "width": 1029,
         "height": 571,
-        "bytes": 115380,
+        "bytes": 118286,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14087,7 +14111,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_CorporateMundoSkin_WR.jpg?a98dd",
         "width": 1029,
         "height": 571,
-        "bytes": 115380,
+        "bytes": 118286,
         "contentType": "image/jpeg"
       }
     },
@@ -14127,7 +14151,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_FrozenPrinceMundoSkin_WR.jpg?ec370",
         "width": 1024,
         "height": 568,
-        "bytes": 133855,
+        "bytes": 137758,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14151,7 +14175,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin_WR.jpg?25e82",
         "width": 1024,
         "height": 568,
-        "bytes": 209570,
+        "bytes": 218409,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14159,7 +14183,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_PoolPartyMundoSkin_WR.jpg?25e82",
         "width": 1024,
         "height": 568,
-        "bytes": 209570,
+        "bytes": 218409,
         "contentType": "image/jpeg"
       }
     },
@@ -14176,6 +14200,30 @@
         "width": 2436,
         "height": 1124,
         "bytes": 361254,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_SplendorOpusSkin_WR_HD.jpg?6640d",
+        "width": 7680,
+        "height": 3548,
+        "bytes": 3616190,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "dr-mundo::mundo-mundo::wild-rift",
+      "champion": "Dr. Mundo",
+      "skin": "Mundo Mundo",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_WR.jpg?0718a",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 309347,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14343,7 +14391,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_WR.jpg?96777",
         "width": 2436,
         "height": 1124,
-        "bytes": 331139,
+        "bytes": 357823,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14351,7 +14399,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ekko_TrueDamageSkin_WR.jpg?96777",
         "width": 2436,
         "height": 1124,
-        "bytes": 331139,
+        "bytes": 357823,
         "contentType": "image/jpeg"
       }
     },
@@ -14471,7 +14519,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeKDASkin_HD.jpg?8a421",
         "width": 5000,
         "height": 2927,
-        "bytes": 2733407,
+        "bytes": 2632898,
         "contentType": "image/jpeg"
       }
     },
@@ -14823,7 +14871,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_RoyalGuardSkin_WR.jpg?24ea6",
         "width": 1024,
         "height": 568,
-        "bytes": 74156,
+        "bytes": 67098,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -14831,7 +14879,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Fiora_RoyalGuardSkin_WR.jpg?24ea6",
         "width": 1024,
         "height": 568,
-        "bytes": 74156,
+        "bytes": 67098,
         "contentType": "image/jpeg"
       }
     },
@@ -15159,7 +15207,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/skin47/images/galio_splash_centered_47.skins_galio_skin47.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 130859,
+        "bytes": 124054,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -15231,7 +15279,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_DebonairSkin_WR.jpg?fe9dd",
         "width": 1024,
         "height": 568,
-        "bytes": 144856,
+        "bytes": 145984,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -15255,7 +15303,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_InfernalSkin_WR.jpg?ad78f",
         "width": 1024,
         "height": 568,
-        "bytes": 76302,
+        "bytes": 79333,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -15263,7 +15311,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_InfernalSkin_WR.jpg?ad78f",
         "width": 1024,
         "height": 568,
-        "bytes": 76302,
+        "bytes": 79333,
         "contentType": "image/jpeg"
       }
     },
@@ -15375,16 +15423,16 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_LumigraphGardenPartySkin_WR.png?b3de4",
         "width": 2436,
         "height": 1125,
-        "bytes": 6158123,
-        "contentType": "image/png"
+        "bytes": 4477810,
+        "contentType": "image/webp"
       },
       "fullscreen": {
         "ok": true,
         "url": "https://wiki.leagueoflegends.com/en-us/images/Galio_LumigraphGardenPartySkin_WR.png?b3de4",
         "width": 2436,
         "height": 1125,
-        "bytes": 6158123,
-        "contentType": "image/png"
+        "bytes": 4477810,
+        "contentType": "image/webp"
       }
     },
     {
@@ -16287,7 +16335,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gnar_OriginalSkin_WR.jpg?fd8b5",
         "width": 2436,
         "height": 1124,
-        "bytes": 257752,
+        "bytes": 223612,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -16295,7 +16343,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gnar_OriginalSkin_WR.jpg?fd8b5",
         "width": 2436,
         "height": 1124,
-        "bytes": 257752,
+        "bytes": 223612,
         "contentType": "image/jpeg"
       }
     },
@@ -16311,7 +16359,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gnar_SuperGalaxySkin_WR.jpg?83bbf",
         "width": 2436,
         "height": 1124,
-        "bytes": 365452,
+        "bytes": 337244,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -16319,7 +16367,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gnar_SuperGalaxySkin_WR.jpg?83bbf",
         "width": 2436,
         "height": 1124,
-        "bytes": 365452,
+        "bytes": 337244,
         "contentType": "image/jpeg"
       }
     },
@@ -16743,7 +16791,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_OriginalSkin_WR.jpg?4cc8a",
         "width": 1024,
         "height": 568,
-        "bytes": 47490,
+        "bytes": 54611,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -16751,7 +16799,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Gragas_OriginalSkin_WR.jpg?4cc8a",
         "width": 1024,
         "height": 568,
-        "bytes": 47490,
+        "bytes": 54611,
         "contentType": "image/jpeg"
       }
     },
@@ -17247,7 +17295,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_PraetorianSkin_WR.jpg?36a88",
         "width": 1024,
         "height": 568,
-        "bytes": 46173,
+        "bytes": 39258,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -17255,7 +17303,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_PraetorianSkin_WR.jpg?36a88",
         "width": 1024,
         "height": 568,
-        "bytes": 46173,
+        "bytes": 39258,
         "contentType": "image/jpeg"
       }
     },
@@ -17391,7 +17439,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_SentinelSkin_WR.jpg?4b975",
         "width": 2436,
         "height": 1124,
-        "bytes": 321464,
+        "bytes": 328707,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -17399,7 +17447,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Graves_SentinelSkin_WR.jpg?4b975",
         "width": 2436,
         "height": 1124,
-        "bytes": 321464,
+        "bytes": 328707,
         "contentType": "image/jpeg"
       }
     },
@@ -17487,7 +17535,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/skin48/images/gwen_splash_centered_48.skins_gwen_skin48.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 136751,
+        "bytes": 133960,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18279,7 +18327,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_OriginalSkin_WR.jpg?703ec",
         "width": 2436,
         "height": 1124,
-        "bytes": 328509,
+        "bytes": 336313,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18287,7 +18335,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_OriginalSkin_WR.jpg?703ec",
         "width": 2436,
         "height": 1124,
-        "bytes": 328509,
+        "bytes": 336313,
         "contentType": "image/jpeg"
       }
     },
@@ -18351,7 +18399,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_WinterblessedSkin_WR.jpg?14235",
         "width": 2436,
         "height": 1124,
-        "bytes": 457788,
+        "bytes": 427566,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18359,7 +18407,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Hecarim_WinterblessedSkin_WR.jpg?14235",
         "width": 2436,
         "height": 1124,
-        "bytes": 457788,
+        "bytes": 427566,
         "contentType": "image/jpeg"
       }
     },
@@ -18663,7 +18711,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Heimerdinger_DragonTrainerSkin_WR.jpg?e253d",
         "width": 2436,
         "height": 1124,
-        "bytes": 302456,
+        "bytes": 273545,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18671,7 +18719,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Heimerdinger_DragonTrainerSkin_WR.jpg?e253d",
         "width": 2436,
         "height": 1124,
-        "bytes": 302456,
+        "bytes": 273545,
         "contentType": "image/jpeg"
       }
     },
@@ -18711,7 +18759,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin21/images/hwei_splash_centered_21.skins_hwei_skin21.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145089,
+        "bytes": 140457,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18796,6 +18844,54 @@
       }
     },
     {
+      "id": "hwei::classic-hwei::wild-rift",
+      "champion": "Hwei",
+      "skin": "Classic Hwei",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hwei_OriginalSkin_WR.jpg?317b4",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 272964,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hwei_OriginalSkin_WR.jpg?317b4",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 272964,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "hwei::winterblessed-hwei::wild-rift",
+      "champion": "Hwei",
+      "skin": "Winterblessed Hwei",
+      "type": "Wild Rift",
+      "releaseDate": null,
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hwei_WinterblessedSkin_WR.jpg?a767c",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 456567,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Hwei_WinterblessedSkin_WR.jpg?a767c",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 456567,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "illaoi::pasta-maker-illaoi::pc",
       "champion": "Illaoi",
       "skin": "Pasta Maker Illaoi",
@@ -18804,10 +18900,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/skin37/images/illaoi_splash_centered_37.skins_illaoi_skin37.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 127461,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Illaoi_PastaMakerSkin_HD.jpg?431fd",
+        "width": 5500,
+        "height": 3231,
+        "bytes": 13048796,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -18972,10 +19068,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/skin63/images/irelia_splash_centered_63.skins_irelia_skin63.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 126113,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_BreadsticksSkin_HD.jpg?be76c",
+        "width": 5500,
+        "height": 3231,
+        "bytes": 13048796,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -19383,7 +19479,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_OriginalSkin_WR.jpg?ef772",
         "width": 1024,
         "height": 568,
-        "bytes": 488244,
+        "bytes": 543186,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -19391,7 +19487,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_OriginalSkin_WR.jpg?ef772",
         "width": 1024,
         "height": 568,
-        "bytes": 488244,
+        "bytes": 543186,
         "contentType": "image/jpeg"
       }
     },
@@ -19431,7 +19527,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_SentinelSkin_WR.jpg?4ddc7",
         "width": 1024,
         "height": 568,
-        "bytes": 91321,
+        "bytes": 93360,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -19439,7 +19535,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Irelia_SentinelSkin_WR.jpg?4ddc7",
         "width": 1024,
         "height": 568,
-        "bytes": 91321,
+        "bytes": 93360,
         "contentType": "image/jpeg"
       }
     },
@@ -20380,6 +20476,30 @@
       }
     },
     {
+      "id": "janna::coven-janna::pc",
+      "champion": "Janna",
+      "skin": "Coven Janna",
+      "type": "PC",
+      "releaseDate": "2026-09-23",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Janna_CovenSkin.jpg?82dd6",
+        "width": 1215,
+        "height": 717,
+        "bytes": 195743,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Janna_CovenSkin_HD.jpg?745f6",
+        "width": 6270,
+        "height": 3752,
+        "bytes": 13496564,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "jarvan-iv::classic-jarvan-iv::pc",
       "champion": "Jarvan IV",
       "skin": "Classic Jarvan IV",
@@ -20775,7 +20895,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_OriginalSkin_WR.jpg?03994",
         "width": 1024,
         "height": 568,
-        "bytes": 73082,
+        "bytes": 80122,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -20783,7 +20903,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_OriginalSkin_WR.jpg?03994",
         "width": 1024,
         "height": 568,
-        "bytes": 73082,
+        "bytes": 80122,
         "contentType": "image/jpeg"
       }
     },
@@ -20823,7 +20943,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_DarkStarSkin_WR.jpg?c3a20",
         "width": 1024,
         "height": 568,
-        "bytes": 91279,
+        "bytes": 87285,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -20831,7 +20951,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_DarkStarSkin_WR.jpg?c3a20",
         "width": 1024,
         "height": 568,
-        "bytes": 91279,
+        "bytes": 87285,
         "contentType": "image/jpeg"
       }
     },
@@ -20919,7 +21039,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_HextechSkin_WR.jpg?6af54",
         "width": 1024,
         "height": 568,
-        "bytes": 127930,
+        "bytes": 131101,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -20927,7 +21047,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jarvan_IV_HextechSkin_WR.jpg?6af54",
         "width": 1024,
         "height": 568,
-        "bytes": 127930,
+        "bytes": 131101,
         "contentType": "image/jpeg"
       }
     },
@@ -21495,7 +21615,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_OriginalSkin_WR.jpg?7ac2a",
         "width": 1024,
         "height": 568,
-        "bytes": 47931,
+        "bytes": 54266,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -21503,7 +21623,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_OriginalSkin_WR.jpg?7ac2a",
         "width": 1024,
         "height": 568,
-        "bytes": 47931,
+        "bytes": 54266,
         "contentType": "image/jpeg"
       }
     },
@@ -21543,7 +21663,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GodStaffSkin_WR.jpg?1d4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 64082,
+        "bytes": 71249,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -21551,7 +21671,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_GodStaffSkin_WR.jpg?1d4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 64082,
+        "bytes": 71249,
         "contentType": "image/jpeg"
       }
     },
@@ -21591,7 +21711,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_WardenSkin_WR.jpg?fc037",
         "width": 1024,
         "height": 568,
-        "bytes": 149660,
+        "bytes": 145041,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -21599,7 +21719,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jax_WardenSkin_WR.jpg?fc037",
         "width": 1024,
         "height": 568,
-        "bytes": 149660,
+        "bytes": 145041,
         "contentType": "image/jpeg"
       }
     },
@@ -21687,7 +21807,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/skin38/images/jayce_splash_centered_38.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 139180,
+        "bytes": 134465,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22048,7 +22168,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_JayceBrighthammerSkin_WR.jpg?ee858",
         "width": 1024,
         "height": 568,
-        "bytes": 103666,
+        "bytes": 103658,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22056,7 +22176,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_JayceBrighthammerSkin_WR.jpg?ee858",
         "width": 1024,
         "height": 568,
-        "bytes": 103666,
+        "bytes": 103658,
         "contentType": "image/jpeg"
       }
     },
@@ -22216,7 +22336,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_ResistanceSkin_WR.jpg?69251",
         "width": 2436,
         "height": 1124,
-        "bytes": 316662,
+        "bytes": 286281,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22224,7 +22344,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jayce_ResistanceSkin_WR.jpg?69251",
         "width": 2436,
         "height": 1124,
-        "bytes": 316662,
+        "bytes": 286281,
         "contentType": "image/jpeg"
       }
     },
@@ -22600,7 +22720,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_OriginalSkin_WR.jpg?45519",
         "width": 1024,
         "height": 568,
-        "bytes": 57605,
+        "bytes": 50488,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22608,7 +22728,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_OriginalSkin_WR.jpg?45519",
         "width": 1024,
         "height": 568,
-        "bytes": 57605,
+        "bytes": 50488,
         "contentType": "image/jpeg"
       }
     },
@@ -22624,7 +22744,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_HighNoonSkin_WR.jpg?dd056",
         "width": 1024,
         "height": 568,
-        "bytes": 81170,
+        "bytes": 90534,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22632,7 +22752,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_HighNoonSkin_WR.jpg?dd056",
         "width": 1024,
         "height": 568,
-        "bytes": 81170,
+        "bytes": 90534,
         "contentType": "image/jpeg"
       }
     },
@@ -22696,7 +22816,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_PROJECTSkin_WR.jpg?15e4a",
         "width": 1024,
         "height": 568,
-        "bytes": 120954,
+        "bytes": 124667,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22768,7 +22888,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_SoulFighterSkin_WR.jpg?ed5c1",
         "width": 2436,
         "height": 1124,
-        "bytes": 381820,
+        "bytes": 347539,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -22776,7 +22896,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jhin_SoulFighterSkin_WR.jpg?ed5c1",
         "width": 2436,
         "height": 1124,
-        "bytes": 381820,
+        "bytes": 347539,
         "contentType": "image/jpeg"
       }
     },
@@ -23248,7 +23368,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jinx_OriginalSkin_WR.jpg?dd4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 73937,
+        "bytes": 71575,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -23256,7 +23376,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Jinx_OriginalSkin_WR.jpg?dd4fb",
         "width": 1024,
         "height": 568,
-        "bytes": 73937,
+        "bytes": 71575,
         "contentType": "image/jpeg"
       }
     },
@@ -24280,7 +24400,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAALLOUTSkin_WR.jpg?45b50",
         "width": 1024,
         "height": 568,
-        "bytes": 63569,
+        "bytes": 61614,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -24288,7 +24408,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAALLOUTSkin_WR.jpg?45b50",
         "width": 1024,
         "height": 568,
-        "bytes": 63569,
+        "bytes": 61614,
         "contentType": "image/jpeg"
       }
     },
@@ -24664,7 +24784,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kalista_OriginalSkin_WR.jpg?8a389",
         "width": 2436,
         "height": 1124,
-        "bytes": 368717,
+        "bytes": 383438,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -24672,7 +24792,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kalista_OriginalSkin_WR.jpg?8a389",
         "width": 2436,
         "height": 1124,
-        "bytes": 368717,
+        "bytes": 383438,
         "contentType": "image/jpeg"
       }
     },
@@ -25192,7 +25312,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Karma_StargazerSkin_WR.jpg?28198",
         "width": 1024,
         "height": 568,
-        "bytes": 146912,
+        "bytes": 150735,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -25216,7 +25336,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Karma_DawnbringerSkin_WR.jpg?3ef62",
         "width": 2436,
         "height": 1124,
-        "bytes": 515759,
+        "bytes": 530207,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -25224,7 +25344,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Karma_DawnbringerSkin_WR.jpg?3ef62",
         "width": 2436,
         "height": 1124,
-        "bytes": 515759,
+        "bytes": 530207,
         "contentType": "image/jpeg"
       }
     },
@@ -25816,7 +25936,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_OriginalSkin_WR.jpg?7b0ba",
         "width": 1024,
         "height": 568,
-        "bytes": 87533,
+        "bytes": 89656,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -25824,7 +25944,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_OriginalSkin_WR.jpg?7b0ba",
         "width": 1024,
         "height": 568,
-        "bytes": 87533,
+        "bytes": 89656,
         "contentType": "image/jpeg"
       }
     },
@@ -25864,7 +25984,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_CosmicReaverSkin_WR.jpg?77bfa",
         "width": 1024,
         "height": 568,
-        "bytes": 126965,
+        "bytes": 130895,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -25872,7 +25992,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_CosmicReaverSkin_WR.jpg?77bfa",
         "width": 1024,
         "height": 568,
-        "bytes": 126965,
+        "bytes": 130895,
         "contentType": "image/jpeg"
       }
     },
@@ -25912,7 +26032,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_DragonmancerSkin_WR.jpg?19269",
         "width": 2436,
         "height": 1124,
-        "bytes": 296826,
+        "bytes": 328594,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -25920,7 +26040,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_DragonmancerSkin_WR.jpg?19269",
         "width": 2436,
         "height": 1124,
-        "bytes": 296826,
+        "bytes": 328594,
         "contentType": "image/jpeg"
       }
     },
@@ -25936,7 +26056,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/katarina/skins/skin70/images/katarina_splash_centered_70.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127592,
+        "bytes": 120322,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -26512,7 +26632,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Katarina_BattleAcademiaSkin_WR.jpg?f6d41",
         "width": 1024,
         "height": 568,
-        "bytes": 86337,
+        "bytes": 89821,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -26520,7 +26640,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Katarina_BattleAcademiaSkin_WR.jpg?f6d41",
         "width": 1024,
         "height": 568,
-        "bytes": 86337,
+        "bytes": 89821,
         "contentType": "image/jpeg"
       }
     },
@@ -27136,7 +27256,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayle_OriginalSkin_WR.jpg?692fe",
         "width": 1024,
         "height": 568,
-        "bytes": 130946,
+        "bytes": 127492,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27144,7 +27264,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayle_OriginalSkin_WR.jpg?692fe",
         "width": 1024,
         "height": 568,
-        "bytes": 130946,
+        "bytes": 127492,
         "contentType": "image/jpeg"
       }
     },
@@ -27304,7 +27424,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayn_OdysseySkin_WR.jpg?42694",
         "width": 2436,
         "height": 1124,
-        "bytes": 386589,
+        "bytes": 412136,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27592,7 +27712,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayn_NightbringerSkin_WR.jpg?7e7d7",
         "width": 2436,
         "height": 1124,
-        "bytes": 339855,
+        "bytes": 362574,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27600,7 +27720,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kayn_NightbringerSkin_WR.jpg?7e7d7",
         "width": 2436,
         "height": 1124,
-        "bytes": 339855,
+        "bytes": 362574,
         "contentType": "image/jpeg"
       }
     },
@@ -27880,7 +28000,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_OriginalSkin_WR.jpg?53339",
         "width": 1024,
         "height": 568,
-        "bytes": 117409,
+        "bytes": 121306,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27888,7 +28008,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_OriginalSkin_WR.jpg?53339",
         "width": 1024,
         "height": 568,
-        "bytes": 117409,
+        "bytes": 121306,
         "contentType": "image/jpeg"
       }
     },
@@ -27928,7 +28048,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_SuperSkin_WR.jpg?35aa1",
         "width": 1024,
         "height": 568,
-        "bytes": 130499,
+        "bytes": 130507,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27936,7 +28056,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_SuperSkin_WR.jpg?35aa1",
         "width": 1024,
         "height": 568,
-        "bytes": 130499,
+        "bytes": 130507,
         "contentType": "image/jpeg"
       }
     },
@@ -27952,7 +28072,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_BloodMoonSkin_WR.jpg?08ef4",
         "width": 1024,
         "height": 568,
-        "bytes": 62585,
+        "bytes": 70642,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27960,7 +28080,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_BloodMoonSkin_WR.jpg?08ef4",
         "width": 1024,
         "height": 568,
-        "bytes": 62585,
+        "bytes": 70642,
         "contentType": "image/jpeg"
       }
     },
@@ -27976,7 +28096,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_InfernalSkin_WR.jpg?4df70",
         "width": 1024,
         "height": 568,
-        "bytes": 105530,
+        "bytes": 111738,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -27984,7 +28104,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kennen_InfernalSkin_WR.jpg?4df70",
         "width": 1024,
         "height": 568,
-        "bytes": 105530,
+        "bytes": 111738,
         "contentType": "image/jpeg"
       }
     },
@@ -28264,7 +28384,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kha%27Zix_OriginalSkin_WR.jpg?b62d9",
         "width": 1024,
         "height": 568,
-        "bytes": 56381,
+        "bytes": 49360,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -28272,7 +28392,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kha%27Zix_OriginalSkin_WR.jpg?b62d9",
         "width": 1024,
         "height": 568,
-        "bytes": 56381,
+        "bytes": 49360,
         "contentType": "image/jpeg"
       }
     },
@@ -28696,7 +28816,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kindred_PorcelainSkin_WR.jpg?17e5c",
         "width": 2436,
         "height": 1124,
-        "bytes": 350642,
+        "bytes": 325327,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -28704,7 +28824,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kindred_PorcelainSkin_WR.jpg?17e5c",
         "width": 2436,
         "height": 1124,
-        "bytes": 350642,
+        "bytes": 325327,
         "contentType": "image/jpeg"
       }
     },
@@ -28720,7 +28840,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kindred_SpiritBlossomSkin_WR.jpg?502db",
         "width": 2436,
         "height": 1124,
-        "bytes": 368245,
+        "bytes": 339742,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -28728,7 +28848,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kindred_SpiritBlossomSkin_WR.jpg?502db",
         "width": 2436,
         "height": 1124,
-        "bytes": 368245,
+        "bytes": 339742,
         "contentType": "image/jpeg"
       }
     },
@@ -29248,7 +29368,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_OriginalSkin_WR.jpg?46f1c",
         "width": 2436,
         "height": 1124,
-        "bytes": 210597,
+        "bytes": 242512,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -29256,7 +29376,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_OriginalSkin_WR.jpg?46f1c",
         "width": 2436,
         "height": 1124,
-        "bytes": 210597,
+        "bytes": 242512,
         "contentType": "image/jpeg"
       }
     },
@@ -29309,6 +29429,30 @@
       }
     },
     {
+      "id": "kog-maw::pencil-sharpener-kog-maw::wild-rift",
+      "champion": "Kog'Maw",
+      "skin": "Pencil Sharpener Kog'Maw",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_PencilSharpenerSkin_WR.jpg?ffd5f",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 313507,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_PencilSharpenerSkin_WR_HD.jpg?84ef9",
+        "width": 10000,
+        "height": 4500,
+        "bytes": 20221445,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "leblanc::prestige-sinful-shores-leblanc::pc",
       "champion": "LeBlanc",
       "skin": "Prestige Sinful Shores LeBlanc",
@@ -29320,7 +29464,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/skin59/images/leblanc_splash_centered_59.skins_leblanc_skin59.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127468,
+        "bytes": 124451,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -30456,7 +30600,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PrestigeNightbringerSkin_HD.jpg?8e811",
         "width": 6047,
         "height": 3397,
-        "bytes": 2320890,
+        "bytes": 2251180,
         "contentType": "image/jpeg"
       }
     },
@@ -30472,7 +30616,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lee_Sin_PlaymakerExquisiteEditionSkin_WR.jpg?850e4",
         "width": 2436,
         "height": 1124,
-        "bytes": 2017184,
+        "bytes": 2262781,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -30493,10 +30637,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/skin64/images/leona_splash_centered_64.skins_leona_skin64.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 133826,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_EternalAspectSkin_HD.jpg?ab68f",
+        "width": 7000,
+        "height": 4130,
+        "bytes": 5016102,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31048,7 +31192,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_PoolPartySkin_WR.jpg?a900a",
         "width": 1024,
         "height": 568,
-        "bytes": 82353,
+        "bytes": 73749,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31056,7 +31200,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_PoolPartySkin_WR.jpg?a900a",
         "width": 1024,
         "height": 568,
-        "bytes": 82353,
+        "bytes": 73749,
         "contentType": "image/jpeg"
       }
     },
@@ -31144,7 +31288,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_HighNoonSkin_WR.jpg?9fd73",
         "width": 2436,
         "height": 1124,
-        "bytes": 355864,
+        "bytes": 378708,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31152,7 +31296,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Leona_HighNoonSkin_WR.jpg?9fd73",
         "width": 2436,
         "height": 1124,
-        "bytes": 355864,
+        "bytes": 378708,
         "contentType": "image/jpeg"
       }
     },
@@ -31168,7 +31312,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 138454,
+        "bytes": 131039,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31176,7 +31320,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/skin46/images/lillia_splash_centered_46.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 138454,
+        "bytes": 131039,
         "contentType": "image/jpeg"
       }
     },
@@ -31360,7 +31504,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_SpiritBlossomSkin_WR.jpg?f0a30",
         "width": 1024,
         "height": 568,
-        "bytes": 106855,
+        "bytes": 104465,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31368,7 +31512,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_SpiritBlossomSkin_WR.jpg?f0a30",
         "width": 1024,
         "height": 568,
-        "bytes": 106855,
+        "bytes": 104465,
         "contentType": "image/jpeg"
       }
     },
@@ -31384,7 +31528,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_NightbringerSkin_WR.jpg?24513",
         "width": 2436,
         "height": 1124,
-        "bytes": 341696,
+        "bytes": 335841,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31392,7 +31536,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lillia_NightbringerSkin_WR.jpg?24513",
         "width": 2436,
         "height": 1124,
-        "bytes": 341696,
+        "bytes": 335841,
         "contentType": "image/jpeg"
       }
     },
@@ -31744,7 +31888,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lissandra_OriginalSkin_WR.jpg?23b86",
         "width": 2436,
         "height": 1124,
-        "bytes": 279655,
+        "bytes": 308907,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -31752,7 +31896,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lissandra_OriginalSkin_WR.jpg?23b86",
         "width": 2436,
         "height": 1124,
-        "bytes": 279655,
+        "bytes": 308907,
         "contentType": "image/jpeg"
       }
     },
@@ -31888,7 +32032,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/locke/skins/skin01/images/locke_splash_centered_1.locke.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 123911,
+        "bytes": 118017,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32344,7 +32488,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HiredGunSkin_WR.jpg?ed47e",
         "width": 1024,
         "height": 568,
-        "bytes": 507376,
+        "bytes": 560207,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32352,7 +32496,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HiredGunSkin_WR.jpg?ed47e",
         "width": 1024,
         "height": 568,
-        "bytes": 507376,
+        "bytes": 560207,
         "contentType": "image/jpeg"
       }
     },
@@ -32368,7 +32512,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HighNoonSkin_WR.jpg?74cee",
         "width": 1024,
         "height": 568,
-        "bytes": 49660,
+        "bytes": 47824,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32376,7 +32520,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_HighNoonSkin_WR.jpg?74cee",
         "width": 1024,
         "height": 568,
-        "bytes": 49660,
+        "bytes": 47824,
         "contentType": "image/jpeg"
       }
     },
@@ -32416,7 +32560,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_PROJECTSkin_WR.jpg?2e990",
         "width": 2436,
         "height": 1124,
-        "bytes": 345326,
+        "bytes": 381651,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32424,7 +32568,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lucian_PROJECTSkin_WR.jpg?2e990",
         "width": 2436,
         "height": 1124,
-        "bytes": 345326,
+        "bytes": 381651,
         "contentType": "image/jpeg"
       }
     },
@@ -32512,7 +32656,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/skin56/images/lulu_splash_centered_56.skins_lulu_skin56.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 130152,
+        "bytes": 127082,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32896,7 +33040,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_OriginalSkin_WR.jpg?a1ed4",
         "width": 1024,
         "height": 568,
-        "bytes": 90418,
+        "bytes": 87423,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -32904,7 +33048,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_OriginalSkin_WR.jpg?a1ed4",
         "width": 1024,
         "height": 568,
-        "bytes": 90418,
+        "bytes": 87423,
         "contentType": "image/jpeg"
       }
     },
@@ -33088,7 +33232,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_SpaceGrooveSkin_WR.jpg?098f4",
         "width": 2436,
         "height": 1124,
-        "bytes": 449811,
+        "bytes": 434405,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -33096,7 +33240,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lulu_SpaceGrooveSkin_WR.jpg?098f4",
         "width": 2436,
         "height": 1124,
-        "bytes": 449811,
+        "bytes": 434405,
         "contentType": "image/jpeg"
       }
     },
@@ -34000,7 +34144,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lux_SpaceGrooveSkin_WR.jpg?2ce08",
         "width": 2436,
         "height": 1124,
-        "bytes": 301409,
+        "bytes": 329927,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -34008,7 +34152,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lux_SpaceGrooveSkin_WR.jpg?2ce08",
         "width": 2436,
         "height": 1124,
-        "bytes": 301409,
+        "bytes": 329927,
         "contentType": "image/jpeg"
       }
     },
@@ -34080,7 +34224,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Lux_PrestigeBattleAcademiaSkin_HD.jpg?dda1b",
         "width": 7000,
         "height": 4144,
-        "bytes": 10956606,
+        "bytes": 10585433,
         "contentType": "image/jpeg"
       }
     },
@@ -34456,7 +34600,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Malphite_OriginalSkin_WR.jpg?e2555",
         "width": 1024,
         "height": 568,
-        "bytes": 68992,
+        "bytes": 77667,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -34464,7 +34608,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Malphite_OriginalSkin_WR.jpg?e2555",
         "width": 1024,
         "height": 568,
-        "bytes": 68992,
+        "bytes": 77667,
         "contentType": "image/jpeg"
       }
     },
@@ -35296,7 +35440,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Maokai_MeowkaiSkin_WR.jpg?9fe3a",
         "width": 2436,
         "height": 1124,
-        "bytes": 415464,
+        "bytes": 382276,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -35304,7 +35448,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Maokai_MeowkaiSkin_WR.jpg?9fe3a",
         "width": 2436,
         "height": 1124,
-        "bytes": 415464,
+        "bytes": 382276,
         "contentType": "image/jpeg"
       }
     },
@@ -35968,7 +36112,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_AssassinSkin_WR.jpg?c9e26",
         "width": 1024,
         "height": 568,
-        "bytes": 59911,
+        "bytes": 61616,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -35976,7 +36120,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_AssassinSkin_WR.jpg?c9e26",
         "width": 1024,
         "height": 568,
-        "bytes": 59911,
+        "bytes": 61616,
         "contentType": "image/jpeg"
       }
     },
@@ -36112,7 +36256,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PROJECTYiSkin_WR.jpg?487a8",
         "width": 1024,
         "height": 568,
-        "bytes": 135259,
+        "bytes": 130692,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -36120,7 +36264,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Master_Yi_PROJECTYiSkin_WR.jpg?487a8",
         "width": 1024,
         "height": 568,
-        "bytes": 135259,
+        "bytes": 130692,
         "contentType": "image/jpeg"
       }
     },
@@ -36342,6 +36486,30 @@
       }
     },
     {
+      "id": "mel::coven-mel::pc",
+      "champion": "Mel",
+      "skin": "Coven Mel",
+      "type": "PC",
+      "releaseDate": "2026-09-23",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Mel_CovenSkin.jpg?8b8da",
+        "width": 1215,
+        "height": 717,
+        "bytes": 191703,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Mel_CovenSkin_HD.jpg?a201b",
+        "width": 7700,
+        "height": 4333,
+        "bytes": 20757758,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "milio::classic-milio::pc",
       "champion": "Milio",
       "skin": "Classic Milio",
@@ -36486,6 +36654,30 @@
       }
     },
     {
+      "id": "milio::glorious-eminence-milio::wild-rift",
+      "champion": "Milio",
+      "skin": "Glorious Eminence Milio",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-23",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Milio_GloriousEminenceSkin_WR.jpg?dc5fd",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 416482,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Milio_GloriousEminenceSkin_WR.jpg?dc5fd",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 416482,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "miss-fortune::mvp-t1-miss-fortune::pc",
       "champion": "Miss Fortune",
       "skin": "MVP T1 Miss Fortune",
@@ -36497,7 +36689,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/skin69/images/missfortune_splash_centered_69.skins_missfortune_skin69.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 129872,
+        "bytes": 126712,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -37409,7 +37601,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/skin55/images/mordekaiser_splash_centered_55.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127157,
+        "bytes": 124395,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -37769,7 +37961,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Mordekaiser_OldGodSkin_WR.jpg?e5ef0",
         "width": 2436,
         "height": 1124,
-        "bytes": 388274,
+        "bytes": 413856,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -37777,7 +37969,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Mordekaiser_OldGodSkin_WR.jpg?e5ef0",
         "width": 2436,
         "height": 1124,
-        "bytes": 388274,
+        "bytes": 413856,
         "contentType": "image/jpeg"
       }
     },
@@ -38561,7 +38753,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/skin29/images/naafiri_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 137147,
+        "bytes": 129529,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39065,7 +39257,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_OriginalSkin_WR.jpg?364e9",
         "width": 1024,
         "height": 568,
-        "bytes": 158398,
+        "bytes": 152512,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39073,7 +39265,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_OriginalSkin_WR.jpg?364e9",
         "width": 1024,
         "height": 568,
-        "bytes": 158398,
+        "bytes": 152512,
         "contentType": "image/jpeg"
       }
     },
@@ -39113,7 +39305,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_RiverSpiritSkin_WR.jpg?a14f8",
         "width": 1024,
         "height": 568,
-        "bytes": 89753,
+        "bytes": 87204,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39121,7 +39313,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_RiverSpiritSkin_WR.jpg?a14f8",
         "width": 1024,
         "height": 568,
-        "bytes": 89753,
+        "bytes": 87204,
         "contentType": "image/jpeg"
       }
     },
@@ -39137,7 +39329,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_ProgramSkin_WR.jpg?80187",
         "width": 1024,
         "height": 568,
-        "bytes": 73254,
+        "bytes": 71060,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39145,7 +39337,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nami_ProgramSkin_WR.jpg?80187",
         "width": 1024,
         "height": 568,
-        "bytes": 73254,
+        "bytes": 71060,
         "contentType": "image/jpeg"
       }
     },
@@ -39617,7 +39809,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_OriginalSkin_WR.jpg?5ef29",
         "width": 1024,
         "height": 568,
-        "bytes": 77801,
+        "bytes": 70647,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39625,7 +39817,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_OriginalSkin_WR.jpg?5ef29",
         "width": 1024,
         "height": 568,
-        "bytes": 77801,
+        "bytes": 70647,
         "contentType": "image/jpeg"
       }
     },
@@ -39665,7 +39857,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_ArchdukeSkin_WR.jpg?2fc62",
         "width": 1024,
         "height": 568,
-        "bytes": 86313,
+        "bytes": 92490,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39673,7 +39865,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_ArchdukeSkin_WR.jpg?2fc62",
         "width": 1024,
         "height": 568,
-        "bytes": 86313,
+        "bytes": 92490,
         "contentType": "image/jpeg"
       }
     },
@@ -39809,7 +40001,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_BattlecastSkin_WR.jpg?9efbc",
         "width": 2436,
         "height": 1124,
-        "bytes": 350045,
+        "bytes": 328370,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -39817,7 +40009,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nasus_BattlecastSkin_WR.jpg?9efbc",
         "width": 2436,
         "height": 1124,
-        "bytes": 350045,
+        "bytes": 328370,
         "contentType": "image/jpeg"
       }
     },
@@ -39833,7 +40025,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_TrashDiverSkin_WR.jpg?84668",
         "width": 2436,
         "height": 1124,
-        "bytes": 379295,
+        "bytes": 412749,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -40169,7 +40361,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_AstroNautilusSkin_WR.jpg?52313",
         "width": 1024,
         "height": 568,
-        "bytes": 115647,
+        "bytes": 119066,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -40177,7 +40369,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_AstroNautilusSkin_WR.jpg?52313",
         "width": 1024,
         "height": 568,
-        "bytes": 115647,
+        "bytes": 119066,
         "contentType": "image/jpeg"
       }
     },
@@ -40217,7 +40409,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_WardenSkin_WR.jpg?1218d",
         "width": 2436,
         "height": 1124,
-        "bytes": 326050,
+        "bytes": 348064,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -40225,7 +40417,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nautilus_WardenSkin_WR.jpg?1218d",
         "width": 2436,
         "height": 1124,
-        "bytes": 326050,
+        "bytes": 348064,
         "contentType": "image/jpeg"
       }
     },
@@ -41129,7 +41321,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_CovenSkin_WR.jpg?2a367",
         "width": 2436,
         "height": 1124,
-        "bytes": 389985,
+        "bytes": 365210,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -41137,7 +41329,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nilah_CovenSkin_WR.jpg?2a367",
         "width": 2436,
         "height": 1124,
-        "bytes": 389985,
+        "bytes": 365210,
         "contentType": "image/jpeg"
       }
     },
@@ -41465,7 +41657,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nocturne_OriginalSkin_WR.jpg?b1abf",
         "width": 2436,
         "height": 1124,
-        "bytes": 235811,
+        "bytes": 253037,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -41857,7 +42049,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nunu_FrightNightSkin_HD.jpg?7c419",
         "width": 8000,
         "height": 4503,
-        "bytes": 20352837,
+        "bytes": 20518428,
         "contentType": "image/jpeg"
       }
     },
@@ -41873,7 +42065,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin_WR.jpg?9633e",
         "width": 1024,
         "height": 568,
-        "bytes": 103504,
+        "bytes": 100300,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -41881,7 +42073,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Nunu_OriginalSkin_WR.jpg?9633e",
         "width": 1024,
         "height": 568,
-        "bytes": 103504,
+        "bytes": 100300,
         "contentType": "image/jpeg"
       }
     },
@@ -42401,7 +42593,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Olaf_DragonslayerSkin_WR.jpg?52077",
         "width": 1024,
         "height": 568,
-        "bytes": 119633,
+        "bytes": 113010,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -42409,7 +42601,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Olaf_DragonslayerSkin_WR.jpg?52077",
         "width": 1024,
         "height": 568,
-        "bytes": 119633,
+        "bytes": 113010,
         "contentType": "image/jpeg"
       }
     },
@@ -44586,7 +44778,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_SandWraithSkin_WR.jpg?14133",
         "width": 1024,
         "height": 568,
-        "bytes": 130471,
+        "bytes": 126183,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -44594,7 +44786,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_SandWraithSkin_WR.jpg?14133",
         "width": 1024,
         "height": 568,
-        "bytes": 130471,
+        "bytes": 126183,
         "contentType": "image/jpeg"
       }
     },
@@ -44610,7 +44802,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_AshenKnightSkin_WR.jpg?26951",
         "width": 2436,
         "height": 1124,
-        "bytes": 362557,
+        "bytes": 355712,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -44618,7 +44810,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Pyke_AshenKnightSkin_WR.jpg?26951",
         "width": 2436,
         "height": 1124,
-        "bytes": 362557,
+        "bytes": 355712,
         "contentType": "image/jpeg"
       }
     },
@@ -45474,7 +45666,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_SweetheartSkin_WR.jpg?e6d2d",
         "width": 1024,
         "height": 568,
-        "bytes": 81944,
+        "bytes": 73600,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -45482,7 +45674,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_SweetheartSkin_WR.jpg?e6d2d",
         "width": 1024,
         "height": 568,
-        "bytes": 81944,
+        "bytes": 73600,
         "contentType": "image/jpeg"
       }
     },
@@ -45498,7 +45690,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_StarGuardianSkin_WR.jpg?e7301",
         "width": 1024,
         "height": 568,
-        "bytes": 120906,
+        "bytes": 117694,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -45506,7 +45698,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rakan_StarGuardianSkin_WR.jpg?e7301",
         "width": 1024,
         "height": 568,
-        "bytes": 120906,
+        "bytes": 117694,
         "contentType": "image/jpeg"
       }
     },
@@ -45930,7 +46122,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_OriginalSkin_WR.jpg?cf6c5",
         "width": 1024,
         "height": 568,
-        "bytes": 65555,
+        "bytes": 58281,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -45938,7 +46130,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_OriginalSkin_WR.jpg?cf6c5",
         "width": 1024,
         "height": 568,
-        "bytes": 65555,
+        "bytes": 58281,
         "contentType": "image/jpeg"
       }
     },
@@ -45978,7 +46170,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_SweeperSkin_WR.jpg?fd7f3",
         "width": 1024,
         "height": 568,
-        "bytes": 162109,
+        "bytes": 156634,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -45986,7 +46178,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_SweeperSkin_WR.jpg?fd7f3",
         "width": 1024,
         "height": 568,
-        "bytes": 162109,
+        "bytes": 156634,
         "contentType": "image/jpeg"
       }
     },
@@ -46002,7 +46194,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_DurianDefenderSkin_WR.jpg?ec0e8",
         "width": 2436,
         "height": 1124,
-        "bytes": 332244,
+        "bytes": 300367,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -46010,7 +46202,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rammus_DurianDefenderSkin_WR.jpg?ec0e8",
         "width": 2436,
         "height": 1124,
-        "bytes": 332244,
+        "bytes": 300367,
         "contentType": "image/jpeg"
       }
     },
@@ -46314,7 +46506,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rell_StarGuardianSkin_WR.jpg?3481b",
         "width": 2436,
         "height": 1124,
-        "bytes": 310222,
+        "bytes": 342245,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -46322,7 +46514,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rell_StarGuardianSkin_WR.jpg?3481b",
         "width": 2436,
         "height": 1124,
-        "bytes": 310222,
+        "bytes": 342245,
         "contentType": "image/jpeg"
       }
     },
@@ -46890,7 +47082,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_OriginalSkin_WR.jpg?06313",
         "width": 1024,
         "height": 568,
-        "bytes": 67901,
+        "bytes": 75557,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -46898,7 +47090,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_OriginalSkin_WR.jpg?06313",
         "width": 1024,
         "height": 568,
-        "bytes": 67901,
+        "bytes": 75557,
         "contentType": "image/jpeg"
       }
     },
@@ -46962,7 +47154,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PrehistoricSkin_WR.jpg?63488",
         "width": 1024,
         "height": 568,
-        "bytes": 169657,
+        "bytes": 163401,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -46970,7 +47162,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PrehistoricSkin_WR.jpg?63488",
         "width": 1024,
         "height": 568,
-        "bytes": 169657,
+        "bytes": 163401,
         "contentType": "image/jpeg"
       }
     },
@@ -46986,7 +47178,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_RenektoySkin_WR.jpg?7ef98",
         "width": 1024,
         "height": 568,
-        "bytes": 140750,
+        "bytes": 136168,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -46994,7 +47186,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_RenektoySkin_WR.jpg?7ef98",
         "width": 1024,
         "height": 568,
-        "bytes": 140750,
+        "bytes": 136168,
         "contentType": "image/jpeg"
       }
     },
@@ -47010,7 +47202,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PROJECTSkin_WR.jpg?69a08",
         "width": 1024,
         "height": 568,
-        "bytes": 127123,
+        "bytes": 130826,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -47018,7 +47210,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_PROJECTSkin_WR.jpg?69a08",
         "width": 1024,
         "height": 568,
-        "bytes": 127123,
+        "bytes": 130826,
         "contentType": "image/jpeg"
       }
     },
@@ -47034,7 +47226,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_BlackfrostSkin_WR.jpg?da58b",
         "width": 2436,
         "height": 1124,
-        "bytes": 384718,
+        "bytes": 363097,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -47042,7 +47234,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Renekton_BlackfrostSkin_WR.jpg?da58b",
         "width": 2436,
         "height": 1124,
-        "bytes": 384718,
+        "bytes": 363097,
         "contentType": "image/jpeg"
       }
     },
@@ -47082,7 +47274,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/skin49/images/rengar_splash_centered_49.skins_rengar_skin49.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 143291,
+        "bytes": 138832,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -47322,7 +47514,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_OriginalSkin_WR.jpg?f3360",
         "width": 1024,
         "height": 568,
-        "bytes": 556064,
+        "bytes": 499739,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -47346,7 +47538,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_NightHunterSkin_WR.jpg?358f2",
         "width": 1024,
         "height": 568,
-        "bytes": 68157,
+        "bytes": 65905,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -47354,7 +47546,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Rengar_NightHunterSkin_WR.jpg?358f2",
         "width": 1024,
         "height": 568,
-        "bytes": 68157,
+        "bytes": 65905,
         "contentType": "image/jpeg"
       }
     },
@@ -47850,7 +48042,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Riven_OriginalSkin_WR.jpg?d7630",
         "width": 1024,
         "height": 568,
-        "bytes": 79164,
+        "bytes": 81708,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -48787,7 +48979,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ryze_OriginalSkin_WR.jpg?98a0e",
         "width": 2436,
         "height": 1124,
-        "bytes": 275166,
+        "bytes": 299135,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -48795,7 +48987,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ryze_OriginalSkin_WR.jpg?98a0e",
         "width": 2436,
         "height": 1124,
-        "bytes": 275166,
+        "bytes": 299135,
         "contentType": "image/jpeg"
       }
     },
@@ -49123,7 +49315,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_HighNoonSkin_WR.jpg?4a874",
         "width": 2436,
         "height": 1124,
-        "bytes": 371499,
+        "bytes": 348396,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -49131,7 +49323,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_HighNoonSkin_WR.jpg?4a874",
         "width": 2436,
         "height": 1124,
-        "bytes": 371499,
+        "bytes": 348396,
         "contentType": "image/jpeg"
       }
     },
@@ -49147,7 +49339,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_SoulFighterSkin_WR.jpg?36ae9",
         "width": 2436,
         "height": 1124,
-        "bytes": 506536,
+        "bytes": 473478,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -49155,7 +49347,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Samira_SoulFighterSkin_WR.jpg?36ae9",
         "width": 2436,
         "height": 1124,
-        "bytes": 506536,
+        "bytes": 473478,
         "contentType": "image/jpeg"
       }
     },
@@ -49531,7 +49723,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/skin72/images/senna_splash_centered_72.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127178,
+        "bytes": 122660,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -49963,7 +50155,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/skin68/images/seraphine_splash_centered_68.skins_seraphine_skin68.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 123399,
+        "bytes": 119635,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -51032,6 +51224,30 @@
       }
     },
     {
+      "id": "sett::prestige-select-spirit-blossom-sett::wild-rift",
+      "champion": "Sett",
+      "skin": "Prestige Select Spirit Blossom Sett",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sett_PrestigeSelectSpiritBlossomSkin_WR.jpg?acbb0",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 429340,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sett_PrestigeSelectSpiritBlossomSkin_WR.jpg?acbb0",
+        "width": 2436,
+        "height": 1124,
+        "bytes": 429340,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
       "id": "shaco::prestige-pandemonium-shaco::pc",
       "champion": "Shaco",
       "skin": "Prestige Pandemonium Shaco",
@@ -51144,10 +51360,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Shaco_NutcrackoSkin_old_HD.jpg?fe934",
-        "width": 4000,
-        "height": 2500,
-        "bytes": 2715824,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Shaco_NutcrackoSkin_HD.jpg?4dac1",
+        "width": 1830,
+        "height": 1080,
+        "bytes": 893879,
         "contentType": "image/jpeg"
       }
     },
@@ -51168,10 +51384,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Shaco_WorkshopSkin_old_HD.jpg?67c92",
-        "width": 4000,
-        "height": 2288,
-        "bytes": 2816244,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Shaco_WorkshopSkin_HD.jpg?b9913",
+        "width": 1830,
+        "height": 1080,
+        "bytes": 1118158,
         "contentType": "image/jpeg"
       }
     },
@@ -51787,7 +52003,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_OriginalSkin_WR.jpg?3edb7",
         "width": 1024,
         "height": 568,
-        "bytes": 96858,
+        "bytes": 99146,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -51795,7 +52011,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_OriginalSkin_WR.jpg?3edb7",
         "width": 1024,
         "height": 568,
-        "bytes": 96858,
+        "bytes": 99146,
         "contentType": "image/jpeg"
       }
     },
@@ -51835,7 +52051,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_PulsefireSkin_WR.jpg?5f0bc",
         "width": 1024,
         "height": 568,
-        "bytes": 108484,
+        "bytes": 105354,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -51843,7 +52059,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shen_PulsefireSkin_WR.jpg?5f0bc",
         "width": 1024,
         "height": 568,
-        "bytes": 108484,
+        "bytes": 105354,
         "contentType": "image/jpeg"
       }
     },
@@ -51960,10 +52176,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_BoneclawSkin_old2_HD.jpg?1f3d2",
-        "width": 4800,
-        "height": 3000,
-        "bytes": 793540,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_BoneclawSkin_HD.jpg?d556e",
+        "width": 3500,
+        "height": 1969,
+        "bytes": 4327747,
         "contentType": "image/jpeg"
       }
     },
@@ -52195,7 +52411,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_SuperGalaxySkin_WR.jpg?81057",
         "width": 1024,
         "height": 568,
-        "bytes": 77548,
+        "bytes": 79620,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -52203,7 +52419,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Shyvana_SuperGalaxySkin_WR.jpg?81057",
         "width": 1024,
         "height": 568,
-        "bytes": 77548,
+        "bytes": 79620,
         "contentType": "image/jpeg"
       }
     },
@@ -52603,7 +52819,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Singed_OriginalSkin_WR.jpg?4457f",
         "width": 1024,
         "height": 568,
-        "bytes": 73091,
+        "bytes": 65655,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -52611,7 +52827,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Singed_OriginalSkin_WR.jpg?4457f",
         "width": 1024,
         "height": 568,
-        "bytes": 73091,
+        "bytes": 65655,
         "contentType": "image/jpeg"
       }
     },
@@ -52720,10 +52936,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/skin50/images/sion_splash_centered_50.skins_sion_skin50.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 140268,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_PizzaChefSkin_HD.jpg?cc922",
+        "width": 5500,
+        "height": 3231,
+        "bytes": 13048796,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -52848,10 +53064,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_LumberjackSkin_old_HD.jpg?7834b",
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_LumberjackSkin_HD.jpg?cbc4b",
         "width": 4000,
-        "height": 2500,
-        "bytes": 3243080,
+        "height": 2360,
+        "bytes": 994684,
         "contentType": "image/jpeg"
       }
     },
@@ -53035,7 +53251,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_OriginalSkin_WR.jpg?78e4d",
         "width": 1024,
         "height": 568,
-        "bytes": 111230,
+        "bytes": 114350,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -53083,7 +53299,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_MechaZeroSkin_WR.jpg?72a5b",
         "width": 2436,
         "height": 1124,
-        "bytes": 331069,
+        "bytes": 353409,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -53091,7 +53307,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sion_MechaZeroSkin_WR.jpg?72a5b",
         "width": 2436,
         "height": 1124,
-        "bytes": 331069,
+        "bytes": 353409,
         "contentType": "image/jpeg"
       }
     },
@@ -53160,10 +53376,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_WarriorPrincessSkin_old_HD.jpg?68cc1",
-        "width": 4000,
-        "height": 2358,
-        "bytes": 1716244,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_WarriorPrincessSkin_HD.jpg?fadb1",
+        "width": 1830,
+        "height": 1080,
+        "bytes": 1086024,
         "contentType": "image/jpeg"
       }
     },
@@ -53184,10 +53400,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_SpectacularSkin_old_HD.jpg?594da",
-        "width": 4000,
-        "height": 2359,
-        "bytes": 2424495,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_SpectacularSkin_HD.jpg?3ab23",
+        "width": 1920,
+        "height": 960,
+        "bytes": 1069438,
         "contentType": "image/jpeg"
       }
     },
@@ -53208,10 +53424,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_HuntressSkin_old_HD.jpg?ebc55",
-        "width": 4000,
-        "height": 2500,
-        "bytes": 3137343,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_HuntressSkin_HD.jpg?2197c",
+        "width": 1830,
+        "height": 1080,
+        "bytes": 854861,
         "contentType": "image/jpeg"
       }
     },
@@ -53232,10 +53448,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_BanditSkin_Ch_HD.jpg?72d0a",
-        "width": 4800,
-        "height": 3000,
-        "bytes": 4166269,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_BanditSkin_HD.jpg?46a59",
+        "width": 1830,
+        "height": 1080,
+        "bytes": 812139,
         "contentType": "image/jpeg"
       }
     },
@@ -53611,7 +53827,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_BloodMoonSkin_WR.jpg?e92f7",
         "width": 2436,
         "height": 1124,
-        "bytes": 340397,
+        "bytes": 368805,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -53619,7 +53835,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sivir_BloodMoonSkin_WR.jpg?e92f7",
         "width": 2436,
         "height": 1124,
-        "bytes": 340397,
+        "bytes": 368805,
         "contentType": "image/jpeg"
       }
     },
@@ -53683,7 +53899,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Skarner_CosmicStingSkin_WR.jpg?3d0a2",
         "width": 2436,
         "height": 1124,
-        "bytes": 371606,
+        "bytes": 345908,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -54021,7 +54237,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Smolder_OriginalSkin_WR.jpg?dffdb",
         "width": 2436,
         "height": 1124,
-        "bytes": 273928,
+        "bytes": 301370,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -54029,7 +54245,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Smolder_OriginalSkin_WR.jpg?dffdb",
         "width": 2436,
         "height": 1124,
-        "bytes": 273928,
+        "bytes": 301370,
         "contentType": "image/jpeg"
       }
     },
@@ -54054,6 +54270,30 @@
         "width": 8062,
         "height": 3720,
         "bytes": 4248430,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "smolder::reindeer-smolder::wild-rift",
+      "champion": "Smolder",
+      "skin": "Reindeer Smolder",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Smolder_ReindeerSkin_WR.jpg?db0c3",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 351594,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Smolder_ReindeerSkin_WR.jpg?db0c3",
+        "width": 2436,
+        "height": 1125,
+        "bytes": 351594,
         "contentType": "image/jpeg"
       }
     },
@@ -54501,7 +54741,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sona_OriginalSkin_WR.jpg?e55b5",
         "width": 1024,
         "height": 568,
-        "bytes": 470505,
+        "bytes": 516554,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -54509,7 +54749,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Sona_OriginalSkin_WR.jpg?e55b5",
         "width": 1024,
         "height": 568,
-        "bytes": 470505,
+        "bytes": 516554,
         "contentType": "image/jpeg"
       }
     },
@@ -54741,7 +54981,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/skin63/images/soraka_splash_centered_63.skins_soraka_skin63.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 128664,
+        "bytes": 125746,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -55389,7 +55629,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/skin42/images/swain_splash_centered_42.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 128380,
+        "bytes": 125142,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -55653,7 +55893,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Swain_OriginalSkin_WR.jpg?5a687",
         "width": 2436,
         "height": 1124,
-        "bytes": 298102,
+        "bytes": 304066,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -56445,7 +56685,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Syndra_PrestigeStarGuardianSkin_WR.jpg?b718a",
         "width": 2436,
         "height": 1124,
-        "bytes": 458228,
+        "bytes": 492191,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -56453,7 +56693,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Syndra_PrestigeStarGuardianSkin_WR.jpg?b718a",
         "width": 2436,
         "height": 1124,
-        "bytes": 458228,
+        "bytes": 492191,
         "contentType": "image/jpeg"
       }
     },
@@ -56493,7 +56733,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/skin39/images/tahmkench_splash_centered_39.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145309,
+        "bytes": 137293,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -57213,7 +57453,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Talon_OriginalSkin_WR.jpg?99d21",
         "width": 2436,
         "height": 1124,
-        "bytes": 376877,
+        "bytes": 401084,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -57261,7 +57501,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Talon_EnduringSwordSkin_WR.jpg?c0755",
         "width": 2436,
         "height": 1124,
-        "bytes": 428347,
+        "bytes": 462457,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -57269,7 +57509,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Talon_EnduringSwordSkin_WR.jpg?c0755",
         "width": 2436,
         "height": 1124,
-        "bytes": 428347,
+        "bytes": 462457,
         "contentType": "image/jpeg"
       }
     },
@@ -57957,7 +58197,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Teemo_OriginalSkin_WR.jpg?d7a25",
         "width": 1024,
         "height": 568,
-        "bytes": 65618,
+        "bytes": 72801,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -57965,7 +58205,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Teemo_OriginalSkin_WR.jpg?d7a25",
         "width": 1024,
         "height": 568,
-        "bytes": 65618,
+        "bytes": 72801,
         "contentType": "image/jpeg"
       }
     },
@@ -58653,7 +58893,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PulsefireSkin_WR.jpg?4068e",
         "width": 1024,
         "height": 568,
-        "bytes": 125715,
+        "bytes": 129337,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -58661,7 +58901,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_PulsefireSkin_WR.jpg?4068e",
         "width": 1024,
         "height": 568,
-        "bytes": 125715,
+        "bytes": 129337,
         "contentType": "image/jpeg"
       }
     },
@@ -58821,7 +59061,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_DarkStarSkin_WR.jpg?89bab",
         "width": 2436,
         "height": 1124,
-        "bytes": 254428,
+        "bytes": 287085,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -58829,7 +59069,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Thresh_DarkStarSkin_WR.jpg?89bab",
         "width": 2436,
         "height": 1124,
-        "bytes": 254428,
+        "bytes": 287085,
         "contentType": "image/jpeg"
       }
     },
@@ -59421,7 +59661,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_LittleDemonSkin_WR.jpg?0d118",
         "width": 1024,
         "height": 568,
-        "bytes": 65552,
+        "bytes": 63999,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -59429,7 +59669,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_LittleDemonSkin_WR.jpg?0d118",
         "width": 1024,
         "height": 568,
-        "bytes": 65552,
+        "bytes": 63999,
         "contentType": "image/jpeg"
       }
     },
@@ -59445,7 +59685,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_OmegaSquadSkin_WR.jpg?04681",
         "width": 1024,
         "height": 568,
-        "bytes": 77775,
+        "bytes": 80509,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -59453,7 +59693,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_OmegaSquadSkin_WR.jpg?04681",
         "width": 1024,
         "height": 568,
-        "bytes": 77775,
+        "bytes": 80509,
         "contentType": "image/jpeg"
       }
     },
@@ -59541,7 +59781,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_SpiritBlossomSkin_WR.jpg?b6538",
         "width": 2436,
         "height": 1124,
-        "bytes": 377050,
+        "bytes": 355045,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -59549,7 +59789,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_SpiritBlossomSkin_WR.jpg?b6538",
         "width": 2436,
         "height": 1124,
-        "bytes": 377050,
+        "bytes": 355045,
         "contentType": "image/jpeg"
       }
     },
@@ -59589,7 +59829,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_PenguCosplaySkin_WR.jpg?4e1f0",
         "width": 2436,
         "height": 1124,
-        "bytes": 335331,
+        "bytes": 304112,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -59597,7 +59837,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tristana_PenguCosplaySkin_WR.jpg?4e1f0",
         "width": 2436,
         "height": 1124,
-        "bytes": 335331,
+        "bytes": 304112,
         "contentType": "image/jpeg"
       }
     },
@@ -60261,7 +60501,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_WarringKingdomsSkin_WR.jpg?f39e2",
         "width": 1024,
         "height": 568,
-        "bytes": 73948,
+        "bytes": 76501,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -60269,7 +60509,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_WarringKingdomsSkin_WR.jpg?f39e2",
         "width": 1024,
         "height": 568,
-        "bytes": 73948,
+        "bytes": 76501,
         "contentType": "image/jpeg"
       }
     },
@@ -60309,7 +60549,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_BloodMoonSkin_WR.jpg?2860a",
         "width": 2436,
         "height": 1124,
-        "bytes": 388227,
+        "bytes": 371253,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -60317,7 +60557,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Tryndamere_BloodMoonSkin_WR.jpg?2860a",
         "width": 2436,
         "height": 1124,
-        "bytes": 388227,
+        "bytes": 371253,
         "contentType": "image/jpeg"
       }
     },
@@ -60861,7 +61101,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twisted_Fate_PulsefireSkin_WR.jpg?2b079",
         "width": 1024,
         "height": 568,
-        "bytes": 57259,
+        "bytes": 63921,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -60869,7 +61109,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twisted_Fate_PulsefireSkin_WR.jpg?2b079",
         "width": 1024,
         "height": 568,
-        "bytes": 57259,
+        "bytes": 63921,
         "contentType": "image/jpeg"
       }
     },
@@ -61437,7 +61677,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twitch_OriginalSkin_WR.jpg?0dbbe",
         "width": 2436,
         "height": 1124,
-        "bytes": 336593,
+        "bytes": 340219,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -61445,7 +61685,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Twitch_OriginalSkin_WR.jpg?0dbbe",
         "width": 2436,
         "height": 1124,
-        "bytes": 336593,
+        "bytes": 340219,
         "contentType": "image/jpeg"
       }
     },
@@ -61989,7 +62229,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_PajamaGuardianCosplaySkin_WR.jpg?f3496",
         "width": 2436,
         "height": 1124,
-        "bytes": 359968,
+        "bytes": 330347,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -61997,7 +62237,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_PajamaGuardianCosplaySkin_WR.jpg?f3496",
         "width": 2436,
         "height": 1124,
-        "bytes": 359968,
+        "bytes": 330347,
         "contentType": "image/jpeg"
       }
     },
@@ -62013,7 +62253,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_BattlecastSkin_WR.jpg?a4845",
         "width": 2436,
         "height": 1124,
-        "bytes": 347139,
+        "bytes": 321889,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -62021,7 +62261,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_BattlecastSkin_WR.jpg?a4845",
         "width": 2436,
         "height": 1124,
-        "bytes": 347139,
+        "bytes": 321889,
         "contentType": "image/jpeg"
       }
     },
@@ -62046,6 +62286,30 @@
         "width": 7000,
         "height": 3234,
         "bytes": 7072090,
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "id": "urgot::old-god-urgot::pc",
+      "champion": "Urgot",
+      "skin": "Old God Urgot",
+      "type": "PC",
+      "releaseDate": "2026-09-23",
+      "sourceKind": "wiki-catalog-sync",
+      "card": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_OldGodSkin.jpg?49f5a",
+        "width": 1215,
+        "height": 717,
+        "bytes": 195258,
+        "contentType": "image/jpeg"
+      },
+      "fullscreen": {
+        "ok": true,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Urgot_OldGodSkin_HD.jpg?c1551",
+        "width": 8000,
+        "height": 4720,
+        "bytes": 20816654,
         "contentType": "image/jpeg"
       }
     },
@@ -62542,7 +62806,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_ArcticOpsSkin_WR.jpg?23007",
         "width": 1024,
         "height": 568,
-        "bytes": 61644,
+        "bytes": 68873,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -62550,7 +62814,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_ArcticOpsSkin_WR.jpg?23007",
         "width": 1024,
         "height": 568,
-        "bytes": 61644,
+        "bytes": 68873,
         "contentType": "image/jpeg"
       }
     },
@@ -62590,7 +62854,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_VarusSwiftboltSkin_WR.jpg?7b1cf",
         "width": 1024,
         "height": 568,
-        "bytes": 138433,
+        "bytes": 131864,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -62598,7 +62862,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_VarusSwiftboltSkin_WR.jpg?7b1cf",
         "width": 1024,
         "height": 568,
-        "bytes": 138433,
+        "bytes": 131864,
         "contentType": "image/jpeg"
       }
     },
@@ -62614,7 +62878,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_DarkStarSkin_WR.jpg?74579",
         "width": 1024,
         "height": 568,
-        "bytes": 127232,
+        "bytes": 122174,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -62622,7 +62886,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_DarkStarSkin_WR.jpg?74579",
         "width": 1024,
         "height": 568,
-        "bytes": 127232,
+        "bytes": 122174,
         "contentType": "image/jpeg"
       }
     },
@@ -62662,7 +62926,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_PROJECTSkin_WR.jpg?6c7b1",
         "width": 2436,
         "height": 1124,
-        "bytes": 445416,
+        "bytes": 421415,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -62670,7 +62934,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Varus_PROJECTSkin_WR.jpg?6c7b1",
         "width": 2436,
         "height": 1124,
-        "bytes": 445416,
+        "bytes": 421415,
         "contentType": "image/jpeg"
       }
     },
@@ -62758,7 +63022,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_DemoncursedSkin_HD.jpg?d2a7a",
         "width": 7000,
         "height": 4136,
-        "bytes": 19515030,
+        "bytes": 20922790,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -63358,7 +63622,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PROJECTSkin_WR.jpg?d0006",
         "width": 1024,
         "height": 568,
-        "bytes": 157276,
+        "bytes": 152428,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -63366,7 +63630,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_PROJECTSkin_WR.jpg?d0006",
         "width": 1024,
         "height": 568,
-        "bytes": 157276,
+        "bytes": 152428,
         "contentType": "image/jpeg"
       }
     },
@@ -63382,7 +63646,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_FirecrackerSkin_WR.jpg?5cf40",
         "width": 1024,
         "height": 568,
-        "bytes": 129333,
+        "bytes": 134056,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -63390,7 +63654,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vayne_FirecrackerSkin_WR.jpg?5cf40",
         "width": 1024,
         "height": 568,
-        "bytes": 129333,
+        "bytes": 134056,
         "contentType": "image/jpeg"
       }
     },
@@ -63958,7 +64222,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_OriginalSkin_WR.jpg?cd80f",
         "width": 1024,
         "height": 568,
-        "bytes": 74447,
+        "bytes": 76863,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -63966,7 +64230,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_OriginalSkin_WR.jpg?cd80f",
         "width": 1024,
         "height": 568,
-        "bytes": 74447,
+        "bytes": 76863,
         "contentType": "image/jpeg"
       }
     },
@@ -64006,7 +64270,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_BadSantaSkin_WR.jpg?2c32d",
         "width": 1024,
         "height": 568,
-        "bytes": 166057,
+        "bytes": 171569,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -64014,7 +64278,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Veigar_BadSantaSkin_WR.jpg?2c32d",
         "width": 1024,
         "height": 568,
-        "bytes": 166057,
+        "bytes": 171569,
         "contentType": "image/jpeg"
       }
     },
@@ -64147,10 +64411,10 @@
       "sourceKind": "new-skins",
       "card": {
         "ok": true,
-        "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/skin29/images/velkoz_splash_centered_29.skins_velkoz_skin29.jpg",
-        "width": 1280,
-        "height": 720,
-        "bytes": 139942,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Vel%27Koz_SpaghettiallaVel%27KozSkin_HD.jpg?ccb15",
+        "width": 6666,
+        "height": 3750,
+        "bytes": 3351793,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -64366,7 +64630,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vel%27Koz_ArclightSkin_WR.jpg?1f2d1",
         "width": 2436,
         "height": 1124,
-        "bytes": 349805,
+        "bytes": 375010,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -64374,7 +64638,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vel%27Koz_ArclightSkin_WR.jpg?1f2d1",
         "width": 2436,
         "height": 1124,
-        "bytes": 349805,
+        "bytes": 375010,
         "contentType": "image/jpeg"
       }
     },
@@ -64390,7 +64654,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/skin29/images/vex_splash_centered_29.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 143885,
+        "bytes": 140584,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -65062,7 +65326,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Vi_ArcaneSkin_WR.jpg?45a11",
         "width": 1024,
         "height": 568,
-        "bytes": 120063,
+        "bytes": 123576,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -65214,7 +65478,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Viego_SoulFighterSkin_HD.jpg?3ffa0",
         "width": 7468,
         "height": 4180,
-        "bytes": 9340304,
+        "bytes": 9851368,
         "contentType": "image/jpeg"
       }
     },
@@ -66718,7 +66982,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/skin58/images/warwick_splash_centered_58.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 138201,
+        "bytes": 130766,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -67150,7 +67414,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_OldGodSkin_WR.jpg?807fe",
         "width": 1024,
         "height": 568,
-        "bytes": 111244,
+        "bytes": 108369,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -67158,7 +67422,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_OldGodSkin_WR.jpg?807fe",
         "width": 1024,
         "height": 568,
-        "bytes": 111244,
+        "bytes": 108369,
         "contentType": "image/jpeg"
       }
     },
@@ -67174,7 +67438,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_PROJECTSkin_WR.jpg?32e57",
         "width": 2436,
         "height": 1124,
-        "bytes": 380694,
+        "bytes": 357600,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -67182,7 +67446,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_PROJECTSkin_WR.jpg?32e57",
         "width": 2436,
         "height": 1124,
-        "bytes": 380694,
+        "bytes": 357600,
         "contentType": "image/jpeg"
       }
     },
@@ -67198,7 +67462,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_LunarGuardianSkin_WR.jpg?dd26a",
         "width": 2436,
         "height": 1124,
-        "bytes": 303665,
+        "bytes": 285496,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -67206,7 +67470,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Warwick_LunarGuardianSkin_WR.jpg?dd26a",
         "width": 2436,
         "height": 1124,
-        "bytes": 303665,
+        "bytes": 285496,
         "contentType": "image/jpeg"
       }
     },
@@ -67582,7 +67846,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Wukong_RadiantSkin_WR.jpg?751e8",
         "width": 1024,
         "height": 568,
-        "bytes": 188486,
+        "bytes": 179679,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -67590,7 +67854,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Wukong_RadiantSkin_WR.jpg?751e8",
         "width": 1024,
         "height": 568,
-        "bytes": 188486,
+        "bytes": 179679,
         "contentType": "image/jpeg"
       }
     },
@@ -68038,7 +68302,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xayah_StarGuardianSkin_WR.jpg?b932e",
         "width": 1024,
         "height": 568,
-        "bytes": 117694,
+        "bytes": 120906,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -68046,7 +68310,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xayah_StarGuardianSkin_WR.jpg?b932e",
         "width": 1024,
         "height": 568,
-        "bytes": 117694,
+        "bytes": 120906,
         "contentType": "image/jpeg"
       }
     },
@@ -68206,7 +68470,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/skin32/images/xerath_splash_centered_32.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 145033,
+        "bytes": 140538,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -68446,7 +68710,7 @@
         "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/skin53/images/xinzhao_splash_centered_53.skins_xinzhao_skin53.jpg",
         "width": 1280,
         "height": 720,
-        "bytes": 127024,
+        "bytes": 123154,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -68758,7 +69022,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xin_Zhao_OriginalSkin_WR.jpg?8697c",
         "width": 1024,
         "height": 568,
-        "bytes": 75698,
+        "bytes": 83804,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -68766,7 +69030,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Xin_Zhao_OriginalSkin_WR.jpg?8697c",
         "width": 1024,
         "height": 568,
-        "bytes": 75698,
+        "bytes": 83804,
         "contentType": "image/jpeg"
       }
     },
@@ -69478,7 +69742,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_OriginalSkin_WR.jpg?4a6f3",
         "width": 1024,
         "height": 568,
-        "bytes": 85922,
+        "bytes": 77265,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -69486,7 +69750,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_OriginalSkin_WR.jpg?4a6f3",
         "width": 1024,
         "height": 568,
-        "bytes": 85922,
+        "bytes": 77265,
         "contentType": "image/jpeg"
       }
     },
@@ -69502,7 +69766,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_HighNoonSkin_WR.jpg?fd07f",
         "width": 1024,
         "height": 568,
-        "bytes": 51296,
+        "bytes": 58042,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -69510,7 +69774,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_HighNoonSkin_WR.jpg?fd07f",
         "width": 1024,
         "height": 568,
-        "bytes": 51296,
+        "bytes": 58042,
         "contentType": "image/jpeg"
       }
     },
@@ -69574,7 +69838,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_BloodMoonSkin_WR.jpg?53cc1",
         "width": 1024,
         "height": 568,
-        "bytes": 49821,
+        "bytes": 43812,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -69582,7 +69846,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_BloodMoonSkin_WR.jpg?53cc1",
         "width": 1024,
         "height": 568,
-        "bytes": 49821,
+        "bytes": 43812,
         "contentType": "image/jpeg"
       }
     },
@@ -69790,7 +70054,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_TrueDamageSkin_WR.jpg?4aaf3",
         "width": 2436,
         "height": 1124,
-        "bytes": 325565,
+        "bytes": 295910,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -69798,7 +70062,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_TrueDamageSkin_WR.jpg?4aaf3",
         "width": 2436,
         "height": 1124,
-        "bytes": 325565,
+        "bytes": 295910,
         "contentType": "image/jpeg"
       }
     },
@@ -69963,10 +70227,10 @@
       },
       "fullscreen": {
         "ok": true,
-        "url": "https://wiki.leagueoflegends.com/en-us/images/Yone_HEARTSTEELSkin_HD.jpg?63d1c",
-        "width": 4096,
-        "height": 2106,
-        "bytes": 658859,
+        "url": "https://wiki.leagueoflegends.com/en-us/images/Yone_HEARTSTEELLiveMyLifeSkin_HD.jpg?676f9",
+        "width": 7000,
+        "height": 4130,
+        "bytes": 19095742,
         "contentType": "image/jpeg"
       }
     },
@@ -70654,7 +70918,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yunara_OriginalSkin_WR.jpg?985b5",
         "width": 2436,
         "height": 1124,
-        "bytes": 414499,
+        "bytes": 381801,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -70662,7 +70926,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yunara_OriginalSkin_WR.jpg?985b5",
         "width": 2436,
         "height": 1124,
-        "bytes": 414499,
+        "bytes": 381801,
         "contentType": "image/jpeg"
       }
     },
@@ -70942,7 +71206,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_OriginalSkin_WR.jpg?1bf39",
         "width": 1024,
         "height": 568,
-        "bytes": 136314,
+        "bytes": 143532,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -70950,7 +71214,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_OriginalSkin_WR.jpg?1bf39",
         "width": 1024,
         "height": 568,
-        "bytes": 136314,
+        "bytes": 143532,
         "contentType": "image/jpeg"
       }
     },
@@ -70966,7 +71230,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_HeartseekerSkin_WR.jpg?82d19",
         "width": 1024,
         "height": 568,
-        "bytes": 125587,
+        "bytes": 118726,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -70974,7 +71238,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_HeartseekerSkin_WR.jpg?82d19",
         "width": 1024,
         "height": 568,
-        "bytes": 125587,
+        "bytes": 118726,
         "contentType": "image/jpeg"
       }
     },
@@ -70990,7 +71254,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_BattlePrincipalSkin_WR.jpg?da5a6",
         "width": 1024,
         "height": 568,
-        "bytes": 139123,
+        "bytes": 143408,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -70998,7 +71262,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Yuumi_BattlePrincipalSkin_WR.jpg?da5a6",
         "width": 1024,
         "height": 568,
-        "bytes": 139123,
+        "bytes": 143408,
         "contentType": "image/jpeg"
       }
     },
@@ -71734,7 +71998,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_OriginalSkin_WR.jpg?2cd1b",
         "width": 1024,
         "height": 568,
-        "bytes": 87407,
+        "bytes": 84548,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -71742,7 +72006,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_OriginalSkin_WR.jpg?2cd1b",
         "width": 1024,
         "height": 568,
-        "bytes": 87407,
+        "bytes": 84548,
         "contentType": "image/jpeg"
       }
     },
@@ -71830,7 +72094,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_GalaxySlayerSkin_WR.jpg?3b3d7",
         "width": 1024,
         "height": 568,
-        "bytes": 51150,
+        "bytes": 53568,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -71838,7 +72102,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_GalaxySlayerSkin_WR.jpg?3b3d7",
         "width": 1024,
         "height": 568,
-        "bytes": 51150,
+        "bytes": 53568,
         "contentType": "image/jpeg"
       }
     },
@@ -71854,7 +72118,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_PsyOpsSkin_WR.jpg?0b937",
         "width": 1024,
         "height": 568,
-        "bytes": 91277,
+        "bytes": 93770,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -71862,7 +72126,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Zed_PsyOpsSkin_WR.jpg?0b937",
         "width": 1024,
         "height": 568,
-        "bytes": 91277,
+        "bytes": 93770,
         "contentType": "image/jpeg"
       }
     },
@@ -72598,7 +72862,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_MasterArcanistSkin_WR.jpg?d6dbe",
         "width": 1024,
         "height": 568,
-        "bytes": 68166,
+        "bytes": 61296,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -72606,7 +72870,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_MasterArcanistSkin_WR.jpg?d6dbe",
         "width": 1024,
         "height": 568,
-        "bytes": 68166,
+        "bytes": 61296,
         "contentType": "image/jpeg"
       }
     },
@@ -72694,7 +72958,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_PoolPartySkin_WR.jpg?8dac5",
         "width": 1024,
         "height": 568,
-        "bytes": 118451,
+        "bytes": 114587,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -72702,7 +72966,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_PoolPartySkin_WR.jpg?8dac5",
         "width": 1024,
         "height": 568,
-        "bytes": 118451,
+        "bytes": 114587,
         "contentType": "image/jpeg"
       }
     },
@@ -72718,7 +72982,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_HextechSkin_WR.jpg?5319f",
         "width": 2436,
         "height": 1124,
-        "bytes": 443313,
+        "bytes": 431050,
         "contentType": "image/jpeg"
       },
       "fullscreen": {
@@ -72726,7 +72990,7 @@
         "url": "https://wiki.leagueoflegends.com/en-us/images/Ziggs_HextechSkin_WR.jpg?5319f",
         "width": 2436,
         "height": 1124,
-        "bytes": 443313,
+        "bytes": 431050,
         "contentType": "image/jpeg"
       }
     },
@@ -73860,7 +74124,7 @@
     }
   ],
   "wikiMaximumPass": {
-    "runAt": "2026-09-21T10:04:00.968Z",
+    "runAt": "2026-09-28T11:02:00.377Z",
     "sourcesChecked": {
       "pc": "https://wiki.leagueoflegends.com/en-us/Category:High_definition_champion_skins",
       "wr": "https://wiki.leagueoflegends.com/en-us/Category:WR_High_definition_champion_skins",
@@ -73868,22 +74132,22 @@
     },
     "historicalChecked": 657,
     "historicalUpgraded": 65,
-    "catalogChecked": 2625,
-    "catalogUpgraded": 0,
+    "catalogChecked": 2636,
+    "catalogUpgraded": 6,
     "catalogCardsRepaired": 0,
     "chromaChecked": 129,
     "chromaUpgraded": 0,
     "manualChecked": 2,
     "manualUpgraded": 0,
-    "noExactWikiHd": 813
+    "noExactWikiHd": 819
   },
   "finalHdPass": {
-    "runAt": "2026-09-21T10:04:53.621Z",
+    "runAt": "2026-09-28T11:02:53.554Z",
     "historicalSearched": 208,
-    "historicalRecoveredHigher": 6,
-    "catalogSearched": 2589,
-    "catalogRecoveredHigher": 9,
-    "cardFallbacksRepaired": 0,
+    "historicalRecoveredHigher": 3,
+    "catalogSearched": 2600,
+    "catalogRecoveredHigher": 0,
+    "cardFallbacksRepaired": 7,
     "stillUnresolved": 7
   }
 }
