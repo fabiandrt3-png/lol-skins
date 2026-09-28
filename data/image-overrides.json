@@ -11646,6 +11646,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "brand::battle-boss-brand-exquisite-edition::wild-rift",
+      "champ": "Brand",
+      "skin": "Battle Boss Brand Exquisite Edition",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Brand_BattleBossExquisiteEditionSkin_WR.jpg?e6d57",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
       "id": "braum::classic-braum::294",
       "champ": "Braum",
       "skin": "Classic Braum",
@@ -13429,6 +13440,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_SplendorOpusSkin_WR_HD.jpg?6640d",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:00.365Z"
+    },
+    {
+      "id": "dr-mundo::mundo-mundo::wild-rift",
+      "champ": "Dr. Mundo",
+      "skin": "Mundo Mundo",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Dr._Mundo_MundoMundoSkin_WR.jpg?0718a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
       "id": "draven::classic-draven::461",
@@ -17403,6 +17425,27 @@
       "hdVerifiedAt": "2026-09-11T22:46:01.058Z"
     },
     {
+      "id": "hwei::classic-hwei::wild-rift",
+      "champ": "Hwei",
+      "skin": "Classic Hwei",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Hwei_OriginalSkin_WR.jpg?317b4",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
+      "id": "hwei::winterblessed-hwei::wild-rift",
+      "champ": "Hwei",
+      "skin": "Winterblessed Hwei",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Hwei_WinterblessedSkin_WR.jpg?a767c",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
       "id": "illaoi::pasta-maker-illaoi::pc",
       "champ": "Illaoi",
       "skin": "Pasta Maker Illaoi",
@@ -18309,6 +18352,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Janna_GloriousAigretteSkin_WR_HD.jpg?c74ba",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:01.296Z"
+    },
+    {
+      "id": "janna::coven-janna::pc",
+      "champ": "Janna",
+      "skin": "Coven Janna",
+      "releaseDate": "2026-09-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Janna_CovenSkin.jpg?82dd6",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
       "id": "jarvan-iv::classic-jarvan-iv::pc",
@@ -23350,6 +23403,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "kog-maw::pencil-sharpener-kog-maw::wild-rift",
+      "champ": "Kog'Maw",
+      "skin": "Pencil Sharpener Kog'Maw",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_PencilSharpenerSkin_WR.jpg?ffd5f",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
       "id": "leblanc::prestige-sinful-shores-leblanc::pc",
       "champ": "LeBlanc",
       "skin": "Prestige Sinful Shores LeBlanc",
@@ -27370,6 +27434,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:05.458Z"
     },
     {
+      "id": "mel::coven-mel::pc",
+      "champ": "Mel",
+      "skin": "Coven Mel",
+      "releaseDate": "2026-09-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Mel_CovenSkin.jpg?8b8da",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
       "id": "milio::classic-milio::pc",
       "champ": "Milio",
       "skin": "Classic Milio",
@@ -27450,6 +27524,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Milio_PulsefireSkin_WR_HD.jpg?00b9e",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:05.479Z"
+    },
+    {
+      "id": "milio::glorious-eminence-milio::wild-rift",
+      "champ": "Milio",
+      "skin": "Glorious Eminence Milio",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Milio_GloriousEminenceSkin_WR.jpg?dc5fd",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
       "id": "miss-fortune::mvp-t1-miss-fortune::pc",
@@ -35752,6 +35837,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:08.140Z"
     },
     {
+      "id": "sett::prestige-select-spirit-blossom-sett::wild-rift",
+      "champ": "Sett",
+      "skin": "Prestige Select Spirit Blossom Sett",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sett_PrestigeSelectSpiritBlossomSkin_WR.jpg?acbb0",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
+    },
+    {
       "id": "shaco::prestige-pandemonium-shaco::pc",
       "champ": "Shaco",
       "skin": "Prestige Pandemonium Shaco",
@@ -37529,6 +37625,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Smolder_PetalsofSpringSkin_WR_HD.jpg?48eb5",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:08.758Z"
+    },
+    {
+      "id": "smolder::reindeer-smolder::wild-rift",
+      "champ": "Smolder",
+      "skin": "Reindeer Smolder",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-22",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Smolder_ReindeerSkin_WR.jpg?db0c3",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
       "id": "sona::prestige-requiem-sona::pc",
@@ -42090,6 +42197,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Urgot_AbyssalSwordSkin_WR_HD.jpg?ca098",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:10.519Z"
+    },
+    {
+      "id": "urgot::old-god-urgot::pc",
+      "champ": "Urgot",
+      "skin": "Old God Urgot",
+      "releaseDate": "2026-09-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Urgot_OldGodSkin.jpg?49f5a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
       "id": "varus::soul-fighter-varus::wild-rift",
@@ -48882,7 +48999,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-21T09:57:39.491Z",
+  "catalogGeneratedAt": "2026-09-28T10:56:12.935Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48890,18 +49007,18 @@
       "Module:SkinDataWR/data"
     ],
     "PC": {
-      "total": 2134,
-      "missing": 0,
-      "added": 0,
+      "total": 2141,
+      "missing": 3,
+      "added": 3,
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1070,
-      "missing": 1,
-      "added": 1,
+      "total": 1075,
+      "missing": 8,
+      "added": 8,
       "unresolved": 0
     },
-    "added": 1,
+    "added": 11,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
