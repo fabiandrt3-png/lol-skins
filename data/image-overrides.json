@@ -14455,6 +14455,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "fiddlesticks::warring-kingdoms-fiddlesticks::wild-rift",
+      "champ": "Fiddlesticks",
+      "skin": "Warring Kingdoms Fiddlesticks",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-29",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fiddlesticks_WarringKingdomsSkin_WR.jpg?f2470",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
+    },
+    {
       "id": "fiora::classic-fiora::587",
       "champ": "Fiora",
       "skin": "Classic Fiora",
@@ -15647,6 +15658,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Garen_CamouflageSkin_WR_HD.jpg?fd5bc",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:00.508Z"
+    },
+    {
+      "id": "garen::warring-kingdoms-garen-exquisite-edition::wild-rift",
+      "champ": "Garen",
+      "skin": "Warring Kingdoms Garen Exquisite Edition",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Garen_WarringKingdomsExquisiteEditionSkin_WR.png?84d36",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
     },
     {
       "id": "gnar::classic-gnar::pc",
@@ -18194,6 +18215,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Janna_CovenSkin_HD.jpg?745f6",
       "hdSource": "league-wiki-hd-maximum",
       "hdVerifiedAt": "2026-09-28T11:02:41.232Z"
+    },
+    {
+      "id": "janna::warring-kingdoms-janna::wild-rift",
+      "champ": "Janna",
+      "skin": "Warring Kingdoms Janna",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-29",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Janna_WarringKingdomsSkin_WR.jpg?52882",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
     },
     {
       "id": "jarvan-iv::classic-jarvan-iv::pc",
@@ -38475,6 +38507,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:09.002Z"
     },
     {
+      "id": "swain::warring-kingdoms-swain::wild-rift",
+      "champ": "Swain",
+      "skin": "Warring Kingdoms Swain",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-29",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Swain_WarringKingdomsSkin_WR.jpg?4c93a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
+    },
+    {
       "id": "sylas::classic-sylas::pc",
       "champ": "Sylas",
       "skin": "Classic Sylas",
@@ -41488,6 +41531,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:10.066Z"
     },
     {
+      "id": "twisted-fate::warring-kingdoms-twisted-fate::wild-rift",
+      "champ": "Twisted Fate",
+      "skin": "Warring Kingdoms Twisted Fate",
+      "type": "Wild Rift",
+      "releaseDate": "2026-09-29",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Twisted_Fate_WarringKingdomsSkin_WR.jpg?553a0",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
+    },
+    {
       "id": "twitch::classic-twitch::pc",
       "champ": "Twitch",
       "skin": "Classic Twitch",
@@ -43864,6 +43918,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Vi_ArcaneChainbreakerSkin_WR_HD.jpg?07958",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:11.536Z"
+    },
+    {
+      "id": "vi::warring-kingdoms-vi-exquisite-edition::wild-rift",
+      "champ": "Vi",
+      "skin": "Warring Kingdoms Vi Exquisite Edition",
+      "type": "Wild Rift",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Vi_WarringKingdomsExquisiteEditionSkin_WR.jpg?04d89",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-05T11:30:54.886Z"
     },
     {
       "id": "viego::soul-fighter-viego::wild-rift",
@@ -48854,7 +48918,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-09-28T10:56:12.935Z",
+  "catalogGeneratedAt": "2026-10-05T11:30:56.779Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -48863,17 +48927,17 @@
     ],
     "PC": {
       "total": 2141,
-      "missing": 3,
-      "added": 3,
+      "missing": 0,
+      "added": 0,
       "unresolved": 0
     },
     "Wild Rift": {
       "total": 1075,
-      "missing": 8,
-      "added": 8,
+      "missing": 6,
+      "added": 6,
       "unresolved": 0
     },
-    "added": 11,
+    "added": 6,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
