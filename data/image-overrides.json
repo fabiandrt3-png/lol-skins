@@ -10556,6 +10556,16 @@
       "sourceKind": "legacy"
     },
     {
+      "id": "aphelios::heartsteel-live-my-life-aphelios::pc",
+      "champ": "Aphelios",
+      "skin": "HEARTSTEEL Live My Life Aphelios",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Aphelios_HEARTSTEELLiveMyLifeSkin.jpg?7bbc7",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
+    },
+    {
       "id": "ashe::classic-ashe::183",
       "champ": "Ashe",
       "skin": "Classic Ashe",
@@ -14655,6 +14665,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "ezreal::heartsteel-live-my-life-ezreal::pc",
+      "champ": "Ezreal",
+      "skin": "HEARTSTEEL Live My Life Ezreal",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ezreal_HEARTSTEELLiveMyLifeSkin.jpg?91613",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
     },
     {
       "id": "fiddlesticks::classic-fiddlesticks::574",
@@ -20517,6 +20537,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "k-sante::heartsteel-live-my-life-k-sante::pc",
+      "champ": "K'Sante",
+      "skin": "HEARTSTEEL Live My Life K'Sante",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/K%27Sante_HEARTSTEELLiveMyLifeSkin.jpg?45631",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
+    },
+    {
       "id": "kai-sa::neon-daredevil-kai-sa::wild-rift",
       "champ": "Kai'Sa",
       "skin": "Neon Daredevil Kai'Sa",
@@ -22649,6 +22679,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "kayn::heartsteel-live-my-life-kayn::pc",
+      "champ": "Kayn",
+      "skin": "HEARTSTEEL Live My Life Kayn",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kayn_HEARTSTEELLiveMyLifeSkin.jpg?39cb0",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
+    },
+    {
       "id": "kennen::classic-kennen::pc",
       "champ": "Kennen",
       "skin": "Classic Kennen",
@@ -23607,6 +23647,16 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_PencilSharpenerSkin_WR_HD.jpg?84ef9",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-28T11:02:43.108Z"
+    },
+    {
+      "id": "kog-maw::prestige-classic-baron-kog-maw::pc",
+      "champ": "Kog'Maw",
+      "skin": "Prestige Classic Baron Kog'Maw",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kog%27Maw_PrestigeClassicBaronSkin.jpg?e35ee",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
     },
     {
       "id": "leblanc::prestige-sinful-shores-leblanc::pc",
@@ -36056,6 +36106,16 @@
       "cardVerifiedAt": "2026-09-28T10:56:10.711Z"
     },
     {
+      "id": "sett::prestige-heartsteel-live-my-life-sett::pc",
+      "champ": "Sett",
+      "skin": "Prestige HEARTSTEEL Live My Life Sett",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sett_PrestigeHEARTSTEELLiveMyLifeSkin.jpg?27483",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
+    },
+    {
       "id": "shaco::prestige-pandemonium-shaco::pc",
       "champ": "Shaco",
       "skin": "Prestige Pandemonium Shaco",
@@ -47209,6 +47269,16 @@
       "hdVerifiedAt": "2026-09-11T22:46:12.265Z"
     },
     {
+      "id": "yone::heartsteel-live-my-life-yone::pc",
+      "champ": "Yone",
+      "skin": "HEARTSTEEL Live My Life Yone",
+      "releaseDate": "2026-10-07",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Yone_HEARTSTEELLiveMyLifeSkin.jpg?3e7e4",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-12T12:00:59.108Z"
+    },
+    {
       "id": "yorick::classic-yorick::pc",
       "champ": "Yorick",
       "skin": "Classic Yorick",
@@ -49255,7 +49325,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-10-05T11:30:56.779Z",
+  "catalogGeneratedAt": "2026-10-12T12:01:02.119Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49263,18 +49333,18 @@
       "Module:SkinDataWR/data"
     ],
     "PC": {
-      "total": 2141,
-      "missing": 0,
-      "added": 0,
+      "total": 2146,
+      "missing": 7,
+      "added": 7,
       "unresolved": 0
     },
     "Wild Rift": {
       "total": 1075,
-      "missing": 6,
-      "added": 6,
+      "missing": 0,
+      "added": 0,
       "unresolved": 0
     },
-    "added": 6,
+    "added": 7,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
