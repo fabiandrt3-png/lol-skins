@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:14:41.458Z",
+  "generatedAt": "2026-10-12T12:01:06.264Z",
   "source": "Riot Games — Legends of Runeterra Data Dragon",
   "sourceDocs": "https://developer.riotgames.com/docs/lor",
   "strategy": "Official LoR full champion-card illustrations indexed as secondary art candidates; automatic use is limited to safe fallbacks or explicit curated skin matches.",
@@ -65,13 +65,13 @@
       "name": "Aatrox",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026-full.png",
           "cardCode": "06RU026",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026T3-full.png",
           "cardCode": "06RU026T3",
           "set": "set6cde",
           "collectible": false
@@ -82,13 +82,13 @@
       "name": "Ahri",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004-full.png",
           "cardCode": "05IO004",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004T2-full.png",
           "cardCode": "05IO004T2",
           "set": "set5",
           "collectible": false
@@ -99,13 +99,13 @@
       "name": "Akshan",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130-full.png",
           "cardCode": "04SH130",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130T2-full.png",
           "cardCode": "04SH130T2",
           "set": "set4",
           "collectible": false
@@ -116,13 +116,13 @@
       "name": "Anivia",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024-full.png",
           "cardCode": "01FR024",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024T3-full.png",
           "cardCode": "01FR024T3",
           "set": "set1",
           "collectible": false
@@ -133,13 +133,13 @@
       "name": "Annie",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012-full.png",
           "cardCode": "06NX012",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012T7-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012T7-full.png",
           "cardCode": "06NX012T7",
           "set": "set6",
           "collectible": false
@@ -150,13 +150,13 @@
       "name": "Aphelios",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217-full.png",
           "cardCode": "03MT217",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217T13-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217T13-full.png",
           "cardCode": "03MT217T13",
           "set": "set3",
           "collectible": false
@@ -167,13 +167,13 @@
       "name": "Ashe",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038-full.png",
           "cardCode": "01FR038",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038T2-full.png",
           "cardCode": "01FR038T2",
           "set": "set1",
           "collectible": false
@@ -184,13 +184,13 @@
       "name": "Aurelion Sol",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087-full.png",
           "cardCode": "03MT087",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087T1-full.png",
           "cardCode": "03MT087T1",
           "set": "set3",
           "collectible": false
@@ -201,19 +201,19 @@
       "name": "Azir",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003-full.png",
           "cardCode": "04SH003",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T2-full.png",
           "cardCode": "04SH003T2",
           "set": "set4",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T3-full.png",
           "cardCode": "04SH003T3",
           "set": "set4",
           "collectible": false
@@ -224,13 +224,13 @@
       "name": "Bard",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001-full.png",
           "cardCode": "06RU001",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001T4-full.png",
           "cardCode": "06RU001T4",
           "set": "set6",
           "collectible": false
@@ -241,13 +241,13 @@
       "name": "Braum",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009-full.png",
           "cardCode": "01FR009",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009T1-full.png",
           "cardCode": "01FR009T1",
           "set": "set1",
           "collectible": false
@@ -258,13 +258,13 @@
       "name": "Caitlyn",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006-full.png",
           "cardCode": "05PZ006",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006T2-full.png",
           "cardCode": "05PZ006T2",
           "set": "set5",
           "collectible": false
@@ -275,13 +275,13 @@
       "name": "Darius",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038-full.png",
           "cardCode": "01NX038",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038T2-full.png",
           "cardCode": "01NX038T2",
           "set": "set1",
           "collectible": false
@@ -292,13 +292,13 @@
       "name": "Diana",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056-full.png",
           "cardCode": "03MT056",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056T1-full.png",
           "cardCode": "03MT056T1",
           "set": "set3",
           "collectible": false
@@ -309,7 +309,7 @@
       "name": "Dragon Shyvana",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03DE011T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03DE011T1-full.png",
           "cardCode": "03DE011T1",
           "set": "set3",
           "collectible": false
@@ -320,13 +320,13 @@
       "name": "Draven",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020-full.png",
           "cardCode": "01NX020",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020T3-full.png",
           "cardCode": "01NX020T3",
           "set": "set1",
           "collectible": false
@@ -337,7 +337,7 @@
       "name": "Eggnivia",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024T4-full.png",
           "cardCode": "01FR024T4",
           "set": "set1",
           "collectible": false
@@ -348,13 +348,13 @@
       "name": "Ekko",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001-full.png",
           "cardCode": "04PZ001",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001T3-full.png",
           "cardCode": "04PZ001T3",
           "set": "set4",
           "collectible": false
@@ -365,13 +365,13 @@
       "name": "Elder Dragon",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014-full.png",
           "cardCode": "08RU014",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014T9-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014T9-full.png",
           "cardCode": "08RU014T9",
           "set": "set8",
           "collectible": false
@@ -382,7 +382,7 @@
       "name": "Elise",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053-full.png",
           "cardCode": "01SI053",
           "set": "set1",
           "collectible": true
@@ -393,13 +393,13 @@
       "name": "Evelynn",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025-full.png",
           "cardCode": "06RU025",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025T5-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025T5-full.png",
           "cardCode": "06RU025T5",
           "set": "set6",
           "collectible": false
@@ -410,13 +410,13 @@
       "name": "Ezreal",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036-full.png",
           "cardCode": "01PZ036",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036T1-full.png",
           "cardCode": "01PZ036T1",
           "set": "set1",
           "collectible": false
@@ -427,13 +427,13 @@
       "name": "Fiora",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045-full.png",
           "cardCode": "01DE045",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045T1-full.png",
           "cardCode": "01DE045T1",
           "set": "set1",
           "collectible": false
@@ -444,13 +444,13 @@
       "name": "Fizz",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046-full.png",
           "cardCode": "02BW046",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046T3-full.png",
           "cardCode": "02BW046T3",
           "set": "set2",
           "collectible": false
@@ -461,13 +461,13 @@
       "name": "Galio",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009-full.png",
           "cardCode": "05DE009",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009T1-full.png",
           "cardCode": "05DE009T1",
           "set": "set5",
           "collectible": false
@@ -478,13 +478,13 @@
       "name": "Gangplank",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032-full.png",
           "cardCode": "02BW032",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032T3-full.png",
           "cardCode": "02BW032T3",
           "set": "set2",
           "collectible": false
@@ -495,13 +495,13 @@
       "name": "Garen",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012-full.png",
           "cardCode": "01DE012",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012T1-full.png",
           "cardCode": "01DE012T1",
           "set": "set1",
           "collectible": false
@@ -512,7 +512,7 @@
       "name": "Gnar",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161-full.png",
           "cardCode": "05BC161",
           "set": "set5",
           "collectible": true
@@ -523,7 +523,7 @@
       "name": "Grand Overseer Veigar",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093T2-full.png",
           "cardCode": "05BC093T2",
           "set": "set5",
           "collectible": false
@@ -534,13 +534,13 @@
       "name": "Gwen",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012-full.png",
           "cardCode": "06SI012",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012T1-full.png",
           "cardCode": "06SI012T1",
           "set": "set6",
           "collectible": false
@@ -551,13 +551,13 @@
       "name": "Hecarim",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042-full.png",
           "cardCode": "01SI042",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042T1-full.png",
           "cardCode": "01SI042T1",
           "set": "set1",
           "collectible": false
@@ -568,13 +568,13 @@
       "name": "Heimerdinger",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056-full.png",
           "cardCode": "01PZ056",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056T10-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056T10-full.png",
           "cardCode": "01PZ056T10",
           "set": "set1",
           "collectible": false
@@ -585,13 +585,13 @@
       "name": "Illaoi",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006-full.png",
           "cardCode": "06BW006",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006T1-full.png",
           "cardCode": "06BW006T1",
           "set": "set6",
           "collectible": false
@@ -602,13 +602,13 @@
       "name": "Irelia",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005-full.png",
           "cardCode": "04IO005",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005T2-full.png",
           "cardCode": "04IO005T2",
           "set": "set4",
           "collectible": false
@@ -619,13 +619,13 @@
       "name": "Jack",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002-full.png",
           "cardCode": "07BW002",
           "set": "set7",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002T2-full.png",
           "cardCode": "07BW002T2",
           "set": "set7",
           "collectible": false
@@ -636,13 +636,13 @@
       "name": "Janna",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001-full.png",
           "cardCode": "08PZ001",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001T3-full.png",
           "cardCode": "08PZ001T3",
           "set": "set8",
           "collectible": false
@@ -653,13 +653,13 @@
       "name": "Jarvan IV",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008-full.png",
           "cardCode": "04DE008",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008T1-full.png",
           "cardCode": "04DE008T1",
           "set": "set4",
           "collectible": false
@@ -670,13 +670,13 @@
       "name": "Jax",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008-full.png",
           "cardCode": "06RU008",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008T7-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008T7-full.png",
           "cardCode": "06RU008T7",
           "set": "set6cde",
           "collectible": false
@@ -687,37 +687,37 @@
       "name": "Jayce",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022-full.png",
           "cardCode": "05PZ022",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T1-full.png",
           "cardCode": "05PZ022T1",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T6-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T6-full.png",
           "cardCode": "05PZ022T6",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T7-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T7-full.png",
           "cardCode": "05PZ022T7",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T8-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T8-full.png",
           "cardCode": "05PZ022T8",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T9-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T9-full.png",
           "cardCode": "05PZ022T9",
           "set": "set5",
           "collectible": false
@@ -728,13 +728,13 @@
       "name": "Jhin",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002-full.png",
           "cardCode": "06RU002",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002T1-full.png",
           "cardCode": "06RU002T1",
           "set": "set6",
           "collectible": false
@@ -745,13 +745,13 @@
       "name": "Jinx",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040-full.png",
           "cardCode": "01PZ040",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040T1-full.png",
           "cardCode": "01PZ040T1",
           "set": "set1",
           "collectible": false
@@ -762,13 +762,13 @@
       "name": "Kai'Sa",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009-full.png",
           "cardCode": "06SH009",
           "set": "set6",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009T2-full.png",
           "cardCode": "06SH009T2",
           "set": "set6",
           "collectible": false
@@ -779,13 +779,13 @@
       "name": "Kalista",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI030-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI030-full.png",
           "cardCode": "01SI030",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI030T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI030T2-full.png",
           "cardCode": "01SI030T2",
           "set": "set1",
           "collectible": false
@@ -796,13 +796,13 @@
       "name": "Karma",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041-full.png",
           "cardCode": "01IO041",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041T1-full.png",
           "cardCode": "01IO041T1",
           "set": "set1",
           "collectible": false
@@ -813,13 +813,13 @@
       "name": "Katarina",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042-full.png",
           "cardCode": "01NX042",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042T2-full.png",
           "cardCode": "01NX042T2",
           "set": "set1",
           "collectible": false
@@ -830,13 +830,13 @@
       "name": "Kayle",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008-full.png",
           "cardCode": "06MT008",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008T2-full.png",
           "cardCode": "06MT008T2",
           "set": "set6cde",
           "collectible": false
@@ -847,13 +847,13 @@
       "name": "Kayn",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005-full.png",
           "cardCode": "06RU005",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005T8-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005T8-full.png",
           "cardCode": "06RU005T8",
           "set": "set6cde",
           "collectible": false
@@ -864,13 +864,13 @@
       "name": "Kennen",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058-full.png",
           "cardCode": "05BC058",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058T2-full.png",
           "cardCode": "05BC058T2",
           "set": "set5",
           "collectible": false
@@ -881,13 +881,13 @@
       "name": "Kindred",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005-full.png",
           "cardCode": "04SI005",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005T1-full.png",
           "cardCode": "04SI005T1",
           "set": "set4",
           "collectible": false
@@ -898,13 +898,13 @@
       "name": "LeBlanc",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004-full.png",
           "cardCode": "04NX004",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004T2-full.png",
           "cardCode": "04NX004T2",
           "set": "set4",
           "collectible": false
@@ -915,13 +915,13 @@
       "name": "Lee Sin",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006-full.png",
           "cardCode": "02IO006",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006T1-full.png",
           "cardCode": "02IO006T1",
           "set": "set2",
           "collectible": false
@@ -932,13 +932,13 @@
       "name": "Leona",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054-full.png",
           "cardCode": "03MT054",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054T1-full.png",
           "cardCode": "03MT054T1",
           "set": "set3",
           "collectible": false
@@ -949,13 +949,13 @@
       "name": "Lillia",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052-full.png",
           "cardCode": "09IO052",
           "set": "set9",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052T1-full.png",
           "cardCode": "09IO052T1",
           "set": "set9",
           "collectible": false
@@ -966,13 +966,13 @@
       "name": "Lissandra",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005-full.png",
           "cardCode": "04FR005",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005T1-full.png",
           "cardCode": "04FR005T1",
           "set": "set4",
           "collectible": false
@@ -983,13 +983,13 @@
       "name": "Lucian",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022-full.png",
           "cardCode": "01DE022",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022T1-full.png",
           "cardCode": "01DE022T1",
           "set": "set1",
           "collectible": false
@@ -1000,13 +1000,13 @@
       "name": "Lulu",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002-full.png",
           "cardCode": "03IO002",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002T1-full.png",
           "cardCode": "03IO002T1",
           "set": "set3",
           "collectible": false
@@ -1017,13 +1017,13 @@
       "name": "Lux",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042-full.png",
           "cardCode": "01DE042",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042T2-full.png",
           "cardCode": "01DE042T2",
           "set": "set1",
           "collectible": false
@@ -1034,13 +1034,13 @@
       "name": "Lux: Illuminated",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034-full.png",
           "cardCode": "09DE034",
           "set": "set9",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034T1-full.png",
           "cardCode": "09DE034T1",
           "set": "set9",
           "collectible": false
@@ -1051,13 +1051,13 @@
       "name": "Malphite",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008-full.png",
           "cardCode": "04MT008",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008T1-full.png",
           "cardCode": "04MT008T1",
           "set": "set4",
           "collectible": false
@@ -1068,13 +1068,13 @@
       "name": "Maokai",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008-full.png",
           "cardCode": "02SI008",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008T2-full.png",
           "cardCode": "02SI008T2",
           "set": "set2",
           "collectible": false
@@ -1085,13 +1085,13 @@
       "name": "Master Yi",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008-full.png",
           "cardCode": "06IO008",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008T1-full.png",
           "cardCode": "06IO008T1",
           "set": "set6cde",
           "collectible": false
@@ -1102,7 +1102,7 @@
       "name": "Mega Gnar",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161T1-full.png",
           "cardCode": "05BC161T1",
           "set": "set5",
           "collectible": false
@@ -1113,13 +1113,13 @@
       "name": "Miss Fortune",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022-full.png",
           "cardCode": "02BW022",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022T2-full.png",
           "cardCode": "02BW022T2",
           "set": "set2",
           "collectible": false
@@ -1130,13 +1130,13 @@
       "name": "Mordekaiser",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042-full.png",
           "cardCode": "08SI042",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042T1-full.png",
           "cardCode": "08SI042T1",
           "set": "set8",
           "collectible": false
@@ -1147,13 +1147,13 @@
       "name": "Morgana",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003-full.png",
           "cardCode": "08MT003",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003T4-full.png",
           "cardCode": "08MT003T4",
           "set": "set8",
           "collectible": false
@@ -1164,13 +1164,13 @@
       "name": "Nami",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005-full.png",
           "cardCode": "05BW005",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005T1-full.png",
           "cardCode": "05BW005T1",
           "set": "set5",
           "collectible": false
@@ -1181,19 +1181,19 @@
       "name": "Nasus",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047-full.png",
           "cardCode": "04SH047",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T2-full.png",
           "cardCode": "04SH047T2",
           "set": "set4",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T3-full.png",
           "cardCode": "04SH047T3",
           "set": "set4",
           "collectible": false
@@ -1204,13 +1204,13 @@
       "name": "Nautilus",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053-full.png",
           "cardCode": "02BW053",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053T1-full.png",
           "cardCode": "02BW053T1",
           "set": "set2",
           "collectible": false
@@ -1221,13 +1221,13 @@
       "name": "Neeko",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012-full.png",
           "cardCode": "07RU012",
           "set": "set7b",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012T2-full.png",
           "cardCode": "07RU012T2",
           "set": "set7b",
           "collectible": false
@@ -1238,7 +1238,7 @@
       "name": "Nidalee",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013-full.png",
           "cardCode": "07SH013",
           "set": "set7b",
           "collectible": true
@@ -1249,13 +1249,13 @@
       "name": "Nilah",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008-full.png",
           "cardCode": "08BW008",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008T1-full.png",
           "cardCode": "08BW008T1",
           "set": "set8",
           "collectible": false
@@ -1266,13 +1266,13 @@
       "name": "Nocturne",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005-full.png",
           "cardCode": "03SI005",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005T1-full.png",
           "cardCode": "03SI005T1",
           "set": "set3",
           "collectible": false
@@ -1283,13 +1283,13 @@
       "name": "Norra",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015-full.png",
           "cardCode": "06BC015",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015T2-full.png",
           "cardCode": "06BC015T2",
           "set": "set6cde",
           "collectible": false
@@ -1300,13 +1300,13 @@
       "name": "Ornn",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011-full.png",
           "cardCode": "06FR011",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011T1-full.png",
           "cardCode": "06FR011T1",
           "set": "set6cde",
           "collectible": false
@@ -1317,7 +1317,7 @@
       "name": "Packmother Nidalee",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013T4-full.png",
           "cardCode": "07SH013T4",
           "set": "set7b",
           "collectible": false
@@ -1328,13 +1328,13 @@
       "name": "Pantheon",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003-full.png",
           "cardCode": "05MT003",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003T2-full.png",
           "cardCode": "05MT003T2",
           "set": "set5",
           "collectible": false
@@ -1345,13 +1345,13 @@
       "name": "Poppy",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041-full.png",
           "cardCode": "05BC041",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041T1-full.png",
           "cardCode": "05BC041T1",
           "set": "set5",
           "collectible": false
@@ -1362,13 +1362,13 @@
       "name": "Pyke",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005-full.png",
           "cardCode": "04BW005",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005T2-full.png",
           "cardCode": "04BW005T2",
           "set": "set4",
           "collectible": false
@@ -1379,13 +1379,13 @@
       "name": "Quinn",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006-full.png",
           "cardCode": "02DE006",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006T1-full.png",
           "cardCode": "02DE006T1",
           "set": "set2",
           "collectible": false
@@ -1396,13 +1396,13 @@
       "name": "Rek'Sai",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019-full.png",
           "cardCode": "04SH019",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019T1-full.png",
           "cardCode": "04SH019T1",
           "set": "set4",
           "collectible": false
@@ -1413,19 +1413,19 @@
       "name": "Renekton",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067-full.png",
           "cardCode": "04SH067",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T1-full.png",
           "cardCode": "04SH067T1",
           "set": "set4",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T4-full.png",
           "cardCode": "04SH067T4",
           "set": "set4",
           "collectible": false
@@ -1436,7 +1436,7 @@
       "name": "Rhaast",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005T2-full.png",
           "cardCode": "06RU005T2",
           "set": "set6cde",
           "collectible": false
@@ -1447,13 +1447,13 @@
       "name": "Riven",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007-full.png",
           "cardCode": "03NX007",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007T1-full.png",
           "cardCode": "03NX007T1",
           "set": "set3",
           "collectible": false
@@ -1464,13 +1464,13 @@
       "name": "Rumble",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088-full.png",
           "cardCode": "05BC088",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088T2-full.png",
           "cardCode": "05BC088T2",
           "set": "set5",
           "collectible": false
@@ -1481,13 +1481,13 @@
       "name": "Ryze",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006-full.png",
           "cardCode": "06RU006",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006T5-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006T5-full.png",
           "cardCode": "06RU006T5",
           "set": "set6cde",
           "collectible": false
@@ -1498,13 +1498,13 @@
       "name": "Samira",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007-full.png",
           "cardCode": "07NX007",
           "set": "set7",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007T1-full.png",
           "cardCode": "07NX007T1",
           "set": "set7",
           "collectible": false
@@ -1515,13 +1515,13 @@
       "name": "Sejuani",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002-full.png",
           "cardCode": "02FR002",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002T3-full.png",
           "cardCode": "02FR002T3",
           "set": "set2",
           "collectible": false
@@ -1532,13 +1532,13 @@
       "name": "Senna",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009-full.png",
           "cardCode": "05SI009",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009T1-full.png",
           "cardCode": "05SI009T1",
           "set": "set5",
           "collectible": false
@@ -1549,13 +1549,13 @@
       "name": "Seraphine",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021-full.png",
           "cardCode": "06PZ021",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021T2-full.png",
           "cardCode": "06PZ021T2",
           "set": "set6cde",
           "collectible": false
@@ -1566,13 +1566,13 @@
       "name": "Sett",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011-full.png",
           "cardCode": "07IO011",
           "set": "set7",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011T1-full.png",
           "cardCode": "07IO011T1",
           "set": "set7",
           "collectible": false
@@ -1583,13 +1583,13 @@
       "name": "Shen",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032-full.png",
           "cardCode": "01IO032",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032T1-full.png",
           "cardCode": "01IO032T1",
           "set": "set1",
           "collectible": false
@@ -1600,7 +1600,7 @@
       "name": "Shyvana",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03DE011-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03DE011-full.png",
           "cardCode": "03DE011",
           "set": "set3",
           "collectible": true
@@ -1611,13 +1611,13 @@
       "name": "Sion",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001-full.png",
           "cardCode": "05NX001",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001T3-full.png",
           "cardCode": "05NX001T3",
           "set": "set5",
           "collectible": false
@@ -1628,7 +1628,7 @@
       "name": "Sion Returned",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001T1-full.png",
           "cardCode": "05NX001T1",
           "set": "set5",
           "collectible": false
@@ -1639,13 +1639,13 @@
       "name": "Sivir",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020-full.png",
           "cardCode": "04SH020",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020T1-full.png",
           "cardCode": "04SH020T1",
           "set": "set4",
           "collectible": false
@@ -1656,13 +1656,13 @@
       "name": "Soraka",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055-full.png",
           "cardCode": "03MT055",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055T1-full.png",
           "cardCode": "03MT055T1",
           "set": "set3",
           "collectible": false
@@ -1673,7 +1673,7 @@
       "name": "Spider Queen Elise",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053T2-full.png",
           "cardCode": "01SI053T2",
           "set": "set1",
           "collectible": false
@@ -1684,13 +1684,13 @@
       "name": "Swain",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007-full.png",
           "cardCode": "02NX007",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007T2-full.png",
           "cardCode": "02NX007T2",
           "set": "set2",
           "collectible": false
@@ -1701,13 +1701,13 @@
       "name": "Tahm Kench",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03BW004-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03BW004-full.png",
           "cardCode": "03BW004",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03BW004T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03BW004T3-full.png",
           "cardCode": "03BW004T3",
           "set": "set3",
           "collectible": false
@@ -1718,13 +1718,13 @@
       "name": "Taliyah",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073-full.png",
           "cardCode": "04SH073",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073T2-full.png",
           "cardCode": "04SH073T2",
           "set": "set4",
           "collectible": false
@@ -1735,13 +1735,13 @@
       "name": "Taric",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058-full.png",
           "cardCode": "03MT058",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058T1-full.png",
           "cardCode": "03MT058T1",
           "set": "set3",
           "collectible": false
@@ -1752,13 +1752,13 @@
       "name": "Teemo",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008-full.png",
           "cardCode": "01PZ008",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008T2-full.png",
           "cardCode": "01PZ008T2",
           "set": "set1",
           "collectible": false
@@ -1769,13 +1769,13 @@
       "name": "The Poro King",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015-full.png",
           "cardCode": "07RU015",
           "set": "set7b",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015T4-full.png",
           "cardCode": "07RU015T4",
           "set": "set7b",
           "collectible": false
@@ -1786,7 +1786,7 @@
       "name": "The Shadow Assassin",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005T1-full.png",
           "cardCode": "06RU005T1",
           "set": "set6cde",
           "collectible": false
@@ -1797,13 +1797,13 @@
       "name": "Thresh",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052-full.png",
           "cardCode": "01SI052",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052T1-full.png",
           "cardCode": "01SI052T1",
           "set": "set1",
           "collectible": false
@@ -1814,13 +1814,13 @@
       "name": "Tristana",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133-full.png",
           "cardCode": "05BC133",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133T1-full.png",
           "cardCode": "05BC133T1",
           "set": "set5",
           "collectible": false
@@ -1831,13 +1831,13 @@
       "name": "Trundle",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006-full.png",
           "cardCode": "03FR006",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006T2-full.png",
           "cardCode": "03FR006T2",
           "set": "set3",
           "collectible": false
@@ -1848,13 +1848,13 @@
       "name": "Tryndamere",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039-full.png",
           "cardCode": "01FR039",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039T2-full.png",
           "cardCode": "01FR039T2",
           "set": "set1",
           "collectible": false
@@ -1865,13 +1865,13 @@
       "name": "Twisted Fate",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026-full.png",
           "cardCode": "02BW026",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026T3-full.png",
           "cardCode": "02BW026T3",
           "set": "set2",
           "collectible": false
@@ -1882,13 +1882,13 @@
       "name": "Udyr",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013-full.png",
           "cardCode": "05FR013",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013T4-full.png",
           "cardCode": "05FR013T4",
           "set": "set5",
           "collectible": false
@@ -1899,13 +1899,13 @@
       "name": "Varus",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009-full.png",
           "cardCode": "06RU009",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009T6-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009T6-full.png",
           "cardCode": "06RU009T6",
           "set": "set6cde",
           "collectible": false
@@ -1916,13 +1916,13 @@
       "name": "Vayne",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021-full.png",
           "cardCode": "06DE021",
           "set": "set6cde",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021T1-full.png",
           "cardCode": "06DE021T1",
           "set": "set6cde",
           "collectible": false
@@ -1933,7 +1933,7 @@
       "name": "Veigar",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093-full.png",
           "cardCode": "05BC093",
           "set": "set5",
           "collectible": true
@@ -1944,13 +1944,13 @@
       "name": "Vex",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001-full.png",
           "cardCode": "09BC001",
           "set": "set9",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001T3-full.png",
           "cardCode": "09BC001T3",
           "set": "set9",
           "collectible": false
@@ -1961,13 +1961,13 @@
       "name": "Vi",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008-full.png",
           "cardCode": "02PZ008",
           "set": "set2",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008T2-full.png",
           "cardCode": "02PZ008T2",
           "set": "set2",
           "collectible": false
@@ -1978,13 +1978,13 @@
       "name": "Viego",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055-full.png",
           "cardCode": "04SI055",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055T2-full.png",
           "cardCode": "04SI055T2",
           "set": "set4",
           "collectible": false
@@ -1995,13 +1995,13 @@
       "name": "Viktor",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03PZ003-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03PZ003-full.png",
           "cardCode": "03PZ003",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03PZ003T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03PZ003T1-full.png",
           "cardCode": "03PZ003T1",
           "set": "set3",
           "collectible": false
@@ -2012,13 +2012,13 @@
       "name": "Vladimir",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX006-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX006-full.png",
           "cardCode": "01NX006",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX006T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX006T1-full.png",
           "cardCode": "01NX006T1",
           "set": "set1",
           "collectible": false
@@ -2029,13 +2029,13 @@
       "name": "Volibear",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001-full.png",
           "cardCode": "08FR001",
           "set": "set8",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001T1-full.png",
           "cardCode": "08FR001T1",
           "set": "set8",
           "collectible": false
@@ -2046,19 +2046,19 @@
       "name": "Xerath",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014-full.png",
           "cardCode": "05SH014",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T1-full.png",
           "cardCode": "05SH014T1",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T2-full.png",
           "cardCode": "05SH014T2",
           "set": "set5",
           "collectible": false
@@ -2069,13 +2069,13 @@
       "name": "Yasuo",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015-full.png",
           "cardCode": "01IO015",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015T1-full.png",
           "cardCode": "01IO015T1",
           "set": "set1",
           "collectible": false
@@ -2086,37 +2086,37 @@
       "name": "Yuumi",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029-full.png",
           "cardCode": "05BC029",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T3-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T3-full.png",
           "cardCode": "05BC029T3",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T4-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T4-full.png",
           "cardCode": "05BC029T4",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T5-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T5-full.png",
           "cardCode": "05BC029T5",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T7-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T7-full.png",
           "cardCode": "05BC029T7",
           "set": "set5",
           "collectible": false
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T8-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T8-full.png",
           "cardCode": "05BC029T8",
           "set": "set5",
           "collectible": false
@@ -2127,13 +2127,13 @@
       "name": "Zed",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009-full.png",
           "cardCode": "01IO009",
           "set": "set1",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009T2-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009T2-full.png",
           "cardCode": "01IO009T2",
           "set": "set1",
           "collectible": false
@@ -2144,13 +2144,13 @@
       "name": "Ziggs",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163-full.png",
           "cardCode": "05BC163",
           "set": "set5",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163T1-full.png",
           "cardCode": "05BC163T1",
           "set": "set5",
           "collectible": false
@@ -2161,13 +2161,13 @@
       "name": "Zilean",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039-full.png",
           "cardCode": "04SH039",
           "set": "set4",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039T1-full.png",
           "cardCode": "04SH039T1",
           "set": "set4",
           "collectible": false
@@ -2178,13 +2178,13 @@
       "name": "Zoe",
       "arts": [
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009-full.png",
           "cardCode": "03MT009",
           "set": "set3",
           "collectible": true
         },
         {
-          "url": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009T1-full.png",
+          "url": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009T1-full.png",
           "cardCode": "03MT009T1",
           "set": "set3",
           "collectible": false

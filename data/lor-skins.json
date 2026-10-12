@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T11:31:04.804Z",
+  "generatedAt": "2026-10-12T12:01:07.482Z",
   "source": "Riot Games LoR Data Dragon + League of Legends Wiki LoR cosmetics metadata",
   "sourceDocs": "https://developer.riotgames.com/docs/lor",
   "metadataSource": "https://wiki.leagueoflegends.com/en-us/Module:LoRCosmetics/skins?action=raw",
@@ -68,7 +68,7 @@
       "skin": "Original Aatrox — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU026-full.png?c3185",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU026-full.png?c3185",
@@ -76,7 +76,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU026-alt-full.png?c28e2",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -93,7 +93,7 @@
       "skin": "Original Aatrox — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU026T3-full.png?48656",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU026T3-full.png?48656",
@@ -101,7 +101,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU026T3-alt-full.png?4769a",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU026T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU026T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -152,13 +152,13 @@
       "skin": "Original Ahri — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05IO004-full.png?9acea",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05IO004-full.png?9acea"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -175,13 +175,13 @@
       "skin": "Original Ahri — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05IO004T2-full.png?7eb24",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05IO004T2-full.png?7eb24"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05IO004T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05IO004T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -306,13 +306,13 @@
       "skin": "Original Akshan — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-07-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH130-full.png?f0a05",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH130-full.png?f0a05"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -329,13 +329,13 @@
       "skin": "Original Akshan — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-07-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH130T2-full.png?72f34",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH130T2-full.png?72f34"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH130T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH130T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -398,14 +398,14 @@
       "skin": "Original Anivia — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR024-hd-full.jpg?5f07c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR024-full.png?684ca"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR024-full.png?684ca",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -422,14 +422,14 @@
       "skin": "Original Anivia — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR024T3-hd-full.jpg?f3e44",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR024T3-full.png?3e1e4"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR024T3-full.png?3e1e4",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR024T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR024T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -486,13 +486,13 @@
       "skin": "Original Annie — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06NX012-full.png?050c8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06NX012-full.png?050c8"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -509,7 +509,7 @@
       "skin": "Original Annie — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012T7-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012T7-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06NX012T7-full.png?bba56",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06NX012T7-full.png?bba56",
@@ -517,7 +517,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06NX012T7-alt-full.png?d2e37",
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06NX012T7-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06NX012T7-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -534,13 +534,13 @@
       "skin": "Original Aphelios — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-02-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT217-full.png?0ddec",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT217-full.png?0ddec"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -557,13 +557,13 @@
       "skin": "Original Aphelios — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-02-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217T13-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217T13-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT217T13-full.png?f033d",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT217T13-full.png?f033d"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT217T13-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT217T13-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -626,14 +626,14 @@
       "skin": "Original Ashe — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR038-hd-full.jpg?f01c4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR038-full.png?0974d"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR038-full.png?0974d",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -650,14 +650,14 @@
       "skin": "Original Ashe — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR038T2-hd-full.jpg?84453",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR038T2-full.png?54d20"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR038T2-full.png?54d20",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR038T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR038T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -742,13 +742,13 @@
       "skin": "Original Aurelion Sol — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT087-full.png?1d109",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT087-full.png?1d109"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -765,13 +765,13 @@
       "skin": "Original Aurelion Sol — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT087T1-full.png?5952c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT087T1-full.png?5952c"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT087T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT087T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -862,13 +862,13 @@
       "skin": "Original Azir — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH003-full.png?06f14",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH003-full.png?06f14"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -885,13 +885,13 @@
       "skin": "Original Azir — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH003T3-full.png?31918",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH003T3-full.png?31918"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -908,13 +908,13 @@
       "skin": "Original Azir — Level 3",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH003T2-full.png?de129",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH003T2-full.png?de129"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH003T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH003T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -988,13 +988,13 @@
       "skin": "Original Bard — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU001-full.png?1e728",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU001-full.png?1e728"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1011,13 +1011,13 @@
       "skin": "Original Bard — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU001T4-full.png?8fefd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU001T4-full.png?8fefd"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU001T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU001T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1102,14 +1102,14 @@
       "skin": "Original Braum — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR009-hd-full.jpg?adec7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR009-full.png?2d41a"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR009-full.png?2d41a",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1126,14 +1126,14 @@
       "skin": "Original Braum — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR009T1-hd-full.jpg?1734e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR009T1-full.png?aeeb1"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR009T1-full.png?aeeb1",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR009T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR009T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1184,13 +1184,13 @@
       "skin": "Original Caitlyn — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05PZ006-full.png?27c59",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05PZ006-full.png?27c59"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1207,13 +1207,13 @@
       "skin": "Original Caitlyn — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05PZ006T2-full.png?fcff0",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05PZ006T2-full.png?fcff0"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ006T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ006T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1344,7 +1344,7 @@
       "skin": "Original Darius — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX038-hd-full.jpg?a1a50",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX038-full.png?246d6",
@@ -1353,7 +1353,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX038-full.png?246d6",
         "https://wiki.leagueoflegends.com/en-us/images/01NX038-alt-full.png?a5720",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1370,14 +1370,14 @@
       "skin": "Original Darius — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX038T2-hd-full.jpg?79d02",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX038T2-full.png?c90f3"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX038T2-full.png?c90f3",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX038T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX038T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1434,13 +1434,13 @@
       "skin": "Original Diana — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT056-full.png?12a51",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT056-full.png?12a51"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1457,13 +1457,13 @@
       "skin": "Original Diana — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT056T1-full.png?bc12b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT056T1-full.png?bc12b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT056T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT056T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1604,14 +1604,14 @@
       "skin": "Original Draven — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX020-hd-full.jpg?de628",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX020-full.png?12da5"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX020-full.png?12da5",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1628,14 +1628,14 @@
       "skin": "Original Draven — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX020T3-hd-full.jpg?26543",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX020T3-full.png?bf6ef"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX020T3-full.png?bf6ef",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX020T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX020T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1740,13 +1740,13 @@
       "skin": "Original Ekko — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04PZ001-full.png?c1bd4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04PZ001-full.png?c1bd4"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1763,13 +1763,13 @@
       "skin": "Original Ekko — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04PZ001T3-full.png?139c3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04PZ001T3-full.png?139c3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04PZ001T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04PZ001T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1860,13 +1860,13 @@
       "skin": "Original Elder Dragon — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08RU014-full.png?badbd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08RU014-full.png?badbd"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1883,13 +1883,13 @@
       "skin": "Original Elder Dragon — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014T9-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014T9-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08RU014T9-full.png?2154b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08RU014T9-full.png?2154b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08RU014T9-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08RU014T9-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -1986,7 +1986,7 @@
       "skin": "Original Elise — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI053-hd-full.jpg?a90ae",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI053-full.png?c4b8c",
@@ -1995,7 +1995,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI053-full.png?c4b8c",
         "https://wiki.leagueoflegends.com/en-us/images/01SI053-alt-full.png?93476",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2012,7 +2012,7 @@
       "skin": "Original Elise — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI053T2-hd-full.jpg?273b9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI053T2-full.png?774ec",
@@ -2021,7 +2021,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI053T2-full.png?774ec",
         "https://wiki.leagueoflegends.com/en-us/images/01SI053T2-alt-full.png?e562b",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI053T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI053T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2078,7 +2078,7 @@
       "skin": "Original Evelynn — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU025-full.png?7c2c7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU025-full.png?7c2c7",
@@ -2086,7 +2086,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU025-alt-full.png?f4adf",
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2103,7 +2103,7 @@
       "skin": "Original Evelynn — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025T5-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025T5-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU025T5-full.png?17d1f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU025T5-full.png?17d1f",
@@ -2111,7 +2111,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU025T5-alt-full.png?20fb0",
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU025T5-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU025T5-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2230,14 +2230,14 @@
       "skin": "Original Ezreal — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ036-hd-full.jpg?18ec9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ036-full.png?50e77"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ036-full.png?50e77",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2254,13 +2254,13 @@
       "skin": "Original Ezreal — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ036T1-full.png?9e0cd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ036T1-full.png?9e0cd"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ036T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ036T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2311,14 +2311,14 @@
       "skin": "Original Fiora — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE045-hd-full.jpg?d6bb8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE045-full.png?19265"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE045-full.png?19265",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2335,14 +2335,14 @@
       "skin": "Original Fiora — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE045T1-hd-full.jpg?a274e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE045T1-full.png?1cbf5"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE045T1-full.png?1cbf5",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE045T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE045T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2407,13 +2407,13 @@
       "skin": "Original Fizz — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW046-full.png?16a03",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW046-full.png?16a03"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2430,14 +2430,14 @@
       "skin": "Original Fizz — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW046T3-hd-full.jpg?ecfff",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW046T3-full.png?9cdfb"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW046T3-full.png?9cdfb",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW046T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW046T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2540,13 +2540,13 @@
       "skin": "Original Galio — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-02-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05DE009-full.png?7141a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05DE009-full.png?7141a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2563,13 +2563,13 @@
       "skin": "Original Galio — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-02-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05DE009T1-full.png?853f3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05DE009T1-full.png?853f3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05DE009T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05DE009T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2668,13 +2668,13 @@
       "skin": "Original Gangplank — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW032-full.png?441cb",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW032-full.png?441cb"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2691,14 +2691,14 @@
       "skin": "Original Gangplank — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW032T3-hd-full.jpg?cef6f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW032T3-full.png?ead48"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW032T3-full.png?ead48",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW032T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW032T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2749,14 +2749,14 @@
       "skin": "Original Garen — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE012-hd-full.jpg?0d58c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE012-full.png?ef8b3"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE012-full.png?ef8b3",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2773,14 +2773,14 @@
       "skin": "Original Garen — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE012T1-hd-full.jpg?d1cee",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE012T1-full.png?1355e"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE012T1-full.png?1355e",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE012T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE012T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2837,13 +2837,13 @@
       "skin": "Original Gnar — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC161-full.png?f7bc5",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC161-full.png?f7bc5"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2860,13 +2860,13 @@
       "skin": "Original Gnar — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC161T1-full.png?cb101",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC161T1-full.png?cb101"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC161T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC161T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2883,13 +2883,13 @@
       "skin": "Original Gwen — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06SI012-full.png?c72b8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06SI012-full.png?c72b8"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -2906,13 +2906,13 @@
       "skin": "Original Gwen — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06SI012T1-full.png?0bfd7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06SI012T1-full.png?0bfd7"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SI012T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SI012T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3007,7 +3007,7 @@
       "skin": "Original Hecarim — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI042-hd-full.jpg?3adfa",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI042-full.png?2a50b",
@@ -3016,7 +3016,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI042-full.png?2a50b",
         "https://wiki.leagueoflegends.com/en-us/images/01SI042-alt-full.png?7122c",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3033,7 +3033,7 @@
       "skin": "Original Hecarim — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI042T1-full.png?4e166",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI042T1-full.png?4e166",
@@ -3041,7 +3041,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI042T1-alt-full.png?5e0a0",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI042T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI042T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3092,14 +3092,14 @@
       "skin": "Original Heimerdinger — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ056-hd-full.jpg?bd505",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ056-full.png?307d2"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ056-full.png?307d2",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3116,14 +3116,14 @@
       "skin": "Original Heimerdinger — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056T10-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056T10-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ056T10-hd-full.jpg?df0b3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ056T10-full.png?9aa16"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ056T10-full.png?9aa16",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ056T10-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ056T10-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3180,13 +3180,13 @@
       "skin": "Original Illaoi — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06BW006-full.png?079a2",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06BW006-full.png?079a2"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3203,13 +3203,13 @@
       "skin": "Original Illaoi — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06BW006T1-full.png?d4f10",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06BW006T1-full.png?d4f10"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06BW006T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06BW006T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3260,7 +3260,7 @@
       "skin": "Original Irelia — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04IO005-full.png?eb3ef",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04IO005-full.png?eb3ef",
@@ -3268,7 +3268,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04IO005-alt-full.png?cd6f9",
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3285,13 +3285,13 @@
       "skin": "Original Irelia — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04IO005T2-full.png?c36b9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04IO005T2-full.png?c36b9"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04IO005T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04IO005T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3388,13 +3388,13 @@
       "skin": "Original Jack — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07BW002-full.png?b816b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07BW002-full.png?b816b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3411,13 +3411,13 @@
       "skin": "Original Jack — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07BW002T2-full.png?9b809",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07BW002T2-full.png?9b809"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07BW002T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07BW002T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3474,13 +3474,13 @@
       "skin": "Original Janna — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08PZ001-full.png?35f80",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08PZ001-full.png?35f80"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3497,13 +3497,13 @@
       "skin": "Original Janna — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08PZ001T3-full.png?b42fc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08PZ001T3-full.png?b42fc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08PZ001T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08PZ001T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3560,13 +3560,13 @@
       "skin": "Original Jarvan IV — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04DE008-full.png?cf3b4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04DE008-full.png?cf3b4"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3583,13 +3583,13 @@
       "skin": "Original Jarvan IV — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04DE008T1-full.png?7b61d",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04DE008T1-full.png?7b61d"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04DE008T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04DE008T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3640,7 +3640,7 @@
       "skin": "Original Jax — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU008-full.png?71d74",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU008-full.png?71d74",
@@ -3648,7 +3648,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU008-alt-full.png?b01e0",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3665,13 +3665,13 @@
       "skin": "Original Jax — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008T7-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008T7-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU008T7-full.png?ac406",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU008T7-full.png?ac406"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU008T7-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU008T7-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3722,13 +3722,13 @@
       "skin": "Original Jayce — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-11-10",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05PZ022-full.png?0df32",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05PZ022-full.png?0df32"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3745,13 +3745,13 @@
       "skin": "Original Jayce — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-11-10",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05PZ022T1-full.png?b0feb",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05PZ022T1-full.png?b0feb"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05PZ022T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05PZ022T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3808,13 +3808,13 @@
       "skin": "Original Jhin — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU002-full.png?a4a5e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU002-full.png?a4a5e"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -3831,13 +3831,13 @@
       "skin": "Original Jhin — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-05-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU002T1-full.png?3ecd3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU002T1-full.png?3ecd3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06RU002T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06RU002T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4005,14 +4005,14 @@
       "skin": "Original Jinx — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ040-hd-full.jpg?e3b99",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ040-full.png?d13a2"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ040-full.png?d13a2",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4029,14 +4029,14 @@
       "skin": "Original Jinx — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ040T1-hd-full.jpg?9f560",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ040T1-full.png?3fc64"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ040T1-full.png?3fc64",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ040T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ040T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4167,13 +4167,13 @@
       "skin": "Original Kai'Sa — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06SH009-full.png?37831",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06SH009-full.png?37831"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4190,13 +4190,13 @@
       "skin": "Original Kai'Sa — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-07-20",
-      "image": "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06SH009T2-full.png?1ec83",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06SH009T2-full.png?1ec83"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6/en_us/img/cards/06SH009T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6/en_us/img/cards/06SH009T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4288,14 +4288,14 @@
       "skin": "Original Karma — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO041-hd-full.jpg?cd2cd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO041-full.png?d6469"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO041-full.png?d6469",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4312,14 +4312,14 @@
       "skin": "Original Karma — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO041T1-hd-full.jpg?11051",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO041T1-full.png?f8ff3"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO041T1-full.png?f8ff3",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO041T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO041T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4410,14 +4410,14 @@
       "skin": "Original Katarina — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX042-hd-full.jpg?7d70a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX042-full.png?b518b"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX042-full.png?b518b",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4434,14 +4434,14 @@
       "skin": "Original Katarina — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01NX042T2-hd-full.jpg?7ed87",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX042T2-full.png?80d67"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01NX042T2-full.png?80d67",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01NX042T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01NX042T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4492,13 +4492,13 @@
       "skin": "Original Kayle — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06MT008-full.png?818d1",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06MT008-full.png?818d1"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4515,7 +4515,7 @@
       "skin": "Original Kayle — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06MT008T2-full.png?9a96e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06MT008T2-full.png?9a96e",
@@ -4523,7 +4523,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06MT008T2-alt-full.png?5d69a",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06MT008T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06MT008T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4574,7 +4574,7 @@
       "skin": "Original Kayn — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU005-full.png?5e5ec",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU005-full.png?5e5ec",
@@ -4582,7 +4582,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU005-alt-full.png?9bac6",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4599,13 +4599,13 @@
       "skin": "Original Kayn — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005T8-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005T8-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU005T8-full.png?44a78",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU005T8-full.png?44a78"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU005T8-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU005T8-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4622,13 +4622,13 @@
       "skin": "Original Kennen — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC058-full.png?83e9f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC058-full.png?83e9f"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4645,13 +4645,13 @@
       "skin": "Original Kennen — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC058T2-full.png?82cd7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC058T2-full.png?82cd7"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC058T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC058T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4702,13 +4702,13 @@
       "skin": "Original Kindred — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SI005-full.png?d29c1",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SI005-full.png?d29c1"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4725,7 +4725,7 @@
       "skin": "Original Kindred — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SI005T1-full.png?500a5",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SI005T1-full.png?500a5",
@@ -4733,7 +4733,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SI005T1-alt-full.png?8554b",
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI005T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI005T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4784,7 +4784,7 @@
       "skin": "Original LeBlanc — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04NX004-full.png?5eed3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04NX004-full.png?5eed3",
@@ -4792,7 +4792,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04NX004-alt-full.png?83c2d",
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4809,13 +4809,13 @@
       "skin": "Original LeBlanc — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04NX004T2-full.png?d474f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04NX004T2-full.png?d474f"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04NX004T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04NX004T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4866,14 +4866,14 @@
       "skin": "Original Lee Sin — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02IO006-hd-full.jpg?56c17",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02IO006-full.png?0656a"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02IO006-full.png?0656a",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4890,13 +4890,13 @@
       "skin": "Original Lee Sin — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02IO006T1-full.png?c7757",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02IO006T1-full.png?c7757"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02IO006T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02IO006T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -4993,13 +4993,13 @@
       "skin": "Original Leona — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT054-full.png?d018e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT054-full.png?d018e"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5016,13 +5016,13 @@
       "skin": "Original Leona — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT054T1-full.png?fb349",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT054T1-full.png?fb349"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT054T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT054T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5151,13 +5151,13 @@
       "skin": "Original Lillia — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09IO052-full.png?6cb1a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09IO052-full.png?6cb1a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5174,13 +5174,13 @@
       "skin": "Original Lillia — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09IO052T1-full.png?29b78",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09IO052T1-full.png?29b78"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09IO052T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09IO052T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5197,13 +5197,13 @@
       "skin": "Original Lissandra — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04FR005-full.png?e7348",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04FR005-full.png?e7348"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5220,13 +5220,13 @@
       "skin": "Original Lissandra — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04FR005T1-full.png?db34d",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04FR005T1-full.png?db34d"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04FR005T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04FR005T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5277,14 +5277,14 @@
       "skin": "Original Lucian — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE022-hd-full.jpg?891e4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE022-full.png?8acc9"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE022-full.png?8acc9",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5301,14 +5301,14 @@
       "skin": "Original Lucian — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE022T1-hd-full.jpg?18354",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE022T1-full.png?4628f"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE022T1-full.png?4628f",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE022T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE022T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5373,13 +5373,13 @@
       "skin": "Original Lulu — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03IO002-full.png?3f0cc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03IO002-full.png?3f0cc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5396,13 +5396,13 @@
       "skin": "Original Lulu — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03IO002T1-full.png?77d39",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03IO002T1-full.png?77d39"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03IO002T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03IO002T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5493,14 +5493,14 @@
       "skin": "Original Lux — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE042-hd-full.jpg?843ba",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE042-full.png?827ee"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE042-full.png?827ee",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5517,14 +5517,14 @@
       "skin": "Original Lux — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01DE042T2-hd-full.jpg?269a4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE042T2-full.png?2f6da"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01DE042T2-full.png?2f6da",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01DE042T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01DE042T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5581,13 +5581,13 @@
       "skin": "Original Lux: Illuminated — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09DE034-full.png?7df93",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09DE034-full.png?7df93"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5604,13 +5604,13 @@
       "skin": "Original Lux: Illuminated — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09DE034T1-full.png?b1c48",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09DE034T1-full.png?b1c48"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09DE034T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09DE034T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5661,13 +5661,13 @@
       "skin": "Original Malphite — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-05-05",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04MT008-full.png?e5c99",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04MT008-full.png?e5c99"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5684,13 +5684,13 @@
       "skin": "Original Malphite — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-05-05",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04MT008T1-full.png?6619a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04MT008T1-full.png?6619a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04MT008T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04MT008T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5781,13 +5781,13 @@
       "skin": "Original Maokai — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02SI008-full.png?3b7dc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02SI008-full.png?3b7dc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5804,13 +5804,13 @@
       "skin": "Original Maokai — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02SI008T2-full.png?939b4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02SI008T2-full.png?939b4"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02SI008T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02SI008T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5861,13 +5861,13 @@
       "skin": "Original Master Yi — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06IO008-full.png?a4399",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06IO008-full.png?a4399"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5884,13 +5884,13 @@
       "skin": "Original Master Yi — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06IO008T1-full.png?03296",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06IO008T1-full.png?03296"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06IO008T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06IO008T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5941,13 +5941,13 @@
       "skin": "Original Miss Fortune — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW022-full.png?66ae3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW022-full.png?66ae3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -5964,14 +5964,14 @@
       "skin": "Original Miss Fortune — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW022T2-hd-full.jpg?37a2c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW022T2-full.png?a5939"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW022T2-full.png?a5939",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW022T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW022T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6022,13 +6022,13 @@
       "skin": "Original Mordekaiser — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08SI042-full.png?73de0",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08SI042-full.png?73de0"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6045,13 +6045,13 @@
       "skin": "Original Mordekaiser — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08SI042T1-full.png?22640",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08SI042T1-full.png?22640"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08SI042T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08SI042T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6102,13 +6102,13 @@
       "skin": "Original Morgana — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08MT003-full.png?2e4ac",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08MT003-full.png?2e4ac"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6125,13 +6125,13 @@
       "skin": "Original Morgana — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-12-06",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08MT003T4-full.png?601b9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08MT003T4-full.png?601b9"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08MT003T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08MT003T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6182,13 +6182,13 @@
       "skin": "Original Nami — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BW005-full.png?df4ae",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BW005-full.png?df4ae"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6205,13 +6205,13 @@
       "skin": "Original Nami — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BW005T1-full.png?25d98",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BW005T1-full.png?25d98"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BW005T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BW005T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6308,13 +6308,13 @@
       "skin": "Original Nasus — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH047-full.png?5e778",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH047-full.png?5e778"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6331,13 +6331,13 @@
       "skin": "Original Nasus — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH047T3-full.png?136cb",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH047T3-full.png?136cb"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6354,13 +6354,13 @@
       "skin": "Original Nasus — Level 3",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH047T2-full.png?a52a9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH047T2-full.png?a52a9"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH047T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH047T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6485,14 +6485,14 @@
       "skin": "Original Nautilus — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW053-hd-full.jpg?e0ff8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW053-full.png?9f4f8"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW053-full.png?9f4f8",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6509,14 +6509,14 @@
       "skin": "Original Nautilus — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW053T1-hd-full.jpg?589bf",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW053T1-full.png?e0ab2"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW053T1-full.png?e0ab2",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW053T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW053T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6567,13 +6567,13 @@
       "skin": "Original Neeko — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07RU012-full.png?4965e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07RU012-full.png?4965e"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6590,13 +6590,13 @@
       "skin": "Original Neeko — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07RU012T2-full.png?916ec",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07RU012T2-full.png?916ec"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU012T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU012T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6613,13 +6613,13 @@
       "skin": "Original Nidalee — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07SH013-full.png?bf6f8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07SH013-full.png?bf6f8"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6636,13 +6636,13 @@
       "skin": "Original Nidalee — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07SH013T4-full.png?0d6ea",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07SH013T4-full.png?0d6ea"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07SH013T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07SH013T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6699,13 +6699,13 @@
       "skin": "Original Nilah — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08BW008-full.png?98183",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08BW008-full.png?98183"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6722,13 +6722,13 @@
       "skin": "Original Nilah — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08BW008T1-full.png?ba351",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08BW008T1-full.png?ba351"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08BW008T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08BW008T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6785,13 +6785,13 @@
       "skin": "Original Nocturne — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03SI005-full.png?2a6bf",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03SI005-full.png?2a6bf"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6808,13 +6808,13 @@
       "skin": "Original Nocturne — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03SI005T1-full.png?29332",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03SI005T1-full.png?29332"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03SI005T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03SI005T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6871,13 +6871,13 @@
       "skin": "Original Norra — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06BC015-full.png?4c6a9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06BC015-full.png?4c6a9"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6894,13 +6894,13 @@
       "skin": "Original Norra — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06BC015T2-full.png?d28f7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06BC015T2-full.png?d28f7"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06BC015T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06BC015T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6917,13 +6917,13 @@
       "skin": "Original Ornn — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06FR011-full.png?4d869",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06FR011-full.png?4d869"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6940,13 +6940,13 @@
       "skin": "Original Ornn — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-08-31",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06FR011T1-full.png?8b248",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06FR011T1-full.png?8b248"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06FR011T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06FR011T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6963,13 +6963,13 @@
       "skin": "Original Pantheon — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05MT003-full.png?28910",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05MT003-full.png?28910"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -6986,7 +6986,7 @@
       "skin": "Original Pantheon — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05MT003T2-full.png?ddbf7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05MT003T2-full.png?ddbf7",
@@ -6994,7 +6994,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05MT003T2-alt-full.png?0360a",
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05MT003T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05MT003T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7095,13 +7095,13 @@
       "skin": "Original Poppy — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC041-full.png?009a4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC041-full.png?009a4"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7118,13 +7118,13 @@
       "skin": "Original Poppy — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC041T1-full.png?303a2",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC041T1-full.png?303a2"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC041T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC041T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7181,13 +7181,13 @@
       "skin": "Original Pyke — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04BW005-full.png?a16cd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04BW005-full.png?a16cd"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7204,13 +7204,13 @@
       "skin": "Original Pyke — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04BW005T2-full.png?9dfa2",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04BW005T2-full.png?9dfa2"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04BW005T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04BW005T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7335,13 +7335,13 @@
       "skin": "Original Quinn — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02DE006-full.png?5c578",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02DE006-full.png?5c578"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7358,13 +7358,13 @@
       "skin": "Original Quinn — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02DE006T1-full.png?a4b57",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02DE006T1-full.png?a4b57"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02DE006T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02DE006T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7461,13 +7461,13 @@
       "skin": "Original Rek'Sai — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH019-full.png?6c54b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH019-full.png?6c54b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7484,13 +7484,13 @@
       "skin": "Original Rek'Sai — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-06-30",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH019T1-full.png?28bf8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH019T1-full.png?28bf8"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH019T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH019T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7507,13 +7507,13 @@
       "skin": "Original Renekton — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH067-full.png?16eef",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH067-full.png?16eef"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7530,13 +7530,13 @@
       "skin": "Original Renekton — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH067T4-full.png?17a08",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH067T4-full.png?17a08"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7553,13 +7553,13 @@
       "skin": "Original Renekton — Level 3",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH067T1-full.png?2beca",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH067T1-full.png?2beca"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH067T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH067T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7633,13 +7633,13 @@
       "skin": "Original Riven — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-12-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03NX007-full.png?f1b93",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03NX007-full.png?f1b93"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7656,13 +7656,13 @@
       "skin": "Original Riven — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-12-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03NX007T1-full.png?0bf5b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03NX007T1-full.png?0bf5b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03NX007T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03NX007T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7753,13 +7753,13 @@
       "skin": "Original Rumble — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC088-full.png?9c7d2",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC088-full.png?9c7d2"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7776,13 +7776,13 @@
       "skin": "Original Rumble — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-12-08",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC088T2-full.png?2142a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC088T2-full.png?2142a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC088T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC088T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7799,13 +7799,13 @@
       "skin": "Original Ryze — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-12-07",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU006-full.png?636fc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU006-full.png?636fc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7822,13 +7822,13 @@
       "skin": "Original Ryze — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-12-07",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006T5-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006T5-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU006T5-full.png?919ad",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU006T5-full.png?919ad"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU006T5-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU006T5-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7845,13 +7845,13 @@
       "skin": "Original Samira — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07NX007-full.png?95d9c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07NX007-full.png?95d9c"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7868,13 +7868,13 @@
       "skin": "Original Samira — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07NX007T1-full.png?a6974",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07NX007T1-full.png?a6974"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07NX007T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07NX007T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7925,14 +7925,14 @@
       "skin": "Original Sejuani — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02FR002-hd-full.jpg?bdd36",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02FR002-full.png?f179a"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02FR002-full.png?f179a",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -7949,13 +7949,13 @@
       "skin": "Original Sejuani — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02FR002T3-full.png?03c08",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02FR002T3-full.png?03c08"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02FR002T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02FR002T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8006,13 +8006,13 @@
       "skin": "Original Senna — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05SI009-full.png?0ed30",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05SI009-full.png?0ed30"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8029,13 +8029,13 @@
       "skin": "Original Senna — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05SI009T1-full.png?b1a8a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05SI009T1-full.png?b1a8a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SI009T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SI009T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8126,13 +8126,13 @@
       "skin": "Original Seraphine — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06PZ021-full.png?34be3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06PZ021-full.png?34be3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8149,13 +8149,13 @@
       "skin": "Original Seraphine — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06PZ021T2-full.png?3dd76",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06PZ021T2-full.png?3dd76"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06PZ021T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06PZ021T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8212,14 +8212,14 @@
       "skin": "Original Sett — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07IO011-hd-full.jpg?ce5f6",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07IO011-full.png?f6e8d"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07IO011-full.png?f6e8d",
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8236,14 +8236,14 @@
       "skin": "Original Sett — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-03-29",
-      "image": "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07IO011T1-hd-full.jpg?8e810",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07IO011T1-full.png?cb7da"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07IO011T1-full.png?cb7da",
-        "https://dd.b.pvp.net/7_9_0/set7/en_us/img/cards/07IO011T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7/en_us/img/cards/07IO011T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8328,14 +8328,14 @@
       "skin": "Original Shen — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO032-hd-full.jpg?c087c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO032-full.png?3580e"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO032-full.png?3580e",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8352,14 +8352,14 @@
       "skin": "Original Shen — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO032T1-hd-full.jpg?ecceb",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO032T1-full.png?3415a"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO032T1-full.png?3415a",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO032T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO032T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8433,7 +8433,7 @@
       "skin": "Original Sion — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05NX001-full.png?df0e9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05NX001-full.png?df0e9",
@@ -8441,7 +8441,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05NX001-alt-full.png?0db54",
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8458,7 +8458,7 @@
       "skin": "Original Sion — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05NX001T3-full.png?50d34",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05NX001T3-full.png?50d34",
@@ -8466,7 +8466,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05NX001T3-alt-full.png?01483",
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05NX001T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05NX001T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8517,7 +8517,7 @@
       "skin": "Original Sivir — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH020-full.png?cc3a9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH020-full.png?cc3a9",
@@ -8525,7 +8525,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH020-alt-full.png?9a52a",
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8542,7 +8542,7 @@
       "skin": "Original Sivir — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH020T1-full.png?9334e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH020T1-full.png?9334e",
@@ -8550,7 +8550,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH020T1-alt-full.png?ad9bb",
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH020T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH020T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8567,13 +8567,13 @@
       "skin": "Original Soraka — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-10-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT055-full.png?9a63c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT055-full.png?9a63c"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8590,13 +8590,13 @@
       "skin": "Original Soraka — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-10-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT055T1-full.png?f644a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT055T1-full.png?f644a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT055T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT055T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8653,7 +8653,7 @@
       "skin": "Original Swain — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02NX007-full.png?f965e",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02NX007-full.png?f965e",
@@ -8661,7 +8661,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02NX007-alt-full.png?fe0f4",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8678,7 +8678,7 @@
       "skin": "Original Swain — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02NX007T2-full.png?9fc3d",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02NX007T2-full.png?9fc3d",
@@ -8686,7 +8686,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02NX007T2-alt-full.png?78293",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02NX007T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02NX007T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8743,13 +8743,13 @@
       "skin": "Original Taliyah — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH073-full.png?b50f0",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH073-full.png?b50f0"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8766,13 +8766,13 @@
       "skin": "Original Taliyah — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-03-03",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH073T2-full.png?6d28a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH073T2-full.png?6d28a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH073T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH073T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8869,13 +8869,13 @@
       "skin": "Original Taric — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT058-full.png?ca2f9",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT058-full.png?ca2f9"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8892,13 +8892,13 @@
       "skin": "Original Taric — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT058T1-full.png?51276",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT058T1-full.png?51276"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT058T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT058T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -8999,14 +8999,14 @@
       "skin": "Original Teemo — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ008-hd-full.jpg?48c72",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ008-full.png?8076e"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ008-full.png?8076e",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9023,14 +9023,14 @@
       "skin": "Original Teemo — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01PZ008T2-hd-full.jpg?6809f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ008T2-full.png?a20a9"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01PZ008T2-full.png?a20a9",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01PZ008T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01PZ008T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9127,13 +9127,13 @@
       "skin": "Original The Poro King — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07RU015-full.png?fa8aa",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07RU015-full.png?fa8aa"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9150,13 +9150,13 @@
       "skin": "Original The Poro King — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-06-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/07RU015T4-full.png?b17fd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/07RU015T4-full.png?b17fd"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set7b/en_us/img/cards/07RU015T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set7b/en_us/img/cards/07RU015T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9173,7 +9173,7 @@
       "skin": "Original Thresh — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI052-hd-full.jpg?89683",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI052-full.png?6d7c4",
@@ -9182,7 +9182,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI052-full.png?6d7c4",
         "https://wiki.leagueoflegends.com/en-us/images/01SI052-alt-full.png?693d7",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9199,7 +9199,7 @@
       "skin": "Original Thresh — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01SI052T1-hd-full.jpg?0bf27",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI052T1-full.png?3d3cf",
@@ -9208,7 +9208,7 @@
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01SI052T1-full.png?3d3cf",
         "https://wiki.leagueoflegends.com/en-us/images/01SI052T1-alt-full.png?42d15",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01SI052T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01SI052T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9305,13 +9305,13 @@
       "skin": "Original Tristana — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC133-full.png?62db3",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC133-full.png?62db3"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9328,13 +9328,13 @@
       "skin": "Original Tristana — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC133T1-full.png?38729",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC133T1-full.png?38729"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC133T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC133T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9385,13 +9385,13 @@
       "skin": "Original Trundle — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03FR006-full.png?aa498",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03FR006-full.png?aa498"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9408,13 +9408,13 @@
       "skin": "Original Trundle — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-08-26",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03FR006T2-full.png?774ea",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03FR006T2-full.png?774ea"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03FR006T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03FR006T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9465,14 +9465,14 @@
       "skin": "Original Tryndamere — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR039-hd-full.jpg?5be71",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR039-full.png?03795"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR039-full.png?03795",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9489,7 +9489,7 @@
       "skin": "Original Tryndamere — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01FR039T2-full.png?eb981",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR039T2-full.png?eb981",
@@ -9497,7 +9497,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01FR039T2-alt-full.png?a4f34",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01FR039T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01FR039T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9548,13 +9548,13 @@
       "skin": "Original Twisted Fate — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW026-full.png?a09ee",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW026-full.png?a09ee"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9571,13 +9571,13 @@
       "skin": "Original Twisted Fate — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02BW026T3-full.png?86695",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02BW026T3-full.png?86695"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02BW026T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02BW026T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9628,13 +9628,13 @@
       "skin": "Original Udyr — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-02-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05FR013-full.png?340a7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05FR013-full.png?340a7"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9651,13 +9651,13 @@
       "skin": "Original Udyr — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-02-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013T4-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013T4-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05FR013T4-full.png?44d62",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05FR013T4-full.png?44d62"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05FR013T4-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05FR013T4-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9674,7 +9674,7 @@
       "skin": "Original Varus — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU009-full.png?d20b1",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU009-full.png?d20b1",
@@ -9682,7 +9682,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU009-alt-full.png?2b244",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9699,13 +9699,13 @@
       "skin": "Original Varus — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009T6-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009T6-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06RU009T6-full.png?0c8b6",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06RU009T6-full.png?0c8b6"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06RU009T6-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06RU009T6-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9762,13 +9762,13 @@
       "skin": "Original Vayne — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06DE021-full.png?764c2",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06DE021-full.png?764c2"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9785,7 +9785,7 @@
       "skin": "Original Vayne — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2022-10-12",
-      "image": "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/06DE021T1-full.png?a3cfd",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06DE021T1-full.png?a3cfd",
@@ -9793,7 +9793,7 @@
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/06DE021T1-alt-full.png?f9ad1",
-        "https://dd.b.pvp.net/7_9_0/set6cde/en_us/img/cards/06DE021T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set6cde/en_us/img/cards/06DE021T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9844,13 +9844,13 @@
       "skin": "Original Veigar — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC093-full.png?52697",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC093-full.png?52697"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9867,13 +9867,13 @@
       "skin": "Original Veigar — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC093T2-full.png?0478b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC093T2-full.png?0478b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC093T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC093T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9890,13 +9890,13 @@
       "skin": "Original Vex — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09BC001-full.png?e5340",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09BC001-full.png?e5340"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9913,13 +9913,13 @@
       "skin": "Original Vex — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2024-04-24",
-      "image": "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001T3-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001T3-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/09BC001T3-full.png?7c613",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/09BC001T3-full.png?7c613"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set9/en_us/img/cards/09BC001T3-full.png"
+        "https://dd.b.pvp.net/7_10_0/set9/en_us/img/cards/09BC001T3-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9970,14 +9970,14 @@
       "skin": "Original Vi — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02PZ008-hd-full.jpg?f59ec",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02PZ008-full.png?70596"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02PZ008-full.png?70596",
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -9994,13 +9994,13 @@
       "skin": "Original Vi — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-04-28",
-      "image": "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/02PZ008T2-full.png?8238f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/02PZ008T2-full.png?8238f"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set2/en_us/img/cards/02PZ008T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set2/en_us/img/cards/02PZ008T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10091,13 +10091,13 @@
       "skin": "Original Viego — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-07-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SI055-full.png?040cc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SI055-full.png?040cc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10114,13 +10114,13 @@
       "skin": "Original Viego — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-07-14",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SI055T2-full.png?d201b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SI055T2-full.png?d201b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SI055T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SI055T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10171,13 +10171,13 @@
       "skin": "Original Volibear — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08FR001-full.png?dd640",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08FR001-full.png?dd640"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10194,13 +10194,13 @@
       "skin": "Original Volibear — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2023-09-13",
-      "image": "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/08FR001T1-full.png?7cfd5",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/08FR001T1-full.png?7cfd5"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set8/en_us/img/cards/08FR001T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set8/en_us/img/cards/08FR001T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10251,13 +10251,13 @@
       "skin": "Original Xerath — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05SH014-full.png?158b8",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05SH014-full.png?158b8"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10274,13 +10274,13 @@
       "skin": "Original Xerath — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05SH014T1-full.png?dab2b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05SH014T1-full.png?dab2b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10297,13 +10297,13 @@
       "skin": "Original Xerath — Level 3",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05SH014T2-full.png?2c99c",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05SH014T2-full.png?2c99c"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05SH014T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05SH014T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10377,14 +10377,14 @@
       "skin": "Original Yasuo — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO015-hd-full.jpg?13b2f",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO015-full.png?60854"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO015-full.png?60854",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10401,14 +10401,14 @@
       "skin": "Original Yasuo — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO015T1-hd-full.jpg?c5237",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO015T1-full.png?f0f35"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO015T1-full.png?f0f35",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO015T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO015T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10499,13 +10499,13 @@
       "skin": "Original Yuumi — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-02-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC029-full.png?37cbc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC029-full.png?37cbc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10522,13 +10522,13 @@
       "skin": "Original Yuumi — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-02-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T5-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T5-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC029T5-full.png?1976b",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC029T5-full.png?1976b"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC029T5-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC029T5-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10545,14 +10545,14 @@
       "skin": "Original Zed — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO009-hd-full.jpg?07e01",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO009-full.png?d344c"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO009-full.png?d344c",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10569,14 +10569,14 @@
       "skin": "Original Zed — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2019-10-15",
-      "image": "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009T2-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009T2-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/01IO009T2-hd-full.jpg?f7172",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO009T2-full.png?46ddf"
       ],
       "fullHdFallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/01IO009T2-full.png?46ddf",
-        "https://dd.b.pvp.net/7_9_0/set1/en_us/img/cards/01IO009T2-full.png"
+        "https://dd.b.pvp.net/7_10_0/set1/en_us/img/cards/01IO009T2-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10667,13 +10667,13 @@
       "skin": "Original Ziggs — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC163-full.png?81d39",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC163-full.png?81d39"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10690,13 +10690,13 @@
       "skin": "Original Ziggs — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-08-25",
-      "image": "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/05BC163T1-full.png?65442",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/05BC163T1-full.png?65442"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set5/en_us/img/cards/05BC163T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set5/en_us/img/cards/05BC163T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10781,13 +10781,13 @@
       "skin": "Original Zilean — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-05-05",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH039-full.png?225d4",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH039-full.png?225d4"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10804,13 +10804,13 @@
       "skin": "Original Zilean — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2021-05-05",
-      "image": "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/04SH039T1-full.png?ce36a",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/04SH039T1-full.png?ce36a"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set4/en_us/img/cards/04SH039T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set4/en_us/img/cards/04SH039T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10867,13 +10867,13 @@
       "skin": "Original Zoe — Level 1",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-12-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT009-full.png?3b7d7",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT009-full.png?3b7d7"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10890,13 +10890,13 @@
       "skin": "Original Zoe — Level 2",
       "type": "Legends of Runeterra",
       "releaseDate": "2020-12-16",
-      "image": "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009T1-full.png",
+      "image": "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009T1-full.png",
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/03MT009T1-full.png?cbccc",
       "fallbacks": [
         "https://wiki.leagueoflegends.com/en-us/images/03MT009T1-full.png?cbccc"
       ],
       "fullHdFallbacks": [
-        "https://dd.b.pvp.net/7_9_0/set3/en_us/img/cards/03MT009T1-full.png"
+        "https://dd.b.pvp.net/7_10_0/set3/en_us/img/cards/03MT009T1-full.png"
       ],
       "sourceKind": "lor",
       "lorSkinName": "Original",
@@ -10993,7 +10993,7 @@
     }
   ],
   "imageAudit": {
-    "verifiedAt": "2026-10-05T11:32:05.648Z",
+    "verifiedAt": "2026-10-12T12:02:18.347Z",
     "strategy": "Rate-limited MediaWiki allimages lookup by base card code; exact level-code matching; direct image URLs only; dead guessed redirects removed; previous sources preserved when lookup is unavailable",
     "total": 524,
     "repaired": 524,
