@@ -45044,6 +45044,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:11.760Z"
     },
     {
+      "id": "volibear::legends-showdown-volibear::wild-rift",
+      "champ": "Volibear",
+      "skin": "Legends Showdown Volibear",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-15",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Volibear_LegendsShowdownSkin_WR.jpg?ceac2",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-19T09:55:48.785Z"
+    },
+    {
       "id": "warwick::warhound-warwick::pc",
       "champ": "Warwick",
       "skin": "Warhound Warwick",
@@ -45878,6 +45889,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Xayah_CrystalRoseSkin_WR_HD.jpg?5862f",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:11.970Z"
+    },
+    {
+      "id": "xayah::prestige-brave-phoenix-xayah::wild-rift",
+      "champ": "Xayah",
+      "skin": "Prestige Brave Phoenix Xayah",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-16",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Xayah_PrestigeBravePhoenixSkin_WR.jpg?a8115",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-19T09:55:48.785Z"
     },
     {
       "id": "xerath::corrupted-petricite-xerath::pc",
@@ -47098,6 +47120,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Yone_HEARTSTEELLiveMyLifeSkin_HD.jpg?676f9",
       "hdSource": "league-wiki-hd-maximum",
       "hdVerifiedAt": "2026-10-12T12:08:44.428Z"
+    },
+    {
+      "id": "yone::prestige-select-high-noon-yone::wild-rift",
+      "champ": "Yone",
+      "skin": "Prestige Select High Noon Yone",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-16",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Yone_PrestigeSelectHighNoonSkin_WR.png?5b972",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-19T09:55:48.785Z"
     },
     {
       "id": "yorick::classic-yorick::pc",
@@ -49146,7 +49179,7 @@
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
     }
   ],
-  "catalogGeneratedAt": "2026-10-12T12:01:02.119Z",
+  "catalogGeneratedAt": "2026-10-19T09:55:50.186Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49155,17 +49188,17 @@
     ],
     "PC": {
       "total": 2146,
-      "missing": 7,
-      "added": 7,
-      "unresolved": 0
-    },
-    "Wild Rift": {
-      "total": 1075,
       "missing": 0,
       "added": 0,
       "unresolved": 0
     },
-    "added": 7,
+    "Wild Rift": {
+      "total": 1075,
+      "missing": 3,
+      "added": 3,
+      "unresolved": 0
+    },
+    "added": 3,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
