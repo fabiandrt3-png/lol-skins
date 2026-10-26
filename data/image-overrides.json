@@ -9258,6 +9258,16 @@
       "hdSource": "league-wiki-hd-maximum"
     },
     {
+      "id": "akali::true-damage-know-my-name-akali::pc",
+      "champ": "Akali",
+      "skin": "True Damage Know My Name Akali",
+      "releaseDate": "2026-10-21",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Akali_TrueDamageKnowMyNameSkin.jpg?d4f1f",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
+    },
+    {
       "id": "akshan::classic-akshan::92",
       "champ": "Akshan",
       "skin": "Classic Akshan",
@@ -13704,6 +13714,16 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "ekko::prestige-true-damage-know-my-name-ekko::pc",
+      "champ": "Ekko",
+      "skin": "Prestige True Damage Know My Name Ekko",
+      "releaseDate": "2026-10-21",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ekko_PrestigeTrueDamageKnowMyNameSkin.jpg?82a5d",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
     },
     {
       "id": "elise::classic-elise::500",
@@ -20826,6 +20846,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Kalista_SplendorOpusSkin_WR_HD.jpg?fc078",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:02.540Z"
+    },
+    {
+      "id": "kalista::battle-queen-kalista::wild-rift",
+      "champ": "Kalista",
+      "skin": "Battle Queen Kalista",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kalista_BattleQueenSkin_WR.jpg?f5817",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
     },
     {
       "id": "karma::island-vacation-karma::wild-rift",
@@ -30131,6 +30162,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:06.149Z"
     },
     {
+      "id": "nidalee::battle-queen-nidalee::wild-rift",
+      "champ": "Nidalee",
+      "skin": "Battle Queen Nidalee",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nidalee_BattleQueenSkin_WR.jpg?b18f8",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
+    },
+    {
       "id": "nilah::dragonmancer-nilah::wild-rift",
       "champ": "Nilah",
       "skin": "Dragonmancer Nilah",
@@ -32352,6 +32394,16 @@
       "sourceKind": "wiki-prestige-2022-special-edition",
       "cardSource": "league-wiki-current-client",
       "hdSource": "league-wiki-hd-maximum"
+    },
+    {
+      "id": "qiyana::true-damage-know-my-name-qiyana::pc",
+      "champ": "Qiyana",
+      "skin": "True Damage Know My Name Qiyana",
+      "releaseDate": "2026-10-21",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Qiyana_TrueDamageKnowMyNameSkin.jpg?318f3",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
     },
     {
       "id": "quinn::project-quinn::pc",
@@ -35264,6 +35316,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "senna::true-damage-know-my-name-senna::pc",
+      "champ": "Senna",
+      "skin": "True Damage Know My Name Senna",
+      "releaseDate": "2026-10-21",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Senna_TrueDamageKnowMyNameSkin.jpg?0c0fa",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
+    },
+    {
       "id": "seraphine::t1-seraphine::pc",
       "champ": "Seraphine",
       "skin": "T1 Seraphine",
@@ -37458,6 +37520,17 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "sivir::battle-queen-sivir::wild-rift",
+      "champ": "Sivir",
+      "skin": "Battle Queen Sivir",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sivir_BattleQueenSkin_WR.jpg?4a0d5",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
     },
     {
       "id": "skarner::cosmic-sting-skarner::wild-rift",
@@ -46834,6 +46907,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "yasuo::true-damage-know-my-name-yasuo::pc",
+      "champ": "Yasuo",
+      "skin": "True Damage Know My Name Yasuo",
+      "releaseDate": "2026-10-21",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Yasuo_TrueDamageKnowMyNameSkin.jpg?f3ea1",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
+    },
+    {
       "id": "yone::classic-yone::pc",
       "champ": "Yone",
       "skin": "Classic Yone",
@@ -49188,9 +49271,20 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Zyra_MysticalHeraldSkin_WR_HD.jpg?c03c6",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:13.249Z"
+    },
+    {
+      "id": "zyra::prestige-battle-queen-zyra::wild-rift",
+      "champ": "Zyra",
+      "skin": "Prestige Battle Queen Zyra",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-23",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Zyra_PrestigeBattleQueenSkin_WR.png?5b58e",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-10-26T10:09:11.411Z"
     }
   ],
-  "catalogGeneratedAt": "2026-10-19T09:55:50.186Z",
+  "catalogGeneratedAt": "2026-10-26T10:09:13.284Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49198,18 +49292,18 @@
       "Module:SkinDataWR/data"
     ],
     "PC": {
-      "total": 2146,
-      "missing": 0,
-      "added": 0,
+      "total": 2151,
+      "missing": 5,
+      "added": 5,
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1075,
-      "missing": 3,
-      "added": 3,
+      "total": 1091,
+      "missing": 4,
+      "added": 4,
       "unresolved": 0
     },
-    "added": 3,
+    "added": 9,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
