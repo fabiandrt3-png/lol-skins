@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T10:10:25.598Z",
+  "generatedAt": "2026-11-02T12:27:31.831Z",
   "schemaVersion": 1,
   "sources": [
     "https://wiki.leagueoflegends.com/en-us/Module:SkinData/data",
@@ -6685,7 +6685,7 @@
     "Wild Rift|singed|chromacrash": {"releaseDate":"2026-01-05","canonicalSkin":"chromacrash","skinLines":["Chromacrash"],"universes":["Chromacrash"]},
     "Wild Rift|singed|original": {"releaseDate":"2020-09-16","canonicalSkin":"original"},
     "Wild Rift|singed|surfer": {"releaseDate":"2020-10-07","canonicalSkin":"surfer","skinLines":["Pool Party"],"universes":["Sunkissed Summer"]},
-    "Wild Rift|sion|chibi": {"releaseDate":"2026-10-30","canonicalSkin":"chibi","skinLines":["Trick-or-Treat"],"universes":["Tales from the Rift"]},
+    "Wild Rift|sion|fright little night": {"releaseDate":"2026-10-30","canonicalSkin":"little night fright","skinLines":["Trick-or-Treat"],"universes":["Tales from the Rift"]},
     "Wild Rift|sion|mecha zero": {"releaseDate":"2023-08-25","canonicalSkin":"mecha zero","skinLines":["Mecha"],"universes":["Mecha"]},
     "Wild Rift|sion|original": {"releaseDate":"2022-08-26","canonicalSkin":"original"},
     "Wild Rift|sion|plant protector": {"releaseDate":"2026-06-12","canonicalSkin":"plant protector","skinLines":["Zombies VS Slayers"],"universes":["Zombie VS Slayers"]},
