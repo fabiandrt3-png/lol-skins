@@ -9610,6 +9610,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "alistar::chibi-alistar::wild-rift",
+      "champ": "Alistar",
+      "skin": "Chibi Alistar",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-30",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Alistar_ChibiSkin_WR.jpg?11adc",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-02T12:26:19.897Z"
+    },
+    {
       "id": "ambessa::classic-ambessa::115",
       "champ": "Ambessa",
       "skin": "Classic Ambessa",
@@ -26532,6 +26543,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:04.904Z"
     },
     {
+      "id": "malphite::wondertown-malphite::wild-rift",
+      "champ": "Malphite",
+      "skin": "Wondertown Malphite",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-30",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Malphite_WondertownSkin_WR.jpg?9b522",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-02T12:26:19.897Z"
+    },
+    {
       "id": "malzahar::classic-malzahar::pc",
       "champ": "Malzahar",
       "skin": "Classic Malzahar",
@@ -37257,6 +37279,17 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "sion::little-night-fright-sion::wild-rift",
+      "champ": "Sion",
+      "skin": "Little Night Fright Sion",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-30",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sion_LittleNightFrightSkin_WR.jpg?0f89a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-02T12:26:19.897Z"
     },
     {
       "id": "sivir::project-sivir::pc",
@@ -49392,7 +49425,7 @@
       "hdVerifiedAt": "2026-10-26T10:17:14.178Z"
     }
   ],
-  "catalogGeneratedAt": "2026-10-26T10:09:13.284Z",
+  "catalogGeneratedAt": "2026-11-02T12:26:21.483Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49401,17 +49434,17 @@
     ],
     "PC": {
       "total": 2151,
-      "missing": 5,
-      "added": 5,
+      "missing": 0,
+      "added": 0,
       "unresolved": 0
     },
     "Wild Rift": {
       "total": 1091,
-      "missing": 4,
-      "added": 4,
+      "missing": 3,
+      "added": 3,
       "unresolved": 0
     },
-    "added": 9,
+    "added": 3,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
