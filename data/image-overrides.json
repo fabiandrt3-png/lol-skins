@@ -8962,6 +8962,60 @@
       "hdSource": "league-wiki-hd-maximum"
     },
     {
+      "id": "ahri::k-da-firestarter-ahri::pc",
+      "champ": "Ahri",
+      "skin": "K/DA FIRESTARTER Ahri",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_KDAFIRESTARTERSkin.jpg?f6ebf",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "ahri::k-da-heatbringer-ahri::wild-rift",
+      "champ": "Ahri",
+      "skin": "K/DA HEATBRINGER Ahri",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_KDAHEATBRINGERSkin_WR.jpg?ea45b",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "ahri::k-da-gilded-ahri::wild-rift",
+      "champ": "Ahri",
+      "skin": "K/DA Gilded Ahri",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_KDAGildedSkin_WR.jpg?26518",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "ahri::k-da-lollipop-ahri::wild-rift",
+      "champ": "Ahri",
+      "skin": "K/DA Lollipop Ahri",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_KDALollipopSkin_WR.jpg?ee156",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "ahri::k-da-lumen-ahri::wild-rift",
+      "champ": "Ahri",
+      "skin": "K/DA Lumen Ahri",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Ahri_KDALumenSkin_WR.jpg?6dabf",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
       "id": "akali::classic-akali::61",
       "champ": "Akali",
       "skin": "Classic Akali",
@@ -9321,6 +9375,27 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Akali_TrueDamageKnowMyNameSkin_HD.jpg?ebda5",
       "hdSource": "league-wiki-hd-maximum",
       "hdVerifiedAt": "2026-10-26T10:17:00.436Z"
+    },
+    {
+      "id": "akali::k-da-firestarter-ignition-akali::pc",
+      "champ": "Akali",
+      "skin": "K/DA FIRESTARTER Ignition Akali",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Akali_KDAFIRESTARTERIgnitionSkin.jpg?903e9",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "akali::k-da-heatbringer-akali::wild-rift",
+      "champ": "Akali",
+      "skin": "K/DA HEATBRINGER Akali",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Akali_KDAHEATBRINGERSkin_WR.jpg?fec1d",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
     },
     {
       "id": "akshan::classic-akshan::92",
@@ -14126,6 +14201,48 @@
       "sourceKind": "wiki-prestige-2022-special-edition",
       "cardSource": "league-wiki-current-client",
       "hdSource": "league-wiki-hd-maximum"
+    },
+    {
+      "id": "evelynn::k-da-firestarter-evelynn::pc",
+      "champ": "Evelynn",
+      "skin": "K/DA FIRESTARTER Evelynn",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_KDAFIRESTARTERSkin.jpg?86934",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "evelynn::k-da-hitmaker-evelynn::pc",
+      "champ": "Evelynn",
+      "skin": "K/DA Hitmaker Evelynn",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_KDAHitmakerSkin.jpg?215ab",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "evelynn::k-da-heatbringer-evelynn::wild-rift",
+      "champ": "Evelynn",
+      "skin": "K/DA HEATBRINGER Evelynn",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_KDAHEATBRINGERSkin_WR.jpg?04a60",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "evelynn::prestige-k-da-heatbringer-evelynn::wild-rift",
+      "champ": "Evelynn",
+      "skin": "Prestige K/DA HEATBRINGER Evelynn",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Evelynn_PrestigeKDAHEATBRINGERSkin_WR.jpg?a5011",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
     },
     {
       "id": "ezreal::classic-ezreal::538",
@@ -20786,6 +20903,27 @@
       "sourceKind": "wiki-prestige-2022-special-edition",
       "cardSource": "league-wiki-current-client",
       "hdSource": "league-wiki-hd-maximum"
+    },
+    {
+      "id": "kai-sa::k-da-firestarter-kai-sa::pc",
+      "champ": "Kai'Sa",
+      "skin": "K/DA FIRESTARTER Kai'Sa",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAFIRESTARTERSkin.jpg?8cf23",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
+    },
+    {
+      "id": "kai-sa::k-da-heatbringer-kai-sa::wild-rift",
+      "champ": "Kai'Sa",
+      "skin": "K/DA HEATBRINGER Kai'Sa",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kai%27Sa_KDAHEATBRINGERSkin_WR.jpg?802a9",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-09T12:53:55.386Z"
     },
     {
       "id": "kalista::classic-kalista::pc",
@@ -49446,7 +49584,7 @@
       "hdVerifiedAt": "2026-10-26T10:17:14.178Z"
     }
   ],
-  "catalogGeneratedAt": "2026-11-02T12:26:21.483Z",
+  "catalogGeneratedAt": "2026-11-09T12:53:58.298Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49454,18 +49592,18 @@
       "Module:SkinDataWR/data"
     ],
     "PC": {
-      "total": 2151,
-      "missing": 0,
-      "added": 0,
+      "total": 2154,
+      "missing": 5,
+      "added": 5,
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1091,
-      "missing": 3,
-      "added": 3,
+      "total": 1092,
+      "missing": 8,
+      "added": 8,
       "unresolved": 0
     },
-    "added": 3,
+    "added": 13,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
