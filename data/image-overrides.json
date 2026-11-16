@@ -9430,6 +9430,16 @@
       "hdVerifiedAt": "2026-11-09T13:01:09.683Z"
     },
     {
+      "id": "akali::k-da-firestarter-akali::pc",
+      "champ": "Akali",
+      "skin": "K/DA FIRESTARTER Akali",
+      "releaseDate": "2026-11-04",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Akali_KDAFIRESTARTERSkin.jpg?903e9",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-16T12:47:14.478Z"
+    },
+    {
       "id": "akshan::classic-akshan::92",
       "champ": "Akshan",
       "skin": "Classic Akshan",
@@ -9739,6 +9749,17 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-11-02T12:26:19.897Z"
+    },
+    {
+      "id": "alistar::little-midnight-overlord-alistar::wild-rift",
+      "champ": "Alistar",
+      "skin": "Little Midnight Overlord Alistar",
+      "type": "Wild Rift",
+      "releaseDate": "2026-10-30",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Alistar_LittleMidnightOverlordSkin_WR.jpg?11adc",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-16T12:47:14.478Z"
     },
     {
       "id": "ambessa::classic-ambessa::115",
@@ -39264,6 +39285,28 @@
       "hdVerifiedAt": "2026-09-11T22:46:09.048Z"
     },
     {
+      "id": "sylas::classic-sylas::wild-rift",
+      "champ": "Sylas",
+      "skin": "Classic Sylas",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-12",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sylas_OriginalSkin_WR.jpg?fb3e4",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-16T12:47:14.478Z"
+    },
+    {
+      "id": "sylas::ramen-master-sylas::wild-rift",
+      "champ": "Sylas",
+      "skin": "Ramen Master Sylas",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-12",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sylas_RamenMasterSkin_WR.jpg?40c4a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-16T12:47:14.478Z"
+    },
+    {
       "id": "syndra::island-vacation-syndra::wild-rift",
       "champ": "Syndra",
       "skin": "Island Vacation Syndra",
@@ -44947,6 +44990,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "viktor::arcane-savior-viktor::wild-rift",
+      "champ": "Viktor",
+      "skin": "Arcane Savior Viktor",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-11",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Viktor_ArcaneSaviorSkin_WR.png?bdd01",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-16T12:47:14.478Z"
+    },
+    {
       "id": "vladimir::psyops-vladimir::pc",
       "champ": "Vladimir",
       "skin": "PsyOps Vladimir",
@@ -49653,7 +49707,7 @@
       ]
     }
   ],
-  "catalogGeneratedAt": "2026-11-09T12:53:58.298Z",
+  "catalogGeneratedAt": "2026-11-16T12:47:16.107Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49662,17 +49716,17 @@
     ],
     "PC": {
       "total": 2154,
-      "missing": 5,
-      "added": 5,
+      "missing": 1,
+      "added": 1,
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1092,
-      "missing": 8,
-      "added": 8,
+      "total": 1097,
+      "missing": 4,
+      "added": 4,
       "unresolved": 0
     },
-    "added": 13,
+    "added": 5,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
