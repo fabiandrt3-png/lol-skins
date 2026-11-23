@@ -12365,6 +12365,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "camille::prestige-fiend-queller-camille::wild-rift",
+      "champ": "Camille",
+      "skin": "Prestige Fiend Queller Camille",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Camille_PrestigeFiendQuellerSkin_WR.jpg?29f39",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
+    },
+    {
       "id": "cassiopeia::classic-cassiopeia::358",
       "champ": "Cassiopeia",
       "skin": "Classic Cassiopeia",
@@ -15082,6 +15093,17 @@
       "hdVerifiedAt": "2026-09-11T22:46:00.398Z"
     },
     {
+      "id": "fiora::soaring-sword-fiora-exquisite-edition::wild-rift",
+      "champ": "Fiora",
+      "skin": "Soaring Sword Fiora Exquisite Edition",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Fiora_SoaringSwordExquisiteEditionSkin_WR.jpg?14451",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
+    },
+    {
       "id": "fizz::classic-fizz::613",
       "champ": "Fizz",
       "skin": "Classic Fizz",
@@ -16815,6 +16837,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Graves_BattleTigerSkin_WR_HD.jpg?b3572",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:00.876Z"
+    },
+    {
+      "id": "graves::fowl-play-graves::wild-rift",
+      "champ": "Graves",
+      "skin": "Fowl Play Graves",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Graves_FowlPlaySkin_WR.jpg?6cb70",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
     },
     {
       "id": "gwen::faerie-court-gwen::pc",
@@ -21770,6 +21803,17 @@
       "sourceKind": "wiki-catalog-sync",
       "cardSource": "league-wiki-current-client",
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
+    },
+    {
+      "id": "kassadin::mind-control-kassadin::wild-rift",
+      "champ": "Kassadin",
+      "skin": "Mind Control Kassadin",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Kassadin_MindControlSkin_WR.jpg?6946a",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
     },
     {
       "id": "katarina::petals-of-spring-katarina::pc",
@@ -29774,6 +29818,17 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "nasus::mighty-miner-nasus::wild-rift",
+      "champ": "Nasus",
+      "skin": "Mighty Miner Nasus",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Nasus_MightyMinerSkin_WR.jpg?9aa99",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
+    },
+    {
       "id": "nautilus::trash-diver-nautilus::wild-rift",
       "champ": "Nautilus",
       "skin": "Trash Diver Nautilus",
@@ -30164,6 +30219,16 @@
       "sourceKind": "wiki-prestige-2022-special-edition",
       "cardSource": "league-wiki-current-client",
       "hdSource": "league-wiki-hd-maximum"
+    },
+    {
+      "id": "neeko::cafe-cuties-neeko::pc",
+      "champ": "Neeko",
+      "skin": "Cafe Cuties Neeko",
+      "releaseDate": "2026-11-18",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Neeko_CafeCutiesSkin.jpg?d628e",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
     },
     {
       "id": "nidalee::classic-nidalee::pc",
@@ -38486,6 +38551,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "sona::dj-sona-ultimate-remix::pc",
+      "champ": "Sona",
+      "skin": "DJ Sona Ultimate Remix",
+      "releaseDate": "2026-11-18",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Sona_DJUltimateRemixSkin.jpg?7d427",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
+    },
+    {
       "id": "soraka::ocean-song-soraka::pc",
       "champ": "Soraka",
       "skin": "Ocean Song Soraka",
@@ -42434,6 +42509,17 @@
       "fullImage": "https://wiki.leagueoflegends.com/en-us/images/Twitch_ChromacrashSkin_WR_HD.jpg?a4a71",
       "hdSource": "league-wiki-wr-hd-maximum",
       "hdVerifiedAt": "2026-09-11T22:46:10.443Z"
+    },
+    {
+      "id": "twitch::rat-chef-twitch::wild-rift",
+      "champ": "Twitch",
+      "skin": "Rat Chef Twitch",
+      "type": "Wild Rift",
+      "releaseDate": "2026-11-20",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Twitch_RatChefSkin_WR.png?eb701",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
     },
     {
       "id": "udyr::classic-udyr::pc",
@@ -49405,6 +49491,16 @@
       "cardVerifiedAt": "2026-09-11T22:40:37.130Z"
     },
     {
+      "id": "zoe::cafe-cuties-zoe::pc",
+      "champ": "Zoe",
+      "skin": "Cafe Cuties Zoe",
+      "releaseDate": "2026-11-18",
+      "image": "https://wiki.leagueoflegends.com/en-us/images/Zoe_CafeCutiesSkin.jpg?dc874",
+      "sourceKind": "wiki-catalog-sync",
+      "cardSource": "league-wiki-current-client",
+      "cardVerifiedAt": "2026-11-23T14:40:57.136Z"
+    },
+    {
       "id": "zyra::classic-zyra::pc",
       "champ": "Zyra",
       "skin": "Classic Zyra",
@@ -49661,7 +49757,7 @@
       ]
     }
   ],
-  "catalogGeneratedAt": "2026-11-16T12:47:16.107Z",
+  "catalogGeneratedAt": "2026-11-23T14:40:58.768Z",
   "catalogStrategy": "single runtime catalogue; champions A-Z; existing per-champion skin order preserved; distinct chroma splash arts stay immediately after their parent skin; duplicate artwork remains excluded",
   "catalogSync": {
     "sources": [
@@ -49669,18 +49765,18 @@
       "Module:SkinDataWR/data"
     ],
     "PC": {
-      "total": 2154,
-      "missing": 1,
-      "added": 1,
+      "total": 2158,
+      "missing": 3,
+      "added": 3,
       "unresolved": 0
     },
     "Wild Rift": {
-      "total": 1097,
-      "missing": 4,
-      "added": 4,
+      "total": 1098,
+      "missing": 6,
+      "added": 6,
       "unresolved": 0
     },
-    "added": 5,
+    "added": 9,
     "unresolved": []
   },
   "qualityPolicy": "For every current skin: preserve the standard/original splash for cards; use the highest-resolution exact-match League Wiki HD/WR HD splash for fullscreen when available; never substitute another skin, prestige edition, special edition or chroma merely for more pixels.",
